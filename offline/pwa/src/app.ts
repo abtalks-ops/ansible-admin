@@ -2,7 +2,8 @@
 // Phase 1 is search only: hybrid BM25 + vector retrieval, answer cards when present, sources always shown.
 import { SearchIndex, tokenize, unpack, type Chunk, type LoadedShard, type Manifest, type ShardMeta } from "../../shared/search.ts";
 import { buildPrompt, citedNumbers, isNotInDocs, stripInvalidCitations, type Used } from "../../shared/answer.ts";
-import { checkDevice, isDownloaded, loadEngine, mock, modelFor, TIERS, DEFAULT_TIER, type Engine, type Tier } from "./llm.ts";
+import { MAX_CONVS, newConv, parse as parseChats, remove as removeConv, serialize as serializeChats, titleFrom, upsert as upsertConv, type Conv, type Turn } from "../../shared/chats.ts";
+import { checkDevice, isDownloaded, loadEngine, mock, modelFor, statsText, TIERS, DEFAULT_TIER, type Engine, type Tier } from "./llm.ts";
 import { startRain } from "./rain.ts";
 
 const DATA_CACHE = "aa-data-v1";
@@ -18,8 +19,8 @@ const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as 
 const ui = {
   setup: $("setup"), main: $("main"), panel: $("panel"), stats: $("stats"),
   sizeInfo: $("sizeInfo"), downloadBtn: $<HTMLButtonElement>("downloadBtn"), progress: $("progress"), bar: $("bar"), progressText: $("progressText"),
-  form: $<HTMLFormElement>("searchForm"), q: $<HTMLInputElement>("q"), status: $("status"), results: $("results"),
-  answerBar: $("answerBar"), answerBtn: $<HTMLButtonElement>("answerBtn"), answer: $("answer"),
+  form: $<HTMLFormElement>("searchForm"), q: $<HTMLInputElement>("q"), status: $("status"), results: $("thread"),
+  newBtn: $("newBtn"), historyBtn: $("historyBtn"), drawer: $("drawer"), historyList: $("historyList"), newBtn2: $("newBtn2"), closeDrawer: $("closeDrawer"), backdrop: $("backdrop"), aiChip: $("aiChip"),
   aiInfo: $("aiInfo"), aiBtn: $<HTMLButtonElement>("aiBtn"), aiModel: $<HTMLSelectElement>("aiModel"), aiProgress: $("aiProgress"), aiBar: $("aiBar"),
   menuBtn: $("menuBtn"), updateBtn: $<HTMLButtonElement>("updateBtn"), deleteBtn: $<HTMLButtonElement>("deleteBtn"), rainToggle: $<HTMLInputElement>("rainToggle"),
 };
@@ -31,9 +32,11 @@ let embedderState: "idle" | "loading" | "ready" | "failed" = "idle";
 let engine: Engine | null = null;
 let engineModel = ""; // model id the loaded engine belongs to
 let tier: Tier = DEFAULT_TIER;
-let lastQuery = "";
-let lastHits: Chunk[] = [];
 let generating = false;
+let convs: Conv[] = [];
+let cur: Conv | null = null; // the open chat; null means a new, empty chat
+let chunkById = new Map<string, Chunk>();
+let embedderReady: Promise<void> = Promise.resolve();
 
 // ---------- storage ----------
 
@@ -235,32 +238,147 @@ function renderStatus(extra = "") {
   ui.status.textContent = [extra, sem].filter(Boolean).join(" · ");
 }
 
-const EXAMPLES = ["run a handler immediately", "variable precedence extra vars", "retry a task until it succeeds", "ansible.builtin.copy backup", "encrypt a string with vault", "become a different user"];
+// ---------- chat: turns, history ----------
 
-function renderEmpty() {
-  ui.results.innerHTML = `<div class="empty-hint muted small">Everything below runs on this device. Try:</div><div class="chips">${EXAMPLES.map((e) => `<button type="button">${esc(e)}</button>`).join("")}</div>`;
+const EXAMPLES = ["run a handler immediately", "variable precedence extra vars", "retry a task until it succeeds", "ansible.builtin.copy backup", "encrypt a string with vault", "become a different user"];
+const CHATS_KEY = "aa-chats";
+const uid = () => Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+
+function loadChats() {
+  try {
+    convs = parseChats(localStorage.getItem(CHATS_KEY));
+  } catch {
+    convs = [];
+  }
+}
+function saveChats() {
+  // If storage is full, keep fewer chats rather than losing the current one.
+  for (let keep = MAX_CONVS; keep >= 5; keep = Math.floor(keep / 2)) {
+    try {
+      localStorage.setItem(CHATS_KEY, serializeChats(convs.slice(0, keep)));
+      return;
+    } catch {}
+  }
 }
 
-async function search(q: string) {
-  if (!index) return;
+function renderEmpty() {
+  ui.results.innerHTML = `<div class="empty-hint muted small">Ask about ansible-core. Everything runs on this device. Try:</div><div class="chips">${EXAMPLES.map((e) => `<button type="button">${esc(e)}</button>`).join("")}</div>`;
+}
+
+const cardHtml = (c: Chunk | undefined) => {
+  const card = c?.card;
+  return card
+    ? `<section class="card"><h3>${esc(card.title)}</h3><div class="body">${md(card.answer_md)}</div><div class="meta"><a href="${esc(card.source_url)}" target="_blank" rel="noopener">source</a><span>answer card, written at build time</span></div></section>`
+    : "";
+};
+
+/** Search results for a turn: open when there is no AI answer, collapsed under the answer when there is one. */
+function resultsBlock(t: Turn, chunks: Chunk[]): string {
+  const terms = [...new Set(tokenize(t.q))].filter((x) => x.length > 2);
+  const body = cardHtml(chunks[0]) + (chunks.length ? resultsHtml(chunks, terms) : `<p class="muted">No matches. Try a module name, an option, or the error text.</p>`);
+  return t.state === "search" ? body : `<details class="srcs"><summary>Search results (${chunks.length})</summary>${body}</details>`;
+}
+
+function answerHtml(t: Turn, used: Used[], busy: boolean, loadMsg = ""): string {
+  if (t.state === "search" && !busy) return "";
+  const text = t.answer ?? "";
+  const cited = citedNumbers(text, used);
+  const sources = cited.length
+    ? `<ul class="sources">${cited.map((n) => { const c = used.find((u) => u.n === n)!.chunk; return `<li>[${n}] <a href="${esc(c.u)}" target="_blank" rel="noopener">${esc(c.t.split(" > ").slice(-2).join(" › "))}</a></li>`; }).join("")}</ul>`
+    : "";
+  const stop = busy && !loadMsg ? `<button type="button" class="ghost stopBtn">stop</button>` : "";
+  const body = loadMsg
+    ? `<p class="muted">${esc(loadMsg)}</p>`
+    : t.state === "notindocs"
+      ? `<p>The docs on this device don't seem to answer that. Check the search results below, or try different words.</p>`
+      : t.state === "error"
+        ? `<p class="muted">${esc(t.note ?? "The AI answer failed.")} The search results below still work.</p>`
+        : withCitations(md(text), used);
+  const model = esc(t.model ?? "");
+  const foot = busy
+    ? `<p class="muted small note">${loadMsg ? "" : `Generating on this device with ${model}…`}</p>`
+    : t.state === "done" || t.state === "notindocs"
+      ? `<p class="muted small note">✓ Written on this device by <b>${model}</b>${t.stats ? ` · ${esc(t.stats)}` : ""}. It can make mistakes: check the sources.</p>`
+      : "";
+  return `<section class="card answer${busy ? " busy" : ""}"><h3><span>✦ Answer</span><span class="tools">${stop}</span></h3><div class="body">${body}</div>${sources}${foot}</section>`;
+}
+
+function turnEl(t: Turn): HTMLElement {
+  const chunks = t.hits.map((id) => chunkById.get(id)).filter((c): c is Chunk => !!c);
+  const el = document.createElement("section");
+  el.className = "turn";
+  el.innerHTML = `<div class="q">${esc(t.q)}</div><div class="ai"></div><div class="res">${resultsBlock(t, chunks)}</div>`;
+  el.querySelector(".ai")!.innerHTML = answerHtml(t, buildPrompt(t.q, chunks).used, false);
+  return el;
+}
+
+function renderThread() {
+  ui.results.innerHTML = "";
+  if (!cur || !cur.turns.length) return renderEmpty();
+  for (const t of cur.turns) ui.results.append(turnEl(t));
+}
+
+function renderHistory() {
+  ui.historyList.innerHTML = convs.length
+    ? convs
+        .map((c) => `<li class="${c.id === cur?.id ? "current" : ""}"><button type="button" class="hist" data-id="${esc(c.id)}">${esc(c.title)}<small>${esc(new Date(c.ts).toLocaleString([], { dateStyle: "medium", timeStyle: "short" }))} · ${c.turns.length} question${c.turns.length === 1 ? "" : "s"}</small></button><button type="button" class="del" data-id="${esc(c.id)}" aria-label="Delete chat">✕</button></li>`)
+        .join("")
+    : `<li class="muted small">No chats yet.</li>`;
+}
+
+const setDrawer = (open: boolean) => {
+  ui.drawer.hidden = !open;
+  ui.backdrop.hidden = !open;
+  if (open) renderHistory();
+};
+
+function newChat() {
+  if (generating) engine?.interruptGenerate();
+  cur = null;
+  setDrawer(false);
+  ui.panel.hidden = true;
+  renderThread();
+  renderStatus();
+  ui.q.value = "";
+  ui.q.focus();
+}
+
+function openChat(id: string) {
+  const c = convs.find((x) => x.id === id);
+  if (!c) return;
+  if (generating) engine?.interruptGenerate();
+  cur = c;
+  setDrawer(false);
+  renderThread();
+  renderStatus(`${c.turns.length} question${c.turns.length === 1 ? "" : "s"} in this chat`);
+  ui.results.lastElementChild?.scrollIntoView({ block: "start" });
+}
+
+async function ask(q: string) {
+  if (!index || generating) return;
   const query = q.trim();
-  if (!query) return renderEmpty();
+  if (!query) return;
+  ui.q.value = "";
   const t0 = performance.now();
+  await Promise.race([embedderReady, new Promise((r) => setTimeout(r, 5000))]); // semantic search joins when it is ready
   const qv = embedQuery ? await embedQuery(query) : null;
-  const hits = index.hybrid(query, qv, 8);
+  const hits = index.hybrid(query, qv, 8).map((h) => h.chunk);
   const ms = Math.round(performance.now() - t0);
-  const terms = [...new Set(tokenize(query))].filter((t) => t.length > 2);
-  lastQuery = query;
-  lastHits = hits.map((h) => h.chunk);
-  ui.answer.hidden = true;
-  ui.answerBar.hidden = !(aiOn() && hits.length);
-  const card = hits[0]?.chunk.card;
-  ui.results.innerHTML =
-    (card
-      ? `<section class="card"><h3>${esc(card.title)}</h3><div class="body">${md(card.answer_md)}</div><div class="meta"><a href="${esc(card.source_url)}" target="_blank" rel="noopener">source</a><span>answer card, written at build time</span></div></section>`
-      : "") + (hits.length ? resultsHtml(hits.map((h) => h.chunk), terms) : `<p class="muted">No matches. Try a module name, an option, or the error text.</p>`);
+  if (!cur) cur = newConv(uid(), Date.now());
+  if (!cur.turns.length) {
+    cur.title = titleFrom(query);
+    ui.results.innerHTML = "";
+  }
+  const turn: Turn = { q: query, hits: hits.map((c) => c.id), state: "search" };
+  cur.turns.push(turn);
+  cur.ts = Date.now();
+  convs = upsertConv(convs, cur);
+  saveChats();
+  const el = turnEl(turn);
+  ui.results.append(el);
+  el.scrollIntoView({ block: "start", behavior: "smooth" });
   renderStatus(`${hits.length} results in ${ms} ms`);
-  history.replaceState(null, "", `?q=${encodeURIComponent(query)}`);
+  if (aiOn() && hits.length) await generateFor(turn, el, hits);
 }
 
 function renderStats(m: Manifest) {
@@ -340,8 +458,7 @@ async function toggleAi() {
     setAi(false);
     await engine?.unload().catch(() => {});
     engine = null;
-    ui.answerBar.hidden = true;
-    ui.answer.hidden = true;
+    setChip("off");
     return renderAiPanel();
   }
   const dev = await checkDevice();
@@ -350,13 +467,15 @@ async function toggleAi() {
   ui.aiBtn.disabled = true;
   ui.aiProgress.hidden = false;
   try {
+    setChip("loading");
     await ensureEngine((f, t) => {
+      setChip("loading", `${Math.round(f * 100)}%`);
       ui.aiBar.style.width = `${Math.round(f * 100)}%`;
       ui.aiInfo.textContent = t;
     });
     setAi(true);
     renderAiPanel();
-    ui.answerBar.hidden = !lastHits.length;
+    setChip("ready");
   } catch (e) {
     engine = null;
     renderAiPanel(`Couldn't load the model: ${(e as Error).message}. Search still works.`);
@@ -380,49 +499,84 @@ function withCitations(html: string, used: Used[]): string {
     .join("");
 }
 
-function showAnswer(text: string, used: Used[], state: "busy" | "done" | "notindocs" | "error", note = "") {
-  ui.answer.hidden = false;
-  ui.answer.classList.toggle("busy", state === "busy");
-  const cited = citedNumbers(text, used);
-  const sources = cited.length
-    ? `<ul class="sources">${cited.map((n) => { const c = used.find((u) => u.n === n)!.chunk; return `<li>[${n}] <a href="${esc(c.u)}" target="_blank" rel="noopener">${esc(c.t.split(" > ").slice(-2).join(" › "))}</a></li>`; }).join("")}</ul>`
-    : "";
-  const stop = state === "busy" ? `<button type="button" class="ghost" id="stopBtn">stop</button>` : "";
-  const body =
-    state === "notindocs"
-      ? `<p>The docs on this device don't seem to answer that. Check the search results below, or try different words.</p>`
-      : state === "error"
-        ? `<p class="muted">${esc(note)}</p>`
-        : withCitations(md(text), used);
-  ui.answer.innerHTML = `<h3><span>✦ Answer</span><span class="tools">${stop}</span></h3><div class="body">${body}</div>${sources}${state === "done" ? `<p class="muted small note">Written on this device by ${esc(modelFor(tier))} from the results below. It can make mistakes: check the sources.</p>` : ""}`;
+/** The header chip says which model is in use and what it is doing, so it is clear the AI is really running. */
+function setChip(state: "off" | "on" | "loading" | "ready" | "busy" | "failed", detail = "") {
+  const name = tier.label.replace(/ \(.*\)$/, "");
+  const label = {
+    off: "AI off",
+    on: `AI: ${name} on`,
+    loading: `AI: loading ${name}${detail ? ` ${detail}` : ""}`,
+    ready: `AI: ${name} ready`,
+    busy: `AI: ${name} answering…`,
+    failed: "AI: unavailable",
+  }[state];
+  ui.aiChip.textContent = (mock() ? "[mock] " : "") + label;
+  ui.aiChip.dataset.state = state;
 }
 
-async function writeAnswer() {
-  if (generating || !lastHits.length) return;
-  generating = true;
-  ui.answerBtn.disabled = true;
-  const { messages, used } = buildPrompt(lastQuery, lastHits);
+// If the browser dies while the model is loading or answering, the page reloads with this flag still set.
+const GUARD = "aa-gen";
+const guard = (on: boolean) => {
   try {
-    if (!engine) {
-      ui.answer.hidden = false;
-      ui.answer.innerHTML = `<h3><span>✦ Answer</span></h3><div class="body"><p class="muted" id="loadMsg">Loading the AI model…</p></div>`;
+    if (on) localStorage.setItem(GUARD, String(Date.now()));
+    else localStorage.removeItem(GUARD);
+  } catch {}
+};
+addEventListener("pagehide", () => guard(false));
+function checkCrash(): boolean {
+  try {
+    if (localStorage.getItem(GUARD)) {
+      guard(false);
+      setAi(false);
+      return true;
+    }
+  } catch {}
+  return false;
+}
+
+async function generateFor(turn: Turn, el: HTMLElement, chunks: Chunk[]) {
+  generating = true;
+  ui.q.disabled = true;
+  const { messages, used } = buildPrompt(turn.q, chunks);
+  const aiEl = el.querySelector(".ai") as HTMLElement;
+  turn.model = modelFor(tier);
+  turn.state = "done";
+  guard(true);
+  try {
+    if (!engine || engineModel !== modelFor(tier)) {
+      setChip("loading");
+      aiEl.innerHTML = answerHtml(turn, used, true, "Loading the AI model into memory…");
       await ensureEngine((f, t) => {
-        const el = document.getElementById("loadMsg");
-        if (el) el.textContent = `${t} (${Math.round(f * 100)}%)`;
+        setChip("loading", `${Math.round(f * 100)}%`);
+        aiEl.innerHTML = answerHtml(turn, used, true, `${t} (${Math.round(f * 100)}%)`);
       });
     }
-    showAnswer("", used, "busy");
-    const text = await engine!.generate(messages, (t) => {
-      if (!"NOT_IN_DOCS".startsWith(t.trim().toUpperCase().replace(/[^A-Z_]/g, "")) || !t.trim()) showAnswer(stripInvalidCitations(t, used), used, "busy");
+    setChip("busy");
+    aiEl.innerHTML = answerHtml(turn, used, true);
+    const r = await engine!.generate(messages, (t) => {
+      turn.answer = stripInvalidCitations(t, used);
+      // Hold back a reply that is still spelling out NOT_IN_DOCS.
+      if ("NOT_IN_DOCS".startsWith(t.trim().toUpperCase().replace(/[^A-Z_]/g, "")) && t.trim()) return;
+      aiEl.innerHTML = answerHtml(turn, used, true);
     });
-    if (isNotInDocs(text)) showAnswer(text, used, "notindocs");
-    else showAnswer(stripInvalidCitations(text, used), used, "done");
+    turn.stats = statsText(r);
+    if (isNotInDocs(r.text)) {
+      turn.state = "notindocs";
+      turn.answer = undefined;
+    } else turn.answer = stripInvalidCitations(r.text, used);
+    setChip("ready");
   } catch (e) {
     engine = null;
-    showAnswer("", used, "error", `The AI answer failed: ${(e as Error).message}. The search results below still work.`);
+    turn.state = "error";
+    turn.note = `The AI answer failed: ${(e as Error).message}.`;
+    setChip("failed");
   } finally {
+    guard(false);
     generating = false;
-    ui.answerBtn.disabled = false;
+    ui.q.disabled = false;
+    aiEl.innerHTML = answerHtml(turn, used, false);
+    el.querySelector(".res")!.innerHTML = resultsBlock(turn, chunks);
+    saveChats();
   }
 }
 
@@ -434,18 +588,19 @@ async function showMain(m: Manifest) {
   ui.main.hidden = false;
   ui.status.textContent = "loading index…";
   index = await loadIndex(m);
+  chunkById = new Map(index.chunks.map((c) => [c.id, c]));
+  loadChats();
+  const crashed = checkCrash();
   renderStats(m);
-  renderAiPanel();
+  renderAiPanel(crashed ? "The browser stopped unexpectedly while the AI model was running, so AI answers were turned off. Search still works. Try a different model, or leave AI off." : "");
+  setChip(aiOn() ? "on" : "off");
   const q = new URLSearchParams(location.search).get("q");
-  if (q) {
-    ui.q.value = q;
-    await search(q);
-  } else renderEmpty();
-  renderStatus(`${m.stats.chunks.toLocaleString()} passages ready offline`);
-  void loadEmbedder(m).then(() => {
-    renderStats(m);
-    if (ui.q.value.trim()) void search(ui.q.value);
-  });
+  cur = null;
+  renderThread();
+  renderStatus(crashed ? "AI answers were turned off after the browser stopped unexpectedly" : `${m.stats.chunks.toLocaleString()} passages ready offline`);
+  if (crashed) ui.panel.hidden = false;
+  embedderReady = loadEmbedder(m).then(() => renderStats(m));
+  if (q) await ask(q);
 }
 
 async function showSetup() {
@@ -483,14 +638,37 @@ async function runInstall(btn: HTMLButtonElement) {
 }
 
 ui.downloadBtn.addEventListener("click", () => runInstall(ui.downloadBtn));
-ui.answerBtn.addEventListener("click", () => void writeAnswer());
+ui.newBtn.addEventListener("click", newChat);
+ui.newBtn2.addEventListener("click", newChat);
+ui.historyBtn.addEventListener("click", () => setDrawer(ui.drawer.hidden));
+ui.closeDrawer.addEventListener("click", () => setDrawer(false));
+ui.backdrop.addEventListener("click", () => setDrawer(false));
+ui.aiChip.addEventListener("click", () => {
+  ui.panel.hidden = false;
+  ui.menuBtn.setAttribute("aria-expanded", "true");
+  ui.panel.scrollIntoView({ block: "start" });
+});
+ui.historyList.addEventListener("click", (e) => {
+  const t = (e.target as HTMLElement).closest("button");
+  const id = t?.dataset.id;
+  if (!t || !id) return;
+  if (t.classList.contains("del")) {
+    if (!confirm("Delete this chat?")) return;
+    convs = removeConv(convs, id);
+    saveChats();
+    if (cur?.id === id) {
+      cur = null;
+      renderThread();
+    }
+    renderHistory();
+  } else openChat(id);
+});
 ui.aiBtn.addEventListener("click", () => void toggleAi());
 ui.aiModel.addEventListener("change", async () => {
   tier = TIERS.find((t) => t.id === ui.aiModel.value) ?? DEFAULT_TIER;
   try {
     localStorage.setItem("aa-ai-model", tier.id);
   } catch {}
-  ui.answer.hidden = true;
   if (!aiOn()) return renderAiPanel();
   // AI is on: switch now, downloading the new model if it isn't on this device yet.
   setAi(false);
@@ -499,18 +677,15 @@ ui.aiModel.addEventListener("change", async () => {
   renderAiPanel();
   await toggleAi();
 });
-ui.answer.addEventListener("click", (e) => {
-  if ((e.target as HTMLElement).id === "stopBtn") engine?.interruptGenerate();
-});
 ui.form.addEventListener("submit", (e) => {
   e.preventDefault();
-  void search(ui.q.value);
+  void ask(ui.q.value);
 });
 ui.results.addEventListener("click", (e) => {
   const t = e.target as HTMLElement;
-  if (t.matches(".chips button")) {
-    ui.q.value = t.textContent ?? "";
-    void search(ui.q.value);
+  if (t.classList.contains("stopBtn")) engine?.interruptGenerate();
+  else if (t.matches(".chips button")) {
+    void ask(t.textContent ?? "");
   } else if (t.matches(".more")) {
     const body = t.previousElementSibling as HTMLElement;
     body.classList.toggle("clamped");
@@ -536,11 +711,16 @@ ui.updateBtn.addEventListener("click", async () => {
   await runInstall(ui.updateBtn);
 });
 ui.deleteBtn.addEventListener("click", async () => {
-  if (!confirm("Delete the downloaded docs and model from this device?")) return;
+  if (!confirm("Delete the downloaded docs, AI model and chat history from this device?")) return;
   await caches.delete(DATA_CACHE);
   for (const k of await caches.keys()) if (k.startsWith("webllm/")) await caches.delete(k); // downloaded AI model
   setAi(false);
   engine = null;
+  try {
+    localStorage.removeItem(CHATS_KEY);
+  } catch {}
+  convs = [];
+  cur = null;
   index = null;
   installed = null;
   ui.panel.hidden = true;

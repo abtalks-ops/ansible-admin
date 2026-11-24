@@ -4,10 +4,10 @@ import type { Chunk } from "./search.ts";
 
 export const NOT_IN_DOCS = "NOT_IN_DOCS";
 
-/** How much of the retrieved text goes to the model. Small models have short contexts (about 4k tokens). */
+/** How much of the retrieved text goes to the model. Small models have short contexts (a 2,048-token window is used to keep phone memory low). */
 export const PASSAGES = 4;
-export const PASSAGE_CHARS = 1400;
-export const TOTAL_CHARS = 5200;
+export const PASSAGE_CHARS = 1000;
+export const TOTAL_CHARS = 3600;
 
 export const SYSTEM_PROMPT = `You are Ansible Admin, an expert on Ansible. Answer the question using ONLY the numbered documentation passages the user provides.
 Rules:
