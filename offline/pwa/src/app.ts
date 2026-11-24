@@ -152,7 +152,29 @@ function highlight(html: string, terms: string[]): string {
   return html.replace(/(^|>)([^<]+)/g, (_, a, text) => a + text.replace(re, "<mark>$1</mark>"));
 }
 
-/** Small Markdown subset: fenced code, inline code, bold, paragraphs, bullets. */
+/** Inline Markdown: code, bold, emphasis; source line wraps are joined except before list items. */
+function inline(raw: string): string {
+  return esc(raw)
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[\s(])\*([^*\s][^*\n]*?)\*(?=[\s.,;:)]|$)/g, "$1<em>$2</em>")
+    // Docs source wraps lines at ~80 chars: keep breaks only before list items.
+    .replace(/\n(?=\s*(?:[-*+] |\d+\. ))/g, "<br>")
+    .replace(/\n/g, " ");
+}
+
+const isRow = (l: string) => /^\s*\|.*\|\s*$/.test(l);
+const isSeparator = (l: string) => isRow(l) && /^[\s|:-]+$/.test(l) && l.includes("-");
+const cells = (l: string) => l.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+
+function tableHtml(head: string, rows: string[], terms: string[]): string {
+  const cell = (tag: string, c: string) => `<${tag}>${highlight(inline(c), terms)}</${tag}>`;
+  return `<div class="tablewrap"><table><thead><tr>${cells(head).map((c) => cell("th", c)).join("")}</tr></thead><tbody>${rows
+    .map((r) => `<tr>${cells(r).map((c) => cell("td", c)).join("")}</tr>`)
+    .join("")}</tbody></table></div>`;
+}
+
+/** Small Markdown subset: fenced code, inline code, bold, paragraphs, bullets, tables. */
 function md(text: string, terms: string[] = []): string {
   const out: string[] = [];
   const parts = text.split(/```(\w*)\n?([\s\S]*?)```/g);
@@ -165,15 +187,24 @@ function md(text: string, terms: string[] = []): string {
     for (const para of parts[i].split(/\n\s*\n/)) {
       const p = para.trim();
       if (!p) continue;
-      let h = esc(p)
-        .replace(/`([^`]+)`/g, "<code>$1</code>")
-        .replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
-        .replace(/(^|[\s(])\*([^*\s][^*\n]*?)\*(?=[\s.,;:)]|$)/g, "$1<em>$2</em>")
-        // Docs source wraps lines at ~80 chars: keep breaks only before list items.
-        .replace(/\n(?=\s*(?:[-*+] |\d+\. ))/g, "<br>")
-        .replace(/\n/g, " ");
-      h = highlight(h, terms);
-      out.push(`<p>${h}</p>`);
+      // A paragraph can hold a table (rows on consecutive lines starting with "|") next to ordinary text.
+      let text: string[] = [];
+      const flush = () => {
+        if (!text.length) return;
+        out.push(`<p>${highlight(inline(text.join("\n")), terms)}</p>`);
+        text = [];
+      };
+      const lines = p.split("\n");
+      for (let k = 0; k < lines.length; k++) {
+        if (isRow(lines[k]) && k + 1 < lines.length && isSeparator(lines[k + 1])) {
+          let end = k + 2;
+          while (end < lines.length && isRow(lines[end])) end++;
+          flush();
+          out.push(tableHtml(lines[k], lines.slice(k + 2, end), terms));
+          k = end - 1;
+        } else text.push(lines[k]);
+      }
+      flush();
     }
   }
   return out.join("");
@@ -188,6 +219,15 @@ function resultHtml(c: Chunk, terms: string[], i: number): string {
     <div class="body clamped">${md(c.x, terms)}</div>
     <button class="more" type="button">show more</button>
   </article>`;
+}
+
+const SHOWN = 3;
+/** The top few results are open; the rest sit in a collapsed section so a phone screen isn't a wall of text. */
+function resultsHtml(chunks: Chunk[], terms: string[]): string {
+  const top = chunks.slice(0, SHOWN).map((c, i) => resultHtml(c, terms, i)).join("");
+  const rest = chunks.slice(SHOWN);
+  if (!rest.length) return top;
+  return `${top}<details class="more-results"><summary>Show ${rest.length} more result${rest.length > 1 ? "s" : ""}</summary>${rest.map((c, i) => resultHtml(c, terms, SHOWN + i)).join("")}</details>`;
 }
 
 function renderStatus(extra = "") {
@@ -218,7 +258,7 @@ async function search(q: string) {
   ui.results.innerHTML =
     (card
       ? `<section class="card"><h3>${esc(card.title)}</h3><div class="body">${md(card.answer_md)}</div><div class="meta"><a href="${esc(card.source_url)}" target="_blank" rel="noopener">source</a><span>answer card, written at build time</span></div></section>`
-      : "") + (hits.length ? hits.map((h, i) => resultHtml(h.chunk, terms, i)).join("") : `<p class="muted">No matches. Try a module name, an option, or the error text.</p>`);
+      : "") + (hits.length ? resultsHtml(hits.map((h) => h.chunk), terms) : `<p class="muted">No matches. Try a module name, an option, or the error text.</p>`);
   renderStatus(`${hits.length} results in ${ms} ms`);
   history.replaceState(null, "", `?q=${encodeURIComponent(query)}`);
 }
