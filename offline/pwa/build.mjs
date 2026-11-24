@@ -51,6 +51,16 @@ await build({
   // onnxruntime-web is loaded by transformers.js from the self-hosted ort/ files at runtime.
   logLevel: "warning",
 });
+// WebLLM is a separate bundle, loaded only when the user turns on AI answers (it is not part of the first download).
+await build({
+  entryPoints: [path.join(root, "node_modules/@mlc-ai/web-llm/lib/index.js")],
+  bundle: true,
+  format: "esm",
+  target: "es2022",
+  minify: process.env.MINIFY !== "0",
+  outfile: path.join(out, "vendor/web-llm.js"),
+  logLevel: "warning",
+});
 const shellHash = createHash("sha256")
   .update(["app.js", "index.html", "styles.css"].map((f) => fs.readFileSync(path.join(out, f))).join(""))
   .digest("hex")

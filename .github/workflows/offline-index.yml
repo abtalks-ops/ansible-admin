@@ -43,6 +43,7 @@ jobs:
       - name: Install ansible-core (for ansible.builtin plugin docs)
         run: pip install "ansible-core>=2.22,<2.23"
       - run: npm ci
+      - run: npm run typecheck && npm test
       - name: Restore embedding cache (unchanged chunks are not re-embedded)
         uses: actions/cache@v4
         with:

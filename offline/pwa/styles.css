@@ -66,3 +66,15 @@ mark { background: rgba(0, 255, 65, 0.25); color: #eaffef; border-radius: 2px; }
 .chips button { background: var(--panel); border: 1px solid var(--line); color: var(--text); border-radius: 999px; padding: 6px 12px; font-size: 12.5px; }
 .chips button:hover { border-color: var(--line-strong); }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } #bar { transition: none; } }
+
+/* AI answer */
+#answerBar { margin: 8px 0; }
+.wide { width: 100%; padding: 10px 14px; }
+.answer h3 { display: flex; justify-content: space-between; align-items: center; }
+.answer .tools { display: flex; gap: 8px; align-items: center; }
+.answer .cite { color: var(--green); text-decoration: none; border: 1px solid var(--line); border-radius: 6px; padding: 0 4px; font-size: 12px; }
+.answer .sources { margin: 8px 0 0; padding: 0; list-style: none; font-size: 12.5px; }
+.answer .sources li { margin: 2px 0; }
+.answer .note { margin-top: 8px; }
+.answer.busy .body::after { content: "▍"; animation: blink 1s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
