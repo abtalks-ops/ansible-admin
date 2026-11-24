@@ -1,0 +1,15 @@
+{
+  "repos": [
+    { "name": "ansible-core docs", "repo": "ansible/ansible-documentation", "branch": "devel", "dir": "docs/docsite/rst", "url": "https://docs.ansible.com/ansible/latest/{path}.html" },
+    { "name": "awx", "repo": "ansible/awx", "branch": "devel", "dir": "docs/docsite/rst", "url": "https://ansible.readthedocs.io/projects/awx/en/latest/{path}.html" },
+    { "name": "rulebook (EDA)", "repo": "ansible/ansible-rulebook", "branch": "main", "dir": "docs", "url": "https://ansible.readthedocs.io/projects/rulebook/en/latest/{path}.html" },
+    { "name": "eda-server", "repo": "ansible/eda-server", "branch": "main", "dir": "docs" },
+    { "name": "ansible-lint", "repo": "ansible/ansible-lint", "branch": "main", "dir": "docs", "url": "https://ansible.readthedocs.io/projects/lint/{path}/" },
+    { "name": "ansible-lint rules", "repo": "ansible/ansible-lint", "branch": "main", "dir": "src/ansiblelint/rules", "url": "https://ansible.readthedocs.io/projects/lint/rules/{path}/" },
+    { "name": "ansible-navigator", "repo": "ansible/ansible-navigator", "branch": "main", "dir": "docs", "url": "https://ansible.readthedocs.io/projects/navigator/{path}/" },
+    { "name": "ansible-builder", "repo": "ansible/ansible-builder", "branch": "devel", "dir": "docs", "url": "https://ansible.readthedocs.io/projects/builder/en/latest/{path}/" },
+    { "name": "ansible-runner", "repo": "ansible/ansible-runner", "branch": "devel", "dir": "docs" },
+    { "name": "molecule", "repo": "ansible/molecule", "branch": "main", "dir": "docs" },
+    { "name": "receptor (mesh)", "repo": "ansible/receptor", "branch": "devel", "dir": "docs" }
+  ]
+}
