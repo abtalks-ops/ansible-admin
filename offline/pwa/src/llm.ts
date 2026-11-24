@@ -8,12 +8,13 @@ export interface Tier {
   modelId: string; // an id from WebLLM's prebuilt model list
   downloadMB: number; // approximate, shown before the download
   note: string;
+  f32Id?: string; // build for GPUs without 16-bit shader support
 }
 
 /** The small models users can choose between (all about 1 to 1.5 billion parameters, 4-bit). */
 export const TIERS: Tier[] = [
-  { id: "llama", label: "Llama 3.2 1B (Meta)", modelId: "Llama-3.2-1B-Instruct-q4f16_1-MLC", downloadMB: 700, note: "smallest memory, good default" },
-  { id: "qwen", label: "Qwen 2.5 1.5B (Alibaba)", modelId: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC", downloadMB: 950, note: "often better with code and YAML, needs more memory" },
+  { id: "llama", label: "Llama 3.2 1B (Meta)", modelId: "Llama-3.2-1B-Instruct-q4f16_1-MLC", f32Id: "Llama-3.2-1B-Instruct-q4f32_1-MLC", downloadMB: 700, note: "smallest memory, good default" },
+  { id: "qwen", label: "Qwen 2.5 1.5B (Alibaba)", modelId: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC", f32Id: "Qwen2.5-1.5B-Instruct-q4f32_1-MLC", downloadMB: 950, note: "often better with code and YAML, needs more memory" },
   { id: "gemma", label: "Gemma 3 1B (Google)", modelId: "gemma3-1b-it-q4f16_1-MLC", downloadMB: 700, note: "small and fast" },
 ];
 export const DEFAULT_TIER = TIERS[0];
@@ -23,7 +24,7 @@ const PARAMS = new URLSearchParams(location.search);
 const abs = (p: string) => new URL(p, location.href).href;
 
 export type Engine = Pick<MLCEngineInterface, "interruptGenerate" | "unload"> & {
-  generate(messages: Array<{ role: "system" | "user"; content: string }>, onToken: (text: string) => void): Promise<GenResult>;
+  generate(messages: Array<{ role: "system" | "user"; content: string }>, onToken: (text: string) => void, maxTokens?: number): Promise<GenResult>;
 };
 
 export interface GenResult {
@@ -45,31 +46,56 @@ export interface DeviceCheck {
   memoryGB?: number;
 }
 
+let hasF16 = true;
+let diagnostics = "";
+export const getDiagnostics = () => diagnostics;
+export const addDiagnostic = (line: string) => (diagnostics += (diagnostics ? "\n" : "") + line);
+
 /** WebGPU is required. navigator.deviceMemory (Chrome only) is capped at 8 and rounded down. */
-export async function checkDevice(): Promise<DeviceCheck> {
+export async function checkDevice(tier: Tier = DEFAULT_TIER): Promise<DeviceCheck> {
   if (mock()) return { ok: true };
-  const gpu = (navigator as Navigator & { gpu?: { requestAdapter(): Promise<unknown | null> } }).gpu;
+  const gpu = (navigator as Navigator & { gpu?: { requestAdapter(): Promise<GpuAdapterLike | null> } }).gpu;
   if (!gpu) return { ok: false, reason: "This browser has no WebGPU. Search still works; AI answers need a recent Chrome or Safari." };
   const adapter = await gpu.requestAdapter().catch(() => null);
   if (!adapter) return { ok: false, reason: "No usable GPU was found for the browser. Search still works." };
   const memoryGB = (navigator as Navigator & { deviceMemory?: number }).deviceMemory;
+  hasF16 = !!adapter.features?.has("shader-f16");
+  const info = adapter.info;
+  const mb = (n?: number) => (n ? `${Math.round(n / 1048576)} MB` : "?");
+  diagnostics = [
+    `browser: ${navigator.userAgent}`,
+    `gpu: ${[info?.vendor, info?.architecture, info?.description].filter(Boolean).join(" / ") || "unknown"}`,
+    `shader-f16: ${hasF16 ? "yes" : "no"}  device memory: ${memoryGB ?? "?"} GB`,
+    `max buffer: ${mb(adapter.limits?.maxBufferSize)}  max storage binding: ${mb(adapter.limits?.maxStorageBufferBindingSize)}`,
+    `model: ${modelFor(tier)}`,
+  ].join("\n");
   if (memoryGB !== undefined && memoryGB < 3) return { ok: false, reason: `This device reports ${memoryGB} GB of memory, too little for the model.`, memoryGB };
+  if (!hasF16 && !tier.f32Id && !PARAMS.get("model")) return { ok: false, reason: `This phone's GPU can't run the ${tier.label} build. Try Llama or Qwen.`, memoryGB };
   return { ok: true, memoryGB };
 }
 
+interface GpuAdapterLike {
+  features?: { has(name: string): boolean };
+  limits?: { maxBufferSize?: number; maxStorageBufferBindingSize?: number };
+  info?: { vendor?: string; architecture?: string; description?: string };
+}
+
 /** ?llm=mock swaps in a canned model so the app can be tested without a GPU or a download. */
-export const mock = () => PARAMS.get("llm") === "mock";
+export const mock = () => PARAMS.get("llm")?.startsWith("mock") ?? false;
+// ?llm=mock-gpufail: the first answer fails like a GPU reset, to test recovery.
+let mockFailsLeft = PARAMS.get("llm") === "mock-gpufail" ? 1 : 0;
 
 /** ?model=<WebLLM model id> lets us try other models on a device without a new build. */
-export const modelFor = (tier: Tier) => PARAMS.get("model") ?? tier.modelId;
+export const modelFor = (tier: Tier) => PARAMS.get("model") ?? (!hasF16 && tier.f32Id ? tier.f32Id : tier.modelId);
 
 function mockEngine(): Engine {
   let stop = false;
   return {
     interruptGenerate() { stop = true; },
     async unload() {},
-    async generate(messages, onToken) {
+    async generate(messages, onToken, _maxTokens) {
       stop = false;
+      if (mockFailsLeft-- > 0) throw new Error("Failed to execute 'mapAsync' on 'GPUBuffer': A valid external Instance reference no longer exists.");
       const t0 = performance.now();
       let first = 0;
       let tokens = 0;
@@ -110,11 +136,11 @@ export async function loadEngine(tier: Tier, onProgress: (fraction: number, text
   return {
     interruptGenerate: () => engine.interruptGenerate(),
     unload: () => engine.unload(),
-    async generate(messages, onToken) {
+    async generate(messages, onToken, maxTokens = 350) {
       const t0 = performance.now();
       let first = 0;
       let tokens = 0;
-      const stream = await engine.chat.completions.create({ messages, stream: true, temperature: 0.1, top_p: 0.9, max_tokens: 450 });
+      const stream = await engine.chat.completions.create({ messages, stream: true, temperature: 0.1, top_p: 0.9, max_tokens: maxTokens });
       let text = "";
       for await (const chunk of stream) {
         const piece = chunk.choices[0]?.delta?.content ?? "";

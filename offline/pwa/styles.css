@@ -124,3 +124,4 @@ th { color: var(--green); font-weight: 400; background: rgba(0, 255, 65, 0.06); 
   .top .brand * { display: none; }
   .chip { max-width: 54vw; font-size: 11px; padding: 4px 8px; }
 }
+.diag { margin: 8px 0; } .diag pre { white-space: pre-wrap; overflow-wrap: anywhere; user-select: all; color: var(--muted); background: var(--panel-solid); border: 1px solid var(--line); border-radius: 8px; padding: 8px; margin: 6px 0 0; }
