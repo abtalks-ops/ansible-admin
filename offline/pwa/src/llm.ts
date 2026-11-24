@@ -23,8 +23,21 @@ const PARAMS = new URLSearchParams(location.search);
 const abs = (p: string) => new URL(p, location.href).href;
 
 export type Engine = Pick<MLCEngineInterface, "interruptGenerate" | "unload"> & {
-  generate(messages: Array<{ role: "system" | "user"; content: string }>, onToken: (text: string) => void): Promise<string>;
+  generate(messages: Array<{ role: "system" | "user"; content: string }>, onToken: (text: string) => void): Promise<GenResult>;
 };
+
+export interface GenResult {
+  text: string;
+  tokens: number; // streamed pieces, close to the token count
+  firstMs: number; // time to the first word
+  totalMs: number;
+}
+
+/** "first word 1.2 s · 14 tokens/s · 210 tokens" */
+export function statsText(r: GenResult): string {
+  const rate = r.totalMs > r.firstMs ? ((r.tokens - 1) / ((r.totalMs - r.firstMs) / 1000)).toFixed(1) : "–";
+  return `first word ${(r.firstMs / 1000).toFixed(1)} s · ${rate} tokens/s · ${r.tokens} tokens`;
+}
 
 export interface DeviceCheck {
   ok: boolean;
@@ -57,6 +70,9 @@ function mockEngine(): Engine {
     async unload() {},
     async generate(messages, onToken) {
       stop = false;
+      const t0 = performance.now();
+      let first = 0;
+      let tokens = 0;
       const user = messages[messages.length - 1].content;
       const out = /Question:[^\n]*(not in the docs|zzzz)/i.test(user)
         ? "NOT_IN_DOCS"
@@ -65,10 +81,12 @@ function mockEngine(): Engine {
       for (const w of out.split(/(?<=\s)/)) {
         if (stop) break;
         text += w;
+        tokens++;
+        if (!first) first = performance.now() - t0;
         onToken(text);
         await new Promise((r) => setTimeout(r, 15));
       }
-      return text;
+      return { text, tokens, firstMs: first, totalMs: performance.now() - t0 };
     },
   };
 }
@@ -83,18 +101,30 @@ export async function loadEngine(tier: Tier, onProgress: (fraction: number, text
     return mockEngine();
   }
   const webllm = (await import(/* @vite-ignore */ abs("vendor/web-llm.js"))) as typeof import("@mlc-ai/web-llm");
-  const engine = await webllm.CreateMLCEngine(modelFor(tier), { initProgressCallback: (p) => onProgress(p.progress, p.text) });
+  const engine = await webllm.CreateMLCEngine(
+    modelFor(tier),
+    { initProgressCallback: (p) => onProgress(p.progress, p.text) },
+    // A small window keeps GPU memory low; the prompt is built to fit (see shared/answer.ts).
+    { context_window_size: 2048 },
+  );
   return {
     interruptGenerate: () => engine.interruptGenerate(),
     unload: () => engine.unload(),
     async generate(messages, onToken) {
-      const stream = await engine.chat.completions.create({ messages, stream: true, temperature: 0.1, top_p: 0.9, max_tokens: 700 });
+      const t0 = performance.now();
+      let first = 0;
+      let tokens = 0;
+      const stream = await engine.chat.completions.create({ messages, stream: true, temperature: 0.1, top_p: 0.9, max_tokens: 450 });
       let text = "";
       for await (const chunk of stream) {
-        text += chunk.choices[0]?.delta?.content ?? "";
+        const piece = chunk.choices[0]?.delta?.content ?? "";
+        if (!piece) continue;
+        if (!first) first = performance.now() - t0;
+        tokens++;
+        text += piece;
         onToken(text);
       }
-      return text;
+      return { text, tokens, firstMs: first, totalMs: performance.now() - t0 };
     },
   };
 }
