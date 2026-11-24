@@ -65,12 +65,14 @@ async function main() {
   const subset = subsetPath ? new Set<string>(JSON.parse(fs.readFileSync(path.resolve(subsetPath), "utf8")).question_ids) : null;
   const report: Record<string, Record<string, number>> = {};
   const misses: string[] = [];
+  const hybridRanks: Record<string, number> = {};
   for (const [mode, run] of Object.entries(modes)) {
     let r1 = 0, r5 = 0, r10 = 0, mrr = 0, s5 = 0, sn = 0;
     const byCat: Record<string, [number, number]> = {};
     golden.forEach((g, i) => {
       const res = run(i);
       const rank = res.findIndex((c) => isHit(c, g));
+      if (mode === "hybrid") hybridRanks[g.id] = rank;
       if (rank === 0) r1++;
       if (rank >= 0 && rank < 5) r5++;
       if (subset?.has(g.id)) (sn++, rank >= 0 && rank < 5 && s5++);
@@ -91,7 +93,7 @@ async function main() {
   }
   if (args.includes("--misses")) console.log(`\nhybrid misses at 5:\n  ${misses.join("\n  ")}`);
 
-  const out = { set: setPath, questions: golden.length, built_at: manifest.built_at, index: manifest.stats, report };
+  const out = { set: setPath, questions: golden.length, built_at: manifest.built_at, index: manifest.stats, report, hybrid_ranks: hybridRanks };
   fs.mkdirSync(path.join(ROOT, "eval"), { recursive: true });
   fs.writeFileSync(path.join(ROOT, "eval", val("--out") ?? "last-run.json"), JSON.stringify(out, null, 2) + "\n");
 

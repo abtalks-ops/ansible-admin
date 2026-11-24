@@ -1,0 +1,16 @@
+{
+  "chunk_id": "c88b775cf276ed38",
+  "chunk_hash": "c88b775cf276ed38",
+  "summary": "Notes that since ansible-core 2.14, `ansible_failed_task` and `ansible_failed_result` propagate from an inner block to an outer block's rescue when blocks are nested.",
+  "questions": [
+    "With nested blocks, can the outer rescue see which inner task failed?",
+    "Do ansible_failed_task variables work across nested blocks?"
+  ],
+  "answer_card": {
+    "title": "Failure variables in nested blocks",
+    "answer_md": "Yes, in `ansible-core` 2.14 or later. Both `ansible_failed_task` and `ansible_failed_result` propagate from an inner block to the `rescue` section of an outer block when blocks are nested.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_blocks.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

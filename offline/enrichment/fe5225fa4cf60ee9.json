@@ -1,0 +1,19 @@
+{
+  "chunk_id": "fe5225fa4cf60ee9",
+  "chunk_hash": "fe5225fa4cf60ee9",
+  "summary": "Describes copy's `unsafe_writes` (fall back to non-atomic writes when atomic updates fail, as with docker-mounted files, at risk of corruption) and `validate`, which runs a command on a temp file via the required `%s` before copying, without shell features.",
+  "questions": [
+    "How do I validate a config file before copy puts it in place?",
+    "Why does copy fail writing to a docker bind-mounted file?",
+    "What does %s mean in the validate option?",
+    "Can I use pipes in the copy validate command?",
+    "Is unsafe_writes dangerous?"
+  ],
+  "answer_card": {
+    "title": "copy validate and unsafe_writes",
+    "answer_md": "- `validate`: command run against a temporary file before it's copied into place. The temp path is passed via `%s`, which **must** be present, e.g. `validate: /usr/sbin/visudo -csf %s`. The command is passed securely, so shell expansion and pipes don't work.\n- `unsafe_writes` (default false, 2.2): the module normally uses atomic operations. Some systems can't do that, e.g. docker-mounted files that can't be updated atomically from inside the container. This lets Ansible fall back to unsafe writes when atomic operations fail (it doesn't force them). Unsafe writes are subject to race conditions and can corrupt data.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

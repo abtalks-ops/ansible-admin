@@ -1,0 +1,21 @@
+{
+  "chunk_id": "5615a7c6b0cd88c8",
+  "chunk_hash": "5615a7c6b0cd88c8",
+  "summary": "Covers installing collections with `ansible-galaxy collection install`: the default Galaxy server and install path (`~/.ansible/collections`), upgrading with `--upgrade`, and installing from a tarball, a source directory, or a namespace directory. Notes that `-p` gets `ansible_collections` appended automatically unless already under such a folder.",
+  "questions": [
+    "How do I install a collection from Ansible Galaxy?",
+    "Where do collections get installed by default?",
+    "How do I upgrade a collection to the newest version?",
+    "Can I install a collection from a tar.gz file I built?",
+    "How do I install a collection straight from a local source directory?",
+    "Why did ansible-galaxy add an ansible_collections folder to my -p path?",
+    "Do I need to configure anything to use galaxy.ansible.com?"
+  ],
+  "answer_card": {
+    "title": "Install a collection with ansible-galaxy",
+    "answer_md": "By default `ansible-galaxy collection install` uses https://galaxy.ansible.com and installs into `~/.ansible/collections/ansible_collections`; no extra configuration is needed.\n\n```bash\nansible-galaxy collection install my_namespace.my_collection\n# upgrade to latest\nansible-galaxy collection install my_namespace.my_collection --upgrade\n# from a built tarball\nansible-galaxy collection install my_namespace-my_collection-1.0.0.tar.gz -p ./collections\n# build+install from source (uses MANIFEST.json or galaxy.yml)\nansible-galaxy collection install /path/to/collection -p ./collections\n# all collections in a namespace dir\nansible-galaxy collection install /path/to/ns -p ./collections\n```\n\nNote: `-p` automatically gets `ansible_collections` appended unless the parent directory is already named `ansible_collections`. For other Galaxy servers (e.g. Automation Hub) configure the ansible-galaxy client.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections_guide/collections_installing.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

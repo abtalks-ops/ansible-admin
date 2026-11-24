@@ -1,0 +1,18 @@
+{
+  "chunk_id": "d9fcc48f4e45262e",
+  "chunk_hash": "d9fcc48f4e45262e",
+  "summary": "Describes Ansible Automation Hub as the official place to discover and download certified collections from Red Hat and Certified Partners, part of an Ansible Automation Platform subscription with Red Hat support, and the downstream supported version of Ansible Galaxy.",
+  "questions": [
+    "What is Ansible Automation Hub?",
+    "How is Automation Hub different from Ansible Galaxy?",
+    "Do I need a subscription to use Automation Hub?",
+    "Where do I get certified collections?"
+  ],
+  "answer_card": {
+    "title": "What Ansible Automation Hub is",
+    "answer_md": "Ansible Automation Hub is the official location to discover and download **certified** collections (modules, plugins, roles, playbooks) from Red Hat and Certified Partners. It's the downstream, Red Hat supported version of Ansible Galaxy, included in a Red Hat Ansible Automation Platform subscription with support from Red Hat.",
+    "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/automationhub.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

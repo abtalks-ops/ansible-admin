@@ -1,0 +1,16 @@
+{
+  "chunk_id": "6d7f7e15c0c52c8d",
+  "chunk_hash": "6d7f7e15c0c52c8d",
+  "summary": "Introduces the list of Ansible command line utilities beyond `ansible` and `ansible-playbook`, and warns not to run most Ansible CLI tools in parallel against the same targets.",
+  "questions": [
+    "Is it safe to run two ansible-playbook commands at the same time against the same hosts?",
+    "What command line tools does Ansible provide besides ansible and ansible-playbook?"
+  ],
+  "answer_card": {
+    "title": "Running Ansible CLI tools in parallel",
+    "answer_md": "Ansible ships several utilities beyond `ansible` and `ansible-playbook`, each with its own page of parameters.\n\nYou should **not** run most Ansible CLI tools in parallel against the same targets.",
+    "source_url": "https://docs.ansible.com/ansible/latest/command_guide/command_line_tools.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

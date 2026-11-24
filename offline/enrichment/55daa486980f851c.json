@@ -1,0 +1,19 @@
+{
+  "chunk_id": "55daa486980f851c",
+  "chunk_hash": "55daa486980f851c",
+  "summary": "Explains running Ansible without building a custom EE by using community images: `community-ee-minimal` (only ansible-core) or `community-ee-base` (plus base collections). Shows ansible-navigator commands to list the image's collections, run an ad hoc command, and run a playbook against localhost.",
+  "questions": [
+    "Can I use Ansible in a container without building my own EE?",
+    "What's the difference between community-ee-minimal and community-ee-base?",
+    "How do I see which collections are in the community EE image?",
+    "How do I run an ad hoc command inside an execution environment?",
+    "How do I run a playbook with ansible-navigator using a specific EE image?"
+  ],
+  "answer_card": {
+    "title": "Run Ansible with the community EE images",
+    "answer_md": "Use `community-ee-minimal` (only `ansible-core`) or `community-ee-base` (adds several base collections).\n\n```bash\n# list collections in the base image\nansible-navigator collections --execution-environment-image ghcr.io/ansible-community/community-ee-base:latest\n\n# ad hoc command in the minimal image\nansible-navigator exec \"ansible localhost -m setup\" --execution-environment-image ghcr.io/ansible-community/community-ee-minimal:latest --mode stdout\n\n# run a playbook\nansible-navigator run test_localhost.yml --execution-environment-image ghcr.io/ansible-community/community-ee-minimal:latest --mode stdout\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/getting_started_ee/run_community_ee_image.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

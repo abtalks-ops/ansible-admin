@@ -1,0 +1,20 @@
+{
+  "chunk_id": "fbe42ebc0a9efde9",
+  "chunk_hash": "fbe42ebc0a9efde9",
+  "summary": "The `ansible.builtin.copy` module copies files or directories from the local or remote machine to the remote machine and can set metadata. Use stat to read metadata, file to set it, fetch to copy remote to local, template for interpolation (not `content` with variables), and win_copy for Windows. Recursive copy doesn't scale past hundreds of files.",
+  "questions": [
+    "How do I copy a file to my servers?",
+    "How do I copy a file from a remote host back to the control node?",
+    "Should I use copy or template when the file has variables?",
+    "Why is copying a big directory with the copy module so slow?",
+    "Can copy set permissions on a file that already exists?",
+    "How do I copy files to Windows hosts?"
+  ],
+  "answer_card": {
+    "title": "copy module overview",
+    "answer_md": "`ansible.builtin.copy` copies a file or directory structure from the local or remote machine to a location on the remote machine. It can set permissions, ownership, etc., even if the file already exists.\n\nRelated modules:\n- `ansible.builtin.stat` to get metadata, `ansible.builtin.file` to set it.\n- `ansible.builtin.fetch` to copy from remote to local.\n- `ansible.builtin.template` for variable interpolation. Using a variable with `content` gives unpredictable results.\n- `ansible.windows.win_copy` for Windows.\n\nNote: recursive copy does not scale to lots (more than hundreds) of files.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

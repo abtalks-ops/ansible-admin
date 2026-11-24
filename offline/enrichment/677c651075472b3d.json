@@ -1,0 +1,18 @@
+{
+  "chunk_id": "677c651075472b3d",
+  "chunk_hash": "677c651075472b3d",
+  "summary": "Explains the `check_mode` task option (since 2.2): `check_mode: true` always simulates and `check_mode: false` always makes changes, regardless of `--check`. Useful for testing modules with registered results; before 2.2 the equivalent of false was `always_run: true`.",
+  "questions": [
+    "How do I make one task always run for real even with --check?",
+    "How do I force a task to only ever run in check mode?",
+    "What replaced always_run?",
+    "How can I test whether a module would make a change without running it?"
+  ],
+  "answer_card": {
+    "title": "Force or prevent check mode on a task",
+    "answer_md": "Since 2.2, set `check_mode` on a task:\n- `check_mode: true`: always run in check mode, even without `--check`.\n- `check_mode: false`: always run normally and make changes, even with `--check`.\n\n```yaml\n- name: Always makes changes\n  ansible.builtin.command: /something/to/run --even-in-check-mode\n  check_mode: false\n\n- name: Never makes changes\n  ansible.builtin.lineinfile:\n    line: \"important config\"\n    dest: /path/to/myconfig.conf\n    state: present\n  check_mode: true\n  register: changes_to_important_config\n```\nRegistering results of `check_mode: true` tasks is handy for testing modules. Before 2.2 the equivalent of `check_mode: false` was `always_run: true`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_checkmode.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

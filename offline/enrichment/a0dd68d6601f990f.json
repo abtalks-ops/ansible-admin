@@ -1,0 +1,18 @@
+{
+  "chunk_id": "a0dd68d6601f990f",
+  "chunk_hash": "a0dd68d6601f990f",
+  "summary": "Explains that duplicate role dependencies run once unless their parameters, tags, or `when` differ or `allow_duplicates: true` is set. Deduplication ignores parent signatures, happens before variable evaluation, and using `vars:` instead of role params scopes variables at play level. Sets up a car/wheel/tire/brake example.",
+  "questions": [
+    "If two roles depend on the same role, does it run twice?",
+    "How do I make a shared role dependency run once per caller?",
+    "Why does using vars: on a dependency change the variable for the whole play?",
+    "Why are my role dependencies being deduplicated even though the values differ?"
+  ],
+  "answer_card": {
+    "title": "Duplicate role dependencies",
+    "answer_md": "Duplicate dependencies are treated like duplicate roles: a dependency runs **once** unless its parameters, tags, or `when` clause differ, or the dependency role sets `allow_duplicates: true`.\n\nCaveats:\n- Deduplication doesn't look at the parent role's invocation.\n- Using `vars:` instead of role params scopes those variables at the **play** level (e.g. `n` would be `4` across the whole play).\n- Deduplication happens before variable evaluation, so lazy evaluation can make different-looking invocations identical.\n\n```yaml\n# car/meta/main.yml\ndependencies:\n  - role: wheel\n    n: 1\n  - role: wheel\n    n: 2\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,20 @@
+{
+  "chunk_id": "fa1b2fcd2aa2d36f",
+  "chunk_hash": "fa1b2fcd2aa2d36f",
+  "summary": "Lists magic variables that users can't set, including ansible_check_mode, ansible_collection_name, ansible_config_file, ansible_dependent_role_names, ansible_diff_mode, ansible_forks, ansible_index_var, ansible_inventory_sources, ansible_limit, ansible_loop, ansible_loop_var, and ansible_parent_role_names.",
+  "questions": [
+    "Which variable tells me if the playbook is in check mode?",
+    "How do I find out which ansible.cfg is being used from inside a playbook?",
+    "Is there a variable with the value of --limit?",
+    "How can a role know which role included it?",
+    "Can I set magic variables myself?",
+    "What variable holds the number of forks?"
+  ],
+  "answer_card": {
+    "title": "Magic variables (part 1)",
+    "answer_md": "Magic variables can't be set by users; Ansible always overrides them.\n- `ansible_check_mode` / `ansible_diff_mode`: booleans for check/diff mode\n- `ansible_collection_name`: collection of the running task (`namespace.collection`)\n- `ansible_config_file`: full path of the config file in use\n- `ansible_dependent_role_names`: roles imported as dependencies\n- `ansible_forks`: max forks for this run\n- `ansible_index_var` (2.9) / `ansible_loop_var` (2.8): names given to `loop_control.index_var` / `loop_var`\n- `ansible_inventory_sources`: inventory sources used\n- `ansible_limit`: contents of `--limit`\n- `ansible_loop`: extended loop info when `loop_control.extended` is on\n- `ansible_parent_role_names`: parent roles when run via `include_role`/`import_role`, most recent first",
+    "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

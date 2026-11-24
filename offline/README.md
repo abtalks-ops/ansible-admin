@@ -21,7 +21,9 @@ Retrieval on the 324-question golden set, without enrichment (a page-level hit c
 | Vector (bge-small, int8) | 61.4% | 83.0% | 88.3% | 0.707 |
 | **Hybrid (RRF)** | **62.0%** | **86.1%** | **91.7%** | **0.727** |
 
-On the 107 questions about the 48 pilot pages, hybrid recall@5 is 84/107 (78.5%). That's the number to compare once the pilot enrichment is applied. The golden set is kept outside the repo for now, so the enrichment writer can't see it.
+On the 107 questions about the 48 pilot pages, hybrid recall@5 is 84/107 (78.5%).
+
+**With the pilot enrichment** (198 chunks, written blind to the golden set), hybrid recall@5 rises to **89.8% overall** and **99/107 (92.5%) on the pilot pages**. The index grows to 6.3 MB. Questions drive most of the gain: run `ENRICH_ROWS=questions|card|none npm run build:index` to compare. With only 5% of chunks enriched, those chunks also attract some unrelated queries: non-pilot recall@1 drops from 145 to 127 of 217. That bias should mostly go away once every chunk is enriched. The golden set is kept outside the repo for now, so the enrichment writer can't see it.
 
 ## How it works
 

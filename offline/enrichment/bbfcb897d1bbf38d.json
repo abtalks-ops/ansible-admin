@@ -1,0 +1,17 @@
+{
+  "chunk_id": "bbfcb897d1bbf38d",
+  "chunk_hash": "bbfcb897d1bbf38d",
+  "summary": "Lists copy return values: backup_file (when changed with backup), checksum (SHA1), dest, gid, group, md5sum (when supported), mode, owner, size, src (when changed), state, and uid.",
+  "questions": [
+    "How do I get the name of the backup file copy created?",
+    "What does the copy module return?",
+    "How do I get the checksum of the copied file?"
+  ],
+  "answer_card": {
+    "title": "copy return values",
+    "answer_md": "- `backup_file`: backup file name (when changed and `backup=yes`)\n- `checksum`: SHA1 after copy; `md5sum`: MD5 when supported\n- `dest`: destination path\n- `src`: source file used on the target (when changed)\n- `owner`, `uid`, `group`, `gid`, `mode`, `size`, `state`: properties of the target after execution",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "914ac8ef7c0362ab",
+  "chunk_hash": "914ac8ef7c0362ab",
+  "summary": "Explains running a playbook locally on a host (for crontab enforcement or an OS installer like kickstart) with `hosts: 127.0.0.1` and `--connection=local`, or `connection: local` per play. Warns that without `ansible_python_interpreter`, modules run under /usr/bin/python rather than `ansible_playbook_python`.",
+  "questions": [
+    "How do I run a playbook on the machine itself without SSH?",
+    "Can I run Ansible from cron to keep a system configured?",
+    "How do I use a local connection for just one play?",
+    "Why are my local playbook modules using /usr/bin/python?",
+    "Can I use Ansible inside a kickstart install?"
+  ],
+  "answer_card": {
+    "title": "Run a playbook locally",
+    "answer_md": "Set `hosts: 127.0.0.1` and run:\n```shell\nansible-playbook playbook.yml --connection=local\n```\nOr set it for one play:\n```yaml\n- hosts: 127.0.0.1\n  connection: local\n```\nUseful for cron-driven self-configuration or inside an OS installer such as an Anaconda kickstart.\n\n**Caveat:** with `connection: local` and no `ansible_python_interpreter`, modules run under `/usr/bin/python`, not `{{ ansible_playbook_python }}`. Set `ansible_python_interpreter: \"{{ ansible_playbook_python }}\"` (e.g. in `host_vars/localhost.yml`), or use `local_action` / `delegate_to: localhost` instead.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

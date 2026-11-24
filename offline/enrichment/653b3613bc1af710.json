@@ -1,0 +1,18 @@
+{
+  "chunk_id": "653b3613bc1af710",
+  "chunk_hash": "653b3613bc1af710",
+  "summary": "Explains the file module `mode`: quote octal values for consistent results, since a leading zero sometimes fails in loops and bare numbers are read as decimal. Symbolic modes work since 1.8; without mode, new objects use umask and existing ones keep theirs. Also covers `modification_time`.",
+  "questions": [
+    "Should I write mode as '0755' or 0755 in the file module?",
+    "Why do my permissions come out wrong inside a loop?",
+    "How do I set a file's modification time?",
+    "What mode does a new directory get if I don't set one?"
+  ],
+  "answer_card": {
+    "title": "file mode and modification_time",
+    "answer_md": "`mode` is octal. For consistent results **quote** it (`'644'`, `'1777'`). A leading zero (`0755`) works sometimes but can fail in loops and other cases. A bare number without either is read as decimal and gives unexpected results. Symbolic modes work since 1.8 (`u+rwx`, `u=rw,g=r,o=r`). Without `mode`, new objects use the system `umask` and existing ones keep their mode; set `mode` to be sure (CVE-2020-1736).\n\n`modification_time` (2.7): `preserve`, `YYYYMMDDHHMM.SS`, or `now`; default `preserve` for `state=file/directory/link/hard` and `now` for `state=touch`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

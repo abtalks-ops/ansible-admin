@@ -1,0 +1,18 @@
+{
+  "chunk_id": "c271b4910ce6563d",
+  "chunk_hash": "c271b4910ce6563d",
+  "summary": "Explains that facts gathered by a delegated task are assigned to the current `inventory_hostname` by default, and `delegate_facts: true` assigns them to the delegated host. Example gathers facts for dbservers from an app_servers play so `hostvars['dbhost1']` works.",
+  "questions": [
+    "How do I gather facts about my database servers from a play that targets app servers?",
+    "Which host gets the facts when I delegate setup?",
+    "What does delegate_facts do?",
+    "How can I access facts for hosts excluded by --limit?"
+  ],
+  "answer_card": {
+    "title": "Delegate facts",
+    "answer_md": "Facts gathered by a delegated task are, by default, assigned to the current host (`inventory_hostname`), not the host that produced them. Set `delegate_facts: true` to assign them to the delegated host:\n\n```yaml\n- hosts: app_servers\n  tasks:\n    - name: Gather facts from db servers\n      ansible.builtin.setup:\n      delegate_to: \"{{ item }}\"\n      delegate_facts: true\n      loop: \"{{ groups['dbservers'] }}\"\n```\nNow `hostvars['dbhost1']['ansible_default_ipv4']['address']` works even though dbservers weren't in the play or were excluded with `--limit`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

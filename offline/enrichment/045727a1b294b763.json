@@ -1,0 +1,19 @@
+{
+  "chunk_id": "045727a1b294b763",
+  "chunk_hash": "045727a1b294b763",
+  "summary": "Describes the top-level `argument_specs` block and entry point fields: entry-point name (`main` by default, the tasks file base name), `short_description` (one-line string shown by `ansible-doc -t role -l`), `description`, `version_added` as a string, `author`, and `options`.",
+  "questions": [
+    "How do I write the argument_specs file for a role?",
+    "What should the entry point be called in argument_specs?",
+    "Where does a role's short_description show up?",
+    "Should version_added be a string or a number?",
+    "How do I document multiple authors for a role entry point?"
+  ],
+  "answer_card": {
+    "title": "Argument spec entry point fields",
+    "answer_md": "Put specs under a top-level `argument_specs` key in `meta/argument_specs.yml`; all fields are lowercase.\n\n- **entry point name**: the tasks file base name without extension, `main` by default.\n  - `short_description`: one-line phrase, a string (never a list), no trailing period. Shown by `ansible-doc -t role -l` and used in the role's doc title.\n  - `description`: longer text, a string or a list (each item a paragraph).\n  - `version_added`: a **string**, e.g. `'2.1'`; in collections, the collection version such as `1.0.0`.\n  - `author`: string or list, one entry per author.\n  - `options`: the role's arguments.\n\nAnsible markup is allowed in the description fields.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

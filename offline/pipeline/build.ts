@@ -34,8 +34,10 @@ function saveEmbCache(m: Map<string, Float32Array>) {
 }
 
 /** Extra vector rows: each generated question, and the answer card title, embedded like a query. */
+// ENRICH_ROWS=questions|card|none limits the extra rows, for ablation runs (default: both).
+const ROWS = process.env.ENRICH_ROWS ?? "all";
 function extraKeys(c: Chunk): Array<{ key: string; text: string }> {
-  const qs = [...(c.qs ?? []), ...(c.card ? [c.card.title] : [])];
+  const qs = [...(ROWS === "all" || ROWS === "questions" ? c.qs ?? [] : []), ...(c.card && (ROWS === "all" || ROWS === "card") ? [c.card.title] : [])];
   return qs.map((q, i) => ({ key: `${c.id}:q${i}:${sha(q).slice(0, 8)}`, text: EMBEDDER.query_prefix + q }));
 }
 

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "6001c350c66cc2bd",
+  "chunk_hash": "6001c350c66cc2bd",
+  "summary": "Explains `delegate_to` for running a task on another host on behalf of the current one, combined with `serial` for rolling updates behind a load balancer. Shows the `local_action` shorthand for delegating to the control node.",
+  "questions": [
+    "How do I do a rolling update that takes hosts out of the load balancer?",
+    "How do I run a task on the Ansible control machine for each host?",
+    "What's local_action and how does it compare to delegate_to?",
+    "How do I limit how many hosts are updated at once?"
+  ],
+  "answer_card": {
+    "title": "Delegate tasks with delegate_to",
+    "answer_md": "Use `delegate_to` on a task, optionally with `serial` to limit hosts per batch:\n\n```yaml\n- hosts: webservers\n  serial: 5\n  tasks:\n    - name: Take out of load balancer pool\n      ansible.builtin.command: /usr/bin/take_out_of_pool {{ inventory_hostname }}\n      delegate_to: 127.0.0.1\n    - ansible.builtin.yum:\n        name: acme-web-stack\n        state: latest\n    - name: Add back to pool\n      ansible.builtin.command: /usr/bin/add_back_to_pool {{ inventory_hostname }}\n      delegate_to: 127.0.0.1\n```\n\nShorthand for delegating to the control node:\n```yaml\n- local_action: ansible.builtin.command\n  args:\n    cmd: /usr/bin/take_out_of_pool {{ inventory_hostname }}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "3213e8161823a4bb",
+  "chunk_hash": "3213e8161823a4bb",
+  "summary": "Shows using `meta: flush_handlers` in a rescue section so notified handlers still run after an error. Describes the `ansible_failed_task` and `ansible_failed_result` variables available in rescue (since 2.1) and using them in conditions.",
+  "questions": [
+    "How do I make sure handlers still run if a task fails?",
+    "How can I tell which task failed inside my rescue section?",
+    "How do I get the result of the failed task in rescue?",
+    "What's ansible_failed_task and ansible_failed_result?"
+  ],
+  "answer_card": {
+    "title": "Handlers and failure info in rescue",
+    "answer_md": "Run notified handlers even after an error by flushing them in `rescue`:\n```yaml\n    rescue:\n      - name: Make sure all handlers run\n        meta: flush_handlers\n```\n\nIn `rescue` you get two variables (added in 2.1):\n- `ansible_failed_task`: the task that failed, e.g. `ansible_failed_task.name`.\n- `ansible_failed_result`: its captured return value, like using `register`.\n\n```yaml\n    rescue:\n      - when: ansible_failed_task.name == 'Do Something'\n        ansible.builtin.debug:\n          msg: All is good, ignore error\n      - when: \"'/bin/false' in ansible_failed_result.cmd | d([])\"\n        ansible.builtin.fail:\n          msg: It is still false!!!\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_blocks.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

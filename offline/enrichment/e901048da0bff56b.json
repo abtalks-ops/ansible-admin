@@ -1,0 +1,19 @@
+{
+  "chunk_id": "e901048da0bff56b",
+  "chunk_hash": "e901048da0bff56b",
+  "summary": "Explains fire-and-forget async with `poll: 0`, where Ansible starts the task and moves on, and the play ends without checking back. Warns against it for exclusive-lock operations like yum, notes higher forks speed it up, and that the job cache must be cleaned with `async_status` `mode: cleanup`.",
+  "questions": [
+    "How do I run several tasks at the same time in a playbook?",
+    "What does poll: 0 do?",
+    "Is it safe to use poll: 0 with yum or package installs?",
+    "Do I need to clean up after fire-and-forget async tasks?",
+    "Does the playbook wait for poll: 0 tasks before finishing?"
+  ],
+  "answer_card": {
+    "title": "Run tasks concurrently with poll: 0",
+    "answer_md": "```yaml\n- name: Allow to run for 45 sec, fire and forget\n  ansible.builtin.command: /bin/sleep 15\n  async: 45\n  poll: 0\n```\nAnsible starts the task and immediately moves to the next one. Each async task runs until it completes, fails, or exceeds `async`; the playbook ends without checking back.\n\nCaveats:\n- Don't use `poll: 0` for operations needing exclusive locks (e.g. yum) if later tasks touch the same resources.\n- Higher `--forks` starts async tasks faster.\n- The async job cache file isn't cleaned automatically; clean it with `async_status` and `mode: cleanup`.\n- For a sync point, `register` the task and check its job ID with `async_status` later.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_async.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

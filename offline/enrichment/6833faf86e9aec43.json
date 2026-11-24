@@ -1,0 +1,16 @@
+{
+  "chunk_id": "6833faf86e9aec43",
+  "chunk_hash": "6833faf86e9aec43",
+  "summary": "Shows forcing a role to run multiple times in a play by adding `allow_duplicates: true` to the role's `meta/main.yml`.",
+  "questions": [
+    "How do I let a role run twice in the same play with the same parameters?",
+    "Where do I put allow_duplicates?"
+  ],
+  "answer_card": {
+    "title": "Run a role twice with allow_duplicates",
+    "answer_md": "Add `allow_duplicates: true` to the role's `meta/main.yml`:\n\n```yaml\n# roles/foo/meta/main.yml\nallow_duplicates: true\n```\n```yaml\n# playbook.yml\n- hosts: webservers\n  roles:\n    - foo\n    - foo\n```\nNow `foo` runs twice because duplicates are explicitly allowed.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

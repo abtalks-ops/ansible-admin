@@ -1,0 +1,20 @@
+{
+  "chunk_id": "8569913062919f48",
+  "chunk_hash": "8569913062919f48",
+  "summary": "Continues magic variables: ansible_parent_role_names order example, ansible_parent_role_paths, ansible_play_batch (active hosts in the serial batch), ansible_play_hosts (active hosts not limited by serial), ansible_play_hosts_all (all targeted), ansible_play_name, ansible_play_role_names, ansible_playbook_python, ansible_role_name, and ansible_role_names.",
+  "questions": [
+    "What's the difference between ansible_play_hosts, ansible_play_batch and ansible_play_hosts_all?",
+    "How do I get the list of hosts in the current serial batch?",
+    "Does ansible_play_hosts include failed hosts?",
+    "How do I get the name of the current play?",
+    "Which Python is Ansible using on the control node?",
+    "How do I get the fully qualified name of the running role?"
+  ],
+  "answer_card": {
+    "title": "Magic variables (part 2): play hosts and roles",
+    "answer_md": "- `ansible_parent_role_names`: e.g. A includes B gives `['A']` in B; B then includes C gives `['B', 'A']`. `ansible_parent_role_paths` lists their paths in the same order.\n- `ansible_play_batch`: active hosts in the current **serial batch** (failed/unreachable excluded).\n- `ansible_play_hosts`: active hosts in the play, not limited by serial (failed/unreachable excluded).\n- `ansible_play_hosts_all`: **all** hosts the play targeted.\n- `ansible_play_name`: the play's `name` (2.8).\n- `ansible_play_role_names`: roles imported into the play, excluding dependencies; `ansible_role_names` includes dependencies.\n- `ansible_playbook_python`: Python interpreter on the control node.\n- `ansible_role_name`: FQCN of the role, `namespace.collection.role_name`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

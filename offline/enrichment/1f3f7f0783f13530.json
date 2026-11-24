@@ -1,0 +1,19 @@
+{
+  "chunk_id": "1f3f7f0783f13530",
+  "chunk_hash": "1f3f7f0783f13530",
+  "summary": "Explains that Ansible creates an implicit `localhost` when you reference one not defined in inventory (for example with `delegate_to: localhost` or `local_action`), using `ansible_connection: local` and `ansible_python_interpreter: {{ansible_playbook_python}}`. Defining `localhost` in inventory overrides this and makes it a normal host with its own vars.",
+  "questions": [
+    "Do I need to put localhost in my inventory to delegate tasks to it?",
+    "What connection and Python does the implicit localhost use?",
+    "Why did my delegate_to localhost start using SSH after I added localhost to inventory?",
+    "How do I override the implicit localhost settings?",
+    "Which Python interpreter runs tasks delegated to localhost?"
+  ],
+  "answer_card": {
+    "title": "Implicit localhost",
+    "answer_md": "If you reference `localhost` (e.g. `delegate_to: localhost` or `local_action`) without defining it in inventory, Ansible creates one, equivalent to:\n\n```yaml\nhosts:\n  localhost:\n    vars:\n      ansible_connection: local\n      ansible_python_interpreter: \"{{ansible_playbook_python}}\"\n```\n\nThis ensures the local connection and the same Python as `ansible-playbook` are used.\n\nIf you add a `localhost` entry to your inventory, all implicit behavior is dropped and it is treated like any other host: group and host vars apply, including connection vars and `ansible_python_interpreter`. That also affects `delegate_to: localhost` and `local_action`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/implicit_localhost.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "1e7ff3e0d875306a",
+  "chunk_hash": "1e7ff3e0d875306a",
+  "summary": "Shows meta examples: flushing handlers right after a template, refreshing inventory after creating a cloud instance, clearing facts, clearing host errors after a failure, resetting the SSH connection so new group membership applies, and ending the play for CentOS 6 hosts with end_host.",
+  "questions": [
+    "How do I make a user's new group membership take effect in the same play?",
+    "How do I skip the rest of the play for certain OS versions?",
+    "How do I run handlers right after a task?",
+    "How do I refresh inventory after provisioning a new instance?"
+  ],
+  "answer_card": {
+    "title": "meta module examples",
+    "answer_md": "```yaml\n- ansible.builtin.template:\n    src: new.j2\n    dest: /etc/config.txt\n  notify: myhandler\n- ansible.builtin.meta: flush_handlers      # run handlers now\n\n- ansible.builtin.meta: refresh_inventory  # after creating instances\n\n- ansible.builtin.meta: clear_facts\n\n- ansible.builtin.meta: clear_host_errors  # bring failed host back for next play\n\n- ansible.builtin.user:\n    name: '{{ ansible_user }}'\n    groups: input\n- ansible.builtin.meta: reset_connection   # new groups apply to current login\n\n- ansible.builtin.meta: end_host\n  when:\n    - ansible_distribution == 'CentOS'\n    - ansible_distribution_major_version == '6'\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/meta_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

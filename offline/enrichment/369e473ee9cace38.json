@@ -1,0 +1,18 @@
+{
+  "chunk_id": "369e473ee9cace38",
+  "chunk_hash": "369e473ee9cace38",
+  "summary": "Explains how to control network connection and command timeouts, settable as playbook vars, environment variables, or ansible.cfg settings. Example sets the command timeout to 30 via `ansible_command_timeout`, `ANSIBLE_PERSISTENT_COMMAND_TIMEOUT`, or `[persistent_connection] command_timeout`.",
+  "questions": [
+    "My network command times out, how do I give it longer?",
+    "How do I set the command timeout for one task on a Cisco device?",
+    "What's the environment variable for persistent command timeout?",
+    "How do I set network timeouts globally in ansible.cfg?"
+  ],
+  "answer_card": {
+    "title": "Set network timeout options",
+    "answer_md": "Timeouts can be set three ways (here, a 30 second command timeout):\n\nPer task, as vars:\n```yaml\n- name: save running-config\n  cisco.ios.ios_command:\n    commands: copy running-config startup-config\n  vars:\n    ansible_command_timeout: 30\n```\nEnvironment variable:\n```bash\nexport ANSIBLE_PERSISTENT_COMMAND_TIMEOUT=30\n```\nGlobally in `ansible.cfg`:\n```ini\n[persistent_connection]\ncommand_timeout = 30\n```\nVariable precedence determines which applies when several are set.",
+    "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/network_connection_options.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

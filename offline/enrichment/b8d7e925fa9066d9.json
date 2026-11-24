@@ -1,0 +1,20 @@
+{
+  "chunk_id": "b8d7e925fa9066d9",
+  "chunk_hash": "b8d7e925fa9066d9",
+  "summary": "Lists more ssh parameters: sftp_extra_args, ssh_args (default `-C -o ControlMaster=auto -o ControlPersist=60s`, insecure with LocalForward), ssh_common_args, ssh_executable, ssh_extra_args, ssh_transfer_method (piped, scp, sftp, smart), sshpass_prompt, timeout (default 10s), and use_tty (adds -tt).",
+  "questions": [
+    "What SSH arguments does Ansible use by default?",
+    "How do I add extra SSH options like a ProxyCommand for all connections?",
+    "How do I change how Ansible copies files over SSH?",
+    "How do I increase the SSH connection timeout?",
+    "Why is using LocalForward with Ansible's default ssh_args insecure?",
+    "How do I stop Ansible forcing a TTY?"
+  ],
+  "answer_card": {
+    "title": "ssh connection parameters (part 3)",
+    "answer_md": "- `ssh_args` (default `-C -o ControlMaster=auto -o ControlPersist=60s`): args for all SSH CLI tools. Don't combine `LocalForward`/`-L` with the default `-C`; that can be insecure.\n- `ssh_common_args`: extra args for all SSH tools; `ssh_extra_args`, `scp_extra_args`, `sftp_extra_args`: extra args for one tool only.\n- `ssh_executable` (2.2, default `ssh` from `$PATH`): useful with restricted system SSH or wrappers.\n- `ssh_transfer_method` (default `smart`; `piped`, `scp`, `sftp`): file transfer method.\n- `sshpass_prompt` (2.10): prompt to look for; defaults to `Enter PIN for` with pkcs11, `assword` with ssh_askpass.\n- `timeout` (default 10): seconds to wait establishing the connection and when reading from it.\n- `use_tty` (default true, 2.5): add `-tt` to force tty allocation.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ssh_connection.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

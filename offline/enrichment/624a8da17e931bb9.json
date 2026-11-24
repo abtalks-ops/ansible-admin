@@ -1,0 +1,19 @@
+{
+  "chunk_id": "624a8da17e931bb9",
+  "chunk_hash": "624a8da17e931bb9",
+  "summary": "The `ansible.builtin.meta` module runs meta tasks that influence Ansible's internal execution or state, anywhere in a playbook and on Windows too. Notes `clear_facts` removes cached set_fact facts but not the current run's host variable, `refresh_inventory` doesn't refresh vars plugin caches (so mid-play host_vars/group_vars edits aren't seen; use include_vars), and tag-skipping meta tasks needs 2.11+.",
+  "questions": [
+    "What are meta tasks?",
+    "Why aren't my edited group_vars files picked up after refresh_inventory?",
+    "Does clear_facts remove variables set with set_fact?",
+    "How do I load variable files that change during the play?",
+    "Can I skip meta tasks with tags?"
+  ],
+  "answer_card": {
+    "title": "meta module overview and caveats",
+    "answer_md": "`ansible.builtin.meta` runs special tasks that influence Ansible's internal execution or state. They can be used anywhere in a playbook and are supported on Windows.\n\nCaveats:\n- `clear_facts` removes persistent facts from `set_fact` with `cacheable=True`, but not the host variable created for the current run.\n- `refresh_inventory` doesn't invalidate variable plugin caches. The default `host_group_vars` plugin caches paths and content, so creating, editing, or removing `host_vars`/`group_vars` files mid-play for already-targeted hosts/groups has no effect. Use `ansible.builtin.include_vars` for files changed during the run.\n- Skipping meta tasks with tags isn't supported before 2.11.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/meta_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

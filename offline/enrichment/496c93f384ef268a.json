@@ -1,0 +1,19 @@
+{
+  "chunk_id": "496c93f384ef268a",
+  "chunk_hash": "496c93f384ef268a",
+  "summary": "Explains role dependencies in `meta/main.yml`, which are prerequisites rather than parent/child relationships: listed roles, with their params or vars, run before the role that lists them, recursively, and the play is parent of all roles.",
+  "questions": [
+    "How do I make one role automatically run another role first?",
+    "Where do I define role dependencies?",
+    "Can I pass variables to a role dependency?",
+    "In what order do nested role dependencies run?",
+    "Are role dependencies children of the role that lists them?"
+  ],
+  "answer_card": {
+    "title": "Role dependencies",
+    "answer_md": "Define dependencies in the role's `meta/main.yml`:\n\n```yaml\n# roles/myapp/meta/main.yml\ndependencies:\n  - role: common\n    vars:\n      some_parameter: 3\n  - role: apache\n    vars:\n      apache_port: 80\n  - role: postgres\n    vars:\n      dbname: blarg\n```\nDependencies always run **before** the role that lists them, recursively: if `foo` depends on `bar` and `bar` on `baz`, the order is `baz`, `bar`, `foo`.\n\nThey are prerequisites, not true parent/child relationships; the play is the parent of all roles, including dependencies.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

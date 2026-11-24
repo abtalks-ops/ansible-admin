@@ -1,0 +1,18 @@
+{
+  "chunk_id": "3f5574f01f79639e",
+  "chunk_hash": "3f5574f01f79639e",
+  "summary": "Explains embedding custom modules in standalone roles via a `library/` directory, making them usable in that role and roles called after it. Roles in collections can't do this. You can also override a core module with a development copy, with caution, and embed plugins the same way.",
+  "questions": [
+    "How do I ship a custom module with my role so others don't need to set the library path?",
+    "Can roles in a collection embed modules in a library folder?",
+    "Which roles can use a module embedded in another role?",
+    "Can I override a built-in module with my own copy via a role?"
+  ],
+  "answer_card": {
+    "title": "Embed modules in roles",
+    "answer_md": "Only for **standalone** roles; roles in collections must use the collection's `plugins` structure.\n\nAdd a `library/` directory next to `tasks/` and `handlers/`:\n```text\nroles/\n  my_custom_modules/\n    library/\n      module1\n      module2\n```\nThe modules are usable in that role and in roles called **after** it:\n```yaml\n- hosts: webservers\n  roles:\n    - my_custom_modules\n    - some_other_role_using_my_custom_modules\n```\nYou can also embed a copy of a core module (e.g. a development version) to override it, but use caution: core APIs may change and this isn't guaranteed to work. Plugins can be embedded the same way.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

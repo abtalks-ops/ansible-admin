@@ -1,0 +1,18 @@
+{
+  "chunk_id": "6b7e7db1c3abe076",
+  "chunk_hash": "6b7e7db1c3abe076",
+  "summary": "Explains that the default is the linear strategy, alternatives include debug and free (each host runs to the end as fast as it can), and the strategy can be set per play or globally with `strategy` in `[defaults]` of ansible.cfg.",
+  "questions": [
+    "How do I let fast hosts finish without waiting for slow ones?",
+    "What's the free strategy?",
+    "How do I set the strategy for all playbooks?",
+    "What is the default strategy in Ansible?"
+  ],
+  "answer_card": {
+    "title": "Select a strategy",
+    "answer_md": "The default is the **linear** strategy. Others include **debug** and **free**, where each host runs to the end of the play as fast as it can.\n\nPer play:\n```yaml\n- hosts: all\n  strategy: free\n```\nGlobally in `ansible.cfg`:\n```ini\n[defaults]\nstrategy = free\n```\nStrategies are strategy plugins; see each plugin's docs for details.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

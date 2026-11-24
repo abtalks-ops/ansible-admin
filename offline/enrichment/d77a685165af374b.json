@@ -1,0 +1,19 @@
+{
+  "chunk_id": "d77a685165af374b",
+  "chunk_hash": "d77a685165af374b",
+  "summary": "Shows command module examples: registering output, free-form args with `creates=`, the `args` task keyword, the `cmd` parameter, chdir with become_user, `argv` lists for arguments with whitespace or mixed options, and the `quote` filter to avoid injection with templated variables.",
+  "questions": [
+    "How do I register the output of a command?",
+    "What's the difference between args and cmd in a command task?",
+    "How do I run a command as another user in a specific directory?",
+    "How do I safely use a variable in a command to avoid injection?",
+    "Can you show an argv example with options and values?"
+  ],
+  "answer_card": {
+    "title": "command module examples",
+    "answer_md": "```yaml\n- ansible.builtin.command: cat /etc/motd\n  register: mymotd\n\n# free form with args keyword (task keyword, same level as module)\n- ansible.builtin.command: /usr/bin/make_database.sh db_user db_name\n  args:\n    creates: /path/to/database\n\n# cmd module parameter\n- ansible.builtin.command:\n    cmd: /usr/bin/make_database.sh db_user db_name\n    creates: /path/to/database\n\n# chdir + become\n- ansible.builtin.command: /usr/bin/make_database.sh db_user db_name\n  become: yes\n  become_user: db_owner\n  args:\n    chdir: somedir/\n    creates: /path/to/database\n\n# argv list for values with spaces\n- ansible.builtin.command:\n    argv:\n      - /usr/bin/make_database.sh\n      - Username with whitespace\n      - dbname with whitespace\n\n# always quote templated vars\n- ansible.builtin.command: cat {{ myfile|quote }}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

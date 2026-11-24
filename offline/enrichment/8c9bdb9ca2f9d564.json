@@ -1,0 +1,17 @@
+{
+  "chunk_id": "8c9bdb9ca2f9d564",
+  "chunk_hash": "8c9bdb9ca2f9d564",
+  "summary": "Shows using the boolean magic variable `ansible_check_mode` (since 2.1) to skip a task in check mode with `when: not ansible_check_mode` or ignore its errors with `ignore_errors: \"{{ ansible_check_mode }}\"`.",
+  "questions": [
+    "How do I skip a task when running with --check?",
+    "How do I detect in a playbook that it's running in check mode?",
+    "How do I ignore errors only during a dry run?"
+  ],
+  "answer_card": {
+    "title": "Skip tasks or ignore errors in check mode",
+    "answer_md": "Use the magic variable `ansible_check_mode`, which is `True` in check mode (added in 2.1):\n\n```yaml\n- name: Skipped in check mode\n  ansible.builtin.git:\n    repo: ssh://git@github.com/mylogin/hello.git\n    dest: /home/mylogin/hello\n  when: not ansible_check_mode\n\n- name: Ignore errors in check mode\n  ansible.builtin.git:\n    repo: ssh://git@github.com/mylogin/hello.git\n    dest: /home/mylogin/hello\n  ignore_errors: \"{{ ansible_check_mode }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_checkmode.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "ed527d8b3529e24f",
+  "chunk_hash": "ed527d8b3529e24f",
+  "summary": "Explains static role reuse with `import_role` in the tasks section, behaving like the `roles` keyword, with vars and tags passable. A tag on `import_role` applies to all tasks in the role.",
+  "questions": [
+    "How do I import a role statically in the middle of my tasks?",
+    "Does tagging import_role tag every task in the role?",
+    "What's the difference between import_role and include_role with tags?"
+  ],
+  "answer_card": {
+    "title": "Import roles statically",
+    "answer_md": "`import_role` reuses a role statically anywhere in `tasks`; it behaves like the `roles` keyword.\n```yaml\n- hosts: webservers\n  tasks:\n    - ansible.builtin.debug: {msg: \"before we run our role\"}\n    - ansible.builtin.import_role:\n        name: example\n      vars:\n        dir: '/opt/a'\n    - ansible.builtin.debug: {msg: \"after we ran our role\"}\n```\nA tag on `import_role` is applied to **all** tasks within the role (unlike `include_role`, where it applies only to the include).",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

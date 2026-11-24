@@ -1,0 +1,19 @@
+{
+  "chunk_id": "3b4b8afc8d4ee153",
+  "chunk_hash": "3b4b8afc8d4ee153",
+  "summary": "Explains dynamic role reuse with `include_role`, which runs in task order rather than before tasks. Vars and tags can be passed; a tag applies only to the include itself, so `--tags` only selects role tasks with the same tag. Roles can be included conditionally with `when`.",
+  "questions": [
+    "How do I run a role in the middle of my tasks?",
+    "What's the difference between roles: and include_role in when the role runs?",
+    "Why doesn't tagging include_role tag the tasks inside the role?",
+    "How do I include a role only on RedHat hosts?",
+    "Can I pass vars to include_role?"
+  ],
+  "answer_card": {
+    "title": "Include roles dynamically",
+    "answer_md": "`include_role` runs the role where it appears in `tasks` (roles in `roles:` run before all tasks):\n```yaml\n- hosts: webservers\n  tasks:\n    - ansible.builtin.debug: {msg: \"before the role\"}\n    - ansible.builtin.include_role:\n        name: example\n    - ansible.builtin.debug: {msg: \"after the role\"}\n```\nPass vars and tags:\n```yaml\n- ansible.builtin.include_role:\n    name: foo_app_instance\n  vars:\n    dir: '/opt/a'\n    app_port: 5000\n  tags: typeA\n```\nA tag on `include_role` applies **only** to the include itself; `--tags` will run only role tasks that carry the same tag.\n\nConditionally:\n```yaml\n- ansible.builtin.include_role:\n    name: some_role\n  when: \"ansible_facts['os_family'] == 'RedHat'\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

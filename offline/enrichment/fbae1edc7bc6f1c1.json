@@ -1,0 +1,18 @@
+{
+  "chunk_id": "fbae1edc7bc6f1c1",
+  "chunk_hash": "fbae1edc7bc6f1c1",
+  "summary": "Explains that handlers run at the end of each play, and a later failure on a host means notified handlers don't run there, possibly leaving a changed config without a restart. `--force-handlers`, `force_handlers: True` in a play, or `force_handlers = True` in ansible.cfg runs them anyway, except where errors like unreachability prevent it.",
+  "questions": [
+    "Why didn't my restart handler run after a later task failed?",
+    "How do I make handlers run even if the play fails?",
+    "What does --force-handlers do?",
+    "Where can I set force_handlers?"
+  ],
+  "answer_card": {
+    "title": "Run handlers even after failures",
+    "answer_md": "Handlers run at the end of each play. If a task notifies a handler and a later task fails on that host, the handler does **not** run there by default, e.g. the config changed but the service wasn't restarted.\n\nForce them with any of:\n- `--force-handlers` on the command line\n- `force_handlers: True` in the play\n- `force_handlers = True` in `ansible.cfg`\n\nThen all notified handlers run on all hosts, even hosts with failed tasks. Some errors, like a host becoming unreachable, can still prevent them.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

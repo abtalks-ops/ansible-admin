@@ -1,0 +1,18 @@
+{
+  "chunk_id": "4192b2a7653424dc",
+  "chunk_hash": "4192b2a7653424dc",
+  "summary": "Shows `ignore_errors: true` to keep going after a task fails on a host. It only applies when the task runs and returns failed, not to undefined variables, connection failures, execution problems like missing packages, or syntax errors.",
+  "questions": [
+    "How do I keep the playbook going if a task fails?",
+    "Why doesn't ignore_errors ignore my undefined variable error?",
+    "Does ignore_errors work for unreachable hosts?",
+    "What kinds of errors can't ignore_errors skip?"
+  ],
+  "answer_card": {
+    "title": "Ignore failed tasks with ignore_errors",
+    "answer_md": "```yaml\n- name: Do not count this as a failure\n  ansible.builtin.command: /bin/false\n  ignore_errors: true\n```\n`ignore_errors` only works when the task can run and returns `failed`. It does **not** ignore undefined variable errors, connection failures, execution issues (e.g. missing packages), or syntax errors.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

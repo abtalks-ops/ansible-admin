@@ -1,0 +1,18 @@
+{
+  "chunk_id": "6caede169cc19a77",
+  "chunk_hash": "6caede169cc19a77",
+  "summary": "Lists command module return values, all always returned: cmd, delta, end, msg, rc, start, stderr, stderr_lines, stdout, and stdout_lines.",
+  "questions": [
+    "What fields do I get when I register a command task?",
+    "How do I get the command's output as a list of lines?",
+    "How do I check the return code of a command?",
+    "How do I find out how long a command took?"
+  ],
+  "answer_card": {
+    "title": "command module return values",
+    "answer_md": "All are always returned:\n- `cmd` (list): the command executed\n- `rc` (int): return code, `0` means success\n- `stdout` / `stderr` (str): standard output / error\n- `stdout_lines` / `stderr_lines` (list): the same split into lines\n- `start`, `end` (str): execution start and end time\n- `delta` (str): execution time\n- `msg` (bool): changed\n\nAccess them via `register`, e.g. `result.stdout_lines` or `result.rc`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

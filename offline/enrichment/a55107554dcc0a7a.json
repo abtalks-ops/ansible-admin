@@ -1,0 +1,17 @@
+{
+  "chunk_id": "a55107554dcc0a7a",
+  "chunk_hash": "a55107554dcc0a7a",
+  "summary": "Explains that unreachable hosts are removed from the active host list, and `meta: clear_host_errors` reactivates all hosts so later tasks retry them.",
+  "questions": [
+    "A host went unreachable mid-play, how do I get Ansible to try it again?",
+    "What does meta: clear_host_errors do?",
+    "Why are later tasks skipping a host that failed to connect?"
+  ],
+  "answer_card": {
+    "title": "Reset unreachable hosts",
+    "answer_md": "When Ansible can't connect to a host it marks it UNREACHABLE and removes it from the active hosts for the run. Add a `meta: clear_host_errors` task to reactivate all hosts so later tasks try to reach them again:\n\n```yaml\n- meta: clear_host_errors\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

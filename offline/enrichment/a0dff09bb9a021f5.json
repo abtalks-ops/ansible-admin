@@ -1,0 +1,16 @@
+{
+  "chunk_id": "a0dff09bb9a021f5",
+  "chunk_hash": "a0dff09bb9a021f5",
+  "summary": "Completes the anchor example with a playbook that anchors `version` as `&my_version`, reuses it in `custom_name` with `*my_version`, and prints it with `join('-')`.",
+  "questions": [
+    "How do I use an anchored value inside a template or debug message?",
+    "Can anchors reference values nested in a dictionary?"
+  ],
+  "answer_card": {
+    "title": "Use an anchored nested value in a playbook",
+    "answer_md": "```yaml\n- hosts: localhost\n  vars:\n    webapp:\n      version: &my_version 1.0\n      custom_name:\n        - \"ToDo_App\"\n        - *my_version\n  tasks:\n    - ansible.builtin.debug:\n        msg: My app is called \"{{ webapp.custom_name | join('-') }}\".\n```\nThe `version` value is anchored with `&my_version` and reused via the `*my_version` alias, so anchors let you reach values nested inside dictionaries.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_advanced_syntax.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

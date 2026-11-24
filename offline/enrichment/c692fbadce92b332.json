@@ -1,0 +1,11 @@
+{
+  "chunk_id": "c692fbadce92b332",
+  "chunk_hash": "c692fbadce92b332",
+  "summary": "A see-also link to a community forum guide on running a local container registry for Execution Environment images.",
+  "questions": [
+    "Is there a guide for hosting my EE images in a local registry?"
+  ],
+  "answer_card": null,
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,20 @@
+{
+  "chunk_id": "3f09bfdfc5b06b44",
+  "chunk_hash": "3f09bfdfc5b06b44",
+  "summary": "Lists ssh connection parameters: control_path (auto hash since 2.3, ignored if `-o ControlPath` is in ssh args), control_path_dir (default ~/.ansible/cp), host, host_key_checking (default true), password, password_mechanism (ssh_askpass, sshpass, or disable, since 2.19), and pipelining (default false, can conflict with sudo requiretty).",
+  "questions": [
+    "Where does Ansible keep SSH ControlPath sockets?",
+    "How do I turn off SSH host key checking?",
+    "How does Ansible handle SSH password prompts now?",
+    "Can I use sshpass for password authentication?",
+    "Why is my control_path setting ignored?",
+    "Should I enable pipelining for SSH?"
+  ],
+  "answer_card": {
+    "title": "ssh connection parameters (part 1)",
+    "answer_md": "- `control_path`: where ControlPath sockets go, using ssh variable substitution. Since 2.3, if null (default) Ansible generates a unique hash; use `%(directory)s` for the control dir. Ignored if `-o ControlPath` is in ssh args.\n- `control_path_dir` (default `~/.ansible/cp`): directory for control sockets.\n- `host` (default `inventory_hostname`): host/IP to connect to.\n- `host_key_checking` (default true): whether ssh rejects connections after checking host keys.\n- `password`: password for `remote_user`; can be given as a CLI option.\n- `password_mechanism` (2.19, default `ssh_askpass`; `sshpass`, `disable`): how the password prompt is handled.\n- `pipelining` (default false): fewer connection operations and big speedups, but can conflict with `become` (sudo needs `requiretty` disabled in sudoers).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ssh_connection.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}
