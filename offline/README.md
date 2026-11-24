@@ -95,9 +95,19 @@ Add one file per chunk at `enrichment/<chunk_hash>.json`. Chunk hashes are liste
 
 `.github/workflows/offline-index.yml` runs nightly, on demand and on pull requests that touch `offline/`. It builds the index, runs the retrieval gate, builds the PWA and uploads it as a build artifact. Deploying to GitHub Pages is a manual step: run the workflow with `deploy: true` after enabling Pages in the repo settings. It's manual because the design doc says the licence checks come before publishing.
 
+## AI answers on the device (phase 2, small models)
+
+Optional. In the settings panel (⚙), **Turn on AI answers** checks the device for WebGPU, asks before downloading the model (700 to 950 MB; you choose between Llama 3.2 1B, Qwen 2.5 1.5B and Gemma 3 1B, all 4-bit, through WebLLM), and keeps it in the browser's Cache Storage so it works offline afterwards. Then a **Write an answer on this device** button appears under each search.
+
+- The model is given only the top 4 passages (about 5,000 characters) and told to cite them as `[1]`, `[2]`. Citations that don't point at a real passage are removed, each cited source is listed under the answer, and a reply of `NOT_IN_DOCS` becomes "the docs on this device don't seem to answer that".
+- The WebLLM library (6 MB) is a separate bundle, `vendor/web-llm.js`, fetched only when AI is turned on. The 63 MB first install is unchanged.
+- Delete downloaded data also removes the model.
+- Testing without a GPU: open the app with `?llm=mock` for a canned model. The model picker is in the same panel and switching downloads the new model if needed. To try a model that is not in the picker, add `?model=<WebLLM model id>`.
+- `npm test` covers the prompt, citation and not-in-docs logic. Answer quality of the real model has **not** been measured yet: the build machine can't download it and has no GPU. That needs a device run.
+
 ## Known limits and next steps
 
 - The smoke-set gate in CI uses 40 questions. Switch it to the golden set once that can live in the repo.
 - Some sections produce several adjacent chunks, so the same heading can appear more than once in the results. Grouping results by section is a small UI follow-up.
 - The embedder used for the numbers above was quantized locally from the official fp32 export, because this build machine can't reach huggingface.co. CI uses the official `model_quantized.onnx` at a pinned revision, so its numbers may differ slightly.
-- Phase 2: WebLLM (Small and Standard tiers) on top of the same retrieval, plus real-phone tests. Phase 3: other sources and nightly deltas.
+- Phase 2 still to do: compare 2 or 3 small models on golden questions on a real device, then the Standard tier. Phase 3: other sources and nightly deltas.

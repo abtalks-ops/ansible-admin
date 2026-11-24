@@ -26,6 +26,12 @@
         <button id="updateBtn" class="ghost">Check for updates</button>
         <button id="deleteBtn" class="ghost danger">Delete downloaded data</button>
       </div>
+      <h2>AI answers (optional)</h2>
+      <p class="muted small" id="aiInfo"></p>
+      <label class="muted small" for="aiModel">Model</label>
+      <select id="aiModel" class="select"></select>
+      <div class="row"><button id="aiBtn" class="ghost">Turn on AI answers</button></div>
+      <div id="aiProgress" class="progress" hidden><div id="aiBar"></div></div>
       <label class="toggle"><input type="checkbox" id="rainToggle" checked /> digital rain</label>
       <p class="muted small">Sources are shown under every result. ansible-core documentation is GPL-3.0, © Ansible project contributors.</p>
     </section>
@@ -45,6 +51,8 @@
         <button type="submit" class="primary" aria-label="Search">↵</button>
       </form>
       <div id="status" class="muted small"></div>
+      <div id="answerBar" hidden><button id="answerBtn" class="primary wide" type="button">✦ Write an answer on this device</button></div>
+      <section id="answer" class="card answer" aria-live="polite" hidden></section>
       <div id="results" aria-live="polite"></div>
     </main>
   </div>
