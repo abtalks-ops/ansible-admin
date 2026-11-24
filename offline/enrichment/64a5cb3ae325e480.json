@@ -1,0 +1,19 @@
+{
+  "chunk_id": "64a5cb3ae325e480",
+  "chunk_hash": "64a5cb3ae325e480",
+  "summary": "Explains WinRM as a SOAP-based protocol over HTTP/HTTPS, enabled by default since Server 2012, used via the psrp or winrm connection plugins. Shows installing pypsrp or pywinrm with pipx or pip and a macOS workaround.",
+  "questions": [
+    "What Python packages do I need to connect to Windows from Ansible?",
+    "How do I add pywinrm to a pipx-installed Ansible?",
+    "Is WinRM enabled by default on Windows Server?",
+    "Why do winrm connections fail from my Mac?",
+    "What's the difference between the psrp and winrm connection plugins?"
+  ],
+  "answer_card": {
+    "title": "WinRM requirements on the control node",
+    "answer_md": "WinRM is a SOAP-based protocol over HTTP/HTTPS, enabled by default since Windows Server 2012 (some extra config may still be needed). Ansible uses the **`psrp`** or **`winrm`** connection plugins, whose Python deps you install separately:\n\n```shell\n# pipx\npipx inject ansible \"pypsrp<=1.0.0\"   # psrp\npipx inject ansible \"pywinrm>=0.4.0\"  # winrm\n# pip\npip3 install \"pypsrp<=1.0.0\"\npip3 install \"pywinrm>=0.4.0\"\n```\n\nOn **macOS** these plugins typically fail; the workaround is `OBJC_DISABLE_INITIALIZE_FORK_SAFETY=yes`, `no_proxy=*`, and avoiding Kerberos.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

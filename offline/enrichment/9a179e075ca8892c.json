@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9a179e075ca8892c",
+ "chunk_hash": "9a179e075ca8892c",
+ "summary": "ini lookup parameters: keys, allow_no_value (2.12), case_sensitive (2.12), default, encoding, file (default ansible.ini), interpolation (2.18), re for regex keys, section (default global), and type (ini or properties).",
+ "questions": [
+  "How do I read an INI file with keys that have no value?",
+  "How do I disable interpolation in the ini lookup?",
+  "How do I match INI keys with a regex?",
+  "What section does the ini lookup use by default?"
+ ],
+ "answer_card": {
+  "title": "ini lookup parameters",
+  "answer_md": "- `_terms` (required): key(s)\n- `section` (default `global`), `file` (default `ansible.ini`)\n- `type` (`ini` default or `properties` for Java properties)\n- `default` (default `\"\"`): value if missing\n- `re` (default false): treat key as regex\n- `allow_no_value` (alias `allow_none`, 2.12+): allow keys without `=`\n- `case_sensitive` (default false, 2.12+)\n- `interpolation` (default true, 2.18+)\n- `encoding` (default `utf-8`)",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ini_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

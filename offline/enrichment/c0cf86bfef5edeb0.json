@@ -1,0 +1,19 @@
+{
+  "chunk_id": "c0cf86bfef5edeb0",
+  "chunk_hash": "c0cf86bfef5edeb0",
+  "summary": "Describes role argument validation (since 2.11) via `meta/argument_specs.yml`, which inserts a validation task at the start of the role and fails it on invalid parameters. Specs in `meta/main.yml` also work but break below 2.11; dependencies are validated first; the inserted task is tagged `always`.",
+  "questions": [
+    "How do I validate the variables passed to my role?",
+    "Where do I put a role's argument spec?",
+    "Can I put argument_specs in meta/main.yml?",
+    "Why does the argument validation task still run when I use --tags?",
+    "Do role dependencies get validated before my role?"
+  ],
+  "answer_card": {
+    "title": "Role argument validation",
+    "answer_md": "Since 2.11, define a spec in `meta/argument_specs.yml` (or `.yaml`). Ansible inserts a task at the start of the role that validates supplied parameters; if validation fails, the role fails.\n\nNotes:\n- Specs in `meta/main.yml` are supported but won't work below 2.11, so prefer `meta/argument_specs.yml`.\n- If the role has dependencies, their validation runs first, even if the dependent role's validation then fails.\n- The validation task is tagged `always`; for statically imported roles it runs unless you use `--skip-tags`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

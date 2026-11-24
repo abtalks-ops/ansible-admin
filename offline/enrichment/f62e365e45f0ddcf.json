@@ -1,0 +1,18 @@
+{
+  "chunk_id": "f62e365e45f0ddcf",
+  "chunk_hash": "f62e365e45f0ddcf",
+  "summary": "Advises setting rounds to a non-default value for idempotency across crypt and passlib, shows blowfish/BCrypt with ident version, and the vault and unvault filters (2.12+) for encrypting and decrypting data.",
+  "questions": [
+    "How do I make password_hash consistent whether or not passlib is installed?",
+    "How do I generate a bcrypt hash with a specific version prefix?",
+    "How do I encrypt a value with vault inside a template?",
+    "How do I decrypt vaulted data with a filter?"
+  ],
+  "answer_card": {
+    "title": "rounds, bcrypt ident, and vault/unvault filters",
+    "answer_md": "Pick `rounds` that's neither crypt's default (5000) nor passlib's (535000 sha256 / 656000 sha512):\n\n```jinja\n{{ 'secretpassword' | password_hash('sha256', 'mysecretsalt', rounds=5001) }}\n```\n\nBCrypt version (blowfish only; `2`, `2a`, `2y`, `2b`):\n\n```jinja\n{{ 'secretpassword' | password_hash('blowfish', '1234567890123456789012', ident='2b') }}\n```\n\nVault filters (2.12+):\n\n```yaml\nmyvaultedkey: \"{{ keyrawdata | vault(passphrase) }}\"\nmykey: \"{{ myvaultedkey | unvault(passphrase) }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

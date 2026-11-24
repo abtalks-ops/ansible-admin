@@ -1,0 +1,18 @@
+{
+  "chunk_id": "754629c1d3768ded",
+  "chunk_hash": "754629c1d3768ded",
+  "summary": "Explains that notified handlers run automatically after `pre_tasks`, `roles`/`tasks`, and `post_tasks`, so each runs once. `meta: flush_handlers` runs notified handlers immediately, and handlers can be notified and run again afterward.",
+  "questions": [
+    "How do I make a handler run in the middle of a play instead of at the end?",
+    "When exactly do handlers run during a play?",
+    "Can a handler run more than once in a play?",
+    "What does meta: flush_handlers do?"
+  ],
+  "answer_card": {
+    "title": "Control when handlers run",
+    "answer_md": "By default notified handlers run after each section, in order: `pre_tasks`, `roles`/`tasks`, then `post_tasks`. Each runs once however many tasks notified it.\n\nTo run them earlier, flush:\n```yaml\ntasks:\n  - ansible.builtin.shell: ...\n  - name: Flush handlers\n    meta: flush_handlers\n  - ansible.builtin.shell: ...\n```\n`meta: flush_handlers` runs any handlers notified so far. After handlers run (automatically or via flush), they can be notified and run again later in the play.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_handlers.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

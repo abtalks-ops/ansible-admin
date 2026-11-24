@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7531a347b7e3027a",
+ "chunk_hash": "7531a347b7e3027a",
+ "summary": "community.general's reveal_ansible_type filter and ansible_type test report new Data Tagging aliases such as _AnsibleTaggedStr, _AnsibleTaggedInt and _AnsibleTaggedFloat.",
+ "questions": [
+  "Why does reveal_ansible_type show _AnsibleTaggedStr instead of str?",
+  "What are _AnsibleTaggedStr and _AnsibleTaggedInt?"
+ ],
+ "answer_card": {
+  "title": "Tagged type names in reveal_ansible_type",
+  "answer_md": "With ansible-core's Data Tagging, the community.general `reveal_ansible_type` filter and `ansible_type` test can report new type aliases such as `_AnsibleTaggedStr` (for `str`), `_AnsibleTaggedInt` (for `int`) and `_AnsibleTaggedFloat` (for `float`).",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

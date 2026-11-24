@@ -1,0 +1,15 @@
+{
+ "chunk_id": "deba5aa42831528e",
+ "chunk_hash": "deba5aa42831528e",
+ "summary": "AWS tests need broad permissions, best given to a dedicated user configured beforehand.",
+ "questions": [
+  "What AWS permissions do the integration tests need?"
+ ],
+ "answer_card": {
+  "title": "AWS IAM for tests",
+  "answer_md": "Fairly broad rights, granted to a dedicated user before you run the tests.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_integration.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:46+00:00"
+}

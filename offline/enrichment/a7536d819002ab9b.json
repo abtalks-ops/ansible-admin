@@ -1,0 +1,19 @@
+{
+ "chunk_id": "a7536d819002ab9b",
+ "chunk_hash": "a7536d819002ab9b",
+ "summary": "Command-line options override configuration settings only, not playbook keywords or variables. For single-value options the last one given wins, while some options such as -i accept multiple values that are combined.",
+ "questions": [
+  "Why doesn't my -u flag override the user set in inventory?",
+  "What happens if I pass the same command-line flag twice?",
+  "Can I pass multiple inventory files with -i?",
+  "Do CLI options override playbook keywords?",
+  "How can I force a value from the command line to override everything?"
+ ],
+ "answer_card": {
+  "title": "How command-line options rank in precedence",
+  "answer_md": "Command-line options only override **configuration settings**. They do *not* override playbook keywords, inventory variables or playbook variables.\n\n- For single-value options, the last one wins: `ansible -u mike -m ping myhost -u carol` connects as `carol`.\n- Some options accept multiple values and combine them, for example `ansible -i /path/inventory1 -i /path/inventory2 -m ping all`.\n\nTo override everything from the command line, pass a variable with `-e`/`--extra-vars` instead (that is variable precedence, not CLI option precedence).",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/general_precedence.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

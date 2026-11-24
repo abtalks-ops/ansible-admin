@@ -1,0 +1,17 @@
+{
+ "chunk_id": "52578deedf7bc04d",
+ "chunk_hash": "52578deedf7bc04d",
+ "summary": "--venv runs tests in an ansible-test-managed Python virtual environment with requirements installed automatically; use it for unit and integration tests when --docker and --remote aren't available.",
+ "questions": [
+  "Can I run ansible-test without Docker?",
+  "What does ansible-test --venv do?",
+  "Does --venv install test dependencies for me?"
+ ],
+ "answer_card": {
+  "title": "Run ansible-test in a virtualenv",
+  "answer_md": "When you can't use `--docker` or `--remote`, use `--venv`. ansible-test creates and manages a Python virtual environment and installs the requirements automatically before running unit or integration tests.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_running_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

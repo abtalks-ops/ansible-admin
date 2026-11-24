@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5f96e1f23374cc88",
+ "chunk_hash": "5f96e1f23374cc88",
+ "summary": "The subelements lookup walks a list of dictionaries and iterates a list under a given (possibly nested) key in each.",
+ "questions": [
+  "How do I loop over a nested list inside each user dict?",
+  "What does with_subelements do?"
+ ],
+ "answer_card": {
+  "title": "subelements lookup",
+  "answer_md": "The `subelements` lookup walks a list of dictionaries and then iterates over a list found at a given (nested) key inside each record. In the loop, `item.0` is the record and `item.1` is the subelement.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/subelements_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

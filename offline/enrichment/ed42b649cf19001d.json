@@ -1,0 +1,16 @@
+{
+  "chunk_id": "ed42b649cf19001d",
+  "chunk_hash": "ed42b649cf19001d",
+  "summary": "Examples show a non-empty string is not falsy while an empty string is.",
+  "questions": [
+    "Is an empty string falsy in Ansible?",
+    "Is a non-empty string falsy?"
+  ],
+  "answer_card": {
+    "title": "falsy test examples",
+    "answer_md": "```yaml\nthisisfalse: '{{ \"any string\" is falsy }}'   # False\nthisistrue: '{{ \"\" is falsy }}'              # True\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/falsy_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:13+00:00"
+}

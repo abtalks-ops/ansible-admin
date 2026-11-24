@@ -1,0 +1,17 @@
+{
+ "chunk_id": "88d021d8c722420d",
+ "chunk_hash": "88d021d8c722420d",
+ "summary": "The new template engine lazily evaluates nested and recursive templates only when accessed and caches intermediate results within an operation, giving large performance gains for complex templating.",
+ "questions": [
+  "Is templating faster in ansible-core 2.19?",
+  "Does Ansible evaluate nested variables lazily now?",
+  "Why were deeply nested templates slow in older Ansible?"
+ ],
+ "answer_card": {
+  "title": "Lazy templating improves performance",
+  "answer_md": "Older versions resolved deeply nested, recursive or self-referential templates to full depth on every access, even for data that was never used. The new engine **defers templating until values are accessed** (or leave the engine) and **caches** intermediate results for the duration of a template operation. This has produced exponential speedups in many real-world complex templating cases.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.19.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

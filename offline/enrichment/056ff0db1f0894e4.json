@@ -1,0 +1,18 @@
+{
+ "chunk_id": "056ff0db1f0894e4",
+ "chunk_hash": "056ff0db1f0894e4",
+ "summary": "Since ansible-core 2.11, playbooks in a collection can be referenced by FQCN from the CLI or import_playbook, keeping collection context. They must live in playbooks/ and should take hosts from a variable to avoid hitting all inventory.",
+ "questions": [
+  "How do I run a playbook that ships inside a collection?",
+  "Can I import_playbook from a collection by name?",
+  "How should collection playbooks define their target hosts?",
+  "Can collection playbooks have a roles subdirectory?"
+ ],
+ "answer_card": {
+  "title": "Playbooks in collections",
+  "answer_md": "- Since **ansible-core 2.11**, use `namespace.collection.playbook` (extension optional) on the command line or with `import_playbook`; it runs in collection context.\n- Keep them in `playbooks/`; `files/`, `vars/`, `templates/` are fine but not `roles/`.\n- Make hosts a variable, e.g. `hosts: '{{target|default(\"all\")}}'`, so users don't hit all inventory by accident. Users can then pass `-e` or `--limit`.\n- Document usage in `docs/` or the README.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_structure.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:07+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "dd7770477c44220e",
+  "chunk_hash": "dd7770477c44220e",
+  "summary": "Lists three ways to tag roles: under roles, on a static import_role, or on tasks inside the role used with include_role. Role-level tags also apply to the role's dependencies.",
+  "questions": [
+    "How do I tag all tasks in a role?",
+    "How do I run only some tasks of a role by tag?",
+    "Do role tags apply to role dependencies?"
+  ],
+  "answer_card": {
+    "title": "Tagging roles",
+    "answer_md": "1. Tags under `roles:` tag every task in the role.\n2. Tags on a static `import_role` do the same.\n3. To select only some tasks inside a role, tag those tasks/blocks in the role, use `include_role`, and put the same tag on the include.\n\n```yaml\nroles:\n  - role: webserver\n    vars:\n      port: 5000\n    tags: [ web, foo ]\n```\n\nRole-level tags also tag the role's dependencies.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

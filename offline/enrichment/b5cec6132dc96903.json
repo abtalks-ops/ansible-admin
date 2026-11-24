@@ -1,0 +1,17 @@
+{
+  "chunk_id": "b5cec6132dc96903",
+  "chunk_hash": "b5cec6132dc96903",
+  "summary": "Explains notifying handlers from a loop, such as `notify: Restart {{ item }}`. The task's changed status is set if any loop item changed, so any change triggers all the notified handlers.",
+  "questions": [
+    "Can I notify a different handler for each loop item?",
+    "Why did both handlers run when only one templated file changed?",
+    "How does changed status work with loops and notify?"
+  ],
+  "answer_card": {
+    "title": "Notify handlers from a loop",
+    "answer_md": "```yaml\n- name: Template services\n  ansible.builtin.template:\n    src: \"{{ item }}.j2\"\n    dest: /etc/systemd/system/{{ item }}.service\n  notify: Restart {{ item }}\n  loop:\n    - memcached\n    - apache\n```\nHandlers are triggered based on the task as a whole. With a loop, the task is changed if **any** item changed, and then **all** the handlers it notifies run. Here both memcached and apache restart if either template changed, and neither restarts if nothing changed.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_handlers.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

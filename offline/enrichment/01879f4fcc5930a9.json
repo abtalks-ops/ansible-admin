@@ -1,0 +1,18 @@
+{
+ "chunk_id": "01879f4fcc5930a9",
+ "chunk_hash": "01879f4fcc5930a9",
+ "summary": "For golden images, process the ngen queue during image build to avoid a high-CPU task after instances boot, as long as CPU types won't change. Add a win_dotnet_ngen task near the end of the image playbook.",
+ "questions": [
+  "Why do my new Windows cloud instances have high CPU right after boot?",
+  "How do I pre-generate .NET native images in a golden image?",
+  "Which module runs ngen on Windows from Ansible?",
+  "When can I safely run ngen during golden image creation?"
+ ],
+ "answer_card": {
+  "title": "Avoiding high CPU on boot for Windows images",
+  "answer_md": "If you build golden images, process the ngen queue during image creation to avoid a disruptive high-CPU task near startup. This only helps if the CPU types won't change between the image build and runtime (other factors can also invalidate native images; see MSDN).\n\nPut this near the end of your image playbook:\n\n```yaml\n- name: generate native .NET images for CPU\n  win_dotnet_ngen:\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_performance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

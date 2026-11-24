@@ -1,0 +1,19 @@
+{
+  "chunk_id": "4d4dafebcd60f4d9",
+  "chunk_hash": "4d4dafebcd60f4d9",
+  "summary": "apt module options for changing held packages, allowing downgrades, installing unauthenticated packages, auto-installing module dependencies, autoclean, and autoremove.",
+  "questions": [
+    "How do I upgrade a package that is on apt hold?",
+    "How do I let Ansible downgrade a package to an older version?",
+    "How do I install packages that fail signature authentication?",
+    "How do I remove orphaned dependency packages with apt?",
+    "What's the difference between autoclean and autoremove?"
+  ],
+  "answer_card": {
+    "title": "apt options: holds, downgrades, cleanup",
+    "answer_md": "- `allow_change_held_packages` (no): change version of held packages\n- `allow_downgrade` (no): like `--allow-downgrades`; can make the task non-idempotent; ignored with aptitude\n- `allow_unauthenticated` (no): ignore unauthenticated packages; only with `state: install/present`\n- `auto_install_module_deps` (true): install deps needed by the module\n- `autoclean` (no): remove package files that can no longer be downloaded\n- `autoremove` (no): remove unused dependency packages; can be used alone",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

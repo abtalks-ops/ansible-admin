@@ -1,0 +1,17 @@
+{
+  "chunk_id": "aeb3a69b3d462395",
+  "chunk_hash": "aeb3a69b3d462395",
+  "summary": "Describes the debugger keyword (2.5+) with values always, never, on_failed, on_unreachable and on_skipped, set at play, role, block or task level, with the most granular definition winning and overriding global config.",
+  "questions": [
+    "What values does the debugger keyword accept?",
+    "How do I invoke the debugger only when a host is unreachable?",
+    "If debugger is set on a play and a task, which wins?"
+  ],
+  "answer_card": {
+    "title": "The debugger keyword",
+    "answer_md": "Available since 2.5 on plays, roles, blocks and tasks:\n\n| Value | When |\n|---|---|\n| `always` | always |\n| `never` | never |\n| `on_failed` | task fails |\n| `on_unreachable` | host unreachable |\n| `on_skipped` | task skipped |\n\nThe keyword overrides global config, and the **most granular** level wins (task > block > play/role).",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_debugger.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:03:26+00:00"
+}

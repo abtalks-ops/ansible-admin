@@ -1,0 +1,16 @@
+{
+ "chunk_id": "883fd9c32973ec33",
+ "chunk_hash": "883fd9c32973ec33",
+ "summary": "A single password can also be passed with its label using --vault-id dev@prompt, dev@file or dev@client-script, which is clearer when an inventory uses multiple vaults.",
+ "questions": [
+  "How do I pass the password for the dev vault ID?",
+  "How do I get prompted for a specific vault ID's password?"
+ ],
+ "answer_card": {
+  "title": "Passing a vault ID",
+  "answer_md": "```bash\nansible-playbook --vault-id dev@prompt site.yml\nansible-playbook --vault-id dev@dev-password site.yml\nansible-playbook --vault-id dev@my-vault-password-client.py\n```\n\nUsing labels is clearer when one inventory uses several vaults.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_using_encrypted_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

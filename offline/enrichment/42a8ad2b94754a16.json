@@ -1,0 +1,16 @@
+{
+ "chunk_id": "42a8ad2b94754a16",
+ "chunk_hash": "42a8ad2b94754a16",
+ "summary": "Python and PowerShell examples using both core module_utils and a collection util after migration, importing HelperRequest from ansible_collections.ansible_example.community and hyperv via #AnsibleRequires.",
+ "questions": [
+  "Can you show a migrated module importing a collection module_util?",
+  "How does a PowerShell module import a util from its collection?"
+ ],
+ "answer_card": {
+  "title": "Migrated module_utils examples",
+  "answer_md": "Python:\n```python\nfrom ansible.module_utils.basic import AnsibleModule\nfrom ansible_collections.ansible_example.community.plugins.module_utils.helper import HelperRequest\n```\nPowerShell:\n```powershell\n#AnsibleRequires -CSharpUtil Ansible.Basic\n#AnsibleRequires -PowerShell ansible_collections.ansible_example.community.plugins.module_utils.hyperv\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/migrating_roles.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

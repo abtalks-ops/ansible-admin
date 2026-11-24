@@ -1,0 +1,11 @@
+{
+ "chunk_id": "007dec21673ee1a6",
+ "chunk_hash": "007dec21673ee1a6",
+ "summary": "Sample output of the first playbook shows the get-config and display tasks; an extended playbook adds hostname change tasks.",
+ "questions": [
+  "What output should my first network playbook show?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,11 @@
+{
+ "chunk_id": "0f29f9e1cf668958",
+ "chunk_hash": "0f29f9e1cf668958",
+ "summary": "Autodoc stub for the ValidationResult class in ansible.module_utils.common.arg_spec.",
+ "questions": [
+  "Where is the ValidationResult class for argument spec validation documented?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:57+00:00"
+}

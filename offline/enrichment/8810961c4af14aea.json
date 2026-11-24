@@ -1,0 +1,15 @@
+{
+ "chunk_id": "8810961c4af14aea",
+ "chunk_hash": "8810961c4af14aea",
+ "summary": "Result of the Cobbler example on host bar shows c=5, and inventory variables can also be used in ad hoc command arguments.",
+ "questions": [
+  "Can I use inventory variables in ad hoc command arguments?"
+ ],
+ "answer_card": {
+  "title": "Inventory vars in ad hoc args",
+  "answer_md": "Yes:\n```bash\nansible webserver -m ansible.builtin.shell -a \"echo {{ a }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_dynamic_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

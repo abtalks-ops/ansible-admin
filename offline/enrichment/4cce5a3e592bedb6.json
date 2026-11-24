@@ -1,0 +1,17 @@
+{
+  "chunk_id": "4cce5a3e592bedb6",
+  "chunk_hash": "4cce5a3e592bedb6",
+  "summary": "community.general deprecations carried into Ansible 11: CmdRunner ignore_none in context, MH cause_changes on_success/on_failure, git_config list_all and state=present without value (use git_config_info), the hipchat module, and pipx below 1.7.0.",
+  "questions": [
+    "How do I read git config values with community.general going forward?",
+    "Is the hipchat module still supported?",
+    "What minimum pipx version will be required?"
+  ],
+  "answer_card": {
+    "title": "community.general deprecations (11.0.0)",
+    "answer_md": "- `git_config`: `list_all` and `state=present` without `value` are deprecated. Use `community.general.git_config_info` to read.\n- `pipx` / `pipx_info`: pipx older than 1.7.0 is deprecated.\n- `hipchat` is deprecated (service discontinued).\n- Dev-facing: CmdRunner `ignore_none` in context, and the MH `cause_changes` `on_success`/`on_failure` parameters.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

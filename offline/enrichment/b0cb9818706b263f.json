@@ -1,0 +1,15 @@
+{
+ "chunk_id": "b0cb9818706b263f",
+ "chunk_hash": "b0cb9818706b263f",
+ "summary": "Avoid the contraction 'it's' and write 'it is'; use 'its' as the possessive.",
+ "questions": [
+  "Can I use contractions like it's in docs?"
+ ],
+ "answer_card": {
+  "title": "It's and its",
+  "answer_md": "Write **it is** instead of \"it's\". Use **its** for the possessive (\"known for its low prices\").",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/spelling_word_choice.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:27+00:00"
+}

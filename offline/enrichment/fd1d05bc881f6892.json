@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fd1d05bc881f6892",
+ "chunk_hash": "fd1d05bc881f6892",
+ "summary": "When the validate option isn't enough, use block/rescue/always with backup: update the file with backup=yes, run your own validation, restore the backup in rescue on failure, and clean up in always.",
+ "questions": [
+  "How do I roll back a config file if my validation command fails?",
+  "validate needs the real file name, what can I do instead?",
+  "How do I restore a backup made by template?"
+ ],
+ "answer_card": {
+  "title": "Custom validate-and-rollback pattern",
+  "answer_md": "```yaml\n- block:\n    - template: {src: app.j2, dest: /etc/app.conf, backup: true}\n      register: updated\n    - command: app --check-config\n      when: updated is changed\n  rescue:\n    - copy:\n        remote_src: true\n        src: \"{{ updated.backup_file }}\"\n        dest: /etc/app.conf\n      when: updated is changed\n  always:\n    - file: {path: \"{{ updated.backup_file }}\", state: absent}\n      when: updated is changed\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

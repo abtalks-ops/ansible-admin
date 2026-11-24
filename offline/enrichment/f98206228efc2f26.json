@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f98206228efc2f26",
+ "chunk_hash": "f98206228efc2f26",
+ "summary": "Strings aren't trusted as templates by default; plugins that create strings with embedded templates must use `trust_as_template` from `ansible.template` to make them renderable. The API is incomplete.",
+ "questions": [
+  "How does a plugin mark a string as a trusted template?",
+  "What is trust_as_template?",
+  "Why aren't templates created by my plugin rendering?"
+ ],
+ "answer_card": {
+  "title": "Apply template trust with trust_as_template",
+  "answer_md": "String values are no longer trusted as templates by default. Strings from playbooks, vars files and other built-in sources are usually trusted automatically. If your plugin **creates new strings that contain templates**, tag them with `trust_as_template` from `ansible.template` so they can be rendered.\n\nNote: this section and its public API are currently incomplete.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.19.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

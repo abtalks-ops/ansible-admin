@@ -1,0 +1,18 @@
+{
+ "chunk_id": "498f9391b5a9ae86",
+ "chunk_hash": "498f9391b5a9ae86",
+ "summary": "How to report bugs: for ansible-core, confirm on latest stable or devel and search/file in the Ansible repo; for Galaxy collections, use the collection's tracker; for Automation Hub, use its tracker link or the Red Hat Customer Portal with a subscription.",
+ "questions": [
+  "Where do I report a bug in an Ansible module?",
+  "How do I report a bug in a Galaxy collection?",
+  "How do I report an issue in an Automation Hub collection?",
+  "What should I check before filing an ansible-core bug?"
+ ],
+ "answer_card": {
+  "title": "Report a module bug",
+  "answer_md": "**ansible-core plugin:**\n1. Confirm on the latest stable release or `devel`.\n2. Search the ansible/ansible issue tracker.\n3. If not filed, open an issue with as much detail as possible.\n\n**Galaxy collection:** find the collection on Galaxy, go to its issue tracker, search, then file. (Some partner repos are private.)\n\n**Automation Hub collection:** use its Issue Tracker link if offered; otherwise file on the Red Hat Customer Portal (requires an Ansible Automation Platform subscription).\n\nNot sure it's a bug? Ask the community via the communication guide.",
+  "source_url": "https://docs.ansible.com/ansible/latest/module_plugin_guide/modules_support.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

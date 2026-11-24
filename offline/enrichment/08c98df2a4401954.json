@@ -1,0 +1,17 @@
+{
+ "chunk_id": "08c98df2a4401954",
+ "chunk_hash": "08c98df2a4401954",
+ "summary": "Shows using the service module ad hoc to start, restart, or stop a service on all webservers.",
+ "questions": [
+  "How do I restart httpd on all web servers at once?",
+  "How can I make sure a service is running across a group of hosts?",
+  "How do I stop a service on many machines with Ansible?"
+ ],
+ "answer_card": {
+  "title": "Manage services with ad hoc commands",
+  "answer_md": "```bash\nansible webservers -m ansible.builtin.service -a \"name=httpd state=started\"\nansible webservers -m ansible.builtin.service -a \"name=httpd state=restarted\"\nansible webservers -m ansible.builtin.service -a \"name=httpd state=stopped\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:04+00:00"
+}

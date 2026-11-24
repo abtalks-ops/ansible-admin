@@ -1,0 +1,16 @@
+{
+ "chunk_id": "28f031d343a3a29c",
+ "chunk_hash": "28f031d343a3a29c",
+ "summary": "win_splitdrive splits a Windows path into drive (up to the colon, or UNC host and share) and the rest of the path.",
+ "questions": [
+  "How do I get the drive letter from a Windows path?",
+  "How do I split a UNC path into share and path?"
+ ],
+ "answer_card": {
+  "title": "win_splitdrive filter",
+  "answer_md": "`{{ path | win_splitdrive }}` returns `[drive, rest]`. With a drive letter, drive includes everything up to and including the colon. With a UNC path, drive is the host and share, up to but not including the fourth separator.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/win_splitdrive_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

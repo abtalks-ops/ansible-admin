@@ -1,0 +1,18 @@
+{
+  "chunk_id": "63fb951d386b05a5",
+  "chunk_hash": "63fb951d386b05a5",
+  "summary": "Explains selecting tags at runtime and the five options: --tags all (default), --tags tag1,tag2, --skip-tags, --tags tagged, --tags untagged, with examples including running never-tagged tasks and combining --tags with --skip-tags.",
+  "questions": [
+    "How do I run only tasks with certain tags?",
+    "How do I skip tasks with a tag?",
+    "How do I run everything including never-tagged tasks?",
+    "How do I run only untagged tasks?"
+  ],
+  "answer_card": {
+    "title": "Selecting or skipping tags at runtime",
+    "answer_md": "- `--tags all`: everything except `never` (default)\n- `--tags tag1,tag2`: only those tags (plus `always`)\n- `--skip-tags tag3,tag4`: everything except those (and `never`)\n- `--tags tagged`: tasks with at least one tag\n- `--tags untagged`: tasks with no tags (`always` still runs)\n\n```bash\nansible-playbook example.yml --tags \"configuration,packages\"\nansible-playbook example.yml --skip-tags \"packages\"\nansible-playbook example.yml --tags \"all,never\"\nansible-playbook example.yml --tags \"tag1,tag3\" --skip-tags \"tag4\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

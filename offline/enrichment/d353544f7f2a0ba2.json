@@ -1,0 +1,16 @@
+{
+ "chunk_id": "d353544f7f2a0ba2",
+ "chunk_hash": "d353544f7f2a0ba2",
+ "summary": "Examples of the env lookup: reading HOME, setting a default before 2.13 with the default filter, using the default parameter, and failing with default=undef().",
+ "questions": [
+  "How do I default an environment variable to World if unset?",
+  "How do I make the env lookup fail when a variable is missing?"
+ ],
+ "answer_card": {
+  "title": "env lookup examples",
+  "answer_md": "```yaml\n- ansible.builtin.debug:\n    msg: \"'{{ lookup('ansible.builtin.env', 'HOME') }}' is HOME\"\n\n# before 2.13\n- ansible.builtin.debug:\n    msg: \"Hello {{ lookup('ansible.builtin.env', 'UNDEFINED_VARIABLE') | default('World', True) }}\"\n\n# 2.13+\n- ansible.builtin.debug:\n    msg: \"Hello {{ lookup('ansible.builtin.env', 'UNDEFINED_VARIABLE', default='World') }}\"\n\n# fail if not defined\n- ansible.builtin.debug:\n    msg: \"Hello {{ lookup('ansible.builtin.env', 'UNDEFINED_VARIABLE', default=undef()) }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/env_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

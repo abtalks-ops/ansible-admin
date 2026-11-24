@@ -1,0 +1,16 @@
+{
+ "chunk_id": "4a31099247bcee54",
+ "chunk_hash": "4a31099247bcee54",
+ "summary": "Explains that before a release, maintainers may impose a feature freeze, delaying new features and unrelated fixes to focus on the release candidate.",
+ "questions": [
+  "What is a feature freeze in Ansible development?",
+  "Why wasn't my feature PR reviewed before a release?"
+ ],
+ "answer_card": {
+  "title": "Feature freezes",
+  "answer_md": "During final release preparation, maintainers may impose a **feature freeze**: new features and fixes unrelated to the pending release are delayed so the release candidate can be finished as soon as possible.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:00+00:00"
+}

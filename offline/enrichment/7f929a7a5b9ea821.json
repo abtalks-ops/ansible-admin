@@ -1,0 +1,16 @@
+{
+  "chunk_id": "7f929a7a5b9ea821",
+  "chunk_hash": "7f929a7a5b9ea821",
+  "summary": "The finished test checks whether an async task result has finished set to True; it works on normal tasks but warns.",
+  "questions": [
+    "How do I wait until an async job is done?",
+    "Can I use the finished test on a non-async task?"
+  ],
+  "answer_card": {
+    "title": "finished test (async)",
+    "answer_md": "`result is finished` is true when an async status result has `finished: true`. Typically used with `async_status` and `until:`. Works on regular tasks but issues a warning.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/finished_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

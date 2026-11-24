@@ -1,0 +1,19 @@
+{
+ "chunk_id": "373aea69f945ab68",
+ "chunk_hash": "373aea69f945ab68",
+ "summary": "Glossary entries for ansible-core, Ansible Galaxy, async tasks, and callback plugins.",
+ "questions": [
+  "What is ansible-core and what does it include?",
+  "What is Ansible Galaxy used for?",
+  "How do I run a long task that would exceed the SSH timeout?",
+  "What is fire-and-forget mode in Ansible?",
+  "What is a callback plugin?"
+ ],
+ "answer_card": {
+  "title": "Glossary: ansible-core, Galaxy, async, callback plugin",
+  "answer_md": "- **ansible-core** (2.11+): the package with the CLI tools and core engine, a small set of modules/plugins, and the ability to add more via collections.\n- **Ansible Galaxy**: community server for sharing content; also the `ansible-galaxy` CLI, e.g. `ansible-galaxy collection install community.crypto`.\n- **Async**: run a task in the background, useful when it would outlast the SSH timeout. It can poll every N seconds or be fire-and-forget. Works with both `ansible` and `ansible-playbook`.\n- **Callback plugin**: code that intercepts Ansible results to do things like custom logging or sending email.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

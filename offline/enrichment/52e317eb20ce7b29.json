@@ -1,0 +1,16 @@
+{
+ "chunk_id": "52e317eb20ce7b29",
+ "chunk_hash": "52e317eb20ce7b29",
+ "summary": "On Ubuntu, use the ansible/ansible PPA for newer versions: install software-properties-common, add the PPA, and apt install ansible.",
+ "questions": [
+  "How do I get a newer Ansible on Ubuntu?",
+  "How do I add the Ansible PPA?"
+ ],
+ "answer_card": {
+  "title": "Install Ansible on Ubuntu",
+  "answer_md": "```bash\nsudo apt update\nsudo apt install software-properties-common\nsudo add-apt-repository --yes --update ppa:ansible/ansible\nsudo apt install ansible\n```\nReport problems in the PPA's issue tracker.",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

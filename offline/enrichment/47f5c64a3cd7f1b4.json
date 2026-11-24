@@ -1,0 +1,16 @@
+{
+  "chunk_id": "47f5c64a3cd7f1b4",
+  "chunk_hash": "47f5c64a3cd7f1b4",
+  "summary": "Describes ansible-pull, which inverts the architecture so nodes check out a git repo of configuration and run ansible-playbook themselves; it scales with a load-balanced checkout location.",
+  "questions": [
+    "Can managed nodes pull their configuration instead of me pushing it?",
+    "What does ansible-pull do?"
+  ],
+  "answer_card": {
+    "title": "ansible-pull",
+    "answer_md": "`ansible-pull` lets nodes check in to a central location: it checks out a git repo of playbooks and runs `ansible-playbook` against it locally. With a load-balanced checkout location it scales very well. See `ansible-pull --help`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

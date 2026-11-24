@@ -1,0 +1,17 @@
+{
+ "chunk_id": "eb22b63bad8f9dff",
+ "chunk_hash": "eb22b63bad8f9dff",
+ "summary": "Building a conditional dynamically with a template (for example templating in the comparison operator) used to work via argument templating but is now an unsupported, insecure pattern that raises a syntax error.",
+ "questions": [
+  "Can I template the operator in an assert condition?",
+  "Why does building a when expression from a variable fail in ansible-core 2.19?",
+  "Is dynamic expression construction supported in playbooks?"
+ ],
+ "answer_card": {
+  "title": "Dynamically constructed conditionals are unsupported",
+  "answer_md": "Previously, task argument templating rendered this into a plain string that `assert` then evaluated:\n\n```yaml\n- assert:\n    that: inventory_hostname {{ comparison }} 'localhost'\n  vars:\n    comparison: ==\n```\n\nIn ansible-core 2.19 it fails with `Syntax error in expression. Template delimiters are not supported in expressions: chunk after expression`. Constructing expressions dynamically from playbooks is **insecure and unsupported**; write the full expression statically.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:45+00:00"
+}

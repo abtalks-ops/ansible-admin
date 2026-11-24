@@ -1,0 +1,17 @@
+{
+  "chunk_id": "b3abc325a2b38f63",
+  "chunk_hash": "b3abc325a2b38f63",
+  "summary": "Explains group variables stored in group_vars next to the inventory, with examples for all and dbservers, and how those variables are used in role tasks such as mysql_db and mysql_user.",
+  "questions": [
+    "Where do I put variables that apply to a group of servers?",
+    "How do group_vars files work?",
+    "How do I use group variables in a role's tasks?"
+  ],
+  "answer_card": {
+    "title": "Using group_vars",
+    "answer_md": "Group variables live in a `group_vars` directory next to your inventory, one YAML file per group:\n\n```yaml\n# group_vars/all\nhttpd_port: 80\nntpserver: 192.0.2.23\n# group_vars/dbservers\ndbname: foodb\ndbuser: root\n```\n\nUse them in tasks:\n\n```yaml\n- mysql_db:\n    name: \"{{ dbname }}\"\n    state: present\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/guide_rolling_upgrade.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

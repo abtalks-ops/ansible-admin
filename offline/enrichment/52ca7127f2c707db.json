@@ -1,0 +1,16 @@
+{
+  "chunk_id": "52ca7127f2c707db",
+  "chunk_hash": "52ca7127f2c707db",
+  "summary": "Introduces Jinja tests, which evaluate expressions to True/False for comparisons (vs filters for data manipulation), can be used in select/map, run on the control node, and Ansible adds more.",
+  "questions": [
+    "What's the difference between a Jinja test and a filter?",
+    "Where do tests run?"
+  ],
+  "answer_card": {
+    "title": "What tests are",
+    "answer_md": "Tests evaluate an expression to **True or False** and are used for comparisons; filters manipulate data. Tests can also drive list filters like `select()`. They run on the **control node**. Ansible adds its own tests on top of Jinja's built-ins, and you can write your own.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

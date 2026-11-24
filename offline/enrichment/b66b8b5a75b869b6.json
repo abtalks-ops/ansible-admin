@@ -1,0 +1,19 @@
+{
+  "chunk_id": "b66b8b5a75b869b6",
+  "chunk_hash": "b66b8b5a75b869b6",
+  "summary": "Each play uses one strategy plugin, and different plays can use different ones. The default is linear. You can change it with ANSIBLE_STRATEGY, strategy in [defaults] or the strategy play keyword, for example strategy: debug.",
+  "questions": [
+    "How do I let hosts run through tasks independently instead of in lockstep?",
+    "What is the default execution strategy?",
+    "Can different plays in one playbook use different strategies?",
+    "How do I set the strategy for a single play?",
+    "How do I enable the debug strategy?"
+  ],
+  "answer_card": {
+    "title": "Choosing an execution strategy",
+    "answer_md": "Default is `linear`. One strategy per play, but plays can differ.\n\n```shell\nexport ANSIBLE_STRATEGY=free\n```\n\n```ini\n[defaults]\nstrategy=linear\n```\n\nPer play:\n\n```yaml\n- hosts: all\n  strategy: debug\n  tasks:\n    - copy:\n        src: myhosts\n        dest: /etc/hosts\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/strategy.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:45+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "9b4a4c62efca1374",
+ "chunk_hash": "9b4a4c62efca1374",
+ "summary": "Only ansible-core is needed to test modules; modules can be in any language, but those included in Ansible must be Python or PowerShell, which also get module_utils help with arguments, logging and responses.",
+ "questions": [
+  "What do I need installed to start developing modules?",
+  "What languages are allowed for modules included in Ansible?"
+ ],
+ "answer_card": {
+  "title": "Module development environment",
+  "answer_md": "You only need `ansible-core`. Modules can be in any language, but those included in Ansible must be **Python or PowerShell**, which also let you use `module_utils` for argument handling, logging and responses.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

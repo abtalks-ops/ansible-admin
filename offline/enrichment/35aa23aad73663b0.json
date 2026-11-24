@@ -1,0 +1,18 @@
+{
+  "chunk_id": "35aa23aad73663b0",
+  "chunk_hash": "35aa23aad73663b0",
+  "summary": "uri options: ciphers, client_cert/client_key, creates guard, decompress, dest to download to, follow_redirects (safe default), and force to bypass cache.",
+  "questions": [
+    "How do I download a file with the uri module?",
+    "How do I use mutual TLS with uri?",
+    "Does uri follow redirects for POST requests?",
+    "How do I skip a uri call if a file exists?"
+  ],
+  "answer_card": {
+    "title": "uri download, TLS, redirects",
+    "answer_md": "- `dest`: save response to path (dir → server basename)\n- `client_cert`, `client_key`: mTLS\n- `ciphers`\n- `follow_redirects`: `safe` (default), `all`, `none`, `urllib2`\n- `creates`, `force` (no cache), `decompress` (true)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/uri_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

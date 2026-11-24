@@ -1,0 +1,16 @@
+{
+ "chunk_id": "1e39acf7a216a6dc",
+ "chunk_hash": "1e39acf7a216a6dc",
+ "summary": "Undefined handling was improved so Jinja filters and tests that check variable types no longer silently ignore undefined values.",
+ "questions": [
+  "Why do I now get undefined variable errors from filters that used to work?",
+  "Do Jinja tests in Ansible silently ignore undefined values?"
+ ],
+ "answer_card": {
+  "title": "Improved handling of undefined values",
+  "answer_md": "ansible-core 2.19 avoids cases where a Jinja plugin silently ignored an undefined value. This used to happen when a filter or test checked a variable's type without accounting for it being undefined. Such mistakes are now reported.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:06+00:00"
+}

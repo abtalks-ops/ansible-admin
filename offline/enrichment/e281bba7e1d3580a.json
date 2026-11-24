@@ -1,0 +1,16 @@
+{
+ "chunk_id": "e281bba7e1d3580a",
+ "chunk_hash": "e281bba7e1d3580a",
+ "summary": "WeOS 4 supports CLI over SSH via network_cli with keys or -u/-k and bastion access, no enable mode, output in stdout[0], and doesn't support local.",
+ "questions": [
+  "Does WeOS 4 support enable mode?",
+  "Can I use connection local with WeOS 4?"
+ ],
+ "answer_card": {
+  "title": "WeOS 4 connection options",
+  "answer_md": "- CLI over SSH via `ansible.netcommon.network_cli` (required; `local` not supported)\n- Credentials: SSH keys/agent or `-u myuser -k`\n- Indirect access: bastion/jump host\n- Enable mode: not supported\n- Output: `stdout[0].`",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_weos4.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

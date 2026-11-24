@@ -1,0 +1,20 @@
+{
+  "chunk_id": "d43e36180b02315a",
+  "chunk_hash": "d43e36180b02315a",
+  "summary": "Continues magic variables: inventory_hostname_short (affected by delegation), inventory_file, omit (to drop a module option), play_hosts (deprecated), playbook_dir (may differ with import_playbook), role_name, role_names (deprecated), and role_path.",
+  "questions": [
+    "How do I leave out a module parameter when a variable isn't set?",
+    "How do I get the short hostname without the domain?",
+    "How do I get the directory of the running playbook?",
+    "How do I refer to files relative to the current role?",
+    "Is play_hosts still supported?",
+    "Why does inventory_hostname_short show the delegated host?"
+  ],
+  "answer_card": {
+    "title": "Magic variables (part 4): omit, paths, short names",
+    "answer_md": "- `inventory_hostname_short`: first part of `inventory_hostname` split on `.` (`www` for `www.example.com`). **Affected by delegation.**\n- `inventory_file`: inventory file where the host was first defined (ignores delegation).\n- `omit`: drop an option, e.g. `- user: name=bob home={{ bobs_home|default(omit) }}`.\n- `play_hosts`: deprecated, same as `ansible_play_batch`.\n- `playbook_dir`: directory of the current playbook; may differ from the CLI playbook's directory when `import_playbook` is used.\n- `role_name`: name of the running role. `role_path`: its directory.\n- `role_names`: deprecated, same as `ansible_play_role_names`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

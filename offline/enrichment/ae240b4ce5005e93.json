@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ae240b4ce5005e93",
+ "chunk_hash": "ae240b4ce5005e93",
+ "summary": "Step-by-step for building a Sphinx docsite for a collection with antsibull-docs: put the collection in COLLECTIONS_PATHS, run sphinx-init, install requirements, run build.sh and open the HTML.",
+ "questions": [
+  "How do I generate an HTML documentation site for my collection?",
+  "What does antsibull-docs sphinx-init do?",
+  "Where is the built collection docsite output?"
+ ],
+ "answer_card": {
+  "title": "Build a collection docsite with antsibull-docs",
+  "answer_md": "1. Make sure the collection is usable via `COLLECTIONS_PATHS`.\n2. `antsibull-docs sphinx-init --use-current --dest-dir dest namespace.name`\n3. `cd dest && pip install -r requirements.txt` (ideally in a venv)\n4. `./build.sh`\n5. Open `build/html/index.html`.\n\nFor extra docs beside plugin/module/role docs, use the collection `docs/` directory.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_documenting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

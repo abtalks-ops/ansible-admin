@@ -1,0 +1,19 @@
+{
+ "chunk_id": "a3f757bca1525cba",
+ "chunk_hash": "a3f757bca1525cba",
+ "summary": "Shows modules useful for testing in playbooks: wait_for to check a port, uri plus fail to verify a web page, script for arbitrary test scripts that fail on non-zero exit, and assert to validate command output.",
+ "questions": [
+  "How do I check that a port is open from Ansible?",
+  "How can I verify a web service returns expected content in a playbook?",
+  "How do I fail a playbook if command output contains certain text?",
+  "Can I run my own test scripts on remote hosts with Ansible?",
+  "Where should test scripts live in a role?"
+ ],
+ "answer_card": {
+  "title": "Modules for embedding tests in playbooks",
+  "answer_md": "- **Port check**:\n```yaml\n- ansible.builtin.wait_for:\n    host: \"{{ inventory_hostname }}\"\n    port: 22\n  delegate_to: localhost\n```\n- **Web check**:\n```yaml\n- uri: url=https://www.example.com return_content=yes\n  register: webpage\n- fail: msg='service is not happy'\n  when: \"'AWESOME' not in webpage.content\"\n```\n- **Scripts**: `ansible.builtin.script: test_script1` fails automatically on a non-zero exit; keep scripts in a role's `files/`.\n- **Assert output**:\n```yaml\n- ansible.builtin.shell: /usr/bin/some-command --parameter value\n  register: cmd_result\n- ansible.builtin.assert:\n    that:\n      - \"'not ready' not in cmd_result.stderr\"\n      - \"'gizmo enabled' in cmd_result.stdout\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

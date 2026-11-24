@@ -1,0 +1,17 @@
+{
+  "chunk_id": "6b3045c9a408a8f9",
+  "chunk_hash": "6b3045c9a408a8f9",
+  "summary": "Advises using a path listed in COLLECTIONS_PATHS when passing `-p` so Ansible can find the collection. Without `-p`, the install goes to the first COLLECTIONS_PATHS entry, `~/.ansible/collections` by default.",
+  "questions": [
+    "I installed a collection with -p but Ansible can't find it, why?",
+    "Which path should I pass to -p when installing collections?",
+    "Where does collection install go if I don't specify a path?"
+  ],
+  "answer_card": {
+    "title": "Choose an install path Ansible will search",
+    "answer_md": "When you use `-p`, pick one of the directories configured in `COLLECTIONS_PATHS`, because that is where Ansible looks for collections. If you install somewhere else, Ansible won't find it.\n\nWithout `-p`, `ansible-galaxy collection install` uses the first path in `COLLECTIONS_PATHS`, which defaults to `~/.ansible/collections`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections_guide/collections_installing.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "13751de2f1d659d7",
+  "chunk_hash": "13751de2f1d659d7",
+  "summary": "The skip test checks whether a registered result has skipped set to True.",
+  "questions": [
+    "How do I check if a task was skipped?",
+    "Is skip the same as skipped?"
+  ],
+  "answer_card": {
+    "title": "skip test",
+    "answer_md": "`result is skip` (alias of `skipped`) is true when the result has `skipped: true`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/skip_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

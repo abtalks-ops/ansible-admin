@@ -1,0 +1,16 @@
+{
+  "chunk_id": "c6ff3ac60e80f327",
+  "chunk_hash": "c6ff3ac60e80f327",
+  "summary": "Explains idempotency: most modules check the desired state and do nothing if already achieved, so reruns give the same result, but not all modules or playbooks are idempotent.",
+  "questions": [
+    "What does idempotent mean in Ansible?",
+    "Is it safe to run a playbook multiple times?"
+  ],
+  "answer_card": {
+    "title": "Desired state and idempotency",
+    "answer_md": "Most modules check whether the desired state already exists and do nothing if so, so running a playbook once or many times gives the same result. Not every module or playbook behaves this way; if unsure, test in a sandbox before repeated production runs.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "767d798ee6826b1a",
+ "chunk_hash": "767d798ee6826b1a",
+ "summary": "Examples of b64encode on literals and variables, with utf-16-le encoding, and URL-safe encoding.",
+ "questions": [
+  "How do I Base64 encode text as UTF-16LE for PowerShell?",
+  "What does a b64encode example look like?"
+ ],
+ "answer_card": {
+  "title": "b64encode examples",
+  "answer_md": "```yaml\nb64lola: \"{{ 'lola' | b64encode }}\"\nb64stuff: \"{{ stuff | b64encode }}\"\nb64stuff: \"{{ 'Ansible - くらとみ\\n' | b64encode(encoding='utf-16-le') }}\"\nb64stuff: \"{{ 'https://www.python.org/example-1' | b64encode(urlsafe=True) }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

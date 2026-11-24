@@ -1,0 +1,17 @@
+{
+  "chunk_id": "c477f28aa2ec1d25",
+  "chunk_hash": "c477f28aa2ec1d25",
+  "summary": "shell returns cmd, start/end/delta timing, rc, stdout and stderr plus their line lists.",
+  "questions": [
+    "How do I get the exit code of a shell command?",
+    "How do I loop over each line of a command's output?",
+    "How long did my shell command take?"
+  ],
+  "answer_card": {
+    "title": "shell return values",
+    "answer_md": "- `rc` (0 = success)\n- `stdout`, `stdout_lines`, `stderr`, `stderr_lines`\n- `cmd`, `start`, `end`, `delta`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

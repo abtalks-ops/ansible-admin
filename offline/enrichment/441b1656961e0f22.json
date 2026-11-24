@@ -1,0 +1,17 @@
+{
+  "chunk_id": "441b1656961e0f22",
+  "chunk_hash": "441b1656961e0f22",
+  "summary": "The reboot module reboots a host and waits for it to go down, come back, and respond. PATH is ignored when locating shutdown, so use search_paths; Windows uses win_reboot.",
+  "questions": [
+    "How do I reboot a server and wait for it to come back?",
+    "Why can't the reboot module find shutdown?",
+    "How do I reboot Windows hosts with Ansible?"
+  ],
+  "answer_card": {
+    "title": "Reboot and wait",
+    "answer_md": "`ansible.builtin.reboot` reboots, waits for down/up, and runs a test command. `PATH` is ignored when finding `shutdown`; use `search_paths`. Windows: `ansible.windows.win_reboot`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/reboot_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

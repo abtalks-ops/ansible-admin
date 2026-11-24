@@ -1,0 +1,15 @@
+{
+ "chunk_id": "51a159ae722c0c9b",
+ "chunk_hash": "51a159ae722c0c9b",
+ "summary": "vmware.vmware in Ansible 14.0.0 replaced uses of ansible.module_utils._text and ansible.module_utils.common._collections_compat.",
+ "questions": [
+  "What changed in vmware.vmware in Ansible 14?"
+ ],
+ "answer_card": {
+  "title": "vmware.vmware 14.0.0 changes",
+  "answer_md": "vmware.vmware replaced its use of `ansible.module_utils._text` and `ansible.module_utils.common._collections_compat`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:42+00:00"
+}

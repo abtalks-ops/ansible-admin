@@ -1,0 +1,18 @@
+{
+  "chunk_id": "1a59adeed40b644d",
+  "chunk_hash": "1a59adeed40b644d",
+  "summary": "Example running a dnf install asynchronously with poll 0, waiting on it with async_status using until/retries/delay, then cleaning up the job file.",
+  "questions": [
+    "How do I run a long package install in the background and wait for it later?",
+    "How do I poll an async job until it completes?",
+    "How do I fire-and-forget a task with async and poll 0?",
+    "How do I remove the async result file after waiting?"
+  ],
+  "answer_card": {
+    "title": "Fire-and-forget then wait with async_status",
+    "answer_md": "```yaml\n- ansible.builtin.dnf: {name: docker-io, state: present}\n  async: 1000\n  poll: 0\n  register: dnf_sleeper\n\n- ansible.builtin.async_status:\n    jid: '{{ dnf_sleeper.ansible_job_id }}'\n  register: job_result\n  until: job_result is finished\n  retries: 100\n  delay: 10\n\n- ansible.builtin.async_status:\n    jid: '{{ dnf_sleeper.ansible_job_id }}'\n    mode: cleanup\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/async_status_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

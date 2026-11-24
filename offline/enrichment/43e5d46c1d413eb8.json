@@ -1,0 +1,17 @@
+{
+  "chunk_id": "43e5d46c1d413eb8",
+  "chunk_hash": "43e5d46c1d413eb8",
+  "summary": "The uri module interacts with HTTP/HTTPS services, supports Digest, Basic and WSSE auth, and returns headers in lowercase; Windows uses win_uri.",
+  "questions": [
+    "How do I call a REST API from Ansible?",
+    "Why are response headers lowercase in uri results?",
+    "How do I call web services from Windows hosts?"
+  ],
+  "answer_card": {
+    "title": "Call web services with uri",
+    "answer_md": "`ansible.builtin.uri` talks to HTTP/HTTPS APIs with Digest, Basic or WSSE auth. Response headers are returned **lowercase**. Windows: `ansible.windows.win_uri`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/uri_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

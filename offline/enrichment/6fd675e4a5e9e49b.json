@@ -1,0 +1,16 @@
+{
+  "chunk_id": "6fd675e4a5e9e49b",
+  "chunk_hash": "6fd675e4a5e9e49b",
+  "summary": "The eq test is Jinja's builtin equivalent of a == b.",
+  "questions": [
+    "Is there a test form of the == operator?",
+    "How do I use equality in selectattr?"
+  ],
+  "answer_card": {
+    "title": "eq test",
+    "answer_md": "`a is eq(b)` is the same as `a == b`. Handy in `selectattr('x', 'eq', 'y')`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/eq_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:13+00:00"
+}

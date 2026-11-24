@@ -1,0 +1,15 @@
+{
+ "chunk_id": "119e91dd74da92bd",
+ "chunk_hash": "119e91dd74da92bd",
+ "summary": "The Debian instructions deliberately don't put the PPA key in /etc/apt/trusted.gpg(.d), where it could sign any repository.",
+ "questions": [
+  "Why not put the Ansible PPA key in trusted.gpg.d?"
+ ],
+ "answer_card": {
+  "title": "Why the key isn't in trusted.gpg.d",
+  "answer_md": "A key in `/etc/apt/trusted.gpg.d/` or `/etc/apt/trusted.gpg` is trusted to sign releases from **any** repository. Keeping it in its own keyring and referencing it with `Signed-By` limits it to the Ansible PPA.",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

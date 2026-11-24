@@ -1,0 +1,17 @@
+{
+  "chunk_id": "fa26e9421a7e1d56",
+  "chunk_hash": "fa26e9421a7e1d56",
+  "summary": "Shows manually creating HTTP (5985) and HTTPS (5986) WinRM listeners with New-Item on WSMan:\\localhost\\Listener; HTTPS needs a certificate thumbprint from LocalMachine\\My. Explains Address values *, IP:..., and MAC:....",
+  "questions": [
+    "How do I create a WinRM listener manually without Enable-PSRemoting?",
+    "How do I bind a WinRM listener to one IP address only?",
+    "Where must the WinRM HTTPS certificate be installed?"
+  ],
+  "answer_card": {
+    "title": "Manually creating WinRM listeners",
+    "answer_md": "```powershell\nNew-Item -Path 'WSMan:\\localhost\\Listener' -Address '*' -Enabled $true -Port 5985 -Transport HTTP -Force\n\n# HTTPS\nNew-Item -Path 'WSMan:\\localhost\\Listener' -Address '*' -CertificateThumbprint '<thumbprint>' -Enabled $true -Port 5986 -Transport HTTPS -Force\n```\n\nThe certificate must be in the `LocalMachine\\My` store. `Address` can be `*` (all), `IP:<addr>` (one IPv4/IPv6 address), or `MAC:32-a3-58-90-be-cc` (one adapter).",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

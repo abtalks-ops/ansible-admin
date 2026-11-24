@@ -1,0 +1,17 @@
+{
+  "chunk_id": "c775a07900dd6ca0",
+  "chunk_hash": "c775a07900dd6ca0",
+  "summary": "unarchive options: group, include list for selective extraction, io_buffer_size, keep_newer, and list_files to return archive contents.",
+  "questions": [
+    "How do I extract only certain files from an archive?",
+    "How do I avoid overwriting newer files when unarchiving?",
+    "How do I get a list of files inside an archive?"
+  ],
+  "answer_card": {
+    "title": "unarchive include, keep_newer, list_files",
+    "answer_md": "- `include`: only extract these entries (exclusive with `exclude`)\n- `keep_newer` (false): don't replace newer existing files\n- `list_files` (false): return `files` list\n- `io_buffer_size` (65536), `group`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/unarchive_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

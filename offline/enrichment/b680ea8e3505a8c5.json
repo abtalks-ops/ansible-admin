@@ -1,0 +1,15 @@
+{
+ "chunk_id": "b680ea8e3505a8c5",
+ "chunk_hash": "b680ea8e3505a8c5",
+ "summary": "Python modules should wrap execution in a main function called under if __name__ == '__main__' so they can be imported in unit tests.",
+ "questions": [
+  "Why should my module have a main() guarded by __name__?"
+ ],
+ "answer_card": {
+  "title": "Use a main() function",
+  "answer_md": "Wrap execution in `main()` and call it conditionally so unit tests can import the module:\n```python\nif __name__ == '__main__':\n    main()\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_best_practices.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

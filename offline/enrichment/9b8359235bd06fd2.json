@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9b8359235bd06fd2",
+ "chunk_hash": "9b8359235bd06fd2",
+ "summary": "Extra vars passed with -e always have the highest precedence, overriding defaults and play vars; network operators use this, including via AWX or Platform job template surveys.",
+ "questions": [
+  "Which variables have the highest precedence in Ansible?",
+  "How do I override a variable for one run?",
+  "How can non-technical users supply variables to a playbook?"
+ ],
+ "answer_card": {
+  "title": "Highest precedence: extra vars",
+  "answer_md": "`-e` / `--extra-vars` always win:\n```bash\nansible-playbook playbook.yml -e \"dns=192.168.1.1\" -l rtr3\n```\nThis overrides both role defaults and play vars. AWX/Automation Platform job template **surveys** use this to collect values from operators through a web form.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/network_roles.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

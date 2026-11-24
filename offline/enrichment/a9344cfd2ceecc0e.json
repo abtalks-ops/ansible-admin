@@ -1,0 +1,16 @@
+{
+ "chunk_id": "a9344cfd2ceecc0e",
+ "chunk_hash": "a9344cfd2ceecc0e",
+ "summary": "Shows testing a new module end to end with a small playbook next to the library directory that runs the module, registers the result and prints it with debug.",
+ "questions": [
+  "How do I test my new module inside a playbook?",
+  "How can I see the full output my module returns?"
+ ],
+ "answer_card": {
+  "title": "Test a module in a playbook",
+  "answer_md": "With `library/` next to the playbook:\n```yaml\n- name: test my new module\n  hosts: localhost\n  tasks:\n  - name: run the new module\n    my_test:\n      name: 'hello'\n      new: true\n    register: testout\n  - name: dump test output\n    debug:\n      msg: '{{ testout }}'\n```\nRun `ansible-playbook ./testmod.yml`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:42+00:00"
+}

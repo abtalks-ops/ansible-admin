@@ -1,0 +1,15 @@
+{
+ "chunk_id": "5665af8b359fc4d7",
+ "chunk_hash": "5665af8b359fc4d7",
+ "summary": "_ansible_remote_tmp is the base directory where the module's tmpdir property creates a random directory if the action plugin didn't set _ansible_tmpdir; see the shell plugin's remote_tmp.",
+ "questions": [
+  "Where does a module create its temp directory if none was provided?"
+ ],
+ "answer_card": {
+  "title": "_ansible_remote_tmp",
+  "answer_md": "If `_ansible_tmpdir` isn't set, `module.tmpdir` creates a randomly named directory under `_ansible_remote_tmp`, which comes from the shell plugin's `remote_tmp` option.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:45+00:00"
+}

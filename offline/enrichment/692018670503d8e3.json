@@ -1,0 +1,19 @@
+{
+  "chunk_id": "692018670503d8e3",
+  "chunk_hash": "692018670503d8e3",
+  "summary": "cron options: backup, cron_file in /etc/cron.d (must be module-managed, requires user), day, disabled, env, hour and insertafter for environment variables.",
+  "questions": [
+    "How do I put a cron job in /etc/cron.d instead of a user crontab?",
+    "How do I comment out (disable) a cron job without deleting it?",
+    "How do I back up the crontab before changing it?",
+    "Can I use cron_file for /etc/crontab?",
+    "What filename characters are allowed in /etc/cron.d?"
+  ],
+  "answer_card": {
+    "title": "cron parameters (part 1)",
+    "answer_md": "- `cron_file`: use a file (relative paths → `/etc/cron.d`) instead of a user crontab. Requires `user` (unless absent). Must be exclusively managed by the module; **never** use for `/etc/crontab`. Filenames: letters, digits, `_`, `-` only.\n- `disabled` (false): comment out the job (with `state=present`)\n- `backup` (false)\n- `day` (dom), `hour`: default `*`\n- `env`: manage an env var instead of a job; `insertafter` to position it",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/cron_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

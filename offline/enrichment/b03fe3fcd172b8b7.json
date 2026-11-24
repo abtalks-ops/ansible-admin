@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b03fe3fcd172b8b7",
+ "chunk_hash": "b03fe3fcd172b8b7",
+ "summary": "Describes simpler module debugging: use madbg (or another remote debugger) with set_trace and madbg connect, the q library, or raise an Exception with the value since print() doesn't work in modules.",
+ "questions": [
+  "How can I attach a debugger to an Ansible module running on a remote host?",
+  "Why doesn't print() show anything from my module?",
+  "What's a quick way to see a variable's value inside a module?"
+ ],
+ "answer_card": {
+  "title": "Simple module debugging",
+  "answer_md": "- Add `import madbg; madbg.set_trace()` at the breakpoint and run `madbg connect` (open the port through any firewall for remote nodes). Other remote debuggers may work but aren't guaranteed.\n- The `q` library is also handy.\n- `print()` doesn't work in modules; use `raise Exception(some_value)` and Ansible will show the message on the control node.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/debugging.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

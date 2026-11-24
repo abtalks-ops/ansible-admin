@@ -1,0 +1,19 @@
+{
+  "chunk_id": "391d53660bf462ac",
+  "chunk_hash": "391d53660bf462ac",
+  "summary": "Explains supplying extra signatures via `--signature` or a `signatures` key in requirements.yml, and that GnuPG verification only applies to collections installed from a distribution server. Covers controlling how many signatures must pass with `--required-valid-signature-count` / GALAXY_REQUIRED_VALID_SIGNATURE_COUNT, including `all` and the `+` prefix.",
+  "questions": [
+    "How do I add signature URLs for a collection in requirements.yml?",
+    "Does signature verification work for collections installed from git or a tarball?",
+    "How many signatures have to be valid for a collection install to succeed?",
+    "How do I require every signature to verify?",
+    "How do I make the install fail if no valid signatures are found?"
+  ],
+  "answer_card": {
+    "title": "Extra signatures and required signature count",
+    "answer_md": "Pass extra signatures on the CLI with `--signature URI`, or list them in `requirements.yml`:\n\n```yaml\ncollections:\n  - name: ns.coll\n    version: 1.0.0\n    signatures:\n      - https://examplehost.com/detached_signature.asc\n      - file:///path/to/local/detached_signature.asc\n```\n\nGnuPG verification only happens for collections from a distribution server; user signatures are ignored for git repos, source directories, and tarball URLs/paths.\n\nBy default one valid signature is enough. Change this with `--required-valid-signature-count` or `GALAXY_REQUIRED_VALID_SIGNATURE_COUNT`; use `all` to require every signature, and prefix with `+` (e.g. `+all`, `+1`) to fail when no valid signatures are found.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections_guide/collections_installing.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

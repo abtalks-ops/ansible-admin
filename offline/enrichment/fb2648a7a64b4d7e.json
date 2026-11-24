@@ -1,0 +1,20 @@
+{
+  "chunk_id": "fb2648a7a64b4d7e",
+  "chunk_hash": "fb2648a7a64b4d7e",
+  "summary": "The apt module manages Debian/Ubuntu packages. Notes cover upgrade-mode fallbacks, stopping services from auto-starting via policy-rc.d, no implicit regex matching, passing lists instead of loops, pin priorities for default_release and exact versions, python3-apt dependency handling, and recreating missing apt lists.",
+  "questions": [
+    "How do I install packages on Ubuntu with Ansible?",
+    "How do I stop a service from starting automatically right after apt installs it?",
+    "Why doesn't apt in Ansible match partial package names like apt-get does?",
+    "Is it faster to loop over packages or pass a list to apt?",
+    "What pin priority does Ansible use with default_release or a pinned version?",
+    "What happens if python3-apt is missing on the target?"
+  ],
+  "answer_card": {
+    "title": "apt module overview and behavior notes",
+    "answer_md": "`ansible.builtin.apt` manages packages on Debian/Ubuntu.\n\nKey notes:\n- Pass a **list to `name`** rather than using `loop:` — much more efficient.\n- No implicit regex matching (typos like `fo` won't match `foo`); use fnmatch wildcards explicitly.\n- Newly installed services usually start; prevent it with `/usr/sbin/policy-rc.d` returning 101 (see `policy_rc_d`).\n- `default_release` uses priority 990 (like `apt-get -t`); an exact version uses 1001.\n- If `python3-apt` can't be imported, it checks system interpreters and may install it (`auto_install_module_deps`).\n- Since 2.21, a missing apt lists directory is recreated via `apt-get update`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

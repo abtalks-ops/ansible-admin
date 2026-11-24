@@ -1,0 +1,19 @@
+{
+  "chunk_id": "3b56099bdaf54ed1",
+  "chunk_hash": "3b56099bdaf54ed1",
+  "summary": "Cache plugins store gathered facts or inventory data to avoid refetching it. The default memory plugin lasts only one run, while others persist to files or databases. Inventory and facts can use different cache plugins, and inventory falls back to the fact cache plugin if none is set. Cache contents are internal and should not be read outside the plugin.",
+  "questions": [
+    "What is the default cache plugin and how long does it keep data?",
+    "Can I use a different cache backend for inventory than for facts?",
+    "Is it safe to read the jsonfile cache files from another script?",
+    "Which cache does inventory caching use if I don't pick one?",
+    "Can facts be cached in a database instead of files?"
+  ],
+  "answer_card": {
+    "title": "How cache plugins work",
+    "answer_md": "- The default `memory` cache only lasts for the current run. Persistent plugins write to files or databases.\n- Facts and inventory can use different cache plugins. If you enable inventory caching without choosing an inventory cache plugin, the fact cache plugin is used for both.\n- The cache format is an internal detail. Don't read caches like `jsonfile` or `redis` from outside Ansible. Use the data only indirectly inside playbooks.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/cache.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

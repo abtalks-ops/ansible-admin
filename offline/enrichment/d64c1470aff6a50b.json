@@ -1,0 +1,18 @@
+{
+  "chunk_id": "d64c1470aff6a50b",
+  "chunk_hash": "d64c1470aff6a50b",
+  "summary": "community.general removals in Ansible 11: consul_acl (use consul_token/consul_policy), the hipchat callback, redhat module utils, rhn_channel and rhn_register, consul ack_params_state_absent, ejabberd_user logging, GitLab basic auth, proxmox_kvm proxmox_default_behavior, and the redhat_subscription pool option (use pool_ids).",
+  "questions": [
+    "What replaces the pool option in redhat_subscription?",
+    "Is rhn_register still available?",
+    "Can gitlab modules use basic auth?",
+    "What should I do about proxmox_default_behavior in proxmox_kvm?"
+  ],
+  "answer_card": {
+    "title": "community.general removals in Ansible 11",
+    "answer_md": "- `consul_acl` is removed. Use `consul_token` and/or `consul_policy`.\n- `rhn_channel` and `rhn_register` are removed, along with the redhat module utils.\n- `redhat_subscription`: `pool` is removed. Use `pool_ids`.\n- GitLab modules: basic auth is removed.\n- `proxmox_kvm`: `proxmox_default_behavior` is removed. Set the old defaults explicitly if you used `compatibility`.\n- Also gone: the hipchat callback, consul `ack_params_state_absent` and ejabberd_user `logging`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

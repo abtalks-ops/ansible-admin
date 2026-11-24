@@ -1,0 +1,17 @@
+{
+ "chunk_id": "540f5b21eccd45fc",
+ "chunk_hash": "540f5b21eccd45fc",
+ "summary": "Shows an add_host helper that uses all three constructed methods, notes fetch_hostvars controls use of existing host vars, and explains group name sanitization and overriding _sanitize_group_name alongside TRANSFORM_INVALID_GROUP_CHARS.",
+ "questions": [
+  "How are invalid characters in generated group names handled?",
+  "Can I stop keyed_groups from using host vars from earlier inventory sources?",
+  "How do I customize group name sanitization in my inventory plugin?"
+ ],
+ "answer_card": {
+  "title": "Constructed example and group name sanitizing",
+  "answer_md": "```python\nself._set_composite_vars(self.get_option('compose'), host_vars, hostname, strict=True)\nself._add_host_to_composed_groups(self.get_option('groups'), host_vars, hostname, strict=strict)\nself._add_host_to_keyed_groups(self.get_option('keyed_groups'), host_vars, hostname, strict=strict)\n```\n- Existing host vars are used; pass `fetch_hostvars` to turn that off.\n- Group names are made valid Python identifiers (invalid chars → `_`). Override with `self._sanitize_group_name`; if less strict, combine with `TRANSFORM_INVALID_GROUP_CHARS`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

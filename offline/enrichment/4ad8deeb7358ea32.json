@@ -1,0 +1,18 @@
+{
+  "chunk_id": "4ad8deeb7358ea32",
+  "chunk_hash": "4ad8deeb7358ea32",
+  "summary": "In Ansible 11 the ssh connection plugin officially supports Windows. Low-level commands from raw and _low_level_execute_command are no longer wrapped in powershell.exe and use the host's default shell, so raw isn't guaranteed to run in PowerShell with UTF-8. Use win_shell or win_powershell instead.",
+  "questions": [
+    "Why does my raw command on Windows over SSH no longer run in PowerShell?",
+    "Can I use SSH to manage Windows hosts in Ansible 11?",
+    "How do I get UTF-8 output from commands on Windows over SSH?",
+    "Should I use raw or win_shell on Windows?"
+  ],
+  "answer_card": {
+    "title": "raw on Windows over SSH no longer uses PowerShell",
+    "answer_md": "The `ssh` connection plugin now officially supports Windows. As a result, `ansible.builtin.raw` (and anything calling `_low_level_execute_command`) runs directly in the host's default shell, not through `powershell.exe`, and UTF-8 output isn't guaranteed.\n\nTo run through PowerShell with UTF-8:\n\n```yaml\n- ansible.windows.win_shell: Write-Host \"Hello, Café\"\n\n- ansible.windows.win_powershell:\n    script: Write-Host \"Hello, Café\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:23:46+00:00"
+}

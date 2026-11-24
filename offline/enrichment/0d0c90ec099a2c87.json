@@ -1,0 +1,15 @@
+{
+ "chunk_id": "0d0c90ec099a2c87",
+ "chunk_hash": "0d0c90ec099a2c87",
+ "summary": "PowerShell masking rules match Python; Ansible.Basic registers no_log values, masks its event log messages, and returns new secrets to the controller.",
+ "questions": [
+  "Does Ansible.Basic mask no_log values in the Windows event log?"
+ ],
+ "answer_card": {
+  "title": "Ansible.Basic masking behavior",
+  "answer_md": "Yes. Matching rules are the same as Python. `Ansible.Basic` auto-registers `no_log` values, masks messages written to the event log, and returns newly registered secrets to the controller on exit.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_secret_masking.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

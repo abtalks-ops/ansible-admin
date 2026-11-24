@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8f7aa03d794cac06",
+ "chunk_hash": "8f7aa03d794cac06",
+ "summary": "Debian's own Ansible can be old, so use the Ubuntu PPA with the matching codename (Trixie→noble, Bookworm→jammy, Bullseye→focal), adding its key to a dedicated keyring and a deb822 sources entry. apt-key add is deprecated.",
+ "questions": [
+  "How do I install a recent Ansible on Debian 12?",
+  "Which Ubuntu codename should I use for the PPA on Debian?",
+  "Why shouldn't I use apt-key add for the Ansible PPA?"
+ ],
+ "answer_card": {
+  "title": "Install a recent Ansible on Debian",
+  "answer_md": "Codename map: Debian 13 → `noble`, 12 → `jammy`, 11 → `focal`.\n```bash\nUBUNTU_CODENAME='noble'\nFINGERPRINT='6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367'\nwget -O- \"https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x${FINGERPRINT}\" | sudo gpg --dearmor -o /usr/share/keyrings/ansible-archive-keyring.gpg\ncat <<EOT | sudo tee /etc/apt/sources.list.d/ansible.sources > /dev/null\nTypes: deb\nURIs: https://ppa.launchpadcontent.net/ansible/ansible/ubuntu/\nSuites: ${UBUNTU_CODENAME}\nComponents: main\nSigned-By: /usr/share/keyrings/ansible-archive-keyring.gpg\nEOT\nsudo apt update && sudo apt install ansible\n```\n`apt-key add` is deprecated for security reasons.",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

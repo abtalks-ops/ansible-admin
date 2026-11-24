@@ -1,0 +1,16 @@
+{
+ "chunk_id": "37e7afeae7b533c5",
+ "chunk_hash": "37e7afeae7b533c5",
+ "summary": "Use the :ansplugin: role with FQCN#type to link to modules and plugins, optionally with custom text; ansible.builtin is the FQCN prefix for core modules.",
+ "questions": [
+  "How do I link to a module page in RST docs?",
+  "How do I link to a lookup or connection plugin in the docs?"
+ ],
+ "answer_card": {
+  "title": "Linking to modules and plugins",
+  "answer_md": "```rst\n:ansplugin:`ansible.builtin.copy#module`\n:ansplugin:`the copy module <ansible.builtin.copy#module>`\n:ansplugin:`kubernetes.core.kubectl connection plugin <kubernetes.core.kubectl#connection>`\n:ansplugin:`ansible.builtin.file lookup plugin <ansible.builtin.file#lookup>`\n```\nUse `ansible.builtin` for core modules.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "chunk_id": "4adb745e364eaa51",
+ "chunk_hash": "4adb745e364eaa51",
+ "summary": "ansible-core 2.20 removed DEFAULT_TRANSPORT=smart, the vaultid parameter of vault/unvault filters, Galaxy v2 API support, dnf install_repoquery, passlib_or_crypt, paramiko host key config keys, py3compat.environ, get_host_vars/get_group_vars fallbacks and yum_repository keepcache.",
+ "questions": [
+  "Does ansible-galaxy still support Galaxy API v2?",
+  "Is transport = smart still valid in ansible-core 2.20?",
+  "Why does yum_repository keepcache fail now?",
+  "What happened to PARAMIKO_HOST_KEY_AUTO_ADD?",
+  "Can I pass vaultid to the vault filter?"
+ ],
+ "answer_card": {
+  "title": "Features removed in ansible-core 2.20",
+  "answer_md": "- `DEFAULT_TRANSPORT` no longer accepts **`smart`**.\n- `vault` / `unvault` filters no longer accept `vaultid`.\n- `ansible-galaxy` drops the **v2 Galaxy API**; servers must support v3.\n- `dnf` / `dnf5`: `install_repoquery` removed.\n- `encrypt` module util: `passlib_or_crypt` removed.\n- `paramiko`: `PARAMIKO_HOST_KEY_AUTO_ADD` and `PARAMIKO_LOOK_FOR_KEYS` removed.\n- `py3compat.environ` removed.\n- Vars plugins not inheriting `BaseVarsPlugin` can't fall back to `get_host_vars`/`get_group_vars`.\n- `yum_repository`: `keepcache` removed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.20.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

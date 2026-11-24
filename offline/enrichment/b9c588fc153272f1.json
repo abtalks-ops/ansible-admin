@@ -1,0 +1,19 @@
+{
+  "chunk_id": "b9c588fc153272f1",
+  "chunk_hash": "b9c588fc153272f1",
+  "summary": "blockinfile placement and marker options: insertafter or insertbefore a regex (or EOF/BOF), multiline regex support, the marker template with {mark}, and marker_begin.",
+  "questions": [
+    "How do I insert a block right after a specific line?",
+    "How do I put a block at the start of a file?",
+    "Why does blockinfile insert my block again every run?",
+    "Can insertafter match across multiple lines?",
+    "How do I change the BEGIN/END words in markers?"
+  ],
+  "answer_card": {
+    "title": "blockinfile placement and markers",
+    "answer_md": "- `insertafter`: regex (last match) or `EOF` (default if no match)\n- `insertbefore`: regex or `BOF`; no match → end of file\n- `(?m)` in the regex enables multiline matching (2.14+)\n- `marker` (default `# {mark} ANSIBLE MANAGED BLOCK`): must contain `{mark}` and be single-line, or the block gets re-inserted every run\n- `marker_begin` (BEGIN) / `marker_end` (END)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/blockinfile_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

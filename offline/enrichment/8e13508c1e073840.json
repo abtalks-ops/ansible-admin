@@ -1,0 +1,16 @@
+{
+  "chunk_id": "8e13508c1e073840",
+  "chunk_hash": "8e13508c1e073840",
+  "summary": "Example using the template module to write a host's hostname fact into /tmp/hostname from templates/test.j2.",
+  "questions": [
+    "Can you show a simple template module example?",
+    "How do I write a fact into a file with a template?"
+  ],
+  "answer_card": {
+    "title": "Simple template example",
+    "answer_md": "```yaml\n- name: Write hostname\n  hosts: all\n  tasks:\n  - ansible.builtin.template:\n      src: templates/test.j2\n      dest: /tmp/hostname\n```\n\n`templates/test.j2`:\n\n```jinja\nMy name is {{ ansible_facts['hostname'] }}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_templating.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

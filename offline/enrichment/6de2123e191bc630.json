@@ -1,0 +1,16 @@
+{
+ "chunk_id": "6de2123e191bc630",
+ "chunk_hash": "6de2123e191bc630",
+ "summary": "regex_escape parameters: required input and re_type (python default, posix_basic, or posix_extended added in 2.22).",
+ "questions": [
+  "How do I escape a string for a POSIX regex?",
+  "Which regex flavors can regex_escape target?"
+ ],
+ "answer_card": {
+  "title": "regex_escape parameters",
+  "answer_md": "- `_input` (str, required)\n- `re_type` (default `python`): `python`, `posix_basic`, or `posix_extended` (added in ansible-core 2.22)",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/regex_escape_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:11+00:00"
+}

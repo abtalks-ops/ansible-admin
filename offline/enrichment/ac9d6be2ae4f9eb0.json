@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ac9d6be2ae4f9eb0",
+ "chunk_hash": "ac9d6be2ae4f9eb0",
+ "summary": "Inventory lists managed hosts, their variables and groups, from one or more sources. The default is /etc/ansible/hosts; use -i or config for others, and options include dynamic inventory, multiple sources and inventory directories.",
+ "questions": [
+  "Where is Ansible's default inventory file?",
+  "How do I use a different inventory file?",
+  "Can I use more than one inventory source?"
+ ],
+ "answer_card": {
+  "title": "Inventory basics and default location",
+  "answer_md": "Inventory defines the hosts you automate, their variables and groups. The default file is `/etc/ansible/hosts`. Use `-i <path or expression>` or the config to use others.\n\nAs it grows you can generate inventory dynamically with plugins, combine multiple sources (static and dynamic), or use a directory of sources.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

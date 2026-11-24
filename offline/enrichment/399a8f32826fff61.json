@@ -1,0 +1,17 @@
+{
+ "chunk_id": "399a8f32826fff61",
+ "chunk_hash": "399a8f32826fff61",
+ "summary": "After the shebang add a single copyright line and one-line GPLv3+ license declaration, without a year, and don't add extra copyright lines or edit existing headers without permission.",
+ "questions": [
+  "What copyright header should a new module have?",
+  "Should I add a copyright year to my module?",
+  "Can I add my name to the copyright of an existing module?"
+ ],
+ "answer_card": {
+  "title": "Module copyright and license header",
+  "answer_md": "```python\n#!/usr/bin/python\n\n# Copyright: Contributors to the Ansible project\n# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)\n```\n- One-line license, not the full GPL preamble.\n- No year; don't edit an existing year.\n- Don't add extra copyright lines or change the header without the author's permission.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_documenting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

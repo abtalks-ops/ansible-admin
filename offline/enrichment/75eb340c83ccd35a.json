@@ -1,0 +1,17 @@
+{
+ "chunk_id": "75eb340c83ccd35a",
+ "chunk_hash": "75eb340c83ccd35a",
+ "summary": "Cisco-certified Nexus support matrix: minimum NX-OS 7.0(3)I2(5) for N3k/N9k, 7.3(0)N1(1) for N5k/N6k, 7.3(0)D1(1) for N7k and 8.4(1) for MDS, covering all models in each family (N3k: N30xx, N31xx, N35xx).",
+ "questions": [
+  "What NX-OS version do I need for Ansible on a Nexus 9000?",
+  "Is my Nexus 7000 supported by the Ansible nxos collection?",
+  "Does Ansible support Cisco MDS switches?"
+ ],
+ "answer_card": {
+  "title": "Nexus platform support matrix",
+  "answer_md": "| Platform | Minimum NX-OS | Models |\n|---|---|---|\n| N3k | 7.0(3)I2(5) | N30xx, N31xx, N35xx |\n| N9k | 7.0(3)I2(5) | all N9xxx |\n| N5k | 7.3(0)N1(1) | all N5xxx |\n| N6k | 7.3(0)N1(1) | all N6xxx |\n| N7k | 7.3(0)D1(1) | all N7xxx |\n| MDS | 8.4(1) (check each module) | all MDS 9xxx |",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_nxos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

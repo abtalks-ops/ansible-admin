@@ -1,0 +1,17 @@
+{
+ "chunk_id": "2d8f7a8a7bd387f3",
+ "chunk_hash": "2d8f7a8a7bd387f3",
+ "summary": "Common network inventory variables: ansible_connection (network_cli so Ansible doesn't try running Python on the device), ansible_network_os (required with netcommon connections), ansible_user, ansible_password (else SSH key), ansible_become and ansible_become_method (enable for network_cli).",
+ "questions": [
+  "Why does Ansible try to run Python on my switch?",
+  "Is ansible_network_os required?",
+  "What become_method should I use with network_cli?"
+ ],
+ "answer_card": {
+  "title": "Common network inventory variables",
+  "answer_md": "- `ansible_connection`: set to a network option like `ansible.netcommon.network_cli`. Without it Ansible tries SSH + Python on the device, which fails.\n- `ansible_network_os`: the platform; **required** with `ansible.netcommon.*` connections.\n- `ansible_user`: device login (defaults to the user running ansible-playbook).\n- `ansible_password`: password for that user; if unset, SSH keys are used.\n- `ansible_become`: use enable/privilege mode.\n- `ansible_become_method`: for `network_cli`, only `enable` is valid.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

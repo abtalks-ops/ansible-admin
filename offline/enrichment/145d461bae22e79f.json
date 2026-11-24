@@ -1,0 +1,16 @@
+{
+ "chunk_id": "145d461bae22e79f",
+ "chunk_hash": "145d461bae22e79f",
+ "summary": "Meraki uses the Dashboard API over HTTP(S) with an API key, ansible_connection localhost, and returns data in data.",
+ "questions": [
+  "How does Ansible connect to Cisco Meraki?",
+  "What credentials does the Meraki collection use?"
+ ],
+ "answer_card": {
+  "title": "Meraki connection options",
+  "answer_md": "- Protocol: Dashboard API over HTTP(S)\n- Credentials: API key from the Meraki Dashboard\n- Connection: `ansible_connection: localhost`\n- Output: `data.`",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_meraki.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

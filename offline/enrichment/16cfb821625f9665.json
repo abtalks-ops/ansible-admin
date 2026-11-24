@@ -1,0 +1,17 @@
+{
+  "chunk_id": "16cfb821625f9665",
+  "chunk_hash": "16cfb821625f9665",
+  "summary": "systemd_service options: daemon_reexec, daemon_reload, enabled, force, masked, name (implied .service; extension required in chroot), and no_block.",
+  "questions": [
+    "How do I reload systemd after changing a unit file?",
+    "How do I prevent a unit from ever starting?",
+    "How do I enable a unit without waiting on the job?"
+  ],
+  "answer_card": {
+    "title": "systemd_service parameters (part 1)",
+    "answer_md": "- `name` (aliases `service`, `unit`)\n- `daemon_reload` / `daemon_reexec`\n- `enabled`, `masked` (masked units can't start), `force` (override symlinks)\n- `no_block` (false)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_service_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

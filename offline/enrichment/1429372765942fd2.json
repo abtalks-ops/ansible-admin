@@ -1,0 +1,17 @@
+{
+ "chunk_id": "1429372765942fd2",
+ "chunk_hash": "1429372765942fd2",
+ "summary": "Generate hashed passwords for the user module with the password_hash filter in an ad hoc command, mkpasswd --method=sha-512, or openssl passwd -6, and keep plaintext passwords in vault.",
+ "questions": [
+  "How do I create a password hash for the user module?",
+  "What does password_hash('sha512') need?",
+  "Can I use openssl to generate a Linux password hash?"
+ ],
+ "answer_card": {
+  "title": "Generate encrypted passwords for user",
+  "answer_md": "```bash\nansible all -i localhost, -m debug -a \"msg={{ 'mypassword' | password_hash('sha512', 'mysecretsalt') }}\"\nmkpasswd --method=sha-512\nopenssl passwd -6 -noverify\n```\n\nOr in the playbook: `password: \"{{ pw | password_hash('sha512') }}\"`, keeping `pw` in **Ansible Vault**, never in plaintext.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

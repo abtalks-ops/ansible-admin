@@ -1,0 +1,17 @@
+{
+ "chunk_id": "5fde5a0fc69efaef",
+ "chunk_hash": "5fde5a0fc69efaef",
+ "summary": "The ansible.builtin.memory cache plugin is a non-persistent RAM cache, the default when no other cache plugin is set, with no options.",
+ "questions": [
+  "What is Ansible's default fact cache?",
+  "Do cached facts survive between playbook runs by default?",
+  "What options does the memory cache plugin have?"
+ ],
+ "answer_card": {
+  "title": "memory cache plugin (default)",
+  "answer_md": "`ansible.builtin.memory` is a RAM-backed, **non-persistent** cache and the default if no other cache plugin is configured. It has no options, so facts are not kept between runs.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/memory_cache.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

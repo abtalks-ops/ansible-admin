@@ -1,0 +1,19 @@
+{
+ "chunk_id": "d7379776fd319105",
+ "chunk_hash": "d7379776fd319105",
+ "summary": "Shows sample group_vars for a location and a function, defaults in group_vars/all, host-specific values in host_vars, notes dynamic inventory groups like ec2_tag_class_webserver, and that hostvars only exposes host variables.",
+ "questions": [
+  "Where do I put default values that apply to all hosts?",
+  "How do I set different NTP servers per data center?",
+  "How do I set a variable for just one host?",
+  "Can I use group_vars with cloud tag groups from dynamic inventory?",
+  "Can hostvars access group variables?"
+ ],
+ "answer_card": {
+  "title": "Sample group and host variables",
+  "answer_md": "```yaml\n# group_vars/atlanta\nntp: ntp-atlanta.example.com\nbackup: backup-atlanta.example.com\n\n# group_vars/webservers\napacheMaxRequestsPerChild: 3000\napacheMaxClients: 900\n\n# group_vars/all  (defaults)\nntp: ntp-boston.example.com\nbackup: backup-boston.example.com\n\n# host_vars/db-bos-1.example.com\nfoo_agent_port: 86\nbar_agent_port: 99\n```\n\nDynamic inventory creates groups automatically, so a tag `class:webserver` loads `group_vars/ec2_tag_class_webserver`. The `hostvars` variable only reaches host-specific variables, not group variables.",
+  "source_url": "https://docs.ansible.com/ansible/latest/tips_tricks/sample_setup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

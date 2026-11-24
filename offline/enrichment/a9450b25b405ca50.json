@@ -1,0 +1,18 @@
+{
+ "chunk_id": "a9450b25b405ca50",
+ "chunk_hash": "a9450b25b405ca50",
+ "summary": "Explains running Ansible on the control node under Python 3 by installing with pip3, checking with ansible --version, running a source checkout via python3, and notes distro packages are tied to one Python version.",
+ "questions": [
+  "How do I make Ansible run under Python 3 on my control node?",
+  "How can I check which Python version Ansible is using?",
+  "How do I run Ansible from a source checkout with Python 3?",
+  "Why can't my distro-packaged Ansible use a different Python?"
+ ],
+ "answer_card": {
+  "title": "Run Ansible on Python 3 (control node)",
+  "answer_md": "Install with Python 3's pip and verify:\n\n```shell\npip3 install ansible\nansible --version | grep \"python version\"\n```\n\nFrom a source checkout, run the tools through `python3`:\n\n```shell\nsource ./hacking/env-setup\npython3 $(which ansible) localhost -m ping\npython3 $(which ansible-playbook) sample-playbook.yml\n```\n\nDistro packages are built for one Python version; check your distro if you need another.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:57+00:00"
+}

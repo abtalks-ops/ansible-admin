@@ -1,0 +1,18 @@
+{
+  "chunk_id": "0993d3d1b8718d9f",
+  "chunk_hash": "0993d3d1b8718d9f",
+  "summary": "sh shell options: admin_users, async_dir, common_remote_group for sharing temp files when becoming another user, remote_tmp, system_tmpdirs, and world_readable_temp.",
+  "questions": [
+    "How do I change Ansible's remote temp directory on Linux?",
+    "Why does become to an unprivileged user fail with temp file permission errors?",
+    "What is common_remote_group used for?",
+    "Where are async job files stored on Linux?"
+  ],
+  "answer_card": {
+    "title": "sh shell parameters",
+    "answer_md": "- `remote_tmp` (`~/.ansible/tmp`), `async_dir` (`~/.ansible_async`)\n- `admin_users` (`root`, `toor`)\n- `common_remote_group`: if setfacl/chown fail when becoming another user, files are chgrp'd to this shared group\n- `world_readable_temp` (false): make temp files world-readable (warns instead of failing)\n- `system_tmpdirs` (`/var/tmp`, `/tmp`)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/sh_shell.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:27+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "43b70b98a44fc7de",
+  "chunk_hash": "43b70b98a44fc7de",
+  "summary": "Lists copy parameters: directory_mode (for newly created directories only), follow (follow destination links, default false), force (default true replaces differing files; false only copies if dest is absent), group (numeric means GID), and local_follow (follow links in the source tree).",
+  "questions": [
+    "How do I copy a file only if it doesn't already exist on the target?",
+    "How do I set permissions for directories created during a recursive copy?",
+    "What happens if I pass a numeric group name to copy?",
+    "Does copy follow symlinks at the destination?",
+    "Why didn't directory_mode change my existing directories?"
+  ],
+  "answer_card": {
+    "title": "copy parameters: force, directory_mode, follow",
+    "answer_md": "- `directory_mode` (1.5): mode for **newly created** directories; existing directories aren't changed. Without it, target defaults apply.\n- `follow` (default false): follow filesystem links in the destination.\n- `force` (default true): if true, replace the remote file when contents differ; if **false**, transfer only if the destination doesn't exist.\n- `group`: owning group as for `chown`. Unspecified means the current user's group (root can preserve previous ownership). Numeric values like `\"1000\"` are treated as a GID; avoid purely numeric group names.\n- `local_follow` (2.4): follow links in the source tree.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

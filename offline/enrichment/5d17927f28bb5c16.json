@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5d17927f28bb5c16",
+ "chunk_hash": "5d17927f28bb5c16",
+ "summary": "To run a module's real main(), import the module, monkeypatch exit_json, set args, and call main().",
+ "questions": [
+  "How do I run a module's main function from pytest?",
+  "How do I monkeypatch exit_json with pytest?"
+ ],
+ "answer_card": {
+  "title": "Run a module's main() in pytest",
+  "answer_md": "```python\nimport ansible.modules.module.group.my_module as my_module\n\ndef test_main_function(monkeypatch):\n    monkeypatch.setattr(my_module.AnsibleModule, \"exit_json\", fake_exit_json)\n    set_module_args({'activationkey': 'key', 'username': 'user', 'password': 'pass'})\n    my_module.main()\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

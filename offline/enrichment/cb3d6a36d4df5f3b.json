@@ -1,0 +1,19 @@
+{
+ "chunk_id": "cb3d6a36d4df5f3b",
+ "chunk_hash": "cb3d6a36d4df5f3b",
+ "summary": "winrm options for Kerberos (kinit command, managed or manual mode, kinit_args overriding defaults including -f for delegation, kinit_env_vars except KRB5CCNAME), URI path, and pipelining.",
+ "questions": [
+  "Can Ansible obtain the Kerberos ticket for WinRM automatically?",
+  "How do I pass extra arguments to kinit for WinRM?",
+  "How do I get a forwardable Kerberos ticket for WinRM delegation?",
+  "How do I pass environment variables to kinit?",
+  "Can I use a Kerberos ticket I already obtained with kinit?"
+ ],
+ "answer_card": {
+  "title": "winrm Kerberos options",
+  "answer_md": "- `kerberos_mode`: `managed` (Ansible gets the ticket) or `manual` (you already have one).\n- `kerberos_command` (default `kinit`).\n- `kinit_args` (2.11+): extra kinit args. By default none, except `-f` when `ansible_winrm_kerberos_delegation` is set. Setting this overrides defaults, including `-f`.\n- `kinit_env_vars` (2.12+, default `[]`): env vars passed to kinit; `KRB5CCNAME` is not allowed.\n- `path` (default `/wsman`), `pipelining` (default false).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/winrm_connection.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

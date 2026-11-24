@@ -1,0 +1,17 @@
+{
+  "chunk_id": "438b7da3526c1213",
+  "chunk_hash": "438b7da3526c1213",
+  "summary": "Gives worked examples of how win_command splits quoted and escaped arguments into argv, including paths with spaces and escaped backslashes, and notes how YAML/Ansible parsing requires raw tags for a backslash before a quote.",
+  "questions": [
+    "How do I quote a program path with spaces in win_command?",
+    "Can you show how win_command arguments end up in argv?",
+    "How do I write a trailing backslash before a closing quote in win_command?"
+  ],
+  "answer_card": {
+    "title": "win_command quoting examples",
+    "answer_md": "```\n- win_command: C:\\temp\\executable.exe argument1 \"argument 2\" \"C:\\path\\with space\" \"double \\\"quoted\\\"\"\nargv[1] = argument1\nargv[2] = argument 2\nargv[3] = C:\\path\\with space\nargv[4] = double \"quoted\"\n```\n\nQuote an executable path with spaces: `'\"C:\\Program Files\\Program\\program.exe\" ...'`.\n\nBecause of YAML and Ansible parsing, a `\\\\\"` sequence must be written as `{% raw %}\\\\{% endraw %}\"`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

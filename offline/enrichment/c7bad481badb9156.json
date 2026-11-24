@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c7bad481badb9156",
+ "chunk_hash": "c7bad481badb9156",
+ "summary": "The ntc_templates parser maps ansible_network_os to ntc format (for example cisco_nxos) or uses parser os, and parses with the package's prebuilt textfsm templates into a list of interface dicts.",
+ "questions": [
+  "How do I use ntc-templates with Ansible?",
+  "How do I override the OS name for ntc_templates?"
+ ],
+ "answer_card": {
+  "title": "Parse with ntc_templates",
+  "answer_md": "```yaml\n- ansible.utils.cli_parse:\n    command: show interface\n    parser:\n      name: ansible.netcommon.ntc_templates\n    set_fact: interfaces\n```\n`ansible_network_os` is converted to ntc format (`cisco_nxos`), or set `parser.os`. It uses the bundled `cisco_nxos_show_interface.textfsm` and returns a list of dicts (interface, admin_state, mtu, speed, ip_address...).",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "e21d7ecdbb7edcd3",
+  "chunk_hash": "e21d7ecdbb7edcd3",
+  "summary": "Inventory caching is off by default and needs enabling via ANSIBLE_INVENTORY_CACHE, [inventory] cache=True or cache: True in a plugin's YAML source. The plugin is chosen with ANSIBLE_INVENTORY_CACHE_PLUGIN, cache_plugin in ansible.cfg or the YAML config, otherwise falling back to the fact cache plugin. Not all inventory plugins support caching.",
+  "questions": [
+    "How do I turn on caching for my aws_ec2 dynamic inventory?",
+    "Which setting chooses the cache backend for inventory?",
+    "Is inventory caching enabled by default?",
+    "What happens if I enable inventory cache but don't set a cache plugin?",
+    "Can I use a collection's cache plugin for inventory?"
+  ],
+  "answer_card": {
+    "title": "Enabling inventory caching",
+    "answer_md": "Inventory caching is disabled by default. Enable it with any of:\n\n```shell\nexport ANSIBLE_INVENTORY_CACHE=True\n```\n```ini\n[inventory]\ncache=True\n```\n```yaml\n# dev.aws_ec2.yaml\nplugin: aws_ec2\ncache: True\n```\n\nPick the cache plugin with `ANSIBLE_INVENTORY_CACHE_PLUGIN=jsonfile`, `cache_plugin=jsonfile` under `[inventory]`, or `cache_plugin: jsonfile` in the YAML source. Use the FQCN for collection plugins.\n\nIf no inventory cache plugin is set, the fact cache plugin is used. Check that your inventory plugin supports caching.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/cache.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "8309222df73fbd80",
+  "chunk_hash": "8309222df73fbd80",
+  "summary": "Explains error handling with `rescue` (runs after a task in the block returns failed) and `always` (runs regardless) sections. Invalid task definitions and unreachable hosts do not trigger rescue or always.",
+  "questions": [
+    "How do I run cleanup tasks if something in my playbook fails?",
+    "How do I make a task run whether or not earlier tasks failed?",
+    "Why didn't my rescue section run when the host was unreachable?",
+    "When exactly does a rescue section run?"
+  ],
+  "answer_card": {
+    "title": "Handle errors with rescue and always",
+    "answer_md": "```yaml\ntasks:\n  - name: Handle the error\n    block:\n      - ansible.builtin.command: /bin/false\n    rescue:\n      - ansible.builtin.debug:\n          msg: 'I caught an error'\n    always:\n      - ansible.builtin.debug:\n          msg: 'This always executes'\n```\n- `rescue` runs only after a task in the block returns a **failed** state.\n- `always` runs no matter what happened in the block.\n\nErrors from invalid task definitions and unreachable hosts do **not** trigger `rescue` or `always`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_blocks.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

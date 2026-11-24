@@ -1,0 +1,20 @@
+{
+  "chunk_id": "cfcd82ce83b8c8cf",
+  "chunk_hash": "cfcd82ce83b8c8cf",
+  "summary": "Lists copy module parameters: attributes (chattr flags in lsattr order), backup (timestamped backup), checksum (SHA1 to validate transfer), content (set file contents directly, use template for variables), decrypt (vault auto-decrypt, default true), and dest, including when dest directories are or aren't created.",
+  "questions": [
+    "How do I keep a backup of the original file when copying over it?",
+    "How do I write a small file with inline text using copy?",
+    "Why does copy fail saying the destination directory doesn't exist?",
+    "Does copy automatically decrypt vault-encrypted source files?",
+    "How do I verify a copied file with a checksum?",
+    "How do I set immutable attributes on a copied file?"
+  ],
+  "answer_card": {
+    "title": "copy parameters: backup, content, dest",
+    "answer_md": "- `attributes` (2.3, alias `attr`): chattr-style flags in `lsattr` order; `=` assumed unless `+`/`-` given.\n- `backup` (default false): create a timestamped backup to recover the original.\n- `checksum` (2.5): SHA1 of the file to validate the transfer; defaults to the locally computed checksum of `src`.\n- `content` (1.1): set file contents directly instead of `src`. Only when `dest` is a file; creates it if missing. Use `template` if content has variables or needs formatting.\n- `decrypt` (default true, 2.4): auto-decrypt vault-encrypted source files.\n- `dest` (required): remote absolute path. If `src` is a directory, `dest` must be too. A non-existent `dest` is created if it ends with `/` or `src` is a directory. Relative paths start where the remote host decides. If both are files, `dest`'s parent directory is **not** created and the task fails if it's missing.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

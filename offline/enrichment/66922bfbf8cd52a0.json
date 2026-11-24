@@ -1,0 +1,16 @@
+{
+ "chunk_id": "66922bfbf8cd52a0",
+ "chunk_hash": "66922bfbf8cd52a0",
+ "summary": "Vault passwords can be typed at a prompt, stored in files, or kept in a third-party tool like the system keyring or a secret manager, which needs a vault password client script.",
+ "questions": [
+  "Where should I store my vault passwords?",
+  "Can Ansible read vault passwords from a secret manager or keyring?"
+ ],
+ "answer_card": {
+  "title": "Storing vault passwords",
+  "answer_md": "You can memorize or paste passwords at a prompt, but most people store them. Two options work from within Ansible:\n\n- **files**\n- **third-party tools** such as the system keyring or a secret manager, accessed through a **vault password client script**",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_managing_passwords.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

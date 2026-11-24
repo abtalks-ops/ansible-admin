@@ -1,0 +1,16 @@
+{
+  "chunk_id": "fdb3cec381ff479a",
+  "chunk_hash": "fdb3cec381ff479a",
+  "summary": "dellemc.openmanage known issues for 10.2.0: no SOCKS proxy export in idrac_diagnostics, no authenticated shares for idrac_firmware on iDRAC8, a false success in idrac_storage_volume on BOSS-N1, failing SupportAssist export on OME 4.0.0, and same-named uplinks being modified.",
+  "questions": [
+    "Which openmanage known issues apply to Ansible 10.2.0?",
+    "Is the ome_smart_fabric_uplink duplicate-name issue in 10.2.0?"
+  ],
+  "answer_card": {
+    "title": "dellemc.openmanage known issues (10.2.0)",
+    "answer_md": "- `idrac_diagnostics`: no SOCKS proxy export to HTTP/HTTPS shares.\n- `idrac_firmware`: no authenticated HTTP/HTTPS/FTP shares on iDRAC8.\n- `idrac_storage_volume`: false success on BOSS-N1 when a virtual disk exists.\n- `ome_diagnostics`: SupportAssist export fails on OME 4.0.0.\n- `ome_smart_fabric_uplink`: a duplicate name modifies the existing uplink.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:22:19+00:00"
+}

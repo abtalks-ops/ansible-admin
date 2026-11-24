@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b169f88b44096203",
+ "chunk_hash": "b169f88b44096203",
+ "summary": "In INI, inline host values are parsed as Python literals (quote values with spaces), while :vars values are always strings. Cast types with filters in tasks, or use YAML inventory for consistent typing.",
+ "questions": [
+  "Why is my boolean from INI inventory a string?",
+  "How do I put a value with spaces in an INI inventory host line?",
+  "Should I use YAML inventory to avoid type problems?"
+ ],
+ "answer_card": {
+  "title": "Variable types in INI inventory",
+  "answer_md": "- **Inline on a host line**: parsed as Python literals (string, number, list, dict, bool, None). Several `key=value` per line; quote values containing spaces.\n- **In `[group:vars]`**: always a **string**. `var=FALSE` is the string `'FALSE'`. One entry per line.\n\nDon't rely on INI types: cast with a filter in your task (for example `| bool`), or use YAML inventory, which types values consistently.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

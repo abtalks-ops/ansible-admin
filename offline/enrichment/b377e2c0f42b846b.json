@@ -1,0 +1,15 @@
+{
+  "chunk_id": "b377e2c0f42b846b",
+  "chunk_hash": "b377e2c0f42b846b",
+  "summary": "vmware.vmware_rest no longer depends on cloud.common, so it isn't installed automatically anymore.",
+  "questions": [
+    "Does vmware_rest still install cloud.common automatically?"
+  ],
+  "answer_card": {
+    "title": "vmware_rest drops cloud.common dependency",
+    "answer_md": "`cloud.common` is no longer a dependency of vmware.vmware_rest and won't be installed automatically. Install it manually if you still need it.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:25:02+00:00"
+}

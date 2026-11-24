@@ -1,0 +1,16 @@
+{
+ "chunk_id": "aa219cdfbfd36a42",
+ "chunk_hash": "aa219cdfbfd36a42",
+ "summary": "Recommends following a versioning convention, ideally SemVer, and basing releases on Git tags.",
+ "questions": [
+  "What versioning scheme should my collection use?",
+  "Should collection releases be tied to Git tags?"
+ ],
+ "answer_card": {
+  "title": "Collection versioning practices",
+  "answer_md": "Use a versioning convention (SemVer is highly recommended) and base releases on Git tags.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_path.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "296fac761c89c1e2",
+ "chunk_hash": "296fac761c89c1e2",
+ "summary": "To see the exact args Ansible passed to a Windows module, run with ANSIBLE_KEEP_REMOTE_FILES=1, log on as the same user, open the ansible-tmp folder under %TEMP%\\.., and read module_args from $json_raw in the script.",
+ "questions": [
+  "How do I see the arguments Ansible sent to my Windows module?",
+  "Where does Ansible leave temp files on a Windows host?"
+ ],
+ "answer_card": {
+  "title": "Capture module args on Windows",
+  "answer_md": "1. Run Ansible with `ANSIBLE_KEEP_REMOTE_FILES=1`.\n2. Log on as the same user Ansible used.\n3. Go to `%TEMP%\\..` and open the `ansible-tmp-*` folder.\n4. Open the module's PowerShell script; `$json_raw` contains `module_args`. Copy them into `$complex_args` or `args.json`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

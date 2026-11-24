@@ -1,0 +1,15 @@
+{
+  "chunk_id": "648348dcd1e2b5fd",
+  "chunk_hash": "648348dcd1e2b5fd",
+  "summary": "Filters can handle missing variables by providing defaults or making variables optional, and the mandatory filter can require values when undefined variables are otherwise ignored.",
+  "questions": [
+    "How can I handle undefined variables in Ansible templates?"
+  ],
+  "answer_card": {
+    "title": "Handling undefined variables with filters",
+    "answer_md": "Use filters to supply **defaults**, make variables **optional** (`omit`), or, if you've configured Ansible to ignore undefined variables, require specific ones with **`mandatory`**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

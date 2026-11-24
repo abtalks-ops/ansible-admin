@@ -1,0 +1,17 @@
+{
+  "chunk_id": "90a88f85b35b7a06",
+  "chunk_hash": "90a88f85b35b7a06",
+  "summary": "Inventory plugins point Ansible at data sources to build its host inventory, through -i with a path or a comma-separated host list, or other configuration sources. Custom ones can be written.",
+  "questions": [
+    "What do inventory plugins do?",
+    "Can I pass a list of hosts directly on the command line?",
+    "Can I build inventory from my own data source?"
+  ],
+  "answer_card": {
+    "title": "What inventory plugins are",
+    "answer_md": "Inventory plugins compile the host list from data sources, using `-i /path/to/file`, `-i 'host1, host2'`, or other configuration sources. You can write custom ones.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/inventory.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

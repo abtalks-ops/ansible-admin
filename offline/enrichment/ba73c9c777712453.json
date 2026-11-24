@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ba73c9c777712453",
+ "chunk_hash": "ba73c9c777712453",
+ "summary": "TTP parses text with jinja-like templates instead of regexes; use parser ansible.utils.ttp with templates/<os>_<command>.ttp and pass ttp_init, ttp_results and ttp_vars via parser vars.",
+ "questions": [
+  "How do I use TTP templates with Ansible?",
+  "Can I parse text without writing regexes?",
+  "How do I pass variables into a TTP template?"
+ ],
+ "answer_card": {
+  "title": "Parse with TTP",
+  "answer_md": "Template `templates/nxos_show_interface.ttp`:\n```jinja\n{{ interface }} is {{ state }}\nadmin state is {{ admin_state }}{{ ignore(\".*\") }}\n```\nTask:\n```yaml\n- ansible.utils.cli_parse:\n    command: show interface\n    parser:\n      name: ansible.utils.ttp\n    set_fact: interfaces\n```\nExtra options under `parser.vars`: `ttp_init`, `ttp_results`, `ttp_vars`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

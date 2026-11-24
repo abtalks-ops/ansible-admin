@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b67b1a0237106c8b",
+ "chunk_hash": "b67b1a0237106c8b",
+ "summary": "Full parse pattern for caching: combine the user's cache option and the refresh flag to decide whether to read the cache, handle KeyError for missing or expired keys, fetch fresh data when needed, write the cache, and populate inventory.",
+ "questions": [
+  "What's the recommended code pattern for reading and updating the inventory cache?",
+  "How do I handle an expired cache key in an inventory plugin?",
+  "When is self._cache written back to the cache plugin?"
+ ],
+ "answer_card": {
+  "title": "Inventory cache read/update pattern",
+  "answer_md": "```python\nuser_cache_setting = self.get_option('cache')\nattempt_to_read_cache = user_cache_setting and cache\ncache_needs_update = user_cache_setting and not cache\nif attempt_to_read_cache:\n    try:\n        results = self._cache[cache_key]\n    except KeyError:\n        cache_needs_update = True\nif not attempt_to_read_cache or cache_needs_update:\n    results = self.get_inventory()\nif cache_needs_update:\n    self._cache[cache_key] = results\nself.populate(results)\n```\nAfter `parse`, changed `self._cache` contents are saved to the cache plugin.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

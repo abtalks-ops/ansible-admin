@@ -1,0 +1,17 @@
+{
+ "chunk_id": "76cd1ec2f90fa42f",
+ "chunk_hash": "76cd1ec2f90fa42f",
+ "summary": "vyos.vyos BGP modules support 1.4 system-as and moved many attributes such as aggregate_address, maximum_paths, network and redistribute from bgp_global to bgp_address_family; vyos_user adds encrypted passwords and public keys.",
+ "questions": [
+  "Where did redistribute move in the vyos BGP modules?",
+  "Does vyos_user support SSH public key authentication?",
+  "Do vyos BGP modules support system-as on 1.4?"
+ ],
+ "answer_card": {
+  "title": "vyos.vyos BGP and user changes",
+  "answer_md": "- BGP modules support VyOS 1.4+ `system-as`; 1.3 embedded `as_number` still works.\n- `aggregate_address`, `maximum_paths`, `network`, `redistribute` and many neighbor attributes moved from **`vyos_bgp_global`** to **`vyos_bgp_address_family`** (address-family specific, 1.3+).\n- `vyos_user`: supports **encrypted password** and **public-key authentication**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "50dac62bd06dc1af",
+  "chunk_hash": "50dac62bd06dc1af",
+  "summary": "Notes that command and shell modules care about return codes, so a command whose success exit code isn't zero can be wrapped as `somecommand || /bin/true`.",
+  "questions": [
+    "My command exits non-zero on success, how do I stop Ansible failing it?",
+    "How do I ignore the result of a shell command?"
+  ],
+  "answer_card": {
+    "title": "Commands with non-zero success codes",
+    "answer_md": "`command` and `shell` fail on non-zero return codes. If your command's successful exit code isn't zero, you can force success in shell:\n\n```yaml\n- name: Run this command and ignore the result\n  ansible.builtin.shell: /usr/bin/somecommand || /bin/true\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

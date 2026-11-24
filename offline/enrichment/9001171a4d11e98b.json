@@ -1,0 +1,16 @@
+{
+  "chunk_id": "9001171a4d11e98b",
+  "chunk_hash": "9001171a4d11e98b",
+  "summary": "Examples of Windows become_flags: copying from a file share with different credentials via new_credentials and netcredentials_only, running under a batch logon, and skipping profile loading.",
+  "questions": [
+    "How do I copy a file from a share using different domain credentials?",
+    "Can you show become_flags examples for Windows?"
+  ],
+  "answer_card": {
+    "title": "Windows become_flags examples",
+    "answer_md": "```yaml\n- ansible.windows.win_copy:\n    src: \\\\server\\share\\data\\file.txt\n    dest: C:\\temp\\file.txt\n    remote_src: true\n  vars:\n    ansible_become: true\n    ansible_become_method: runas\n    ansible_become_user: DOMAIN\\user\n    ansible_become_password: Password01\n    ansible_become_flags: logon_type=new_credentials logon_flags=netcredentials_only\n\n- ansible.windows.win_whoami:\n  become: true\n  become_flags: logon_type=batch\n\n- ansible.windows.win_whoami:\n  become: true\n  become_flags: logon_flags=\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f90a663c438f3231",
+ "chunk_hash": "f90a663c438f3231",
+ "summary": "More 2.19 deprecations: STRING_TYPE_FILTERS, DEFAULT_JINJA2_EXTENSIONS, DEFAULT_MANAGED_STR, Display.get_deprecation_message, loading non-decodable files, first_found path splitting, auto_legacy interpreter options and invalid inventory variable names.",
+ "questions": [
+  "How do I customize ansible_managed now that DEFAULT_MANAGED_STR is deprecated?",
+  "Is INTERPRETER_PYTHON=auto_legacy deprecated?",
+  "Can I enable Jinja2 extensions in ansible.cfg?",
+  "Should first_found paths be a comma-separated string?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.19 deprecations (part 3)",
+  "answer_md": "- `STRING_TYPE_FILTERS`: no effect (native types always preserved).\n- `DEFAULT_JINJA2_EXTENSIONS`: enabling Jinja2 extensions is deprecated; use filter, test and lookup plugins.\n- `DEFAULT_MANAGED_STR`: deprecated; set the `ansible_managed` variable like any other variable.\n- `Display.get_deprecation_message` → call `Display.deprecated` (with `removed=True` to raise).\n- Loading text files that can't be decoded (usually UTF-8) is deprecated.\n- `first_found`: splitting paths on `,;:` is deprecated; pass a list.\n- `INTERPRETER_PYTHON`: `auto_legacy`/`auto_legacy_silent` → `auto`/`auto_silent`.\n- Inventory plugins setting invalid variable names is deprecated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

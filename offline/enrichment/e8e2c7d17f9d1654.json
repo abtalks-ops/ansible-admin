@@ -1,0 +1,20 @@
+{
+  "chunk_id": "e8e2c7d17f9d1654",
+  "chunk_hash": "e8e2c7d17f9d1654",
+  "summary": "Explains where to find the latest ansible.cfg (in `/etc/ansible`, possibly as `.rpmnew`, for package installs) and that pip or source installs may need one created. Shows generating a full commented config with `ansible-config init --disabled`, adding `-t all` for plugin settings.",
+  "questions": [
+    "Why is there no ansible.cfg after installing Ansible with pip?",
+    "How do I generate an ansible.cfg with all the default settings?",
+    "How do I include plugin options in a generated ansible.cfg?",
+    "Where is the default ansible.cfg on a package-manager install?",
+    "Why do I have an ansible.cfg.rpmnew file?",
+    "How can I see my current Ansible configuration values?"
+  ],
+  "answer_card": {
+    "title": "Generate an ansible.cfg",
+    "answer_md": "Package-manager installs put the latest `ansible.cfg` in `/etc/ansible` (after updates it may appear as `.rpmnew` or similar). pip or source installs don't create one; create it yourself to override defaults.\n\nGenerate a file listing all defaults (commented out):\n```console\n$ ansible-config init --disabled > ansible.cfg\n```\nInclude available plugins too:\n```console\n$ ansible-config init --disabled -t all > ansible.cfg\n```\nUse the `ansible-config` utility to list options and inspect current values.",
+    "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_configuration.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

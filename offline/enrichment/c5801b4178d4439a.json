@@ -1,0 +1,15 @@
+{
+ "chunk_id": "c5801b4178d4439a",
+ "chunk_hash": "c5801b4178d4439a",
+ "summary": "Resource module tests rely on a builder-generated role, so after builder changes delete and regenerate rmb_tests/roles/my_role.",
+ "questions": [
+  "How do I regenerate the test role after changing the resource module builder?"
+ ],
+ "answer_card": {
+  "title": "Regenerate the test role",
+  "answer_md": "```bash\nrm -rf rmb_tests/roles/my_role\nansible-playbook -e rm_dest=./rmb_tests/roles/my_role \\\n  -e structure=role \\\n  -e model=models/myos/interfaces/myos_interfaces.yml site.yml\n```\nThen update and rerun the tests as needed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

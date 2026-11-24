@@ -1,0 +1,18 @@
+{
+  "chunk_id": "cb56bc5fda1411cb",
+  "chunk_hash": "cb56bc5fda1411cb",
+  "summary": "Describes fact variables, which are only available once gathered: `ansible_facts` holds gathered or cached facts for the host (usually from setup, but any module can return facts), and `ansible_local` holds custom local facts.",
+  "questions": [
+    "Where are gathered facts stored?",
+    "Why is ansible_facts empty?",
+    "How do I access custom local facts?",
+    "Can modules other than setup return facts?"
+  ],
+  "answer_card": {
+    "title": "ansible_facts and ansible_local",
+    "answer_md": "Facts describe the current host (`inventory_hostname`) and exist only after they're gathered.\n- `ansible_facts`: facts gathered or cached for the host. Normally gathered automatically by the `setup` module, but any module can return facts.\n- `ansible_local`: \"local facts\" gathered or cached for the host; keys depend on the custom facts you created.",
+    "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

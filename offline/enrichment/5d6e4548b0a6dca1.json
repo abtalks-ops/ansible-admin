@@ -1,0 +1,18 @@
+{
+ "chunk_id": "5d6e4548b0a6dca1",
+ "chunk_hash": "5d6e4548b0a6dca1",
+ "summary": "Lists bundled PowerShell utils (ArgvParser, CamelConversion, CommandUtil, FileUtil, Legacy, LinkUtil, SID) and explains custom PowerShell and C# utils go in a module_utils folder in the playbook or role, with C# files named Ansible.<namespace>.cs.",
+ "questions": [
+  "Which PowerShell util runs a process and captures stdout and rc?",
+  "Is there a util to convert camelCase keys to snake_case?",
+  "Where do I put custom PowerShell module utils for my role?",
+  "How must custom C# module util files be named?"
+ ],
+ "answer_card": {
+  "title": "Bundled and custom PowerShell utils",
+  "answer_md": "Bundled: `ArgvParser` (escape args), `CamelConversion` (camelCase → snake_case), `CommandUtil` (run process, get stdout/stderr/rc), `FileUtil` (special files like pagefile), `Legacy` (general helpers), `LinkUtil` (symlinks/junctions/hard links), `SID` (name ↔ SID).\n\nCustom utils go in `module_utils/` at the playbook or role root. C# files must end in `.cs`, start with `Ansible.` and match the namespace.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

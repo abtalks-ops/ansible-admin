@@ -1,0 +1,16 @@
+{
+  "chunk_id": "58475a75de9ee0cf",
+  "chunk_hash": "58475a75de9ee0cf",
+  "summary": "Use ansible-doc -t inventory -l to list inventory plugins and ansible-doc -t inventory <name> for details.",
+  "questions": [
+    "How do I list the inventory plugins I have installed?",
+    "How do I see options and examples for an inventory plugin?"
+  ],
+  "answer_card": {
+    "title": "Listing inventory plugins",
+    "answer_md": "```shell\nansible-doc -t inventory -l\nansible-doc -t inventory <plugin name>\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/inventory.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:45+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6d9f669a05d21c77",
+ "chunk_hash": "6d9f669a05d21c77",
+ "summary": "To set up for sanity tests: install ansible-core (from source for dev checks), install podman or docker, and place your collection at ~/ansible_collections/<namespace>/<name>.",
+ "questions": [
+  "What do I need installed to run sanity tests on my collection?",
+  "Where should my collection live for sanity testing?",
+  "How do I run sanity checks from the development ansible-core?"
+ ],
+ "answer_card": {
+  "title": "Set up for sanity tests",
+  "answer_md": "1. Install ansible-core (provides `ansible-test`). For devel checks, install from source and `source hacking/env-setup` in the same terminal.\n2. Install `podman` or `docker`.\n3. Put the collection at `~/ansible_collections/<NAMESPACE>/<COLLECTION_NAME>`, for example:\n   ```shell\n   git clone <COLLECTION_REPO_URL> ~/ansible_collections/community/general\n   ```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_sanity.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

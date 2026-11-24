@@ -1,0 +1,16 @@
+{
+  "chunk_id": "bf58a6a19a131ca1",
+  "chunk_hash": "bf58a6a19a131ca1",
+  "summary": "cloud.common will be removed from Ansible 12 because it doesn't work with ansible-core 2.19 and nothing in Ansible 12 needs it. It can still be installed with ansible-galaxy.",
+  "questions": [
+    "Why is cloud.common being removed from the Ansible package?",
+    "How do I keep cloud.common after upgrading to Ansible 12?"
+  ],
+  "answer_card": {
+    "title": "cloud.common removed from Ansible 12",
+    "answer_md": "`cloud.common` is removed from Ansible 12. It doesn't work with ansible-core 2.19 and no included collection needs it. Install it yourself if needed:\n\n```shell\nansible-galaxy collection install cloud.common\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:25:02+00:00"
+}

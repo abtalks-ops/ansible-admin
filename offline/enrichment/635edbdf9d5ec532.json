@@ -1,0 +1,16 @@
+{
+ "chunk_id": "635edbdf9d5ec532",
+ "chunk_hash": "635edbdf9d5ec532",
+ "summary": "The deprecations return key holds a list of dictionaries with msg and version keys that Ansible presents to the user as deprecation warnings.",
+ "questions": [
+  "How does a module emit a deprecation warning?",
+  "What format do deprecations in module results use?"
+ ],
+ "answer_card": {
+  "title": "deprecations return key",
+  "answer_md": "**`deprecations`** is a list of `{msg, version}` dicts (strings; `version` may be empty) that Ansible shows as deprecation warnings. In modules, use `module.deprecate(msg, version=...)` instead of building it yourself.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

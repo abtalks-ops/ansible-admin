@@ -1,0 +1,17 @@
+{
+  "chunk_id": "b21229a649f47989",
+  "chunk_hash": "b21229a649f47989",
+  "summary": "Examples of unarchive: extracting a local tgz, extracting a file already on the remote, extracting from a URL, and passing extra tar options.",
+  "questions": [
+    "How do I extract a zip that's already on the server?",
+    "How do I download and extract a zip in one task?",
+    "How do I rename paths during extraction?"
+  ],
+  "answer_card": {
+    "title": "unarchive examples",
+    "answer_md": "```yaml\n- ansible.builtin.unarchive: {src: foo.tgz, dest: /var/lib/foo}\n- ansible.builtin.unarchive: {src: /tmp/foo.zip, dest: /usr/local/bin, remote_src: yes}\n- ansible.builtin.unarchive: {src: https://example.com/example.zip, dest: /usr/local/bin, remote_src: yes}\n- ansible.builtin.unarchive:\n    src: /tmp/foo.zip\n    dest: /usr/local/bin\n    extra_opts: [--transform, s/^xxx/yyy/]\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/unarchive_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

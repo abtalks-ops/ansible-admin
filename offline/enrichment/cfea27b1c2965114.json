@@ -1,0 +1,18 @@
+{
+ "chunk_id": "cfea27b1c2965114",
+ "chunk_hash": "cfea27b1c2965114",
+ "summary": "Explains custom collection skeletons for ansible-galaxy collection init: .j2 files get templated using namespace, collection_name and version, extra variables come from --extra-vars, and the skeleton path is passed with --collection-skeleton or set in ansible.cfg.",
+ "questions": [
+  "Can I use my own template when running ansible-galaxy collection init?",
+  "Which variables are available in a collection skeleton's galaxy.yml.j2?",
+  "How do I pass extra variables to a collection skeleton?",
+  "Which .j2 files in a skeleton are not templated?"
+ ],
+ "answer_card": {
+  "title": "Custom collection templates",
+  "answer_md": "- A skeleton looks like a collection; `.j2` files are templated (except under `templates/` and `roles/*/templates/`).\n- `galaxy.yml.j2` can use `namespace`, `collection_name` and defaults like `version` (`1.0.0`); add or override via `--extra-vars`.\n```bash\nansible-galaxy collection init --collection-skeleton /path/to/skeleton --extra-vars \"@my_vars_file.json\" my_namespace.my_collection\n```\n- Or set `collection_skeleton` (and `collection_skeleton_ignore`) in `ansible.cfg`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_creating.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

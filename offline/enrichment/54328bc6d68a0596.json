@@ -1,0 +1,18 @@
+{
+ "chunk_id": "54328bc6d68a0596",
+ "chunk_hash": "54328bc6d68a0596",
+ "summary": "Cobbler profiles and mgmt-classes become groups and ksmeta values become variables. Hosts are addressed by DNS name, so 'foo*' matches but 'foo' doesn't, and inventory script variables override same-named ones you pass.",
+ "questions": [
+  "Why can't Ansible find my Cobbler host by short name?",
+  "How do Cobbler mgmt-classes map to Ansible groups?",
+  "Can I use Cobbler ksmeta values in templates?",
+  "Do Cobbler variables override my own variables?"
+ ],
+ "answer_card": {
+  "title": "How Cobbler data maps to inventory",
+  "answer_md": "- Cobbler profiles and `--mgmt-classes` become groups (for example `webserver`, `atlanta`).\n- `--ksmeta` values become host variables usable in templates: `{{ a }}`, `{{ b }}`, `{{ c }}`.\n- Hosts are reached by DNS name only, so `ansible foo` finds nothing but `ansible 'foo*'` matches `foo.example.com`.\n- Variables from the inventory script override your variables with the same name.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_dynamic_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2320d2c896cd6621",
+ "chunk_hash": "2320d2c896cd6621",
+ "summary": "A typical network project tree has playbooks, inventory, group_vars per platform, roles and a backup directory that config modules create when backup: true is set.",
+ "questions": [
+  "How should I lay out my Ansible network project directory?",
+  "Where do network config backups get saved?"
+ ],
+ "answer_card": {
+  "title": "Typical network project layout",
+  "answer_md": "```text\n.\n├── backup/          # created by e.g. vyos_config with backup: true\n├── first_playbook.yml\n├── inventory\n├── group_vars/\n│   ├── vyos.yml\n│   └── eos.yml\n└── roles/\n    ├── static_route/\n    └── system/\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/intermediate_concepts.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

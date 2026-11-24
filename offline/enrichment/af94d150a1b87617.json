@@ -1,0 +1,16 @@
+{
+ "chunk_id": "af94d150a1b87617",
+ "chunk_hash": "af94d150a1b87617",
+ "summary": "Without bash 4.2, register each Ansible CLI with eval $(register-python-argcomplete <tool>) in your shell profile.",
+ "questions": [
+  "How do I set up Ansible completion on older bash?",
+  "Where should I put register-python-argcomplete commands?"
+ ],
+ "answer_card": {
+  "title": "Per-command argcomplete setup",
+  "answer_md": "Add to `~/.profile` or `~/.bash_profile`:\n```console\neval $(register-python-argcomplete ansible)\neval $(register-python-argcomplete ansible-playbook)\neval $(register-python-argcomplete ansible-galaxy)\neval $(register-python-argcomplete ansible-vault)\n# ...and ansible-config, -console, -doc, -inventory, -pull\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

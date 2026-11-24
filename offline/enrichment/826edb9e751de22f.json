@@ -1,0 +1,16 @@
+{
+ "chunk_id": "826edb9e751de22f",
+ "chunk_hash": "826edb9e751de22f",
+ "summary": "splunk.es removed adaptive_response_notable_event, correlation_search, correlation_search_info, data_input_monitor and data_input_network in favor of splunk_* resource modules.",
+ "questions": [
+  "What replaces splunk.es.correlation_search_info?",
+  "Which splunk.es modules were removed in Ansible 14?"
+ ],
+ "answer_card": {
+  "title": "splunk.es removed modules",
+  "answer_md": "- `adaptive_response_notable_event` → `splunk.es.splunk_adaptive_response_notable_events`\n- `correlation_search` → `splunk.es.splunk_correlation_searches`\n- `correlation_search_info` → `splunk.es.splunk_correlation_search_info`\n- `data_input_monitor` → `splunk.es.splunk_data_inputs_monitor`\n- `data_input_network` → `splunk.es.splunk_data_inputs_network`",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:42+00:00"
+}

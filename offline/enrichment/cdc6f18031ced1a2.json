@@ -1,0 +1,17 @@
+{
+ "chunk_id": "cdc6f18031ced1a2",
+ "chunk_hash": "cdc6f18031ced1a2",
+ "summary": "An unquoted conditional list item containing ': ' is parsed by YAML as a mapping, which triggers 'Conditional expressions must be strings'; quote the whole expression.",
+ "questions": [
+  "What does 'Conditional expressions must be strings' mean?",
+  "Why does a colon in my assert condition break it?",
+  "How do I compare against a string containing ': ' in a when or assert?"
+ ],
+ "answer_card": {
+  "title": "Quote conditionals that contain a colon and space",
+  "answer_md": "In a YAML list item, an unquoted string with `: ` becomes a mapping, and a non-empty mapping is always truthy:\n\n```yaml\n- assert:\n    that:\n     - result.msg == \"some_key: some_value\"\n```\n\nansible-core 2.19 reports `Conditional expressions must be strings.` Quote the entire expression:\n\n```yaml\n- assert:\n    that:\n     - 'result.msg == \"some_key: some_value\"'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:45+00:00"
+}

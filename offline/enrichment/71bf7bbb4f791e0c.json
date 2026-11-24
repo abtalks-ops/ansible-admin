@@ -1,0 +1,18 @@
+{
+  "chunk_id": "71bf7bbb4f791e0c",
+  "chunk_hash": "71bf7bbb4f791e0c",
+  "summary": "get_url's checksum option verifies downloads with algorithm:digest or algorithm:URL and skips re-download if the existing file matches; ciphers sets TLS ciphers.",
+  "questions": [
+    "How do I verify a downloaded file's sha256 with Ansible?",
+    "Can get_url read the checksum from a sha256sum.txt URL?",
+    "Will get_url skip the download if the file already matches the checksum?",
+    "Which checksum algorithm is most portable?"
+  ],
+  "answer_card": {
+    "title": "get_url checksum verification",
+    "answer_md": "`checksum: \"<algo>:<digest|url>\"`, e.g. `sha256:D98291AC...` or `sha256:http://example.com/sha256sum.txt`.\n- If `dest` exists and matches, download is skipped (unless `force: true`); otherwise it's replaced.\n- sha1 is the most portable; md5 may be unavailable under FIPS.\n- Checksum URL uses `url_username`/`url_password`.\n\n`ciphers`: list of TLS ciphers.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/get_url_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

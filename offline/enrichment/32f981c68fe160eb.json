@@ -1,0 +1,15 @@
+{
+  "chunk_id": "32f981c68fe160eb",
+  "chunk_hash": "32f981c68fe160eb",
+  "summary": "community.aws deprecates Python below 3.8, following the AWS SDK support policy, with removal in 10.0.0.",
+  "questions": [
+    "Will community.aws drop Python 3.7?"
+  ],
+  "answer_card": {
+    "title": "community.aws drops Python < 3.8",
+    "answer_md": "community.aws deprecates Python below 3.8, in line with the AWS SDK policy. Support is removed in release 10.0.0.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

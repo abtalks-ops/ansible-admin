@@ -1,0 +1,17 @@
+{
+  "chunk_id": "2da600873def8f2f",
+  "chunk_hash": "2da600873def8f2f",
+  "summary": "The known_hosts module adds or removes SSH host keys in a known_hosts file, allowing one entry per key type per host; useful before git over SSH, while template suits very large key sets.",
+  "questions": [
+    "How do I add a server's SSH host key to known_hosts with Ansible?",
+    "How do I pre-trust GitHub's host key before cloning?",
+    "What's the best way to manage hundreds of host keys?"
+  ],
+  "answer_card": {
+    "title": "Manage SSH known_hosts",
+    "answer_md": "`ansible.builtin.known_hosts` adds/removes host keys from a `known_hosts` file (one entry per key type per host since 2.2). Handy before using `git` over SSH. For very large numbers of keys, use `template` instead.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/known_hosts_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:05:46+00:00"
+}

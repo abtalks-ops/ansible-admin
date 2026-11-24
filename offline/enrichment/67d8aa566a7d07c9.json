@@ -1,0 +1,16 @@
+{
+ "chunk_id": "67d8aa566a7d07c9",
+ "chunk_hash": "67d8aa566a7d07c9",
+ "summary": "Examples of the hash filter producing SHA-1 and MD5 hashes of 'test2'.",
+ "questions": [
+  "How do I get an MD5 hash of a string in Ansible?",
+  "What's an example of the hash filter with sha1?"
+ ],
+ "answer_card": {
+  "title": "hash filter examples",
+  "answer_md": "```yaml\nsha1_hash: {{ 'test2' | hash('sha1') }}   # 109f4b3c50d7b0df729d299bc6f8e9ef9066971f\nmd5: {{ 'test2' | hash('md5') }}          # 5a105e8b9d40e1329780d62ea2265d8a\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/hash_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "a325a559ba6616db",
+ "chunk_hash": "a325a559ba6616db",
+ "summary": "ansible.builtin.oneline is the callback behind the -o/--one-line option; it is deprecated for instability and removed in 2.23.",
+ "questions": [
+  "Is the ansible -o one-line output going away?",
+  "When is the oneline callback removed?"
+ ],
+ "answer_card": {
+  "title": "oneline callback (deprecated)",
+  "answer_md": "`ansible.builtin.oneline` powers `-o` / `--one-line`. It is **deprecated** due to long-term instability and is **removed in ansible-core 2.23**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/oneline_callback.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

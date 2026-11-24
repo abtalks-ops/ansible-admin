@@ -1,0 +1,15 @@
+{
+ "chunk_id": "ec67d1436937574d",
+ "chunk_hash": "ec67d1436937574d",
+ "summary": "The extensions directory holds content and metadata that extend a collection beyond plugins and roles, grouped by capability, such as extensions/audit/event_query.yml for resource reporting.",
+ "questions": [
+  "What is the extensions directory in a collection for?"
+ ],
+ "answer_card": {
+  "title": "The extensions directory",
+  "answer_md": "`extensions/` holds extra capability metadata, one subdirectory per capability. For example, `extensions/audit/event_query.yml` defines resource reporting queries.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_structure.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:07+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "76f3cf54b83f30d6",
+ "chunk_hash": "76f3cf54b83f30d6",
+ "summary": "Skip aliases exclude platforms (skip/freebsd, skip/macos, skip/rhel, skip/docker), specific versions (skip/rhel7.6, skip/windows/2019) or Python majors; use when conditionals for finer control.",
+ "questions": [
+  "How do I skip an integration test on macOS?",
+  "How do I skip a test on a specific Windows Server version?"
+ ],
+ "answer_card": {
+  "title": "Skip aliases",
+  "answer_md": "- Platforms: `skip/freebsd`, `skip/macos`, `skip/rhel`, `skip/docker`\n- Versions (from `--remote`, no `/`): `skip/rhel7.6`, `skip/freebsd11.1`\n- Windows: `skip/windows/2016`, `/2019`, `/2022`\n- Python: `skip/python2`, `skip/python3`\n\nFor finer control use `when:` in the test playbook.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/integration-aliases.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

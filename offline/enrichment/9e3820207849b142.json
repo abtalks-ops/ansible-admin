@@ -1,0 +1,16 @@
+{
+ "chunk_id": "9e3820207849b142",
+ "chunk_hash": "9e3820207849b142",
+ "summary": "use_vars_plugins (2.11+) lets constructed inventory use host/group vars from vars plugins such as host_group_vars, running all vars plugins; implicit groups must be defined in earlier inventory for their group_vars to apply.",
+ "questions": [
+  "How do I use group_vars and host_vars inside a constructed inventory?",
+  "Why aren't my group_vars available to constructed expressions?"
+ ],
+ "answer_card": {
+  "title": "constructed use_vars_plugins",
+  "answer_md": "`use_vars_plugins` (default false, 2.11+): normally vars plugins run after inventory sources finish. Enabling this lets constructed read host/group vars from those plugins, including `host_group_vars`, which reads `host_vars/` and `group_vars/`. It runs **all** vars plugins. Implicit groups like `all` or `ungrouped` must be explicitly defined in an earlier inventory for their group_vars to apply.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/constructed_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

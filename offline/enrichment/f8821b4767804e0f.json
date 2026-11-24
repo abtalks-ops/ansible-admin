@@ -1,0 +1,16 @@
+{
+ "chunk_id": "f8821b4767804e0f",
+ "chunk_hash": "f8821b4767804e0f",
+ "summary": "Configuration precedence from highest to lowest: keywords, CLI settings, environment variables, ansible.cfg values, and defaults.",
+ "questions": [
+  "Which wins, an environment variable or ansible.cfg?",
+  "What's the precedence order for plugin configuration?"
+ ],
+ "answer_card": {
+  "title": "Configuration precedence",
+  "answer_md": "Highest to lowest:\n1. Keywords\n2. CLI settings\n3. Environment variables\n4. `ansible.cfg`\n5. Default value",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

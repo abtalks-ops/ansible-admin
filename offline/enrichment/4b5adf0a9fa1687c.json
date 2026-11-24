@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4b5adf0a9fa1687c",
+ "chunk_hash": "4b5adf0a9fa1687c",
+ "summary": "Ansible 14 removed awx.awx (24.6.1), cisco.dnac (6.41.0) and junipernetworks.junos (11.0.0), which can still be installed manually.",
+ "questions": [
+  "Which collections were removed in Ansible 14?",
+  "Is awx.awx still in the Ansible 14 package?",
+  "How do I keep using junipernetworks.junos with Ansible 14?"
+ ],
+ "answer_card": {
+  "title": "Collections removed in Ansible 14",
+  "answer_md": "Removed from Ansible 14:\n\n- awx.awx (was 24.6.1)\n- cisco.dnac (was 6.41.0)\n- junipernetworks.junos (was 11.0.0)\n\nInstall manually if needed:\n\n```bash\nansible-galaxy collection install <name-of-collection>\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:42+00:00"
+}

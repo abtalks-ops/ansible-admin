@@ -1,0 +1,18 @@
+{
+ "chunk_id": "31ce481f7421b35d",
+ "chunk_hash": "31ce481f7421b35d",
+ "summary": "amazon.aws for Ansible 15 requires Python 3.9+, boto3/botocore 1.38.23+, and ansible-core 2.18+, and removed cloudformation template, ec2_instance placement_group and tenancy, s3_object boolean overwrite, and dualstack with endpoint_url.",
+ "questions": [
+  "What replaces the template parameter in amazon.aws.cloudformation?",
+  "How do I set a placement group in ec2_instance now?",
+  "What values does s3_object overwrite accept?",
+  "Which boto3 version does amazon.aws need in Ansible 15?"
+ ],
+ "answer_card": {
+  "title": "amazon.aws breaking changes in Ansible 15",
+  "answer_md": "- Requires Python **3.9+**, boto3/botocore **1.38.23+**, and **ansible-core >= 2.18.0**.\n- `cloudformation`: `template` removed; use `template_body` with the `file` or `template` lookup.\n- `ec2_instance`: `placement_group` → `placement.group_name`; `tenancy` → `placement.tenancy`.\n- `s3_object`: `overwrite` accepts only `always`, `never`, `different` or `latest` (no booleans); `dualstack` and `endpoint_url` are mutually exclusive (put the dualstack URL in `endpoint_url`).",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

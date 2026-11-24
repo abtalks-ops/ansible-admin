@@ -1,0 +1,17 @@
+{
+ "chunk_id": "77f5f362f9cda790",
+ "chunk_hash": "77f5f362f9cda790",
+ "summary": "Network errors usually fall into authentication (credentials, no fallback, SSH keys), timeouts (large data, or masking auth issues), or playbook issues like using delegate_to instead of ProxyCommand. 'unable to open shell' usually means authentication.",
+ "questions": [
+  "What does unable to open shell mean?",
+  "What are common causes of network automation failures?",
+  "Should I use delegate_to for a jump host?"
+ ],
+ "answer_card": {
+  "title": "Categories of network errors",
+  "answer_md": "- **Authentication**: wrong credentials, device not falling back to other auth methods, SSH key problems.\n- **Timeouts**: large data pulls, or a hidden auth problem.\n- **Playbook issues**: using `delegate_to` instead of `ProxyCommand` for jump hosts.\n\n`unable to open shell` means `ansible-connection` couldn't talk to the device, usually an authentication issue.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

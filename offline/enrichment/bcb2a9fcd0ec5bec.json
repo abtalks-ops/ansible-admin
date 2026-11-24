@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bcb2a9fcd0ec5bec",
+ "chunk_hash": "bcb2a9fcd0ec5bec",
+ "summary": "EOS supports CLI over SSH (network_cli) with SSH keys or -u/-k via bastion, and eAPI over HTTP(S) (httpapi) with certificates via web proxy; both support enable via become, and output is stdout[0] or stdout[0].messages[0]. local is deprecated.",
+ "questions": [
+  "Should I use CLI or eAPI for Arista switches?",
+  "How do I use enable mode with eAPI?",
+  "How does output differ between CLI and eAPI on EOS?",
+  "How do I reach an EOS switch through a web proxy?"
+ ],
+ "answer_card": {
+  "title": "Arista EOS connection options",
+  "answer_md": "| | CLI | eAPI |\n|---|---|---|\n| Protocol | SSH | HTTP(S) |\n| Credentials | SSH keys/agent or `-u myuser -k` | HTTPS certificates if present |\n| Indirect access | bastion/jump host | web proxy |\n| `ansible_connection` | `ansible.netcommon.network_cli` | `ansible.netcommon.httpapi` |\n| Enable mode | `ansible_become: true` + `become_method: enable` | same, via httpapi |\n| Output | `stdout[0].` | `stdout[0].messages[0].` |\n\n`ansible_connection: local` is deprecated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_eos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a26cfdcf3205e4e5",
+ "chunk_hash": "a26cfdcf3205e4e5",
+ "summary": "Compares standalone role layout with collection layout, explains roles are referenced by FQCN like mynamespace.mycollection.role1, plugins move out of roles, and plugin directory names are singular in collections.",
+ "questions": [
+  "How does a collection's directory layout differ from a standalone role?",
+  "How do I refer to a role inside a collection?",
+  "Are plugin directory names plural in collections?"
+ ],
+ "answer_card": {
+  "title": "Standalone roles vs collection roles",
+  "answer_md": "Standalone roles have `library/`, `module_utils/` and `*_plugins/` inside them. In a collection, roles live under `roles/` and plugins move to the collection's `plugins/<type>/` (singular names). Reference roles by FQCN, e.g. `mynamespace.mycollection.role1`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/migrating_roles.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

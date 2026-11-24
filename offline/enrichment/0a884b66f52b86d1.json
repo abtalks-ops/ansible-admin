@@ -1,0 +1,16 @@
+{
+ "chunk_id": "0a884b66f52b86d1",
+ "chunk_hash": "0a884b66f52b86d1",
+ "summary": "Since 2.9, override the terminal's error regex per task with ansible_terminal_stderr_re (and stdout_re), each item having pattern and re.compile flags, when normal output like logs is misread as an error.",
+ "questions": [
+  "Why does show logging fail as an error on IOS?",
+  "How do I change the error detection regex for network_cli?"
+ ],
+ "answer_card": {
+  "title": "Fix false error matches in output",
+  "answer_md": "If normal output (for example log lines in `show logging`) matches the error regex, override it for the task:\n```yaml\n- cisco.ios.ios_command:\n    commands: [show logging]\n  vars:\n    ansible_terminal_stderr_re:\n      - pattern: 'connection timed out'\n        flags: 're.I'\n```\n`ansible_terminal_stderr_re` and `ansible_terminal_stdout_re` take `pattern` and `flags` (any value `re.compile` accepts).",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

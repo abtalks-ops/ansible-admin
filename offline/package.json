@@ -1,0 +1,25 @@
+{
+  "name": "ansible-admin-offline",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build:index": "tsx pipeline/build.ts",
+    "eval": "tsx pipeline/eval.ts",
+    "build:pwa": "node pwa/build.mjs",
+    "serve": "node pwa/serve.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.13.0",
+    "@huggingface/transformers": "^4.3.2",
+    "zod": "^4.6.7"
+  },
+  "private": true,
+  "type": "module"
+}

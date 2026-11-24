@@ -1,0 +1,16 @@
+{
+  "chunk_id": "ebadc32c7feb1f72",
+  "chunk_hash": "ebadc32c7feb1f72",
+  "summary": "include_tasks dynamically includes a file of tasks at runtime.",
+  "questions": [
+    "How do I include a task file at runtime?",
+    "What's the dynamic version of import_tasks?"
+  ],
+  "answer_card": {
+    "title": "Include task files dynamically",
+    "answer_md": "`ansible.builtin.include_tasks` includes a task file dynamically at runtime (vs `import_tasks`, which is static).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_tasks_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "34d45960d7baa771",
+ "chunk_hash": "34d45960d7baa771",
+ "summary": "To use encrypted variables or files you must supply their passwords, either on the command line or via a default password source in config or an environment variable.",
+ "questions": [
+  "How do I provide the vault password when running a playbook?"
+ ],
+ "answer_card": {
+  "title": "Providing vault passwords at run time",
+  "answer_md": "Supply the password(s) either on the command line or by setting a default password source in a config option or environment variable.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_using_encrypted_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

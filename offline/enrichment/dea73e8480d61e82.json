@@ -1,0 +1,17 @@
+{
+ "chunk_id": "dea73e8480d61e82",
+ "chunk_hash": "dea73e8480d61e82",
+ "summary": "Examples of the config lookup showing the default become user, role paths, retry file path with default, multiple color settings, skipping unknown keys, and ssh/sh plugin settings.",
+ "questions": [
+  "How do I print the configured roles path?",
+  "How do I get the ssh connection's remote_user and port settings?",
+  "How do I look up several config values at once?"
+ ],
+ "answer_card": {
+  "title": "config lookup examples",
+  "answer_md": "```yaml\n- ansible.builtin.debug: msg=\"{{ lookup('ansible.builtin.config', 'DEFAULT_BECOME_USER') }}\"\n\n- ansible.builtin.debug:\n    msg: \"Role paths: {{ lookup('ansible.builtin.config', 'DEFAULT_ROLES_PATH') }}\"\n\n- ansible.builtin.find:\n    paths: \"{{ lookup('ansible.builtin.config', 'RETRY_FILES_SAVE_PATH') | default(playbook_dir, True) }}\"\n    patterns: \"*.retry\"\n\n- ansible.builtin.debug: msg=\"{{ item }}\"\n  loop: \"{{ lookup('ansible.builtin.config', 'COLOR_OK', 'COLOR_CHANGED', 'COLOR_SKIP', wantlist=True) }}\"\n\n- ansible.builtin.debug: msg={{ q(\"ansible.builtin.config\", \"remote_user\", \"port\", plugin_type=\"connection\", plugin_name=\"ssh\", on_missing='skip') }}\n\n- ansible.builtin.debug: msg={{ q(\"ansible.builtin.config\", \"remote_tmp\", plugin_type=\"shell\", plugin_name=\"sh\") }}\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/config_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

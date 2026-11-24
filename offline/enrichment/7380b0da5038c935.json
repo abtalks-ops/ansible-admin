@@ -1,0 +1,18 @@
+{
+ "chunk_id": "7380b0da5038c935",
+ "chunk_hash": "7380b0da5038c935",
+ "summary": "community.vmware removed several deprecated module_utils helpers (PyVmomiDeviceHelper nvdimm methods, PyVmomi find_vmdk_file, host_version_at_least, network_exists_by_name, vmdk_disk_path_split, connect_to_api, find_host_portgroup_by_name, VmwareRestClient.get_folder_by_name), the plugin_utils.inventory util and plugins.httpapi.",
+ "questions": [
+  "My custom module imports connect_to_api from community.vmware and now fails, why?",
+  "Was PyVmomi.host_version_at_least removed?",
+  "Is community.vmware plugins.httpapi still available?",
+  "Which community.vmware helper functions were dropped in Ansible 15?"
+ ],
+ "answer_card": {
+  "title": "community.vmware: removed module_utils helpers",
+  "answer_md": "Removed from community.vmware (affects custom modules/plugins importing them):\n\n- `vm_device_helper.PyVmomiDeviceHelper.is_nvdimm_controller` / `is_nvdimm_device`\n- `vmware.PyVmomi.find_vmdk_file`, `host_version_at_least`, `network_exists_by_name`, `vmdk_disk_path_split`, `find_host_portgroup_by_name`\n- `vmware.connect_to_api` and `find_host_portgroup_by_name` function\n- `vmware_rest_client.VmwareRestClient.get_folder_by_name`\n- `plugin_utils.inventory` and `plugins.httpapi`\n\nCopy the logic into your own code or move to `vmware.vmware` utilities.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:48+00:00"
+}

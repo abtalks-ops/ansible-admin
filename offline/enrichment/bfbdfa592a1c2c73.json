@@ -1,0 +1,16 @@
+{
+ "chunk_id": "bfbdfa592a1c2c73",
+ "chunk_hash": "bfbdfa592a1c2c73",
+ "summary": "The resource reporting query file goes at extensions/audit/event_query.yml in the collection root, the standard location for embedded queries.",
+ "questions": [
+  "Where does the resource reporting query file live in a collection?",
+  "What's the path for event_query.yml?"
+ ],
+ "answer_card": {
+  "title": "Location of the query file",
+  "answer_md": "Create `extensions/audit/event_query.yml` at the collection root:\n```text\nmy_namespace/my_collection/\n├── extensions/audit/event_query.yml\n├── plugins/\n├── meta/\n└── galaxy.yml\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_resource_reporting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:07+00:00"
+}

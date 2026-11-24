@@ -1,0 +1,17 @@
+{
+  "chunk_id": "2e783c160b5b8d45",
+  "chunk_hash": "2e783c160b5b8d45",
+  "summary": "Explains accessing dict values with bracket or dot notation; bracket notation always works, while dot notation fails for keys colliding with Python dict/str attributes (like keys, items, get, update) or dunder names.",
+  "questions": [
+    "Should I use dot or bracket notation for dictionary keys?",
+    "Why does foo.keys not return my key's value?",
+    "Which dictionary keys can't be used with dot notation?"
+  ],
+  "answer_card": {
+    "title": "Bracket vs dot notation for dictionaries",
+    "answer_md": "```yaml\nfoo['field1']\nfoo.field1\n```\n\nBracket notation **always works**. Dot notation breaks when the key collides with Python attributes or methods (e.g. `keys`, `items`, `values`, `get`, `update`, `copy`, `count`, `index`, `pop`, `split`, `format`, ...) or starts and ends with `__`. Use brackets for those.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:32+00:00"
+}

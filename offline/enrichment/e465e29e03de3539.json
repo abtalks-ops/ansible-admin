@@ -1,0 +1,15 @@
+{
+ "chunk_id": "e465e29e03de3539",
+ "chunk_hash": "e465e29e03de3539",
+ "summary": "Example task runs show version on ENOS with community.network.enos_command.",
+ "questions": [
+  "How do I get the ENOS version with Ansible?"
+ ],
+ "answer_card": {
+  "title": "Get ENOS version",
+  "answer_md": "```yaml\n- name: Retrieve ENOS OS version\n  community.network.enos_command:\n    commands: show version\n  when: ansible_network_os == 'community.network.enos'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_enos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

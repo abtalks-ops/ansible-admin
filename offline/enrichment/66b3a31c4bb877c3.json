@@ -1,0 +1,16 @@
+{
+ "chunk_id": "66b3a31c4bb877c3",
+ "chunk_hash": "66b3a31c4bb877c3",
+ "summary": "The parse cache argument indicates whether inventory is being refreshed (for example by --flush-cache or refresh_inventory); during a refresh don't read from cache but do update it if caching is enabled, using self._cache like a dict.",
+ "questions": [
+  "What does cache=False mean in an inventory plugin's parse?",
+  "Should my plugin read from cache when --flush-cache is used?"
+ ],
+ "answer_card": {
+  "title": "Cache flag during refresh",
+  "answer_md": "The `cache` parameter is `False` when inventory is being refreshed (`--flush-cache` or `meta: refresh_inventory`). Don't populate from cache then, but **do update** the cache with fresh data if the user enabled caching. Treat `self._cache` like a dict.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

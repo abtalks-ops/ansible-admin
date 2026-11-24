@@ -1,0 +1,11 @@
+{
+ "chunk_id": "646268426a3beb26",
+ "chunk_hash": "646268426a3beb26",
+ "summary": "The role produces the same router config, showing roles are reusable deconstructed playbooks others can include.",
+ "questions": [
+  "What's the benefit of converting my playbook into a role?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

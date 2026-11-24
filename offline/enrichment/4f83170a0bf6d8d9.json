@@ -1,0 +1,19 @@
+{
+  "chunk_id": "4f83170a0bf6d8d9",
+  "chunk_hash": "4f83170a0bf6d8d9",
+  "summary": "Defines playbook, play, task, and module, then walks through creating and running a first playbook with `ansible-playbook -i inventory.ini playbook.yaml`. Explains the output: task names, the implicit Gathering Facts task, task statuses, and the play recap.",
+  "questions": [
+    "What's the difference between a playbook, a play, a task, and a module?",
+    "How do I run my first playbook against my inventory?",
+    "Why is there a Gathering Facts task I didn't write?",
+    "What does ok=3 in the play recap mean?",
+    "How should I name plays and tasks?"
+  ],
+  "answer_card": {
+    "title": "Create and run your first playbook",
+    "answer_md": "Terms:\n- **Playbook**: a list of plays run top to bottom, in YAML.\n- **Play**: an ordered list of tasks mapped to managed nodes in an inventory.\n- **Task**: a reference to a single module defining an operation.\n- **Module**: code or a binary Ansible runs on managed nodes, grouped in collections with an FQCN.\n\nRun a playbook:\n```bash\nansible-playbook -i inventory.ini playbook.yaml\n```\n\nIn the output: your play and task names (use descriptive names for troubleshooting); an implicit **Gathering Facts** task, since Ansible gathers facts by default; each task's status (`ok` means success); and the **play recap** per host, e.g. `ok=3` means all three tasks succeeded.",
+    "source_url": "https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

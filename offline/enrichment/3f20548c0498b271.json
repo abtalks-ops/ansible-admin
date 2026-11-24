@@ -1,0 +1,16 @@
+{
+  "chunk_id": "3f20548c0498b271",
+  "chunk_hash": "3f20548c0498b271",
+  "summary": "The is_dir test checks whether a path is an existing directory on the controller.",
+  "questions": [
+    "Is is_dir the same as the directory test?",
+    "Does is_dir check the remote host?"
+  ],
+  "answer_card": {
+    "title": "is_dir test (controller paths)",
+    "answer_md": "`ansible.builtin.is_dir` (same as `directory`): true if the path is an existing directory on the **controller**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/is_dir_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

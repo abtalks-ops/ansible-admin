@@ -1,0 +1,20 @@
+{
+  "chunk_id": "cbd3f76827538e24",
+  "chunk_hash": "cbd3f76827538e24",
+  "summary": "Explains the copy `mode` parameter: modes are octal, so add a leading zero or quote them, or the number is read as decimal. Symbolic modes work since 1.8 and `preserve` since 2.3; without mode, new files use umask and existing files keep their mode. Also covers `owner`, where numeric values mean UID.",
+  "questions": [
+    "Why did my file get weird permissions when I set mode: 644?",
+    "Should I quote the mode value in copy?",
+    "Can I use symbolic permissions like u=rw,g=r with copy?",
+    "How do I keep the same permissions as the source file?",
+    "What permissions does a copied file get if I don't set mode?",
+    "Is a numeric owner treated as a username or UID?"
+  ],
+  "answer_card": {
+    "title": "copy mode and owner",
+    "answer_md": "`mode` values are octal numbers. Either add a leading zero (`0644`, `01777`) or quote them (`'644'`, `'1777'`). An unquoted number without a leading zero is read as **decimal** and gives unexpected results.\n- Symbolic modes since 1.8: `u+rwx`, `u=rw,g=r,o=r`.\n- `preserve` since 2.3: same permissions as the source file.\n- Not set: a new file uses the system `umask`; an existing file keeps its mode. Setting `mode` is the best way to ensure correct permissions (see CVE-2020-1736).\n- For recursive copies, see `directory_mode`.\n\n`owner`: as for `chown`; unspecified uses the current user (root can preserve ownership). Numeric values like `\"1000\"` are treated as a UID.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

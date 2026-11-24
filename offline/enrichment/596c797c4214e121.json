@@ -1,0 +1,15 @@
+{
+ "chunk_id": "596c797c4214e121",
+ "chunk_hash": "596c797c4214e121",
+ "summary": "GitHub resources: the Network-Automation community repo (email ansible-network@redhat.com to contribute) and the Ansible collections repos.",
+ "questions": [
+  "Where can I share my network automation playbooks?"
+ ],
+ "answer_card": {
+  "title": "Network automation GitHub repos",
+  "answer_md": "- **Network-Automation**: an open community repo for network automation content. To contribute playbooks or roles, email ansible-network@redhat.com to be added.\n- **Ansible collections**: main repos for Ansible-maintained and community collections, including network ones.\n\nAnyone with a GitHub account can open PRs or issues.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/network_resources.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

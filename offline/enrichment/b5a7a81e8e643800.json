@@ -1,0 +1,15 @@
+{
+ "chunk_id": "b5a7a81e8e643800",
+ "chunk_hash": "b5a7a81e8e643800",
+ "summary": "runtime-metadata validates the schema of ansible_builtin_runtime.yml in ansible-core and meta/runtime.yml in collections.",
+ "questions": [
+  "What does the runtime-metadata sanity test check?"
+ ],
+ "answer_card": {
+  "title": "runtime-metadata test",
+  "answer_md": "Schema validation of `lib/ansible/config/ansible_builtin_runtime.yml` (ansible-core) and `meta/runtime.yml` (collections).",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/runtime-metadata.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:05+00:00"
+}

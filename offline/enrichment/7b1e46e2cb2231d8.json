@@ -1,0 +1,17 @@
+{
+  "chunk_id": "7b1e46e2cb2231d8",
+  "chunk_hash": "7b1e46e2cb2231d8",
+  "summary": "The dnf5 module manages packages with dnf5, which is still under development and lacks some dnf module features. It can locate or auto-install python3-libdnf5 and respawn under the right interpreter.",
+  "questions": [
+    "Should I use dnf5 or dnf module on Fedora?",
+    "Why does dnf5 module complain about python3-libdnf5?",
+    "Does dnf5 support all features of the dnf module?"
+  ],
+  "answer_card": {
+    "title": "dnf5 module overview",
+    "answer_md": "`ansible.builtin.dnf5` manages packages with dnf5. It's still under development and not all `dnf` module options are implemented. If `python3-libdnf5` can't be imported, it checks system interpreters and may install it (`auto_install_module_deps`), then respawns.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf5_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

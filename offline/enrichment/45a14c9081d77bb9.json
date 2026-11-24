@@ -1,0 +1,16 @@
+{
+  "chunk_id": "45a14c9081d77bb9",
+  "chunk_hash": "45a14c9081d77bb9",
+  "summary": "Explains kubernetes.core.k8s_config_resource_name for getting a ConfigMap or Secret name with its hash, for use in Pod specs like envFrom secretRef.",
+  "questions": [
+    "How do I reference a hashed ConfigMap name in a Kubernetes deployment with Ansible?",
+    "What does k8s_config_resource_name do?"
+  ],
+  "answer_card": {
+    "title": "Kubernetes resource names with hash",
+    "answer_md": "```jinja\n{{ configmap_resource_definition | kubernetes.core.k8s_config_resource_name }}\n```\n\nUse it in Pod specs:\n\n```yaml\nenvFrom:\n  - secretRef:\n      name: {{ my_secret | kubernetes.core.k8s_config_resource_name }}\n```\n\nRequires the kubernetes.core collection.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

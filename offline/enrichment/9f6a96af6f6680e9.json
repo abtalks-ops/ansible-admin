@@ -1,0 +1,16 @@
+{
+ "chunk_id": "9f6a96af6f6680e9",
+ "chunk_hash": "9f6a96af6f6680e9",
+ "summary": "Reference for ansible.module_utils.secrets, which provides functions to register secrets for masking in output and to mask strings manually.",
+ "questions": [
+  "How can a custom module register a value so it is masked in Ansible output?",
+  "Which module_utils provides secret masking functions?"
+ ],
+ "answer_card": {
+  "title": "Secret masking helpers for modules",
+  "answer_md": "`ansible.module_utils.secrets` contains functions for registering secrets so Ansible masks them in output, and for masking strings manually. See the developing_secret_masking guide for usage.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/module_utils.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:57+00:00"
+}

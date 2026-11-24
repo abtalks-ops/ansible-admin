@@ -1,0 +1,17 @@
+{
+ "chunk_id": "2a6049b5f4259e74",
+ "chunk_hash": "2a6049b5f4259e74",
+ "summary": "fortinet.fortios in Ansible 14.0.0 adds a headers parameter to fortios_json_generic, supports FortiOS 7.6.5 and 7.6.6, and updates FAQ entries including default_group usage.",
+ "questions": [
+  "Does fortinet.fortios support FortiOS 7.6.6?",
+  "How do I pass custom headers in fortios_json_generic?",
+  "How do I use default_group with fortios modules?"
+ ],
+ "answer_card": {
+  "title": "fortinet.fortios 14.0.0 changes",
+  "answer_md": "- New generic **`headers`** parameter in `fortios_json_generic` (for example admin-password confirmation headers).\n- Support for FortiOS **7.6.5 and 7.6.6**.\n- FAQ updated with `headers` examples and Q&A on using the **default_group** feature in modules.\n- Deprecated `to_text` import replaced.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:41+00:00"
+}

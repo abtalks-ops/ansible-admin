@@ -1,0 +1,15 @@
+{
+ "chunk_id": "319fac58137e21a0",
+ "chunk_hash": "319fac58137e21a0",
+ "summary": "netapp_eseries.santricity deprecates the raid_level alias in na_santricity_volume and host modules in favor of ddp_raid_level, removed in 3.0.0.",
+ "questions": [
+  "What replaces raid_level in na_santricity_volume?"
+ ],
+ "answer_card": {
+  "title": "santricity raid_level alias deprecated",
+  "answer_md": "In `na_santricity_volume` and `nar_santricity_host`, the `raid_level` volume alias is deprecated (removed in 3.0.0). Use **`ddp_raid_level`**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:26+00:00"
+}

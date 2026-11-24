@@ -1,0 +1,18 @@
+{
+ "chunk_id": "d4ab0c29aedb5a29",
+ "chunk_hash": "d4ab0c29aedb5a29",
+ "summary": "For changing infrastructure from clouds, LDAP, Cobbler or CMDBs, use dynamic inventory via plugins (recommended) or scripts (still supported via the script plugin). AWX and Ansible Platform offer a GUI inventory database synced to these sources.",
+ "questions": [
+  "How do I manage inventory for cloud hosts that come and go?",
+  "Should I use inventory plugins or inventory scripts?",
+  "Can I still use old inventory scripts?",
+  "Is there a GUI for dynamic inventory?"
+ ],
+ "answer_card": {
+  "title": "Dynamic inventory overview",
+  "answer_md": "When hosts change constantly or come from multiple sources (cloud, LDAP, Cobbler, CMDB), use dynamic inventory.\n- **Inventory plugins**: recommended; use the latest core features; you can write your own.\n- **Inventory scripts**: still work, via the backward-compatible script plugin.\n\nFor a GUI, AWX or Ansible Automation Platform sync all your sources into an inventory database with web/REST access and per-host failure history.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_dynamic_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

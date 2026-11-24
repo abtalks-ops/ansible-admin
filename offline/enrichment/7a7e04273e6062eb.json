@@ -1,0 +1,16 @@
+{
+  "chunk_id": "7a7e04273e6062eb",
+  "chunk_hash": "7a7e04273e6062eb",
+  "summary": "Shows turning UAC off by setting EnableLUA to 0 with win_regedit and rebooting if changed, warning that this and SeTcbPrivilege create security risks.",
+  "questions": [
+    "How do I disable UAC on Windows with Ansible?",
+    "Is it safe to disable UAC for become?"
+  ],
+  "answer_card": {
+    "title": "Disabling UAC",
+    "answer_md": "```yaml\n- win_regedit:\n    path: HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\system\n    name: EnableLUA\n    data: 0\n    type: dword\n    state: present\n  register: uac_result\n- win_reboot:\n  when: uac_result is changed\n```\n\nTurning off UAC or granting `SeTcbPrivilege` can create security vulnerabilities.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c294784056f2d109",
+ "chunk_hash": "c294784056f2d109",
+ "summary": "Ignore file entries are one per line with a relative file path and a test name (with optional -pythonversion and :errorcode) separated by a single space, plus optional trailing # comments; !skip skips a test for a file.",
+ "questions": [
+  "What is the format of a sanity ignore entry?",
+  "How do I ignore a specific validate-modules error code?",
+  "Can I add comments in the ignore file?"
+ ],
+ "answer_card": {
+  "title": "Ignore file format",
+  "answer_md": "One entry per line: `<path> <test>[-<python>][:<code>]`, separated by a single space. Paths are relative to the content root and can't contain spaces or `#`. Trailing `# comment` is allowed; blank or comment-only lines are not.\n```text\nroles/my_role/files/my_script.sh shellcheck:SC2154 # undefined variable\nplugins/modules/my_module.py validate-modules:missing-gplv3-license\nplugins/modules/my_module.py import-3.8\n```\nUse `<test>!skip` (no error code) to skip a test for a file.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/ignores.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

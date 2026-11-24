@@ -1,0 +1,17 @@
+{
+  "chunk_id": "bbbde6b1751260e7",
+  "chunk_hash": "bbbde6b1751260e7",
+  "summary": "The Hetzner Robot storage box API was set to sunset on July 30, 2025, and the hrobot storagebox modules needed adjusting to the new API, which requires a registered API token passed as hetzner_token. Return values might change.",
+  "questions": [
+    "Why will my Hetzner storagebox modules stop working?",
+    "What credentials does the new Hetzner storage box API need?",
+    "When is the Robot storage box API being shut down?"
+  ],
+  "answer_card": {
+    "title": "Hetzner storage box API sunset",
+    "answer_md": "The Hetzner Robot API for storage boxes sunsets on July 30, 2025. The new API needs a registered API token passed as `hetzner_token`. Module usage and return values may change slightly as the modules are adapted.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:25:02+00:00"
+}

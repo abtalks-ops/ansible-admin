@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2c86312aace39caa",
+ "chunk_hash": "2c86312aace39caa",
+ "summary": "Become variables (ansible_become, _method, _user, _password, _exe, _flags) replace the old sudo/su ones, and ansible_shell_type should only be changed when the shell executable is non-sh like csh or fish.",
+ "questions": [
+  "How do I set the sudo user per host in inventory?",
+  "Where can I set become flags globally?",
+  "Should I set the sudo password in inventory?",
+  "When should I change ansible_shell_type?"
+ ],
+ "answer_card": {
+  "title": "Privilege escalation and shell type variables",
+  "answer_md": "- `ansible_become`: force escalation (old `ansible_sudo`/`ansible_su`).\n- `ansible_become_method`: which become plugin.\n- `ansible_become_user`: user to become.\n- `ansible_become_password`: escalation password. **Always vault it.**\n- `ansible_become_exe`, `ansible_become_flags`: executable and flags (flags can also go in `become_flags` under `[privilege_escalation]` in ansible.cfg).\n\n`ansible_shell_type`: leave alone unless `ansible_shell_executable` is a non-sh shell; set to `csh` or `fish` so commands use that syntax.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

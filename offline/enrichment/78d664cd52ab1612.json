@@ -1,0 +1,19 @@
+{
+ "chunk_id": "78d664cd52ab1612",
+ "chunk_hash": "78d664cd52ab1612",
+ "summary": "psrp Kerberos/negotiate options (credential delegation, hostname override, channel binding tokens, SPN service now defaulting to host since 2.21), no_profile (2.21), and operation_timeout (20s).",
+ "questions": [
+  "How do I enable Kerberos credential delegation with psrp?",
+  "How do I connect to a Windows host by IP but authenticate with Kerberos?",
+  "Why did psrp Kerberos auth fail with the WSMAN SPN?",
+  "How do I stop psrp from loading the user's PowerShell profile?",
+  "What is the psrp operation timeout?"
+ ],
+ "answer_card": {
+  "title": "psrp Kerberos and timeout options",
+  "answer_md": "- `negotiate_delegate`: allow credential delegation (Kerberos only).\n- `negotiate_hostname_override`: use a DNS name for Kerberos lookup while connecting by IP (Kerberos only).\n- `negotiate_send_cbt` (default true): send Channel Binding Token for MitM protection; only over HTTPS.\n- `negotiate_service` (default `host`): SPN service part. Before 2.21 it defaulted to `WSMAN`, which failed on some hosts.\n- `no_profile` (2.21+, needs pypsrp >= 0.9.0): don't load the user's PowerShell profile.\n- `operation_timeout` (default 20s): must not exceed `connection_timeout`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/psrp_connection.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

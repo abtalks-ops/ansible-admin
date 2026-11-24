@@ -1,0 +1,16 @@
+{
+  "chunk_id": "b302afbe6258759b",
+  "chunk_hash": "b302afbe6258759b",
+  "summary": "dellemc.openmanage known issues for 10.4.0: the SOCKS proxy and iDRAC8 share limits, the BOSS-N1 false success, the NFS subdirectory failure, ome_diagnostics export on OME 4.0.0 and the duplicate uplink name behavior.",
+  "questions": [
+    "Were the BOSS-N1 volume reporting issues present in Ansible 10.4.0?",
+    "Which openmanage issues were known in 10.4.0?"
+  ],
+  "answer_card": {
+    "title": "dellemc.openmanage known issues (10.4.0)",
+    "answer_md": "- `idrac_diagnostics`: no SOCKS proxy export to HTTP/HTTPS shares.\n- `idrac_firmware`: no authenticated shares on iDRAC8.\n- `idrac_storage_volume`: false success on BOSS-N1 when a virtual disk exists.\n- `idrac_support_assist`: fails with NFS subdirectory paths.\n- `ome_diagnostics`: SupportAssist export fails on OME 4.0.0.\n- `ome_smart_fabric_uplink`: a duplicate name modifies the existing uplink.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "db6b1904586fd7e5",
+ "chunk_hash": "db6b1904586fd7e5",
+ "summary": "template lookup parameters: custom comment and variable delimiters, convert_data, jinja2_native, template_vars for extra variables, and trim_blocks.",
+ "questions": [
+  "How do I pass extra variables to the template lookup?",
+  "How do I change Jinja delimiters for the template lookup?",
+  "How do I stop the template lookup converting YAML output to data?"
+ ],
+ "answer_card": {
+  "title": "template lookup parameters",
+  "answer_md": "- `template_vars` (dict, 2.3+): extra variables for templating\n- `variable_start_string` / `variable_end_string` (`{{` / `}}`, 2.8+)\n- `comment_start_string` / `comment_end_string` (`{#` / `#}`, 2.12+)\n- `convert_data` (default true): convert YAML results to data; false leaves strings untouched (exclusive with `jinja2_native`)\n- `jinja2_native` (2.11+): use Jinja2 native types; no effect if global `jinja2_native` is false\n- `trim_blocks` (default true, 2.19+): remove the first newline after a block",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

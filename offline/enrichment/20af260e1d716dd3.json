@@ -1,0 +1,11 @@
+{
+ "chunk_id": "20af260e1d716dd3",
+ "chunk_hash": "20af260e1d716dd3",
+ "summary": "Introduces the ansible-core support matrix table, which links to changelogs and lists the start date of each maintenance phase.",
+ "questions": [
+  "Where can I find ansible-core changelogs and maintenance dates?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:00+00:00"
+}

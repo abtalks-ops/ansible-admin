@@ -1,0 +1,16 @@
+{
+ "chunk_id": "fe5e0dfe9e56ca94",
+ "chunk_hash": "fe5e0dfe9e56ca94",
+ "summary": "When the OS blocks installing Ansible with pip, pipx is a widely available alternative.",
+ "questions": [
+  "pip won't let me install Ansible on my system, what can I use?",
+  "Can I install Ansible with pipx?"
+ ],
+ "answer_card": {
+  "title": "Use pipx when pip is blocked",
+  "answer_md": "Some operating systems prevent installing packages like Ansible with `pip`. In that case use **pipx**, which is widely available. See the pipx docs to install pipx itself.",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

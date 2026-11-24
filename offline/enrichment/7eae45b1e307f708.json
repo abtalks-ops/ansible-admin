@@ -1,0 +1,18 @@
+{
+  "chunk_id": "7eae45b1e307f708",
+  "chunk_hash": "7eae45b1e307f708",
+  "summary": "Examples of template: setting owner/group/mode with octal or symbolic modes, OS-specific source with an SELinux type, CRLF output, validating sudoers with visudo, and safely updating sshd_config with validation and backup.",
+  "questions": [
+    "How do I template sshd_config without locking myself out?",
+    "How do I deploy a sudoers file with validation?",
+    "How do I choose a template file based on OS family?",
+    "How do I create a DOS-style file from a template?"
+  ],
+  "answer_card": {
+    "title": "template examples",
+    "answer_md": "```yaml\n- ansible.builtin.template:\n    src: /mytemplates/foo.j2\n    dest: /etc/file.conf\n    owner: bin\n    group: wheel\n    mode: '0644'\n- ansible.builtin.template:\n    src: named.conf_{{ ansible_os_family }}.j2\n    dest: /etc/named.conf\n    setype: named_conf_t\n- ansible.builtin.template: {src: config.ini.j2, dest: /share/windows/config.ini, newline_sequence: '\\r\\n'}\n- ansible.builtin.template: {src: /mine/sudoers, dest: /etc/sudoers, validate: /usr/sbin/visudo -cf %s}\n- ansible.builtin.template:\n    src: etc/ssh/sshd_config.j2\n    dest: /etc/ssh/sshd_config\n    mode: '0600'\n    validate: /usr/sbin/sshd -t -f %s\n    backup: yes\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

@@ -1,0 +1,11 @@
+{
+ "chunk_id": "dccec1de25a1c0f2",
+ "chunk_hash": "dccec1de25a1c0f2",
+ "summary": "You can run an EE from the command line against localhost or remote targets with ansible-navigator, among other tools.",
+ "questions": [
+  "How do I run a playbook in an Execution Environment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

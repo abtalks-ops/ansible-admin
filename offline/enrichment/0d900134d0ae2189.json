@@ -1,0 +1,18 @@
+{
+  "chunk_id": "0d900134d0ae2189",
+  "chunk_hash": "0d900134d0ae2189",
+  "summary": "Explains that handlers need names to be notified, or can use `listen` to subscribe to a topic so one notify triggers a group of handlers. `listen` decouples handlers from names for sharing across roles; duplicate handler names shadow earlier ones, with only the last loaded used.",
+  "questions": [
+    "How do I trigger several handlers with one notify?",
+    "What does listen do on a handler?",
+    "What happens if two handlers have the same name?",
+    "How can I share handlers between roles without relying on their names?"
+  ],
+  "answer_card": {
+    "title": "Handler names and listen topics",
+    "answer_md": "Handlers must have a `name` to be notified, or can use `listen` to subscribe to a topic:\n\n```yaml\ntasks:\n  - command: echo \"restart web services\"\n    notify: \"restart web services\"\nhandlers:\n  - name: Restart memcached\n    service: {name: memcached, state: restarted}\n    listen: \"restart web services\"\n  - name: Restart apache\n    service: {name: apache, state: restarted}\n    listen: \"restart web services\"\n```\nNotifying the topic runs every handler listening to it, regardless of names. This makes it easier to share handlers across playbooks and roles.\n\nGive each handler a globally unique name: with duplicates, only the last one loaded into the play can be notified and run.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_handlers.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

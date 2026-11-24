@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2341c9ab5361ac64",
+ "chunk_hash": "2341c9ab5361ac64",
+ "summary": "encrypt_string outputs an !vault block you paste into YAML inventory group or host vars; INI doesn't support inline vaults, so put them in YAML host_vars/group_vars or vars files.",
+ "questions": [
+  "How do I put a vaulted password in my inventory?",
+  "Can I use inline vault values in an INI inventory?"
+ ],
+ "answer_card": {
+  "title": "Use inline vault values",
+  "answer_md": "Paste the output into a YAML inventory:\n```yaml\nvyos:\n  vars:\n    ansible_connection: ansible.netcommon.network_cli\n    ansible_network_os: vyos.vyos.vyos\n    ansible_user: my_vyos_user\n    ansible_password: !vault |\n      $ANSIBLE_VAULT;1.2;AES256;my_user\n      6638613465...\n```\nINI inventories don't support inline vaults. Put the value in a YAML file in `host_vars/` or `group_vars/`, or load it with `vars_files`/`include_vars`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/first_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

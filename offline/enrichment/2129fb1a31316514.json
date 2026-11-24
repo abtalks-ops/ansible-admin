@@ -1,0 +1,17 @@
+{
+  "chunk_id": "2129fb1a31316514",
+  "chunk_hash": "2129fb1a31316514",
+  "summary": "Introduces secret masking (ansible-core 2.22+): registered secrets are replaced with $REDACTED$ on screen, in log_path, callback output and module logs, while the real value is still used by tasks.",
+  "questions": [
+    "How does Ansible hide secrets in its output?",
+    "What does $REDACTED$ mean in Ansible output?",
+    "Does masking change the actual variable value?"
+  ],
+  "answer_card": {
+    "title": "Secret masking overview",
+    "answer_md": "Since ansible-core 2.22, registered secrets are replaced with **`$REDACTED$`** on screen, in the `log_path` file, in callback output, and in module logs on the managed node. The actual value isn't changed, so tasks, templates and modules still use the real value.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_secret_masking.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

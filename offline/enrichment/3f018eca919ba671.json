@@ -1,0 +1,15 @@
+{
+  "chunk_id": "3f018eca919ba671",
+  "chunk_hash": "3f018eca919ba671",
+  "summary": "Shows enabling enable mode for all tasks with group_vars (network_cli connection, network OS, ansible_become and ansible_become_method: enable).",
+  "questions": [
+    "How do I enable privileged mode for every task on my switches?"
+  ],
+  "answer_card": {
+    "title": "Enable mode for all tasks via group_vars",
+    "answer_md": "```yaml\n# group_vars/eos.yml\nansible_connection: ansible.netcommon.network_cli\nansible_network_os: arista.eos.eos\nansible_user: myuser\nansible_become: true\nansible_become_method: enable\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

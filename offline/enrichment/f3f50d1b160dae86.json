@@ -1,0 +1,20 @@
+{
+  "chunk_id": "f3f50d1b160dae86",
+  "chunk_hash": "f3f50d1b160dae86",
+  "summary": "Explains meta's free-form actions and details flush_handlers (runs notified handlers; inserted implicitly after pre/post tasks, roles, and tasks) and refresh_inventory (2.0; reloads inventory sources, keeps add_host and group_by hosts, can't refresh a script's own cache). Neither refresh_inventory nor add_host adds hosts to the current play, but delegate_to can reach new hosts.",
+  "questions": [
+    "What actions can the meta module run?",
+    "How do I reload my dynamic inventory in the middle of a play?",
+    "Will refresh_inventory make new hosts part of the current play?",
+    "Does refresh_inventory keep hosts I added with add_host?",
+    "Why does refresh_inventory return stale data from my inventory script?",
+    "When does Ansible implicitly flush handlers?"
+  ],
+  "answer_card": {
+    "title": "meta: flush_handlers and refresh_inventory",
+    "answer_md": "`meta` takes a free-form action: `clear_facts`, `clear_host_errors`, `end_host`, `end_play`, `flush_handlers`, `noop`, `refresh_inventory`, `reset_connection`, `end_batch`, `end_role`.\n\n- `flush_handlers`: runs handlers notified so far. Ansible inserts it implicitly after pre/post tasks, the final role execution, and the main tasks section.\n- `refresh_inventory` (2.0): reloads inventory sources and host/group structure, preserving hosts from `add_host` and groups from `group_by`. Dynamic inventory scripts are re-executed; if a script uses its own cache, Ansible can't refresh it (disable the cache or use an inventory plugin, e.g. `amazon.aws.aws_ec2`).\n\nNeither `refresh_inventory` nor `add_host` adds hosts to the hosts the **current** play iterates over, but you can `delegate_to` new hosts.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/meta_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

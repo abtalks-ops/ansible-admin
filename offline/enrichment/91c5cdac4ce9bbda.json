@@ -1,0 +1,18 @@
+{
+ "chunk_id": "91c5cdac4ce9bbda",
+ "chunk_hash": "91c5cdac4ce9bbda",
+ "summary": "Explains adding constructed features (compose, keyed_groups, groups) to an inventory plugin with Constructable and the constructed doc fragment, calling the corresponding methods per host, ordering compose first, and using strict to error on undefined variables.",
+ "questions": [
+  "How do I let users create groups from variables in my inventory plugin?",
+  "What are compose, keyed_groups and groups in constructed inventory?",
+  "Why are undefined variables ignored in my keyed_groups?",
+  "In which order should I call the constructed helper methods?"
+ ],
+ "answer_card": {
+  "title": "Constructed features in inventory plugins",
+  "answer_md": "Use `Constructable` and `extends_documentation_fragment: [constructed]`.\n- `compose` → `_set_composite_vars` (vars from Jinja2)\n- `keyed_groups` → `_add_host_to_keyed_groups` (groups from var values)\n- `groups` → `_add_host_to_composed_groups` (groups from conditionals)\n\nCall each per host with (option, vars dict, hostname). Call `_set_composite_vars` first so groups can use composed vars. Undefined vars are ignored by default; pass `strict=` to make them errors.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

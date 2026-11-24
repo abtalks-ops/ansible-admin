@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4f01881672172c69",
+ "chunk_hash": "4f01881672172c69",
+ "summary": "Describes the ansible-windows domain test setup files (Vagrantfile, inventory.yml, main.yml) and the default environment: a 2016 domain controller, five child hosts, domain.local, and default local and domain admin credentials, all customizable in inventory.yml.",
+ "questions": [
+  "What does the ansible-windows Vagrant domain environment create?",
+  "What are the default credentials in the Windows domain test lab?",
+  "How do I change the number of servers in the domain test lab?"
+ ],
+ "answer_card": {
+  "title": "Windows domain test environment",
+  "answer_md": "Files: `Vagrantfile` (reads inventory, provisions hosts), `inventory.yml` (hosts, IPs, ports), `main.yml` (sets up the DC and joins children).\n\nDefaults:\n- AD domain controller on Server 2016\n- Five child hosts (one per major Server version)\n- Domain `domain.local`\n- Local admin `vagrant`/`vagrant`\n- Domain admin `vagrant-domain@domain.local` / `VagrantPass1`\n\nChange `domain_*` vars and `domain_children` hosts in `inventory.yml`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "5b8c23af18269247",
+  "chunk_hash": "5b8c23af18269247",
+  "summary": "Describes three variable scopes: global (config, env, CLI), play (vars, vars_files, vars_prompt, role defaults/vars), and host (inventory, include_vars, facts, registered output). Templates see all host-scoped variables plus facts and magic variables.",
+  "questions": [
+    "What variable scopes does Ansible have?",
+    "Which variables can I use in a template?"
+  ],
+  "answer_card": {
+    "title": "Variable scopes",
+    "answer_md": "- **Global**: config, environment variables, command line\n- **Play**: `vars`, `vars_files`, `vars_prompt`, role defaults and vars\n- **Host**: inventory, `include_vars`, facts, registered output\n\nTemplates can use every variable in scope for the host, plus registered variables, facts and magic variables.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:32+00:00"
+}

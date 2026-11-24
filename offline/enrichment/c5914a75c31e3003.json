@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c5914a75c31e3003",
+ "chunk_hash": "c5914a75c31e3003",
+ "summary": "Roles are playbooks split into a known structure for easier sharing and updating, and the Ansible Network team publishes roles for common network tasks on Galaxy so you focus on parser templates and data.",
+ "questions": [
+  "Are there ready-made Ansible roles for network tasks?",
+  "Why should I use roles instead of playbooks?"
+ ],
+ "answer_card": {
+  "title": "Why use network roles",
+  "answer_md": "A role is a playbook split into a standard file structure, which makes it easier to share, read and update. The Ansible Network team has written roles for common network use cases (see Galaxy), so instead of writing your own `create_vlan` playbook you can focus on the templates describing your topology and inventory.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/network_roles.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "da55cecca6795bbb",
+  "chunk_hash": "da55cecca6795bbb",
+  "summary": "template options: attributes, backup, custom block and comment delimiters, the required dest, follow symlinks, and force (replace when content differs).",
+  "questions": [
+    "How do I only deploy a template if the file doesn't exist?",
+    "How do I back up the previous file before templating?",
+    "How do I change Jinja block delimiters?",
+    "Does template follow symlinks at dest?"
+  ],
+  "answer_card": {
+    "title": "template parameters (part 1)",
+    "answer_md": "- `dest` (required)\n- `force` (true): replace when different; false = only if missing\n- `backup` (false)\n- `follow` (false)\n- `block_start_string`/`block_end_string`, `comment_start_string`/`comment_end_string`\n- `attributes`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

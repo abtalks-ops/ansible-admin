@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0d5a8e6f177f689d",
+ "chunk_hash": "0d5a8e6f177f689d",
+ "summary": "On failure, modules should return failed with a msg (fail_json does this), avoid raising tracebacks, and never call sys.exit().",
+ "questions": [
+  "How should my module report a failure?",
+  "Can I use sys.exit() in a module?",
+  "Is it okay to let a traceback escape from my module?"
+ ],
+ "answer_card": {
+  "title": "Module failure handling",
+  "answer_md": "- Return `failed` plus a clear `msg`; `fail_json()` adds `failed` automatically. Otherwise Ansible relies on exit codes.\n- Don't raise tracebacks; they're handled but unfriendly.\n- Never use `sys.exit()`; use `module.fail_json()`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_best_practices.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

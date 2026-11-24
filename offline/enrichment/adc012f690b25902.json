@@ -1,0 +1,17 @@
+{
+  "chunk_id": "adc012f690b25902",
+  "chunk_hash": "adc012f690b25902",
+  "summary": "Since Ansible 1.8, the ansible_version variable exposes full, major, minor, revision and string fields, so playbooks can adapt behavior to the running Ansible version.",
+  "questions": [
+    "How can a playbook check which Ansible version is running it?",
+    "What fields does ansible_version contain?",
+    "How do I make a task conditional on the Ansible major/minor version?"
+  ],
+  "answer_card": {
+    "title": "Checking the Ansible version in a playbook",
+    "answer_md": "Use `ansible_version`:\n\n```json\n{\n  \"ansible_version\": {\n    \"full\": \"2.10.1\",\n    \"major\": 2,\n    \"minor\": 10,\n    \"revision\": 1,\n    \"string\": \"2.10.1\"\n  }\n}\n```\n\nFor example, compare `ansible_version.major` and `ansible_version.minor` in a `when` condition.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:17:08+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "dba05ca1529b2aa4",
+ "chunk_hash": "dba05ca1529b2aa4",
+ "summary": "States that ansible-core X.Y.Z releases come from stable-X.Y branches, which are cut from devel near X.Y.0 beta 1, and only bugfixes (backported from devel) go into them.",
+ "questions": [
+  "Which branch are ansible-core point releases built from?",
+  "Can new features be added to a stable ansible-core branch?"
+ ],
+ "answer_card": {
+  "title": "ansible-core stable branches",
+  "answer_md": "Every `X.Y.Z` release is built from `stable-X.Y`, cut from `devel` around `X.Y.0 beta 1`. Only **bugfixes** (no enhancements) go in, made against `devel` first and then backported.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/core_branches_and_tags.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

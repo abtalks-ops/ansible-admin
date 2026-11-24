@@ -1,0 +1,18 @@
+{
+  "chunk_id": "02c7135005bda0f9",
+  "chunk_hash": "02c7135005bda0f9",
+  "summary": "Examples of the url lookup: looping over lines, fetching JSON without line splitting, using username/password, forcing basic auth, and sending custom headers.",
+  "questions": [
+    "How do I loop over each line returned by a URL?",
+    "How do I fetch a JSON document from a URL as one string?",
+    "What does a url lookup with basic auth look like?",
+    "How do I pass headers as a dict in a url lookup call?"
+  ],
+  "answer_card": {
+    "title": "url lookup examples",
+    "answer_md": "```yaml\n- debug: msg=\"{{ item }}\"\n  loop: \"{{ lookup('ansible.builtin.url', 'https://github.com/gremlin.keys', wantlist=True) }}\"\n\n- debug: msg=\"{{ lookup('ansible.builtin.url', 'https://ip-ranges.amazonaws.com/ip-ranges.json', split_lines=False) }}\"\n\n- debug:\n    msg: \"{{ lookup('ansible.builtin.url', 'https://some.private.site.com/file.txt', username='bob', password='hunter2', force_basic_auth='True') }}\"\n\n- debug:\n    msg: \"{{ lookup('ansible.builtin.url', 'https://some.private.site.com/api/service', headers={'header1':'value1'}) }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/url_lookup.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

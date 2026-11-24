@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5dabb504ca25ae20",
+ "chunk_hash": "5dabb504ca25ae20",
+ "summary": "Recommends that collections in the Ansible community package use antsibull-changelog so their changelogs can be merged into the combined Ansible release changelog.",
+ "questions": [
+  "What tool should I use to generate changelogs for my collection?",
+  "How does the Ansible release changelog include each collection's changes?"
+ ],
+ "answer_card": {
+  "title": "Changelogs for collections",
+  "answer_md": "If your collection is in the Ansible community package, use **antsibull-changelog**. Ansible uses its output to build one combined changelog for each release.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_changelogs.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

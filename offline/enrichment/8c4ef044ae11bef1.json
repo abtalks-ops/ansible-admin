@@ -1,0 +1,18 @@
+{
+  "chunk_id": "8c4ef044ae11bef1",
+  "chunk_hash": "8c4ef044ae11bef1",
+  "summary": "Lists variable naming rules: letters, numbers and underscores only, no leading digit, no Python or playbook keywords; leading underscores aren't private; avoid overriding Jinja2 globals like lookup, query, now and undef.",
+  "questions": [
+    "What characters can Ansible variable names contain?",
+    "Can I use a hyphen in a variable name?",
+    "Are variables starting with underscore private in Ansible?",
+    "Can I name a variable environment or async?"
+  ],
+  "answer_card": {
+    "title": "Valid variable names",
+    "answer_md": "- Only **letters, numbers and underscores**; can't start with a number.\n- No Python keywords (`async`, `lambda`) or playbook keywords (`environment`).\n- Valid: `foo`, `foo_env`, `foo_port`, `foo5`, `_foo`. Invalid: `foo-port`, `foo port`, `foo.port`, `5foo`, `12`.\n- A leading underscore is **not** private in Ansible.\n- Avoid names that shadow Jinja2 globals like `lookup`, `query`, `q`, `now`, `undef`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

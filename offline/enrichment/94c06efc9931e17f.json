@@ -1,0 +1,17 @@
+{
+ "chunk_id": "94c06efc9931e17f",
+ "chunk_hash": "94c06efc9931e17f",
+ "summary": "Inventory is usually a file (INI, YAML) grouping hosts, with no SSL signing server; variables go in group_vars, host_vars or the inventory, and dynamic inventory can pull from EC2, OpenStack and others.",
+ "questions": [
+  "What does a basic Ansible inventory file look like?",
+  "Where can I store variables for inventory groups?",
+  "Can Ansible pull its host list from AWS?"
+ ],
+ "answer_card": {
+  "title": "Inventory overview",
+  "answer_md": "```text\n[webservers]\nwww1.example.com\nwww2.example.com\n\n[dbservers]\ndb0.example.com\n```\nNo SSL signing server needed. Assign variables in `group_vars/`, `host_vars/` or inline. Dynamic inventory can pull from EC2, Rackspace, OpenStack and more.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/overview_architecture.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:03+00:00"
+}

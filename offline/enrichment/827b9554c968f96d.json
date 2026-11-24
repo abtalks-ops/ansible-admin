@@ -1,0 +1,16 @@
+{
+  "chunk_id": "827b9554c968f96d",
+  "chunk_hash": "827b9554c968f96d",
+  "summary": "Examples assert a URL matches a regex, including a case-insensitive version.",
+  "questions": [
+    "How do I assert a URL matches a pattern?",
+    "How do I use ignorecase in a regex test?"
+  ],
+  "answer_card": {
+    "title": "regex test examples",
+    "answer_md": "```yaml\n- assert:\n    that:\n      - 'url is regex(\"example\\.com/\\w+/foo\")'\n  vars:\n    url: \"https://example.com/users/foo/resources/bar\"\n- assert:\n    that:\n      - 'url is regex(\"EXAMPLE\\.COM/\\w+/foo\", ignorecase=True)'\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/regex_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

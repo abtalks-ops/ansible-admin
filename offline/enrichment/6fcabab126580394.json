@@ -1,0 +1,16 @@
+{
+  "chunk_id": "6fcabab126580394",
+  "chunk_hash": "6fcabab126580394",
+  "summary": "The community.general yaml callback plugin will be removed in 12.0.0, earlier than planned, because it relies on ansible-core internals that change heavily from 2.19.",
+  "questions": [
+    "Is the community.general yaml callback going away?",
+    "When will the yaml stdout callback be removed?"
+  ],
+  "answer_card": {
+    "title": "yaml callback removal",
+    "answer_md": "The `community.general.yaml` callback will be removed in community.general 12.0.0 (moved up from 13.0.0) because it depends on ansible-core internals that change a lot since 2.19.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:25:02+00:00"
+}

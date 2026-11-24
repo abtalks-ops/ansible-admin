@@ -1,0 +1,15 @@
+{
+ "chunk_id": "6c297879b6df3af3",
+ "chunk_hash": "6c297879b6df3af3",
+ "summary": "type_debug takes a required variable or expression.",
+ "questions": [
+  "What input does type_debug take?"
+ ],
+ "answer_card": {
+  "title": "type_debug parameters",
+  "answer_md": "`_input` (any, required): variable or expression to inspect.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/type_debug_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

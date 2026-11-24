@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0f1939d273d50af8",
+ "chunk_hash": "0f1939d273d50af8",
+ "summary": "Step-by-step for antsibull-changelog: install with pip, init the collection, optionally edit changelogs/config.yaml, lint fragments, and run release, adding --reload-plugins when rerunning for an unchanged version.",
+ "questions": [
+  "How do I set up antsibull-changelog for my collection repo?",
+  "How do I check my changelog fragments for mistakes?",
+  "How do I generate the changelog for a new release?",
+  "Why didn't antsibull-changelog pick up my new plugin?"
+ ],
+ "answer_card": {
+  "title": "Generate changelogs with antsibull-changelog",
+  "answer_md": "Setup:\n1. `pip install antsibull-changelog`\n2. `antsibull-changelog init <path/to/collection>`\n3. Optionally edit `changelogs/config.yaml`.\n\nRelease:\n1. `antsibull-changelog lint` (optional)\n2. `antsibull-changelog release [--version X.Y.Z]`\n\nIf you rerun `release` without changing the collection version, add `--reload-plugins`; plugin info is cached until the version changes.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_changelogs.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

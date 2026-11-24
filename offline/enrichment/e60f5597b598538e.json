@@ -1,0 +1,18 @@
+{
+  "chunk_id": "e60f5597b598538e",
+  "chunk_hash": "e60f5597b598538e",
+  "summary": "setup gathers facts automatically for plays or ad hoc. It includes facter_ and ohai_ facts if installed, filter only matches first-level keys and isn't available on Windows, and BSD needs elevated privileges for some facts.",
+  "questions": [
+    "How do I see all facts Ansible collects for a host?",
+    "Does setup include facter or ohai data?",
+    "Why can't I use filter on Windows facts?",
+    "Why is ansible_product_version missing on BSD?"
+  ],
+  "answer_card": {
+    "title": "Gather facts with setup",
+    "answer_md": "`ansible.builtin.setup` gathers facts (auto-run by plays; ad hoc with `ansible host -m setup`).\n- If `facter`/`ohai` are installed, their data is added with `facter_`/`ohai_` prefixes.\n- `filter` only matches first-level keys under `ansible_facts`; not supported on Windows.\n- Run with elevated privileges on BSD for facts like `ansible_product_version`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/setup_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

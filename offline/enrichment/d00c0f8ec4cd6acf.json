@@ -1,0 +1,16 @@
+{
+ "chunk_id": "d00c0f8ec4cd6acf",
+ "chunk_hash": "d00c0f8ec4cd6acf",
+ "summary": "The final step is publishing the tarball to Galaxy, Red Hat Automation Hub or a private Automation Hub, either with ansible-galaxy collection publish or through the server's website.",
+ "questions": [
+  "Can I upload a collection through the Galaxy website instead of the CLI?",
+  "Where can I publish a built collection tarball?"
+ ],
+ "answer_card": {
+  "title": "Ways to publish a collection",
+  "answer_md": "Publish the tarball to Galaxy, Red Hat Automation Hub or a private Automation Hub, either with `ansible-galaxy collection publish` or via the server's website.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

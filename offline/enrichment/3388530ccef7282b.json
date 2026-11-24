@@ -1,0 +1,17 @@
+{
+  "chunk_id": "3388530ccef7282b",
+  "chunk_hash": "3388530ccef7282b",
+  "summary": "user returns fields like append, comment, create_home, force, group id, groups, home, move_home, name, masked password, remove, shell, SSH key fingerprint/file/public key, stderr and stdout.",
+  "questions": [
+    "How do I get the generated SSH public key from the user module?",
+    "What's the home directory of the created user?",
+    "Which groups is the user in after the task?"
+  ],
+  "answer_card": {
+    "title": "user return values",
+    "answer_md": "Key fields: `name`, `home`, `shell`, `group` (GID), `groups`, `comment`, `ssh_public_key`, `ssh_key_file`, `ssh_fingerprint` (with `generate_ssh_key`), `password` (masked), `append`, `remove`, `force`, `create_home`, `move_home`, `stdout`/`stderr`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

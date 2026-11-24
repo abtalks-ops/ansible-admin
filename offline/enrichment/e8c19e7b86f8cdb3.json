@@ -1,0 +1,19 @@
+{
+  "chunk_id": "e8c19e7b86f8cdb3",
+  "chunk_hash": "e8c19e7b86f8cdb3",
+  "summary": "Explains until with retries (default 3) and delay (default 5) to retry a task until a condition is met; the registered result has attempts, -vv shows each retry, and since 2.16 omitting until retries until success. until can combine with loops, and timeout applies per attempt.",
+  "questions": [
+    "How do I retry a task until its output contains a string?",
+    "What are the default retries and delay for until?",
+    "How do I retry a task until it succeeds?",
+    "Can I use until with a loop?",
+    "How many attempts did my until task take?"
+  ],
+  "answer_card": {
+    "title": "Retrying a task with until",
+    "answer_md": "```yaml\n- ansible.builtin.shell: /usr/bin/foo\n  register: result\n  until: result.stdout.find(\"all systems go\") != -1\n  retries: 5\n  delay: 10\n```\n\nDefaults: `retries: 3`, `delay: 5`. The result includes `attempts`; run with `-vv` to see each retry. Since 2.16, without `until` the task retries until it succeeds (up to `retries`).\n\nWith a loop, `until` applies per item:\n\n```yaml\n- uri:\n    url: \"https://{{ item }}.ansible.com\"\n  register: uri_output\n  with_items: [galaxy, docs]\n  retries: 2\n  delay: 1\n  until: \"uri_output.status == 200\"\n```\n\n`timeout` applies to each attempt.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "9f40521732577ad7",
+  "chunk_hash": "9f40521732577ad7",
+  "summary": "The apt_key module adds or removes apt signing keys but is deprecated in favor of deb822_repository and will be removed in 2.25. Notes recommend full 40-character fingerprints and an apt cache update after adding keys.",
+  "questions": [
+    "Is apt_key still supported in Ansible?",
+    "What should I use instead of apt_key now that apt-key is deprecated?",
+    "Why should I use full 40-character key fingerprints?",
+    "Do I need to update the apt cache after adding a key?",
+    "When will apt_key be removed from ansible-core?"
+  ],
+  "answer_card": {
+    "title": "apt_key is deprecated",
+    "answer_md": "`ansible.builtin.apt_key` is **deprecated** (removed in 2.25). Use `ansible.builtin.deb822_repository` instead, since the `apt-key` tool is deprecated/removed in modern Debian.\n\nIf you still use it:\n- Use the full 40-char fingerprint as `id` to avoid collisions.\n- Specifying both `id` and `url` with `state=present` lets it verify or add as needed.\n- Run an apt cache update afterwards (e.g. `apt: update_cache: yes`).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

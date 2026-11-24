@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ae9f2ff2b85f5cb8",
+ "chunk_hash": "ae9f2ff2b85f5cb8",
+ "summary": "Example constructed config composing variables, creating groups from name matching, EC2 tags and conditions, and keyed groups for distribution, architecture, region and availability zone.",
+ "questions": [
+  "How do I group hosts by OS distribution automatically?",
+  "How do I create a group of hosts whose names start with web?",
+  "How do I group EC2 instances by region?",
+  "How do I put all availability zone groups under one parent?"
+ ],
+ "answer_card": {
+  "title": "constructed inventory example",
+  "answer_md": "```yaml\nplugin: ansible.builtin.constructed\nstrict: False\ncompose:\n  var_sum: var1 + var2\n  server_type: \"ansible_hostname | regex_replace ('(.{6})(.{2}).*', '\\\\2')\"\ngroups:\n  webservers: inventory_hostname.startswith('web')\n  development: \"'devel' in (ec2_tags|list)\"\n  private_only: not (public_dns_name is defined or ip_address is defined)\n  multi_group: (group_names | intersect(['alpha', 'beta', 'omega'])) | length >= 2\nkeyed_groups:\n  - prefix: distro          # distro_CentOS, distro_Debian\n    key: ansible_distribution\n  - prefix: arch\n    key: architecture\n  - prefix: \"\"\n    separator: \"\"\n    key: placement.region   # us_west_1\n  - key: placement.availability_zone\n    parent_group: all_ec2_zones\n```\n\nFact-based vars only work with a persistent fact cache.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/constructed_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

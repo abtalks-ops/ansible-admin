@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ab73d39f713a049e",
+ "chunk_hash": "ab73d39f713a049e",
+ "summary": "community.general 12.1.0 deprecations scheduled for removal in 13.0.0: the hiera lookup, oci_utils module utils, the oci_vcn module and oracle doc fragments.",
+ "questions": [
+  "Is the hiera lookup plugin being removed from community.general?",
+  "Is community.general.oci_vcn deprecated?",
+  "When will the oracle modules be removed from community.general?"
+ ],
+ "answer_card": {
+  "title": "community.general deprecations: hiera, OCI",
+  "answer_md": "Deprecated in community.general (Ansible 12.1.0), all removed in **community.general 13.0.0**:\n\n- `hiera` lookup plugin\n- `oci_utils` module utils\n- `oci_vcn` module\n- `oracle*` doc fragments",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:06+00:00"
+}

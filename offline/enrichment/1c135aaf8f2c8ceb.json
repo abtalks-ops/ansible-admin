@@ -1,0 +1,16 @@
+{
+ "chunk_id": "1c135aaf8f2c8ceb",
+ "chunk_hash": "1c135aaf8f2c8ceb",
+ "summary": "community.clickhouse deprecates pre-22.x comment handling in clickhouse_db, list-based settings and profiles in clickhouse_role and clickhouse_user (removed in 3.0.0), and ansible-core 2.17 support.",
+ "questions": [
+  "Are list-based settings deprecated in clickhouse_user?",
+  "Does community.clickhouse still support ansible-core 2.17?"
+ ],
+ "answer_card": {
+  "title": "community.clickhouse deprecations (14.2.0)",
+  "answer_md": "- `clickhouse_db`: handling of comments for ClickHouse **pre-22.x** is deprecated.\n- `clickhouse_role`, `clickhouse_user`: **list-based** `settings` and `profiles` are deprecated, removed in 3.0.0.\n- ansible-core **2.17** support is deprecated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:10+00:00"
+}

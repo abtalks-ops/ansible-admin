@@ -1,0 +1,18 @@
+{
+  "chunk_id": "7f35f1101a7c7054",
+  "chunk_hash": "7f35f1101a7c7054",
+  "summary": "Shows fact-based conditionals: printing ansible_facts to see available facts, running tasks by os_family, and grouping complex conditions with parentheses and or. Notes not all facts exist on all hosts.",
+  "questions": [
+    "How do I run a task only on Debian systems?",
+    "How can I see what facts are available for a host?",
+    "How do I combine multiple conditions with or in a when clause?",
+    "Why is lsb_major_release undefined on some hosts?"
+  ],
+  "answer_card": {
+    "title": "Conditionals based on facts",
+    "answer_md": "See available facts:\n\n```yaml\n- ansible.builtin.debug:\n    var: ansible_facts\n```\n\nRun by OS family:\n\n```yaml\nwhen: ansible_facts['os_family'] == \"Debian\"\n```\n\nGroup with parentheses:\n\n```yaml\nwhen: (ansible_facts['distribution'] == \"CentOS\" and ansible_facts['distribution_major_version'] == \"6\") or\n      (ansible_facts['distribution'] == \"Debian\" and ansible_facts['distribution_major_version'] == \"7\")\n```\n\nNot every fact exists everywhere (e.g. `lsb_major_release` needs the `lsb_release` package).",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

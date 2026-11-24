@@ -1,0 +1,17 @@
+{
+ "chunk_id": "89e69ce323fe2a13",
+ "chunk_hash": "89e69ce323fe2a13",
+ "summary": "Secrets registered in workers or modules are sent back and registered on the controller, then masked in later tasks; the controller only sends secrets that appear in module args, so modules must register values they obtain themselves. Connection plugins shouldn't display raw module output except under ANSIBLE_DEBUG.",
+ "questions": [
+  "If my module registers a secret, is it masked in later tasks too?",
+  "Does the controller send all known secrets to the managed node?",
+  "Why might a connection plugin leak a newly registered secret?"
+ ],
+ "answer_card": {
+  "title": "Secret propagation between controller and targets",
+  "answer_md": "- Secrets registered in worker plugins or in modules return to the controller with results and are masked in **all later tasks**.\n- The controller only sends secrets that appear in a module's **arguments**. Values a module gets elsewhere (files, APIs) must be registered by the module itself.\n- New module secrets travel in raw JSON before the controller knows them, so connection plugins shouldn't display raw stdout/stderr except when `ANSIBLE_DEBUG` is on.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_secret_masking.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

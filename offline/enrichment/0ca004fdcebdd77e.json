@@ -1,0 +1,15 @@
+{
+  "chunk_id": "0ca004fdcebdd77e",
+  "chunk_hash": "0ca004fdcebdd77e",
+  "summary": "wait_for_connection returns elapsed seconds.",
+  "questions": [
+    "How long did it take for the host to become reachable?"
+  ],
+  "answer_card": {
+    "title": "wait_for_connection return value",
+    "answer_md": "`elapsed`: seconds waited (float).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/wait_for_connection_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:27+00:00"
+}

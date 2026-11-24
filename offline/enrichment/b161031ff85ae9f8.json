@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b161031ff85ae9f8",
+ "chunk_hash": "b161031ff85ae9f8",
+ "summary": "Prerequisites before coding a new collection: read the module development pages and checklist, aim for PEP 8 and Python 2.6+/3.5+, follow Galaxy naming in your area, commit to maintenance and regular releases, and add unit and integration tests.",
+ "questions": [
+  "What should I do before I start writing modules for a new collection?",
+  "What responsibilities come with maintaining a collection?",
+  "Are unit tests needed when modules talk to cloud or network devices?"
+ ],
+ "answer_card": {
+  "title": "Before you start coding a collection",
+  "answer_md": "- Read the module development pages, especially the checklist.\n- Aim for PEP 8; support Python 2.6+ and 3.5+.\n- Review Galaxy naming conventions in your area (cloud, networking, DB).\n- Maintainers must keep content updated, release regularly, and watch issues and contributions.\n- Add unit and/or integration tests; unit tests are especially valuable when external resources are needed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_in_groups.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

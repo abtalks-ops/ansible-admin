@@ -1,0 +1,18 @@
+{
+ "chunk_id": "11ab008945175b2b",
+ "chunk_hash": "11ab008945175b2b",
+ "summary": "The lines lookup runs commands on the controller via a shell and returns output lines; untrusted variables must be quoted, become doesn't apply, and the play directory is the working directory.",
+ "questions": [
+  "How do I loop over the output lines of a command?",
+  "Does with_lines run on the managed host?",
+  "Does become apply to the lines lookup?",
+  "How do I avoid shell injection in with_lines?"
+ ],
+ "answer_card": {
+  "title": "lines lookup",
+  "answer_md": "The `lines` lookup runs command(s) and returns stdout split into lines.\n\n- Commands go through a **shell**, so sanitize untrusted variables with the `quote` filter.\n- Like all lookups it runs on the **controller** and ignores `become`. For other permissions, change the command, run Ansible as another user, or use a shell/command task against localhost and register the result.\n- The play's directory is the working directory.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lines_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

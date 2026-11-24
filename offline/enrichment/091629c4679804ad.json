@@ -1,0 +1,17 @@
+{
+ "chunk_id": "091629c4679804ad",
+ "chunk_hash": "091629c4679804ad",
+ "summary": "verify_file quickly decides whether a source might be usable by the plugin; the virtualbox example checks file name suffixes, and YAML-config plugins should accept the <plugin_name>.yml/.yaml suffix and document valid extensions.",
+ "questions": [
+  "What does verify_file do in an inventory plugin?",
+  "Why is my inventory plugin trying to parse every YAML file?",
+  "What filename suffix should my inventory plugin accept?"
+ ],
+ "answer_card": {
+  "title": "Inventory plugin verify_file",
+  "answer_md": "`verify_file` is a fast check of whether a source might be usable; it needn't be perfect since Ansible tries enabled plugins in order.\n```python\ndef verify_file(self, path):\n    valid = False\n    if super(InventoryModule, self).verify_file(path):\n        if path.endswith(('virtualbox.yaml', 'virtualbox.yml', 'vbox.yaml', 'vbox.yml')):\n            valid = True\n    return valid\n```\nFor YAML config files, accept `<plugin_name>.yml|yaml` and document all valid extensions.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

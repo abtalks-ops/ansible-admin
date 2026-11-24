@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f23377d7f46669ee",
+ "chunk_hash": "f23377d7f46669ee",
+ "summary": "A process-wide append-only registry masks secrets at egress boundaries: controller Display (screen, log_path, warnings, errors), callback task results, and module-side logging. Masking is best effort, and messages sent via Python's logging module to log_path aren't masked.",
+ "questions": [
+  "Where does Ansible apply secret masking?",
+  "Can a registered secret ever be unregistered?",
+  "Why do secrets appear unmasked in my log_path file?",
+  "Is secret masking guaranteed to hide everything?"
+ ],
+ "answer_card": {
+  "title": "How secret masking works",
+  "answer_md": "Egress boundaries that mask registered secrets:\n- Controller `Display` (screen, `log_path`, warnings, deprecations, errors, tracebacks)\n- The `result` of every task result passed to callbacks\n- `AnsibleModule.log()` and `Ansible.Basic` logging on targets\n\nRegistration is append-only and non-destructive; secrets stay for the process lifetime. Masking is **best effort**: still use `no_log`. Messages written via the standard `logging` module reach `log_path` **unmasked**; run them through `mask_secrets()`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_secret_masking.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

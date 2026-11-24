@@ -1,0 +1,15 @@
+{
+ "chunk_id": "74f66b31b5dcfc44",
+ "chunk_hash": "74f66b31b5dcfc44",
+ "summary": "The comment filter turns a string into an embeddable comment using programming language conventions.",
+ "questions": [
+  "How do I add a commented header to a templated config file?"
+ ],
+ "answer_card": {
+  "title": "comment filter",
+  "answer_md": "`ansible.builtin.comment` converts a string into a comment block using language conventions, e.g. `{{ 'Managed by Ansible' | comment }}`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

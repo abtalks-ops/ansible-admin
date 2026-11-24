@@ -1,0 +1,18 @@
+{
+ "chunk_id": "896111d0f0d73f96",
+ "chunk_hash": "896111d0f0d73f96",
+ "summary": "Since ansible-core 2.16.1 (CVE-2023-5764 fix), conditionals with embedded templates that use untrusted data such as module results can fail with 'Conditional is marked as unsafe'; reference variables directly in conditionals instead of embedding {{ }}.",
+ "questions": [
+  "Why does my assert fail with 'Conditional is marked as unsafe, and cannot be evaluated'?",
+  "How should I write a when condition that checks registered output?",
+  "What is CVE-2023-5764 and how does it affect my playbooks?",
+  "Can I use {{ }} inside assert that?"
+ ],
+ "answer_card": {
+  "title": "Fix 'Conditional is marked as unsafe' errors",
+  "answer_md": "Since **ansible-core 2.16.1** (CVE-2023-5764 fix), a conditional that embeds `{{ }}` around untrusted data (module results, `!unsafe` vars) fails with *Conditional is marked as unsafe, and cannot be evaluated*. Conditionals are already Jinja expressions, so drop the braces:\n\n```yaml\n# fails\n- assert:\n    that: '\"hi mom\" is in {{ untrusted_result.stdout }}'\n# works\n- assert:\n    that: '\"hi mom\" is in untrusted_result.stdout'\n```\n\nThis applies to `when`, `until`, `assert` and other conditionals.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:48+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "9c5c765b7669bbe9",
+ "chunk_hash": "9c5c765b7669bbe9",
+ "summary": "ansible.builtin.pprint is the Jinja builtin filter that pretty prints a variable.",
+ "questions": [
+  "How do I pretty print a variable in a template?"
+ ],
+ "answer_card": {
+  "title": "pprint filter",
+  "answer_md": "`{{ myvar | pprint }}` pretty prints a variable (Jinja builtin).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pprint_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

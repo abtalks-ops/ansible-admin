@@ -1,0 +1,15 @@
+{
+ "chunk_id": "d4835c438b69a4a2",
+ "chunk_hash": "d4835c438b69a4a2",
+ "summary": "Instead of installing Ansible manually, you can build an execution environment image or use a community image as your control node.",
+ "questions": [
+  "Can I use a container image instead of installing Ansible?"
+ ],
+ "answer_card": {
+  "title": "Use a container as control node",
+  "answer_md": "Yes. Build an execution environment image, or use an available community image, and use it as your control node instead of installing Ansible content by hand.",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

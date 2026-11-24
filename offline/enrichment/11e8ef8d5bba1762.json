@@ -1,0 +1,17 @@
+{
+ "chunk_id": "11e8ef8d5bba1762",
+ "chunk_hash": "11e8ef8d5bba1762",
+ "summary": "On z/OS the Python 3 interpreter usually lives somewhere like /usr/lpp/cyp/v3r12/pyz rather than /usr/bin/python, so set ansible_python_interpreter. Otherwise you may see the error '/usr/bin/python: FSUM7351 not found'.",
+ "questions": [
+  "What does FSUM7351 not found mean when running Ansible on z/OS?",
+  "How do I point Ansible at Python on a z/OS host?",
+  "Where is Python usually installed on z/OS?"
+ ],
+ "answer_card": {
+  "title": "Setting the Python interpreter for z/OS hosts",
+  "answer_md": "Ansible looks for Python at `/usr/bin/python`, but on z/OS IBM Open Enterprise SDK for Python is often at a path like `/usr/lpp/cyp/v3r12/pyz`. Set it in inventory:\n\n```ini\nzos1 ansible_python_interpreter:/usr/lpp/cyp/v3r12/pyz\n```\n\nIf it isn't set, you may get: `/usr/bin/python: FSUM7351 not found`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_zos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

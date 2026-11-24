@@ -1,0 +1,16 @@
+{
+  "chunk_id": "3c4bcd8fd31c2623",
+  "chunk_hash": "3c4bcd8fd31c2623",
+  "summary": "Shows becoming a Windows account with no password (like Guest) by setting ansible_become_password to an empty string and disabling the LimitBlankPasswordUse policy, while warning against passwordless accounts.",
+  "questions": [
+    "How do I become a Windows account that has no password?",
+    "How do I allow blank passwords for become?"
+  ],
+  "answer_card": {
+    "title": "Becoming accounts without a password",
+    "answer_md": "Avoid passwordless accounts where possible. To become one (e.g. `Guest`), set `ansible_become_password: ''` and disable the \"Limit local account use of blank passwords to console logon only\" policy:\n\n```yaml\n- ansible.windows.win_regedit:\n    path: HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\n    name: LimitBlankPasswordUse\n    data: 0\n    type: dword\n    state: present\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

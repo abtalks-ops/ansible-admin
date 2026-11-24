@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b678f8ad996dfc50",
+ "chunk_hash": "b678f8ad996dfc50",
+ "summary": "Network connection plugins load a platform-specific sub-plugin chosen by ansible_network_os, which must match the plugin's filename; public methods can be called from modules or module_utils via the Connection proxy.",
+ "questions": [
+  "How does ansible_network_os pick a plugin?",
+  "How do I call a connection plugin method from my module?",
+  "What should I name my network platform plugin file?"
+ ],
+ "answer_card": {
+  "title": "Platform plugins and ansible_network_os",
+  "answer_md": "The platform plugin is chosen at runtime from `ansible_network_os`, which must match the plugin filename: `ansible_network_os=nxos` loads `nxos.py`.\n\nCall its public methods through the connection proxy:\n```python\nfrom ansible.module_utils.connection import Connection\n\ndef get_config(module):\n    connection = Connection(module._socket_path)\n    return connection.get_config()   # any method not starting with '_'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_plugins_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "45ee0ecb0b6003ec",
+ "chunk_hash": "45ee0ecb0b6003ec",
+ "summary": "Explains building a collection tarball: bump the version in galaxy.yml (versions are immutable and duplicates fail with conflict.collection_exists), run ansible-galaxy collection build, and note default exclusions and Galaxy's 20 MB size limit.",
+ "questions": [
+  "Why do I get conflict.collection_exists when publishing?",
+  "How do I build the tarball for my collection?",
+  "What's the maximum collection size Galaxy accepts?",
+  "Can I distribute a collection without uploading it to Galaxy?"
+ ],
+ "answer_card": {
+  "title": "Build a collection tarball",
+  "answer_md": "1. Review `galaxy.yml` and **bump the version**. Published versions can't change; re-uploading the same version fails with `Code: conflict.collection_exists`. Use semantic versioning.\n2. From the collection root: `ansible-galaxy collection build` produces e.g. `my_namespace-my_collection-1.0.0.tar.gz`.\n\nSome files are excluded by default. Galaxy's max tarball size is **20 MB**. You can also copy the tarball to targets and install it directly.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

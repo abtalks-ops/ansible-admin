@@ -1,0 +1,16 @@
+{
+ "chunk_id": "3a57938d9fddfcb9",
+ "chunk_hash": "3a57938d9fddfcb9",
+ "summary": "The cli.yaml for vyos_l3_interfaces finds test case files, then runs each with network_cli and the first one with local connection.",
+ "questions": [
+  "How do I run every test case file under both network_cli and local?",
+  "How does the cli.yaml test runner find test cases?"
+ ],
+ "answer_card": {
+  "title": "Test runner cli.yaml",
+  "answer_md": "```yaml\n- name: collect all cli test cases\n  find:\n    paths: \"{{ role_path }}/tests/cli\"\n    patterns: \"{{ testcase }}.yaml\"\n  register: test_cases\n  delegate_to: localhost\n\n- set_fact: test_items=\"{{ test_cases.files | map(attribute='path') | list }}\"\n\n- name: run test cases (connection=network_cli)\n  include_tasks: { file: \"{{ test_case_to_run }}\" }\n  vars: { ansible_connection: network_cli }\n  with_items: \"{{ test_items }}\"\n  loop_control: { loop_var: test_case_to_run }\n```\nA second task runs with `ansible_connection: local` and `ansible_become: false` using `with_first_found`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

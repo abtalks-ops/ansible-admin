@@ -1,0 +1,17 @@
+{
+ "chunk_id": "67f965576942951b",
+ "chunk_hash": "67f965576942951b",
+ "summary": "FQCNs have a namespace (company or group), collection name (product or OS), and a lowercase, underscore-separated, singular plugin name; GitHub org and repo names needn't match Galaxy names, but plugin names do.",
+ "questions": [
+  "How should I name modules in my collection?",
+  "Should module names be singular or plural?",
+  "Does my GitHub repo name have to match my Galaxy collection name?"
+ ],
+ "answer_card": {
+  "title": "Collection naming conventions",
+  "answer_md": "FQCN = **namespace** (company/group) + **collection** (product/OS) + **plugin name** (lowercase, `_` separators, singular: `command` not `commands`). E.g. `community.mongodb.mongodb_linux`.\n\nMatching GitHub org/repo to Galaxy names is convenient but optional; plugin names are always identical in repo and artifact.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_in_groups.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

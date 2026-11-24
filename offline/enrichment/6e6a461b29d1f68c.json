@@ -1,0 +1,18 @@
+{
+ "chunk_id": "6e6a461b29d1f68c",
+ "chunk_hash": "6e6a461b29d1f68c",
+ "summary": "Direct assignment covers options passed straight to modules, action plugins, lookups, filters and tests, and has the highest precedence. Inventory sources given with -i are also treated as direct assignment.",
+ "questions": [
+  "What is direct assignment in Ansible precedence?",
+  "Do module arguments get overridden by config or variables?",
+  "How do arguments passed to lookups and filters rank in precedence?",
+  "Where do inventory sources passed with -i fit in the precedence order?"
+ ],
+ "answer_card": {
+  "title": "Direct assignment precedence",
+  "answer_md": "Direct assignment means options passed straight to a module, action plugin, lookup, filter or test, for example:\n\n```yaml\n- debug: msg='direct option'\n- ping:\n    data: also direct\n```\n```text\nlookup('plugin', direct1='value')\n'value'|filter('arg')\n```\n\nThis is the top of the precedence order. Most modules have no other way to receive settings, but some plugins can also read config sources if their docs say so. Inventory sources passed with `-i` (inline lists or files) also count as direct assignment.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/general_precedence.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "be983ebf959f0029",
+  "chunk_hash": "be983ebf959f0029",
+  "summary": "More pip examples: requirements files with or without a venv, a custom index URL, offline installs from local packages, a specific pip executable, force reinstall, umask 0022, and running a module inside a venv via ansible_python_interpreter.",
+  "questions": [
+    "How do I install requirements.txt into a virtualenv?",
+    "How do I install pip packages offline from a local directory?",
+    "How do I use a private PyPI index?",
+    "How do I run an Ansible module using a venv's Python?",
+    "How do I force reinstall a pip package?"
+  ],
+  "answer_card": {
+    "title": "pip examples (part 2)",
+    "answer_md": "```yaml\n- ansible.builtin.pip: {requirements: /my_app/requirements.txt, virtualenv: /my_app/venv}\n- ansible.builtin.pip:\n    requirements: /my_app/requirements.txt\n    extra_args: -i https://example.com/pypi/simple\n- ansible.builtin.pip:\n    requirements: /my_app/requirements.txt\n    extra_args: \"--no-index --find-links=file:///my_downloaded_packages_dir\"\n- ansible.builtin.pip: {name: bottle, executable: pip3.13}\n- ansible.builtin.pip: {name: bottle, state: forcereinstall}\n- ansible.builtin.pip: {name: bottle, umask: \"0022\"}\n  become: true\n```\nTo run modules in the venv: `pip` with `virtualenv_command: \"{{ ansible_python_interpreter }} -m venv\"`, then set `ansible_python_interpreter: <venv>/bin/python` on later tasks (Debian needs the `python*-venv` package).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pip_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

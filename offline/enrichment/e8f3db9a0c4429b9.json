@@ -1,0 +1,19 @@
+{
+  "chunk_id": "e8f3db9a0c4429b9",
+  "chunk_hash": "e8f3db9a0c4429b9",
+  "summary": "The fetch module copies files from remote hosts to the controller in a per-hostname tree. Using become doubles the transfer via slurp and can exhaust memory, and missing files now fail by default.",
+  "questions": [
+    "How do I copy a file from remote servers back to the control node?",
+    "Why does fetch use so much memory with become?",
+    "How are fetched files organized locally?",
+    "How do I avoid fetch failing on a missing file?",
+    "Does fetch work with Windows hosts?"
+  ],
+  "answer_card": {
+    "title": "Fetch files from remote hosts",
+    "answer_md": "`ansible.builtin.fetch` is reverse `copy`: pulls files from remote hosts and stores them locally under a hostname-based tree. Overwrites if different. Works on Windows.\n\n- With `become`, `slurp` is also used, doubling transfer and possibly causing `MemoryError`; avoid `become` when you can.\n- Since 2.5 it fails if the file can't be read; use `fail_on_missing: false`, `failed_when`, or `ignore_errors` to change that.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fetch_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

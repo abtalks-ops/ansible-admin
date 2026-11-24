@@ -1,0 +1,17 @@
+{
+  "chunk_id": "1a9a41417a5657e0",
+  "chunk_hash": "1a9a41417a5657e0",
+  "summary": "get_url returns backup file name, source and destination checksums, dest, elapsed time, ownership and mode, HTTP msg and status code, size, state, and the actual URL used.",
+  "questions": [
+    "How do I get the HTTP status code from get_url?",
+    "How long did the download take?",
+    "What checksum does get_url report after download?"
+  ],
+  "answer_card": {
+    "title": "get_url return values",
+    "answer_md": "Key fields: `status_code`, `msg`, `url`, `elapsed` (seconds), `dest`, `size`, `checksum_src`/`checksum_dest` (sha1), `md5sum`, `backup_file`, `owner`/`group`/`uid`/`gid`, `mode`, `secontext`, `state`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/get_url_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

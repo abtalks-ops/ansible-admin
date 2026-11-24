@@ -1,0 +1,15 @@
+{
+ "chunk_id": "c65f8fbc61a6663c",
+ "chunk_hash": "c65f8fbc61a6663c",
+ "summary": "Example: normpath turns /foo//bar into /foo/bar.",
+ "questions": [
+  "How do I turn /foo//bar into /foo/bar?"
+ ],
+ "answer_card": {
+  "title": "normpath example",
+  "answer_md": "```yaml\n{{ path | normpath }}   # '/foo//bar' -> '/foo/bar'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/normpath_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

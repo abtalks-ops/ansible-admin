@@ -1,0 +1,16 @@
+{
+ "chunk_id": "26bf9c8f6cf76723",
+ "chunk_hash": "26bf9c8f6cf76723",
+ "summary": "purestorage.flasharray assumes all Fusion fleet members run the same Purity//FA version as the connected array, and FlashArray//CBS isn't supported as a fleet member.",
+ "questions": [
+  "Does purestorage.flasharray support Cloud Block Store in a Fusion fleet?",
+  "Does Ansible handle mixed Purity versions in a Fusion fleet?"
+ ],
+ "answer_card": {
+  "title": "purestorage.flasharray Fusion fleet limitations",
+  "answer_md": "- All Fusion fleet members are assumed to run the **same Purity//FA version** as the array Ansible connects to.\n- **FlashArray//CBS** is not supported as a Fusion fleet member.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "19de4780a2f71f5a",
+ "chunk_hash": "19de4780a2f71f5a",
+ "summary": "Shows publishing a collection tarball with ansible-galaxy collection publish, which assumes a configured token, triggers a Galaxy import and waits for it unless --no-wait is given.",
+ "questions": [
+  "How do I upload my collection tarball to Galaxy from the terminal?",
+  "Can I publish a collection without waiting for the import to finish?",
+  "Where can I check the status of a Galaxy import?"
+ ],
+ "answer_card": {
+  "title": "Publish a collection from the CLI",
+  "answer_md": "```bash\nansible-galaxy collection publish path/to/my_namespace-my_collection-1.0.0.tar.gz\n```\nAssumes your API token is in configuration. This triggers the same import as a website upload and waits for it to finish. Use `--no-wait` to return immediately and check progress on your **My Imports** page.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

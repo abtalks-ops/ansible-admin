@@ -1,0 +1,15 @@
+{
+ "chunk_id": "e6e64eeb0b0b783b",
+ "chunk_hash": "e6e64eeb0b0b783b",
+ "summary": "urlsplit splits a URL into its components.",
+ "questions": [
+  "How do I parse a URL into parts in Ansible?"
+ ],
+ "answer_card": {
+  "title": "urlsplit filter",
+  "answer_md": "`{{ url | urlsplit }}` splits a URL into its component parts.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/urlsplit_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

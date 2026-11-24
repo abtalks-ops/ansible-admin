@@ -1,0 +1,17 @@
+{
+  "chunk_id": "f5f5dc1a152dfe5c",
+  "chunk_hash": "f5f5dc1a152dfe5c",
+  "summary": "Recommends Kerberos for domain environments (supports delegation and HTTP message encryption), notes extra control-node setup is required, and shows host vars for psrp and winrm.",
+  "questions": [
+    "How do I configure Kerberos authentication for Windows hosts in Ansible?",
+    "What username format do I use for Kerberos with WinRM?",
+    "How do I stop psrp from falling back to NTLM?"
+  ],
+  "answer_card": {
+    "title": "Using Kerberos auth with WinRM",
+    "answer_md": "Kerberos is recommended in domains: it supports credential delegation and message encryption over HTTP. It needs extra setup on the Ansible host (see `windows_winrm_kerberos`).\n\n```yaml\nansible_user: username@MY.DOMAIN.COM\nansible_password: Password\nansible_connection: psrp\nansible_psrp_auth: negotiate   # or kerberos to disable NTLM fallback\n# winrm:\nansible_winrm_transport: kerberos\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

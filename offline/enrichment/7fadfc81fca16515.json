@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7fadfc81fca16515",
+ "chunk_hash": "7fadfc81fca16515",
+ "summary": "An httpapi plugin must implement send_request() wrapping connection.send(), adding fixed headers or paths, building payloads, and unpacking responses.",
+ "questions": [
+  "What method must an httpapi plugin implement to send requests?",
+  "How do I add common headers to all httpapi requests?"
+ ],
+ "answer_card": {
+  "title": "Implement send_request in httpapi",
+  "answer_md": "```python\nfrom ansible.module_utils.six.moves.urllib.error import HTTPError\n\ndef send_request(self, data, path, method='POST'):\n    headers = {'Content-Type': 'application/json'}\n    try:\n        response, content = self.connection.send(path, data, method=method, headers=headers)\n    except HTTPError as exc:\n        return exc.code, exc.read()\n    return handle_response(content)   # e.g. JSON text -> dict\n```\nUse it to add fixed headers and root paths, format payloads, and unpack responses for callers.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_plugins_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

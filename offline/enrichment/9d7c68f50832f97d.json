@@ -1,0 +1,19 @@
+{
+ "chunk_id": "9d7c68f50832f97d",
+ "chunk_hash": "9d7c68f50832f97d",
+ "summary": "Lists objective requirements for contributing modules: Python or PowerShell, AnsibleModule, Python 2.6/3.5 support or documented minimum, PEP 8, GPLv3+, DCO, docs standards, tests, minimal dependencies, check mode, readability, and correct _facts vs _info naming.",
+ "questions": [
+  "What license must a contributed module use?",
+  "Which Python versions must a contributed module support?",
+  "When should a module be named _facts versus _info?",
+  "Does my module need tests to be accepted into a collection?",
+  "Do contributed modules have to support check mode?"
+ ],
+ "answer_card": {
+  "title": "Objective requirements for contributed modules",
+  "answer_md": "- Python, or PowerShell for Windows; use `AnsibleModule`\n- Support Python 2.6 and 3.5 (or document the minimum and why in `DOCUMENTATION` requirements); proper Py3 syntax; PEP 8\n- License **GPLv3 or later**; understand the DCO\n- Follow formatting/doc standards; include comprehensive tests; minimize deps; support check_mode if possible; readable code\n- `_facts` only if it mainly returns host-specific `ansible_facts`; general/non-host info modules are `_info`\n\nCollections may add requirements.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_checklist.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

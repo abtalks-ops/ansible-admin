@@ -1,0 +1,17 @@
+{
+  "chunk_id": "45099013145bb68d",
+  "chunk_hash": "45099013145bb68d",
+  "summary": "The assert module checks that given expressions are true and can show a custom message; it also works on Windows targets.",
+  "questions": [
+    "How do I make a playbook fail if a condition isn't met?",
+    "Can I validate input variables at the start of a play?",
+    "Does assert work against Windows hosts?"
+  ],
+  "answer_card": {
+    "title": "Validate conditions with assert",
+    "answer_md": "`ansible.builtin.assert` fails the task if any expression in `that` is false, with an optional custom message. Works on Windows targets too.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/assert_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

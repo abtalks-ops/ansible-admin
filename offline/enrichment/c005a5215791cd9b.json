@@ -1,0 +1,18 @@
+{
+  "chunk_id": "c005a5215791cd9b",
+  "chunk_hash": "c005a5215791cd9b",
+  "summary": "Lists file module parameters: access_time (preserve, a YYYYMMDDHHMM.SS value, or now; defaults vary by state), access_time_format, attributes, and follow (default true since 2.5; set false when creating a symlink to a non-existent target to avoid a warning).",
+  "questions": [
+    "How do I set a file's access time with Ansible?",
+    "Why do I get a permissions warning when creating a symlink to a file that doesn't exist yet?",
+    "Does the file module follow symlinks by default?",
+    "What time format does access_time use?"
+  ],
+  "answer_card": {
+    "title": "file parameters: access_time, follow",
+    "answer_md": "- `access_time` (2.7): `preserve`, a time in `YYYYMMDDHHMM.SS` (default format), or `now`. Default `None` means `preserve` for `state=file/directory/link/hard` and `now` for `state=touch`.\n- `access_time_format` (default `%Y%m%d%H%M.%S`): strftime format for `access_time`.\n- `attributes` (alias `attr`): chattr flags in `lsattr` order; `=` assumed unless `+`/`-`.\n- `follow` (default **true**; false before 2.5): follow links. With `state=link`, `follow=yes` plus `mode` etc. can modify `src`. When creating a symlink to a non-existent destination, set `follow=false` to avoid a permissions warning.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

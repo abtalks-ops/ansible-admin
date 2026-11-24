@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b82da04afb4cfd80",
+ "chunk_hash": "b82da04afb4cfd80",
+ "summary": "Cheatsheet examples for ansible-doc: `-F` shows plugin names with their source files and `-t module -l` lists available modules.",
+ "questions": [
+  "How do I list all modules available on my control node?",
+  "How can I find which file a plugin is loaded from?",
+  "What ansible-doc option lists plugins of a given type?"
+ ],
+ "answer_card": {
+  "title": "List plugins with ansible-doc",
+  "answer_md": "- Plugin names and source files: `ansible-doc -F`\n- List available modules: `ansible-doc -t module -l` (change `-t` for other plugin types)",
+  "source_url": "https://docs.ansible.com/ansible/latest/command_guide/cheatsheet.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:04+00:00"
+}

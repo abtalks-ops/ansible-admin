@@ -1,0 +1,17 @@
+{
+ "chunk_id": "21d5621a39e383c7",
+ "chunk_hash": "21d5621a39e383c7",
+ "summary": "amazon.aws deprecated ec2_instance tenancy and placement_group in favour of placement, and s3_object keys with a leading slash (removal after 2025-12-01).",
+ "questions": [
+  "ec2_instance warns about placement_group, what should I use?",
+  "Can s3_object keys start with a slash?",
+  "How do I set tenancy in ec2_instance now?"
+ ],
+ "answer_card": {
+  "title": "ec2_instance placement and s3_object keys",
+  "answer_md": "- `ec2_instance`: `tenancy` and `placement_group` are deprecated; use the **`placement`** dict:\n\n```yaml\nplacement:\n  tenancy: dedicated\n  group_name: my-pg\n```\n\n- `s3_object`: object keys with a **leading `/`** are deprecated (removed after 2025-12-01). Drop the slash.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:02+00:00"
+}

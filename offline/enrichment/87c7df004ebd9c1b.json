@@ -1,0 +1,15 @@
+{
+ "chunk_id": "87c7df004ebd9c1b",
+ "chunk_hash": "87c7df004ebd9c1b",
+ "summary": "setup/once/TARGET runs a setup target before the first test needing it, and setup/always/TARGET runs it before each one.",
+ "questions": [
+  "How do I run a setup target before my integration test?"
+ ],
+ "answer_card": {
+  "title": "Setup aliases",
+  "answer_md": "- `setup/once/TARGET`: run before the first target that needs it\n- `setup/always/TARGET`: run before each target that needs it",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/integration-aliases.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

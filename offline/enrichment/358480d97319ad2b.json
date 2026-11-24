@@ -1,0 +1,15 @@
+{
+ "chunk_id": "358480d97319ad2b",
+ "chunk_hash": "358480d97319ad2b",
+ "summary": "Examples: 8 | pow(5) is 32768, 2 | pow(2) is 4, and me | pow(3).",
+ "questions": [
+  "What's an example of the pow filter?"
+ ],
+ "answer_card": {
+  "title": "pow examples",
+  "answer_md": "```yaml\neight_power_five: \"{{ 8 | pow(5) }}\"   # 32768\nsquare_of_2: \"{{ 2 | pow(2) }}\"        # 4\ncube_me: \"{{ me | pow(3) }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pow_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

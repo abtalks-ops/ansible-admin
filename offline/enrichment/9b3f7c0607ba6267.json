@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9b3f7c0607ba6267",
+ "chunk_hash": "9b3f7c0607ba6267",
+ "summary": "Provides the Optimize-Assemblies PowerShell function, which uses ngen.exe to install native images for loaded Microsoft.PowerShell assemblies. Since every Windows module uses PowerShell, this cuts the startup overhead of each task.",
+ "questions": [
+  "What script do I run to ngen PowerShell assemblies?",
+  "How do I reduce per-task overhead on Windows hosts?",
+  "Where is ngen.exe located for the optimization?",
+  "Why does PowerShell startup time matter for Ansible?"
+ ],
+ "answer_card": {
+  "title": "Speeding up PowerShell startup with ngen",
+  "answer_md": "Every Windows Ansible module uses PowerShell, so faster startup (around 10x) removes overhead from every task. Run this in an **Administrator** PowerShell session (it takes tens of seconds):\n\n```powershell\nfunction Optimize-Assemblies {\n    param (\n        [string]$assemblyFilter = \"Microsoft.PowerShell.\",\n        [string]$activity = \"Native Image Installation\"\n    )\n    try {\n        $ngenPath = [System.IO.Path]::Combine([Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory(), \"ngen.exe\")\n        if (-Not (Test-Path $ngenPath)) {\n            Write-Host \"Ngen.exe not found at $ngenPath. Make sure .NET Framework is installed.\"\n            return\n        }\n        $assemblies = [AppDomain]::CurrentDomain.GetAssemblies()\n        $filteredAssemblies = $assemblies | Where-Object { $_.FullName -ilike \"$assemblyFilter*\" }\n        if ($filteredAssemblies.Count -eq 0) {\n            Write-Host \"No matching assemblies found for optimization.\"\n            return\n        }\n        foreach ($assembly in $filteredAssemblies) {\n            $name = [System.IO.Path]::GetFileName($assembly.Location)\n            Write-Progress -Activity $activity -Status \"Optimizing $name\"\n            Start-Process -FilePath $ngenPath -ArgumentList \"install `\"$($assembly.Location)`\"\" -Wait -WindowStyle Hidden\n        }\n        Write-Host \"Optimization complete.\"\n    } catch {\n        Write-Host \"An error occurred: $_\"\n    }\n}\n\nOptimize-Assemblies -assemblyFilter \"Microsoft.PowerShell.\"\n```\n\nIf native images were already created by the ngen task or service, you won't see a difference.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_performance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

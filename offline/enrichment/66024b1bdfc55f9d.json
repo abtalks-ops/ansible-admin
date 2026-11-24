@@ -1,0 +1,16 @@
+{
+ "chunk_id": "66024b1bdfc55f9d",
+ "chunk_hash": "66024b1bdfc55f9d",
+ "summary": "FreeBSD doesn't guarantee /usr/local/bin/python exists; best practice is installing a supported Python like lang/python311 plus the lang/python3 and lang/python meta ports, which create python and python3 symlinks.",
+ "questions": [
+  "Why is /usr/local/bin/python missing on FreeBSD?",
+  "Which FreeBSD ports should I install for Ansible?"
+ ],
+ "answer_card": {
+  "title": "FreeBSD Python packages",
+  "answer_md": "Install a supported Python plus both meta ports:\n- `lang/python311` (the interpreter)\n- `lang/python3` (links `python3` → `python3.11`)\n- `lang/python` (links `python` → `python3`)\n\nThen `/usr/local/bin/python` and `/usr/local/bin/python3` exist as symlinks.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_bsd.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

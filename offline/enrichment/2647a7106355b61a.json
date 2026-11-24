@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2647a7106355b61a",
+ "chunk_hash": "2647a7106355b61a",
+ "summary": "community.vmware deprecates many module_utils helpers such as ansible_date_time_facts, get_tag_by_name, vmware_argument_spec, get_folder_path and get_cluster_by_name for removal in 8.0.0.",
+ "questions": [
+  "Is vmware_argument_spec deprecated in community.vmware?",
+  "Which community.vmware module_utils helpers are deprecated?"
+ ],
+ "answer_card": {
+  "title": "community.vmware module_utils deprecations (part 1)",
+  "answer_md": "Removed in community.vmware **8.0.0**:\n\n- `module_utils.vmware`: `ansible_date_time_facts`, `find_host_by_cluster_datacenter`, `vmware_argument_spec`, and `PyVmomi.get_all_hosts_by_cluster`, `get_folder_path`, `vcenter_version_at_least`\n- `module_utils.vmware_rest_client`: `get_tag_by_name`, `get_tags_for_hostsystem`, `get_cluster_by_name`",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:59+00:00"
+}

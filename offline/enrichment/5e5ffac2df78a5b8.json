@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5e5ffac2df78a5b8",
+ "chunk_hash": "5e5ffac2df78a5b8",
+ "summary": "Windows integration tests need a non-production Windows host with PowerShell Remoting enabled and an inventory.winrm file, then run ansible-test windows-integration.",
+ "questions": [
+  "How do I run Ansible's Windows integration tests?",
+  "How do I set up the WinRM inventory for testing?"
+ ],
+ "answer_card": {
+  "title": "Windows integration tests",
+  "answer_md": "Use a non-production Windows Server.\n```shell-session\n# on the Windows host\nEnable-PSRemoting -Force\n# on the controller\ncp inventory.winrm.template inventory.winrm\n${EDITOR:-vi} inventory.winrm\nansible-test windows-integration -v shippable/\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_integration.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:46+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "dc142e6a0c2473fb",
+  "chunk_hash": "dc142e6a0c2473fb",
+  "summary": "Shows example output of listing one collection installed in multiple paths, and using `-p` with colon-separated paths to search extra locations, which are prepended to the configured search paths.",
+  "questions": [
+    "How do I list collections in a directory that isn't in my configured paths?",
+    "Can I pass multiple paths to ansible-galaxy collection list?",
+    "Why does the same collection show up twice with different versions?"
+  ],
+  "answer_card": {
+    "title": "List collections from extra paths",
+    "answer_md": "Use `-p` with one or more paths separated by `:`. They are added to the **beginning** of the configured collections search paths:\n\n```bash\nansible-galaxy collection list -p '/opt/ansible/collections:/etc/ansible/collections'\n```\n\nIf a collection is installed in several paths, `ansible-galaxy collection list <fqcn>` shows each instance with its own version (e.g. `fortinet.fortios 1.0.1` in `~/.ansible/collections` and `1.0.6` in `/usr/share/ansible/collections`).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections_guide/collections_listing.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

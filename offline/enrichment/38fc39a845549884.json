@@ -1,0 +1,19 @@
+{
+  "chunk_id": "38fc39a845549884",
+  "chunk_hash": "38fc39a845549884",
+  "summary": "uri options: attributes, body, body_format (raw, json, form-urlencoded, form-multipart) which sets Content-Type, and ca_path.",
+  "questions": [
+    "How do I send a JSON body with the uri module?",
+    "How do I submit a form with uri?",
+    "How do I upload files with multipart in uri?",
+    "How do I trust a custom CA for uri?",
+    "Can I override Content-Type with body_format json?"
+  ],
+  "answer_card": {
+    "title": "uri body and body_format",
+    "answer_md": "- `body`: request body\n- `body_format`: `raw` (default), `json` (dict → JSON), `form-urlencoded` (dict/list of tuples), `form-multipart` (files; `multipart_encoding` per file). Sets `Content-Type` automatically; can override for json/form-urlencoded via `headers`, not for multipart.\n- `ca_path`: CA cert PEM",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/uri_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

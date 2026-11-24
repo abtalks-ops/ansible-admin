@@ -1,0 +1,16 @@
+{
+ "chunk_id": "cd6505a24a1d5576",
+ "chunk_hash": "cd6505a24a1d5576",
+ "summary": "kaytus.ksmanage adds upload_ssl, ssl_info and generate_ssl modules, renames its SDK, changes a URL path on owner change, and updates log, network bond and SNMP module attributes.",
+ "questions": [
+  "How do I upload an SSL certificate with kaytus.ksmanage?",
+  "Which new modules are in kaytus.ksmanage?"
+ ],
+ "answer_card": {
+  "title": "kaytus.ksmanage changes",
+  "answer_md": "- New modules: **`upload_ssl`**, **`ssl_info`**, **`generate_ssl`**.\n- The SDK used was renamed.\n- URL path changed when the owner changes.\n- `edit_m6_log_setting` adds `server_status`; `edit_network_bond` descriptions updated; `edit_snmp`/`edit_snmp_trap` changed allowed `auth_protocol` and `priv_protocol` values.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:42+00:00"
+}

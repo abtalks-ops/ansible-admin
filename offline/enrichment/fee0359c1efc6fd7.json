@@ -1,0 +1,17 @@
+{
+  "chunk_id": "fee0359c1efc6fd7",
+  "chunk_hash": "fee0359c1efc6fd7",
+  "summary": "Defines continuous delivery as frequent updates with zero downtime and introduces the lamp_haproxy example playbook (roles, templates, group vars, rolling upgrades) that deploys Apache, PHP, MySQL, Nagios and HAProxy on CentOS.",
+  "questions": [
+    "Can Ansible do zero-downtime continuous delivery?",
+    "Is there an example Ansible project for rolling upgrades of a web stack?",
+    "What does the lamp_haproxy example deploy?"
+  ],
+  "answer_card": {
+    "title": "Continuous delivery with Ansible",
+    "answer_md": "Continuous delivery means shipping updates frequently (some users deploy hourly or on every approved change), which needs zero-downtime updates. The guide uses the **lamp_haproxy** example (roles, templates, group variables, and an orchestration playbook for rolling upgrades), which deploys Apache, PHP, MySQL, Nagios and HAProxy to CentOS servers.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/guide_rolling_upgrade.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fa2879d43cdfe42e",
+ "chunk_hash": "fa2879d43cdfe42e",
+ "summary": "Ansible environments have three parts: the control node where Ansible runs, the inventory listing managed nodes, and the managed nodes Ansible controls.",
+ "questions": [
+  "What is a control node in Ansible?",
+  "What's the difference between a control node and a managed node?",
+  "What are the main parts of an Ansible setup?"
+ ],
+ "answer_card": {
+  "title": "Control node, inventory, managed node",
+  "answer_md": "- **Control node**: the machine with Ansible installed, where you run `ansible`, `ansible-inventory`, etc.\n- **Inventory**: the organized list of managed nodes, kept on the control node.\n- **Managed node**: a remote host that Ansible controls.",
+  "source_url": "https://docs.ansible.com/ansible/latest/getting_started/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

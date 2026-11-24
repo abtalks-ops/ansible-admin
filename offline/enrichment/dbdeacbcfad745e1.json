@@ -1,0 +1,18 @@
+{
+ "chunk_id": "dbdeacbcfad745e1",
+ "chunk_hash": "dbdeacbcfad745e1",
+ "summary": "SSH key auth on Windows works like on POSIX, but admin users' keys go in C:\\ProgramData\\ssh\\administrators_authorized_keys unless you remove the Match Group administrators block in sshd_config. Keys suffer from the double-hop problem, so use become with credentials to reach network resources.",
+ "questions": [
+  "Where do I put the authorized_keys file for an admin user on Windows?",
+  "Why is my SSH key ignored for an administrator account on Windows?",
+  "Why can't my key-authenticated Ansible task access a network share on Windows?",
+  "How do I make admin users use their profile's authorized_keys?"
+ ],
+ "answer_card": {
+  "title": "SSH key authentication on Windows",
+  "answer_md": "Generate a key pair with `ssh-keygen` and add the public key to `authorized_keys` in the user's profile, as on Linux.\n\nThe difference: for **admin users**, the file is `C:\\ProgramData\\ssh\\administrators_authorized_keys`, not `.ssh` in the profile. To use the profile location instead, remove or comment these lines in `C:\\ProgramData\\ssh\\sshd_config` and restart `sshd`:\n\n```text\nMatch Group administrators\n    AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys\n```\n\nKeys work for local and domain accounts but have the **double-hop** problem: the session has no credentials for network resources. Use `become` with the credentials of a user who needs that access.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_ssh.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "52874c259f4ceeba",
+  "chunk_hash": "52874c259f4ceeba",
+  "summary": "Introduces variables for managing differences between systems: defined in playbooks, inventory, files, roles or CLI, or registered from tasks, and used in module args, when, templates and loops.",
+  "questions": [
+    "Where can I define variables in Ansible?",
+    "What are Ansible variables used for?"
+  ],
+  "answer_card": {
+    "title": "Ansible variables overview",
+    "answer_md": "Variables represent differences between systems. Define them (as YAML scalars, lists, dicts) in playbooks, inventory, reusable files, roles, or the command line, or create them by **registering** a task's result. Use them in module arguments, `when` conditions, templates and loops.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

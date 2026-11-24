@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f8dd3a922c54f526",
+ "chunk_hash": "f8dd3a922c54f526",
+ "summary": "Introduces Ansible markup, used to format docs for modules, plugins and roles with bold, italics, code, rules, and references. Since ansible-core 2.15 it also supports semantic markup for values, options, return values, environment variables and plugin references.",
+ "questions": [
+  "How do I add formatting like bold or code to my module documentation?",
+  "When was semantic markup added to Ansible docs?",
+  "What can Ansible markup reference besides URLs?"
+ ],
+ "answer_card": {
+  "title": "What Ansible markup is",
+  "answer_md": "Ansible markup formats documentation for modules, plugins and roles: bold, italics, code, horizontal lines, URLs, links, module references and RST references. Since **ansible-core 2.15** it also has **semantic markup** for values, options, return values, environment variables and plugin references.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/ansible_markup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

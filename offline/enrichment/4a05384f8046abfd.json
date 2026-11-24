@@ -1,0 +1,16 @@
+{
+ "chunk_id": "4a05384f8046abfd",
+ "chunk_hash": "4a05384f8046abfd",
+ "summary": "Pattern operators are processed in order: : and , first, then &, then !, so their position in the string doesn't change the result.",
+ "questions": [
+  "Does the order of & and ! in a pattern matter?",
+  "How does Ansible evaluate complex host patterns?"
+ ],
+ "answer_card": {
+  "title": "Pattern processing order",
+  "answer_md": "Processing order: 1) `:` and `,`, 2) `&`, 3) `!`.\n\nSo `a:b:&c:!d:!e`, `&c:a:!d:b:!e` and `!d:a:!e:&c:b` are all: in (a or b) AND in c AND not in d or e.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_patterns.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

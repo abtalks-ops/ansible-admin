@@ -1,0 +1,16 @@
+{
+ "chunk_id": "f21d98e03d4fc041",
+ "chunk_hash": "f21d98e03d4fc041",
+ "summary": "Standalone local modules or plugins can be made available everywhere through configured paths, or only to certain playbooks or roles through adjacent directories.",
+ "questions": [
+  "Can I make a custom module available only to one playbook?",
+  "What are the options for loading standalone modules?"
+ ],
+ "answer_card": {
+  "title": "Configured vs adjacent paths",
+  "answer_md": "Use **configured paths** to make a standalone module/plugin available to all playbooks and roles, or **adjacent paths** (next to a playbook or inside a role) to limit it to those.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

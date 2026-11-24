@@ -1,0 +1,17 @@
+{
+  "chunk_id": "9dbc729eb37e0077",
+  "chunk_hash": "9dbc729eb37e0077",
+  "summary": "group_by creates in-memory groups from facts for later plays, converts spaces to dashes, and reports changed for tracking even though it doesn't touch the host.",
+  "questions": [
+    "How do I group hosts dynamically by OS or architecture?",
+    "Why does group_by report changed?",
+    "What happens to spaces in group_by group names?"
+  ],
+  "answer_card": {
+    "title": "Create dynamic groups with group_by",
+    "answer_md": "`ansible.builtin.group_by` creates ad-hoc inventory groups from facts for later plays (e.g. `hosts: machine_x86_64`). Spaces become `-`. It reports `changed` for tracking, though the host isn't modified. Works on Windows.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/group_by_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

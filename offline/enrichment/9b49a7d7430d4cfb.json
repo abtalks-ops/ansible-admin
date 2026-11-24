@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9b49a7d7430d4cfb",
+ "chunk_hash": "9b49a7d7430d4cfb",
+ "summary": "community.general also deprecates sensu_subscription, slack prepend_hash default auto (becoming never), the stackpath_compute inventory, and the yaml callback, which is removed in 12.0.0 in favor of result_format=yaml on the default callback.",
+ "questions": [
+  "What replaces the community.general.yaml callback?",
+  "How do I get YAML output from ansible-playbook without the yaml callback?",
+  "What will the slack prepend_hash default change to?"
+ ],
+ "answer_card": {
+  "title": "community.general yaml callback deprecated",
+  "answer_md": "- `sensu_subscription`: removed in 13.0.0; use `sensu.sensu_go`.\n- `slack`: `prepend_hash` default `auto` changes to **`never`** in 12.0.0.\n- `stackpath_compute` inventory: removed in 11.0.0.\n- **yaml callback:** deprecated in favor of `result_format=yaml` on `ansible.builtin.default`, and removed early in **community.general 12.0.0** because it relied on changing ansible-core 2.19 internals.\n\n```ini\n[defaults]\ncallback_result_format = yaml\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:24+00:00"
+}

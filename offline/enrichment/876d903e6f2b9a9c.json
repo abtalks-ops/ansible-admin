@@ -1,0 +1,16 @@
+{
+ "chunk_id": "876d903e6f2b9a9c",
+ "chunk_hash": "876d903e6f2b9a9c",
+ "summary": "Ansible 15 removed cyberark.pas (1.0.39) and netapp.cloudmanager (21.24.0), which can still be installed manually.",
+ "questions": [
+  "Which collections were removed in Ansible 15?",
+  "How do I keep using cyberark.pas with Ansible 15?"
+ ],
+ "answer_card": {
+  "title": "Collections removed in Ansible 15",
+  "answer_md": "Removed from Ansible 15:\n\n- cyberark.pas (was 1.0.39)\n- netapp.cloudmanager (was 21.24.0)\n\nInstall manually if needed: `ansible-galaxy collection install <name-of-collection>`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:28+00:00"
+}

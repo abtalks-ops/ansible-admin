@@ -1,0 +1,15 @@
+{
+ "chunk_id": "f212de6e95611317",
+ "chunk_hash": "f212de6e95611317",
+ "summary": "A jsonschema criteria file uses patternProperties to require every interface's admin_state to match 'up'.",
+ "questions": [
+  "How do I write a jsonschema rule that all interfaces are admin up?"
+ ],
+ "answer_card": {
+  "title": "jsonschema criteria example",
+  "answer_md": "`criteria/nxos_show_interface_admin_criteria.json`:\n```json\n{\n  \"type\": \"object\",\n  \"patternProperties\": {\n    \"^.*\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"admin_state\": {\"type\": \"string\", \"pattern\": \"up\"}\n      }\n    }\n  }\n}\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/validate.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

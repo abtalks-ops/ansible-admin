@@ -1,0 +1,16 @@
+{
+ "chunk_id": "3760488c346b17de",
+ "chunk_hash": "3760488c346b17de",
+ "summary": "Using a mapping for the action keyword (action: {module: ...}) is deprecated, removed in 2.23; use a string value for action and put arguments in args.",
+ "questions": [
+  "'Using a mapping for action is deprecated', how do I rewrite my task?",
+  "How do I use the action keyword correctly?"
+ ],
+ "answer_card": {
+  "title": "Use a string for action",
+  "answer_md": "```yaml\n# deprecated\naction:\n  module: ansible.builtin.debug\n# use\n- action: ansible.builtin.debug\n  args:\n    msg: Hello World!\n```\n\nThese warnings can be silenced with `deprecation_warnings = False` in `ansible.cfg`, but fixing the content is better because the behaviour is **removed in ansible-core 2.23**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.16.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

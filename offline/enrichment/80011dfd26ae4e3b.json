@@ -1,0 +1,17 @@
+{
+ "chunk_id": "80011dfd26ae4e3b",
+ "chunk_hash": "80011dfd26ae4e3b",
+ "summary": "Shows the output of encrypt_string with a vault ID (header $ANSIBLE_VAULT;1.2;AES256;dev) and how to encrypt a value piped on stdin with --stdin-name, warning that secrets typed on the command line end up in shell history.",
+ "questions": [
+  "How do I pipe a secret into ansible-vault encrypt_string?",
+  "Does a vault ID show up in the encrypted output?",
+  "Is it safe to type the secret on the command line?"
+ ],
+ "answer_card": {
+  "title": "Encrypt a string from stdin",
+  "answer_md": "With a vault ID, the header includes the label: `$ANSIBLE_VAULT;1.2;AES256;dev`.\n\nTo read the value from stdin:\n\n```bash\necho -n 'letmein' | ansible-vault encrypt_string --vault-id dev@a_password_file --stdin-name 'db_password'\n```\n\nOutput:\n\n```yaml\ndb_password: !vault |\n          $ANSIBLE_VAULT;1.2;AES256;dev\n          6132393135...\n```\n\n**Warning**: typing the secret directly on the command line leaves it in your shell history. Only do this for testing.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_encrypting_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

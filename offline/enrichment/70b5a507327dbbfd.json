@@ -1,0 +1,17 @@
+{
+ "chunk_id": "70b5a507327dbbfd",
+ "chunk_hash": "70b5a507327dbbfd",
+ "summary": "Resource module states: merged, replaced, overridden (risk of losing access), deleted, gathered, rendered (offline, native format) and parsed (offline, from running_config).",
+ "questions": [
+  "Which state should I use to add config without removing anything?",
+  "How do I convert device config text to structured data offline?",
+  "What does the gathered state return?"
+ ],
+ "answer_card": {
+  "title": "Network resource module states",
+  "answer_md": "- **merged**: add task config to device config.\n- **replaced**: replace the listed subsections.\n- **overridden**: replace the whole resource; can remove management access, use with care.\n- **deleted**: remove the subsection, restore defaults.\n- **gathered**: return device config under `gathered`.\n- **rendered**: produce device-native config under `rendered`, offline.\n- **parsed**: parse `running_config` into structured data under `parsed`, offline.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_resource_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

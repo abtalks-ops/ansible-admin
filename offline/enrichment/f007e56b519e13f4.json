@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f007e56b519e13f4",
+ "chunk_hash": "f007e56b519e13f4",
+ "summary": "More option fields: aliases (discouraged), version_added for later-added options, suboptions for dict structures; and module-level requirements (with minimum versions) and seealso (use FQCNs, plugin references since 2.15).",
+ "questions": [
+  "Should I add aliases to my module's options?",
+  "How do I document a dict option's structure?",
+  "How do I document that an option was added in a later version?",
+  "Where should I list Python library requirements in module docs?"
+ ],
+ "answer_card": {
+  "title": "Aliases, suboptions, requirements, seealso",
+  "answer_md": "- `aliases`: allowed but discouraged.\n- `version_added` (option): only if added after the module; quoted; collection version in collections.\n- `suboptions`: structure for dict or list-of-dict options.\n- `requirements`: list with minimum versions.\n- `seealso`: preferred over notes for references; use FQCNs (`ansible.builtin` for core); plugin refs since 2.15.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_documenting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

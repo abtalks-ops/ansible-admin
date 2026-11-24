@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2f6de25a08e6aeb9",
+ "chunk_hash": "2f6de25a08e6aeb9",
+ "summary": "module_utils uses a hybrid strategy: functions must accept text or bytes, return the same type or native strings and document which, usually converting to text at the start and back at the end.",
+ "questions": [
+  "What string types must module_utils functions accept?",
+  "What should a module_utils function return?"
+ ],
+ "answer_card": {
+  "title": "module_utils string strategy: hybrid",
+  "answer_md": "module_utils functions:\n- **must** accept text or byte strings\n- may return the same type given or the native type\n- **must** document which they return\n\nTypically convert inputs with `to_text` at the start and outputs with `to_native` (or back to the input type) at the end.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_python_3.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

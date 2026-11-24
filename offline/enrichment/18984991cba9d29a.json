@@ -1,0 +1,15 @@
+{
+ "chunk_id": "18984991cba9d29a",
+ "chunk_hash": "18984991cba9d29a",
+ "summary": "Defines 'log on' as making a system or network recognize you to start a session, typically with a username and password.",
+ "questions": [
+  "What does 'log on' mean in the style guide?"
+ ],
+ "answer_card": {
+  "title": "Log on",
+  "answer_md": "**Log on**: make a computer system or network recognize you so you can start a session, usually with a username and password.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/spelling_word_choice.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:27+00:00"
+}

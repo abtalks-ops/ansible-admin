@@ -1,0 +1,15 @@
+{
+ "chunk_id": "c2263fd7ac9dd7fb",
+ "chunk_hash": "c2263fd7ac9dd7fb",
+ "summary": "ansible.builtin.urlize is the Jinja builtin filter that converts URLs in text into clickable links.",
+ "questions": [
+  "How do I turn URLs in text into HTML links?"
+ ],
+ "answer_card": {
+  "title": "urlize filter",
+  "answer_md": "`{{ text | urlize }}` converts URLs in text into clickable links (Jinja builtin).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/urlize_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

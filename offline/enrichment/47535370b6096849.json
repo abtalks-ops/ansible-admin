@@ -1,0 +1,15 @@
+{
+ "chunk_id": "47535370b6096849",
+ "chunk_hash": "47535370b6096849",
+ "summary": "expandvars returns the string with environment variables substituted.",
+ "questions": [
+  "What does expandvars return?"
+ ],
+ "answer_card": {
+  "title": "expandvars return value",
+  "answer_md": "The string with environment variable values substituted.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/expandvars_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

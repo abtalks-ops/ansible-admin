@@ -1,0 +1,18 @@
+{
+  "chunk_id": "f272b1d150b9c460",
+  "chunk_hash": "f272b1d150b9c460",
+  "summary": "Covers to_json/to_yaml, to_nice_json/to_nice_yaml with indent, the width option to avoid PyYAML's 80-character line wrapping, and from_json/from_yaml for parsing.",
+  "questions": [
+    "How do I convert a variable to pretty JSON or YAML?",
+    "Why does to_yaml break my long lines at 80 characters?",
+    "How do I change indentation in to_nice_yaml?",
+    "How do I parse a JSON string into a variable?"
+  ],
+  "answer_card": {
+    "title": "Formatting data as JSON and YAML",
+    "answer_md": "```jinja\n{{ some_variable | to_json }}\n{{ some_variable | to_nice_json(indent=2) }}\n{{ some_variable | to_nice_yaml(indent=8) }}\n```\n\nPyYAML wraps at 80 chars by default. Use a hard-coded `width` (not `float(\"inf\")`):\n\n```jinja\n{{ some_variable | to_nice_yaml(indent=8, width=1337) }}\n```\n\nParse with `from_json` / `from_yaml`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

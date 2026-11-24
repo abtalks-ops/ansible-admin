@@ -1,0 +1,16 @@
+{
+ "chunk_id": "f3ed2c8213362b26",
+ "chunk_hash": "f3ed2c8213362b26",
+ "summary": "Use fixture files to load pre-generated data when mocking device output or complex external library data; Python placebo can help simulate APIs.",
+ "questions": [
+  "How can I feed recorded device output into a unit test?",
+  "What tool helps mock API responses in Ansible unit tests?"
+ ],
+ "answer_card": {
+  "title": "Use fixture data in unit tests",
+  "answer_md": "To fake results fetched from devices or complex data from external libraries, store pre-generated data as **fixtures** and read it in your tests (see `CPU_INFO_TEST_SCENARIOS` for an example). For simulating APIs, Python **placebo** can help.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9c685aefe4c86c0e",
+ "chunk_hash": "9c685aefe4c86c0e",
+ "summary": "z/OS UNIX System Services can run Python and spawn shells over SSH, so it can act as an Ansible managed node. ansible.builtin modules can change files and directories there, and any shell command can be automated in a playbook.",
+ "questions": [
+  "Can I use ansible.builtin modules against z/OS UNIX System Services?",
+  "Does z/OS USS meet the requirements of an Ansible managed node?",
+  "How does Ansible connect to z/OS UNIX hosts?"
+ ],
+ "answer_card": {
+  "title": "z/OS UNIX System Services as a managed node",
+  "answer_md": "z/OS UNIX System Services (USS) supports what an Ansible managed node needs: it runs Python and spawns interactive shells over SSH. You can use `ansible.builtin` modules to change files, directories and so on, and anything you can type into the USS shell can be automated in a playbook.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_zos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

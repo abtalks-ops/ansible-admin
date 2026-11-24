@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7cb887259bc6500e",
+ "chunk_hash": "7cb887259bc6500e",
+ "summary": "A standalone role and its collection counterpart can coexist temporarily, for example in an RPM (Ansible 2.9+), by placing the collection in /usr/share/ansible/collections/ansible_collections and copying the role to /usr/share/ansible/roles, with the role using FQCNs for modules.",
+ "questions": [
+  "Can I ship a role both as a standalone role and inside a collection?",
+  "Where should an RPM install a collection and a standalone role?"
+ ],
+ "answer_card": {
+  "title": "Ship standalone and collection roles together",
+  "answer_md": "For a transition period (Ansible 2.9+):\n1. Install the collection under `/usr/share/ansible/collections/ansible_collections/`.\n2. Copy each collection role into `/usr/share/ansible/roles/` under the standalone role name.\n\nThe role references modules/plugins by FQCN, so they're found in the collection. You could also split modules/plugins and the role into separate collections.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/migrating_roles.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:03+00:00"
+}

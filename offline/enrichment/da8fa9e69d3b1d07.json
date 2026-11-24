@@ -1,0 +1,17 @@
+{
+  "chunk_id": "da8fa9e69d3b1d07",
+  "chunk_hash": "da8fa9e69d3b1d07",
+  "summary": "Explains `serial` for rolling updates: Ansible runs the whole play on a batch of hosts before moving to the next batch. With `serial: 3` and 6 hosts, both tasks finish on 3 hosts before the next 3.",
+  "questions": [
+    "How do I update only a few servers at a time?",
+    "How do I do a rolling update with Ansible?",
+    "With serial, does each batch run the whole play before the next batch starts?"
+  ],
+  "answer_card": {
+    "title": "Batch hosts with serial",
+    "answer_md": "By default a play runs in parallel against all hosts in `hosts:`. Use `serial` to manage a few at a time:\n\n```yaml\n- name: test play\n  hosts: webservers\n  serial: 3\n  gather_facts: False\n  tasks:\n    - command: hostname\n    - command: hostname\n```\nWith 6 webservers, Ansible runs the **entire play** (both tasks) on 3 hosts, then on the next 3.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

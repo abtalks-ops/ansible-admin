@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7dd7392d925ed90a",
+ "chunk_hash": "7dd7392d925ed90a",
+ "summary": "The normalized resource taxonomy maps vendor resource types to standard names (for example VMware VMs and EC2 instances are both virtual_machine), organized by category, and queries set facts.device_type to the snake_case value.",
+ "questions": [
+  "What device_type should I use for an EC2 instance in resource reporting?",
+  "How do vendor-specific resources map to common types?",
+  "Which field holds the taxonomy type in a resource query?"
+ ],
+ "answer_card": {
+  "title": "Normalized resource taxonomy",
+  "answer_md": "Vendor types map to standard names: a VMware VM and an AWS EC2 instance are both `virtual_machine`; an Azure LB and an F5 VIP are both `load_balancer`. Set `facts.device_type` to the `snake_case` value from the category tables.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_resource_reporting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

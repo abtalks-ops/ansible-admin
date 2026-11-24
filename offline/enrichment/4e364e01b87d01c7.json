@@ -1,0 +1,19 @@
+{
+  "chunk_id": "4e364e01b87d01c7",
+  "chunk_hash": "4e364e01b87d01c7",
+  "summary": "Explains `serial` as a percentage (remainder goes in the final batch, e.g. 20 hosts at 30% gives 6, 6, 6, 2), as a list of sizes where the last value repeats, as a list of percentages, or mixed. A batch always has at least one host.",
+  "questions": [
+    "Can I set serial as a percentage of hosts?",
+    "How do I start with one canary host and then do bigger batches?",
+    "What happens with leftover hosts when serial doesn't divide evenly?",
+    "Can I mix numbers and percentages in serial?",
+    "What if serial's percentage rounds to zero hosts?"
+  ],
+  "answer_card": {
+    "title": "serial percentages and lists",
+    "answer_md": "Percentage of total hosts:\n```yaml\nserial: \"30%\"\n```\nWith 20 hosts: batches of 6, 6, 6, then 2 (the remainder).\n\nList of sizes (last value repeats for remaining hosts):\n```yaml\nserial:\n  - 1\n  - 5\n  - 10\n```\nFirst batch 1 host, then 5, then 10 at a time (or whatever remains).\n\nPercentages or mixed values work too:\n```yaml\nserial: [\"10%\", \"20%\", \"100%\"]\nserial: [1, 5, \"20%\"]\n```\nHowever small the percentage, each pass has at least 1 host.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

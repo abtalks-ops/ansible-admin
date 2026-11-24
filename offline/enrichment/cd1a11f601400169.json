@@ -1,0 +1,17 @@
+{
+  "chunk_id": "cd1a11f601400169",
+  "chunk_hash": "cd1a11f601400169",
+  "summary": "ansible-core 2.18 removals: Python 3.10 on the controller (3.11+ required), vars as a list of dicts (it must be a single dict), paramiko_ssh ssh_args/ssh_common_args/ssh_extra_args, ROLE_CACHE, PlayContext.verbosity, VariableManager._get_delegated_vars and the listify loader argument.",
+  "questions": [
+    "Why does my play fail with vars defined as a list?",
+    "Can paramiko_ssh still take ssh_extra_args?",
+    "What Python is required on the Ansible controller for core 2.18?"
+  ],
+  "answer_card": {
+    "title": "ansible-core 2.18 removals",
+    "answer_md": "- Controller requires **Python 3.11+**.\n- `vars:` must be a single dictionary. Lists of dictionaries are no longer allowed:\n\n```yaml\nvars:\n  a: 1\n  b: 2\n```\n\n- `paramiko_ssh` no longer accepts `ssh_args`, `ssh_common_args` or `ssh_extra_args`.\n- Removed internals: `ROLE_CACHE` (use `role_cache`), `PlayContext.verbosity`, `VariableManager._get_delegated_vars`, and the `loader` argument of `listify_lookup_plugin_terms`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

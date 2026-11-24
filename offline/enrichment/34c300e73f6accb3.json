@@ -1,0 +1,18 @@
+{
+ "chunk_id": "34c300e73f6accb3",
+ "chunk_hash": "34c300e73f6accb3",
+ "summary": "vmware.vmware_rest removed deprecated appliance access modules (consolecli, dcui, shell, ssh and their info modules) and appliance networking DNS domains/hostname/servers modules.",
+ "questions": [
+  "Is appliance_access_ssh still in vmware_rest?",
+  "How do I enable SSH on the vCenter appliance after the upgrade?",
+  "Why did appliance_networking_dns_hostname disappear?",
+  "Which vmware_rest appliance modules were removed?"
+ ],
+ "answer_card": {
+  "title": "vmware_rest removed appliance access/DNS modules",
+  "answer_md": "These `vmware.vmware_rest` modules/lookups were **removed** in Ansible 15 (vmware_rest PR #648). Remove them from playbooks or switch to `vmware.vmware` equivalents where available:\n\n- `appliance_access_consolecli` (+ `_info`)\n- `appliance_access_dcui` (+ `_info`)\n- `appliance_access_shell` (+ `_info`)\n- `appliance_access_ssh` (+ `_info`)\n- `appliance_networking_dns_domains` (+ `_info`)\n- `appliance_networking_dns_hostname` (+ `_info`)\n- `appliance_networking_dns_servers`",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:48+00:00"
+}

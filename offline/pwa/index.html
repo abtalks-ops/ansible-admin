@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Ansible Admin Offline</title>
+  <meta name="description" content="Search the Ansible documentation on your device, fully offline." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <div class="app">
+    <header class="top">
+      <div class="brand">▲ ansible<span class="dim">_</span>admin <span class="tag">offline</span></div>
+      <button id="menuBtn" class="ghost" aria-label="Index settings" aria-expanded="false">⚙</button>
+    </header>
+
+    <section id="panel" class="panel" hidden>
+      <h2>Index on this device</h2>
+      <dl id="stats"></dl>
+      <div class="row">
+        <button id="updateBtn" class="ghost">Check for updates</button>
+        <button id="deleteBtn" class="ghost danger">Delete downloaded data</button>
+      </div>
+      <label class="toggle"><input type="checkbox" id="rainToggle" checked /> digital rain</label>
+      <p class="muted small">Sources are shown under every result. ansible-core documentation is GPL-3.0, © Ansible project contributors.</p>
+    </section>
+
+    <section id="setup" class="setup" hidden>
+      <h1 class="glow">wake up, admin<span class="cursor">_</span></h1>
+      <p>Download the Ansible docs once and search them offline, anywhere.</p>
+      <div id="sizeInfo" class="muted"></div>
+      <button id="downloadBtn" class="primary">Download</button>
+      <div id="progress" class="progress" hidden><div id="bar"></div></div>
+      <div id="progressText" class="muted small"></div>
+    </section>
+
+    <main id="main" hidden>
+      <form id="searchForm" class="search" role="search">
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Ask about ansible-core… e.g. run a handler immediately" aria-label="Search the docs" />
+        <button type="submit" class="primary" aria-label="Search">↵</button>
+      </form>
+      <div id="status" class="muted small"></div>
+      <div id="results" aria-live="polite"></div>
+    </main>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

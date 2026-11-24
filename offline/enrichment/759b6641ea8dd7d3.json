@@ -1,0 +1,18 @@
+{
+  "chunk_id": "759b6641ea8dd7d3",
+  "chunk_hash": "759b6641ea8dd7d3",
+  "summary": "Explains YAML anchors (`&`) and aliases (`*`) for sharing variable values, including the `<<` merge operator to reuse a dict and override one key. Also shows anchoring a nested value such as a version to reuse it inside another variable.",
+  "questions": [
+    "How do I reuse the same settings for two apps in my vars without repeating them?",
+    "What does <<: * mean in an Ansible YAML file?",
+    "How do I override one key while reusing an anchored dict?",
+    "Can I reuse a version number inside another variable with YAML anchors?"
+  ],
+  "answer_card": {
+    "title": "Share values with YAML anchors and aliases",
+    "answer_md": "Define an anchor with `&` and reuse it with an alias `*`. The `<<` merge key merges an anchored mapping and lets you override keys:\n\n```yaml\nvars:\n  app1:\n    jvm: &jvm_opts\n      opts: '-Xms1G -Xmx2G'\n      port: 1000\n      path: /usr/lib/app1\n  app2:\n    jvm:\n      <<: *jvm_opts\n      path: /usr/lib/app2\n```\n`app2` shares `opts` and `port` and overrides `path`.\n\nYou can also anchor a nested value and reuse it:\n```yaml\nvars:\n  webapp:\n    version: &my_version 1.0\n    custom_name:\n      - \"ToDo_App\"\n      - *my_version\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_advanced_syntax.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

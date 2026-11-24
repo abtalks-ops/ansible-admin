@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7b2fd82e987c3a3c",
+ "chunk_hash": "7b2fd82e987c3a3c",
+ "summary": "Old-style modules get a file with key=value parameters instead of JSON; Ansible treats a module as old-style when it has none of the other markers.",
+ "questions": [
+  "What's an old-style Ansible module?",
+  "How does Ansible decide a module is old-style?"
+ ],
+ "answer_card": {
+  "title": "Old-style modules",
+  "answer_md": "Like want JSON modules, but the args file contains `key=value` pairs. Ansible assumes old-style when no other module-type marker is present.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

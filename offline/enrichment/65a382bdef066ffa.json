@@ -1,0 +1,16 @@
+{
+ "chunk_id": "65a382bdef066ffa",
+ "chunk_hash": "65a382bdef066ffa",
+ "summary": "ansible-core 2.15 deprecated giving vars: as a list of dictionaries; use a single dictionary.",
+ "questions": [
+  "vars as a list gives a deprecation warning, how do I fix it?",
+  "Can I still define play vars as a list of dicts?"
+ ],
+ "answer_card": {
+  "title": "vars must be a dictionary",
+  "answer_md": "A list of dicts under `vars:` is deprecated. Use one mapping:\n\n```yaml\n# deprecated\nvars:\n  - var1: foo\n  - var2: bar\n# use\nvars:\n  var1: foo\n  var2: bar\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

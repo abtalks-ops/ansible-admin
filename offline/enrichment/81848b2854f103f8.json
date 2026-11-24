@@ -1,0 +1,19 @@
+{
+ "chunk_id": "81848b2854f103f8",
+ "chunk_hash": "81848b2854f103f8",
+ "summary": "Shows ad hoc package management with the yum module: ensure installed without upgrading, install a specific version, upgrade to latest, or remove. Notes alternatives when no module exists for your package manager.",
+ "questions": [
+  "How do I make sure a package is installed but not upgraded?",
+  "How do I install a specific package version ad hoc with yum?",
+  "How do I upgrade a package to the newest version on all webservers?",
+  "How do I uninstall a package across hosts with one command?",
+  "What if Ansible has no module for my package manager?"
+ ],
+ "answer_card": {
+  "title": "Manage packages with ad hoc commands",
+  "answer_md": "Using `ansible.builtin.yum` against `webservers`:\n- Installed, don't update: `-a \"name=acme state=present\"`\n- Specific version: `-a \"name=acme-1.5 state=present\"`\n- Latest: `-a \"name=acme state=latest\"`\n- Removed: `-a \"name=acme state=absent\"`\n\nIf no module exists for your package manager, use the `command` module or write a module.",
+  "source_url": "https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:04+00:00"
+}

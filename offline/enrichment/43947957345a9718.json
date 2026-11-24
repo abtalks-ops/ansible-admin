@@ -1,0 +1,17 @@
+{
+  "chunk_id": "43947957345a9718",
+  "chunk_hash": "43947957345a9718",
+  "summary": "Shows using win_domain_user and win_domain_group to manage Active Directory users and groups, with a looped example creating several domain accounts.",
+  "questions": [
+    "How do I create Active Directory users in bulk with Ansible?",
+    "Which module manages domain groups on Windows?",
+    "How do I set a password only when a domain user is first created?"
+  ],
+  "answer_card": {
+    "title": "Creating domain users in bulk",
+    "answer_md": "Use `win_domain_user` (and `win_domain_group` for groups):\n\n```yaml\n- win_domain_user:\n    name: '{{ item.name }}'\n    upn: '{{ item.name }}@MY.DOMAIN.COM'\n    password: '{{ item.password }}'\n    groups: [Test User, Application]\n    company: Ansible\n    update_password: on_create\n  loop:\n  - {name: Test User, password: ...}\n```\n\n`update_password: on_create` only sets the password when the account is created.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

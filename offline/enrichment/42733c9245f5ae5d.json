@@ -1,0 +1,17 @@
+{
+ "chunk_id": "42733c9245f5ae5d",
+ "chunk_hash": "42733c9245f5ae5d",
+ "summary": "Module Replacer is a preprocessor still used for PowerShell, doing string substitutions: public ones like module_utils wildcard imports, #<<INCLUDE_ANSIBLE_MODULE_COMMON>> and # POWERSHELL_COMMON, and internal ones not meant for modules.",
+ "questions": [
+  "What does # POWERSHELL_COMMON do in a module?",
+  "What is #<<INCLUDE_ANSIBLE_MODULE_COMMON>>?",
+  "How does Module Replacer work?"
+ ],
+ "answer_card": {
+  "title": "Module Replacer framework",
+  "answer_md": "A preprocessor doing straight string substitutions (still used for PowerShell).\n\nPublic replacements:\n- `from ansible.module_utils.MOD_LIB_NAME import *` → contents of that file (new-style Python only)\n- `#<<INCLUDE_ANSIBLE_MODULE_COMMON>>` → like `from ansible.module_utils.basic import *`\n- `# POWERSHELL_COMMON` → contents of `module_utils/powershell.ps1`\n\nInternal patterns exist too but shouldn't be used directly.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "a20832572ed25f22",
+  "chunk_hash": "a20832572ed25f22",
+  "summary": "Explains required certificate properties for WinRM certificate auth (clientAuth EKU and a UPN otherName SAN) and gives an OpenSSL script to generate the key and self-signed cert.",
+  "questions": [
+    "What properties does a WinRM client certificate need?",
+    "How do I generate a WinRM client certificate with OpenSSL?",
+    "What should the UPN be in a WinRM auth certificate?"
+  ],
+  "answer_card": {
+    "title": "Generating a WinRM client certificate with OpenSSL",
+    "answer_md": "The cert needs:\n- **Extended Key Usage**: `clientAuth (1.3.6.1.5.5.7.3.2)`\n- **SAN** `otherName` for `userPrincipalName (1.3.6.1.4.1.311.20.2.3)`, e.g. `$USERNAME@localhost`\n\n```bash\nUSERNAME=\"local-user\"\ncat > openssl.conf << EOL\ndistinguished_name = req_distinguished_name\n[req_distinguished_name]\n[v3_req_client]\nextendedKeyUsage = clientAuth\nsubjectAltName = otherName:1.3.6.1.4.1.311.20.2.3;UTF8:${USERNAME}@localhost\nEOL\nopenssl req -new -sha256 -subj \"/CN=${USERNAME}\" -newkey rsa:2048 -nodes -keyout cert.key -out cert.csr -config openssl.conf -reqexts v3_req_client\nopenssl x509 -req -in cert.csr -sha256 -out cert.pem -days 365 -extfile openssl.conf -extensions v3_req_client -key cert.key\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm_certificate.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

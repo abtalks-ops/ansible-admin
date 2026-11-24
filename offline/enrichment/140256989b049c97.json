@@ -1,0 +1,15 @@
+{
+ "chunk_id": "140256989b049c97",
+ "chunk_hash": "140256989b049c97",
+ "summary": "regex_escape escapes special characters in a string for use in a regular expression.",
+ "questions": [
+  "How do I escape a string so it can be used literally in a regex?"
+ ],
+ "answer_card": {
+  "title": "regex_escape filter",
+  "answer_md": "`{{ text | regex_escape }}` escapes regex special characters so the string can be used literally in a regular expression.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/regex_escape_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:11+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "c659b70998cf4cb7",
+  "chunk_hash": "c659b70998cf4cb7",
+  "summary": "Shows the unsafe option on vars_prompt to accept special characters like { and % without templating errors.",
+  "questions": [
+    "Why does my prompted password with % or { cause a templating error?",
+    "How do I allow special characters in vars_prompt?"
+  ],
+  "answer_card": {
+    "title": "Special characters in vars_prompt",
+    "answer_md": "```yaml\nvars_prompt:\n  - name: my_password_with_weird_chars\n    prompt: Enter password\n    unsafe: true\n    private: true\n```\n\n`unsafe: true` stops `{` and `%` from being treated as templates.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_prompts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c95e5de726e334d9",
+ "chunk_hash": "c95e5de726e334d9",
+ "summary": "Example INI inventory with all:vars defaults, a switches parent group, and per-platform vars for become, network_os, user and password. ssh-agent removes the need for passwords, use ansible_ssh_private_key_file per group for multiple keys, and never store plain-text passwords.",
+ "questions": [
+  "How do I set up a multi-vendor network inventory?",
+  "How do I use a different SSH key per device group?",
+  "Do I need ansible_password if I use ssh-agent?"
+ ],
+ "answer_card": {
+  "title": "Multi-vendor network inventory",
+  "answer_md": "```ini\n[all:vars]\nansible_connection=ansible.netcommon.network_cli\nansible_user=ansible\n\n[switches:children]\neos\nios\nvyos\n\n[eos]\nveos01 ansible_host=veos-01.example.net\n\n[eos:vars]\nansible_become=yes\nansible_become_method=enable\nansible_network_os=arista.eos.eos\nansible_user=my_eos_user\n```\n- With ssh-agent you can drop `ansible_password`.\n- With several keys and no agent, set `ansible_ssh_private_key_file=/path/to/key` per group.\n- **Never store passwords in plain text**; use Vault.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

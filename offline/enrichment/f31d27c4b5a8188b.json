@@ -1,0 +1,17 @@
+{
+  "chunk_id": "f31d27c4b5a8188b",
+  "chunk_hash": "f31d27c4b5a8188b",
+  "summary": "Explains Ansible uses Jinja2 templating for variables and facts in the template module and playbooks, with extra filters, tests and lookups. Templating happens on the control node before tasks run, and template files must be UTF-8.",
+  "questions": [
+    "Where does Jinja2 templating happen in Ansible?",
+    "Do managed nodes need Jinja2 installed?",
+    "What encoding must template files use?"
+  ],
+  "answer_card": {
+    "title": "Templating with Jinja2",
+    "answer_md": "Ansible uses Jinja2 for variables and facts, in the `template` module and directly in playbooks (task names, args, etc.), with Jinja2's filters/tests plus Ansible's own filters, tests and lookups.\n\nAll templating happens on the **control node** before tasks are sent, so targets don't need Jinja2 and only receive the data each task needs. Template files must be **UTF-8**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_templating.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

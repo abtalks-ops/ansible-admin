@@ -1,0 +1,18 @@
+{
+ "chunk_id": "e1f70b03630fbf8c",
+ "chunk_hash": "e1f70b03630fbf8c",
+ "summary": "Always use {{ }} except in conditionals (when, failed_when, changed_when), which are already templated; moustaches don't nest, so build dynamic names with hostvars or the vars lookup, and check keyword templating with ansible-doc -t keyword.",
+ "questions": [
+  "Should I use {{ }} inside when?",
+  "How do I reference a variable whose name is built from another variable?",
+  "Why doesn't {{ somevar_{{ other }} }} work?",
+  "How do I know if a keyword supports templating?"
+ ],
+ "answer_card": {
+  "title": "When to use {{ }} and dynamic var names",
+  "answer_md": "- Use `{{ }}` everywhere **except** `when`, `failed_when`, `changed_when` (already Jinja expressions).\n- Templates don't nest. Instead of `{{ somevar_{{ other_var }} }}`:\n\n```jinja\n{{ lookup('vars', 'somevar_' ~ other_var) }}\n{{ hostvars[inventory_hostname]['somevar_' ~ other_var] }}\n```\n\n- `ansible-doc -t keyword <name>` shows whether a keyword is `explicit` (needs `{{ }}`), `implicit` or `static`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

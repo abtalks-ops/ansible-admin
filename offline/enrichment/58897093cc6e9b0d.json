@@ -1,0 +1,20 @@
+{
+  "chunk_id": "58897093cc6e9b0d",
+  "chunk_hash": "58897093cc6e9b0d",
+  "summary": "Explains YAML gotchas: `: ` starts a mapping and ` #` starts a comment, so values containing them must be quoted. Double quotes allow escapes while single quotes don't, values starting with `{` (like `{{ var }}`) must be quoted, and if a value starts with a quote, the whole value must be quoted.",
+  "questions": [
+    "Why do I get a YAML syntax error with a colon in my value?",
+    "Why must I quote values that start with {{?",
+    "What's the difference between single and double quotes in YAML?",
+    "How do I write a Windows drive letter like c: in YAML?",
+    "How do I quote a variable followed by more text?",
+    "Can I escape a single quote inside double quotes in YAML?"
+  ],
+  "answer_card": {
+    "title": "YAML quoting gotchas",
+    "answer_md": "A colon followed by a space or newline (`: `) indicates a mapping, and ` #` starts a comment, so these fail:\n```text\nfoo: somebody said I should put a colon here: so I did\nwindows_drive: c:\n```\nQuote them (`c:\\windows` without a trailing colon is fine unquoted):\n```yaml\nfoo: 'somebody said I should put a colon here: so I did'\nwindows_drive: \"c:\"\n```\nDouble quotes allow escapes like `\"a \\t TAB and a \\n NEWLINE\"`; `\\'` inside double quotes is invalid.\n\nA value starting with `{` looks like a dict, so quote Jinja:\n```yaml\nfoo: \"{{ variable }}\"\nfoo: \"{{ variable }}/additional/string/literal\"\n```\nIf a value starts with a quote, quote the **entire** value.",
+    "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

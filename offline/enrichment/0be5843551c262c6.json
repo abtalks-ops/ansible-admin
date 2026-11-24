@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0be5843551c262c6",
+ "chunk_hash": "0be5843551c262c6",
+ "summary": "Shows how Python modules import collection module_utils using the ansible_collections.namespace.collection.plugins.module_utils path, with a QRadar example, and that importing from __init__.py needs the filename.",
+ "questions": [
+  "What's the Python import path for module_utils in a collection?",
+  "How do I import from an __init__.py in a collection plugin directory?",
+  "Can I mix ansible.module_utils and collection module_utils imports?"
+ ],
+ "answer_card": {
+  "title": "Import collection module_utils in Python",
+  "answer_md": "Use the `ansible_collections` path:\n```python\nfrom ansible.module_utils.basic import AnsibleModule\nfrom ansible_collections.community.test_collection.plugins.module_utils.qradar import QRadarRequest\n```\nGeneral form: `from ansible_collections.{namespace}.{collection}.plugins.module_utils.{util} import {something}`.\n\nFor `__init__.py`, name it explicitly: `from ansible_collections.namespace.collection_name.plugins.callback.__init__ import CustomBaseClass`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_structure.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:07+00:00"
+}

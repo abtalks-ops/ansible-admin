@@ -1,0 +1,19 @@
+{
+  "chunk_id": "cc9b35ed3fb0740a",
+  "chunk_hash": "cc9b35ed3fb0740a",
+  "summary": "raw runs a command straight over SSH without the module system or Python, mainly to bootstrap Python or talk to devices without it. It has no change detection, works on Windows, and environment only works with executable or become.",
+  "questions": [
+    "How do I install Python on a host that doesn't have it?",
+    "How do I run commands on a router without Python?",
+    "Why doesn't environment work with the raw module?",
+    "Should I use raw instead of shell?",
+    "Do I need to disable fact gathering when using raw to bootstrap?"
+  ],
+  "answer_card": {
+    "title": "Run raw commands without Python",
+    "answer_md": "`ansible.builtin.raw` runs a command directly via the remote shell, bypassing modules. Use it to bootstrap Python or for devices without Python; otherwise prefer `command`/`shell`.\n- No change detection; returns stdout/stderr/rc.\n- Set `gather_facts: no` when bootstrapping Python.\n- `environment` only works with `executable` set or `become`.\n- Encode non-UTF-8 output (e.g. `base64`). Works on Windows.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/raw_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

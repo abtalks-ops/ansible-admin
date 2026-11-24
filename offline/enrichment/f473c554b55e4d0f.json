@@ -1,0 +1,11 @@
+{
+ "chunk_id": "f473c554b55e4d0f",
+ "chunk_hash": "f473c554b55e4d0f",
+ "summary": "Introduces a partial list of places where control node code must convert between bytes and text under the Unicode Sandwich.",
+ "questions": [
+  "Where do I need to convert bytes and text in control node code?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

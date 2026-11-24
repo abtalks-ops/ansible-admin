@@ -1,0 +1,11 @@
+{
+ "chunk_id": "359bdf97482c4ea4",
+ "chunk_hash": "359bdf97482c4ea4",
+ "summary": "The dellemc.os9 collection supports enable mode on Dell OS9.",
+ "questions": [
+  "Which collection manages Dell OS9 switches?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:10+00:00"
+}

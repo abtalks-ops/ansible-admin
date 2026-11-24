@@ -1,0 +1,16 @@
+{
+ "chunk_id": "71e0e77208aaf27f",
+ "chunk_hash": "71e0e77208aaf27f",
+ "summary": "Use set_module_args with a dict before creating the module so AnsibleModule treats it as STDIN input.",
+ "questions": [
+  "How do I pass module arguments in a unit test?",
+  "What does set_module_args do?"
+ ],
+ "answer_card": {
+  "title": "Pass arguments to a module in tests",
+  "answer_md": "Call `set_module_args` with a dict before the module is created:\n```python\nfrom units.modules.utils import set_module_args\n\ndef test_already_registered(self):\n    set_module_args({'activationkey': 'key', 'username': 'user', 'password': 'pass'})\n```\nAnsibleModule then reads these as if they came on `STDIN`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

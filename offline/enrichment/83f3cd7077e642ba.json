@@ -1,0 +1,16 @@
+{
+ "chunk_id": "83f3cd7077e642ba",
+ "chunk_hash": "83f3cd7077e642ba",
+ "summary": "When stdout is returned, Ansible also provides stdout_lines, a list of strings with one item per output line.",
+ "questions": [
+  "How do I iterate over each line of command output?",
+  "What's the difference between stdout and stdout_lines?"
+ ],
+ "answer_card": {
+  "title": "stdout_lines return value",
+  "answer_md": "**`stdout_lines`** is `stdout` split into a list of lines:\n\n```yaml\n- debug: msg=\"{{ item }}\"\n  loop: \"{{ r.stdout_lines }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

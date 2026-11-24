@@ -1,0 +1,18 @@
+{
+ "chunk_id": "685c3a896c9561df",
+ "chunk_hash": "685c3a896c9561df",
+ "summary": "Ansible-base 2.10.0 briefly changed the default mode of file-based tasks to 0600 & ~umask, reverted in 2.10.1 to 0666 & ~umask; set mode explicitly to address CVE-2020-1736. From 2.10.1, dnf/yum validate GPG signatures properly (CVE-2020-14365), so import the right key with rpm_key or, as a last resort, set disable_gpg_check.",
+ "questions": [
+  "Why did my files get 0600 permissions with ansible-base 2.10.0?",
+  "dnf fails with 'Failed to validate GPG signature', how do I fix it?",
+  "What file mode does copy use when I don't set mode?",
+  "How do I avoid CVE-2020-1736 in my playbooks?"
+ ],
+ "answer_card": {
+  "title": "Default file mode and dnf GPG checks in 2.10",
+  "answer_md": "**File mode**: 2.10.0 defaulted file tasks to `0600 & ~umask`; **2.10.1 reverted** to `0666 & ~umask`. To avoid CVE-2020-1736, always set `mode:` on file-based tasks.\n\n**dnf/yum GPG**: since 2.10.1 signatures are really validated (CVE-2020-14365). On `Failed to validate GPG signature for <pkg>`, import the key:\n\n```yaml\n- ansible.builtin.rpm_key:\n    key: https://example.com/RPM-GPG-KEY\n```\n\nOnly if unavoidable: `disable_gpg_check: true`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_base_2.10.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:22:29+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "9d38a57ce2cf81f7",
+  "chunk_hash": "9d38a57ce2cf81f7",
+  "summary": "PowerShell example creating a self-signed certificate, an HTTPS WinRM listener on port 5986, and a firewall rule, with a warning that the scripts are for demonstration and need review before production use.",
+  "questions": [
+    "How do I add an HTTPS WinRM listener with a self-signed cert?",
+    "What port does WinRM over HTTPS use?",
+    "Is the sample WinRM setup script safe for production?"
+  ],
+  "answer_card": {
+    "title": "Adding an HTTPS WinRM listener",
+    "answer_md": "```powershell\n$cert = New-SelfSignedCertificate -CertStoreLocation 'Cert:\\LocalMachine\\My' -DnsName $env:COMPUTERNAME -NotAfter (Get-Date).AddYears(1) -Provider 'Microsoft Software Key Storage Provider' -Subject \"CN=$env:COMPUTERNAME\"\n\nNew-Item -Path 'WSMan:\\localhost\\Listener' -Address '*' -CertificateThumbprint $cert.Thumbprint -Enabled $true -Port 5986 -Transport HTTPS -Force\n\nNew-NetFirewallRule -Action Allow -Direction Inbound -DisplayName 'Windows Remote Management (HTTPS-In)' -LocalPort 5986 -Profile Any -Protocol TCP\n```\n\nThese are demo scripts: review them before production, since opening the port to all, local-account access, and self-signed certs may not suit your environment.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

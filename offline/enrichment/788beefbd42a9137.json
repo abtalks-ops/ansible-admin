@@ -1,0 +1,19 @@
+{
+  "chunk_id": "788beefbd42a9137",
+  "chunk_hash": "788beefbd42a9137",
+  "summary": "Magic variables expose Ansible's own state, such as inventory hosts and groups and playbook and role directories. Their names are reserved, as is environment. The key ones are hostvars, groups, group_names and inventory_hostname. hostvars gives access to other hosts' variables and, once gathered or cached, their facts.",
+  "questions": [
+    "How do I read another host's facts or inventory variables in a template?",
+    "How do I loop over all hosts in an inventory group in Jinja?",
+    "Which variable names should I never define myself?",
+    "Why doesn't a play-level var show up in hostvars?",
+    "What are the most commonly used magic variables?"
+  ],
+  "answer_card": {
+    "title": "Using hostvars and groups",
+    "answer_md": "Magic variables are reserved. Don't define variables with these names, or `environment`.\n\nRead another host's data:\n\n```jinja\n{{ hostvars['test.example.com']['ansible_facts']['distribution'] }}\n```\n\nFacts are only available after they have been gathered or cached. Play-level vars aren't host-specific, so they don't appear in `hostvars`.\n\nLoop over a group:\n\n```jinja\n{% for host in groups['app_servers'] %}\n   # something for each app server\n{% endfor %}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:17:08+00:00"
+}

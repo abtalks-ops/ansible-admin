@@ -1,0 +1,16 @@
+{
+  "chunk_id": "a449735bd5fe565f",
+  "chunk_hash": "a449735bd5fe565f",
+  "summary": "Examples validate simple and complex URLs, including an FTP URL with credentials, and show mailto checks with the uri test.",
+  "questions": [
+    "Is an FTP URL with credentials a valid URL?",
+    "How do I check a simple http URL?"
+  ],
+  "answer_card": {
+    "title": "url test examples",
+    "answer_md": "```yaml\n{{ 'http://example.com' is url }}                                  # True\n{{ 'ftp://admin:secret@example.com/path/to/myfile.yml' is url }}   # True\n{{ 'mailto://nowone@example.com' is not uri(schemes=['ftp','ftps','sftp','file']) }}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/url_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

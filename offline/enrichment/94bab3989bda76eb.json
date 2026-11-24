@@ -1,0 +1,16 @@
+{
+ "chunk_id": "94bab3989bda76eb",
+ "chunk_hash": "94bab3989bda76eb",
+ "summary": "Ansible has three test types: sanity (static analysis enforcing coding standards), integration (functional tests of modules and core), and units (tests of individual code parts).",
+ "questions": [
+  "What kinds of tests does ansible-test run?",
+  "What's the difference between sanity, unit and integration tests in Ansible?"
+ ],
+ "answer_card": {
+  "title": "Types of Ansible tests",
+  "answer_md": "- **sanity**: static code analysis that enforces coding standards.\n- **integration**: functional tests of modules and ansible-core.\n- **units**: tests of individual parts of the code base.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:19+00:00"
+}

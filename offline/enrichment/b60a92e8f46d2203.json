@@ -1,0 +1,15 @@
+{
+  "chunk_id": "b60a92e8f46d2203",
+  "chunk_hash": "b60a92e8f46d2203",
+  "summary": "The integer test is Jinja's builtin check that a value is an integer.",
+  "questions": [
+    "How do I check that a variable is an integer?"
+  ],
+  "answer_card": {
+    "title": "integer test",
+    "answer_md": "`value is integer` returns true for integers (Jinja builtin).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/integer_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

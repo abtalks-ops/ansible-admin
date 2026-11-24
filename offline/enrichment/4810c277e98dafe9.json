@@ -1,0 +1,18 @@
+{
+ "chunk_id": "4810c277e98dafe9",
+ "chunk_hash": "4810c277e98dafe9",
+ "summary": "To test a collection, clone it into a path ending in ansible_collections/<namespace>/<name>, clone its collection dependencies into the same collection root, then cd into the collection directory.",
+ "questions": [
+  "Where do I have to clone a collection so ansible-test can find it?",
+  "Why does ansible-test not find the collections my collection depends on?",
+  "How do I set up community.windows for local testing?",
+  "Does ansible-test use my configured collections paths?"
+ ],
+ "answer_card": {
+  "title": "Set up a collection for ansible-test",
+  "answer_md": "1. Clone the collection so its path ends in `ansible_collections/<namespace>/<name>`:\n   ```shell\n   git clone https://github.com/ansible-collections/community.windows ~/dev/ansible_collections/community/windows\n   ```\n2. Clone every collection it depends on (see its `galaxy.yml`) into the **same** collection root, for example `~/dev/ansible_collections/ansible/windows`. `ansible-test` ignores your configured collection paths and other Ansible config.\n3. `cd ~/dev/ansible_collections/community/windows` and run tests from there.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_running_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

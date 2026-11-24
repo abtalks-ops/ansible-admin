@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ef491dbee9e2817f",
+ "chunk_hash": "ef491dbee9e2817f",
+ "summary": "Extra variables passed with -e/--extra-vars have the highest variable precedence and effectively override most other configuration sources, for example -e ansible_user=brian beats -u carol.",
+ "questions": [
+  "How do I override every other variable from the command line?",
+  "Which wins, -u or -e ansible_user?",
+  "What is the highest precedence variable in Ansible?",
+  "How do I pass a variable at runtime to ansible-playbook?"
+ ],
+ "answer_card": {
+  "title": "Use -e to override everything",
+  "answer_md": "Extra vars (`-e` / `--extra-vars`) have the highest precedence of all variables, and because variables outrank keywords, options and config, they win over almost everything.\n\n```shell\nansible -u carol -e 'ansible_user=brian' -a whoami all\n```\n\nThis connects as `brian`, not `carol`. You must supply both the variable name and its value.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/general_precedence.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

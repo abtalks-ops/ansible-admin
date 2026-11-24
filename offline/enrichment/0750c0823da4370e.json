@@ -1,0 +1,16 @@
+{
+  "chunk_id": "0750c0823da4370e",
+  "chunk_hash": "0750c0823da4370e",
+  "summary": "Example ad-hoc command gathering facts from all hosts and saving them per hostname under /tmp/facts with --tree.",
+  "questions": [
+    "How do I dump facts from all hosts to files?",
+    "How do I save gathered facts by hostname?"
+  ],
+  "answer_card": {
+    "title": "Save facts for all hosts to files",
+    "answer_md": "```\nansible all -m ansible.builtin.gather_facts --tree /tmp/facts\n```\nStores each host's facts in `/tmp/facts/<hostname>`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/gather_facts_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

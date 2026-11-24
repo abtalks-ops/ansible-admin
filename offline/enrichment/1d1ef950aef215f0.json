@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1d1ef950aef215f0",
+ "chunk_hash": "1d1ef950aef215f0",
+ "summary": "Make local plugins available everywhere via default locations or the plugin-type-specific ANSIBLE_<TYPE>_PLUGINS env var or *_PLUGIN_PATH setting, and verify with ansible-doc -t <type>, which doesn't work for action, filter or test plugins.",
+ "questions": [
+  "How do I tell Ansible where my custom callback or filter plugins are?",
+  "What environment variable sets the inventory plugin path?",
+  "How can I confirm my local lookup plugin is found?",
+  "Why doesn't ansible-doc show my custom filter plugin?"
+ ],
+ "answer_card": {
+  "title": "Load local plugins for all playbooks",
+  "answer_md": "- Put the plugin in the default location for its type, **or**\n- Add the directory to `ANSIBLE_<type>_PLUGINS` (e.g. `ANSIBLE_INVENTORY_PLUGINS`, `ANSIBLE_VARS_PLUGINS`) or the `*_PATH` setting (e.g. `DEFAULT_CALLBACK_PLUGIN_PATH`, `DEFAULT_FILTER_PLUGIN_PATH`, `BECOME_PLUGIN_PATH`).\n\nCheck: `ansible-config dump | grep <type>_PATH`. Verify: `ansible-doc -t lookup my_local_lookup_plugin`. `ansible-doc` doesn't work for action, filter or test plugins.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

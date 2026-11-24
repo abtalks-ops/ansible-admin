@@ -1,0 +1,16 @@
+{
+ "chunk_id": "f385ee2d9b5eee50",
+ "chunk_hash": "f385ee2d9b5eee50",
+ "summary": "inventory_hostnames returns inventory hosts matching a host pattern like the hosts: keyword; for plain groups, looping over group variables is easier.",
+ "questions": [
+  "How do I get a list of hosts matching a pattern inside a task?",
+  "How do I loop over all hosts except one group?"
+ ],
+ "answer_card": {
+  "title": "inventory_hostnames lookup",
+  "answer_md": "`inventory_hostnames` understands host patterns (as in `hosts:`) and returns matching inventory hosts. It's mainly useful for patterns; for simple groups, loop over `groups`/`group_names` instead.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/inventory_hostnames_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

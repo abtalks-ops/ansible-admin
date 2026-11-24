@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2d6d1e074eb13c5f",
+ "chunk_hash": "2d6d1e074eb13c5f",
+ "summary": "Module utilities are shared helper code; every Python module must import from ansible.module_utils (commonly AnsibleModule). The namespace is built dynamically per task, modules may only import from ansible.module_utils.*, and local module_utils directories merge into it.",
+ "questions": [
+  "Can my module import from ansible.errors or other parts of the ansible package?",
+  "How do I share code between several of my custom modules?",
+  "What must every Python Ansible module import?",
+  "Why does my module fail on the target when importing from ansible.parsing?"
+ ],
+ "answer_card": {
+  "title": "Module utilities basics",
+  "answer_md": "- All Python modules must import from `ansible.module_utils`, typically `from ansible.module_utils.basic import AnsibleModule`.\n- `ansible.module_utils` is built dynamically per task from the configured search path.\n- **Only** import from `ansible.module_utils.*`; other `ansible` imports (e.g. `ansible.errors`) are unsupported because the package may not exist on the target.\n- Share code by putting it in `./module_utils/my_shared_code.py` and importing `from ansible.module_utils.my_shared_code import MySharedCodeClient`; local dirs merge into the namespace in search-path order.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_module_utilities.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

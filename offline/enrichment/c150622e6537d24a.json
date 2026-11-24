@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c150622e6537d24a",
+ "chunk_hash": "c150622e6537d24a",
+ "summary": "ansible-core 2.20 known templating issues: exceptions in unaccessed Jinja set/with blocks are ignored, and containers from set/with blocks passed to methods are copied so in-place mutations are lost.",
+ "questions": [
+  "Why are my changes to a list built in a Jinja set block lost?",
+  "Why don't errors inside a Jinja set block show up?"
+ ],
+ "answer_card": {
+  "title": "Known Jinja set/with block issues",
+  "answer_md": "Known issues in ansible-core 2.20 templating:\n\n- Exceptions raised inside a Jinja `set` or `with` block that the template never accesses are **ignored**, like undefined values.\n- A container created in a `set` or `with` block is **copied** when passed to a method, so mutations not returned by the method are discarded.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:43+00:00"
+}

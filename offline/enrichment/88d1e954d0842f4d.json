@@ -1,0 +1,16 @@
+{
+ "chunk_id": "88d1e954d0842f4d",
+ "chunk_hash": "88d1e954d0842f4d",
+ "summary": "Examples: flatten fully gives [1,2,3,4,5,6]; flatten(1) gives [1,2,3,[4,5],6].",
+ "questions": [
+  "What does flatten(1) do?",
+  "What's an example of flatten?"
+ ],
+ "answer_card": {
+  "title": "flatten examples",
+  "answer_md": "```yaml\nflat: \"{{ [1, 2, [3, [4, 5]], 6] | flatten }}\"     # [1,2,3,4,5,6]\nflatone: \"{{ [1, 2, [3, [4, 5]], 6] | flatten(1) }}\" # [1,2,3,[4,5],6]\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/flatten_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

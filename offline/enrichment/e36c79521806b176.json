@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e36c79521806b176",
+ "chunk_hash": "e36c79521806b176",
+ "summary": "Plugins should raise AnsibleError (or a subclass) with a descriptive message, wrap other exceptions using to_native, and filter and test plugins should propagate undefined-variable errors.",
+ "questions": [
+  "How should my plugin report errors?",
+  "How do I include the original exception in an AnsibleError?",
+  "Why should filter plugins let UndefinedError propagate?"
+ ],
+ "answer_card": {
+  "title": "Raising errors in plugins",
+  "answer_md": "```python\nfrom ansible.module_utils.common.text.converters import to_native\ntry:\n    cause_an_exception()\nexcept Exception as e:\n    raise AnsibleError('Something happened, this was original exception: %s' % to_native(e))\n```\nFilter and test plugins should propagate `jinja2.exceptions.UndefinedError` and `AnsibleUndefinedVariable` so undefined vars are only fatal when needed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

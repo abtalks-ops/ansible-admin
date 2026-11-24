@@ -1,0 +1,16 @@
+{
+ "chunk_id": "773051239e6c3b0a",
+ "chunk_hash": "773051239e6c3b0a",
+ "summary": "Acronyms are always uppercase, should be spelled out on first use with the acronym in parentheses, and rarely used terms should just be spelled out.",
+ "questions": [
+  "How should acronyms be introduced in docs?",
+  "Should I define an abbreviation used only twice?"
+ ],
+ "answer_card": {
+  "title": "Acronyms",
+  "answer_md": "Always uppercase (ROM, SaaS). Spell out on first use: \"The Embedded DevKit (EDK)...\". Don't define abbreviations that appear only a few times; spell them out each time.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/spelling_word_choice.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

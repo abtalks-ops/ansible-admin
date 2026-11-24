@@ -1,0 +1,15 @@
+{
+ "chunk_id": "40a2794cf9af25fe",
+ "chunk_hash": "40a2794cf9af25fe",
+ "summary": "splunk.es integration tests now run against Splunk Server 9.4 and 10.4 with Enterprise Security.",
+ "questions": [
+  "Which Splunk versions is splunk.es tested against?"
+ ],
+ "answer_card": {
+  "title": "splunk.es tested on Splunk 9.4 and 10.4",
+  "answer_md": "As of Ansible 14.2.0, splunk.es integration tests run against both **Splunk Server 9.4 and 10.4 with Enterprise Security**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:10+00:00"
+}

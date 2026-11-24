@@ -1,0 +1,16 @@
+{
+  "chunk_id": "7f394d02b795dabd",
+  "chunk_hash": "7f394d02b795dabd",
+  "summary": "cisco.ios requires ansible-core 2.14+, uses netcommon 6.1.0 for cli_restore, and removes the deprecated legacy ios_ntp module.",
+  "questions": [
+    "Is ios_ntp still available in cisco.ios?",
+    "What ansible-core version does cisco.ios need?"
+  ],
+  "answer_card": {
+    "title": "cisco.ios changes in Ansible 10",
+    "answer_md": "cisco.ios requires ansible-core 2.14+, uses netcommon 6.1.0 for `cli_restore`, and removes the deprecated legacy `ios_ntp` module.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:22:19+00:00"
+}

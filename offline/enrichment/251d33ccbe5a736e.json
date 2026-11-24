@@ -1,0 +1,18 @@
+{
+ "chunk_id": "251d33ccbe5a736e",
+ "chunk_hash": "251d33ccbe5a736e",
+ "summary": "The community package has about two major releases per year with minor releases every four weeks, and only one major version is maintained at a time; unmaintained versions may contain unfixed CVEs.",
+ "questions": [
+  "How long is an Ansible community package version supported?",
+  "How often is a new major Ansible package released?",
+  "If Ansible 4 is out, will 3.x still get fixes?",
+  "Is it risky to stay on an unmaintained Ansible version?"
+ ],
+ "answer_card": {
+  "title": "Community package support policy",
+  "answer_md": "- About **two major** community package releases per year, trailing ansible-core.\n- A **minor** release every four weeks with backwards-compatible features and fixes.\n- Since 2.10 only **one** major version is maintained: when 4.0.0 ships, 3.x stops. An EOL version may get one final maintenance release.\n- Unmaintained versions may have unfixed CVEs, so upgrade promptly.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:57+00:00"
+}

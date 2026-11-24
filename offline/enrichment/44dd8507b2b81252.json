@@ -1,0 +1,16 @@
+{
+ "chunk_id": "44dd8507b2b81252",
+ "chunk_hash": "44dd8507b2b81252",
+ "summary": "Install from GitHub source when testing features or working on core changes; only run devel if modifying ansible-core or trying in-development features, since it can be unstable.",
+ "questions": [
+  "Should I run the devel branch of Ansible in production?",
+  "When should I install Ansible from source?"
+ ],
+ "answer_card": {
+  "title": "When to use the devel branch",
+  "answer_md": "Only install and run `devel` if you're modifying `ansible-core` or trying features under development. It changes fast and can become unstable at any time, so it's not for normal use.",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

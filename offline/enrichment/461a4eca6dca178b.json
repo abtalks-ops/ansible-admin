@@ -1,0 +1,18 @@
+{
+ "chunk_id": "461a4eca6dca178b",
+ "chunk_hash": "461a4eca6dca178b",
+ "summary": "Run playbooks with --vault-id user@file or @prompt instead of -k. Check a decrypted value with the debug module (stripping ansible_connection first). Rotate the vault password with ansible-vault rekey.",
+ "questions": [
+  "How do I run a playbook that uses vaulted variables?",
+  "How do I view a decrypted vault variable?",
+  "How do I change my vault password?",
+  "Can old copies be decrypted after rekeying?"
+ ],
+ "answer_card": {
+  "title": "Run with vault and rekey",
+  "answer_md": "```console\nansible-playbook -i inventory --vault-id my_user@~/my-ansible-vault-pw-file first_playbook.yml\nansible-playbook -i inventory --vault-id my_user@prompt first_playbook.yml\n```\nView a value (remove `ansible_connection` from the file first so it doesn't apply to localhost):\n```console\ngrep -v ansible_connection vyos.yml > vyos_no_connection.yml\nansible localhost -m debug -a var=\"ansible_password\" -e \"@vyos_no_connection.yml\" --ask-vault-pass\n```\nChange password: `ansible-vault rekey myfile`. Copies still encrypted with the old password remain decryptable with it.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/first_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

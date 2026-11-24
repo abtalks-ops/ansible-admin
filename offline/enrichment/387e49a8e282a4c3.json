@@ -1,0 +1,17 @@
+{
+ "chunk_id": "387e49a8e282a4c3",
+ "chunk_hash": "387e49a8e282a4c3",
+ "summary": "community.crypto deprecated the current check mode behaviour of openssl_csr_pipe, openssl_privatekey_pipe and x509_certificate_pipe; from 3.0.0 they ignore check mode, which you can already get with check_mode: false.",
+ "questions": [
+  "Why does openssl_privatekey_pipe not return a key in check mode?",
+  "How do I make the _pipe modules run even in check mode?",
+  "What changes in check mode for x509_certificate_pipe in community.crypto 3?"
+ ],
+ "answer_card": {
+  "title": "community.crypto _pipe modules and check mode",
+  "answer_md": "`openssl_csr_pipe`, `openssl_privatekey_pipe`, `x509_certificate_pipe` currently only set `changed` in check mode without producing the object. From **community.crypto 3.0.0** they will **ignore check mode** and always act. Get that behaviour now with:\n\n```yaml\n- community.crypto.openssl_privatekey_pipe:\n    ...\n  check_mode: false\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:28+00:00"
+}

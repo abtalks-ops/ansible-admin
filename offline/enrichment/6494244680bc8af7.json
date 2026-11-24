@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6494244680bc8af7",
+ "chunk_hash": "6494244680bc8af7",
+ "summary": "Solaris 10 and earlier use a non-POSIX shell that doesn't expand Ansible's default ~/.ansible/tmp, causing module failures; set remote_tmp to $HOME/.ansible/tmp or set ansible_shell_executable to a POSIX shell like /usr/xpg4/bin/sh.",
+ "questions": [
+  "Modules fail on my Solaris 10 hosts, why?",
+  "How do I make Ansible use a POSIX shell on Solaris?",
+  "Can I set remote_tmp per host?"
+ ],
+ "answer_card": {
+  "title": "Fix module failures on Solaris",
+  "answer_md": "Solaris ≤ 10's default shell doesn't expand `~/.ansible/tmp`. Either:\n\n- Set `remote_tmp` to a path the shell expands correctly:\n\n```ini\n[defaults]\nremote_tmp = $HOME/.ansible/tmp\n```\n\nor per host: `host1 ansible_remote_tmp=$HOME/.ansible/tmp`.\n- Use a POSIX shell: `solaris1 ansible_shell_executable=/usr/xpg4/bin/sh` (bash, ksh, zsh also work).",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "3c47ed63b6a94a19",
+ "chunk_hash": "3c47ed63b6a94a19",
+ "summary": "Collections should pass Ansible sanity tests and include unit tests for their code and integration tests for interaction with ansible-core.",
+ "questions": [
+  "What kinds of tests should my collection have?"
+ ],
+ "answer_card": {
+  "title": "Testing expectations for collections",
+  "answer_md": "A collection should pass **sanity** tests, have **unit** tests for its code, and **integration** tests for how it works with ansible-core.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_testing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:07+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9135bb21bf9a73d9",
+ "chunk_hash": "9135bb21bf9a73d9",
+ "summary": "vyos.vyos breaking changes: vyos_logging removed for vyos_logging_global, many modules require VyOS 1.3+, firewall tcp.flags is a list, and vyos_snmp_server renames engine_id and key parameters.",
+ "questions": [
+  "What replaced vyos_logging?",
+  "Which VyOS versions do the vyos.vyos modules support now?",
+  "How do I set tcp flags in vyos_firewall_rules for 1.4?",
+  "What are the new names of encrypted-key in vyos_snmp_server?"
+ ],
+ "answer_card": {
+  "title": "vyos.vyos breaking changes",
+  "answer_md": "- `vyos_logging` removed; use **`vyos_logging_global`** (in 1.4, `protocol` belongs to the syslog host).\n- `vyos_bgp_address_family`, `vyos_bgp_global`, `vyos_snmp_server`, `vyos_user`: VyOS **1.3+** only.\n- `lldp_global`: `address` is merged (added) instead of replaced; replace mode removes existing ones. `civic_address` removed.\n- `vyos_firewall_rules`: p2p options removed; `tcp.flags` is now a list with an inversion flag.\n- `vyos_snmp_server`: `engine_id` is now a `snmp_v3` parameter; `encrypted-key`/`plaintext-key` became `encrypted-password`/`plaintext-password`.\n- `vyos_user`: `level` (alias `role`) removed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

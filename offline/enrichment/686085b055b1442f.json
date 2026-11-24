@@ -1,0 +1,16 @@
+{
+  "chunk_id": "686085b055b1442f",
+  "chunk_hash": "686085b055b1442f",
+  "summary": "The reachable test checks that a task result wasn't flagged unreachable, meaning unreachable is absent or False.",
+  "questions": [
+    "How do I check if a host was reachable for a task?",
+    "How do I handle unreachable hosts in conditions?"
+  ],
+  "answer_card": {
+    "title": "reachable test",
+    "answer_md": "`result is reachable` is true when the registered result doesn't have `unreachable: true`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/reachable_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

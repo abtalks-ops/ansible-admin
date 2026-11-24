@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0786075089b19e97",
+ "chunk_hash": "0786075089b19e97",
+ "summary": "dellemc.openmanage known issues in Ansible 9.0.0: missing ca_path in some roles, idrac_firmware failing on Python 3.11 with NFS shares and on authenticated shares with iDRAC8, poor error messages in several modules, redfish storage controller not failing on bad attributes, quick deploy skipping IPv6-disabled slots, and same-name uplinks being modified.",
+ "questions": [
+  "idrac_firmware fails with an NFS share on Python 3.11, what can I do?",
+  "Why can't I set ca_path in the idrac_server_powerstate role?",
+  "idrac_redfish_storage_controller accepted a wrong attribute without error, is that known?",
+  "Why does ome_smart_fabric_uplink overwrite an uplink with the same name?"
+ ],
+ "answer_card": {
+  "title": "dellemc.openmanage known issues (9.0.0)",
+  "answer_md": "- Roles `idrac_attributes`, `redfish_storage_volume`, `idrac_server_powerstate` lack the **`ca_path`** parameter.\n- `idrac_firmware`: fails on **Python 3.11 with NFS shares** (use another Python or share type); no authenticated HTTP/HTTPS/FTP shares on **iDRAC8**.\n- `idrac_redfish_storage_controller`: doesn't error on an incorrect attribute value.\n- `idrac_network_attributes`, `ome_device_network_services`, `ome_device_power_settings` (`power_cap` outside 0 to 32767): unclear errors.\n- `ome_device_quick_deploy`: skips slots with IPv6 disabled.\n- `ome_smart_fabric_uplink`: same-name uplink modifies the existing one.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:38+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "aaf991ee1960dd22",
+ "chunk_hash": "aaf991ee1960dd22",
+ "summary": "The list lookup returns its input unchanged, used with with_list when you don't want transformation.",
+ "questions": [
+  "How do I loop over a list without flattening nested lists?",
+  "What is with_list for?"
+ ],
+ "answer_card": {
+  "title": "list lookup (with_list)",
+  "answer_md": "The `list` lookup is essentially a no-op: it returns what it's given. Use `with_list` when you don't want items transformed or flattened.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/list_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

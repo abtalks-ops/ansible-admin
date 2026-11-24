@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f3f95b7d0a6a55e8",
+ "chunk_hash": "f3f95b7d0a6a55e8",
+ "summary": "Ansible manages networks across many vendors with agentless automation over SSH or HTTPS, separating data model from execution. The guide is for network engineers new to Ansible and Ansible users new to network automation.",
+ "questions": [
+  "Can Ansible automate switches and routers from different vendors?",
+  "How does Ansible talk to network hardware?",
+  "Are network modules different from server modules?"
+ ],
+ "answer_card": {
+  "title": "Why use Ansible for networks",
+  "answer_md": "With Ansible you can:\n- automate repetitive network changes\n- use the same agentless tool that ops and dev teams use\n- separate the data model (playbooks/roles) from execution (modules) across mixed vendors\n- reuse community and vendor playbooks and roles\n- talk to hardware securely over SSH or HTTPS\n\nNetwork modules work differently from Linux and Windows modules, so some network-specific concepts are needed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

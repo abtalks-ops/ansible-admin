@@ -1,0 +1,19 @@
+{
+  "chunk_id": "5685206e4c2c8281",
+  "chunk_hash": "5685206e4c2c8281",
+  "summary": "An inventory directory is parsed recursively in alphabetical order with no way to change it, so name files so the constructed plugin, which only sees existing hosts, runs last. Alternatively, pass multiple -i sources in order. constructed options keyed_groups, groups and compose build dynamic groups and host variables.",
+  "questions": [
+    "Why does my constructed inventory not see hosts from my cloud plugin?",
+    "In what order are files in an inventory directory parsed?",
+    "How do I force the constructed inventory to load last?",
+    "How can I create groups from host variables automatically?",
+    "What does the compose option in inventory do?"
+  ],
+  "answer_card": {
+    "title": "Ordering inventory sources for constructed",
+    "answer_md": "The `constructed` plugin only works on hosts that are already in inventory. Inventory directories are parsed recursively and **alphabetically**, and you can't change that, so name files so `constructed` comes last. Or pass the sources in order:\n\n```shell\n-i demo.aws_ec2.yml -i clouds.yml -i constructed.yml\n```\n\nPlugins that support constructed features directly can take the options themselves:\n- `keyed_groups`: groups from host variable values\n- `groups`: groups from Jinja conditions\n- `compose`: create or modify host variables",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/inventory.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:45+00:00"
+}

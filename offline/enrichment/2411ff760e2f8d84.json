@@ -1,0 +1,17 @@
+{
+  "chunk_id": "2411ff760e2f8d84",
+  "chunk_hash": "2411ff760e2f8d84",
+  "summary": "Introduces the rolling_update.yml playbook and its first play, an empty-task play on monitoring hosts that exists only to gather their facts before the update.",
+  "questions": [
+    "How do I gather facts from hosts without running tasks on them?",
+    "Why would a play have an empty task list?",
+    "How does Ansible orchestrate a zero-downtime upgrade?"
+  ],
+  "answer_card": {
+    "title": "Gathering facts with an empty play",
+    "answer_md": "`rolling_update.yml` starts with:\n\n```yaml\n- hosts: monitoring\n  tasks: []\n```\n\nThe play has no tasks; it just forces **fact gathering** on the monitoring servers so their facts are available to the later update play.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/guide_rolling_upgrade.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

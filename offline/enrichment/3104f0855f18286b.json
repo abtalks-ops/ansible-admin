@@ -1,0 +1,20 @@
+{
+  "chunk_id": "3104f0855f18286b",
+  "chunk_hash": "3104f0855f18286b",
+  "summary": "Shows running ad hoc commands asynchronously with `-B` (timeout) and `-P` (poll interval), checking a background job with `async_status` and its job ID, and polling automatically. All jobs start before polling begins, the process is killed when `-B` expires, and async suits long shell commands or upgrades, not copy.",
+  "questions": [
+    "How do I run a long ad hoc command in the background?",
+    "How do I check on a background ansible job later?",
+    "What do -B and -P mean for the ansible command?",
+    "What happens when the async timeout runs out?",
+    "Can I copy a big file in the background with async?",
+    "How do I start async jobs on many hosts quickly?"
+  ],
+  "answer_card": {
+    "title": "Asynchronous ad hoc tasks",
+    "answer_md": "Run in the background with a 3600 s limit and no polling:\n```bash\nansible all -B 3600 -P 0 -a \"/usr/bin/long_running_operation --do-stuff\"\n```\nCheck it later with the returned job ID:\n```bash\nansible web1.example.com -m async_status -a \"jid=488359678239.2844\"\n```\nOr poll automatically, e.g. run up to 30 min and poll every 60 s:\n```bash\nansible all -B 1800 -P 60 -a \"/usr/bin/long_running_operation --do-stuff\"\n```\nAll jobs start before polling begins; use a high `--forks` to start them quickly. When the `-B` limit expires, the remote process is terminated. Async suits long shell commands and software upgrades; running `copy` async does not give a background transfer.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_async.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

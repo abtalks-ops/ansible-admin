@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5ac92f21015ea4d3",
+ "chunk_hash": "5ac92f21015ea4d3",
+ "summary": "Notes that the community.general contribution example applies to collections in the ansible_collections GitHub org, and to adapt it by swapping the namespace and collection names; other collections should be checked via their README.",
+ "questions": [
+  "Do the community.general contribution steps work for other collections?",
+  "How do I contribute to a collection that isn't on GitHub?"
+ ],
+ "answer_card": {
+  "title": "Scope of the community.general example",
+  "answer_md": "The steps apply to collections in the **ansible_collections** GitHub org. For another collection there, replace `community` and `general` with its namespace and name. For collections elsewhere, follow their `README.md`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_contributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

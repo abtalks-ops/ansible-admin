@@ -1,0 +1,18 @@
+{
+  "chunk_id": "d237cecc99229d39",
+  "chunk_hash": "d237cecc99229d39",
+  "summary": "Lists combine filter parameters: `_input` (first dict), `_dicts` (dicts to merge), `list_merge` (replace by default, or append, append_rp, keep, prepend, prepend_rp), and `recursive` (default false).",
+  "questions": [
+    "How do I deep-merge nested dictionaries with combine?",
+    "What happens to lists when combining dictionaries?",
+    "How do I append lists instead of replacing them when merging dicts?",
+    "What options does the combine filter take?"
+  ],
+  "answer_card": {
+    "title": "combine filter parameters",
+    "answer_md": "- `_input` (dict, required): first dictionary.\n- `_dicts` (list of dicts, required): dictionaries to merge in.\n- `list_merge` (default `replace`; `append`, `append_rp`, `keep`, `prepend`, `prepend_rp`): behavior when list values are encountered.\n- `recursive` (default false): if true, merge nested elements recursively.\n\n```yaml\nmerged: \"{{ a | ansible.builtin.combine(b, recursive=true, list_merge='append') }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/combine_filter.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

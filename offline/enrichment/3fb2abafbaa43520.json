@@ -1,0 +1,19 @@
+{
+ "chunk_id": "3fb2abafbaa43520",
+ "chunk_hash": "3fb2abafbaa43520",
+ "summary": "Masking applies at output boundaries: Display output, callback result mappings, and module syslog/Event Log; secrets propagate from workers and modules to the controller, match exactly (plus JSON-escaped forms), are trimmed of whitespace, and don't cover standard Python logging.",
+ "questions": [
+  "Where exactly does Ansible apply secret masking?",
+  "Is a base64-encoded secret masked?",
+  "Are messages from Python's logging module masked in log_path?",
+  "Does a secret found in one task get masked in later tasks?",
+  "Does a trailing newline affect secret masking?"
+ ],
+ "answer_card": {
+  "title": "Where and how secrets are masked",
+  "answer_md": "Masking happens where data **leaves** Ansible:\n\n- All `Display` output (screen, `log_path`, warnings, deprecations, errors, tracebacks)\n- The `result` mapping passed to callback plugins\n- Module logging to syslog and the Windows Event Log\n\nSecrets registered in workers or modules are sent to the controller, so they're masked in all later tasks. There's no minimum or maximum length; secrets are masked even inside longer words, and adjacent ones collapse into one placeholder. Leading/trailing whitespace is stripped before registration.\n\nOnly the **exact** string is matched: encoded or hashed copies aren't masked unless registered (the JSON-escaped form is always masked). Messages from Python's standard `logging` module written to `log_path` are **not** masked.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

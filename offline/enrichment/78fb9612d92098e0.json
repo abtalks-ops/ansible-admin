@@ -1,0 +1,12 @@
+{
+ "chunk_id": "78fb9612d92098e0",
+ "chunk_hash": "78fb9612d92098e0",
+ "summary": "An auto-generation notice at the top of the Ansible 14 porting guide source, saying edits belong in porting_guide_core_2.21.rst.",
+ "questions": [
+  "Where is the source of the Ansible 14 porting guide?",
+  "Is the Ansible 14 porting guide generated automatically?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:58+00:00"
+}

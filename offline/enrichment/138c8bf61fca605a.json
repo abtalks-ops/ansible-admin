@@ -1,0 +1,15 @@
+{
+ "chunk_id": "138c8bf61fca605a",
+ "chunk_hash": "138c8bf61fca605a",
+ "summary": "Don't end sentences with exclamation points; use ! only when referring to commands like bang.",
+ "questions": [
+  "Can I use exclamation marks in Ansible docs?"
+ ],
+ "answer_card": {
+  "title": "Exclamation points",
+  "answer_md": "Don't end sentences with them. Use `!` only when referring to a command, such as the bang (!) command.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/grammar_punctuation.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:01+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "dbd20d50732accb2",
+ "chunk_hash": "dbd20d50732accb2",
+ "summary": "Describes the exploded debug_dir layout: the wrapper, the module source, the args JSON file, and bundled module_utils. Only module_utils imports are bundled, so third-party libraries like requests must already be installed on the target.",
+ "questions": [
+  "Where can I change the arguments passed to a module while debugging?",
+  "Which files does Ansible bundle with a module when it ships it?",
+  "Why does my module fail with an import error for requests on the target?",
+  "Can I edit module_utils code in the exploded directory to test a fix?"
+ ],
+ "answer_card": {
+  "title": "Exploded module directory layout",
+  "answer_md": "- `AnsiballZ_<mod>.py` wrapper with the base64 payload and helpers\n- `debug_dir/ansible/modules/<mod>.py` the module code you can edit\n- `debug_dir/args` JSON of module args and variables; edit it to change parameters\n- `debug_dir/ansible/module_utils/` bundled helpers\n\nOnly `ansible.module_utils` imports are bundled. Third-party libraries such as `requests` must be installed on the target already.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/debugging.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

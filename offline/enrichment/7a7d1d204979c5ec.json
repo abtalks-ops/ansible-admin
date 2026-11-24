@@ -1,0 +1,18 @@
+{
+ "chunk_id": "7a7d1d204979c5ec",
+ "chunk_hash": "7a7d1d204979c5ec",
+ "summary": "Glossary entries for paramiko, playbooks, plays, and pull mode with ansible-pull.",
+ "questions": [
+  "How do I make Ansible use paramiko instead of OpenSSH?",
+  "What is the difference between a playbook and a play?",
+  "Can managed nodes pull their configuration on a schedule instead of being pushed to?",
+  "How does ansible-pull work?"
+ ],
+ "answer_card": {
+  "title": "Glossary: paramiko, plays, pull mode",
+  "answer_md": "- **paramiko**: Python SSH implementation; select it with `-c paramiko` or the connection setting in a playbook.\n- **Playbook**: a list of one or more plays.\n- **Play**: maps hosts (from a host specifier) to the tasks they run.\n- **Pull mode**: nodes check in on a schedule using `ansible-pull`, which checks out configuration from Git via cron and applies it locally with the local connection. Push mode is the default and most common.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "chunk_id": "2601942fc06233b4",
+ "chunk_hash": "2601942fc06233b4",
+ "summary": "With the psrp connection plugin, matching the PSRemoting session configuration to ansible_pwsh_interpreter avoids spawning a new PowerShell process per task. Set ansible_psrp_configuration_name to Microsoft.PowerShell (5.1, default) or PowerShell.7, and list configurations with Get-PSSessionConfiguration.",
+ "questions": [
+  "Why are my psrp tasks slow after switching to PowerShell 7?",
+  "How do I make psrp use the PowerShell 7 session configuration?",
+  "What does ansible_psrp_configuration_name do?",
+  "How do I list PSRemoting session configurations on a Windows host?",
+  "When is the PowerShell.7 session configuration registered?"
+ ],
+ "answer_card": {
+  "title": "Matching the PSRP session configuration to PowerShell 7",
+  "answer_md": "With `ansible.builtin.psrp`, if the PSRemoting session configuration doesn't match `ansible_pwsh_interpreter`, PSRP has to start a new PowerShell process for every task, which slows playbooks. Match them with `ansible_psrp_configuration_name`:\n- `Microsoft.PowerShell` (default): Windows PowerShell 5.1\n- `PowerShell.7`: PowerShell 7\n\nPowerShell 7 registers `PowerShell.7` during install (if that option is selected) or when you run `Enable-PSRemoting` from PowerShell 7.\n\n```ini\n[windows:vars]\nansible_connection=psrp\nansible_pwsh_interpreter=C:\\Program Files\\PowerShell\\7\\pwsh.exe\nansible_psrp_configuration_name=PowerShell.7\n```\n\nList available configurations on the host:\n\n```powershell\nGet-PSSessionConfiguration | Select-Object Name, PSVersion\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_pwsh.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

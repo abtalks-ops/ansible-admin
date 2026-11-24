@@ -1,0 +1,16 @@
+{
+ "chunk_id": "cdce4eb1d91c8e0b",
+ "chunk_hash": "cdce4eb1d91c8e0b",
+ "summary": "Explains required_one_of allows both options unless combined with mutually_exclusive, and required_if tuples with a condition option and value, the required options, and an optional True to require only one.",
+ "questions": [
+  "How do I require certain options only when state=present?",
+  "How does the fourth element of required_if work?"
+ ],
+ "answer_card": {
+  "title": "Option dependencies: required_if",
+  "answer_md": "```python\nrequired_if=[\n  ('state', 'present', ('path', 'content'), True),\n  ('force', True, ('force_reason', 'force_code')),\n]\n```\n- With `True` as the 4th element, **at least one** listed option is required; otherwise (or `False`) **all** are.\n- Here, `state=present` needs `path` or `content`; `force=true` needs both `force_reason` and `force_code`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

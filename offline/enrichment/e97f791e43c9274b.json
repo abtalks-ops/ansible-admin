@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e97f791e43c9274b",
+ "chunk_hash": "e97f791e43c9274b",
+ "summary": "New code isn't in codecov.io reports, so collect coverage locally with --coverage and generate HTML, console or XML reports; HTML lands in test/results/reports/coverage/index.html.",
+ "questions": [
+  "Where does ansible-test write the HTML coverage report?",
+  "How do I check coverage for a unit test I just wrote?",
+  "Why is my new code missing from codecov?"
+ ],
+ "answer_card": {
+  "title": "Coverage for new unit tests",
+  "answer_md": "New code isn't in codecov.io yet, so generate coverage locally:\n```shell\nansible-test units --coverage apt\nansible-test coverage html\n```\nThe report is at `test/results/reports/coverage/index.html`. Also available: `coverage report` (console), `coverage xml`. Clear data with `ansible-test coverage erase`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "a732056ef897a952",
+ "chunk_hash": "a732056ef897a952",
+ "summary": "Modules should hold most of the logic for a resource rather than thinly wrapping an API; split large APIs into several modules. If nothing existing fits, the page lists next steps for developing a module.",
+ "questions": [
+  "Why would a thin API wrapper module be rejected?",
+  "How should I structure modules for a large API?"
+ ],
+ "answer_card": {
+  "title": "Module scope and next steps",
+  "answer_md": "A module should contain most of the logic for interacting with its resource. A thin API wrapper pushes too much logic into playbooks and would be rejected; instead create multiple modules for smaller pieces of the API. If no module, action plugin or role covers your case, proceed to module development.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

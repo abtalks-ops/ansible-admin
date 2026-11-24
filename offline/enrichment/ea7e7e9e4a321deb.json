@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ea7e7e9e4a321deb",
+ "chunk_hash": "ea7e7e9e4a321deb",
+ "summary": "Lists the Language Environment variables that z/OS UNIX nodes need for automatic encoding conversion and file tagging by Python. They can be set in inventory, at play level with environment, or on a block or task.",
+ "questions": [
+  "What environment variables do z/OS managed nodes need for Ansible?",
+  "Where can I set the remote environment for z/OS hosts?",
+  "What does _BPXK_AUTOCVT do?",
+  "How do I set _CEE_RUNOPTS for every task on z/OS?"
+ ],
+ "answer_card": {
+  "title": "Configuring the remote environment for z/OS",
+  "answer_md": "Set these Language Environment variables for any z/OS UNIX managed node:\n\n```yaml\n_BPXK_AUTOCVT: \"ON\"\n_CEE_RUNOPTS: \"FILETAG(AUTOCVT,AUTOTAG) POSIX(ON)\"\n\n_TAG_REDIR_ERR: \"txt\"\n_TAG_REDIR_IN: \"txt\"\n_TAG_REDIR_OUT: \"txt\"\n```\n\nThey enable automatic encoding conversion and file tagging for Python (IBM Open Enterprise SDK for Python). You can set them in:\n- inventory (`inventory.yml`, `group_vars/all.yml`, or `host_vars/all.yml`)\n- the playbook, with `environment` at the top\n- a block or task, with the `environment` keyword",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_zos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "a64daa11f88a5e20",
+  "chunk_hash": "a64daa11f88a5e20",
+  "summary": "The `ansible.builtin.max` filter returns the largest item in a sequence; it's Jinja's builtin max filter.",
+  "questions": [
+    "How do I find the largest number in a list?",
+    "What does the max filter do?"
+  ],
+  "answer_card": {
+    "title": "max filter",
+    "answer_md": "`ansible.builtin.max` returns the largest item from the sequence. It's Jinja's builtin `max` filter.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/max_filter.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

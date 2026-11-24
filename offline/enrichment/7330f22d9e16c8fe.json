@@ -1,0 +1,18 @@
+{
+ "chunk_id": "7330f22d9e16c8fe",
+ "chunk_hash": "7330f22d9e16c8fe",
+ "summary": "Shows ansible.cfg settings for collection_skeleton and collection_skeleton_ignore (regexes on relative paths), notes that before ansible-core 2.17 only a few hardcoded variables were available, and that the default skeleton's comment_ify filter is internal.",
+ "questions": [
+  "How do I set a default collection skeleton in ansible.cfg?",
+  "How can I exclude .git and other files from my collection skeleton?",
+  "Why can't I use custom variables in my skeleton on older ansible-core?",
+  "Can I use the comment_ify filter in my own skeleton?"
+ ],
+ "answer_card": {
+  "title": "Configure collection skeleton in ansible.cfg",
+  "answer_md": "```ini\n[galaxy]\ncollection_skeleton = /path/to/collection_skeleton\ncollection_skeleton_ignore = ^.git$,^.*/.git_keep$\n```\n- `collection_skeleton_ignore` is a list of regexes matched against paths relative to the skeleton.\n- Before **ansible-core 2.17**, only hardcoded variables (`namespace`, `collection_name`, `version`) were templated.\n- `comment_ify` is internal to the default skeleton; check available plugins with `ansible-doc -t filter --list`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_creating.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

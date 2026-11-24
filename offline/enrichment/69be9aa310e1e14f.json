@@ -1,0 +1,19 @@
+{
+  "chunk_id": "69be9aa310e1e14f",
+  "chunk_hash": "69be9aa310e1e14f",
+  "summary": "A sample role argument spec file (create_webservers.meta.yml) for a 'setup webserver' entry point. It declares required string options document_root, ssl_cert_path and ssl_key_path, plus an optional integer port that defaults to 443 when unset.",
+  "questions": [
+    "What does a role argument_specs file look like for a web server role?",
+    "How do I mark a role option as required in argument_specs?",
+    "How do I give an argument spec option a multi-line description?",
+    "Can I declare an integer port option in a role's argument spec?",
+    "Where do I describe what a role entry point does in the meta spec?"
+  ],
+  "answer_card": {
+    "title": "Example argument_specs for a web server role",
+    "answer_md": "Define each entry point under `argument_specs` and list its `options` with `type`, `required` and `description`:\n\n```yaml\ndescription: Set up basic HTTPS-enabled webserver.\nargument_specs:\n  setup webserver:\n    options:\n      document_root:\n        description: Path to static web content.\n        type: str\n        required: True\n      port:\n        description:\n          - Port for HTTPS connections.\n          - When unspecified, the port is 443.\n        type: int\n      ssl_cert_path:\n        type: str\n        required: True\n      ssl_key_path:\n        type: str\n        required: True\n```\n\n`description` can be a string or a list of lines.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables_validation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:17:07+00:00"
+}

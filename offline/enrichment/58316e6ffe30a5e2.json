@@ -1,0 +1,16 @@
+{
+ "chunk_id": "58316e6ffe30a5e2",
+ "chunk_hash": "58316e6ffe30a5e2",
+ "summary": "'Socket path does not exist' or 'Unable to connect to socket' means the device socket is unavailable; check write access to the path, enable logging, and if the log shows command or idle timeouts, follow the timeout steps.",
+ "questions": [
+  "How do I fix Socket path does not exist or cannot be found?",
+  "What does Unable to connect to socket mean?"
+ ],
+ "answer_card": {
+  "title": "Fix socket path errors",
+  "answer_md": "These mean the socket used to talk to the device is missing or unavailable.\n1. Check you have write access to the socket path in the error.\n2. Enable network logging.\n3. If the log shows `command timeout triggered` or `persistent connection idle timeout triggered`, follow the timeout fixes.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

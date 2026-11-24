@@ -1,0 +1,19 @@
+{
+  "chunk_id": "ec318d258e739cf5",
+  "chunk_hash": "ec318d258e739cf5",
+  "summary": "Explains `ansible-galaxy collection list`, which shows installed collections per search path with versions (`*` when unknown), including in-development collections with only `galaxy.yml`. Warns to only use directly installed collections, not ones pulled in as dependencies, and shows how to list one collection by FQCN.",
+  "questions": [
+    "How do I see which collections are installed?",
+    "Why does a collection show * as its version?",
+    "How do I check where a specific collection is installed and which version?",
+    "Why do I see collections I never installed in the list?",
+    "How can I get more detail from ansible-galaxy collection list?"
+  ],
+  "answer_card": {
+    "title": "List installed collections",
+    "answer_md": "Run `ansible-galaxy collection list` to see every installed collection in the configured search paths, grouped by path with version numbers. Collections under development that have a `galaxy.yml` instead of `MANIFEST.json` show too; if no version info is available the version shows as `*`. Add `-vvv` for more detail.\n\nTo see all instances of one collection, pass its FQCN:\n\n```bash\nansible-galaxy collection list fortinet.fortios\n```\n\nYou may see collections that were installed as dependencies; only use collections in playbooks that you installed directly.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections_guide/collections_listing.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

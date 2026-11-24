@@ -1,0 +1,18 @@
+{
+  "chunk_id": "a08e19a05298c89a",
+  "chunk_hash": "a08e19a05298c89a",
+  "summary": "Since 2.5, query() invokes lookups and always returns a list, while lookup() returns a comma-separated string unless you set wantlist=True. q is a shorthand for query. This makes lookups work consistently with the loop keyword.",
+  "questions": [
+    "What's the difference between lookup and query?",
+    "Why does my lookup return a comma-separated string instead of a list?",
+    "What is the q function in Ansible templates?",
+    "Which should I use with loop: lookup or query?"
+  ],
+  "answer_card": {
+    "title": "lookup vs. query",
+    "answer_md": "`lookup()` returns a comma-separated string by default. `query()` (added in 2.5) always returns a list, and `q()` is its short form. These are equivalent:\n\n```jinja\nlookup('dict', dict_variable, wantlist=True)\nquery('dict', dict_variable)\nq('dict', dict_variable)\n```\n\nUse `query` with `loop`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/lookup.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:45+00:00"
+}

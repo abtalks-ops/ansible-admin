@@ -1,0 +1,19 @@
+{
+ "chunk_id": "1cefc6db3a17b5fe",
+ "chunk_hash": "1cefc6db3a17b5fe",
+ "summary": "Ansible Vault encrypts variables and files with one or more passwords (optionally fetched from a secret manager via script) using the ansible-vault CLI. It protects only data at rest; from ansible-core 2.22 decrypted values are masked in output, and passwords can be configured in ansible.cfg.",
+ "questions": [
+  "How do I keep passwords out of plaintext in my playbooks?",
+  "Does Ansible Vault protect secrets while a playbook is running?",
+  "Can I get vault passwords from a secrets manager?",
+  "What can I do with the ansible-vault command?",
+  "Is it safe to commit vault-encrypted files to git?"
+ ],
+ "answer_card": {
+  "title": "What Ansible Vault does",
+  "answer_md": "Ansible Vault encrypts variables and files so secrets aren't stored in plaintext. You need one or more vault passwords; to pull them from a secret manager, use a script.\n\n`ansible-vault` can create/view encrypted variables, create and encrypt files, and edit, rekey or decrypt them. Encrypted content can go in source control.\n\n**Caveats**:\n- Vault protects **data at rest** only. Once decrypted, use `no_log` and secure your editor.\n- From ansible-core 2.22, decrypted vault values are masked in output, with limits.\n\nSupply passwords at run time, or configure a password file or always-prompt in `ansible.cfg`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

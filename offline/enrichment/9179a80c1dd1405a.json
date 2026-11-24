@@ -1,0 +1,16 @@
+{
+ "chunk_id": "9179a80c1dd1405a",
+ "chunk_hash": "9179a80c1dd1405a",
+ "summary": "For modules that must support many software versions, test with stored real data from each API version, even obscure ones unavailable during testing.",
+ "questions": [
+  "How do I test my module against old OS or API versions I can't run?",
+  "How do I unit test against multiple API versions?"
+ ],
+ "answer_card": {
+  "title": "Test against multiple API versions",
+  "answer_md": "Save real responses from each version of the API or system and replay them in unit tests. Your code then gets tested against what that version actually sends, even if it's too obscure to have available during testing.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

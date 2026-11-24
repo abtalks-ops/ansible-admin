@@ -1,0 +1,18 @@
+{
+ "chunk_id": "d0c73a4b9970a4a7",
+ "chunk_hash": "d0c73a4b9970a4a7",
+ "summary": "Shows how to be prompted for the string with --stdin-name, ending input with Ctrl-D without pressing Enter (which would add a newline), and notes the output can be pasted into playbooks, vars files or roles.",
+ "questions": [
+  "How do I get ansible-vault to prompt me for the secret to encrypt?",
+  "Why does my encrypted password have a trailing newline?",
+  "How do I finish input for encrypt_string?",
+  "Where can I put the output of encrypt_string?"
+ ],
+ "answer_card": {
+  "title": "Prompt for a string to encrypt",
+  "answer_md": "```bash\nansible-vault encrypt_string --vault-id dev@a_password_file --stdin-name 'new_user_password'\n```\n\nType the secret and press **Ctrl-D** (do **not** press Enter first, or a newline becomes part of the value). The output looks like:\n\n```yaml\nnew_user_password: !vault |\n          $ANSIBLE_VAULT;1.2;AES256;dev\n          3763656136...\n```\n\nPaste it into any playbook, variables file or role. The rest of the file stays readable plaintext.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_encrypting_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

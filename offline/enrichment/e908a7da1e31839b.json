@@ -1,0 +1,17 @@
+{
+  "chunk_id": "e908a7da1e31839b",
+  "chunk_hash": "e908a7da1e31839b",
+  "summary": "grafana.grafana in 11.2.0 allows a custom directory for .alloy config files, fixes 'dict object has no attribute path' in check mode, updates the grafana template, adds Loki bloom support and supports YAML syntax for grafana.ini.",
+  "questions": [
+    "Can I change where the Alloy role writes its .alloy config files?",
+    "Why do I get 'dict object has no attribute path' with --check in the grafana collection?",
+    "Does the Loki role support bloom filters?"
+  ],
+  "answer_card": {
+    "title": "grafana.grafana changes in 11.2.0",
+    "answer_md": "- Custom directory path for `*.alloy` config files.\n- Fix for `'dict object' has no attribute 'path'` in `--check` runs.\n- Loki bloom support.\n- YAML syntax for `grafana.ini` settings, plus template updates.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:26:20+00:00"
+}

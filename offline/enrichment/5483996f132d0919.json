@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5483996f132d0919",
+ "chunk_hash": "5483996f132d0919",
+ "summary": "Lists networking device_type values: switch, router, firewall, load_balancer, vpc, subnet, vpn, gateway, dns_service, wireless_access_point and sd_wan.",
+ "questions": [
+  "What's the device_type for a firewall in resource reporting?",
+  "Which networking resource types are in the taxonomy?"
+ ],
+ "answer_card": {
+  "title": "Networking device types",
+  "answer_md": "`switch`, `router`, `firewall`, `load_balancer`, `vpc`, `subnet`, `vpn`, `gateway`, `dns_service`, `wireless_access_point`, `sd_wan`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_resource_reporting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

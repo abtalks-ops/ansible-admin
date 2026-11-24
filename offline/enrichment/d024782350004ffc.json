@@ -1,0 +1,19 @@
+{
+  "chunk_id": "d024782350004ffc",
+  "chunk_hash": "d024782350004ffc",
+  "summary": "Describes per-option fields in a role argument spec: option name, description, version_added, type (default `str`, with `elements` for lists), and required (only if true). Type validation is coercive, but the role receives the original uncoerced value, so use filters like `| string` or `| bool`.",
+  "questions": [
+    "What fields can I set for each role option in argument_specs?",
+    "What's the default type for a role argument?",
+    "Why does my role get an int when the spec says str?",
+    "Do I need to set required: false explicitly?",
+    "How do I define a list option's element type?"
+  ],
+  "answer_card": {
+    "title": "Argument spec option fields",
+    "answer_md": "For each option under `options`:\n- `description`: full sentences; string or list of paragraphs.\n- `version_added`: only if added after the entry point; a string.\n- `type`: default `str`; for `list`, also set `elements`.\n- `required`: only needed when `true`.\n\n**Type validation is coercive but doesn't change the value.** Passing int `1` for a `str` option passes validation, but the role receives int `1`, not `\"1\"`. Coerce yourself with filters like `| string` or `| bool`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

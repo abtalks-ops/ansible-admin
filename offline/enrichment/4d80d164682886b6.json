@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4d80d164682886b6",
+ "chunk_hash": "4d80d164682886b6",
+ "summary": "ansible-core 2.16 breaking changes: plugins taking timeout from the cli entry now honour lower-precedence configured values, ansible-test container test plugins can no longer reuse running containers, and the service module no longer sets permanent OpenBSD flags on enable/disable.",
+ "questions": [
+  "My connection plugin timeout changed after upgrading, why?",
+  "Can ansible-test reuse an already running container?",
+  "Why doesn't the service module keep my OpenBSD rc flags anymore?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.16 breaking changes",
+  "answer_md": "- Plugins using the config system with a `cli` entry for `timeout` now pick up values configured via lower-precedence methods. If you relied on `DEFAULT_TIMEOUT`, add the overlapping config entries to your plugin.\n- **ansible-test**: container-based test plugins no longer reuse running containers.\n- **service** on **OpenBSD**: enable/disable no longer writes permanent variables/flags; manage those separately (e.g. an `rcctl` config task).",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:38+00:00"
+}

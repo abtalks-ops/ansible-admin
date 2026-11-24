@@ -1,0 +1,15 @@
+{
+ "chunk_id": "bb21476b1087a45a",
+ "chunk_hash": "bb21476b1087a45a",
+ "summary": "Example RPM spec that installs the acme.webserver collection into the system collections path and copies each role into /usr/share/ansible/roles with a my-standalone-role. prefix, plus docs and license files.",
+ "questions": [
+  "What does an RPM spec for packaging a collection plus standalone roles look like?"
+ ],
+ "answer_card": {
+  "title": "Example RPM spec for collection and roles",
+  "answer_md": "Key parts of `%install`:\n```text\n%global collection_dir %{_datadir}/ansible/collections/ansible_collections/acme/webserver\nmkdir -p %{buildroot}/%{collection_dir}\ncp -r ./* %{buildroot}/%{collection_dir}/\nmkdir -p %{buildroot}/%{_datadir}/ansible/roles\nfor role in %{buildroot}/%{collection_dir}/roles/*; do\n  cp -pR ${role} %{buildroot}/%{_datadir}/ansible/roles/my-standalone-role.$(basename ${role})\ndone\n```\nREADME, COPYING and LICENSE files are copied to `%{_pkgdocdir}`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/migrating_roles.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:03+00:00"
+}

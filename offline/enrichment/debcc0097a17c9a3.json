@@ -1,0 +1,16 @@
+{
+ "chunk_id": "debcc0097a17c9a3",
+ "chunk_hash": "debcc0097a17c9a3",
+ "summary": "validate-modules codes for unparsable removal versions, wrong requires extensions, missing doc fragments, documentation, examples, license, imports and interpreter lines.",
+ "questions": [
+  "What does missing-gplv3-license mean?",
+  "Why does validate-modules complain about the interpreter line?"
+ ],
+ "answer_card": {
+  "title": "validate-modules codes (missing items)",
+  "answer_md": "- `invalid-removal-version`: can't parse (collections need semver)\n- `invalid-requires-extension`: don't end `#AnsibleRequires`/`#Requires` with .cs/.psm1\n- `missing-doc-fragment` / `missing-existing-doc-fragment`\n- `missing-documentation`, `missing-examples`\n- `missing-gplv3-license`: no GPLv3 header\n- `missing-module-utils-basic-import` (warning), `missing-module-utils-import-csharp-requirements`\n- `missing-python-interpreter` (`#!/usr/bin/python`), `missing-powershell-interpreter` (`#!powershell`)",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/validate-modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:05+00:00"
+}

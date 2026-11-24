@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0b00eb8e584bf171",
+ "chunk_hash": "0b00eb8e584bf171",
+ "summary": "Module changes in 2.22: no_log options keep real values in results, module logs use $REDACTED$ instead of NOT_LOGGING_* placeholders, heuristic sanitizing and run_command password rewriting are gone, uri no longer strips no_log keys, and modules should register secrets passed on command lines or URLs.",
+ "questions": [
+  "Does run_command still hide --password arguments in the cmd output?",
+  "Is user:password@host in a URL still masked in module logs?",
+  "What happened to NOT_LOGGING_PASSWORD?",
+  "How do I mask a password my module passes on the command line?"
+ ],
+ "answer_card": {
+  "title": "Module behavior changes for secret masking",
+  "answer_md": "- `no_log: true` options keep their **real value** in results and are masked in output.\n- `AnsibleModule.log()` and invocation logs use `$REDACTED$` instead of `NOT_LOGGING_PARAMETER`/`NOT_LOGGING_PASSWORD`.\n- `heuristic_log_sanitize()` is no longer applied, so `user:password@host` isn't rewritten unless the password is registered.\n- `run_command()` no longer replaces `--password=...` with `********` in failure `cmd`.\n- `uri` no longer strips `no_log` values from response keys.\n\nOnly registered secrets are masked. If a module passes a non-`no_log` secret on the command line or in a URL, register it with `ansible.module_utils.secrets.register_secret()`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.22.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

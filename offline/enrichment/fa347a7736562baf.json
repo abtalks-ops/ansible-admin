@@ -1,0 +1,16 @@
+{
+  "chunk_id": "fa347a7736562baf",
+  "chunk_hash": "fa347a7736562baf",
+  "summary": "community.docker now depends on community.library_inventory_filtering_v1 for inventory filtering. Installs via the Ansible package or ansible-galaxy get it automatically, while manual installs must add it.",
+  "questions": [
+    "Why does the docker inventory plugin need another collection?",
+    "Does ansible-galaxy install community.docker dependencies automatically?"
+  ],
+  "answer_card": {
+    "title": "community.docker inventory filtering dependency",
+    "answer_md": "community.docker inventory plugins need `community.library_inventory_filtering_v1`. It's included in the Ansible package and installed automatically by `ansible-galaxy`. For manual or git-clone installs, install it yourself.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:22:19+00:00"
+}

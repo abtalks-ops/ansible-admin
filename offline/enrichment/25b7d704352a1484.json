@@ -1,0 +1,18 @@
+{
+ "chunk_id": "25b7d704352a1484",
+ "chunk_hash": "25b7d704352a1484",
+ "summary": "ansible-core 2.12 deprecated Python 2.6 targets, made when conditionals treat any non-empty string (including 'false') as true with CONDITIONAL_BARE_VARS having no effect, and deprecated ActionBase._remote_checksum() in favour of _execute_remote_stat().",
+ "questions": [
+  "My when: teardown runs even though teardown is 'false', why?",
+  "Does CONDITIONAL_BARE_VARS still work?",
+  "Can I still manage hosts with Python 2.6?",
+  "What replaces _remote_checksum in action plugins?"
+ ],
+ "answer_card": {
+  "title": "String booleans in when need | bool",
+  "answer_md": "- `when:` no longer parses string booleans: **any non-empty string is true**, including `'false'`. `CONDITIONAL_BARE_VARS` has no effect. Use `| bool`:\n\n```yaml\nvars:\n  teardown: 'false'\ntasks:\n  - include_tasks: teardown.yml\n    when: teardown | bool\n```\n\n- Python **2.6** targets deprecated (removed in 2.13).\n- `ActionBase._remote_checksum()` → **`_execute_remote_stat()`**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c78573b0cb37fe37",
+ "chunk_hash": "c78573b0cb37fe37",
+ "summary": "Markdown heading convention: # for page titles, ## for sections, one more # per subsection, and avoid going deeper than ####.",
+ "questions": [
+  "How deep should Markdown headings go in Ansible docs?",
+  "Which Markdown heading level is the page title?"
+ ],
+ "answer_card": {
+  "title": "Markdown heading notation",
+  "answer_md": "- `#` page title\n- `##` sections\n- add `#` per subsection level\n\nDon't go beyond `####`; deeper nesting suggests splitting into pages.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

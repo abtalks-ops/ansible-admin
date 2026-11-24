@@ -1,0 +1,17 @@
+{
+ "chunk_id": "49aa17ea501e3f90",
+ "chunk_hash": "49aa17ea501e3f90",
+ "summary": "community.hrobot storagebox modules deprecate membership in the robot action group, hetzner_user/hetzner_pass in favor of a required hetzner_token, and several storagebox return values renamed under the new API.",
+ "questions": [
+  "Should I use hetzner_token or hetzner_user for storagebox modules?",
+  "Which module defaults group should community.hrobot storagebox modules use?",
+  "Which storagebox_info return values are deprecated?"
+ ],
+ "answer_card": {
+  "title": "community.hrobot storagebox deprecations",
+  "answer_md": "Deprecated in community.hrobot (Ansible 12.2.0):\n\n- storagebox modules leave the `community.hrobot.robot` action group in 3.0.0; use `community.hrobot.api`.\n- `hetzner_token` becomes **required** from 3.0.0; `hetzner_user` and `hetzner_pass` are deprecated.\n- `storagebox_info` return values such as `login`, `disk_quota`, `disk_usage*`, `webdav`, `samba`, `ssh`, `external_reachability` and `zfs` are deprecated in favor of new-API names.\n- `storagebox_snapshot_info` fields `timestamp`, `size`, `filesystem_size`, `automatic`, `comment` are deprecated.\n- `storagebox_snapshot_plan`'s `plans[].month` is deprecated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:06+00:00"
+}

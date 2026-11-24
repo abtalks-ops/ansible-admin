@@ -1,0 +1,17 @@
+{
+ "chunk_id": "767dcda7ccbba86e",
+ "chunk_hash": "767dcda7ccbba86e",
+ "summary": "Modules and plugins in the main repo go through tech preview, stable, deprecated (kept with warnings for four release cycles), and removed with a tombstone. Collections follow a similar cycle but can't mark modules preview or stable since 2.10.",
+ "questions": [
+  "How long are deprecated Ansible modules kept before removal?",
+  "What happens when a module is removed from Ansible?",
+  "What does tech preview mean for a module?"
+ ],
+ "answer_card": {
+  "title": "Module and plugin lifecycle",
+  "answer_md": "1. **Tech preview** when first accepted.\n2. **Mature**: preview mark removed; parameters kept stable (compat maintained, not guaranteed).\n3. **Deprecated**: still available with warnings for **4 release cycles**.\n4. **Removed**: replaced with a tombstone in routing config to point users to alternatives.\n\nSince ansible-base 2.10, collection modules can't be marked preview/stable.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/module_lifecycle.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:03+00:00"
+}

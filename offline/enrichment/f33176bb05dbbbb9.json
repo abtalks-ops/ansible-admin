@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f33176bb05dbbbb9",
+ "chunk_hash": "f33176bb05dbbbb9",
+ "summary": "network_cli uses a pseudo terminal (paramiko, now deprecated in favour of libssh) and loads terminal and cliconf plugins per ansible_network_os. New OS support needs both, placed next to the playbook, in roles or in collections, or via DEFAULT_CLICONF_PLUGIN_PATH.",
+ "questions": [
+  "How do I add support for a new network OS to network_cli?",
+  "What's the difference between terminal and cliconf plugins?",
+  "Where can I put custom cliconf plugins?",
+  "Should I still use paramiko for network_cli?"
+ ],
+ "answer_card": {
+  "title": "network_cli terminal and cliconf plugins",
+  "answer_md": "`network_cli` loads two plugins based on `ansible_network_os`:\n- **Terminal** (for example `plugins/terminal/ios.py`): terminal length/width, paging, privilege escalation, prompt and error regexes.\n- **Cliconf**: low-level send/receive abstraction; for example `edit_config()` enters config mode first.\n\nPlace them in `cliconf_plugins/` and `terminal_plugins/` next to the playbook, in a role, or in a collection's `plugins/cliconf/` and `plugins/terminal/`. Or set `DEFAULT_CLICONF_PLUGIN_PATH`.\n\nNote: the paramiko-based connection is deprecated; migrate to libssh.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_plugins_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

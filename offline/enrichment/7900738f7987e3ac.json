@@ -1,0 +1,17 @@
+{
+  "chunk_id": "7900738f7987e3ac",
+  "chunk_hash": "7900738f7987e3ac",
+  "summary": "community.general deprecations in 10.4.0: the on_success and on_failure parameters of the MH cause_changes decorator, and support for pipx older than 1.7.0 in the pipx and pipx_info modules, to be removed in 11.0.0.",
+  "questions": [
+    "What pipx version will the pipx module require?",
+    "Is the pipx_info module dropping support for old pipx?",
+    "What's deprecated in the ModuleHelper cause_changes decorator?"
+  ],
+  "answer_card": {
+    "title": "community.general pipx and MH deprecations",
+    "answer_md": "- `pipx` and `pipx_info`: support for pipx older than **1.7.0** is deprecated and will be removed in community.general 11.0.0. Upgrade pipx on targets.\n- The ModuleHelper `cause_changes` decorator's `on_success` and `on_failure` parameters are deprecated.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

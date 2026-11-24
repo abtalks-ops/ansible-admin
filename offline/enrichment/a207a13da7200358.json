@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a207a13da7200358",
+ "chunk_hash": "a207a13da7200358",
+ "summary": "csvfile lookup reads a CSV/TSV file, finds the row whose first column matches the key, and returns the col column (default 1); the default delimiter is TAB despite the name, and quotes in keys are literal.",
+ "questions": [
+  "How do I read a value from a CSV file in Ansible?",
+  "Why doesn't csvfile lookup parse my comma-separated file?",
+  "Can csvfile search keys with spaces?"
+ ],
+ "answer_card": {
+  "title": "csvfile lookup",
+  "answer_md": "The csvfile lookup finds the row whose first column matches the key (multi-word keys allowed since 2.11) and returns column `col` (default 1, the second column, 0-indexed).\n\n**Gotcha**: the default delimiter is **TAB**, not comma, so set `delimiter=,` for CSV. Quotes in the key are treated literally.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/csvfile_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

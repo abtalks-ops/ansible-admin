@@ -1,0 +1,16 @@
+{
+  "chunk_id": "9488a9b572277986",
+  "chunk_hash": "9488a9b572277986",
+  "summary": "Handlers ignore tags; they run only when notified and can't be selected or skipped by tag.",
+  "questions": [
+    "Can I tag handlers?",
+    "Why does --skip-tags not skip my handler?"
+  ],
+  "answer_card": {
+    "title": "Tags and handlers",
+    "answer_md": "Handlers **ignore tags**. They run only when notified and can't be selected or skipped with tags.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

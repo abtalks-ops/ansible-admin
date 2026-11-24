@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c5622d7284e4209f",
+ "chunk_hash": "c5622d7284e4209f",
+ "summary": "cisco.aci's aci_rest supports non-MIT endpoints like /api/workflows/* returning data instead of imdata, and several aci_l4l7 module redirects were removed in favor of their full names.",
+ "questions": [
+  "How does aci_rest handle /api/workflows endpoints?",
+  "What replaces aci_l4l7_concrete_interface_attach?",
+  "Why does aci_rest return data instead of imdata?"
+ ],
+ "answer_card": {
+  "title": "cisco.aci changes in Ansible 15",
+  "answer_md": "- `aci_rest` supports non-MIT endpoints such as `/api/workflows/*`. Paths outside `/api/[node/]mo/*` and `/api/[node/]class/*` return results under **`data`** instead of `imdata` and `totalCount`.\n- Removed redirects; use the full names:\n  - `aci_l4l7_concrete_interface_attach` → `aci_l4l7_concrete_interface_attachment`\n  - `aci_l4l7_device_selection_if_context` → `aci_l4l7_device_selection_interface_context`\n  - `aci_l4l7_policy_based_redirect_dest` → `aci_l4l7_policy_based_redirect_destination`\n  - `aci_l4l7_service_graph_template_abs_conn` → `aci_l4l7_service_graph_template_connection`\n  - `..._abs_connection_conns` → `aci_l4l7_service_graph_template_connection_to_connector`\n  - `..._func_conn` → `aci_l4l7_service_graph_template_functional_connection`",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:28+00:00"
+}

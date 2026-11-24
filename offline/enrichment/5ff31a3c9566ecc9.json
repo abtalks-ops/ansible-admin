@@ -1,0 +1,19 @@
+{
+  "chunk_id": "5ff31a3c9566ecc9",
+  "chunk_hash": "5ff31a3c9566ecc9",
+  "summary": "get_url downloads files over HTTP, HTTPS or FTP directly on the managed host, honoring proxy env vars unless overridden. In check mode it only does a HEAD request, and Windows needs win_get_url.",
+  "questions": [
+    "How do I download a file onto a remote server with Ansible?",
+    "Does get_url download on the controller or the target?",
+    "How do I make get_url bypass a proxy?",
+    "Why does get_url report changed in check mode?",
+    "How do I download files on Windows hosts?"
+  ],
+  "answer_card": {
+    "title": "Download files with get_url",
+    "answer_md": "`ansible.builtin.get_url` downloads from HTTP/HTTPS/FTP **on the target host**, which needs direct access.\n- Honors `<protocol>_proxy` env vars; override with task `environment` or `use_proxy: false`. Redirects can switch HTTP→HTTPS, so set both proxies.\n- `--check` does a HEAD request only and may report an incorrect changed status.\n- Windows: use `ansible.windows.win_get_url`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/get_url_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

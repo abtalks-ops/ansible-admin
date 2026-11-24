@@ -1,0 +1,17 @@
+{
+  "chunk_id": "f370a88d70387945",
+  "chunk_hash": "f370a88d70387945",
+  "summary": "Examples of wait_for_connection: default wait, delayed start with shorter timeout, waking machines with Wake-on-LAN then gathering facts, and cloning a VM then waiting for WinRM.",
+  "questions": [
+    "How do I wake machines with WOL and wait for them?",
+    "How do I wait for a new Windows VM to accept WinRM?",
+    "Why disable gather_facts before wait_for_connection?"
+  ],
+  "answer_card": {
+    "title": "wait_for_connection examples",
+    "answer_md": "```yaml\n- hosts: all\n  gather_facts: no\n  tasks:\n    - community.general.wakeonlan: {mac: '{{ mac }}', broadcast: 192.168.0.255}\n      delegate_to: localhost\n    - ansible.builtin.wait_for_connection:\n    - ansible.builtin.setup:\n\n- ansible.builtin.wait_for_connection: {delay: 60, timeout: 300}\n- ansible.builtin.wait_for_connection: {timeout: 900, sleep: 10}\n```\nDisable `gather_facts` since the host isn't reachable at play start.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/wait_for_connection_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:27+00:00"
+}

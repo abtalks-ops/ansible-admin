@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c3db22e8defdca98",
+ "chunk_hash": "c3db22e8defdca98",
+ "summary": "Unit tests in test/units cover mostly internals but also modules, organized by module group under test/units/modules. They may include some functional testing for cases integration tests can't verify.",
+ "questions": [
+  "Where are the unit tests for Ansible modules?",
+  "Why do some module unit tests do functional testing?"
+ ],
+ "answer_card": {
+  "title": "Module unit tests in ansible-core",
+  "answer_md": "Unit tests live in `test/units`, mirroring the code layout; module tests are under `test/units/modules/`, grouped by module group. Because some cases can't be checked by integration tests, module unit tests sometimes go beyond tiny units and include some functional testing.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

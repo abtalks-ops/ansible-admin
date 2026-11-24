@@ -1,0 +1,17 @@
+{
+  "chunk_id": "98dfc86cb6fa23a4",
+  "chunk_hash": "98dfc86cb6fa23a4",
+  "summary": "template options: owner, SELinux context fields, the required src template on the controller (UTF-8), and trim_blocks (true) which removes the newline after block tags.",
+  "questions": [
+    "Where does the template module look for the src file?",
+    "Why are newlines after my {% if %} tags removed?",
+    "How do I set an SELinux type on a templated file?"
+  ],
+  "answer_card": {
+    "title": "template src, owner, trim_blocks",
+    "answer_md": "- `src` (required): Jinja2 template on the **controller**, UTF-8\n- `trim_blocks` (true): removes first newline after a block tag (not variable tags)\n- `owner`, `seuser`/`serole`/`setype`/`selevel`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

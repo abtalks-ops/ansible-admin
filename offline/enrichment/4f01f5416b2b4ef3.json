@@ -1,0 +1,17 @@
+{
+  "chunk_id": "4f01f5416b2b4ef3",
+  "chunk_hash": "4f01f5416b2b4ef3",
+  "summary": "Examples of assemble: combining a fragments directory, adding a delimiter between fragments, and assembling sshd_config with validation through sshd -t.",
+  "questions": [
+    "How do I assemble sshd_config from conf.d pieces and validate it?",
+    "How do I add a marker line between each fragment?",
+    "What's a minimal assemble task?"
+  ],
+  "answer_card": {
+    "title": "assemble examples",
+    "answer_md": "```yaml\n- ansible.builtin.assemble:\n    src: /etc/someapp/fragments\n    dest: /etc/someapp/someapp.conf\n    delimiter: '### START FRAGMENT ###'\n\n- ansible.builtin.assemble:\n    src: /etc/ssh/conf.d/\n    dest: /etc/ssh/sshd_config\n    validate: /usr/sbin/sshd -t -f %s\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/assemble_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:25+00:00"
+}

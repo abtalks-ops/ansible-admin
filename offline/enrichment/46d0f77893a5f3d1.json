@@ -1,0 +1,17 @@
+{
+  "chunk_id": "46d0f77893a5f3d1",
+  "chunk_hash": "46d0f77893a5f3d1",
+  "summary": "The failed test checks that a registered result has failed: True; skipped tasks and those not run due to syntax, templating or unreachable errors don't count as failed.",
+  "questions": [
+    "How do I check if a registered task failed?",
+    "Is a skipped task considered failed?",
+    "Does an unreachable host show as failed in the test?"
+  ],
+  "answer_card": {
+    "title": "failed test",
+    "answer_md": "`result is failed` is true when the result has `failed: true` (opposite of `succeeded`). Skipped tasks and those not executed due to syntax/templating/unreachable errors don't return failed.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/failed_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:13+00:00"
+}

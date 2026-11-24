@@ -1,0 +1,18 @@
+{
+  "chunk_id": "c05c77f9f6d6c2e9",
+  "chunk_hash": "c05c77f9f6d6c2e9",
+  "summary": "Lists file module parameters: modification_time_format, owner (numeric means UID), path (required, aliases dest and name), recurse (only with state=directory), and SELinux context fields selevel, serole, setype, seuser.",
+  "questions": [
+    "How do I change ownership of a directory and everything inside it?",
+    "What are the aliases for the file module's path parameter?",
+    "Does recurse work with state=file?",
+    "How do I set SELinux context with the file module?"
+  ],
+  "answer_card": {
+    "title": "file parameters: path, owner, recurse",
+    "answer_md": "- `path` (required; aliases `dest`, `name`): path to the file being managed.\n- `owner`: as for `chown`; unspecified uses the current user (root can preserve ownership). Numeric like `\"1000\"` is a UID.\n- `recurse` (default false): recursively set attributes on directory contents; only with `state=directory`.\n- `modification_time_format` (default `%Y%m%d%H%M.%S`).\n- SELinux: `seuser`, `serole`, `setype`, `selevel`; `_default` uses the policy value.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

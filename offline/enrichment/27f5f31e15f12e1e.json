@@ -1,0 +1,18 @@
+{
+ "chunk_id": "27f5f31e15f12e1e",
+ "chunk_hash": "27f5f31e15f12e1e",
+ "summary": "Example win_dsc task using the Registry resource to create a key and value. Since Ansible 2.8, win_dsc validates options against the DSC definition, and running with -vvv shows the possible invocation options.",
+ "questions": [
+  "Can you show a win_dsc example that sets a registry value?",
+  "Does win_dsc validate the options I pass?",
+  "How do I see all available options for a DSC resource from Ansible?",
+  "Why does my win_dsc task fail with an invalid option error?"
+ ],
+ "answer_card": {
+  "title": "Example win_dsc task with the Registry resource",
+  "answer_md": "```yaml+jinja\n- name: Use win_dsc module with the Registry DSC resource\n  win_dsc:\n    resource_name: Registry\n    Ensure: Present\n    Key: HKEY_LOCAL_MACHINE\\SOFTWARE\\ExampleKey\n    ValueName: TestValue\n    ValueData: TestData\n```\n\nSince Ansible 2.8, `win_dsc` validates your options against the DSC definition and fails on a wrong option name, a missing mandatory option, or an invalid choice. Run with `-vvv` to see the possible invocation options for that `resource_name` in the return value.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_dsc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

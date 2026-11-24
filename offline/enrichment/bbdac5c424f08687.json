@@ -1,0 +1,18 @@
+{
+  "chunk_id": "bbdac5c424f08687",
+  "chunk_hash": "bbdac5c424f08687",
+  "summary": "Describes Basic auth as the simplest but least secure WinRM option (base64 credentials, local accounts only), with host vars for psrp and winrm and the PowerShell command to enable it.",
+  "questions": [
+    "How do I configure Basic authentication for WinRM in Ansible?",
+    "How do I enable Basic auth on the WinRM service?",
+    "Can I use Basic auth with a domain account?",
+    "Why is WinRM Basic auth insecure?"
+  ],
+  "answer_card": {
+    "title": "Using Basic auth with WinRM",
+    "answer_md": "Basic sends base64-encoded credentials (readable without HTTPS) and works only for **local accounts**.\n\n```yaml\nansible_user: LocalUsername\nansible_password: Password\nansible_connection: psrp     # or winrm\nansible_psrp_auth: basic     # or ansible_winrm_transport: basic\n```\n\nIt's disabled by default; enable on the host:\n\n```powershell\nSet-Item -Path WSMan:\\localhost\\Service\\Auth\\Basic -Value $true\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2463a1458f1cf7f9",
+ "chunk_hash": "2463a1458f1cf7f9",
+ "summary": "To contribute to ansible-core, fork ansible/ansible, branch from devel, and open a PR to devel; for modules in collections, review the submission checklist, tips, Python 2/3 strategy and testing first.",
+ "questions": [
+  "How do I submit a bug fix to ansible-core?",
+  "Which branch should my ansible-core PR target?"
+ ],
+ "answer_card": {
+  "title": "Contribute back to ansible-core",
+  "answer_md": "Fork `ansible/ansible`, create a feature branch from `devel`, and open a PR with your branch as source and `devel` as target. For collection modules, review the submission checklist, programming tips, Python 2/3 strategy and testing guidance first.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "8480fa8444d4ec91",
+ "chunk_hash": "8480fa8444d4ec91",
+ "summary": "Vars plugins run only as needed since 2.4 and their stage is user-configurable since 2.10; collection vars plugins must be explicitly enabled, legacy ones can opt out with REQUIRES_ENABLED, the vars_plugin_staging fragment exposes the stage option, and wrap_var handles unsafe values.",
+ "questions": [
+  "Why isn't my collection vars plugin running?",
+  "How do I stop a legacy vars plugin from running automatically?",
+  "How can users control when a vars plugin runs?",
+  "How should a vars plugin return unsafe values?"
+ ],
+ "answer_card": {
+  "title": "Vars plugin execution and staging",
+  "answer_md": "- Since 2.4 they run only when preparing tasks; since 2.10 users can choose task-time or post-inventory.\n- Collection vars plugins must be **explicitly enabled**.\n- Legacy ones run by default; set `REQUIRES_ENABLED = True` to require enabling.\n- Add `extends_documentation_fragment: [vars_plugin_staging]` for a `stage` option (`ANSIBLE_VARS_PLUGIN_STAGE`).\n- Wrap unsafe values with `wrap_var` from `ansible.utils.unsafe_proxy`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

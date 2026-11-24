@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ad36db708a10946c",
+ "chunk_hash": "ad36db708a10946c",
+ "summary": "Split large requirements files with an include entry pointing to another YAML file, then install by passing the root file.",
+ "questions": [
+  "How do I split a big requirements.yml into several files?",
+  "Can requirements.yml include another file?"
+ ],
+ "answer_card": {
+  "title": "Include other requirements files",
+  "answer_md": "In `requirements.yml`:\n```yaml\n- name: yatesr.timezone\n- include: <path_to_requirements>/webserver.yml\n```\nThen install from the root file:\n```bash\nansible-galaxy role install -r requirements.yml\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/user_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

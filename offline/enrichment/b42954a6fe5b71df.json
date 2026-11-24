@@ -1,0 +1,17 @@
+{
+  "chunk_id": "b42954a6fe5b71df",
+  "chunk_hash": "b42954a6fe5b71df",
+  "summary": "ansible-core deprecations in Ansible 11: safe_eval helpers, ANSIBLE_CONNECTION_PATH (no effect), yum_repository async (gone in RHEL 8), and several yum_repository options with no dnf effect, such as deltarpm_metadata_percentage, gpgcakey, http_caching, keepalive and protect, all removed in core 2.22.",
+  "questions": [
+    "Which yum_repository options are deprecated?",
+    "Should I still set async in yum_repository?",
+    "Is safe_eval deprecated in module_utils?"
+  ],
+  "answer_card": {
+    "title": "yum_repository option deprecations",
+    "answer_md": "`yum_repository` options to remove before ansible-core 2.22:\n- `async` (removed in RHEL 8)\n- `deltarpm_metadata_percentage`, `gpgcakey`, `http_caching`, `keepalive`, `metadata_expire_filter`, `mirrorlist_expire`, `protect`, `ssl_check_cert_permissions`, `ui_repoid_vars` (no effect with dnf)\n\nAlso deprecated: `AnsibleModule.safe_eval` / `common.safe_eval`, and `ANSIBLE_CONNECTION_PATH` (no effect).",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

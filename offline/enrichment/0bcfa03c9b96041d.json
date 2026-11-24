@@ -1,0 +1,15 @@
+{
+ "chunk_id": "0bcfa03c9b96041d",
+ "chunk_hash": "0bcfa03c9b96041d",
+ "summary": "Function guidelines for modules: concise functions with descriptive underscore names and docstrings, follow DRY, and refactor deep nesting into functions.",
+ "questions": [
+  "What naming style should functions in a module use?"
+ ],
+ "answer_card": {
+  "title": "Function conventions",
+  "answer_md": "Keep functions concise with descriptive `snake_case` names and docstrings, follow DRY, and pull deeply nested loop bodies into functions.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_best_practices.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

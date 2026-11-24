@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b2fc0787db4d1f17",
+ "chunk_hash": "b2fc0787db4d1f17",
+ "summary": "community.postgresql postgresql_membership: state=exact reports granted entries, memberships rows need granted_by when ADMIN OPTION is indirect, and on PostgreSQL 16+ each row manages the grant recorded under its granting role.",
+ "questions": [
+  "Why does postgresql_membership report changed on first run after upgrading?",
+  "When do I need granted_by in postgresql_membership?",
+  "How does postgresql_membership handle grantors on PostgreSQL 16?"
+ ],
+ "answer_card": {
+  "title": "postgresql_membership breaking changes",
+  "answer_md": "- `state=exact` now reports `granted` entries for every requested group like `state=present`, so `result.granted == {}` no longer holds on unchanged runs.\n- A `memberships` row must set **`granted_by`** if the connecting role has `ADMIN OPTION` on a group only through another role.\n- On **PostgreSQL 16+**, a `memberships` row manages the grant recorded under its granting role (bootstrap superuser if connecting as superuser, the connecting role otherwise, or `granted_by`). `present` makes that grant even if another role granted it; `absent` and `exact` ignore grants by other roles. Tasks may report changed on the first run.\n\nThe deprecated `groups` option keeps the old behavior.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

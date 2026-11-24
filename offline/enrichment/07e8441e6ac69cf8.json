@@ -1,0 +1,15 @@
+{
+  "chunk_id": "07e8441e6ac69cf8",
+  "chunk_hash": "07e8441e6ac69cf8",
+  "summary": "Jinja2 filters transform variable values in templates, e.g. capitalize, to_yaml and to_json; Ansible adds many more.",
+  "questions": [
+    "How do I transform a variable's value in a template?"
+  ],
+  "answer_card": {
+    "title": "Transforming variables with filters",
+    "answer_md": "Apply filters inside expressions, e.g. `{{ name | capitalize }}`, `{{ data | to_yaml }}`, `{{ data | to_json }}`. Jinja2 has many built-in filters and Ansible adds more.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:32+00:00"
+}

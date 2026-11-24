@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8597a5519bb7426e",
+ "chunk_hash": "8597a5519bb7426e",
+ "summary": "With ansible-core 2.20, community.sops.load_vars triggers INJECT_FACTS_AS_VARS deprecation warnings on every use; set INJECT_FACTS_AS_VARS=true to silence them and don't move SOPS vars into ansible_facts.",
+ "questions": [
+  "Why do I get INJECT_FACTS_AS_VARS warnings when using community.sops.load_vars?",
+  "How do I silence sops load_vars deprecation warnings on ansible-core 2.20?",
+  "Should I switch SOPS variables to ansible_facts?"
+ ],
+ "answer_card": {
+  "title": "community.sops.load_vars warnings on ansible-core 2.20",
+  "answer_md": "ansible-core 2.20 deprecates `INJECT_FACTS_AS_VARS` without an alternative for modules like `community.sops.load_vars`, so every use of a variable loaded with it shows a deprecation warning.\n\nTo silence them, explicitly set `INJECT_FACTS_AS_VARS` to `true`. **Do not** change SOPS-encrypted variables to use `ansible_facts`. The issue should be fixed when ansible-core 2.21 provides an API for action plugins to set variables.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:06+00:00"
+}

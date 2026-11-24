@@ -1,0 +1,18 @@
+{
+ "chunk_id": "3fa15d281b2ba3af",
+ "chunk_hash": "3fa15d281b2ba3af",
+ "summary": "Shows mask_secrets handling literal and JSON-escaped forms, and lists when to mask individual values before serializing: to keep output valid, for non-JSON escaping like XML or YAML, for transformed encodings, or when only some fields are secret.",
+ "questions": [
+  "Will mask_secrets catch a secret with quotes inside JSON output?",
+  "Why did masking break my JSON output?",
+  "Does masking work on XML or YAML serialized output?",
+  "When should I mask values before serializing instead of after?"
+ ],
+ "answer_card": {
+  "title": "Mask before or after serializing",
+  "answer_md": "```python\nregister_secret('pa\"ss\\\\wörd!')\nmask_secrets(json.dumps({'password': 'pa\"ss\\\\wörd!'}))  # {\"password\": \"$REDACTED$\"}\n```\nMask each value **before** serializing when:\n- output must stay valid (`{\"key\": 12345678}` → `{\"key\": $REDACTED$}` is invalid JSON)\n- the format escapes differently (XML, YAML, `repr()`)\n- values are transformed (base64, URL encoding, compression)\n- only some fields are secret",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_secret_masking.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

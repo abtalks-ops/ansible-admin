@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8daa3dfb5cb790ee",
+ "chunk_hash": "8daa3dfb5cb790ee",
+ "summary": "Because nested templates are now evaluated only on use, a dict with an undefined nested template counts as defined, so default and defined/undefined behave differently than before 2.19.",
+ "questions": [
+  "Why is my dict considered defined even though a nested value is undefined?",
+  "Why doesn't default() apply when a nested key is undefined in ansible-core 2.19?",
+  "How do defined and undefined tests treat nested templates now?"
+ ],
+ "answer_card": {
+  "title": "Nested undefined values with default and defined",
+  "answer_md": "Nested values with embedded templates are now templated **only when accessed**. With:\n\n```yaml\nvars:\n  complex_var:\n    nested: \"{{ undefined_variable }}\"\n```\n\nIn 2.19:\n- `complex_var is defined` is **true** (it wasn't before)\n- `(complex_var | default(unused)).nested is undefined` is true, because the default is **not** applied\n- `complex_var.nested is undefined` is true, as before\n\nCheck the nested key directly rather than relying on `default` or `defined` on the parent.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:06+00:00"
+}

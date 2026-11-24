@@ -1,0 +1,18 @@
+{
+ "chunk_id": "c2caab17cdf36456",
+ "chunk_hash": "c2caab17cdf36456",
+ "summary": "Collections change only through new versions; the highest version is shown on Galaxy and Automation Hub while older ones stay downloadable. Use semantic versioning for major, minor and patch bumps.",
+ "questions": [
+  "Which version of my collection does Galaxy show by default?",
+  "When should I bump the major version of a collection?",
+  "Is adding a new module a minor or patch version bump?",
+  "Can users still install older versions of my collection?"
+ ],
+ "answer_card": {
+  "title": "Collection versioning",
+  "answer_md": "The only way to change a collection is a new version. The highest version is displayed on Galaxy/Automation Hub; older ones remain downloadable. Use semver:\n- **Major** (`x`): incompatible API change\n- **Minor** (`y`): backwards-compatible features (new modules/plugins, parameters, return values)\n- **Patch** (`z`): backwards-compatible bug fixes",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

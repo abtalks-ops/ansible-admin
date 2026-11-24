@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ec26f2ff42a4631f",
+ "chunk_hash": "ec26f2ff42a4631f",
+ "summary": "The YAML inventory plugin reads YAML inventories starting with the all group and hosts/vars/children entries; to set all group vars, all must be the first entry, and the file needs a configured extension.",
+ "questions": [
+  "How do I structure a YAML inventory file?",
+  "Why aren't my all group vars applied in YAML inventory?",
+  "Is the YAML inventory plugin enabled by default?"
+ ],
+ "answer_card": {
+  "title": "YAML inventory plugin",
+  "answer_md": "A YAML inventory should start with the `all` group and use `hosts`, `vars` and `children` entries. Sub-entries under a host are its variables; `children` groups can have their own hosts/vars/children. The file must use a configured valid extension.\n\nTo set vars for `all` in the file, `all` must be the **first** entry. The plugin is enabled by default.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yaml_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

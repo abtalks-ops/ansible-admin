@@ -1,0 +1,17 @@
+{
+  "chunk_id": "6fda0e0a4bc407e0",
+  "chunk_hash": "6fda0e0a4bc407e0",
+  "summary": "Explains using _task.result for the current item's result without registering, and _task.loop_result in register projections to save specific items' output into separate variables. default is only needed if projections are used during iteration.",
+  "questions": [
+    "How do I access a loop item's result without register?",
+    "How do I register separate variables from each loop item's output?",
+    "What is _task.loop_result?"
+  ],
+  "answer_card": {
+    "title": "_task.result and register projections in loops",
+    "answer_md": "Current item result without registering:\n\n```yaml\nchanged_when: _task.result.stdout != \"one\"\n```\n\nRegister specific items into variables:\n\n```yaml\n- ansible.builtin.shell: \"{{ item }}\"\n  register:\n    foo_output: _task.loop_result.results[0].stdout\n    bar_output: _task.loop_result.results[1].stdout\n  loop: [/usr/bin/foo, /usr/bin/bar]\n```\n\nProjections are evaluated after the task, so `default` isn't needed unless you use them in a condition during iteration.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "04947462769932f0",
+ "chunk_hash": "04947462769932f0",
+ "summary": "community.proxmox's proxmox module has a ca_path option for a custom CA certificate.",
+ "questions": [
+  "Can I set a CA certificate path for Proxmox TLS validation?"
+ ],
+ "answer_card": {
+  "title": "proxmox ca_path option",
+  "answer_md": "The `community.proxmox.proxmox` module supports **`ca_path`** to specify a CA certificate for TLS validation.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:10+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "50a575b7b5183733",
+ "chunk_hash": "50a575b7b5183733",
+ "summary": "The ANSIBLE_DISPLAY_TRACEBACK environment variable controls when tracebacks are shown for errors, warnings and deprecations, with options always, never, error, warning and deprecated that can be comma-combined.",
+ "questions": [
+  "How do I show Python tracebacks for Ansible errors?",
+  "What does ANSIBLE_DISPLAY_TRACEBACK do?",
+  "Can I get a traceback for a deprecation warning?",
+  "Does -vvv still show tracebacks?"
+ ],
+ "answer_card": {
+  "title": "Display tracebacks with ANSIBLE_DISPLAY_TRACEBACK",
+  "answer_md": "Previously tracebacks were only sometimes shown with `-vvv`, and only for errors. Now set `ANSIBLE_DISPLAY_TRACEBACK` to collect tracebacks for exceptions and for the call site of errors, warnings and deprecations (even in module code):\n\n- `always`: always show (overrides others)\n- `never`: never show (overrides others)\n- `error`: show for errors\n- `warning`: show for non-deprecation warnings\n- `deprecated`: show for deprecation warnings\n\nCombine options with commas, for example `ANSIBLE_DISPLAY_TRACEBACK=error,warning`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.19.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

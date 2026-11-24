@@ -1,0 +1,18 @@
+{
+ "chunk_id": "893399957b991e1b",
+ "chunk_hash": "893399957b991e1b",
+ "summary": "The New-AnsiblePowerShellSignature.ps1 script signs Ansible's execution wrapper and the PowerShell modules in collections. It needs PowerShell 7.4+, the OpenAuthenticode module, Python with Ansible and the collections, and the trusted certificate and key (usually a PFX), and it is a tech preview.",
+ "questions": [
+  "How do I sign Ansible's PowerShell modules for App Control?",
+  "What do I need to run New-AnsiblePowerShellSignature?",
+  "Is New-AnsiblePowerShellSignature officially supported?",
+  "Which PowerShell version is needed to sign Ansible content?"
+ ],
+ "answer_card": {
+  "title": "Signing Ansible content for App Control",
+  "answer_md": "Use the `New-AnsiblePowerShellSignature.ps1` script to sign Ansible's module execution wrapper and the PowerShell modules in collections. Requirements:\n- PowerShell 7.4 or later\n- the `OpenAuthenticode` PowerShell module\n- Python with Ansible and the needed collections installed\n- the certificate and private key trusted by the App Control policy, usually a PFX file\n\nNote: `New-AnsiblePowerShellSignature` is not officially supported and is a **tech preview**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_app_control.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

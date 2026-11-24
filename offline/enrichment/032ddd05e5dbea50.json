@@ -1,0 +1,17 @@
+{
+ "chunk_id": "032ddd05e5dbea50",
+ "chunk_hash": "032ddd05e5dbea50",
+ "summary": "Variables are flattened per host before a play, overwriting by default. Precedence is all < parent group < child group < host; same-level groups merge alphabetically, and ansible_group_priority (default 1) changes that order.",
+ "questions": [
+  "What is the precedence order for inventory variables?",
+  "Which group wins when two sibling groups set the same variable?",
+  "How do I make one group's variables take priority?"
+ ],
+ "answer_card": {
+  "title": "How inventory variables are merged",
+  "answer_md": "Lowest to highest:\n1. `all` group\n2. parent group\n3. child group\n4. host\n\nGroups at the same level merge **alphabetically**, so `b_group` overrides `a_group`. Set `ansible_group_priority` (default `1`) to change that: higher numbers merge later and win.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

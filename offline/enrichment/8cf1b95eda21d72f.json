@@ -1,0 +1,18 @@
+{
+  "chunk_id": "8cf1b95eda21d72f",
+  "chunk_hash": "8cf1b95eda21d72f",
+  "summary": "Shows add_host examples: adding a host to a group with a variable, to multiple groups, with a non-standard port, as a tunnel alias via `ansible_host`/`ansible_port` (or `ansible_ssh_*` on 1.9 and older), restoring `inventory_dir`, and adding all play hosts to a group in a loop.",
+  "questions": [
+    "How do I add a host to multiple groups with add_host?",
+    "How do I add a host I reach through an SSH tunnel?",
+    "How do I put every host that ran the playbook into a group?",
+    "How do I set a host variable when adding a host?"
+  ],
+  "answer_card": {
+    "title": "add_host examples",
+    "answer_md": "```yaml\n- ansible.builtin.add_host:\n    name: '{{ ip_from_ec2 }}'\n    groups: just_created\n    foo: 42                      # host var\n\n- ansible.builtin.add_host:\n    hostname: '{{ new_ip }}'\n    groups: [group1, group2]\n\n- ansible.builtin.add_host:\n    name: '{{ new_ip }}:{{ new_port }}'   # non-standard port\n\n- ansible.builtin.add_host:         # tunnel alias, Ansible 2.0+\n    hostname: '{{ new_ip }}'\n    ansible_host: '{{ inventory_hostname }}'\n    ansible_port: '{{ new_port }}'\n\n- ansible.builtin.add_host:         # close to pre-2.4 inventory_dir behavior\n    hostname: charlie\n    inventory_dir: '{{ inventory_dir }}'\n\n- ansible.builtin.add_host:\n    name: '{{ item }}'\n    groups: done\n  loop: \"{{ ansible_play_hosts }}\"\n```\n(On 1.9 and older, use `ansible_ssh_host`/`ansible_ssh_port`.)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/add_host_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

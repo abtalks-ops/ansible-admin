@@ -1,0 +1,19 @@
+{
+  "chunk_id": "70805442aeddca4c",
+  "chunk_hash": "70805442aeddca4c",
+  "summary": "Shows block/rescue/always together: rescue runs when a block task fails, always runs regardless. If rescue succeeds, the failure is reverted and the play continues without triggering `max_fail_percentage` or `any_errors_fatal`, though stats still show the failure.",
+  "questions": [
+    "If my rescue section succeeds, does the play keep going?",
+    "Does a rescued failure count toward max_fail_percentage or any_errors_fatal?",
+    "Why does the play recap still show a failure after rescue handled it?",
+    "What happens if a task inside rescue also fails?",
+    "In what order do block, rescue and always run?"
+  ],
+  "answer_card": {
+    "title": "How rescued failures are treated",
+    "answer_md": "The `block` tasks run normally; if any returns `failed`, `rescue` runs to recover, and `always` runs regardless of `block` and `rescue` results.\n\nIf a block task fails and the rescue succeeds, Ansible reverts the failed status and continues the play as if the original task had succeeded. The rescued task does **not** trigger `max_fail_percentage` or `any_errors_fatal`, but the failure is still counted in the playbook statistics.\n\nIf a rescue task itself fails, the remaining rescue tasks are skipped, but `always` still runs.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_blocks.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

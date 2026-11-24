@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ecfb5972d97674e8",
+ "chunk_hash": "ecfb5972d97674e8",
+ "summary": "Before PRs to Ansible-maintained collections, run ansible-test sanity and tox -elinters from the collection root after installing requirements.txt; tox runs black (check mode) and flake8 with preset options.",
+ "questions": [
+  "What checks must pass before I submit a network collection PR?",
+  "What does tox -elinters do?",
+  "How do I install linters for a network collection?"
+ ],
+ "answer_card": {
+  "title": "Run sanity and linters before a PR",
+  "answer_md": "CI fails if these fail, so run from the collection root:\n```bash\npip install -r requirements.txt\nansible-test sanity\ntox -elinters\n```\n`tox -elinters` reads `tox.ini`, installs tools like `black` and `flake8`, runs them with preset options, and runs `black` in check mode (shows files that would be reformatted).",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

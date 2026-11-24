@@ -1,0 +1,17 @@
+{
+  "chunk_id": "7abdef377b7a0c63",
+  "chunk_hash": "7abdef377b7a0c63",
+  "summary": "Explains runas tries to use the become user's full (elevated) token and falls back to a limited token; SeDebugPrivilege (Administrators by default) is needed for elevation. Check the token with win_whoami.",
+  "questions": [
+    "How do I check whether become on Windows got admin rights?",
+    "Why does become on Windows run with limited privileges?",
+    "What privilege is needed for an elevated become process on Windows?"
+  ],
+  "answer_card": {
+    "title": "Administrative rights with runas",
+    "answer_md": "`runas` tries to run with the become user's full privileges; if elevation fails it continues with a **limited token**. Elevation needs **`SeDebugPrivilege`** (Administrators have it by default).\n\nCheck what you got:\n\n```yaml\n- ansible.windows.win_whoami:\n  become: true\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

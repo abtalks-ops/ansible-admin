@@ -1,0 +1,15 @@
+{
+ "chunk_id": "e45a837feab92088",
+ "chunk_hash": "e45a837feab92088",
+ "summary": "Strings returned by plugins must be converted to unicode with to_text so they can pass through Jinja2.",
+ "questions": [
+  "How do I make sure my plugin returns unicode strings?"
+ ],
+ "answer_card": {
+  "title": "String encoding in plugins",
+  "answer_md": "```python\nfrom ansible.module_utils.common.text.converters import to_text\nresult_string = to_text(result_string)\n```\nUnicode strings are required so they work with Jinja2.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

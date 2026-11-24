@@ -1,0 +1,17 @@
+{
+  "chunk_id": "90cb18768722579a",
+  "chunk_hash": "90cb18768722579a",
+  "summary": "cisco.ios deprecations: password in ios_bgp_address_family neighbors (use password_options), many ios_bgp_global attributes, and the legacy ios_linkagg and ios_lldp modules.",
+  "questions": [
+    "How should I set BGP neighbor passwords in ios_bgp_address_family?",
+    "Is ios_lldp deprecated?",
+    "Which ios_bgp_global attributes are deprecated?"
+  ],
+  "answer_card": {
+    "title": "cisco.ios BGP and legacy module deprecations",
+    "answer_md": "- `ios_bgp_address_family`: neighbor `password` is deprecated. Use `password_options`.\n- `ios_bgp_global`: deprecated attributes include `aggregate_address`, `bestpath`, `inject_map`, `distribute_list`, `password`, `route_map` and others.\n- The legacy `ios_linkagg` and `ios_lldp` modules are deprecated.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

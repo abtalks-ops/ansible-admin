@@ -1,0 +1,16 @@
+{
+ "chunk_id": "62a1e36e6827066a",
+ "chunk_hash": "62a1e36e6827066a",
+ "summary": "Role dependencies install automatically into roles_path and can be defined in meta/requirements.yml or meta/main.yml.",
+ "questions": [
+  "Are role dependencies installed automatically?",
+  "Where do I declare a role's dependencies?"
+ ],
+ "answer_card": {
+  "title": "Role dependencies",
+  "answer_md": "Yes. Installing a role also installs its dependencies into `roles_path`. Declare them in either `meta/requirements.yml` or `meta/main.yml`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/user_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

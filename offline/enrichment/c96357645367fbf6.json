@@ -1,0 +1,18 @@
+{
+ "chunk_id": "c96357645367fbf6",
+ "chunk_hash": "c96357645367fbf6",
+ "summary": "amazon.aws 10 drops ansible-core < 2.17 and removes deprecated EC2_* and S3_URL environment variables and several parameter aliases, in favor of AWS_* variables and canonical parameter names.",
+ "questions": [
+  "Why is EC2_REGION ignored in amazon.aws now?",
+  "Which environment variable replaces EC2_ACCESS_KEY?",
+  "What replaces AWS_SECURITY_TOKEN for amazon.aws?",
+  "Which ansible-core versions does amazon.aws support in Ansible 12?"
+ ],
+ "answer_card": {
+  "title": "amazon.aws removed EC2_* environment variables",
+  "answer_md": "Breaking changes in amazon.aws (Ansible 12.0.0):\n\n- ansible-core **< 2.17** no longer supported.\n- Removed environment variables and their replacements:\n  - `EC2_ACCESS_KEY` → `access_key` or `AWS_ACCESS_KEY_ID`\n  - `EC2_SECRET_KEY` → `secret_key` or `AWS_SECRET_ACCESS_KEY`\n  - `EC2_REGION` → `region` or `AWS_REGION`\n  - `EC2_SECURITY_TOKEN`, `AWS_SECURITY_TOKEN` → `session_token` or `AWS_SESSION_TOKEN`\n  - `EC2_URL`, `S3_URL` → `endpoint_url` or `AWS_URL`\n- The `access_token`, `aws_security_token` and `security_token` aliases of `session_token` were removed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

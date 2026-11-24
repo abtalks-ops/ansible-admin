@@ -1,0 +1,15 @@
+{
+ "chunk_id": "e62f23a78c9bf40c",
+ "chunk_hash": "e62f23a78c9bf40c",
+ "summary": "community.vmware's vmware_dvswitch_pvlans now handles VLAN IDs as integers.",
+ "questions": [
+  "What type should VLAN IDs be in vmware_dvswitch_pvlans?"
+ ],
+ "answer_card": {
+  "title": "vmware_dvswitch_pvlans VLAN IDs are integers",
+  "answer_md": "In community.vmware, `vmware_dvswitch_pvlans` now handles the VLAN ID as an **integer**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

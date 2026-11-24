@@ -1,0 +1,19 @@
+{
+  "chunk_id": "73177a0b164e8776",
+  "chunk_hash": "73177a0b164e8776",
+  "summary": "Examples of getent: looking up root in passwd, listing all groups split by colon, listing hosts, querying a service without failing if missing, and reading a shadow entry as root.",
+  "questions": [
+    "How do I get the root user's passwd entry as a fact?",
+    "How do I list all groups on a host with Ansible?",
+    "How do I check a service port without failing if it's absent?",
+    "How do I read a user's password hash with getent?",
+    "Where do getent results appear in facts?"
+  ],
+  "answer_card": {
+    "title": "getent examples",
+    "answer_md": "```yaml\n- ansible.builtin.getent: {database: passwd, key: root}\n- ansible.builtin.debug: {var: ansible_facts.getent_passwd}\n\n- ansible.builtin.getent: {database: group, split: ':'}\n- ansible.builtin.getent: {database: services, key: http, fail_key: false}\n- ansible.builtin.getent: {database: shadow, key: www-data, split: ':'}  # needs root\n```\nResults land in `ansible_facts.getent_<database>`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/getent_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

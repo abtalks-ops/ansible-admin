@@ -1,0 +1,20 @@
+{
+  "chunk_id": "c8e680d0153df736",
+  "chunk_hash": "c8e680d0153df736",
+  "summary": "Combines groups and hostvars to list every app server's IP address, for example for proxies or firewalls, as long as facts are gathered or cached. Covers group_names for group-based templating, inventory_hostname(_short) as an alternative when facts are off, and play-level variables ansible_play_hosts, ansible_play_batch, ansible_playbook_python and inventory_dir.",
+  "questions": [
+    "How do I list the IP addresses of every host in a group for a load balancer config?",
+    "How can a template include a section only for hosts in the webserver group?",
+    "What can I use instead of ansible_hostname when gather_facts is off?",
+    "What's the difference between ansible_play_hosts and ansible_play_batch?",
+    "How do I get the short hostname without the domain?",
+    "Which variable shows the Python used by the Ansible controller?"
+  ],
+  "answer_card": {
+    "title": "Collecting group IPs and other play magic variables",
+    "answer_md": "All IPs in a group (facts must be gathered or cached for those hosts first):\n\n```jinja\n{% for host in groups['app_servers'] %}\n   {{ hostvars[host]['ansible_facts']['eth0']['ipv4']['address'] }}\n{% endfor %}\n```\n\nGroup-based content:\n\n```jinja\n{% if 'webserver' in group_names %}\n   # webserver-only config\n{% endif %}\n```\n\nOther useful variables:\n- `inventory_hostname` / `inventory_hostname_short`: the inventory name (works without facts).\n- `ansible_play_hosts`: hosts still active in the play.\n- `ansible_play_batch`: hosts in the current `serial` batch.\n- `ansible_playbook_python`: the controller's Python.\n- `inventory_dir`: the inventory file's directory.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:17:08+00:00"
+}

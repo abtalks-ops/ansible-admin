@@ -1,0 +1,18 @@
+{
+ "chunk_id": "15baffbc89f3c513",
+ "chunk_hash": "15baffbc89f3c513",
+ "summary": "One ad hoc command gathers VyOS facts using -i host, (trailing comma), -c network_cli, -u, -k, -m vyos_facts and -e ansible_network_os. Omit -k with ssh-agent, and set ansible_python_interpreter in a venv.",
+ "questions": [
+  "How do I get a network device's config with one Ansible command?",
+  "What does the trailing comma after -i hostname mean?",
+  "Do I need -k if I use SSH keys?",
+  "Why does my network command fail inside a virtualenv?"
+ ],
+ "answer_card": {
+  "title": "First network ad hoc command",
+  "answer_md": "```bash\nansible all -i vyos.example.net, -c ansible.netcommon.network_cli \\\n  -u my_vyos_user -k -m vyos.vyos.vyos_facts -e ansible_network_os=vyos.vyos.vyos\n```\n- `-i host,`: the trailing comma makes it a host list; without it `-i` is an inventory file\n- `-c`: connection plugin; `-u`: SSH user; `-k`: prompt for password\n- `-m`: module FQCN; `-e`: extra var\n\nWith `ssh-agent` keys you can drop `-k`. In a virtualenv add `-e ansible_python_interpreter=/path/to/venv/bin/python`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/first_playbook.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

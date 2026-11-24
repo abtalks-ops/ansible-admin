@@ -1,0 +1,17 @@
+{
+  "chunk_id": "ecca9ce918b2a243",
+  "chunk_hash": "ecca9ce918b2a243",
+  "summary": "Shows tagging individual tasks with one or more tags and applying the same tag (ntp) to several tasks so --tags ntp runs only those.",
+  "questions": [
+    "How do I add a tag to a task?",
+    "Can a task have multiple tags?",
+    "How do I run only the ntp tasks?"
+  ],
+  "answer_card": {
+    "title": "Tagging individual tasks",
+    "answer_md": "```yaml\n- name: Install the servers\n  ansible.builtin.yum:\n    name: [httpd, memcached]\n    state: present\n  tags:\n  - packages\n  - webservers\n\n- name: Install ntp\n  ansible.builtin.yum:\n    name: ntp\n  tags: ntp\n```\n\n`ansible-playbook site.yml --tags ntp` runs only tasks tagged `ntp`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "de786f082ffc5dd3",
+ "chunk_hash": "de786f082ffc5dd3",
+ "summary": "Direct access to Templar.environment is deprecated, removed in ansible-core 2.23; use Templar.copy_with_new_env() or pass overrides to Templar.template().",
+ "questions": [
+  "My plugin modifies templar.environment, what should I do instead?",
+  "How do I change Jinja settings for one template call?"
+ ],
+ "answer_card": {
+  "title": "Stop using Templar.environment",
+  "answer_md": "`Templar.environment` access is deprecated (removed in 2.23). Use **`templar.copy_with_new_env(...)`** for a new instance, or **`templar.template(value, overrides={...})`** for per-call settings.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.18.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:08+00:00"
+}

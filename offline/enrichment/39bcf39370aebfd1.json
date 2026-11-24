@@ -1,0 +1,17 @@
+{
+ "chunk_id": "39bcf39370aebfd1",
+ "chunk_hash": "39bcf39370aebfd1",
+ "summary": "dellemc.openmanage 13.0.0 known issues including pending 2.19 qualification for ome_smart_fabric_info, SNMP community type, SOCKS proxy and NFS export limits in idrac_license/diagnostics, iDRAC10 PatrolReadRatePercent, SCP revert, empty video list, and read-only volume properties.",
+ "questions": [
+  "Can idrac_license export to an NFS share?",
+  "Why does idrac_system_info show an empty video list?",
+  "Why are encryption type and block_io_size ignored by redfish_storage_volume?"
+ ],
+ "answer_card": {
+  "title": "dellemc.openmanage known issues (13.0.0)",
+  "answer_md": "- `ome_smart_fabric_info`: ansible-core 2.19 qualification pending.\n- `idrac_attributes`: `SNMP.1.AgentCommunity` accepts string or int on iDRAC10.\n- `idrac_diagnostics`: no SOCKS proxy export.\n- `idrac_license`: proxy ignored on import; **export to NFS fails**; error messages differ iDRAC9 vs 10.\n- `idrac_os_deployment`: succeeds even with outdated Expose duration.\n- `idrac_redfish_storage_controller`: `PatrolReadRatePercent` unsettable on iDRAC10.\n- `idrac_server_config_profile`: revert doesn't remove users added after export.\n- `idrac_system_info`: empty video list despite embedded video controller.\n- `ome_smart_fabric_uplink`: same-name uplink modifies the existing one.\n- `redfish_storage_volume`: encryption type and block_io_size bytes are read-only and ignored.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:43+00:00"
+}

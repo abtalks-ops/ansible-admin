@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ede39199b0f73363",
+ "chunk_hash": "ede39199b0f73363",
+ "summary": "Recommends testing changes in staging first, using group variables for environment differences and --syntax-check to catch syntax errors.",
+ "questions": [
+  "How do I check a playbook for syntax errors without running it?",
+  "Does my staging environment need to be the same size as production?"
+ ],
+ "answer_card": {
+  "title": "Try changes in staging first",
+  "answer_md": "Test changes in staging before production. Environments don't need to be the same size; use group variables to handle differences. Check syntax with:\n\n```shell\nansible-playbook --syntax-check playbook.yml\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/tips_tricks/ansible_tips_tricks.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "e0ff248b9d543542",
+  "chunk_hash": "e0ff248b9d543542",
+  "summary": "Shows using play-level environment for version managers like nvm (NVM_DIR and PATH) in an npm workflow, warns that ansible_env depends on the user that gathered facts, and that env vars aren't safe for secrets.",
+  "questions": [
+    "How do I use nvm with Ansible?",
+    "How do I add to PATH for tasks in a play?",
+    "Is it safe to pass secrets via environment variables in Ansible?",
+    "Why is ansible_env.PATH wrong after changing become_user?"
+  ],
+  "answer_card": {
+    "title": "Using version managers like nvm",
+    "answer_md": "```yaml\n- hosts: application\n  environment:\n    NVM_DIR: /var/local/nvm\n    PATH: /var/local/nvm/versions/node/v4.2.1/bin:{{ ansible_env.PATH }}\n  tasks:\n  - community.general.npm:\n      path: '{{ node_app_dir }}'\n```\n\n`ansible_env` comes from fact gathering, so it reflects the `remote_user`/`become_user` used then. Environment variables are usually passed in clear text, so don't use them for secrets.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_environment.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:03:26+00:00"
+}

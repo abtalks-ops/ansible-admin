@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e7b3121748df15de",
+ "chunk_hash": "e7b3121748df15de",
+ "summary": "Steps to migrate a role with plugins: init the collection, copy the role, move library modules to plugins/modules and other plugins to plugins/<type>, update galaxy.yml and README, and reference the role by FQCN or via the collections keyword.",
+ "questions": [
+  "Where do modules from a role's library directory go in a collection?",
+  "How do I call a role from a collection in my playbook?",
+  "Can I avoid typing the full FQCN for collection roles?"
+ ],
+ "answer_card": {
+  "title": "Migrate a role with plugins",
+  "answer_md": "After init and copying the role:\n- `mv roles/my_role/library/* plugins/modules/`\n- move other plugins to `plugins/<type>/`\n- update `galaxy.yml` and README\n- use FQCNs:\n```yaml\n- import_role:\n    name: mynamespace.mycollection.my_role\n```\nOr add `collections: [mynamespace.mycollection]` to the play and use `name: my_role`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/migrating_roles.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

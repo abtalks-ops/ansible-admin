@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1d4813c0cc8350fb",
+ "chunk_hash": "1d4813c0cc8350fb",
+ "summary": "The netconf connection uses ncclient (install on the control node) over SSH. Set ansible_network_os=default for standard RFC 6241 devices and use netconf_get/config/rpc; vendor RPCs go in OS-specific netconf plugins like junos.py.",
+ "questions": [
+  "What do I need to use NETCONF with Ansible?",
+  "What should ansible_network_os be for a standard NETCONF device?",
+  "How do I add vendor-specific NETCONF RPCs?",
+  "Which modules talk to NETCONF devices?"
+ ],
+ "answer_card": {
+  "title": "NETCONF connection plugin",
+  "answer_md": "- Install `ncclient` on the control node.\n- For standard NETCONF (RFC 6241: `get`, `get-config`, `edit-config`), set `ansible_network_os=default`.\n- Use `netconf_get`, `netconf_config`, `netconf_rpc`.\n- All `NetconfBase` methods work on standard devices. For vendor RPCs, implement them in an OS-specific plugin (for example `plugins/netconf/junos.py`) and set `ansible_network_os` to that filename (`junos`).",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_plugins_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

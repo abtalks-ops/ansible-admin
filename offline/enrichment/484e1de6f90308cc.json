@@ -1,0 +1,12 @@
+{
+ "chunk_id": "484e1de6f90308cc",
+ "chunk_hash": "484e1de6f90308cc",
+ "summary": "Continuation of the developer guide's task menu covering Python environment setup, network and Windows modules, debugging, testing, documenting, Python 2/3 compatibility, plugins, inventory sources, deprecation, and contribution topics.",
+ "questions": [
+  "Where are the docs on making my module work on both Python 2 and 3?",
+  "Is there a guide for connecting Ansible to a new inventory source?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

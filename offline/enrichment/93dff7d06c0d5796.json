@@ -1,0 +1,16 @@
+{
+ "chunk_id": "93dff7d06c0d5796",
+ "chunk_hash": "93dff7d06c0d5796",
+ "summary": "Run integration tests in the same Docker or Podman containers CI uses; set ANSIBLE_TEST_PREFER_PODMAN to prefer Podman, and on non-Linux Docker try --docker-privileged if tests fail.",
+ "questions": [
+  "How do I make ansible-test use Podman instead of Docker?",
+  "Why do integration tests fail with Docker on macOS?"
+ ],
+ "answer_card": {
+  "title": "Tests in containers",
+  "answer_md": "Use CI's containers on Linux with Docker or Podman. Podman is used only if the Docker CLI is missing, unless you set `ANSIBLE_TEST_PREFER_PODMAN`. Docker on macOS isn't recommended; `--docker-privileged` (for `integration` only) may help.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_integration.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:46+00:00"
+}

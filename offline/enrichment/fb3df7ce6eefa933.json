@@ -1,0 +1,12 @@
+{
+ "chunk_id": "fb3df7ce6eefa933",
+ "chunk_hash": "fb3df7ce6eefa933",
+ "summary": "Modules without unit tests are often hard to test, and adding tests may push you to restructure the code, which usually makes it clearer.",
+ "questions": [
+  "Why is my module so hard to unit test?",
+  "Should I refactor my module to make it testable?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

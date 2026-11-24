@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a8ff1321590865e5",
+ "chunk_hash": "a8ff1321590865e5",
+ "summary": "Shows provisioning the domain lab with git clone and vagrant up, rerunning vagrant provision on errors, and explains reaching hosts via host-only IPs or forwarded ports in the 295xx to 299xx ranges.",
+ "questions": [
+  "How do I build the Windows domain test lab?",
+  "What should I do if the Ansible step of vagrant up fails?",
+  "Which forwarded port reaches WinRM HTTPS on a given lab host?"
+ ],
+ "answer_card": {
+  "title": "Provision the Windows domain lab",
+  "answer_md": "```shell\ngit clone https://github.com/jborean93/ansible-windows.git\ncd vagrant\nvagrant up\n```\nHosts provision sequentially; if the Ansible phase fails, run `vagrant provision`. Use host-only IPs with normal ports, or `127.0.0.1` with forwarded ports: RDP `295xx`, SSH `296xx`, WinRM HTTP `297xx`, WinRM HTTPS `298xx`, SMB `299xx`, where `xx` is the host's inventory index (DC = `00`). E.g. SERVER2012R2 HTTPS is `29804`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

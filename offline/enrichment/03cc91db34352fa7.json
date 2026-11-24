@@ -1,0 +1,16 @@
+{
+ "chunk_id": "03cc91db34352fa7",
+ "chunk_hash": "03cc91db34352fa7",
+ "summary": "Shows how to decrypt an encrypted string by piping it to ansible-vault decrypt on stdin, or by running ansible-vault decrypt and pasting it, ending with Ctrl+D twice.",
+ "questions": [
+  "How do I decrypt a single vault-encrypted string?",
+  "Can I paste vaulted ciphertext into ansible-vault to read it?"
+ ],
+ "answer_card": {
+  "title": "Decrypt an encrypted string",
+  "answer_md": "Pipe the ciphertext in:\n\n```bash\necho -e '$ANSIBLE_VAULT;1.1;...' | ansible-vault decrypt\n```\n\nOr run `ansible-vault decrypt` with no file, paste the ciphertext, and press Ctrl+D twice to end input.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_encrypting_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

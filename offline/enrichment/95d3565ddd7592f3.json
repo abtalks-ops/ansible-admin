@@ -1,0 +1,16 @@
+{
+ "chunk_id": "95d3565ddd7592f3",
+ "chunk_hash": "95d3565ddd7592f3",
+ "summary": "Isolate errors by targeting one device with --limit or an ad hoc eos_command run of ? with network_cli, -u and -k, combined with logging if it still fails.",
+ "questions": [
+  "How do I test connectivity to one network device?",
+  "How can I narrow down a failing network playbook?"
+ ],
+ "answer_card": {
+  "title": "Isolate a network error",
+  "answer_md": "Target a single device:\n```shell\nansible -m arista.eos.eos_command -a 'commands=?' -i inventory switch1.example.net \\\n  -e 'ansible_connection=ansible.netcommon.network_cli' -u admin -k\n```\n(`-k` not needed with working SSH keys.) Or `ansible-playbook --limit switch1.example.net`. If it still fails, set `ANSIBLE_LOG_PATH` and `ANSIBLE_DEBUG=True`, run with `-vvvv`, and check the log.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

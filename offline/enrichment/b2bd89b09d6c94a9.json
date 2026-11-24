@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b2bd89b09d6c94a9",
+ "chunk_hash": "b2bd89b09d6c94a9",
+ "summary": "config lookup parameters: terms, on_missing (error, skip, warn), plugin_name and plugin_type (2.12) for plugin settings, and show_origin (2.16) to return where a value came from.",
+ "questions": [
+  "How do I look up a plugin's configuration with the config lookup?",
+  "How do I find out where a config value was set?",
+  "How do I avoid errors for unknown config keys?"
+ ],
+ "answer_card": {
+  "title": "config lookup parameters",
+  "answer_md": "- `_terms` (required): option(s) to look up\n- `on_missing` (default `error`): `error`, `skip`, or `warn`\n- `plugin_name` (2.12+) and `plugin_type` (2.12+: become, cache, callback, cliconf, connection, httpapi, inventory, lookup, netconf, shell, vars): read a plugin's settings\n- `show_origin` (2.16+): also return the source (defaults, config file, environment, CLI, or variables)",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/config_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

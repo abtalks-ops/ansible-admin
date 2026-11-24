@@ -1,0 +1,16 @@
+{
+ "chunk_id": "77297a5cf6bcf9b8",
+ "chunk_hash": "77297a5cf6bcf9b8",
+ "summary": "cisco.nxos nxos_l2_interfaces excludes port-channel members and errors if configured directly, and nxos_route_maps match.metric is now a list of dicts with value and optional deviation.",
+ "questions": [
+  "Why does nxos_l2_interfaces fail on a port-channel member?",
+  "How do I specify match metric in nxos_route_maps now?"
+ ],
+ "answer_card": {
+  "title": "cisco.nxos breaking changes in Ansible 15",
+  "answer_md": "- `nxos_l2_interfaces`: port-channel **member** interfaces are excluded from gathered, parsed and overridden/deleted states, and configuring L2 on a member raises an error. Configure the port-channel interface instead.\n- `nxos_route_maps`: `match.metric` is now a list of dicts with required `value` and optional `deviation`:\n\n```yaml\nmetric:\n  - value: 10\n  - value: 200\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

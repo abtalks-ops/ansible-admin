@@ -1,0 +1,18 @@
+{
+  "chunk_id": "fc8925cdc08852c5",
+  "chunk_hash": "fc8925cdc08852c5",
+  "summary": "Covers hash (sha1, md5, others), checksum, and password_hash (sha512/sha256, custom salt, idempotent seeded salt, rounds). hash depends on hashlib and password_hash on passlib, with crypt as fallback, so results differ depending on passlib.",
+  "questions": [
+    "How do I generate a SHA-512 password hash for the user module?",
+    "How do I get the md5 or sha1 of a string in Ansible?",
+    "How do I make password_hash idempotent across runs?",
+    "Why does password_hash give different results on different control nodes?"
+  ],
+  "answer_card": {
+    "title": "Hashing strings and passwords",
+    "answer_md": "```jinja\n{{ 'test1' | hash('sha1') }}\n{{ 'test1' | hash('md5') }}\n{{ 'test2' | checksum }}\n{{ 'passwordsaresecret' | password_hash('sha512') }}            # random salt\n{{ 'secretpassword' | password_hash('sha256', 'mysecretsalt') }}\n```\n\nIdempotent per host:\n\n```jinja\n{{ 'secretpassword' | password_hash('sha512', 65534 | random(seed=inventory_hostname) | string) }}\n```\n\n`rounds=` is supported for some types (2.7+). `hash` uses hashlib; `password_hash` uses **passlib** (falls back to `crypt`), so output differs depending on whether passlib is installed.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "chunk_id": "0c09037b0bf7e817",
+  "chunk_hash": "0c09037b0bf7e817",
+  "summary": "The greaterthan test is Jinja's builtin equivalent of a > b.",
+  "questions": [
+    "How do I use a greater-than comparison as a test?"
+  ],
+  "answer_card": {
+    "title": "greaterthan test",
+    "answer_md": "`a is greaterthan(b)` means `a > b` (alias of `gt`).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/greaterthan_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

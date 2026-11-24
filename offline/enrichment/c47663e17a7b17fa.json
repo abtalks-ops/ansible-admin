@@ -1,0 +1,15 @@
+{
+ "chunk_id": "c47663e17a7b17fa",
+ "chunk_hash": "c47663e17a7b17fa",
+ "summary": "AWS tests also need a lambda role named ansible_integration_tests with basic lambda execution privileges.",
+ "questions": [
+  "What IAM role do AWS lambda integration tests need?"
+ ],
+ "answer_card": {
+  "title": "Lambda role for AWS tests",
+  "answer_md": "Create a role named `ansible_integration_tests` with basic Lambda execution privileges.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_integration.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:46+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "803d0a75696850c1",
+ "chunk_hash": "803d0a75696850c1",
+ "summary": "Examples of with_sequence creating formatted test users, even-numbered directories, groups via count, a countdown with negative stride, and an end from a variable.",
+ "questions": [
+  "How do I create users testuser00 to testuser20 in hex?",
+  "How do I create directories with even numbers?",
+  "How do I use a variable as the end of a sequence?"
+ ],
+ "answer_card": {
+  "title": "with_sequence examples",
+  "answer_md": "```yaml\n- ansible.builtin.user:\n    name: \"{{ item }}\"\n    state: present\n    groups: \"evens\"\n  with_sequence: start=0 end=32 format=testuser%02x\n\n- ansible.builtin.file:\n    dest: \"/var/stuff/{{ item }}\"\n    state: directory\n  with_sequence: start=4 end=16 stride=2\n\n- ansible.builtin.group:\n    name: \"group{{ item }}\"\n    state: present\n  with_sequence: count=4\n\n- ansible.builtin.debug:\n    msg: \"{{ item }} seconds to detonation\"\n  with_sequence: start=10 end=0 stride=-1\n\n- ansible.builtin.debug:\n    msg: \"{{ item }}\"\n  with_sequence: start=1 end=\"{{ end_at }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/sequence_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

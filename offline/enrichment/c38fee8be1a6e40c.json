@@ -1,0 +1,18 @@
+{
+ "chunk_id": "c38fee8be1a6e40c",
+ "chunk_hash": "c38fee8be1a6e40c",
+ "summary": "Plugin options are declared in the DOCUMENTATION block with fields like description, default, env, ini, vars, required, secret, type and version_added; env entries should be uppercase, collection-prefixed, and the last set one wins.",
+ "questions": [
+  "How do I make a plugin option configurable via an environment variable?",
+  "Where are plugin configuration options declared?",
+  "What types can a plugin option have?",
+  "If several env vars are set for one option, which wins?"
+ ],
+ "answer_card": {
+  "title": "Declaring plugin options",
+  "answer_md": "```yaml\noptions:\n  option_name:\n    description: ...\n    default: ...\n    env:\n      - name: MYCOLLECTION_NAME_ENV_VAR_NAME\n    ini:\n      - section: mycollection_section\n        key: key_name\n    vars:\n      - name: mycollection_var\n    required: false\n    secret: false\n    type: string\n```\nTypes: boolean, float, integer, list, none, path, pathlist, pathspec, string, tmppath. `env` names should be uppercase and collection-prefixed; if several are set, the **last** in the list wins.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

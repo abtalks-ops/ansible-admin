@@ -1,0 +1,15 @@
+{
+  "chunk_id": "556ecdaddcee4713",
+  "chunk_hash": "556ecdaddcee4713",
+  "summary": "dellemc.openmanage known issues for 11.1.0: no SOCKS proxy export, no authenticated iDRAC8 shares, and same-named uplinks being modified.",
+  "questions": [
+    "What openmanage issues are listed for Ansible 11.1.0?"
+  ],
+  "answer_card": {
+    "title": "dellemc.openmanage known issues (11.1.0)",
+    "answer_md": "- `idrac_diagnostics`: no SOCKS proxy export to HTTP/HTTPS shares.\n- `idrac_firmware`: no authenticated shares on iDRAC8.\n- `ome_smart_fabric_uplink`: a duplicate name modifies the existing uplink.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:26:20+00:00"
+}

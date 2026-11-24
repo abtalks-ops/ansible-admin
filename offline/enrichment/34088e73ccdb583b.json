@@ -1,0 +1,15 @@
+{
+ "chunk_id": "34088e73ccdb583b",
+ "chunk_hash": "34088e73ccdb583b",
+ "summary": "subelements lookup parameters: list of dicts plus key, and skip_missing (default false) passed as a dict flag to skip records lacking the key.",
+ "questions": [
+  "How do I avoid errors when some records don't have the subkey?"
+ ],
+ "answer_card": {
+  "title": "subelements lookup parameters",
+  "answer_md": "- `_terms` (required): the list of dictionaries and the key to extract\n- `skip_missing` (default false): pass as an optional dict, e.g. `{'skip_missing': True}`, to skip items missing the subkey instead of erroring",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/subelements_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

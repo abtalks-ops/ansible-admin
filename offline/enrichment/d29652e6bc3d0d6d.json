@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d29652e6bc3d0d6d",
+ "chunk_hash": "d29652e6bc3d0d6d",
+ "summary": "A vault password can be any string and there is no command to create one, but you must provide the same password to use encrypted content; plan whether to use one or several passwords and where to store them.",
+ "questions": [
+  "How do I create a vault password?",
+  "Should I use one vault password or several?",
+  "Do I need the same password to decrypt that I used to encrypt?"
+ ],
+ "answer_card": {
+  "title": "Planning vault passwords",
+  "answer_md": "A vault password can be any string; there's no special command to create one. You must supply the same password used to encrypt content whenever you use it. Decide:\n\n- one password for everything, or different passwords for different needs?\n- where will you store the password(s)?",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_managing_passwords.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

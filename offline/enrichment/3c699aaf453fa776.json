@@ -1,0 +1,15 @@
+{
+ "chunk_id": "3c699aaf453fa776",
+ "chunk_hash": "3c699aaf453fa776",
+ "summary": "Ansible can be slow on systems with slow disks such as a Raspberry Pi; installing libyaml support can help.",
+ "questions": [
+  "Ansible is very slow on my Raspberry Pi, how do I speed it up?"
+ ],
+ "answer_card": {
+  "title": "Speed up Ansible on slow disks",
+  "answer_md": "On slow-disk systems (e.g. Raspberry Pi), make sure PyYAML uses the **libyaml** C bindings. Without them YAML parsing is much slower. Check with `ansible --version` (it reports libyaml) and reinstall PyYAML with libyaml available.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

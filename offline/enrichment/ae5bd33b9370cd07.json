@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ae5bd33b9370cd07",
+ "chunk_hash": "ae5bd33b9370cd07",
+ "summary": "A collection README should have quick-start install and usage guidance, like community.general's, and module and plugin docs should be comprehensive.",
+ "questions": [
+  "What should go in my collection's README?",
+  "Is there a good example collection README?"
+ ],
+ "answer_card": {
+  "title": "Write collection documentation",
+  "answer_md": "Include quick-start installation and usage in `README.md` (community.general's README is a good model). Make module and plugin docs comprehensive, following the module format guide and the Ansible style guide.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_path.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

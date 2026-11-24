@@ -1,0 +1,17 @@
+{
+ "chunk_id": "23e59c53cbc71ab8",
+ "chunk_hash": "23e59c53cbc71ab8",
+ "summary": "amazon.aws removed parameter aliases boto_profile, ec2_access_key, ec2_region, ec2_secret_key and endpoint/ec2_url/s3_url, plus the aws_credentials and aws_region docs fragments.",
+ "questions": [
+  "Is boto_profile still accepted in amazon.aws modules?",
+  "What replaced the ec2_url parameter alias?",
+  "Which docs fragment replaces amazon.aws.aws_credentials?"
+ ],
+ "answer_card": {
+  "title": "amazon.aws removed parameter aliases",
+  "answer_md": "Removed aliases in amazon.aws (use the canonical name):\n\n- `boto_profile` → `profile`\n- `ec2_access_key` → `access_key`\n- `ec2_region` → `region`\n- `ec2_secret_key` → `secret_key`\n- `endpoint`, `ec2_url`, `s3_url` → `endpoint_url`\n- Also removed: `session_token` aliases `access_token`, `aws_security_token`, `security_token`.\n\nDocs fragments removed: `amazon.aws.aws_credentials` (use `amazon.aws.common.plugins`) and `amazon.aws.aws_region` (use `amazon.aws.region.plugins`).",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

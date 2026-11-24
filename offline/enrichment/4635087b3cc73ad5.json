@@ -1,0 +1,19 @@
+{
+ "chunk_id": "4635087b3cc73ad5",
+ "chunk_hash": "4635087b3cc73ad5",
+ "summary": "Describes the INI inventory format: sections are groups, :children and :vars modifiers, inline host vars parsed as Python literals, :vars values as strings, ungrouped hosts outside sections, and a recommendation to use YAML to avoid type confusion.",
+ "questions": [
+  "Why is my INI inventory variable a string instead of a boolean?",
+  "How do I define group variables in an INI inventory?",
+  "How are inline host variables typed in INI inventory?",
+  "How do I nest groups in INI inventory?",
+  "Should I use INI or YAML inventory?"
+ ],
+ "answer_card": {
+  "title": "INI inventory format and variable types",
+  "answer_md": "- `[group]` sections list hosts; hosts outside any section are **ungrouped**.\n- `[group:children]` lists child groups; `[group:vars]` sets group variables.\n- **Inline host vars** (`host key=value`) are parsed with Python `ast.literal_eval`, so numbers, booleans, lists etc. become typed. Quote a number to keep it a string. Multiple `key=value` per line are allowed.\n- **`:vars` values are always strings**, e.g. `var=FALSE` is the string `\"FALSE\"`. One entry per line.\n- Don't rely on types; convert with a filter when using the variable.\n\nThe INI plugin is enabled by default, but YAML inventory handles types consistently and is recommended.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ini_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

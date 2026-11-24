@@ -1,0 +1,18 @@
+{
+  "chunk_id": "411ea2d013478cea",
+  "chunk_hash": "411ea2d013478cea",
+  "summary": "setup options: fact_path for local .fact files (executable files run, JSON or INI output, PowerShell on Windows) feeding ansible_local, and filter for fnmatch-matching fact names.",
+  "questions": [
+    "How do I add custom local facts to a host?",
+    "Where do custom .fact files go?",
+    "How do I gather only network-related facts?",
+    "How do custom facts work on Windows?"
+  ],
+  "answer_card": {
+    "title": "setup fact_path and filter",
+    "answer_md": "- `fact_path` (`/etc/ansible/facts.d`): `*.fact` files; executables are run, others read; JSON or INI. Results go into `ansible_local`. On Windows, files must be `.ps1` returning an object, and results use a variable named after the file.\n- `filter`: list of fnmatch patterns, e.g. `['ansible_eth*', 'ansible_default_ipv4']`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/setup_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

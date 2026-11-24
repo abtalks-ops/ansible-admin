@@ -1,0 +1,16 @@
+{
+  "chunk_id": "017fc8ec9d00120d",
+  "chunk_hash": "017fc8ec9d00120d",
+  "summary": "Examples use contains directly on a list and as a selectattr selector to find the LACP group whose interfaces include em1.",
+  "questions": [
+    "How do I find the dict in a list whose sub-list contains a value?",
+    "How do I use contains inside selectattr?"
+  ],
+  "answer_card": {
+    "title": "contains test examples",
+    "answer_md": "```yaml\n{{ listofthings is contains('this') }}\n\nwhen: (lacp_groups | selectattr('interfaces', 'contains', 'em1') | first).master\n```\nThe second picks the group whose `interfaces` list includes `em1`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/contains_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:13+00:00"
+}

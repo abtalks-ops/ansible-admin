@@ -1,0 +1,18 @@
+{
+ "chunk_id": "19a69ce76e1d61d9",
+ "chunk_hash": "19a69ce76e1d61d9",
+ "summary": "Example of rewriting an assert to reference untrusted results directly instead of in an embedded template, and ansible-core 2.14's lazy variable evaluation, where an or expression skips undefined parts and a dict with an undefined value is itself undefined.",
+ "questions": [
+  "Why does '{{ a or undefined_var }}' no longer fail?",
+  "My assert that a dict is undefined now passes, why?",
+  "What does lazy evaluation of variables mean in 2.14?",
+  "How should I reference registered output in assert?"
+ ],
+ "answer_card": {
+  "title": "Lazy variable evaluation in ansible-core 2.14",
+  "answer_md": "- Variables are evaluated **lazily**: `{{ defined_var or undefined_var }}` doesn't fail if the first part is true.\n- A dict containing an undefined value is treated as **undefined** by the `undefined` test:\n\n```yaml\n- assert:\n    that: some_dict is undefined   # passes if key3: '{{ missing }}'\n```\n\n- Reference untrusted data directly in conditionals: `that: '\"hi mom\" is in untrusted_result.stdout'`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

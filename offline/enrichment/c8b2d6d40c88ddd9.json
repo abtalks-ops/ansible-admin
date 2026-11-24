@@ -1,0 +1,15 @@
+{
+ "chunk_id": "c8b2d6d40c88ddd9",
+ "chunk_hash": "c8b2d6d40c88ddd9",
+ "summary": "Example task runs show version on Junos with junos_command.",
+ "questions": [
+  "How do I get the Junos version with Ansible?"
+ ],
+ "answer_card": {
+  "title": "Get Junos version",
+  "answer_md": "```yaml\n- name: Retrieve Junos OS version\n  junipernetworks.junos.junos_command:\n    commands: show version\n  when: ansible_network_os == 'junipernetworks.junos.junos'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_junos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

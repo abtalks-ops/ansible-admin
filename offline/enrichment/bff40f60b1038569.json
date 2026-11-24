@@ -1,0 +1,19 @@
+{
+  "chunk_id": "bff40f60b1038569",
+  "chunk_hash": "bff40f60b1038569",
+  "summary": "Shows registering a `poll: 0` async task and waiting on it later with `async_status` using `until: job_result is finished`, retries, and delay. Notes `async` must be long enough for the status file to exist, async tasks always report changed (so `changed_when` belongs on the `async_status` task), and shows batching async tasks with `batch(2)` and include_tasks.",
+  "questions": [
+    "How do I start a task in the background and wait for it later in the same playbook?",
+    "How do I check an async job's status until it finishes?",
+    "Why does my async_status task fail saying the job can't be found?",
+    "Why do my async tasks always show as changed?",
+    "How can I run async tasks in batches so only a few run at once?"
+  ],
+  "answer_card": {
+    "title": "Wait on an async task later with async_status",
+    "answer_md": "Register the fire-and-forget task, then poll it with `async_status`:\n\n```yaml\n- name: Run an async task\n  ansible.builtin.yum:\n    name: docker-io\n    state: present\n  async: 1000\n  poll: 0\n  register: yum_sleeper\n\n- name: Check on an async task\n  async_status:\n    jid: \"{{ yum_sleeper.ansible_job_id }}\"\n  register: job_result\n  until: job_result is finished\n  retries: 100\n  delay: 10\n```\n\n- If `async:` is too low, the check fails because the status file was never written or is gone.\n- Async tasks always return changed; put `changed_when`, `creates`, etc. on the `async_status` task.\n- To limit concurrency, loop over `sleep_durations | batch(2) | list` with `include_tasks`, start each batch with `poll: 0`, then loop `async_status` over `async_results.results`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_async.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "ca3c3d2d4d9c7b24",
+  "chunk_hash": "ca3c3d2d4d9c7b24",
+  "summary": "service_facts collects service state as facts; access ansible_facts.services with bracket notation because names can contain dashes.",
+  "questions": [
+    "How do I check whether a service exists on a host?",
+    "Why does ansible_facts.services.my-service fail?",
+    "How do I list all services and their states?"
+  ],
+  "answer_card": {
+    "title": "Gather service state with service_facts",
+    "answer_md": "`ansible.builtin.service_facts` populates `ansible_facts.services`. Use **bracket notation**, e.g. `ansible_facts.services['zuul-gateway']`, since dashes break dot notation. AIX SRC supported since 2.11.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_facts_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "469b29152b6ab541",
+ "chunk_hash": "469b29152b6ab541",
+ "summary": "ansible.windows dsc3 check mode now runs dsc config set --what-if instead of dsc config test, and group resources fail in check mode.",
+ "questions": [
+  "How does dsc3 check mode work in Ansible 15?",
+  "Why does Microsoft.DSC/Group fail in check mode?"
+ ],
+ "answer_card": {
+  "title": "dsc3 check mode uses --what-if",
+  "answer_md": "`ansible.windows.dsc3` check mode now runs `dsc config set --what-if` instead of `dsc config test`, so reported changes match what `dsc` would do. Group resources such as `Microsoft.DSC/Group` and `Microsoft.DSC/Include` don't support what-if and **fail in check mode**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

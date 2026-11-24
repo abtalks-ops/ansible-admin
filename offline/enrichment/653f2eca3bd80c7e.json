@@ -1,0 +1,15 @@
+{
+ "chunk_id": "653f2eca3bd80c7e",
+ "chunk_hash": "653f2eca3bd80c7e",
+ "summary": "Requirements for distros to be added to the install guide: reasonably current ansible, ansible and ansible-core kept in sync, maintainer contact info, and ideally joining the Ansible Packaging Matrix room.",
+ "questions": [
+  "How can a distro get its Ansible install instructions added to the docs?"
+ ],
+ "answer_card": {
+  "title": "Adding a distribution to the guide",
+  "answer_md": "Package maintainers must:\n- ship a reasonably up-to-date `ansible`\n- keep `ansible` and `ansible-core` versions in sync where possible\n- include a way to contact the maintainers\n- ideally join the Ansible Packaging Matrix room",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

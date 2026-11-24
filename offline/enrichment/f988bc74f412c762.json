@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f988bc74f412c762",
+ "chunk_hash": "f988bc74f412c762",
+ "summary": "winrm connection_timeout sets both the WS-Man operation timeout on the Windows host and the HTTP read timeout on the controller, with the read timeout set 10 seconds higher to avoid 'Read timed out' errors; it maps to pywinrm's operation_timeout_sec and read_timeout_sec.",
+ "questions": [
+  "How do I fix 'Read timed out' errors on WinRM connections?",
+  "What does the winrm connection_timeout actually control?",
+  "How do I handle long-running commands over WinRM?",
+  "Should I set operation_timeout_sec and read_timeout_sec as well as connection_timeout?"
+ ],
+ "answer_card": {
+  "title": "winrm connection_timeout explained",
+  "answer_md": "Despite its name, `connection_timeout` sets **both**:\n\n- the **WS-Man operation timeout** on the Windows host (after which the service sends `WinRMOperationTimeoutError`, which the client silently ignores and keeps waiting for long commands), and\n- the **HTTP read timeout** on the controller (when it expires you get `Read timed out` and the connection ends).\n\nThe read timeout is set **10 seconds higher** than the operation timeout for robustness on high-latency networks. It corresponds to pywinrm's `operation_timeout_sec` and `read_timeout_sec`, so don't set those too. The default comes from the installed pywinrm.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/winrm_connection.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

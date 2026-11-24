@@ -1,0 +1,18 @@
+{
+ "chunk_id": "03c0151e8396db7a",
+ "chunk_hash": "03c0151e8396db7a",
+ "summary": "Lists the steps to migrate content between collections: meet inclusion requirements, copy content, fix FQCN references, move issues and PRs, update docs examples, deprecate with removal_version, and at the next major release remove the content, tests, utils and docs fragments with changelog entries.",
+ "questions": [
+  "What are the steps to move a module from one collection to another?",
+  "How should I deprecate a module that's moving to a new collection?",
+  "When can I actually delete the old copy of a migrated module?",
+  "What changelog categories should I use when removing migrated content?"
+ ],
+ "answer_card": {
+  "title": "Migrate content between collections",
+  "answer_md": "1. Copy content to the new collection (which must meet collection requirements if the old one is in the Ansible package).\n2. Update `M()`, examples, `seealso` and doc fragments to real FQCNs everywhere.\n3. Move related issues, PRs and wiki pages.\n4. Grep `docs/docsite` in ansible-documentation for examples to update.\n5. Deprecate in the old collection's `meta/runtime.yml` with `removal_version` = next major, released **after** the new collection ships the content.\n6. At the next major of the old collection: remove the module/plugin, its tests, unused module utils and doc fragments, and add a changelog fragment with `removed_features` and `breaking_changes`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_migrating.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "5cbe1cdf6279f185",
+  "chunk_hash": "5cbe1cdf6279f185",
+  "summary": "Describes Red Hat Ansible Automation Platform: a controller with web console and REST API, analytics, Execution Environments, RBAC with secure credentials, cloud inventory sync, multi-playbook workflows, job logging, and LDAP/SAML integration. It includes downstream supported AWX and Galaxy, runs on multiple clouds, and comes with Red Hat support.",
+  "questions": [
+    "What is Red Hat Ansible Automation Platform?",
+    "Is there a web UI and REST API for running Ansible?",
+    "How do I get role-based access control for Ansible credentials?",
+    "How does AAP relate to AWX?",
+    "Can AAP integrate with LDAP or SAML?"
+  ],
+  "answer_card": {
+    "title": "Red Hat Ansible Automation Platform",
+    "answer_md": "RHAAP operationalizes Ansible across teams. It includes a controller with a web console and REST API, analytics, Execution Environments, and more.\n\nFeatures: role-based access control with securely stored credentials (SSH and others), inventory sync from many cloud sources, multi-playbook workflows, job logging, LDAP/SAML integration, a browsable REST API, and CLI tools for Jenkins integration.\n\nIt incorporates the downstream supported versions of AWX and Galaxy plus SaaS offerings, is available on multiple cloud platforms, and the subscription includes Red Hat support.",
+    "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/tower.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2e95d975900736d5",
+ "chunk_hash": "2e95d975900736d5",
+ "summary": "YAML inventory example with all hosts and vars, nested child groups, a host in multiple groups, and a warning to always put a colon after host names.",
+ "questions": [
+  "Why does my YAML inventory only pick up one host in a group?",
+  "Do I need a colon after each host name in YAML inventory?",
+  "Can a host belong to multiple groups in YAML inventory?",
+  "Does key order matter in YAML inventory?"
+ ],
+ "answer_card": {
+  "title": "YAML inventory example",
+  "answer_md": "```yaml\nall:\n  hosts:\n    test1:\n    test2:\n      host_var: value\n  vars:\n    group_all_var: value\n  children:\n    other_group:\n      children:\n        group_x:\n          hosts:\n            test5     # one host without a colon works...\n        group_y:\n          hosts:\n            test6:    # ...but always use a colon\n      vars:\n        g2_var2: value3\n      hosts:\n        test4:\n          ansible_host: 127.0.0.1\n    last_group:\n      hosts:\n        test1:        # same host, extra group membership\n      vars:\n        group_last_var: value\n```\n\nKeys must be unique (one `hosts` per group). Key order doesn't matter; indentation does. Listing several hosts **without colons** breaks.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yaml_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

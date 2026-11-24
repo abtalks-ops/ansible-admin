@@ -1,0 +1,15 @@
+{
+ "chunk_id": "bc894e39abe52333",
+ "chunk_hash": "bc894e39abe52333",
+ "summary": "Notes the testing and CI section is for collections with modules and plugins, and points to Molecule for testing roles.",
+ "questions": [
+  "How should I test roles in my collection?"
+ ],
+ "answer_card": {
+  "title": "Testing roles",
+  "answer_md": "The testing/CI guidance targets modules and plugins. For roles, use **Molecule**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_path.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

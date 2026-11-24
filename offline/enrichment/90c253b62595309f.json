@@ -1,0 +1,16 @@
+{
+ "chunk_id": "90c253b62595309f",
+ "chunk_hash": "90c253b62595309f",
+ "summary": "cisco.nxos deprecates nxos_hsrp in favor of nxos_hsrp_interfaces and nxos_vrf_interface in favor of nxos_vrf_interfaces.",
+ "questions": [
+  "What replaces nxos_hsrp?",
+  "Is nxos_vrf_interface deprecated?"
+ ],
+ "answer_card": {
+  "title": "nxos_hsrp and nxos_vrf_interface deprecated",
+  "answer_md": "- `nxos_hsrp` is deprecated in favor of **`nxos_hsrp_interfaces`**.\n- `nxos_vrf_interface` is deprecated in favor of **`nxos_vrf_interfaces`**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

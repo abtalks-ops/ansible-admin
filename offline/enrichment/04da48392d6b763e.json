@@ -1,0 +1,19 @@
+{
+  "chunk_id": "04da48392d6b763e",
+  "chunk_hash": "04da48392d6b763e",
+  "summary": "Explains accessing local facts via ansible_local['preferences']['general']['asdf'] and notes that INI keys are lowercased by ConfigParser. Executable .fact scripts produce dynamic facts. Facts created during a play are only visible after setup runs again, at the next fact-gathering play or via an explicit setup task.",
+  "questions": [
+    "Why can't I access my custom fact with an uppercase key?",
+    "How do I generate dynamic custom facts from a script on the host?",
+    "What permissions does a facts.d script need?",
+    "My new custom fact isn't visible in the same play. Why?",
+    "How do I reference a facts.d value in a template?"
+  ],
+  "answer_card": {
+    "title": "Using local facts and dynamic fact scripts",
+    "answer_md": "Access local facts by file name and section:\n\n```jinja\n{{ ansible_local['preferences']['general']['asdf'] }}\n```\n\nINI keys are **lowercased** (Python `ConfigParser`), so `XYZ=3` becomes `...['general']['xyz']`.\n\nFor dynamic facts, put a script in `facts.d` with a `.fact` extension that prints JSON. It must be executable by the connection user.\n\nFacts are gathered at the start of a play. A fact you create mid-play shows up in the next play that gathers facts, unless you re-run `ansible.builtin.setup` explicitly.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:17:08+00:00"
+}

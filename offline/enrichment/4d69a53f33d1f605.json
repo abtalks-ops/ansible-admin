@@ -1,0 +1,17 @@
+{
+  "chunk_id": "4d69a53f33d1f605",
+  "chunk_hash": "4d69a53f33d1f605",
+  "summary": "lineinfile ensures a single line exists in a file or replaces one using a regex. For multiple similar lines use replace, for blocks use blockinfile, and otherwise copy or template.",
+  "questions": [
+    "How do I change one setting line in a config file?",
+    "When should I use lineinfile vs replace vs blockinfile?",
+    "Is it path or dest for lineinfile?"
+  ],
+  "answer_card": {
+    "title": "Edit single lines with lineinfile",
+    "answer_md": "`ansible.builtin.lineinfile` ensures one line is present or replaces a line matched by regex.\n- Many similar lines → `replace`\n- Multi-line block → `blockinfile`\n- Whole file → `copy`/`template`\n\n`path` is the default option name since 2.3 (`dest` still works).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:05:46+00:00"
+}

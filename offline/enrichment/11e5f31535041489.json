@@ -1,0 +1,18 @@
+{
+ "chunk_id": "11e5f31535041489",
+ "chunk_hash": "11e5f31535041489",
+ "summary": "Action plugins look like modules in playbooks and always run on the control node; some do all the work (debug, assert), most prepare data then invoke a module, like template building a file locally then calling copy; normal runs modules without special action plugins.",
+ "questions": [
+  "Does the debug task run on the managed node?",
+  "How does the template module actually work under the hood?",
+  "What is the normal action plugin?",
+  "Where is the documentation for an action plugin kept?"
+ ],
+ "answer_card": {
+  "title": "How action plugins relate to modules",
+  "answer_md": "Action plugins appear as modules to playbook authors; docs usually live in a same-named module. They **always run on the control node**.\n- Some do everything locally: `debug`, `assert`.\n- Most prepare values locally and then run a module remotely, e.g. `template` renders a temp file locally, transfers it, then runs `copy` on the target.\n- `normal` runs modules with no special action plugin.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

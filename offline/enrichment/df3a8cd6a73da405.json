@@ -1,0 +1,17 @@
+{
+ "chunk_id": "df3a8cd6a73da405",
+ "chunk_hash": "df3a8cd6a73da405",
+ "summary": "More grafana.grafana 12.0.0 changes: v6 regression fixes, more flexible dashboard imports, systemd creating /var/lib/otel-collector, become false in find, config validation, Loki bloom support and a new user module.",
+ "questions": [
+  "Can the grafana.grafana collection manage Grafana users?",
+  "Does the grafana Loki role support bloom filters?",
+  "Does grafana.grafana validate configuration before deploying?"
+ ],
+ "answer_card": {
+  "title": "grafana.grafana 12.0.0 changes (part 2)",
+  "answer_md": "- Fixes for regressions introduced by v6 and tag default var inheritance\n- More flexible dashboard imports; `when` checks that dashboard files were found\n- systemd creates `/var/lib/otel-collector`\n- `become: false` in the find task\n- Config validation\n- Loki bloom support\n- New **user module** to create, update and delete Grafana users\n- Galaxy publish workflow",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

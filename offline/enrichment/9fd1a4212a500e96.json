@@ -1,0 +1,16 @@
+{
+ "chunk_id": "9fd1a4212a500e96",
+ "chunk_hash": "9fd1a4212a500e96",
+ "summary": "Example: when: \"\" warns 'Empty conditional expression was evaluated as True', removed in 2.23; remove or correct such expressions so they are strictly boolean.",
+ "questions": [
+  "'Empty conditional expression was evaluated as True' warning, how do I fix it?",
+  "My templated when ends up empty, what should I do?"
+ ],
+ "answer_card": {
+  "title": "Fix empty conditional warning",
+  "answer_md": "```yaml\n- debug:\n    msg: test\n  when: \"\"   # warns, evaluated as True\n```\n\nRemove the empty `when`, or make sure it always yields `true`/`false` (e.g. `when: my_flag | default(false) | bool`). These warnings can be silenced with `deprecation_warnings = False` in `ansible.cfg`, but fixing the content is better because the behaviour is **removed in ansible-core 2.23**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.18.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:08+00:00"
+}

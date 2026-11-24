@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b85fd67168fb2a2b",
+ "chunk_hash": "b85fd67168fb2a2b",
+ "summary": "ansible-galaxy role init role_name scaffolds a role with README, defaults, files, handlers, meta, tasks, templates, tests and vars; a role repo's root should be the role directory.",
+ "questions": [
+  "How do I create the skeleton for a new role?",
+  "What directories does ansible-galaxy role init create?",
+  "What should the repository root be for a role?"
+ ],
+ "answer_card": {
+  "title": "Scaffold a new role",
+  "answer_md": "```bash\nansible-galaxy role init role_name\n```\nCreates:\n```text\nrole_name/\n  README.md\n  defaults/main.yml   files/   handlers/main.yml\n  meta/main.yml       tasks/main.yml   templates/\n  tests/inventory  tests/test.yml   vars/main.yml\n```\nIf the role gets its own repository, make `role_name` the repo root.",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/dev_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

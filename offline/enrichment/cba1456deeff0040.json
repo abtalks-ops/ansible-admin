@@ -1,0 +1,18 @@
+{
+ "chunk_id": "cba1456deeff0040",
+ "chunk_hash": "cba1456deeff0040",
+ "summary": "Glossary entries for Pulp 3 Galaxy, push mode, registered variables, and the idempotent resource model.",
+ "questions": [
+  "How do I save a task's output to use in a later task?",
+  "Can I host my own private Galaxy server?",
+  "What is push mode?",
+  "Why doesn't Ansible change a file whose owner is already correct?"
+ ],
+ "answer_card": {
+  "title": "Glossary: register, push mode, resource model",
+  "answer_md": "- **Pulp 3 Galaxy**: self-hosted distribution server based on GalaxyNG, accessed with `ansible-galaxy collection`.\n- **Push mode**: the default; the control node drives nodes directly.\n- **register**: stores a task's result in a variable for templates or conditionals.\n- **Resource model**: modules ensure resources match a desired state (e.g. `/etc/motd` owned by root, mode 0644) and only make changes when needed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "da792ece710f9b4f",
+ "chunk_hash": "da792ece710f9b4f",
+ "summary": "Relying on a string variable's truthiness in a conditional (such as `that: inventory_hostname`) now errors; use an explicit predicate like `| length > 0` or `is truthy`.",
+ "questions": [
+  "How do I fix 'Conditional result was ... of type str, which evaluates to True'?",
+  "How do I check a string is non-empty in an assert in ansible-core 2.19?",
+  "Can I still write `that: some_var` in assert?"
+ ],
+ "answer_card": {
+  "title": "Fix implicit boolean conversion in conditionals",
+  "answer_md": "A condition like this now fails because a string is not a boolean:\n\n```yaml\n- assert:\n    that: inventory_hostname\n```\n\nError: `Conditional result was 'localhost' of type 'str', which evaluates to True. Conditionals must have a boolean result.`\n\nUse an explicit predicate instead, for example `| length > 0` or `is truthy`:\n\n```yaml\n- assert:\n    that: inventory_hostname | length > 0\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:45+00:00"
+}

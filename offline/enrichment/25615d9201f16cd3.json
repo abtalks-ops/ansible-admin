@@ -1,0 +1,18 @@
+{
+ "chunk_id": "25615d9201f16cd3",
+ "chunk_hash": "25615d9201f16cd3",
+ "summary": "The script module fails on z/OS because the copied script is untagged and the shell reads it as EBCDIC. Workarounds are copying, tagging and running the script with separate tasks, or storing scripts locally in EBCDIC.",
+ "questions": [
+  "Why does the script module fail on my z/OS host?",
+  "How can I run a local shell script on z/OS UNIX with Ansible?",
+  "Is there a workaround for the script module on z/OS?",
+  "Should I keep my scripts in EBCDIC for z/OS targets?"
+ ],
+ "answer_card": {
+  "title": "Running scripts on z/OS UNIX",
+  "answer_md": "`ansible.builtin.script` copies the script to a temp file that isn't tagged, so the z/OS shell reads it as EBCDIC and fails.\n\n**Workaround 1:** copy, tag and run it yourself (you lose automatic cleanup, which you can add as another task):\n\n```yaml\n- name: Copy local script file to remote node.\n  ansible.builtin.copy:\n    src: \"{{ playbook_dir }}/local/scripts/sample.sh\"\n    dest: /u/ibmuser/scripts/\n\n- name: Tag remote script file.\n  ansible.builtin.command: \"chtag -tc ISO8859-1 /u/ibmuser/scripts/sample.sh\"\n\n- name: Run script.\n  ansible.builtin.command: \"/u/ibmuser/scripts/sample.sh\"\n```\n\n**Workaround 2:** store the local script in EBCDIC. It copies and runs correctly with the script module, but is unreadable and harder to maintain on the control node.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_zos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

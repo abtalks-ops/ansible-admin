@@ -1,0 +1,18 @@
+{
+  "chunk_id": "2383063e54fbac4a",
+  "chunk_hash": "2383063e54fbac4a",
+  "summary": "Examples of git: checkout a branch, read-write SSH clone, ensure existence without updating, query without cloning, fetch PR refs, archive, separate git dir, single branch, and preventing hangs on missing HTTPS passwords.",
+  "questions": [
+    "How do I clone a specific release branch?",
+    "How do I fetch all GitHub pull requests with the git module?",
+    "How do I stop git from hanging waiting for an HTTPS password?",
+    "How do I only check whether the repo exists without updating?"
+  ],
+  "answer_card": {
+    "title": "git examples",
+    "answer_md": "```yaml\n- ansible.builtin.git:\n    repo: 'https://github.com/ansible/ansible.git'\n    dest: /tmp/checkout\n    version: release-0.22\n- ansible.builtin.git: {repo: ..., dest: /tmp/checkout, update: no}\n- ansible.builtin.git: {repo: ..., dest: /tmp/checkout, refspec: '+refs/pull/*:refs/heads/*'}\n- ansible.builtin.git: {repo: ..., dest: /tmp/checkout, archive: /tmp/ansible.zip}\n- ansible.builtin.git: {repo: ..., dest: /tmp/checkout, single_branch: yes, version: master}\n- ansible.builtin.git: {repo: 'https://github.com/ansible/ansible.git', dest: /tmp/checkout}\n  environment:\n    GIT_TERMINAL_PROMPT: 0\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/git_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

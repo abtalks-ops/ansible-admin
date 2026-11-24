@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9759b4512fca6c66",
+ "chunk_hash": "9759b4512fca6c66",
+ "summary": "From ansible-core 2.16, each release supports the six most recent Python versions on target nodes, and every sixth release (2.16, 2.22, ...) supports seven. Python 2.7 targets are supported only up to 2.16.",
+ "questions": [
+  "Which Python versions can my managed hosts run for current ansible-core?",
+  "Can I still manage hosts that only have Python 2.7?",
+  "What is the last ansible-core version that supports Python 2.7 on targets?",
+  "How many Python versions does ansible-core support on managed nodes?"
+ ],
+ "answer_card": {
+  "title": "Target node Python support policy",
+  "answer_md": "Starting with ansible-core 2.16, each release supports on target nodes:\n\n- the **6** most recently released Python versions, or\n- the **7** most recent on every 6th release (2.16, 2.22, ...).\n\nPython **2.7** targets are supported only in ansible-core **2.16 and earlier**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:00+00:00"
+}

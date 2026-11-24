@@ -1,0 +1,17 @@
+{
+  "chunk_id": "8a7757823695e741",
+  "chunk_hash": "8a7757823695e741",
+  "summary": "Shows the JSON structure of a registered loop result, iterating over results to fail on nonzero rc, using the current item's result during iteration in changed_when, and notes register projections (2.21+).",
+  "questions": [
+    "How do I check the return code of each item in a looped task?",
+    "Can I use the registered variable inside the same loop?",
+    "How do I loop over the results of a previous loop?"
+  ],
+  "answer_card": {
+    "title": "Using loop results",
+    "answer_md": "Each entry in `echo.results` contains `cmd`, `rc`, `stdout`, `item`, etc. Inspect them later:\n\n```yaml\n- ansible.builtin.fail:\n    msg: \"The command ({{ item.cmd }}) did not have a 0 return code\"\n  when: item.rc != 0\n  loop: \"{{ echo.results }}\"\n```\n\nDuring iteration, the registered variable holds the **current** item's result:\n\n```yaml\nregister: echo\nchanged_when: echo.stdout != \"one\"\n```\n\nSince 2.21 you can also use register projections.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

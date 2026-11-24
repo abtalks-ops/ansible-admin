@@ -1,0 +1,16 @@
+{
+ "chunk_id": "df777ef180de5173",
+ "chunk_hash": "df777ef180de5173",
+ "summary": "In ansible-core 2.11 jinja2_native no longer affects the template module, which always returns strings, and the template lookup gets its own jinja2_native argument (off by default).",
+ "questions": [
+  "Does jinja2_native affect the template module?",
+  "How do I get native types from lookup('template')?"
+ ],
+ "answer_card": {
+  "title": "jinja2_native and template rendering",
+  "answer_md": "- The **template module** always writes strings; `jinja2_native` no longer affects it.\n- The **template lookup** has its own `jinja2_native` argument (default off):\n\n```yaml\nvalue: \"{{ lookup('ansible.builtin.template', 'x.j2', jinja2_native=true) }}\"\n```\n\nOther Jinja2 expressions still follow the global `jinja2_native` setting.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.11.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:22:29+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "a500ccaca6594e73",
+ "chunk_hash": "a500ccaca6594e73",
+ "summary": "Parsing CLI output into native data lets you use when, assert, template, config modules and facts with device state.",
+ "questions": [
+  "Why parse network CLI output in Ansible?",
+  "What can I do with parsed device output?"
+ ],
+ "answer_card": {
+  "title": "Why parse CLI text",
+  "answer_md": "Structured data lets you use native Ansible features:\n- `when` to run tasks conditionally\n- `assert` to check config/operational compliance\n- `template` to build reports\n- templates plus `command`/`config` modules to generate device commands\n- supplementing platform `facts`",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8d6dbba77c4c4809",
+ "chunk_hash": "8d6dbba77c4c4809",
+ "summary": "amazon.aws deprecated Python 3.9 support, to be removed in a release after 2027-04-01 following the AWS SDK for Python ending 3.9 support in April 2026.",
+ "questions": [
+  "Can I keep running amazon.aws modules on Python 3.9?",
+  "When does amazon.aws drop Python 3.9?",
+  "Why am I seeing a Python 3.9 deprecation in amazon.aws?"
+ ],
+ "answer_card": {
+  "title": "amazon.aws: Python 3.9 deprecated",
+  "answer_md": "Python 3.9 support in **amazon.aws** is deprecated and will be removed in a release **after 2027-04-01**, because boto3/botocore ended Python 3.9 support in April 2026. Plan to move the Python on your control node/execution environment to 3.10 or newer.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:48+00:00"
+}

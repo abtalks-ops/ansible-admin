@@ -1,0 +1,17 @@
+{
+  "chunk_id": "4573842db6bfc95a",
+  "chunk_hash": "4573842db6bfc95a",
+  "summary": "Explains the subelements filter (2.7+), which pairs each object with each value of a sub-list (with skip_missing), and using it in a loop to set authorized SSH keys per user.",
+  "questions": [
+    "How do I loop over each user's list of SSH keys?",
+    "What does the subelements filter do?",
+    "How do I iterate over nested lists inside a list of dicts?"
+  ],
+  "answer_card": {
+    "title": "Looping over nested lists with subelements",
+    "answer_md": "`subelements` produces `[object, subvalue]` pairs:\n\n```jinja\n{{ users | subelements('groups', skip_missing=True) }}\n```\n\nExample: set each user's authorized keys:\n\n```yaml\n- ansible.posix.authorized_key:\n    user: \"{{ item.0.name }}\"\n    key: \"{{ lookup('file', item.1) }}\"\n  loop: \"{{ users | subelements('authorized') }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

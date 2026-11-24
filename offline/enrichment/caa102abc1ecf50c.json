@@ -1,0 +1,12 @@
+{
+ "chunk_id": "caa102abc1ecf50c",
+ "chunk_hash": "caa102abc1ecf50c",
+ "summary": "Don't edit a role's vars/main.yml to change values; Ansible has 21 variable locations, but you mostly need the lowest-precedence spot and how to pass the highest.",
+ "questions": [
+  "How do I change a role's variables without editing the role?",
+  "How many places can Ansible variables be defined?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4eebd4bbcf97912a",
+ "chunk_hash": "4eebd4bbcf97912a",
+ "summary": "A usable collection needs an empty __init__.py and at least one plugin, with optional doc_fragments and module_utils files; new collection owners handle all repo procedures, reviews, testing and maintenance.",
+ "questions": [
+  "What files are required for a collection to work?",
+  "Is __init__.py required in a collection?",
+  "Who is responsible for maintaining a new collection?"
+ ],
+ "answer_card": {
+  "title": "Required collection files",
+  "answer_md": "- `__init__.py` (empty) – **required**\n- At least one plugin, e.g. `plugins/modules/<module>.py` – **required**\n- `plugins/doc_fragments/<topic>.py` – optional\n- `plugins/module_utils/<topic>.py` – optional\n\nAs owner you handle contribution rules, reviewers, testing and maintenance.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_in_groups.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

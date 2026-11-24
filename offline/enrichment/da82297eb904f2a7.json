@@ -1,0 +1,17 @@
+{
+ "chunk_id": "da82297eb904f2a7",
+ "chunk_hash": "da82297eb904f2a7",
+ "summary": "community.aws for Ansible 15 requires ansible-core 2.18+, Python 3.9+ and boto3/botocore 1.38+, and removed the WAF Classic modules and aliases and inspector_target.",
+ "questions": [
+  "Were the community.aws WAF modules removed?",
+  "Is inspector_target still available?",
+  "Which ansible-core does community.aws need in Ansible 15?"
+ ],
+ "answer_card": {
+  "title": "community.aws breaking changes in Ansible 15",
+  "answer_md": "- Requires **ansible-core >= 2.18.0** (2.17 dropped) and Python **3.9+** (3.11 with core 2.18).\n- Dropped `botocore<1.38.0` and `boto3<1.38.0` (older may work with a warning).\n- Removed WAF Classic modules `waf_condition`, `waf_info`, `waf_rule`, `waf_web_acl` and their `aws_waf_*` aliases; migrate to **WAFv2** modules.\n- Removed `inspector_target` (Inspector Classic retired).",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

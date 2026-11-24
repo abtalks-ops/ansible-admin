@@ -1,0 +1,18 @@
+{
+ "chunk_id": "76ed15e29756785c",
+ "chunk_hash": "76ed15e29756785c",
+ "summary": "Explains ini (lowercase collection-prefixed section and key), vars (lowercase prefixed, following variable precedence, last listed wins), and secret (since 2.22, masks the value in output; only str/string/list types, not suboptions).",
+ "questions": [
+  "How do I let users set a plugin option in ansible.cfg?",
+  "How do I mark a plugin option as a secret so it's masked?",
+  "Can I use secret on a suboption?",
+  "How do Ansible variables set plugin options?"
+ ],
+ "answer_card": {
+  "title": "ini, vars and secret plugin settings",
+  "answer_md": "- `ini`: `section` + `key`, lowercase and collection-prefixed; lets `ansible.cfg` set it.\n- `vars`: lowercase prefixed variable names; follow variable precedence; last listed wins.\n- `secret: true` (**2.22+**): resolved value is registered and masked in output. Only for `str`, `string` and `list` of strings; not on suboptions.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

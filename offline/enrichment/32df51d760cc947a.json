@@ -1,0 +1,15 @@
+{
+  "chunk_id": "32df51d760cc947a",
+  "chunk_hash": "32df51d760cc947a",
+  "summary": "The callable test is Jinja's builtin test that reports whether an object is callable.",
+  "questions": [
+    "How do I check whether something is callable in a template?"
+  ],
+  "answer_card": {
+    "title": "callable test",
+    "answer_md": "`obj is callable` returns whether the object can be called (Jinja builtin).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/callable_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:13+00:00"
+}

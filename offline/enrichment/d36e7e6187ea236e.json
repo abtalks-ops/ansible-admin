@@ -1,0 +1,16 @@
+{
+ "chunk_id": "d36e7e6187ea236e",
+ "chunk_hash": "d36e7e6187ea236e",
+ "summary": "community.general deprecated consul_acl, to be removed in 10.0.0, in favour of consul_token and consul_policy.",
+ "questions": [
+  "What replaces consul_acl?",
+  "Is consul_acl removed in community.general 10?"
+ ],
+ "answer_card": {
+  "title": "consul_acl deprecated",
+  "answer_md": "`community.general.consul_acl` is deprecated (removal in **10.0.0**). Use **`consul_token`** and **`consul_policy`** instead.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:28+00:00"
+}

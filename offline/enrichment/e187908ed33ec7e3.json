@@ -1,0 +1,16 @@
+{
+ "chunk_id": "e187908ed33ec7e3",
+ "chunk_hash": "e187908ed33ec7e3",
+ "summary": "cli_command supports multiple prompts with matching answers and check_all, for example answering new password prompts on a Junos root password change.",
+ "questions": [
+  "How do I answer multiple prompts with cli_command?",
+  "How do I change a root password interactively on a network device?"
+ ],
+ "answer_card": {
+  "title": "Answer multiple prompts with cli_command",
+  "answer_md": "```yaml\n- name: Change password to default\n  ansible.netcommon.cli_command:\n    command: \"{{ item }}\"\n    prompt:\n      - \"New password\"\n      - \"Retype new password\"\n    answer:\n      - \"mypassword123\"\n      - \"mypassword123\"\n    check_all: True\n  loop:\n    - \"configure\"\n    - \"rollback\"\n    - \"set system root-authentication plain-text-password\"\n    - \"commit\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

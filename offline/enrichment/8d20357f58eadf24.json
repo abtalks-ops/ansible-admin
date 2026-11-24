@@ -1,0 +1,16 @@
+{
+ "chunk_id": "8d20357f58eadf24",
+ "chunk_hash": "8d20357f58eadf24",
+ "summary": "Ansible 13 is built on ansible-core 2.20, and the porting guide should be read with the Ansible 13 changelog.",
+ "questions": [
+  "Which ansible-core version does Ansible 13 use?",
+  "What should I read before upgrading to Ansible 13?"
+ ],
+ "answer_card": {
+  "title": "Ansible 13 is based on ansible-core 2.20",
+  "answer_md": "Ansible 13 is built on **ansible-core 2.20**. Read the Ansible 13 porting guide alongside the Ansible 13 changelog to see what you may need to update.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:24+00:00"
+}

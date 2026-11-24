@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9bfc967ca1f26571",
+ "chunk_hash": "9bfc967ca1f26571",
+ "summary": "community.general deprecated keycloak redirects for realm_rolemapping, realm_users_info, role, user, user_execute_actions_email and user_federation; keycloak_realm_users_info moved to middleware_automation.keycloak and becomes a redirect in 14.0.0, removed in 16.0.0.",
+ "questions": [
+  "What happens to keycloak_realm_users_info in community.general?",
+  "Should I switch keycloak_user tasks to middleware_automation.keycloak?",
+  "When will keycloak_role stop being redirected?"
+ ],
+ "answer_card": {
+  "title": "community.general keycloak redirects deprecated (users)",
+  "answer_md": "These community.general **redirects** to `middleware_automation.keycloak` are deprecated and will be removed in **community.general 16.0.0**. Switch your tasks to the FQCN `middleware_automation.keycloak.<module>` now (install it with `ansible-galaxy collection install middleware_automation.keycloak`).\n\n- `keycloak_realm_rolemapping`, `keycloak_role`, `keycloak_user`, `keycloak_user_execute_actions_email`, `keycloak_user_federation`\n- `keycloak_realm_users_info`: moved to `middleware_automation.keycloak`, replaced by a deprecated redirect in community.general 14.0.0, redirect removed in 16.0.0.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:48+00:00"
+}

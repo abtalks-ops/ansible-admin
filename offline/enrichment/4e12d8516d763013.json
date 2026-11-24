@@ -1,0 +1,16 @@
+{
+ "chunk_id": "4e12d8516d763013",
+ "chunk_hash": "4e12d8516d763013",
+ "summary": "community.routeros api_find_and_modify's ignore_dynamic and ignore_builtin defaults (false) will change to true in 4.0.0; set them explicitly, preferably true.",
+ "questions": [
+  "Why do I get deprecation warnings for ignore_dynamic in api_find_and_modify?",
+  "What should I set ignore_builtin to?"
+ ],
+ "answer_card": {
+  "title": "api_find_and_modify defaults changing",
+  "answer_md": "In `community.routeros.api_find_and_modify`, `ignore_dynamic` and `ignore_builtin` default to `false` but will change to **`true`** in 4.0.0. Set them explicitly to avoid warnings; `true` is recommended unless you have a reason for `false`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:43+00:00"
+}

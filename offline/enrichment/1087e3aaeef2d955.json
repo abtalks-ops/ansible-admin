@@ -1,0 +1,17 @@
+{
+ "chunk_id": "1087e3aaeef2d955",
+ "chunk_hash": "1087e3aaeef2d955",
+ "summary": "The --vault-id option uses the label@source pattern; playbooks using content encrypted with different passwords need each vault ID passed, and --vault-id works with any vault-aware command and can be combined with --vault-password-file or --ask-vault-pass.",
+ "questions": [
+  "What is the syntax for --vault-id?",
+  "How do I run a playbook that uses secrets encrypted with different passwords?",
+  "Which commands accept --vault-id?"
+ ],
+ "answer_card": {
+  "title": "--vault-id label@source",
+  "answer_md": "```bash\n--vault-id label@source\n```\n\nIf a playbook uses content encrypted with different passwords, pass each vault ID when you run it. `--vault-id` can be used alone or with `--vault-password-file` or `--ask-vault-pass`, and works with any vault-aware command such as `ansible-vault` and `ansible-playbook`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_managing_passwords.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

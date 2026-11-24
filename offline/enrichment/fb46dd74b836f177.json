@@ -1,0 +1,18 @@
+{
+ "chunk_id": "fb46dd74b836f177",
+ "chunk_hash": "fb46dd74b836f177",
+ "summary": "Run unit tests with ansible-test units --docker -v over the whole codebase, a single module, a specific Python version, or a full file path for non-module code. Opening a PR also runs relevant tests in CI.",
+ "questions": [
+  "How do I run unit tests for just one module?",
+  "How do I run Ansible unit tests on a particular Python version?",
+  "How do I run unit tests for module_utils?",
+  "Which Docker image should I use for unit tests?"
+ ],
+ "answer_card": {
+  "title": "Run ansible-core unit tests",
+  "answer_md": "```shell\ncd /path/to/ansible/source && source hacking/env-setup\nansible-test units --docker -v                 # everything\nansible-test units --docker -v apt             # one module\nansible-test units --docker -v --python 3.13 apt\nansible-test units --docker -v test/units/module_utils/basic/test_imports.py\n```\nUse the default image (`--docker` or `--docker default`). A pull request also triggers the relevant tests in CI.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "651f15e3d1749891",
+ "chunk_hash": "651f15e3d1749891",
+ "summary": "Explains the two ways to provide the API token and server when publishing: in ansible.cfg via galaxy_server_list (most secure) or on the command line (insecure because secrets can be exposed).",
+ "questions": [
+  "What's the safest way to store my Galaxy API token?",
+  "Is it safe to pass my Galaxy token on the command line?"
+ ],
+ "answer_card": {
+  "title": "Where to specify the publishing token",
+  "answer_md": "- **Configuration** (recommended): put the token in a `galaxy_server_list` entry in `ansible.cfg`.\n- **Command line**: pass it to `ansible-galaxy`. This is insecure because secrets typed on the command line can be seen by other users.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

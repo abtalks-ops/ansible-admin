@@ -1,0 +1,17 @@
+{
+ "chunk_id": "54909b9226430f16",
+ "chunk_hash": "54909b9226430f16",
+ "summary": "Windows managed nodes must be Server 2016, Windows 10 or newer, which include PowerShell 5.1 so no bootstrapping is needed; support follows each OS's extended lifecycle, testing focuses on server editions but desktop works.",
+ "questions": [
+  "Which Windows versions can Ansible manage?",
+  "Do I need to install anything on Windows for Ansible?",
+  "Does Ansible support Windows 11?"
+ ],
+ "answer_card": {
+  "title": "Windows managed node requirements",
+  "answer_md": "Windows Server 2016, Windows 10, or newer. These ship with PowerShell 5.1, so no extra bootstrapping is needed.\n\nSupport follows each OS's extended support lifecycle (usually 10 years). Ansible is tested on server editions but should work with desktop ones like Windows 10 and 11.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

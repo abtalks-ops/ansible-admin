@@ -1,0 +1,16 @@
+{
+ "chunk_id": "261e5ab1c4dd47a9",
+ "chunk_hash": "261e5ab1c4dd47a9",
+ "summary": "hetzner.hcloud deprecates the hcloud_datacenter_info[].server_types return value after 1 October 2026; use hcloud_server_type_info[].locations[].available.",
+ "questions": [
+  "How do I find which server types are available in an hcloud location?",
+  "Is server_types in datacenter_info deprecated?"
+ ],
+ "answer_card": {
+  "title": "hcloud datacenter_info server_types deprecated",
+  "answer_md": "`hcloud_datacenter_info[].server_types` is deprecated and will be removed after **1 October 2026**. Use `hcloud_server_type_info[].locations[].available` instead.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:56+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "c5567f677c048450",
+  "chunk_hash": "c5567f677c048450",
+  "summary": "Describes the standard role directories and their `main.yml` files: tasks, handlers, defaults (lowest-precedence vars), vars (high-precedence vars), files, templates, and meta (dependencies and Galaxy metadata, needed only for uploading a standalone role to Galaxy).",
+  "questions": [
+    "What folders go in an Ansible role?",
+    "What's the difference between defaults/main.yml and vars/main.yml in a role?",
+    "Does Ansible accept main.yaml or just main.yml in roles?",
+    "Do I need meta/main.yml in my role?",
+    "Where do templates and files go in a role?"
+  ],
+  "answer_card": {
+    "title": "Role directory structure",
+    "answer_md": "Ansible looks for `main.yml` (also `main.yaml` or `main`) in most role directories:\n- `tasks/main.yml`: tasks the role runs.\n- `handlers/main.yml`: handlers imported into the parent play.\n- `defaults/main.yml`: very **low** precedence variables; anything else overrides them (a role's own defaults beat other roles' defaults).\n- `vars/main.yml`: **high** precedence role variables.\n- `files/`: files available to the role and its children.\n- `templates/`: templates for the role or child roles.\n- `meta/main.yml`: metadata, including dependencies and optional Galaxy metadata. Required only to upload a standalone role to Galaxy, not to use it.\n\nInclude at least one of these directories; omit any you don't use.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

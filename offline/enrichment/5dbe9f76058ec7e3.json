@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5dbe9f76058ec7e3",
+ "chunk_hash": "5dbe9f76058ec7e3",
+ "summary": "Enable device logging globally for connection-init failures or per task for intermittent ones. Secret masking in ansible-core 2.22 doesn't cover these messages because ansible-connection doesn't get controller secrets, so passwords are logged in plain text.",
+ "questions": [
+  "Does ansible-core secret masking hide passwords in device logs?",
+  "Should I enable device logging globally or per task?"
+ ],
+ "answer_card": {
+  "title": "Device logging scope and secrets",
+  "answer_md": "- Failing at connection setup: enable globally (`export ANSIBLE_PERSISTENT_LOG_MESSAGES=True`).\n- One task failing intermittently: enable for that task only.\n\n**Not masked:** the secret masking added in ansible-core 2.22 doesn't apply, because the persistent connection runs in a separate `ansible-connection` process that doesn't receive the controller's secrets. Passwords sent over the connection are logged in plain text.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

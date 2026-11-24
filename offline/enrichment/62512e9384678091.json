@@ -1,0 +1,15 @@
+{
+ "chunk_id": "62512e9384678091",
+ "chunk_hash": "62512e9384678091",
+ "summary": "Example: dirname on /etc/asdf/foo.txt gives /etc/asdf.",
+ "questions": [
+  "How do I get /etc/asdf from /etc/asdf/foo.txt?"
+ ],
+ "answer_card": {
+  "title": "dirname example",
+  "answer_md": "```yaml\n{{ mypath | dirname }}   # '/etc/asdf/foo.txt' -> '/etc/asdf'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dirname_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

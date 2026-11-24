@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f6fd4dfa5c415004",
+ "chunk_hash": "f6fd4dfa5c415004",
+ "summary": "Inventory sources load in the order given, adding all and ungrouped at the end. Order matters for parent/child definitions since YAML and INI plugins drop empty groups after each source, and the last variable definition wins.",
+ "questions": [
+  "Why do I get a parsing error about a missing child group across inventory files?",
+  "Which inventory source wins if a variable is defined twice?",
+  "Does order of -i options matter?"
+ ],
+ "answer_card": {
+  "title": "Inventory load order",
+  "answer_md": "Sources load in the order you give them, and hosts, groups and variables are defined as encountered (`all`/`ungrouped` added at the end).\n- Reorder sources if parent/child groups must exist before they're referenced. YAML and INI plugins discard empty groups at the end of each source, which can cause parse errors.\n- For variables, the **last definition wins**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

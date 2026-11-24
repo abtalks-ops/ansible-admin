@@ -1,0 +1,19 @@
+{
+  "chunk_id": "18d4f49e172faf5a",
+  "chunk_hash": "18d4f49e172faf5a",
+  "summary": "Shows passing vars and tags to roles under `roles:`, including the same role twice with different vars. A tag on a role applies to all its tasks; also tag pre/post tasks and dependencies. Before ansible-core 2.15 role vars leaked into play scope (controlled by DEFAULT_PRIVATE_ROLE_VARS); newer versions don't.",
+  "questions": [
+    "How do I pass variables to a role in the roles section?",
+    "If I tag a role, which tasks get the tag?",
+    "Do vars I pass to a role become available to the rest of the play?",
+    "Why do my role tags skip my pre_tasks?",
+    "What does DEFAULT_PRIVATE_ROLE_VARS control?"
+  ],
+  "answer_card": {
+    "title": "Pass vars and tags to roles",
+    "answer_md": "```yaml\n- hosts: webservers\n  roles:\n    - common\n    - role: foo_app_instance\n      vars:\n        dir: '/opt/a'\n        app_port: 5000\n      tags: typeA\n    - role: foo_app_instance\n      vars:\n        dir: '/opt/b'\n        app_port: 5001\n      tags: typeB\n```\n- A tag on a role applies to **all** tasks in the role. If you use tags with role tasks, also tag your `pre_tasks`, `post_tasks`, and role dependencies.\n- Before `ansible-core` 2.15, `vars:` in `roles:` were added to play variables (visible before and after the role), changeable via `DEFAULT_PRIVATE_ROLE_VARS`. In newer versions they don't leak into the play scope.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9b07ff6c5d1dce95",
+ "chunk_hash": "9b07ff6c5d1dce95",
+ "summary": "To set up for EEs: install podman or docker, python3 and pip, then pip install ansible-navigator (which includes ansible-builder), or only ansible-builder to build without testing; verify both versions.",
+ "questions": [
+  "What do I need installed to build Execution Environments?",
+  "Does ansible-navigator include ansible-builder?",
+  "How do I install ansible-builder only?"
+ ],
+ "answer_card": {
+  "title": "Set up for Execution Environments",
+  "answer_md": "1. Install `podman` or `docker`, `python3`, `python3-pip`. On DNF:\n   ```bash\n   sudo dnf install -y podman python3 python3-pip\n   ```\n2. `pip3 install ansible-navigator` (includes `ansible-builder`). To only build, `pip3 install ansible-builder`.\n3. Check: `ansible-navigator --version` and `ansible-builder --version`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/getting_started_ee/setup_environment.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

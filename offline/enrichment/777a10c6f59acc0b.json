@@ -1,0 +1,16 @@
+{
+ "chunk_id": "777a10c6f59acc0b",
+ "chunk_hash": "777a10c6f59acc0b",
+ "summary": "The generator inventory plugin uses Jinja2 templates and layers in a YAML config to create a host for every combination of layer values, with templated parent groups.",
+ "questions": [
+  "How do I generate many inventory hosts from patterns?",
+  "What does the generator inventory plugin do?"
+ ],
+ "answer_card": {
+  "title": "generator inventory plugin",
+  "answer_md": "`ansible.builtin.generator` uses a YAML config with a host name template and independent **layers**. Every combination of layer values becomes a host, and parent groups can be defined from the same template variables.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/generator_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

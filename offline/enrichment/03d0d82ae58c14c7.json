@@ -1,0 +1,17 @@
+{
+ "chunk_id": "03d0d82ae58c14c7",
+ "chunk_hash": "03d0d82ae58c14c7",
+ "summary": "cli_parse engines: native, xml, textfsm, ntc_templates, ttp, pyats and json, extensible via any collection. Red Hat fully supports native and json; support for ntc_templates, pyATS, textfsm and xmltodict is limited to their public APIs.",
+ "questions": [
+  "Which parsing engines does cli_parse support?",
+  "Which cli_parse parsers are supported by Red Hat?",
+  "Can I add my own parsing engine to cli_parse?"
+ ],
+ "answer_card": {
+  "title": "cli_parse parsing engines",
+  "answer_md": "- `native`: built in, no extra libraries\n- `xml`: XML to native data\n- `textfsm`: template-based state machine\n- `ntc_templates`: prebuilt textfsm templates for many platforms\n- `ttp`: template-based parsing library\n- `pyats`: Cisco pyATS parsers\n- `json`: JSON output to native data\n\nAny collection can add engines. With an Ansible Automation Platform subscription, `native` and `json` are fully supported; `ntc_templates`, pyATS, `textfsm` and `xmltodict` are supported only for their documented public APIs.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

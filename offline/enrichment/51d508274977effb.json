@@ -1,0 +1,18 @@
+{
+  "chunk_id": "51d508274977effb",
+  "chunk_hash": "51d508274977effb",
+  "summary": "Examples using systemd_service: start, stop, restart with daemon-reload, reload, enable and unmask, enable a timer, daemon-reload only, daemon-reexec, and a user service with XDG_RUNTIME_DIR.",
+  "questions": [
+    "How do I restart a service and reload unit files?",
+    "How do I enable and start a systemd timer?",
+    "How do I start a user-level systemd service?",
+    "How do I only daemon-reload?"
+  ],
+  "answer_card": {
+    "title": "systemd examples",
+    "answer_md": "```yaml\n- ansible.builtin.systemd_service: {name: crond, state: restarted, daemon_reload: true}\n- ansible.builtin.systemd_service: {name: httpd, enabled: true, masked: no}\n- ansible.builtin.systemd_service: {name: dnf-automatic.timer, state: started, enabled: true}\n- ansible.builtin.systemd_service: {daemon_reload: true}\n- ansible.builtin.systemd_service: {name: myservice, state: started, scope: user}\n  environment:\n    XDG_RUNTIME_DIR: \"/run/user/{{ myuid }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

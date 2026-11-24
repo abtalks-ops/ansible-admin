@@ -1,0 +1,16 @@
+{
+  "chunk_id": "ff5e8f71658f6520",
+  "chunk_hash": "ff5e8f71658f6520",
+  "summary": "Shows updating task_vars in the debugger, which requires update_task before redo; notes vars was renamed task_vars in 2.5.",
+  "questions": [
+    "How do I change a variable value in the debugger?",
+    "Why didn't changing task_vars take effect on redo?"
+  ],
+  "answer_card": {
+    "title": "Updating task variables in the debugger",
+    "answer_md": "```\n(debug)> task_vars['pkg_name'] = 'bash'\n(debug)> update_task\n(debug)> redo\n```\n\nYou must run **`update_task`** to load new variables before `redo`. (`vars` was renamed `task_vars` in 2.5.)",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_debugger.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:03:26+00:00"
+}

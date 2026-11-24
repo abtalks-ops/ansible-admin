@@ -1,0 +1,16 @@
+{
+ "chunk_id": "e49a229dd93daf90",
+ "chunk_hash": "e49a229dd93daf90",
+ "summary": "Bold menu names, buttons and fields in GUI procedures, and use the RST code-block directive for commands.",
+ "questions": [
+  "How should I format menu names and buttons in docs?",
+  "How do I show a command snippet in RST?"
+ ],
+ "answer_card": {
+  "title": "Highlight menu items and commands",
+  "answer_md": "- Bold GUI elements: \"On the **File** menu, click **Open**.\"\n- Use RST code blocks for commands:\n```rst\n.. code-block:: bash\n\n  ssh my_vyos_user@vyos.example.net\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/basic_rules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:01+00:00"
+}

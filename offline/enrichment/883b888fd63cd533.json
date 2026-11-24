@@ -1,0 +1,16 @@
+{
+ "chunk_id": "883b888fd63cd533",
+ "chunk_hash": "883b888fd63cd533",
+ "summary": "Target the control node with localhost or 127.0.0.1, or define localhost in inventory with ansible_connection=local and an ansible_python_interpreter.",
+ "questions": [
+  "How do I run Ansible against my own machine?",
+  "How do I set localhost to use a local connection?"
+ ],
+ "answer_card": {
+  "title": "Run against localhost",
+  "answer_md": "```bash\nansible localhost -m ping -e 'ansible_python_interpreter=\"/usr/bin/env python\"'\n```\nOr add to inventory:\n```text\nlocalhost ansible_connection=local ansible_python_interpreter=\"/usr/bin/env python\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/connection_details.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

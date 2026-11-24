@@ -1,0 +1,16 @@
+{
+  "chunk_id": "28e9e75a20430add",
+  "chunk_hash": "28e9e75a20430add",
+  "summary": "Custom tests go in a test_plugins directory next to the play, inside a role or in a configured test plugin path.",
+  "questions": [
+    "Where do I put a custom test plugin?",
+    "Can a role ship its own Jinja tests?"
+  ],
+  "answer_card": {
+    "title": "Adding a custom test plugin",
+    "answer_md": "Place it in a `test_plugins` directory next to your play, inside a role, or in a configured test plugin directory.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:45+00:00"
+}

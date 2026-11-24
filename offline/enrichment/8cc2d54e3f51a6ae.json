@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8cc2d54e3f51a6ae",
+ "chunk_hash": "8cc2d54e3f51a6ae",
+ "summary": "Known issue for community.general: Ansible documentation markup appears raw in ansible-doc text output on ansible-core older than 2.15; upgrade ansible-core or read the HTML docs.",
+ "questions": [
+  "Why does ansible-doc show strange markup like I(...) or C(...) for community.general modules?",
+  "How do I read community.general docs cleanly on an old ansible-core?",
+  "Which ansible-core version renders collection doc markup properly?"
+ ],
+ "answer_card": {
+  "title": "community.general docs show raw markup in ansible-doc",
+  "answer_md": "On **ansible-core < 2.15**, `ansible-doc` prints community.general documentation markup in raw form. Fix: upgrade to **ansible-core 2.15+**, or read the HTML docs at `https://docs.ansible.com/ansible/devel/collections/community/general/`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:38+00:00"
+}

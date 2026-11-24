@@ -1,0 +1,18 @@
+{
+ "chunk_id": "80a51af1431a7a70",
+ "chunk_hash": "80a51af1431a7a70",
+ "summary": "Shows testing a module with ad hoc commands using ANSIBLE_LIBRARY or a collection FQCN with --playbook-dir, and running it directly with an args.json file (ANSIBLE_MODULE_ARGS) via python or python -m with PYTHONPATH set.",
+ "questions": [
+  "How do I quickly test my new module with an ad hoc command?",
+  "How can I run my module directly with python for debugging?",
+  "What format does the module arguments file use?",
+  "How do I test a collection module without installing the collection?"
+ ],
+ "answer_card": {
+  "title": "Test a module locally",
+  "answer_md": "Ad hoc:\n```shell\nANSIBLE_LIBRARY=./library ansible -m my_test -a 'name=hello new=true' localhost\nansible localhost -m my_namespace.my_collection.my_test -a 'name=hello new=true' --playbook-dir=$PWD\n```\nDirect (for pdb/print):\n```json\n{\"ANSIBLE_MODULE_ARGS\": {\"name\": \"hello\", \"new\": true}}\n```\n```console\npython library/my_test.py /tmp/args.json\nexport PYTHONPATH=PATH_TO_COLLECTIONS:$PYTHONPATH\npython -m ansible_collections.my_namespace.my_collection.plugins.modules.my_test /tmp/args.json\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

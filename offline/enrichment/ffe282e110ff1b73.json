@@ -1,0 +1,17 @@
+{
+  "chunk_id": "ffe282e110ff1b73",
+  "chunk_hash": "ffe282e110ff1b73",
+  "summary": "community.crypto deprecations: the default acme docs fragment (use acme.basic and acme.account), CryptoBackend needing get_ordered_csr_identifiers and get_cert_information, crypto.module_backends.common (use argspec), and the check mode behavior of the *_pipe modules, which from 3.0.0 will ignore check mode (use check_mode: false now).",
+  "questions": [
+    "How will openssl_privatekey_pipe behave in check mode in community.crypto 3?",
+    "How do I keep x509_certificate_pipe generating output in check mode?",
+    "Which acme docs fragments replace the old default one?"
+  ],
+  "answer_card": {
+    "title": "community.crypto pipe module check mode change",
+    "answer_md": "`openssl_csr_pipe`, `openssl_privatekey_pipe` and `x509_certificate_pipe` will **ignore check mode** from community.crypto 3.0.0. Today, in check mode they only set `changed`. Add `check_mode: false` to get the future behavior now.\n\nFor developers: replace the `community.crypto.acme` docs fragment with `acme.basic` + `acme.account`, and use the `argspec` util instead of `crypto.module_backends.common`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:23:46+00:00"
+}

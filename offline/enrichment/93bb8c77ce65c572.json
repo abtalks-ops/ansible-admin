@@ -1,0 +1,12 @@
+{
+  "chunk_id": "93bb8c77ce65c572",
+  "chunk_hash": "93bb8c77ce65c572",
+  "summary": "An index of ansible-core porting guides that help update playbooks, plugins and infrastructure between core versions. It is not a complete list.",
+  "questions": [
+    "Where can I find guidance for upgrading between ansible-core versions?",
+    "Are the core porting guides a complete list of changes?"
+  ],
+  "answer_card": null,
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

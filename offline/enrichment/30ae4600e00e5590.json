@@ -1,0 +1,15 @@
+{
+ "chunk_id": "30ae4600e00e5590",
+ "chunk_hash": "30ae4600e00e5590",
+ "summary": "'Log in' is the verb form, and variants like login, loggin and logon should not be used as the verb.",
+ "questions": [
+  "Should I write 'login' or 'log in' in instructions?"
+ ],
+ "answer_card": {
+  "title": "Log in",
+  "answer_md": "Use **log in** as the verb (\"you are requested to log in\"), not login, loggin or logon.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/spelling_word_choice.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:27+00:00"
+}

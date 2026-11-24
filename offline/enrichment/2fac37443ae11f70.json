@@ -1,0 +1,17 @@
+{
+  "chunk_id": "2fac37443ae11f70",
+  "chunk_hash": "2fac37443ae11f70",
+  "summary": "Shows json_query examples: all cluster names, all server names, ports filtered by cluster, joining ports into a string, and quoting literals with backticks or doubled single quotes.",
+  "questions": [
+    "How do I extract all names from a list in JSON with json_query?",
+    "How do I filter JSON items by a field value with json_query?",
+    "How do I quote string literals in a JMESPath query in YAML?"
+  ],
+  "answer_card": {
+    "title": "json_query examples",
+    "answer_md": "```yaml\nloop: \"{{ domain_definition | community.general.json_query('domain.cluster[*].name') }}\"\n```\n\nFilter by field (a variable keeps it readable):\n\n```yaml\nvars:\n  q: \"domain.server[?cluster=='cluster1'].port\"\nloop: \"{{ domain_definition | community.general.json_query(q) }}\"\n```\n\nBackticks avoid escaping: `json_query('domain.server[?cluster==`cluster1`].port') | join(', ')`. Or double single quotes in YAML: `''cluster1''`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

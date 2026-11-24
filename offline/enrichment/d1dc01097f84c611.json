@@ -1,0 +1,18 @@
+{
+ "chunk_id": "d1dc01097f84c611",
+ "chunk_hash": "d1dc01097f84c611",
+ "summary": "Native template keys: example, getval (named-group regex), result (templated tree) and optional shared. The task uses parser name ansible.netcommon.native, and the template defaults to templates/<short_os>_<command>.yaml with spaces as underscores.",
+ "questions": [
+  "Where does cli_parse look for my template file?",
+  "What does the shared key do in a native template?",
+  "How is the template filename derived from the command?",
+  "Can I parse text instead of running a command?"
+ ],
+ "answer_card": {
+  "title": "Run cli_parse with the native parser",
+  "answer_md": "Template entry keys:\n- `example`: sample line\n- `getval`: regex with named capture groups\n- `result`: data tree templated from captures\n- `shared` (optional): keep values available to later entries\n\n```yaml\n- ansible.utils.cli_parse:\n    command: show interface\n    parser:\n      name: ansible.netcommon.native\n    set_fact: interfaces\n```\nDefault template path: `templates/{{ short_os }}_{{ command }}.yaml`, where `short_os` comes from `ansible_network_os` or `ansible_distribution` and spaces in the command become `_`. Use `text` instead of `command` to parse earlier output.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

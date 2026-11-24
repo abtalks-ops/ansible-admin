@@ -1,0 +1,19 @@
+{
+ "chunk_id": "f90bbaa869e0abe9",
+ "chunk_hash": "f90bbaa869e0abe9",
+ "summary": "GSSAPI auth uses Kerberos: enable GSSAPIAuthentication yes in sshd_config and restart sshd, set up Kerberos on the control node, get a ticket with kinit, and set ansible_user to the UPN. For delegation, the ticket must be forwardable (kinit -f or forwardable = true in krb5.conf) and ssh needs -o GSSAPIDelegateCredentials=yes.",
+ "questions": [
+  "How do I use Kerberos with SSH to Windows hosts?",
+  "How do I enable GSSAPI authentication in Windows sshd_config?",
+  "How do I get a forwardable Kerberos ticket for delegation?",
+  "What username format should ansible_user use with GSSAPI?",
+  "How do I access network resources from Windows over SSH with Kerberos?"
+ ],
+ "answer_card": {
+  "title": "GSSAPI (Kerberos) SSH authentication for Windows",
+  "answer_md": "**On the Windows host**, add or edit this line in `C:\\ProgramData\\ssh\\sshd_config`, then `Restart-Service -Name sshd`:\n\n```text\nGSSAPIAuthentication yes\n```\n\n**On the control node**, install and configure Kerberos for the host's domain, then get and check a ticket:\n\n```bash\nkinit username@REALM.COM\nklist\n```\n\nSet `ansible_user` to the UPN and Ansible uses that ticket automatically.\n\n**Delegation** (unconstrained, for network resources): the ticket must be forwardable (`kinit -f`, or `forwardable = true` under `[libdefaults]` in `/etc/krb5.conf`), and ssh must use `-o GSSAPIDelegateCredentials=yes`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_ssh.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

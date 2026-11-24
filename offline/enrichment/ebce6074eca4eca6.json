@@ -1,0 +1,18 @@
+{
+  "chunk_id": "ebce6074eca4eca6",
+  "chunk_hash": "ebce6074eca4eca6",
+  "summary": "Because of the CVE-2023-5764 fix in core 2.16.1, conditionals with embedded {{ }} templates referencing untrusted data such as registered results or !unsafe vars fail with 'Conditional is marked as unsafe'. The fix is to reference variables directly, for example in assert that. With any_errors_fatal, a failing task in a block with rescue runs rescue on all hosts.",
+  "questions": [
+    "Why do I get 'Conditional is marked as unsafe, and cannot be evaluated' after upgrading?",
+    "How do I fix an assert that uses {{ }} around a registered variable?",
+    "Should I use curly braces inside when conditions?",
+    "Why does my rescue block run on every host with any_errors_fatal?"
+  ],
+  "answer_card": {
+    "title": "Fixing 'Conditional is marked as unsafe' errors",
+    "answer_md": "Since ansible-core 2.16.1 (CVE-2023-5764), conditionals with embedded templates that read untrusted data (module results, `!unsafe` vars) fail. Drop the `{{ }}` and reference the variable directly:\n\n```yaml\n- shell: echo \"hi mom\"\n  register: untrusted_result\n\n# bad: that: '\"hi mom\" is in {{ untrusted_result.stdout }}'\n- assert:\n    that: '\"hi mom\" is in untrusted_result.stdout'\n```\n\nThis applies to `when`, `until`, and non-task conditionals like `assert`.\n\nAlso note that with `any_errors_fatal`, a failure inside a block that has `rescue` runs the rescue section on **all** hosts.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

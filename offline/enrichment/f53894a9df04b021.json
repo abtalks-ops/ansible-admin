@@ -1,0 +1,15 @@
+{
+ "chunk_id": "f53894a9df04b021",
+ "chunk_hash": "f53894a9df04b021",
+ "summary": "The host_list inventory plugin parses a comma-separated host list string for non-path sources containing a comma.",
+ "questions": [
+  "How does Ansible handle -i with a comma-separated list of hosts?"
+ ],
+ "answer_card": {
+  "title": "host_list inventory plugin",
+  "answer_md": "`ansible.builtin.host_list` parses a comma-separated list of hosts. It only applies to inventory strings that aren't paths and contain a comma.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/host_list_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "357e5999999a6fb9",
+ "chunk_hash": "357e5999999a6fb9",
+ "summary": "Run sanity tests from the collection directory with ansible-test sanity --docker using the default image; use --test to pick one, --list-tests to list them, and --allow-disabled to include disabled ones.",
+ "questions": [
+  "How do I run sanity tests in a container?",
+  "How do I list available sanity tests?",
+  "How do I run just validate-modules?",
+  "How do I include disabled sanity tests?"
+ ],
+ "answer_card": {
+  "title": "Run sanity tests",
+  "answer_md": "```shell\ncd ~/ansible_collections/<NAMESPACE>/<COLLECTION_NAME>\nansible-test sanity --docker                         # all tests, default image\nansible-test sanity --docker --test validate-modules # one test\nansible-test sanity --list-tests\n```\nAdd `--allow-disabled` to include disabled tests. Always use plain `--docker` without an image name.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_sanity.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

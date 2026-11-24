@@ -1,0 +1,19 @@
+{
+  "chunk_id": "87ad1267c971d53c",
+  "chunk_hash": "87ad1267c971d53c",
+  "summary": "Notes no role file is mandatory, standalone roles can embed custom modules and plugins (e.g. `library/`), and vars/defaults are imported into play scope unless `public` is disabled. Extra YAML files can be imported conditionally from `tasks/main.yml`, for example per-OS task files.",
+  "questions": [
+    "Is a role valid if it only has a files directory?",
+    "Can I ship a custom module inside a role?",
+    "Do role variables leak into the rest of the play?",
+    "How do I run different tasks for RHEL and Debian inside a role?",
+    "Will Ansible load other YAML files in my role's tasks folder automatically?"
+  ],
+  "answer_card": {
+    "title": "Optional role files and per-OS task files",
+    "answer_md": "- No file is required; e.g. a role with only `files/something.txt` or `vars/for_import.yml` is valid.\n- Standalone roles (not in a collection) can include custom modules/plugins such as `library/my_module.py`.\n- Variables from `vars/` and `defaults/` are imported into play scope unless you disable it with the `public` option of `import_role`/`include_role`.\n- Other YAML files aren't used by default; import them explicitly:\n\n```yaml\n# roles/example/tasks/main.yml\n- ansible.builtin.import_tasks: redhat.yml\n  when: ansible_facts['os_family']|lower == 'redhat'\n- ansible.builtin.import_tasks: debian.yml\n  when: ansible_facts['os_family']|lower == 'debian'\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

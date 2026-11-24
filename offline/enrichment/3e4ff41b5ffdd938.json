@@ -1,0 +1,15 @@
+{
+ "chunk_id": "3e4ff41b5ffdd938",
+ "chunk_hash": "3e4ff41b5ffdd938",
+ "summary": "Style resources: follow existing Ansible docs, ask the community, and consult AP Stylebook, Chicago Manual of Style, Strunk and White, and the Google developer documentation style guide.",
+ "questions": [
+  "Which external style guides does Ansible recommend?"
+ ],
+ "answer_card": {
+  "title": "Style resources",
+  "answer_md": "Follow the existing Ansible docs, ask the community, and consult the AP Stylebook, Chicago Manual of Style, Strunk and White's *Elements of Style*, and the Google developer documentation style guide.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/resources.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

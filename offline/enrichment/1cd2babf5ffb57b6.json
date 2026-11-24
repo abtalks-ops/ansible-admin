@@ -1,0 +1,15 @@
+{
+ "chunk_id": "1cd2babf5ffb57b6",
+ "chunk_hash": "1cd2babf5ffb57b6",
+ "summary": "ansible.builtin.wordwrap is the Jinja builtin filter that wraps a string to a given width.",
+ "questions": [
+  "How do I wrap long text to a fixed width in a template?"
+ ],
+ "answer_card": {
+  "title": "wordwrap filter",
+  "answer_md": "`wordwrap` wraps a string to the given width (Jinja builtin).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/wordwrap_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

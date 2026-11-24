@@ -1,0 +1,19 @@
+{
+ "chunk_id": "f61e07bc70139b0d",
+ "chunk_hash": "f61e07bc70139b0d",
+ "summary": "With App Control enabled some modules behave differently: win_command and win_package only run trusted executables, win_shell runs in Constrained Language Mode, win_powershell and script run in CLM unless the script is signed, and win_updates doesn't work. Signed scripts must not be modified, including line endings and whitespace.",
+ "questions": [
+  "Does win_updates work with Windows App Control enabled?",
+  "Why is my win_shell task running in Constrained Language Mode?",
+  "How can I make win_powershell run in Full Language mode under WDAC?",
+  "Which Windows modules break with App Control?",
+  "How do I check the PowerShell language mode from Ansible?"
+ ],
+ "answer_card": {
+  "title": "Module behaviour with Windows App Control",
+  "answer_md": "Known differences when App Control is enabled (even with signing):\n- `win_command` only runs executables trusted by the policy.\n- `win_shell` always runs in Constrained Language Mode (CLM), which may break scripts.\n- `win_powershell` and `ansible.builtin.script` run in CLM unless the script is signed.\n- `win_package` only runs trusted executables, so it may or may not work.\n- `win_updates` is not supported.\n\nOther modules that start sub-processes or rely on unsigned PowerShell will most likely fail.\n\nCheck the language mode:\n\n```yaml\n- name: Test out LanguageMode\n  ansible.windows.win_powershell:\n    script: $ExecutionContext.SessionState.LanguageMode\n```\n\nA signed script must be used exactly as signed, with the same line endings and whitespace.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_app_control.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

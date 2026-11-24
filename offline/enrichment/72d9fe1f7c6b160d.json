@@ -1,0 +1,19 @@
+{
+  "chunk_id": "72d9fe1f7c6b160d",
+  "chunk_hash": "72d9fe1f7c6b160d",
+  "summary": "include_vars options: depth, dir (role vars/ or playbook-relative), extensions, file, files_matching regex, free-form, hash_behaviour replace or merge, and ignore_files.",
+  "questions": [
+    "How do I merge dictionaries when loading var files?",
+    "How do I only load YAML files matching a pattern?",
+    "Where does include_vars look for relative paths in a role?",
+    "How do I limit recursion when loading a vars directory?",
+    "Which file extensions does include_vars read by default?"
+  ],
+  "answer_card": {
+    "title": "include_vars parameters",
+    "answer_md": "- `file` / `dir`: relative paths look in role `vars/` or relative to playbook\n- `depth` (0 = unlimited)\n- `extensions` (json, yaml, yml)\n- `files_matching`: regex filter; `ignore_files`: list to skip\n- `hash_behaviour`: `replace` or `merge` (applies to the whole call, not per file)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_vars_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

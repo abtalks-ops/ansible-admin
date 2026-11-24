@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f5312a6abfcf55c1",
+ "chunk_hash": "f5312a6abfcf55c1",
+ "summary": "More password lookup parameters: ident (2.12) for the bcrypt version, length (default 20), and seed (2.12) for reproducible passwords.",
+ "questions": [
+  "What is the default length of generated passwords?",
+  "How do I get the same random password every run?",
+  "How do I choose the bcrypt variant like 2b?"
+ ],
+ "answer_card": {
+  "title": "password lookup length, seed, ident",
+  "answer_md": "- `length` (default **20**)\n- `seed` (2.12+): identical seeds yield identical passwords; a weak seed isn't secure\n- `ident` (2.12+): bcrypt version (`2`, `2a`, `2y`, `2b`) when `encrypt=bcrypt`; ignored otherwise",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/password_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

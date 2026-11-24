@@ -1,0 +1,17 @@
+{
+  "chunk_id": "33cc229e73ca011b",
+  "chunk_hash": "33cc229e73ca011b",
+  "summary": "dellemc.openmanage 11.8.0 adds iDRAC10 support to idrac_bios, idrac_diagnostics, idrac_firmware, the idrac_job_queue role, idrac_lifecycle_controller_logs, idrac_network_attributes, idrac_secure_boot, the idrac_server_powerstate role, idrac_session, idrac_system_erase, redfish_event_subscription and redfish_power_state.",
+  "questions": [
+    "Does idrac_firmware support iDRAC10?",
+    "Can I manage power state on iDRAC10 with Ansible?",
+    "Which openmanage modules got iDRAC10 support in 11.8.0?"
+  ],
+  "answer_card": {
+    "title": "iDRAC10 support added in 11.8.0",
+    "answer_md": "iDRAC10 support was added to: `idrac_bios`, `idrac_diagnostics`, `idrac_firmware`, `idrac_job_queue` (role), `idrac_lifecycle_controller_logs`, `idrac_network_attributes`, `idrac_secure_boot`, `idrac_server_powerstate` (role), `idrac_session`, `idrac_system_erase`, `redfish_event_subscription` and `redfish_power_state`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:25:02+00:00"
+}

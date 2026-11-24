@@ -1,0 +1,17 @@
+{
+ "chunk_id": "3b5dd1081e35609c",
+ "chunk_hash": "3b5dd1081e35609c",
+ "summary": "INI and YAML are the built-in inventory formats. Bracketed headings in INI are groups, which follow variable naming rules, and the same inventory in YAML uses ungrouped/webservers/dbservers with hosts keys.",
+ "questions": [
+  "What does a basic Ansible inventory file look like?",
+  "How do I write the same inventory in YAML?",
+  "What naming rules apply to group names?"
+ ],
+ "answer_card": {
+  "title": "Basic INI and YAML inventory",
+  "answer_md": "INI:\n```ini\nmail.example.com\n\n[webservers]\nfoo.example.com\nbar.example.com\n\n[dbservers]\none.example.com\n```\nYAML:\n```yaml\nungrouped:\n  hosts:\n    mail.example.com:\nwebservers:\n  hosts:\n    foo.example.com:\n    bar.example.com:\ndbservers:\n  hosts:\n    one.example.com:\n```\nGroup names follow the same rules as valid variable names.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

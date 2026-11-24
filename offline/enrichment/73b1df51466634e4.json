@@ -1,0 +1,17 @@
+{
+ "chunk_id": "73b1df51466634e4",
+ "chunk_hash": "73b1df51466634e4",
+ "summary": "group[i:j] slices hosts inclusively from i to j; omitted i means 0 and omitted j means the end, [:] is invalid, i > j is empty, and i == j gives one host.",
+ "questions": [
+  "How do I target a range of hosts in a group?",
+  "Is the end index in a host slice inclusive?",
+  "How do I target all but the first host?"
+ ],
+ "answer_card": {
+  "title": "Slice hosts in a group",
+  "answer_md": "Slices are **inclusive** of both ends:\n```text\nwebservers[0:2]  # cobweb, webbing, weber\nwebservers[1:2]  # webbing, weber\nwebservers[1:]   # webbing, weber\nwebservers[:3]   # cobweb, webbing, weber\n```\nOmitting both (`[:]`) is invalid; `i > j` is empty; `i == j` gives one host.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_patterns.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

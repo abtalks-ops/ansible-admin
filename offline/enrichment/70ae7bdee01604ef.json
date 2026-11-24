@@ -1,0 +1,16 @@
+{
+  "chunk_id": "70ae7bdee01604ef",
+  "chunk_hash": "70ae7bdee01604ef",
+  "summary": "ansible_loop_var (2.8+) gives the name used in loop_control.loop_var, letting role authors read the current item with lookup('vars', ansible_loop_var).",
+  "questions": [
+    "How can a role get the current loop item if the loop_var name varies?",
+    "What is ansible_loop_var?"
+  ],
+  "answer_card": {
+    "title": "Accessing the loop_var name",
+    "answer_md": "`ansible_loop_var` holds the name set in `loop_control.loop_var`. In a role, get the current item without dictating the name:\n\n```yaml\n\"{{ lookup('vars', ansible_loop_var) }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

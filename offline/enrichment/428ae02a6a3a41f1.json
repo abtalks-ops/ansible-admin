@@ -1,0 +1,17 @@
+{
+  "chunk_id": "428ae02a6a3a41f1",
+  "chunk_hash": "428ae02a6a3a41f1",
+  "summary": "Terminal plugins prepare a network device's SSH shell for Ansible, for example by disabling paging, detecting errors and entering privileged mode. They map one-to-one to platforms and are loaded from ansible_network_os.",
+  "questions": [
+    "What turns off paging on network devices when Ansible connects?",
+    "How does Ansible enter enable mode on a switch?",
+    "What are terminal plugins?"
+  ],
+  "answer_card": {
+    "title": "What terminal plugins are",
+    "answer_md": "Terminal plugins initialize a network device's SSH shell for Ansible: disabling automatic paging, detecting errors in output and entering privileged mode where needed. One plugin per platform, selected from `ansible_network_os`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/terminal.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:45+00:00"
+}

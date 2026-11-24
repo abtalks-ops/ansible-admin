@@ -1,0 +1,16 @@
+{
+ "chunk_id": "4f8366d374fcb960",
+ "chunk_hash": "4f8366d374fcb960",
+ "summary": "Examples: 32768 | root(5) is 8, 4 | root is 2, and me | root(3) for cube root.",
+ "questions": [
+  "What's an example of the root filter?",
+  "How do I get a cube root?"
+ ],
+ "answer_card": {
+  "title": "root examples",
+  "answer_md": "```yaml\nfiveroot: \"{{ 32768 | root(5) }}\"   # 8\nsqrt_of_2: \"{{ 4 | root }}\"          # 2\ncuberoot_me: \"{{ me | root(3) }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/root_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:11+00:00"
+}

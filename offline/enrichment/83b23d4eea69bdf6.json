@@ -1,0 +1,16 @@
+{
+ "chunk_id": "83b23d4eea69bdf6",
+ "chunk_hash": "83b23d4eea69bdf6",
+ "summary": "Examples of b64decode on literals and variables, with utf-16-le encoding, and with urlsafe=True.",
+ "questions": [
+  "What does a b64decode example look like?",
+  "How do I decode UTF-16 Base64 output from Windows?"
+ ],
+ "answer_card": {
+  "title": "b64decode examples",
+  "answer_md": "```yaml\nlola: \"{{ 'bG9sYQ==' | b64decode }}\"\nstuff: \"{{ b64stuff | b64decode }}\"\nstuff: \"{{ 'QQBuAHMAaQBiAGwAZQAgAC0AIABPMIkwaDB/MAoA' | b64decode(encoding='utf-16-le') }}\"\nstuff: \"{{ 'aHR0cHM6Ly93d3cucHl0aG9uLm9yZy9leGFtcGxlLTE=' | b64decode(urlsafe=True) }}\"\n# => 'https://www.python.org/example-1'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64decode_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

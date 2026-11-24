@@ -1,0 +1,18 @@
+{
+ "chunk_id": "a8cf6f19d6dbea6d",
+ "chunk_hash": "a8cf6f19d6dbea6d",
+ "summary": "ansible-core 2.19 removed the plural collection path setting, STRING_CONVERSION_ACTION, include_delegate_to, pycompat24 and compat modules, and some Windows helpers; unsupported passlib hashes raise errors and non-UTF8 module output errors unless MODULE_STRICT_UTF8_RESPONSE is disabled.",
+ "questions": [
+  "Why does my module returning non-UTF8 output now fail?",
+  "What is MODULE_STRICT_UTF8_RESPONSE?",
+  "Is STRING_CONVERSION_ACTION still a setting?",
+  "Is COLLECTIONS_PATHS still supported?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.19 removed features",
+  "answer_md": "- Deprecated plural collection path setting removed.\n- `STRING_CONVERSION_ACTION` removed.\n- `encrypt`: unsupported passlib hash type raises `AnsibleFilterError`.\n- `get_vars` API: `include_delegate_to` removed.\n- Modules returning **non-UTF8 strings** now error; disable the check with `MODULE_STRICT_UTF8_RESPONSE`.\n- `pycompat24`, `compat.importlib` and `compat.selector` removed.\n- Windows: `ConvertFrom-AnsibleJson` and `Format-AnsibleException` removed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

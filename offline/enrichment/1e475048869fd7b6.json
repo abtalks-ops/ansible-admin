@@ -1,0 +1,16 @@
+{
+ "chunk_id": "1e475048869fd7b6",
+ "chunk_hash": "1e475048869fd7b6",
+ "summary": "All images and non-text elements need meaningful alt text, CLI output should be code blocks not screenshots, with RST :alt: and Markdown ![alt](path) syntax.",
+ "questions": [
+  "How do I add alt text to images in RST?",
+  "Can I use screenshots of terminal output in docs?"
+ ],
+ "answer_card": {
+  "title": "Images and alt text",
+  "answer_md": "Give every image meaningful alt text; never screenshot CLI output, use a code block.\n```rst\n.. image:: path/networkdiag.png\n   :width: 400\n   :alt: SpiffyCorp network diagram\n```\n```md\n![SpiffyCorp network diagram](path/networkdiag.png)\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

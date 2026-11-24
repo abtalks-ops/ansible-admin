@@ -1,0 +1,17 @@
+{
+  "chunk_id": "3c962e94dcb9ec1b",
+  "chunk_hash": "3c962e94dcb9ec1b",
+  "summary": "Describes the play argument spec format in .meta.yml: argument_specs with a name, description, and options each having description, type (default str), required, choices, elements for lists, and nested options.",
+  "questions": [
+    "What fields can I use in a play argument spec?",
+    "How do I mark a play argument as required?",
+    "How do I specify list element types in a play argument spec?"
+  ],
+  "answer_card": {
+    "title": "Play argument spec format",
+    "answer_md": "Top-level `argument_specs`, keyed by spec name (all lowercase fields):\n\n- `description`: string or list of strings\n- `options`: dict of arguments, each with:\n  - `description`\n  - `type` (default `str`)\n  - `required` (only when `true`)\n  - `choices`\n  - `elements` (for `type: list`)\n  - `options` (nested structure for dicts or lists of dicts)",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables_validation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:32+00:00"
+}

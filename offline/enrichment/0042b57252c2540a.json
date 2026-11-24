@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0042b57252c2540a",
+ "chunk_hash": "0042b57252c2540a",
+ "summary": "Ansible unit tests run under pytest and can be plain test_* functions or unittest classes. Functions are simpler for a few tests, classes help with setup and teardown, plain assert is recommended, and shared helpers go in a file in the same directory.",
+ "questions": [
+  "Should I write Ansible unit tests as functions or classes?",
+  "Which assertion library should I use in Ansible unit tests?",
+  "What test runner does Ansible use for unit tests?",
+  "How do I share helper code between unit tests for several modules?"
+ ],
+ "answer_card": {
+  "title": "Structure Ansible unit tests",
+  "answer_md": "Unit tests run under **pytest**. Two styles work:\n- **Functions** named `test_*` in a `test_<something>.py` file. Simplest; start here.\n- **Classes** (`unittest.TestCase`), better when many cases need shared setup/teardown.\n\nUse plain `assert`: pytest gives full failure details and a traceback, so external assertion libraries aren't needed. Put helpers shared by several modules' tests in a separate file in the same directory and import it.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

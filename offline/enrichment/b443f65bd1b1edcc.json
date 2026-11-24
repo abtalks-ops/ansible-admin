@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b443f65bd1b1edcc",
+ "chunk_hash": "b443f65bd1b1edcc",
+ "summary": "Dot notation works for simple keys, but use bracket notation for keys with dots, colons, dashes, double underscores, or names that collide with Python dict methods like update; brackets also allow dynamic keys.",
+ "questions": [
+  "Why does item.update give a syntax error?",
+  "How do I access a key containing a dash?",
+  "Should I use dot or bracket notation for variables?"
+ ],
+ "answer_card": {
+  "title": "Dot vs bracket notation",
+  "answer_md": "Use **brackets** when a key has `.`, `:`, `-`, starts and ends with `__`, or matches a dict method/attribute:\n\n```jinja\nitem['section']['2.1']\nitem['region']['Mid-Atlantic']\nitem['update']   # item.update is the dict method\n```\n\nBrackets also allow dynamic keys: `item[key_var]`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

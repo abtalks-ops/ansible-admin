@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9bb829dd0a2a8ae5",
+ "chunk_hash": "9bb829dd0a2a8ae5",
+ "summary": "Running a deployment playbook with --check against existing systems acts as a drift test, reporting whether changes would be needed; tasks such as script calls can be forced to run with check_mode: false.",
+ "questions": [
+  "How can I detect configuration drift on my servers with Ansible?",
+  "How do I find out if a server needs a deploy without changing it?",
+  "How do I make a script task run even when using --check?",
+  "Why didn't my script run in check mode?"
+ ],
+ "answer_card": {
+  "title": "Use check mode as a drift test",
+  "answer_md": "Run your normal deployment playbook with `--check` against existing systems. Ansible reports whether it would have needed to change anything, which tells you if the system has drifted.\n\nScripts and commands normally don't run in check mode. To force a step to run anyway:\n\n```yaml\ntasks:\n  - ansible.builtin.script: verify.sh\n    check_mode: false\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

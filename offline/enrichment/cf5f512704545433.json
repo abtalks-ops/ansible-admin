@@ -1,0 +1,17 @@
+{
+  "chunk_id": "cf5f512704545433",
+  "chunk_hash": "cf5f512704545433",
+  "summary": "Explains nesting loops via include_tasks, using loop_control loop_var to avoid the inner loop overwriting item; Ansible errors if a loop reuses an already defined variable.",
+  "questions": [
+    "How do I nest loops using include_tasks?",
+    "Why does my inner loop overwrite the outer item?",
+    "How do I rename the loop variable?"
+  ],
+  "answer_card": {
+    "title": "Stacking loops with include_tasks",
+    "answer_md": "```yaml\n# main.yml\n- include_tasks: inner.yml\n  loop: [1, 2, 3]\n  loop_control:\n    loop_var: outer_item\n\n# inner.yml\n- ansible.builtin.debug:\n    msg: \"outer item={{ outer_item }} inner item={{ item }}\"\n  loop: [a, b, c]\n```\n\nWithout `loop_var`, the inner `item` would overwrite the outer one; Ansible fails the task if it detects that.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

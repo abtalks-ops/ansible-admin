@@ -1,0 +1,19 @@
+{
+  "chunk_id": "ac8a8456ce6fc127",
+  "chunk_hash": "ac8a8456ce6fc127",
+  "summary": "Lists local connection parameters: become_strip_preamble (default true, 2.19), become_success_timeout (default 10s, 2.19), and pipelining (default false), which speeds execution by avoiding file transfers but can conflict with become, such as sudo `requiretty`.",
+  "questions": [
+    "What is pipelining and why is it off by default?",
+    "How do I speed up module execution with the local connection?",
+    "How long does the local connection wait for become to succeed?",
+    "Why does pipelining break sudo?",
+    "How do I see the full become output for debugging?"
+  ],
+  "answer_card": {
+    "title": "local connection parameters",
+    "answer_md": "- `become_strip_preamble` (bool, default true, 2.19): strip internal become output before command execution; disable for extra diagnostics.\n- `become_success_timeout` (int, default 10, 2.19): seconds to wait for become to succeed; values below 1 use the default.\n- `pipelining` (default false): runs modules without actual file transfers, which can significantly improve performance. It can conflict with `become`: with sudo you must first disable `requiretty` in sudoers on the targets, which is why it's off by default.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/local_connection.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

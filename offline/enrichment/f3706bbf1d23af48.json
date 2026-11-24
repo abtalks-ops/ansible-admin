@@ -1,0 +1,18 @@
+{
+  "chunk_id": "f3706bbf1d23af48",
+  "chunk_hash": "f3706bbf1d23af48",
+  "summary": "Shows `changed_when` with `_task.result` instead of register, and referencing plain variables inside conditions. Notes conditionals like `when`, `changed_when`, and `failed_when` are raw Jinja2 expressions that shouldn't use `{{ }}`, or Ansible warns.",
+  "questions": [
+    "Do I need {{ }} around variables in changed_when?",
+    "Why does Ansible warn that conditional statements should not include jinja2 templating delimiters?",
+    "Can I use _task.result in changed_when?",
+    "How do I use a variable inside a changed_when string comparison?"
+  ],
+  "answer_card": {
+    "title": "No {{ }} in changed_when / failed_when",
+    "answer_md": "Conditionals such as `when`, `changed_when`, and `failed_when` are raw Jinja2 expressions, so reference variables **without** `{{ }}`. Using delimiters triggers a warning that conditional statements should not include jinja2 templating delimiters.\n\n```yaml\n- ansible.builtin.shell: mkdir {{ log_path }} || touch {{ log_path }}{{ log_file }}\n  register: tmp\n  changed_when:\n    - tmp.rc == 0\n    - 'tmp.stderr != \"mkdir: cannot create directory ‘\" ~ log_path ~ \"’: File exists\"'\n```\nYou can also use `_task.result` instead of registering:\n```yaml\n  changed_when:\n    - some_msg in _task.result.stdout\n    - some_warning not in _task.result.stderr\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

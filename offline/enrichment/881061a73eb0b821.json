@@ -1,0 +1,16 @@
+{
+ "chunk_id": "881061a73eb0b821",
+ "chunk_hash": "881061a73eb0b821",
+ "summary": "Remaining cloudfront items deprecations: default_cache_behavior query keys and lambda associations, origins, SSL protocols, geo_restriction, and cloudfront_invalidation paths, all moving to elements.",
+ "questions": [
+  "What replaces items in cloudfront_invalidation paths?",
+  "Is items deprecated in origins output of cloudfront_distribution?"
+ ],
+ "answer_card": {
+  "title": "cloudfront items → elements (part 3)",
+  "answer_md": "Deprecated in favor of `elements` (removal after 2026-12-15):\n\n- `cloudfront_distribution`: `default_cache_behavior.forwarded_values.query_string_cache_keys`, `default_cache_behavior.lambda_function_associations`, `origins.items.custom_origin_config.origin_ssl_protocols`, `origins`, `restrictions.geo_restriction`\n- `cloudfront_invalidation`: `invalidation.invalidation_batch.paths`",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:43+00:00"
+}

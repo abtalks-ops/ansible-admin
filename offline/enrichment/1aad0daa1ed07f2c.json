@@ -1,0 +1,17 @@
+{
+  "chunk_id": "1aad0daa1ed07f2c",
+  "chunk_hash": "1aad0daa1ed07f2c",
+  "summary": "slurp fetches a remote file's contents as a base64 blob in memory (needs about twice the file size in RAM) and works on Windows.",
+  "questions": [
+    "How do I read a remote file's content into a variable?",
+    "Why is slurp output base64?",
+    "Is slurp good for large files?"
+  ],
+  "answer_card": {
+    "title": "Read remote files with slurp",
+    "answer_md": "`ansible.builtin.slurp` returns a remote file's content as an in-memory base64 blob (use `| b64decode`). Needs at least 2x the file size in RAM, so avoid huge files. Works on Windows.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/slurp_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

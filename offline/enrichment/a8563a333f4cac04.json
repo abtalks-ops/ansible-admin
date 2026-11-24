@@ -1,0 +1,17 @@
+{
+  "chunk_id": "a8563a333f4cac04",
+  "chunk_hash": "a8563a333f4cac04",
+  "summary": "blockinfile supports unsafe_writes as a non-atomic fallback and validate to test the temp file with a %s command before replacing the target.",
+  "questions": [
+    "How do I validate sshd_config before blockinfile writes it?",
+    "Can I use pipes in a blockinfile validate command?",
+    "What does unsafe_writes do in blockinfile?"
+  ],
+  "answer_card": {
+    "title": "blockinfile validate and unsafe_writes",
+    "answer_md": "- `validate`: command checked against a temp file via `%s` (required placeholder); no shell features\n- `unsafe_writes` (false): allow non-atomic fallback (e.g. docker mounts); risk of corruption",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/blockinfile_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

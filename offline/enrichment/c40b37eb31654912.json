@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c40b37eb31654912",
+ "chunk_hash": "c40b37eb31654912",
+ "summary": "The Ansible voice is short, varied, natural sentences that address the reader directly, use plain words, avoid slang, and start task steps with imperative action verbs.",
+ "questions": [
+  "What is the Ansible documentation writing voice?",
+  "How should procedure steps be phrased?"
+ ],
+ "answer_card": {
+  "title": "Ansible voice",
+  "answer_md": "- Short sentences that flow; vary structure and subjects; address the reader directly.\n- Write how people speak, but avoid slang that won't translate.\n- Say big things with small words; be direct and honest.\n- Start task sentences with action words; use the imperative for steps (\"Run the command\").",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/voice_style.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:19+00:00"
+}

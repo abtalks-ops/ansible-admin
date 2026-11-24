@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d299db11a3df1285",
+ "chunk_hash": "d299db11a3df1285",
+ "summary": "ansible-vault edit decrypts a file to a temp file for editing, then re-encrypts and removes the temp file; a vault ID can be passed.",
+ "questions": [
+  "How do I edit a vault-encrypted file in place?",
+  "Does ansible-vault edit leave a decrypted copy on disk?",
+  "How do I edit a file encrypted with a specific vault ID?"
+ ],
+ "answer_card": {
+  "title": "Edit an encrypted file",
+  "answer_md": "```bash\nansible-vault edit foo.yml\nansible-vault edit --vault-id pass2@vault2 foo.yml\n```\n\nIt decrypts to a temporary file, opens your editor, then re-encrypts and removes the temp file when you close the editor.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_encrypting_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

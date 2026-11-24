@@ -1,0 +1,19 @@
+{
+ "chunk_id": "e38fc8ea50ed4c49",
+ "chunk_hash": "e38fc8ea50ed4c49",
+ "summary": "Best practices for Windows modules: PowerShell code with Python docs, use $module.Result and FailJson instead of Write-* output, targeted try/catch, reuse PowerShell and C# module utils, support PowerShell 5.1 on Server 2016+, test with StrictMode 2.0, prefer native cmdlets with full names and named parameters.",
+ "questions": [
+  "Where does documentation go for a PowerShell module?",
+  "How do I fail a Windows module with a useful error?",
+  "Can I use Write-Host in a Windows module?",
+  "What PowerShell version must Windows modules support?",
+  "What strict mode does Ansible run PowerShell modules under?"
+ ],
+ "answer_card": {
+  "title": "Windows module best practices",
+  "answer_md": "- Code in `.ps1`, docs in a same-named `.py`.\n- Don't use `Write-Host/Debug/Verbose/Error`; put output in `$module.Result`.\n- Fail with `$module.FailJson(\"msg\", $_)` to include the exception.\n- Use narrow try/catch with specific exceptions; avoid PSCustomObjects.\n- Reuse utils: `#Requires -Module` for PowerShell, `#AnsibleRequires -CSharpUtil` for C#.\n- Support **PowerShell 5.1+ on Server 2016+** (document higher needs).\n- Ansible uses **StrictMode 2.0**; test with `Set-StrictMode -Version 2.0`.\n- Prefer native cmdlets, full names (`Remove-Item` not `rm`) and named parameters.\n- New modules usually need check mode and integration tests.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

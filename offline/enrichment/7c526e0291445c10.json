@@ -1,0 +1,19 @@
+{
+  "chunk_id": "7c526e0291445c10",
+  "chunk_hash": "7c526e0291445c10",
+  "summary": "Shows a `local_action` running rsync to push files (needing passphrase-less keys or ssh-agent) and passing several args with `run_once`. Notes connection vars like `ansible_host` reflect the delegated host, which doesn't inherit the delegating host's vars, and warns against delegating to non-inventory hosts, suggesting `add_host`.",
+  "questions": [
+    "How do I rsync files from the control node to my servers in a playbook?",
+    "Why does rsync ask for a passphrase in my local_action?",
+    "When I delegate, whose ansible_host is used?",
+    "Can I delegate_to a host that isn't in my inventory?",
+    "Does the delegated host get the original host's variables?"
+  ],
+  "answer_card": {
+    "title": "local_action with rsync and delegation caveats",
+    "answer_md": "```yaml\n- name: Recursively copy files from management server to target\n  local_action: ansible.builtin.command\n  args:\n    cmd: \"rsync -a /path/to/files {{ inventory_hostname }}:/path/to/target/\"\n```\nThis needs passphrase-less SSH keys or an ssh-agent, otherwise rsync prompts.\n\nCaveats:\n- `ansible_host` and other connection variables reflect the host the task is **delegated to**, not `inventory_hostname`.\n- The delegated host does not inherit variables from the delegating host.\n- You can `delegate_to` a non-inventory host (IP, DNS name), but it isn't added to inventory and may cause issues; it only gets `all` group vars. Use the `add_host` module instead if you must.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_delegation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

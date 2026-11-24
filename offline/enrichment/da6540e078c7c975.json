@@ -1,0 +1,17 @@
+{
+  "chunk_id": "da6540e078c7c975",
+  "chunk_hash": "da6540e078c7c975",
+  "summary": "In Ansible 10.7.0, ibm.spectrum_virtualize was renamed to ibm.storage_virtualize. Both are included for now, but the old name will be removed in Ansible 12, so FQCNs should be updated.",
+  "questions": [
+    "Should I still use ibm.spectrum_virtualize module names?",
+    "When will ibm.spectrum_virtualize be removed?",
+    "What is the new name of the IBM Spectrum Virtualize collection?"
+  ],
+  "answer_card": {
+    "title": "ibm.spectrum_virtualize renamed",
+    "answer_md": "`ibm.spectrum_virtualize` is now `ibm.storage_virtualize`. Both ship for now, but the old one is removed in Ansible 12. Update your FQCNs to `ibm.storage_virtualize.*`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

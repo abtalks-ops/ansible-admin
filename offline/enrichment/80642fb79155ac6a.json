@@ -1,0 +1,17 @@
+{
+ "chunk_id": "80642fb79155ac6a",
+ "chunk_hash": "80642fb79155ac6a",
+ "summary": "Command timeout defaults to 30 seconds (was 10); raise it globally with ANSIBLE_PERSISTENT_COMMAND_TIMEOUT or command_timeout, or per task, since some modules have a timeout option distinct from the task keyword.",
+ "questions": [
+  "How do I fix command timeout triggered?",
+  "How do I increase the command timeout globally?",
+  "Is a module's timeout option the same as the task timeout keyword?"
+ ],
+ "answer_card": {
+  "title": "Increase command timeout",
+  "answer_md": "Global:\n```shell\nexport ANSIBLE_PERSISTENT_COMMAND_TIMEOUT=60\n```\n```ini\n[persistent_connection]\ncommand_timeout = 60\n```\nPer task: many network modules accept a `timeout` option, which is not the same as the task-level `timeout` keyword. Default is 30 seconds (older versions used 10).",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

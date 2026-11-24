@@ -1,0 +1,17 @@
+{
+  "chunk_id": "9ed1e12e3d74c61e",
+  "chunk_hash": "9ed1e12e3d74c61e",
+  "summary": "iptables options: numeric to skip DNS lookups if listing hangs, out_interface, and policy to set a built-in chain's default target, which ignores other parameters.",
+  "questions": [
+    "How do I set the default policy of the INPUT chain?",
+    "Why does iptables hang when creating a chain or setting policy?",
+    "How do I match outgoing traffic by interface?"
+  ],
+  "answer_card": {
+    "title": "iptables policy, numeric, out_interface",
+    "answer_md": "- `policy`: `ACCEPT`, `DROP`, `QUEUE`, `RETURN` for a built-in `chain`; ignores all other params (not the same as `jump`)\n- `numeric` (false): skip DNS in internal listing if iptables hangs\n- `out_interface`: FORWARD/OUTPUT/POSTROUTING; `+` wildcard, `!` negation",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/iptables_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:05:46+00:00"
+}

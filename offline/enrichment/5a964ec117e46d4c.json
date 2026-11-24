@@ -1,0 +1,19 @@
+{
+ "chunk_id": "5a964ec117e46d4c",
+ "chunk_hash": "5a964ec117e46d4c",
+ "summary": "Modules run (usually on the managed node) from the CLI or playbook tasks with key=value or YAML complex args, return JSON, should be idempotent, can notify handlers, and are documented via ansible-doc; since 2.10 most live in collections.",
+ "questions": [
+  "How do I run a module from the command line?",
+  "How do I see a module's documentation offline?",
+  "How do I list all available modules?",
+  "What format do modules return?",
+  "Should I use key=value or YAML for module arguments?"
+ ],
+ "answer_card": {
+  "title": "Using modules",
+  "answer_md": "Command line:\n```shell\nansible webservers -m service -a \"name=httpd state=started\"\nansible webservers -m ping\n```\nPlaybook, YAML (\"complex args\") style:\n```yaml\n- name: restart webserver\n  service:\n    name: httpd\n    state: restarted\n```\nModules return JSON, should be idempotent, and can notify handlers on change. Docs: `ansible-doc yum`; list all: `ansible-doc -l`. Since 2.10 most modules live in collections.",
+  "source_url": "https://docs.ansible.com/ansible/latest/module_plugin_guide/modules_intro.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4b7c14de7bb7c0d2",
+ "chunk_hash": "4b7c14de7bb7c0d2",
+ "summary": "ansible-core 2.19 no longer supports multi-pass templating, where templates embedded inside other templates or expressions were rendered again, because it could execute untrusted templates.",
+ "questions": [
+  "Can I nest {{ }} templates inside other templates in ansible-core 2.19?",
+  "Why did nested templating stop working after upgrading?",
+  "Is multi-pass templating still supported?"
+ ],
+ "answer_card": {
+  "title": "Multi-pass templating was removed",
+  "answer_md": "Embedding templates inside other templates or expressions used to allow a second rendering pass, which could execute **untrusted** templates. The new templating engine in ansible-core 2.19 no longer supports this insecure behavior, so reference variables directly instead of nesting `{{ }}`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:45+00:00"
+}

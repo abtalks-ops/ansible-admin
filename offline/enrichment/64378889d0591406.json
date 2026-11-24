@@ -1,0 +1,17 @@
+{
+ "chunk_id": "64378889d0591406",
+ "chunk_hash": "64378889d0591406",
+ "summary": "Example installing the xAzure DSC module with win_psmodule and creating an Azure VM with the xAzureVM resource, passing credentials with _username and _password.",
+ "questions": [
+  "Can I create an Azure VM through win_dsc?",
+  "How do I use the xAzureVM DSC resource from Ansible?",
+  "How do I pass credentials to xAzureVM?"
+ ],
+ "answer_card": {
+  "title": "Creating an Azure VM with win_dsc",
+  "answer_md": "```yaml+jinja\n- name: Install xAzure DSC resources\n  win_psmodule:\n    name: xAzure\n    state: present\n\n- name: Create virtual machine in Azure\n  win_dsc:\n    resource_name: xAzureVM\n    ImageName: a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-R2-201409.01-en.us-127GB.vhd\n    Name: DSCHOST01\n    ServiceName: ServiceName\n    StorageAccountName: StorageAccountName\n    InstanceSize: Medium\n    Windows: true\n    Ensure: Present\n    Credential_username: '{{ ansible_user }}'\n    Credential_password: '{{ ansible_password }}'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_dsc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

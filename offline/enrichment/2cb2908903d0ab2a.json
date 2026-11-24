@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2cb2908903d0ab2a",
+ "chunk_hash": "2cb2908903d0ab2a",
+ "summary": "register_secret parameters: required input and validation_action (error, warn, ignore) for non-string or empty values.",
+ "questions": [
+  "What happens if I register an empty secret?",
+  "How do I make register_secret warn instead of erroring?"
+ ],
+ "answer_card": {
+  "title": "register_secret parameters",
+  "answer_md": "- `_input` (string, required): value to register\n- `validation_action` (default `error`): what to do if the value isn't a string or is empty after trimming. `error` fails, `warn` shows a warning, `ignore` returns the value without registering it.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/register_secret_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:11+00:00"
+}

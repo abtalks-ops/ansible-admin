@@ -1,0 +1,18 @@
+{
+  "chunk_id": "aaee977948b5291b",
+  "chunk_hash": "aaee977948b5291b",
+  "summary": "The dnf module installs, upgrades, removes and lists packages and groups. Pass lists to name instead of looping; removing groups installed by Ansible may fail; the yum backend was removed in 2.17.",
+  "questions": [
+    "How do I install packages on RHEL/Fedora with Ansible?",
+    "Why can't Ansible remove a package group it installed?",
+    "Can I still use the yum backend with ansible.builtin.dnf?",
+    "Should I loop over packages with dnf?"
+  ],
+  "answer_card": {
+    "title": "dnf module overview",
+    "answer_md": "`ansible.builtin.dnf` manages packages and groups with dnf.\n- Pass a **list to `name`** instead of `loop:` for efficiency.\n- Removing groups installed by Ansible can fail (dnf API doesn't mark them installed).\n- `use_backend=yum` / `ansible.builtin.yum` exist for syntax only; the YUM backend was removed in 2.17.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

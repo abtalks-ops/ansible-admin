@@ -1,0 +1,15 @@
+{
+ "chunk_id": "7e031db14fd778cc",
+ "chunk_hash": "7e031db14fd778cc",
+ "summary": "Some keys returned by modules are for internal use and are consumed by Ansible, so they are removed from registered variables.",
+ "questions": [
+  "Why are some keys a module returns missing from my registered variable?"
+ ],
+ "answer_card": {
+  "title": "Internal-use return keys",
+  "answer_md": "Some return keys are **consumed by Ansible** (for example `ansible_facts`, `exception`, `deprecations`, `warnings`) and are removed from or handled outside the registered variable.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "7dd225c5e245f7fa",
+ "chunk_hash": "7dd225c5e245f7fa",
+ "summary": "Include 'that' in subordinate clauses for clarity and translation, e.g. 'Verify that the file exists'.",
+ "questions": [
+  "Should I include 'that' in phrases like 'verify the file exists'?"
+ ],
+ "answer_card": {
+  "title": "Use 'that' for clarity",
+  "answer_md": "Yes. Write \"Verify that the file exists\" rather than \"Verify the file exists\"; it helps global readers and translation.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/grammar_punctuation.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:01+00:00"
+}

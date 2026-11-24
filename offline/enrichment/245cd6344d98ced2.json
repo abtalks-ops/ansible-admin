@@ -1,0 +1,19 @@
+{
+  "chunk_id": "245cd6344d98ced2",
+  "chunk_hash": "245cd6344d98ced2",
+  "summary": "Explains that WinRM requires an encrypted channel: TLS (HTTPS, recommended, works with all auth) or message-level encryption via NTLM, Kerberos or CredSSP over HTTP. Shows forcing message encryption, and disabling the requirement only for debugging via AllowUnencrypted.",
+  "questions": [
+    "Why does WinRM fail over plain HTTP with Basic auth?",
+    "Can I use WinRM over HTTP securely?",
+    "How do I force message encryption on top of HTTPS?",
+    "How do I allow unencrypted WinRM traffic for testing?",
+    "Can AD Certificate Services issue my WinRM certificates?"
+  ],
+  "answer_card": {
+    "title": "WinRM encryption requirements",
+    "answer_md": "WinRM refuses unencrypted channels. Options:\n\n- **HTTPS** (recommended): works with every auth type; needs a listener cert (ADCS can issue one in a domain).\n- **HTTP with NTLM, Kerberos or CredSSP**: these encrypt the payload themselves.\n- To require both transport and message encryption:\n  ```yaml\n  ansible_psrp_message_encryption: always\n  ansible_winrm_message_encryption: always\n  ```\n  (HTTP message encryption needs pywinrm>=0.3.0.)\n- Last resort, dev/debug only:\n  ```powershell\n  Set-Item -Path WSMan:\\localhost\\Service\\AllowUnencrypted -Value $true\n  ```\n  This exposes credentials and lets anyone on the network hijack the session.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

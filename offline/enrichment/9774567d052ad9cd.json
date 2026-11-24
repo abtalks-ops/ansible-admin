@@ -1,0 +1,15 @@
+{
+  "chunk_id": "9774567d052ad9cd",
+  "chunk_hash": "9774567d052ad9cd",
+  "summary": "The gt test is Jinja's builtin equivalent of a > b.",
+  "questions": [
+    "How do I select values greater than a number with a test?"
+  ],
+  "answer_card": {
+    "title": "gt test",
+    "answer_md": "`a is gt(b)` means `a > b`. Example: `nums | select('gt', 5)`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/gt_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

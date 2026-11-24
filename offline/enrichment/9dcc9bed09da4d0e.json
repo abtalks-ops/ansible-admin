@@ -1,0 +1,18 @@
+{
+  "chunk_id": "9dcc9bed09da4d0e",
+  "chunk_hash": "9dcc9bed09da4d0e",
+  "summary": "Lists modules for running commands on Windows when no module fits: win_shell, win_command, raw and script. raw and script don't support become, async, or environment variables.",
+  "questions": [
+    "How do I run an arbitrary command on Windows when there's no module for it?",
+    "Does the raw module support become on Windows?",
+    "Can I run a local script on Windows hosts with Ansible?",
+    "What's the difference between raw, script, win_command and win_shell?"
+  ],
+  "answer_card": {
+    "title": "Running commands on Windows hosts",
+    "answer_md": "- **`raw`**: runs a PowerShell command directly with no Ansible wrapper; `become`, `async`, and environment variables don't work.\n- **`script`**: runs a script from the control node on the host; also no `become`, `async`, or env vars.\n- **`win_command`**: runs an executable or batch file.\n- **`win_shell`**: runs commands inside a shell.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

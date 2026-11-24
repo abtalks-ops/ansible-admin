@@ -1,0 +1,18 @@
+{
+ "chunk_id": "5853cd192c0afb0a",
+ "chunk_hash": "5853cd192c0afb0a",
+ "summary": "Common patterns: all or *, a host, host1:host2 or comma lists, groups, unions, exclusions with !, intersections with &, combinations, and wildcards on FQDNs or IPs mixed with groups. Commas are preferred for ranges and IPv6.",
+ "questions": [
+  "How do I target hosts in one group but not another?",
+  "How do I target hosts that are in both webservers and staging?",
+  "Can I use wildcards in host patterns?",
+  "Should I use commas or colons in host lists?"
+ ],
+ "answer_card": {
+  "title": "Common host patterns",
+  "answer_md": "| Target | Pattern |\n|---|---|\n| All hosts | `all` or `*` |\n| One host | `host1` |\n| Several hosts | `host1:host2` or `host1,host2` |\n| Union of groups | `webservers:dbservers` |\n| Exclude | `webservers:!atlanta` |\n| Intersection | `webservers:&staging` |\n\nCombine: `webservers:dbservers:&staging:!phoenix`. Wildcards work if hosts are named by FQDN/IP: `192.0.*`, `*.example.com`, `one*.com:dbservers`. Prefer commas with ranges and IPv6.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_patterns.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "chunk_id": "015cabeb9e585183",
+  "chunk_hash": "015cabeb9e585183",
+  "summary": "Enable mode passwords can be provided with --ask-become-pass or ansible_become_password, which should be encrypted with Vault rather than stored in plain text.",
+  "questions": [
+    "How do I give Ansible the enable password for a switch?"
+  ],
+  "answer_card": {
+    "title": "Enable mode passwords",
+    "answer_md": "Use `--ask-become-pass` on the command line, or set `ansible_become_password` (encrypt it with **Ansible Vault**, never plain text).",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

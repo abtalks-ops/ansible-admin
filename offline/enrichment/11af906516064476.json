@@ -1,0 +1,11 @@
+{
+  "chunk_id": "11af906516064476",
+  "chunk_hash": "11af906516064476",
+  "summary": "Short lead-in noting Ansible can orchestrate many tasks on Windows servers, followed by examples of common tasks.",
+  "questions": [
+    "What kinds of tasks can Ansible automate on Windows servers?"
+  ],
+  "answer_card": null,
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

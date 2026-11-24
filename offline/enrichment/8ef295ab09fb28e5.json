@@ -1,0 +1,15 @@
+{
+ "chunk_id": "8ef295ab09fb28e5",
+ "chunk_hash": "8ef295ab09fb28e5",
+ "summary": "Under fakeroot the default ~/.ansible/tmp may not expand correctly and modules fail; set remote_tmp to a path that expands, such as $HOME/.ansible/tmp.",
+ "questions": [
+  "Ansible modules fail under fakeroot, how do I fix it?"
+ ],
+ "answer_card": {
+  "title": "Fix module failures under fakeroot",
+  "answer_md": "fakeroot isn't a full POSIX environment and may not expand `~/.ansible/tmp`. Set `remote_tmp` to a path the shell expands correctly:\n\n```ini\n[defaults]\nremote_tmp = $HOME/.ansible/tmp\n```\n\nor per host: `host1 ansible_remote_tmp=$HOME/.ansible/tmp`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

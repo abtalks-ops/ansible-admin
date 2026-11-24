@@ -1,0 +1,15 @@
+{
+ "chunk_id": "04194ead770589cf",
+ "chunk_hash": "04194ead770589cf",
+ "summary": "C# module utils can reference other C# utils with a using Ansible.<util>; statement.",
+ "questions": [
+  "How does one C# module util use another?"
+ ],
+ "answer_card": {
+  "title": "C# util references",
+  "answer_md": "Add `using Ansible.<module_util>;` with the other using statements at the top of the C# util.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

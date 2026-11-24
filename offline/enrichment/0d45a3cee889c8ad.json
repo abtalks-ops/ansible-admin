@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0d45a3cee889c8ad",
+ "chunk_hash": "0d45a3cee889c8ad",
+ "summary": "Shows skipping modules with -Skip when signing. PowerShell content outside collections, like custom scripts or win_powershell code, must be signed manually with Set-AuthenticodeSignature or Set-OpenAuthenticodeSignature and used in a way that doesn't alter it, for example using rstrip=False with the file lookup.",
+ "questions": [
+  "How do I exclude certain modules from App Control signing?",
+  "How do I sign my own PowerShell scripts for use with Ansible under WDAC?",
+  "Why does my signed script fail when I load it with the file lookup?",
+  "Can I sign scripts from Linux for Windows App Control?"
+ ],
+ "answer_card": {
+  "title": "Skipping modules and signing custom scripts",
+  "answer_md": "Skip modules you don't need:\n\n```powershell\nNew-AnsiblePowerShellSignature ... -Skip @(\n    'ansible.windows.win_dsc'\n    'ansible.windows.win_timezone'\n)\n```\n\nPowerShell that isn't part of a collection (custom scripts, code in `ansible.windows.win_powershell`) must be signed manually: `Set-AuthenticodeSignature` on Windows, or `Set-OpenAuthenticodeSignature` from the `OpenAuthenticode` module on Linux.\n\nDon't let anything change the signed content. `ansible.builtin.script` copies the file as-is, but the `ansible.builtin.file` lookup strips trailing newlines unless you pass `rstrip=False`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_app_control.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

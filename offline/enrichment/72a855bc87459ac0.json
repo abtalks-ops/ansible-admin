@@ -1,0 +1,18 @@
+{
+ "chunk_id": "72a855bc87459ac0",
+ "chunk_hash": "72a855bc87459ac0",
+ "summary": "The DOCUMENTATION block must be valid YAML and generates the online docs. It should be clear to all audiences, use full sentences, mark secrets no_log with EXAMPLE values, set no_log=False for non-secret password-like options, describe conditional requirements and check mode.",
+ "questions": [
+  "How can I avoid YAML errors in my module's DOCUMENTATION block?",
+  "How should example passwords look in module docs?",
+  "How do I silence the no_log warning for an option like password_length?",
+  "How should I document an option that's only sometimes required?"
+ ],
+ "answer_card": {
+  "title": "Writing the DOCUMENTATION block",
+  "answer_md": "- Must be valid YAML; copy the example, use a YAML-aware editor or YAML Lint. Test on CLI and as HTML.\n- Write for experts and non-experts; full sentences starting with a capital and ending with a period.\n- Secrets: `no_log=True` and example values starting with `EXAMPLE`.\n- Non-secret look-alikes (e.g. `password_length`): `no_log=False`.\n- Describe conditional requirements (\"Required when O(state=present).\") and note check_mode support.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_documenting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

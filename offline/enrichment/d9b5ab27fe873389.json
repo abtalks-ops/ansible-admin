@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d9b5ab27fe873389",
+ "chunk_hash": "d9b5ab27fe873389",
+ "summary": "Plugins should use `raise ... from` when raising inside exception handlers, superseding AnsibleError's orig_exc argument; mismatches or missing `from` with orig_exc produce warnings.",
+ "questions": [
+  "Should I use orig_exc or raise from in Ansible plugins?",
+  "Why do I get a warning about orig_exc in my plugin?",
+  "How should I chain exceptions in a custom Ansible plugin?"
+ ],
+ "answer_card": {
+  "title": "Use raise ... from in plugins",
+  "answer_md": "When raising inside an exception handler, use `raise ... from <cause>`. This supersedes passing the cause via `AnsibleError(orig_exc=...)`, which is still allowed for compatibility.\n\nYou get a warning if `orig_exc` is set without `raise ... from`, or if the two causes don't match.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.19.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

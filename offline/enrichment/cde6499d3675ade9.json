@@ -1,0 +1,17 @@
+{
+ "chunk_id": "cde6499d3675ade9",
+ "chunk_hash": "cde6499d3675ade9",
+ "summary": "Recommends a testing lifecycle where the same playbook with embedded tests is used in development, staging and production, with a separate QA integration test battery run against staging.",
+ "questions": [
+  "What is a good workflow for testing Ansible deployments across environments?",
+  "Should Selenium or API tests go inside my playbooks?",
+  "Should I use the same playbook for staging and production?"
+ ],
+ "answer_card": {
+  "title": "Testing lifecycle across environments",
+  "answer_md": "Basic validation embedded in playbooks runs on every deploy. A typical workflow:\n\n1. Use the same playbook with embedded tests in development.\n2. Deploy to a staging environment that simulates production, with the same playbooks.\n3. Have QA run an integration test battery against staging.\n4. Deploy to production with the same embedded tests.\n\nFull integration suites (Selenium, API tests) usually live outside playbooks, but basic health checks belong in them.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "aadfec9657661008",
+ "chunk_hash": "aadfec9657661008",
+ "summary": "from_json converts a JSON string into a structured variable (wrapping json.loads), for contexts where Ansible doesn't auto-convert.",
+ "questions": [
+  "How do I parse a JSON string into a variable in Ansible?",
+  "Why is my JSON output treated as a string?",
+  "Do I always need from_json for JSON output?"
+ ],
+ "answer_card": {
+  "title": "from_json filter",
+  "answer_md": "`{{ json_string | from_json }}` converts a JSON string into a structured variable. It wraps Python's `json.loads`. Ansible auto-converts JSON in most contexts, so use this where it doesn't, such as command output in `stdout`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/from_json_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

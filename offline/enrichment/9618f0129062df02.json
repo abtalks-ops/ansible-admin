@@ -1,0 +1,15 @@
+{
+ "chunk_id": "9618f0129062df02",
+ "chunk_hash": "9618f0129062df02",
+ "summary": "ansible.builtin.capitalize is the Jinja builtin filter to capitalize a value.",
+ "questions": [
+  "How do I capitalize a string in an Ansible template?"
+ ],
+ "answer_card": {
+  "title": "capitalize filter",
+  "answer_md": "Use `{{ value | capitalize }}`; it's Jinja's builtin `capitalize` filter.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/capitalize_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "c98a9877a41ad8e5",
+  "chunk_hash": "c98a9877a41ad8e5",
+  "summary": "get_url options for SSL client certs and keys, gzip decompression, dest behavior (directory vs file), force re-downloading, and forcing basic auth.",
+  "questions": [
+    "How do I use a client certificate with get_url?",
+    "Why doesn't get_url re-download a file that already exists?",
+    "What happens when dest is a directory?",
+    "Why does basic auth fail with get_url and how do I fix it?"
+  ],
+  "answer_card": {
+    "title": "get_url dest, force and client certs",
+    "answer_md": "- `dest` (required): absolute path. If a directory, uses server filename or URL basename, always downloads, replaces only if changed (`force` no effect).\n- `force` (false): if false, only downloads when dest is missing; true re-downloads every time\n- `force_basic_auth` (false): send auth upfront for servers that don't return 401\n- `client_cert` / `client_key`: PEM files for mTLS\n- `decompress` (true): gunzip gzip-encoded responses",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/get_url_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

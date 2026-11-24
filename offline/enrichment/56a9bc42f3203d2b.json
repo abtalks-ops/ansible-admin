@@ -1,0 +1,16 @@
+{
+  "chunk_id": "56a9bc42f3203d2b",
+  "chunk_hash": "56a9bc42f3203d2b",
+  "summary": "Use ansible-doc -t become -l to list available become plugins and ansible-doc -t become <name> for plugin-specific docs and examples.",
+  "questions": [
+    "How do I list the become plugins available on my system?",
+    "How can I read the docs for the doas become plugin?"
+  ],
+  "answer_card": {
+    "title": "Listing become plugins",
+    "answer_md": "```shell\nansible-doc -t become -l\nansible-doc -t become <plugin name>\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/become.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

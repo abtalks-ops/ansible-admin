@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0f1b561df9e545d5",
+ "chunk_hash": "0f1b561df9e545d5",
+ "summary": "Explains that collections can carry GnuPG signatures on Pulp 3 Galaxy and shows manually creating a detached signature of MANIFEST.json from the built tarball using gpg.",
+ "questions": [
+  "How do I sign my collection with GPG?",
+  "What file in the collection tarball gets signed?",
+  "Which servers accept signed collections?"
+ ],
+ "answer_card": {
+  "title": "Sign a collection manually",
+  "answer_md": "Pulp 3 Galaxy supports GnuPG signatures. With an existing private key:\n```bash\nansible-galaxy collection build\ntar -Oxzf namespace-name-1.0.0.tar.gz MANIFEST.json | gpg --output namespace-name-1.0.0.asc --detach-sign --armor --local-user email@example.com -\n```\nThe detached signature covers `MANIFEST.json`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

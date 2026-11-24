@@ -1,0 +1,19 @@
+{
+ "chunk_id": "1c401dd60c756429",
+ "chunk_hash": "1c401dd60c756429",
+ "summary": "More default callback options: result_format (json or yaml), result_indentation (2.20), result_yaml_line_width (2.21), show_custom_stats, show_per_host_start, and show_task_path_on_failure.",
+ "questions": [
+  "How do I get task results shown as YAML instead of JSON?",
+  "How do I show which file and line a failed task is on?",
+  "How do I show custom stats from set_stats in the recap?",
+  "How do I change indentation of result output?",
+  "Is the callback's yaml output valid YAML I can parse?"
+ ],
+ "answer_card": {
+  "title": "default callback result options",
+  "answer_md": "- `result_format` (`json` default, or `yaml`, 2.13+): result format. Output still isn't machine-parsable JSON/YAML overall.\n- `result_indentation` (default 4, 2.20+): indentation; for YAML only 2 to 9 behave as expected.\n- `result_yaml_line_width` (`default`, `no-break`, `terminal-width`, 2.21+).\n- `show_custom_stats` (default false): add `set_stats` data to the recap.\n- `show_per_host_start` (default false): show when each host starts a task.\n- `show_task_path_on_failure` (default false, 2.11+): print file and line of a failed task (always shown at `-vv`+).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/default_callback.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

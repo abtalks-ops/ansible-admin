@@ -1,0 +1,16 @@
+{
+  "chunk_id": "50711e9b5b6257ad",
+  "chunk_hash": "50711e9b5b6257ad",
+  "summary": "dnf's validate_certs applies only to RPMs fetched over HTTPS URLs and should only be disabled for self-signed personal sites.",
+  "questions": [
+    "How do I install an RPM from an HTTPS URL with a self-signed cert?",
+    "Does dnf validate_certs affect repo SSL?"
+  ],
+  "answer_card": {
+    "title": "dnf validate_certs",
+    "answer_md": "`validate_certs` (yes) only applies to RPMs installed from an HTTPS URL. For repo SSL, use `sslverify`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

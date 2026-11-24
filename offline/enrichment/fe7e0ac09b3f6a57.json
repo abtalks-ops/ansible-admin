@@ -1,0 +1,18 @@
+{
+  "chunk_id": "fe7e0ac09b3f6a57",
+  "chunk_hash": "fe7e0ac09b3f6a57",
+  "summary": "Explains that notifying a dynamic include like `include_tasks` as a handler runs all its tasks, but handlers defined inside a dynamic include can't be notified. A static `import_tasks` handler is replaced by the handlers inside it before execution, so it can't be notified itself but its tasks can, individually.",
+  "questions": [
+    "Can I use include_tasks as a handler?",
+    "Why can't I notify a handler that's inside an included file?",
+    "What happens if I use import_tasks in the handlers section?",
+    "How do I run a whole file of tasks as a handler?"
+  ],
+  "answer_card": {
+    "title": "Includes and imports as handlers",
+    "answer_md": "- **Dynamic include** (`include_tasks`) as a handler: notifying it runs **all** tasks in the include. You can't notify a handler defined inside a dynamic include.\n- **Static import** (`import_tasks`) as a handler: before the play runs, it's effectively replaced by the handlers inside the import. The import itself can't be notified, but each task inside it can be notified individually.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_handlers.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:50:37Z"
+}

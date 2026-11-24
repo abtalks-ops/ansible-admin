@@ -1,0 +1,16 @@
+{
+ "chunk_id": "4d3479d5e623e43a",
+ "chunk_hash": "4d3479d5e623e43a",
+ "summary": "Ansible modules return a data structure that can be registered into a variable; this reference covers return values common to all modules, some of which Ansible itself sets.",
+ "questions": [
+  "What keys can I expect in a registered task result?",
+  "Where are the return values common to all modules documented?"
+ ],
+ "answer_card": {
+  "title": "Common module return values",
+  "answer_md": "Module results can be saved with `register:` and printed with `debug`. Besides module-specific keys (see `ansible-doc <module>`), common keys include `changed`, `failed`, `msg`, `rc`, `stdout`/`stdout_lines`, `stderr`/`stderr_lines`, `results` (loops), `diff`, `invocation`, `backup_file`. Some are added by Ansible itself.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5382ab068da4b394",
+ "chunk_hash": "5382ab068da4b394",
+ "summary": "Flaky tests get the unstable alias and still run for PRs touching them; run manually with --allow-unstable or an unstable/ prefix, and the Core Team marks them and files issues.",
+ "questions": [
+  "How do I run an unstable integration test?",
+  "What happens to tests marked unstable?"
+ ],
+ "answer_card": {
+  "title": "Unstable tests",
+  "answer_md": "Flaky tests get `unstable` (set by the Core Team, tracked by an issue). They still run on PRs that change the test or module. Run manually with `--allow-unstable` or by prefixing `unstable/` to the target name.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/integration-aliases.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

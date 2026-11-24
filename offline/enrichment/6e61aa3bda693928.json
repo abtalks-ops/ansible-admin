@@ -1,0 +1,18 @@
+{
+  "chunk_id": "6e61aa3bda693928",
+  "chunk_hash": "6e61aa3bda693928",
+  "summary": "Compares include_* vs import_*: dynamic vs static, runtime vs parse-time, task options applying to the include only vs all child tasks, looping support, visibility in --list-tags/--list-tasks, handler notification, and --start-at-task. Recommends one approach per playbook.",
+  "questions": [
+    "Can I use --start-at-task with included tasks?",
+    "Why don't tags inside includes show up in --list-tags?",
+    "Can I use import_tasks in a loop?",
+    "Should I mix includes and imports in one playbook?"
+  ],
+  "answer_card": {
+    "title": "include_* vs import_* compared",
+    "answer_md": "| | include_* | import_* |\n|---|---|---|\n| Reuse | Dynamic | Static |\n| Processed | At runtime | At parse time |\n| Task options | Include task only | All child tasks |\n| Loops | Once per item | Not allowed |\n| `--list-tags` / `--list-tasks` | Inner items not listed | All listed |\n| Handlers | Can't notify tasks inside | Can notify imported handlers |\n| `--start-at-task` | Can't start inside | Can |\n\nPick one approach per playbook; mixing can cause hard-to-diagnose bugs.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

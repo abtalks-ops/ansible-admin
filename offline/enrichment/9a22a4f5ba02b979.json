@@ -1,0 +1,18 @@
+{
+  "chunk_id": "9a22a4f5ba02b979",
+  "chunk_hash": "9a22a4f5ba02b979",
+  "summary": "containers.podman changes in 10.1.0: volume mount and unmount, multiple subnets for networks, new podman_container and pod options, podman search, better networking idempotency in podman_container, and redesigned pod idempotency.",
+  "questions": [
+    "Can I create a podman network with multiple subnets?",
+    "Is there an Ansible module for podman search?",
+    "Did podman pod idempotency change?",
+    "Can I mount podman volumes with Ansible?"
+  ],
+  "answer_card": {
+    "title": "containers.podman changes in 10.1.0",
+    "answer_md": "- Mount and unmount for volumes.\n- Multiple subnets for networks.\n- New options for `podman_container` and the pod module.\n- Podman search support.\n- Better networking idempotency in `podman_container`.\n- Redesigned idempotency for the Podman Pod module.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:22:19+00:00"
+}

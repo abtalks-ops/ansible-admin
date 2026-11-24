@@ -1,0 +1,15 @@
+{
+ "chunk_id": "3162061220b6e90b",
+ "chunk_hash": "3162061220b6e90b",
+ "summary": "Example [iosxr:vars] for NETCONF uses ansible.netcommon.netconf with cisco.iosxr.iosxr, user, vaulted password and proxy command.",
+ "questions": [
+  "What inventory settings do I need for IOS-XR over NETCONF?"
+ ],
+ "answer_card": {
+  "title": "IOS-XR NETCONF inventory",
+  "answer_md": "```ini\n[iosxr:vars]\nansible_connection=ansible.netcommon.netconf\nansible_network_os=cisco.iosxr.iosxr\nansible_user=myuser\nansible_password=!vault |\nansible_paramiko_proxy_command='-o ProxyCommand=\"ssh -W %h:%p -q bastion01\"'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_iosxr.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

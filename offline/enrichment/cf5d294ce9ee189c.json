@@ -1,0 +1,15 @@
+{
+ "chunk_id": "cf5d294ce9ee189c",
+ "chunk_hash": "cf5d294ce9ee189c",
+ "summary": "BSD can be the control node by installing its Ansible package or using pip or source installs.",
+ "questions": [
+  "Can I run Ansible from a FreeBSD machine?"
+ ],
+ "answer_card": {
+  "title": "BSD as control node",
+  "answer_md": "Yes. Install your BSD variant's Ansible package, or use the `pip` or from-source instructions.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_bsd.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

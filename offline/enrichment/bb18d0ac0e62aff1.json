@@ -1,0 +1,17 @@
+{
+ "chunk_id": "bb18d0ac0e62aff1",
+ "chunk_hash": "bb18d0ac0e62aff1",
+ "summary": "The RETURN block documents returned values; use RETURN = r''' # ''' if nothing extra is returned, otherwise give description, returned, type, elements, sample, version_added, and contains for nested values.",
+ "questions": [
+  "How do I document a module that returns nothing special?",
+  "What fields describe each return value?",
+  "How do I document nested return values?"
+ ],
+ "answer_card": {
+  "title": "Writing the RETURN block",
+  "answer_md": "If nothing beyond standard returns: `RETURN = r''' # '''`. Otherwise, per value:\n- `description` (capitalized, trailing dot)\n- `returned` (e.g. `always`, `changed`, `success`)\n- `type`, `elements` (for lists)\n- `sample`\n- `version_added` (if added later)\n- `contains` for nested values with `type: dict` or `list`/`elements: dict`",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_documenting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

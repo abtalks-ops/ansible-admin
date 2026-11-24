@@ -1,0 +1,18 @@
+{
+ "chunk_id": "edf18fa5db62dd16",
+ "chunk_hash": "edf18fa5db62dd16",
+ "summary": "Defines DOCUMENTATION fields: module (matches filename), short_description (no trailing period, placed before options because ansible-doc -l uses the first match), description (full sentences, no module name), version_added (quoted string; core version for builtin, collection version in collections).",
+ "questions": [
+  "Why does ansible-doc -l show the wrong short description for my module?",
+  "Should short_description end with a period?",
+  "What version should version_added use in a collection module?",
+  "Should version_added be a string or a number?"
+ ],
+ "answer_card": {
+  "title": "Core DOCUMENTATION fields",
+  "answer_md": "- `module`: same as filename without `.py`.\n- `short_description`: no trailing period; put it **before** `options` since `ansible-doc -l` takes the first `short_description:` line it sees.\n- `description`: full sentences, don't mention the module name, use list entries.\n- `version_added`: quoted string. ansible-core version for `ansible.builtin` (e.g. `'2.18'`); the **collection** version in collections (e.g. `'1.0.0'`).\n- All fields lowercase and required unless noted.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_documenting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ad083ace76d41559",
+ "chunk_hash": "ad083ace76d41559",
+ "summary": "Internal links should use :ref: with anchors, every page needs at least one anchor, long pages can have local TOCs, and raw URLs should be avoided in favor of titled links for screen readers.",
+ "questions": [
+  "Should I paste raw URLs in Ansible docs?",
+  "How do internal links work in the Ansible docs?"
+ ],
+ "answer_card": {
+  "title": "Internal navigation rules",
+  "answer_md": "- Use `:ref:` for all internal links; every page needs at least one anchor.\n- Long or deep pages can add a local TOC.\n- Avoid raw URLs (bad for screen readers). For external links use `` `link title <link-url>`_ ``.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

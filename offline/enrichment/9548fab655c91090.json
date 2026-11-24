@@ -1,0 +1,16 @@
+{
+ "chunk_id": "9548fab655c91090",
+ "chunk_hash": "9548fab655c91090",
+ "summary": "community.dns deprecates the values return keys of nameserver_record_info and wait_for_txt in favor of entries, removed in 5.0.0.",
+ "questions": [
+  "What replaces values in nameserver_record_info results?",
+  "Is records[].values deprecated in wait_for_txt?"
+ ],
+ "answer_card": {
+  "title": "community.dns values → entries",
+  "answer_md": "Removed in community.dns 5.0.0:\n\n- `nameserver_record_info`: `results[].result[].values` → **`results[].result[].entries`**\n- `wait_for_txt`: `records[].values` → **`records[].entries`**",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:26+00:00"
+}

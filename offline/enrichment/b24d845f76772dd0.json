@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b24d845f76772dd0",
+ "chunk_hash": "b24d845f76772dd0",
+ "summary": "Lists internal Module Replacer substitutions (ANSIBLE_VERSION, INCLUDE_ANSIBLE_MODULE_COMPLEX_ARGS, SELINUX_SPECIAL_FILESYSTEMS, INCLUDE_ANSIBLE_MODULE_JSON_ARGS, syslog.LOG_USER) and the AnsibleModule attributes to use instead in Ansiballz modules.",
+ "questions": [
+  "How do I get the Ansible version inside a Python module?",
+  "How do I access module parameters in a new-style module?",
+  "How do I get the configured syslog facility in a module?"
+ ],
+ "answer_card": {
+  "title": "Internal replacements and their Ansiballz equivalents",
+  "answer_md": "In Ansiballz modules, use `AnsibleModule` attributes instead of the old placeholders:\n- `<<ANSIBLE_VERSION>>` → `module.ansible_version`\n- `<<INCLUDE_ANSIBLE_MODULE_COMPLEX_ARGS>>` → `module.params`\n- `<<SELINUX_SPECIAL_FILESYSTEMS>>` → `module._selinux_special_fs` (now a list)\n- `<<INCLUDE_ANSIBLE_MODULE_JSON_ARGS>>` isn't substituted in new-style Python\n- `syslog.LOG_USER` → `module._syslog_facility` (now the facility *name*)",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

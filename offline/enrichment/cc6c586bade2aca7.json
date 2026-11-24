@@ -1,0 +1,16 @@
+{
+  "chunk_id": "cc6c586bade2aca7",
+  "chunk_hash": "cc6c586bade2aca7",
+  "summary": "Shows subset and superset tests (renamed from issubset/issuperset in 2.5) to check list inclusion.",
+  "questions": [
+    "How do I check if one list contains all items of another?",
+    "What happened to issubset in Ansible?"
+  ],
+  "answer_card": {
+    "title": "subset and superset tests",
+    "answer_md": "```yaml\nwhen: a is superset(b)   # a includes b\nwhen: b is subset(a)     # b included in a\n```\n\n(`issubset` / `issuperset` were renamed in 2.5.)",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

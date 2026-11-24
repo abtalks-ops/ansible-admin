@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7a9b9498bcdd7b96",
+ "chunk_hash": "7a9b9498bcdd7b96",
+ "summary": "executor/module_common.py assembles modules by type (PowerShell and JSON-args via Module Replacer, Python via Ansiballz, others unchanged) and then replaces the shebang interpreter with any ansible_<X>_interpreter setting.",
+ "questions": [
+  "How does ansible_python_interpreter change the module that runs?",
+  "Which assembler handles each module type?"
+ ],
+ "answer_card": {
+  "title": "module_common.py assembly",
+  "answer_md": "- PowerShell and JSON-args: **Module Replacer**\n- New-style Python: **Ansiballz**\n- Want JSON, binary, old-style: unchanged\n\nThen, for modules with a shebang, if `ansible_<X>_interpreter` is set for that interpreter, Ansible substitutes that path.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}
