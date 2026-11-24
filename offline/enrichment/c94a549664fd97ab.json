@@ -1,0 +1,15 @@
+{
+  "chunk_id": "c94a549664fd97ab",
+  "chunk_hash": "c94a549664fd97ab",
+  "summary": "The file test returns True if the path is an existing file on the controller.",
+  "questions": [
+    "What does the file test return?"
+  ],
+  "answer_card": {
+    "title": "file test return value",
+    "answer_md": "`True` if an existing file on the controller, else `False`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

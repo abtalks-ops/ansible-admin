@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8a4999ac187ca08f",
+ "chunk_hash": "8a4999ac187ca08f",
+ "summary": "Parameters of the comment filter: style (plain, decoration, erlang, c, cblock, xml), plus beginning, end, decoration, newline, prefix, postfix and their counts.",
+ "questions": [
+  "What comment styles does the comment filter support?",
+  "How do I produce a C-style comment block from a string?",
+  "How do I customize the prefix of each comment line?"
+ ],
+ "answer_card": {
+  "title": "comment filter parameters",
+  "answer_md": "- `style` (default `plain`): `plain`, `decoration`, `erlang`, `c`, `cblock`, `xml`\n- `beginning` / `end`: start/end of a comment block (multiline styles)\n- `decoration`: comment or intermediate indicator\n- `prefix` / `postfix`: tokens at start/end of each line, with `prefix_count` / `postfix_count` (default 1)\n- `newline` (default `\\n`)",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

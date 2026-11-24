@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ea96577452ff2846",
+ "chunk_hash": "ea96577452ff2846",
+ "summary": "community.aws inspector_target is deprecated because Amazon Inspector Classic reached end of life on May 20, 2026, and will be removed in 12.0.0.",
+ "questions": [
+  "Is community.aws.inspector_target deprecated?",
+  "When did Amazon Inspector Classic reach end of life?"
+ ],
+ "answer_card": {
+  "title": "inspector_target deprecated",
+  "answer_md": "`community.aws.inspector_target` is deprecated because Amazon retired **Amazon Inspector Classic** on **May 20, 2026**, revoking console and API access. The module will be removed in version 12.0.0.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:26+00:00"
+}

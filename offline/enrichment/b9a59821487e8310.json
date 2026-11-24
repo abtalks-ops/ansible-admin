@@ -1,0 +1,18 @@
+{
+  "chunk_id": "b9a59821487e8310",
+  "chunk_hash": "b9a59821487e8310",
+  "summary": "Describes three ways to install software on Windows with Ansible: win_chocolatey, win_package, or running an installer via win_command/win_shell. win_chocolatey is recommended because it best detects installed and up-to-date packages.",
+  "questions": [
+    "What's the best way to install software on Windows servers with Ansible?",
+    "Should I use win_chocolatey or win_package to install an app?",
+    "Can I point win_chocolatey at an internal Chocolatey repository?",
+    "How do I install an MSI from a network share with Ansible?"
+  ],
+  "answer_card": {
+    "title": "Ways to install software on Windows",
+    "answer_md": "Three options:\n\n- **`win_chocolatey`** (recommended): installs from the public Chocolatey repo, or an internal repo via the `source` option. It has the best logic for detecting whether a package is already installed and current.\n- **`win_package`**: installs an MSI or .exe from a local/network path or URL.\n- **`win_command` / `win_shell`**: run the installer manually.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

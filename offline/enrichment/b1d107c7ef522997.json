@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b1d107c7ef522997",
+ "chunk_hash": "b1d107c7ef522997",
+ "summary": "sequence parameters: count (not with end), end, format (default %d), start (default 1), and stride (default 1, or -1 if end < start).",
+ "questions": [
+  "How do I count down with with_sequence?",
+  "What's the default start of with_sequence?",
+  "Can I use count and end together?"
+ ],
+ "answer_card": {
+  "title": "sequence lookup parameters",
+  "answer_md": "- `start` (default 1)\n- `end`: don't combine with `count`\n- `count`: number of elements; don't combine with `end`\n- `stride` (default 1, or -1 if end < start)\n- `format` (default `%d`)",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/sequence_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

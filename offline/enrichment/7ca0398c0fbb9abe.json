@@ -1,0 +1,18 @@
+{
+  "chunk_id": "7ca0398c0fbb9abe",
+  "chunk_hash": "7ca0398c0fbb9abe",
+  "summary": "Examples of stat: failing if a file isn't root-owned, checking whether a path exists and is a symlink or directory (testing that keys are defined first), skipping checksums, and using sha256.",
+  "questions": [
+    "How do I check if a path is a directory?",
+    "How do I check if a path is a symlink without errors when it doesn't exist?",
+    "How do I fail if a file's owner changed?",
+    "How do I check whether a file exists?"
+  ],
+  "answer_card": {
+    "title": "stat examples",
+    "answer_md": "```yaml\n- ansible.builtin.stat: {path: /etc/foo.conf}\n  register: st\n- ansible.builtin.fail: {msg: \"ownership changed\"}\n  when: st.stat.pw_name != 'root'\n\n- ansible.builtin.stat: {path: /path/to/something}\n  register: p\n- ansible.builtin.debug: {msg: \"is a directory\"}\n  when: p.stat.isdir is defined and p.stat.isdir\n```\nExistence: `p.stat.exists`. Test `islnk is defined` first since missing paths lack it.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/stat_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

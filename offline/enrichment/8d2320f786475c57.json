@@ -1,0 +1,16 @@
+{
+ "chunk_id": "8d2320f786475c57",
+ "chunk_hash": "8d2320f786475c57",
+ "summary": "arista.eos deprecates automatic Jinja2 templating of eos_config's src parameter (removed March 2028); use content with the template lookup.",
+ "questions": [
+  "Is eos_config src templating deprecated?",
+  "How do I push a templated config with eos_config now?"
+ ],
+ "answer_card": {
+  "title": "eos_config src templating deprecated",
+  "answer_md": "Automatic Jinja2 processing of the `src` parameter in `eos_config` is deprecated and will be removed in **March 2028**. Use `content` with the template lookup:\n\n```yaml\n- arista.eos.eos_config:\n    content: \"{{ lookup('ansible.builtin.template', 'config.j2') }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:43+00:00"
+}

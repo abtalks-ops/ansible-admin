@@ -1,0 +1,19 @@
+{
+ "chunk_id": "378f724e87d9dd48",
+ "chunk_hash": "378f724e87d9dd48",
+ "summary": "Describes variable scope: playbook-object variables exist only in the object that defines them, host-scoped variables (inventory, vars plugins, set_fact, include_vars) persist across plays and in hostvars, and extra vars are global for the run.",
+ "questions": [
+  "Why is a variable I set in one play not available in the next play?",
+  "How can I make a variable available across multiple plays?",
+  "Is a set_fact value visible in later plays?",
+  "What scope do extra vars have?",
+  "How do I access another host's variables?"
+ ],
+ "answer_card": {
+  "title": "Variable scope across plays",
+  "answer_md": "- **Playbook object scope**: variables in a play/block/task `vars:` exist only within that object and are not visible to later plays.\n- **Host scope**: variables tied to a host or group (inventory, vars plugins, `set_fact`, `include_vars`) are available to all plays and via `hostvars[]`.\n- **Extra vars** (`-e`): global for the whole run, visible both as playbook vars and in `hostvars`.\n\nTo carry a value into later plays, use `set_fact` or define it in inventory.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/general_precedence.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

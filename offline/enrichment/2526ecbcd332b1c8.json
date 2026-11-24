@@ -1,0 +1,16 @@
+{
+  "chunk_id": "2526ecbcd332b1c8",
+  "chunk_hash": "2526ecbcd332b1c8",
+  "summary": "Playbooks are YAML files with one or more plays in order; each play runs tasks, and each task calls a module.",
+  "questions": [
+    "What is the structure of an Ansible playbook?",
+    "What's the difference between a play and a playbook?"
+  ],
+  "answer_card": {
+    "title": "Playbook structure",
+    "answer_md": "A playbook is a YAML list of **plays**. Each play runs one or more **tasks**, and each task calls a **module**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

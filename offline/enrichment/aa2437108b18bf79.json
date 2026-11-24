@@ -1,0 +1,19 @@
+{
+ "chunk_id": "aa2437108b18bf79",
+ "chunk_hash": "aa2437108b18bf79",
+ "summary": "Registered secrets are masked on screen, in log_path, callbacks and module logs; register_secret and mask_secrets filters are added; no_log options keep their real value in results instead of VALUE_SPECIFIED_IN_NO_LOG_PARAMETER; short secrets may mask unrelated text.",
+ "questions": [
+  "How do I register my own value as a secret in a playbook?",
+  "What happened to VALUE_SPECIFIED_IN_NO_LOG_PARAMETER?",
+  "Why is a short password masking parts of other words?",
+  "How do I redact secrets from a string in Jinja?",
+  "Why does register_secret fail on an empty value?"
+ ],
+ "answer_card": {
+  "title": "How secret masking affects playbooks",
+  "answer_md": "Registered secrets are replaced with `$REDACTED$` on screen, in the `log_path` file, in callback output and in module logs on managed nodes. The values remain usable by tasks.\n\n- **`register_secret`** filter: register your own value as a secret.\n- **`mask_secrets`** filter: redact registered secrets from a string.\n\n`no_log: true` options are **no longer replaced** with `VALUE_SPECIFIED_IN_NO_LOG_PARAMETER` in results; the real value is kept and registered as a secret. Update playbooks that compared against that placeholder.\n\nA `no_log` value is now masked wherever it appears later. Very short values (one or two characters) get masked inside unrelated words, which hurts readability and can hint at the value.\n\n`register_secret` fails on non-strings or values empty after trimming whitespace; set `validation_action: warn` or `ignore` to return the value unregistered instead.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.22.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

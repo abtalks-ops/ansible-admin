@@ -1,0 +1,16 @@
+{
+ "chunk_id": "757fb420e44c8ed3",
+ "chunk_hash": "757fb420e44c8ed3",
+ "summary": "The basename filter returns the last component of a path; unlike Unix basename, a trailing slash gives an empty string.",
+ "questions": [
+  "How do I get the file name from a path in Ansible?",
+  "Why does basename return an empty string for a path ending in a slash?"
+ ],
+ "answer_card": {
+  "title": "basename filter",
+  "answer_md": "`{{ path | basename }}` returns the last path component. Unlike Unix `basename`, `/foo/bar/` returns `''` (empty), not `bar`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/basename_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

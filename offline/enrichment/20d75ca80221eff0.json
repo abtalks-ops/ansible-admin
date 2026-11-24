@@ -1,0 +1,17 @@
+{
+  "chunk_id": "20d75ca80221eff0",
+  "chunk_hash": "20d75ca80221eff0",
+  "summary": "blockinfile's marker_end text plus the standard mode and owner file options, with guidance to quote octal modes.",
+  "questions": [
+    "How do I customize the closing marker text?",
+    "How should I specify file permissions in blockinfile?",
+    "How do I set the owner of the modified file?"
+  ],
+  "answer_card": {
+    "title": "blockinfile marker_end, mode, owner",
+    "answer_md": "- `marker_end` (default `END`): text for `{mark}` in closing marker\n- `mode`: quote octal (`'0644'`) or use symbolic (`u=rw,g=r`)\n- `owner`: file owner",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/blockinfile_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

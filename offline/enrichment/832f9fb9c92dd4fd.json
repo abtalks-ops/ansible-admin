@@ -1,0 +1,17 @@
+{
+ "chunk_id": "832f9fb9c92dd4fd",
+ "chunk_hash": "832f9fb9c92dd4fd",
+ "summary": "Unreadable characters in output from z/OS hosts usually come from an EBCDIC encoding mix-up. Check the remote environment and the file encodings on both the remote and control nodes.",
+ "questions": [
+  "Why do I see garbage characters in playbook output from z/OS?",
+  "How do I troubleshoot encoding problems on z/OS UNIX?",
+  "Are untagged files on z/OS EBCDIC by default?"
+ ],
+ "answer_card": {
+  "title": "Unreadable characters from z/OS hosts",
+  "answer_md": "Garbled output is usually an EBCDIC encoding mix-up. Check that:\n- the remote environment is set up correctly\n- the expected file encodings are right on both the remote node and the control node\n\n`ansible.builtin` modules assume UTF-8, while many z/OS UNIX systems default untagged files to EBCDIC. Data can end up not converted from EBCDIC, or wrongly converted when it is already UTF-8.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_zos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

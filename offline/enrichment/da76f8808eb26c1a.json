@@ -1,0 +1,18 @@
+{
+  "chunk_id": "da76f8808eb26c1a",
+  "chunk_hash": "da76f8808eb26c1a",
+  "summary": "yum_repository options: SELinux fields, skip_if_unavailable, sslcacert, client cert and key, sslverify, state, throttle and timeout.",
+  "questions": [
+    "How do I let yum continue if a repo is down?",
+    "How do I use client certificates with a yum repo?",
+    "How do I remove a yum repository?",
+    "How do I throttle yum downloads?"
+  ],
+  "answer_card": {
+    "title": "yum_repository TLS, state, throttle",
+    "answer_md": "- `skip_if_unavailable`: continue if unreachable\n- `sslcacert`, `sslclientcert`, `sslclientkey`, `sslverify` (alias `validate_certs`)\n- `state`: present/absent\n- `throttle`, `timeout`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:27+00:00"
+}

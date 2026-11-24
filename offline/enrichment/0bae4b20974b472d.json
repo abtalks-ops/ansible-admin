@@ -1,0 +1,19 @@
+{
+ "chunk_id": "0bae4b20974b472d",
+ "chunk_hash": "0bae4b20974b472d",
+ "summary": "ansible-core 2.21 removed get_bin_path required, the paramiko connection plugin and compat module, a StrategyBase parameter, re-exports from module_utils.basic, datetime compat APIs, git gpg_whitelist, auto_legacy interpreter options and safe_eval.",
+ "questions": [
+  "Is the paramiko connection plugin removed in ansible-core 2.21?",
+  "What does connection: smart use now?",
+  "Is gpg_whitelist still accepted by the git module?",
+  "Can I still set interpreter_python to auto_legacy?",
+  "What happened to safe_eval?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.21 removed features",
+  "answer_md": "- `get_bin_path`: `required` option removed.\n- **`ansible.builtin.paramiko` connection plugin removed**; `connection: persistent` or `smart` no longer try paramiko. `module_utils.compat.paramiko` removed too.\n- `StrategyBase._load_included_file`: `handle_stats_and_callbacks` removed.\n- Importing `datetime`, `signal`, `types`, `chain`, `repeat`, `map`, `shlex_quote` from `ansible.module_utils.basic` no longer works.\n- `compat.datetime` APIs removed.\n- `git`: `gpg_whitelist` alias removed.\n- Interpreter discovery: `auto_legacy` and `auto_legacy_silent` removed.\n- `safe_eval` removed from module_utils.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:42+00:00"
+}

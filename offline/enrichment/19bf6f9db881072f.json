@@ -1,0 +1,15 @@
+{
+  "chunk_id": "19bf6f9db881072f",
+  "chunk_hash": "19bf6f9db881072f",
+  "summary": "The abs test returns True for absolute paths and False for relative ones.",
+  "questions": [
+    "What does the abs test return?"
+  ],
+  "answer_card": {
+    "title": "abs test return value",
+    "answer_md": "Returns `True` if absolute, `False` if relative.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/abs_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:27+00:00"
+}

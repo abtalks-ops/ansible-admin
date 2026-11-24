@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1399d153c4cd7ca2",
+ "chunk_hash": "1399d153c4cd7ca2",
+ "summary": "ansible-core 2.11 upgrade notes: uninstall ansible or ansible-base before installing ansible-core with pip, Python 3.8 is a soft controller requirement (hard in 2.12), config choices are now validated, ansible-galaxy uses resolvelib, and module_utils imports can be made optional with try/if blocks.",
+ "questions": [
+  "pip install ansible-core conflicts with my old ansible, what do I do?",
+  "How do I silence the controller Python version warning?",
+  "Why does ANSIBLE_COLLECTIONS_ON_ANSIBLE_VERSION_MISMATCH=0 now error?",
+  "Can a module import a module_util that might not exist?"
+ ],
+ "answer_card": {
+  "title": "Upgrading to ansible-core 2.11",
+  "answer_md": "- With pip, first `pip uninstall ansible` (if < 2.10) or `pip uninstall ansible-base`, then install ansible-core.\n- Controller Python **< 3.8** gives a warning (disable: `ANSIBLE_CONTROLLER_PYTHON_WARNING=False`); **2.12 requires 3.8+**.\n- Config `choices` are validated: e.g. `ANSIBLE_COLLECTIONS_ON_ANSIBLE_VERSION_MISMATCH` must be `ignore`, `warn` or `error`.\n- `ansible-galaxy` resolves deps with `resolvelib`.\n- `module_utils` imports wrapped in `try`/`if` are treated as optional during payload build.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.11.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:22:29+00:00"
+}

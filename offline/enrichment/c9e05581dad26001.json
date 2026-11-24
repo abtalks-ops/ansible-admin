@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c9e05581dad26001",
+ "chunk_hash": "c9e05581dad26001",
+ "summary": "Environment variables are not passed from host into --docker or --remote test environments, and are only exposed if allowed in common_environment. Use ansible-test shell to set them inside a container.",
+ "questions": [
+  "Why isn't my environment variable reaching ansible-test in Docker?",
+  "How do I set ANSIBLE_KEEP_REMOTE_FILES when running tests in a container?",
+  "Which environment variables does ansible-test pass through?"
+ ],
+ "answer_card": {
+  "title": "Environment variables in ansible-test",
+  "answer_md": "- Host variables are **not** passed into `--docker` or `--remote` environments.\n- A variable is only exposed if it's allowed in `common_environment` in `test/lib/ansible_test/_internal/util.py`.\n\nExample: `ANSIBLE_KEEP_REMOTE_FILES=1 ansible-test integration --venv` works, but for Docker run `ansible-test shell --docker`, set the variable at the prompt, then run the tests there.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_running_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "177494ce2cb3ab96",
+ "chunk_hash": "177494ce2cb3ab96",
+ "summary": "community.routeros api_info/api_modify can no longer disable some tool netwatch parameters, name-format in interface wifi provisioning, or script in ip dhcp-client.",
+ "questions": [
+  "Can I disable the script parameter on RouterOS dhcp-client with Ansible?"
+ ],
+ "answer_card": {
+  "title": "RouterOS parameters that can't be disabled",
+  "answer_md": "With `api_info` and `api_modify`, these can no longer be disabled: multiple `tool netwatch` parameters, `name-format` in `interface wifi provisioning`, and `script` in `ip dhcp-client`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:10+00:00"
+}

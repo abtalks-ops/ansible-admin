@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b9f801534e332547",
+ "chunk_hash": "b9f801534e332547",
+ "summary": "community.proxmox will rename proxmox_cluster_firewall, proxmox_node_firewall and proxmox_node_firewall_info to *_options in 3.0.0, and purge_omitted_rule_fields will default to true.",
+ "questions": [
+  "What will proxmox_cluster_firewall be renamed to?",
+  "What does purge_omitted_rule_fields do in proxmox_cluster_firewall_security_group?",
+  "How do I keep omitted rule fields in Proxmox security groups?"
+ ],
+ "answer_card": {
+  "title": "community.proxmox firewall module changes",
+  "answer_md": "In community.proxmox **3.0.0**:\n\n- `proxmox_cluster_firewall` → `proxmox_cluster_firewall_options`\n- `proxmox_node_firewall` → `proxmox_node_firewall_options`\n- `proxmox_node_firewall_info` → `proxmox_node_firewall_options_info`\n- `proxmox_cluster_firewall_security_group`: `purge_omitted_rule_fields` default changes from `false` to **`true`**, meaning optional fields omitted from a `rules` entry are removed from the existing rule. Set it to `false` to keep the current behavior.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:26+00:00"
+}

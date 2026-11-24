@@ -1,0 +1,17 @@
+{
+  "chunk_id": "5c6d855d0b9cd03e",
+  "chunk_hash": "5c6d855d0b9cd03e",
+  "summary": "Walks through the lamp_haproxy site.yml with five plays: common role on all hosts, then db, base-apache + web, haproxy, and base-apache + nagios on their respective groups.",
+  "questions": [
+    "How should I structure a site.yml for a multi-tier app?",
+    "How do I apply a common role to all hosts and specific roles to groups?",
+    "Can the same playbook do the initial deploy and later updates?"
+  ],
+  "answer_card": {
+    "title": "Structuring site.yml for a multi-tier app",
+    "answer_md": "```yaml\n- hosts: all\n  roles: [common]          # repos, firewall, site-wide config\n- hosts: dbservers\n  roles: [db]\n- hosts: webservers\n  roles: [base-apache, web]\n- hosts: lbservers\n  roles: [haproxy]\n- hosts: monitoring\n  roles: [base-apache, nagios]\n```\n\nThe same `site.yml` handles both the initial deployment and pushing updates; `base-apache` is reused by the web app and Nagios.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/guide_rolling_upgrade.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

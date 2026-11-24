@@ -1,0 +1,16 @@
+{
+  "chunk_id": "736a53e8a8b812c1",
+  "chunk_hash": "736a53e8a8b812c1",
+  "summary": "An ansible-core breaking change in Ansible 10.0.0: nested templating in assert may stop the conditional from being evaluated.",
+  "questions": [
+    "Why does my assert with nested templates fail in Ansible 10?",
+    "Is nested templating in assert a breaking change?"
+  ],
+  "answer_card": {
+    "title": "assert nested templating breaking change",
+    "answer_md": "In Ansible 10, nested templating in `assert` conditions may stop them from being evaluated. Reference variables directly instead of embedding `{{ }}` in `that:`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:22:19+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "615d740815dc004a",
+ "chunk_hash": "615d740815dc004a",
+ "summary": "fortinet.fortios in Ansible 9.8.0 added a sanity_test.yaml for CI, support for ansible-core 2.17, and support for FortiOS 7.4.4.",
+ "questions": [
+  "Does fortinet.fortios support ansible-core 2.17?",
+  "When did fortios add FOS 7.4.4 support?"
+ ],
+ "answer_card": {
+  "title": "fortinet.fortios 9.8.0 changes",
+  "answer_md": "In Ansible 9.8.0, `fortinet.fortios` added support for **ansible-core 2.17** and **FortiOS 7.4.4**, plus a `sanity_test.yaml` for CI.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:28+00:00"
+}

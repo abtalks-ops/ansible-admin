@@ -1,0 +1,15 @@
+{
+ "chunk_id": "e4127fc8ee60705d",
+ "chunk_hash": "e4127fc8ee60705d",
+ "summary": "Examples of win_basename returning foo.txt from C:\\Users\\asdf\\foo.txt and from a UNC path.",
+ "questions": [
+  "How do I get foo.txt from \\\\server1\\test\\foo.txt?"
+ ],
+ "answer_card": {
+  "title": "win_basename examples",
+  "answer_md": "```yaml\nfilename: \"{{ mypath | win_basename }}\"\n# 'C:\\Users\\asdf\\foo.txt' -> 'foo.txt'\n# '\\\\server1\\test\\foo.txt' -> 'foo.txt'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/win_basename_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

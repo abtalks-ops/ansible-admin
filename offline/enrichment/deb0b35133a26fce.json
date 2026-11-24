@@ -1,0 +1,16 @@
+{
+ "chunk_id": "deb0b35133a26fce",
+ "chunk_hash": "deb0b35133a26fce",
+ "summary": "Prerequisites for contributing to community.general: add ~/dev/ansible/collections/ to COLLECTIONS_PATHS and make sure no earlier path holds another copy of the collection.",
+ "questions": [
+  "What collections path should I set before hacking on community.general?",
+  "Why is Ansible ignoring my local checkout of community.general?"
+ ],
+ "answer_card": {
+  "title": "Collections path setup for contributing",
+  "answer_md": "- Include `~/dev/ansible/collections/` in `COLLECTIONS_PATHS`.\n- If several directories are listed, make sure none earlier in the search path contains another copy of `community.general`, or it will be loaded instead.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_contributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

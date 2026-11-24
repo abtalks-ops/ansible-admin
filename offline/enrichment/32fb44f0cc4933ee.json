@@ -1,0 +1,17 @@
+{
+ "chunk_id": "32fb44f0cc4933ee",
+ "chunk_hash": "32fb44f0cc4933ee",
+ "summary": "Test plugins verify data in Jinja2, can be grouped per file, work with select/map and when, don't use the config system (but can document since 2.14), and should propagate undefined-variable errors.",
+ "questions": [
+  "What are Jinja2 test plugins used for?",
+  "Can test plugins be used in when conditions?",
+  "How should test plugins handle undefined variables?"
+ ],
+ "answer_card": {
+  "title": "Test plugins",
+  "answer_md": "Test plugins verify data in Jinja2; several per file is fine (core ones in `core.py`). Useful with `select`/`map` and in `when:`. They don't use the config system but can be documented since 2.14. Re-raise `UndefinedError` as `AnsibleUndefinedVariable` and others as `AnsibleFilterError`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

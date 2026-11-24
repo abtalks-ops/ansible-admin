@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1735c49f0bb0f85a",
+ "chunk_hash": "1735c49f0bb0f85a",
+ "summary": "Explains aliases (use sparingly, deprecate old names), options for sub-specs with dict type, apply_defaults to fill sub-option defaults when the parent isn't given, and removed_in_version with removed_from_collection.",
+ "questions": [
+  "How do I add an alternative name for a module option?",
+  "How do I validate nested options in an argument spec?",
+  "How can sub-option defaults apply even when the parent option isn't passed?",
+  "How do I deprecate an option for removal in a future version?"
+ ],
+ "answer_card": {
+  "title": "argument_spec: aliases, options, apply_defaults, removal",
+  "answer_md": "- `aliases`: e.g. `aliases=['pkg']` for `name`. Use sparingly; move renamed options to `deprecated_aliases`.\n- `options`: nested sub-spec (`type` or `elements` = `dict`).\n- `apply_defaults`: apply sub-option defaults even if the parent isn't supplied.\n- `removed_in_version` (with `removed_from_collection`, exclusive with `removed_at_date`):\n```python\noption = {'type': 'str', 'removed_in_version': '2.0.0', 'removed_from_collection': 'testns.testcol'}\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

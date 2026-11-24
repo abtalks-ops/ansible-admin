@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e0cbb6540a0cf213",
+ "chunk_hash": "e0cbb6540a0cf213",
+ "summary": "Example callback that imports mask_secrets with a fallback for pre-2.22 versions and masks the serialized task name and result before writing to a JSONL file; junit and tree callbacks mask everything they write, and task no_log still censors the whole result.",
+ "questions": [
+  "Show an example callback that writes masked results to a file",
+  "How do I import mask_secrets so it works on older ansible-core?",
+  "Does task-level no_log still hide the whole result?"
+ ],
+ "answer_card": {
+  "title": "Example: masking in a file-writing callback",
+  "answer_md": "```python\nimport json\nfrom ansible.plugins.callback import CallbackBase\n\ntry:\n    from ansible.module_utils.secrets import mask_secrets\nexcept ImportError:\n    def mask_secrets(value):\n        return value\n\nclass CallbackModule(CallbackBase):\n    CALLBACK_VERSION = 2.0\n    CALLBACK_TYPE = 'notification'\n    CALLBACK_NAME = 'namespace.collection_name.json_file'\n    CALLBACK_NEEDS_ENABLED = True\n\n    def v2_runner_on_ok(self, result):\n        entry = {'task': result.task_name, 'result': result.result}\n        entry_json = mask_secrets(json.dumps(entry, default=str))\n        with open('/var/log/ansible-results.jsonl', 'a') as fd:\n            fd.write(entry_json + '\\n')\n```\n\n`result.result` is already masked on 2.22+, but the task name isn't, so mask the serialized entry. The built-in `junit` and `tree` callbacks mask everything they write. The task `no_log` keyword still censors the entire result.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "6e9560fe7fa47afb",
+ "chunk_hash": "6e9560fe7fa47afb",
+ "summary": "The Linux template uses free-spacing regex to capture index, name, flags, MTU and state, derives booleans like loopback and up from the flags, and a second entry captures inet address and mask; shared carries the name.",
+ "questions": [
+  "How do I write a readable regex in a native template?",
+  "How do I turn interface flags into booleans with cli_parse?"
+ ],
+ "answer_card": {
+  "title": "Linux ip addr template",
+  "answer_md": "```yaml\n- example: '1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 ... state UNKNOWN ...'\n  getval: |\n    (?x)\n    \\d+:\\s\n    (?P<name>\\S+):\\s\n    <(?P<properties>\\S+)>\n    \\smtu\\s(?P<mtu>\\d+)\n    .*\n    state\\s(?P<state>\\S+)\n  result:\n    \"{{ name }}\":\n      loopback: \"{{ 'LOOPBACK' in properties.split(',') }}\"\n      up: \"{{ 'UP' in properties.split(',') }}\"\n      state: \"{{ state|lower() }}\"\n      mtu: \"{{ mtu }}\"\n  shared: True\n```\n`(?x)` free-spacing mode allows inline comments; `shared` makes `name` available to the next entry (which captures `inet` and mask bits).",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

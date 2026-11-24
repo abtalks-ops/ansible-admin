@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7787cb6e539ed204",
+ "chunk_hash": "7787cb6e539ed204",
+ "summary": "Before running ansible-test you must prepare either a collection or an ansible-core source environment. Files ignored by git are also ignored by ansible-test.",
+ "questions": [
+  "Why is ansible-test skipping some of my files?",
+  "Does ansible-test respect .gitignore?",
+  "What do I need to set up before running ansible-test?"
+ ],
+ "answer_card": {
+  "title": "ansible-test ignores git-ignored files",
+  "answer_md": "Set up your environment first, either for testing a collection or for testing ansible-core itself.\n\n**Watch out:** if you use git, `ansible-test` skips any file that git ignores. Make sure the files you want tested are not matched by `.gitignore`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_running_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:57+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6817ace8dbd4607a",
+ "chunk_hash": "6817ace8dbd4607a",
+ "summary": "Windows module debugging must happen on a Windows host: copy the module and the powershell and csharp module_utils folders, comment out #Requires -Module lines with an extra #, and add setup code at the top.",
+ "questions": [
+  "Can I debug a PowerShell module on Linux?",
+  "What files do I need to copy to Windows to debug a module?",
+  "Why do I need to disable #Requires -Module lines when debugging?"
+ ],
+ "answer_card": {
+  "title": "Prepare to debug a Windows module",
+  "answer_md": "Debug only on a Windows host:\n1. Copy the module script.\n2. Copy `lib/ansible/module_utils/powershell` and `.../csharp` next to it.\n3. Add an extra `#` before any `#Requires -Module` lines.\n4. Add the setup code to the top of the script.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

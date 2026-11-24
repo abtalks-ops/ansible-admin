@@ -1,0 +1,17 @@
+{
+ "chunk_id": "1d4387d8f35557dd",
+ "chunk_hash": "1d4387d8f35557dd",
+ "summary": "For modules using third-party web APIs, emulate the API's documented responses so tests check only spec-defined parameters. The rds_instance example builds a sequence of fake instance states as a MagicMock side_effect.",
+ "questions": [
+  "How do I fake a sequence of API responses in a unit test?",
+  "How can I make sure my module only uses documented API fields?",
+  "How do I mock boto3 describe calls returning different states?"
+ ],
+ "answer_card": {
+  "title": "Emulate an API spec in unit tests",
+  "answer_md": "Write a helper that returns spec-shaped data, then feed a sequence through `side_effect`:\n```python\ndef simple_instance_list(status, pending):\n    return {'DBInstances': [{'DBInstanceStatus': status,\n            'PendingModifiedValues': pending, 'DBInstanceIdentifier': 'fakedb'}]}\n\nrds_client_double = MagicMock()\nrds_client_double.describe_db_instances.side_effect = [\n    simple_instance_list('rebooting', {'a': 'b'}),\n    simple_instance_list('available', {}),\n]\n```\nThis proves the module uses only parameters defined in the API spec.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "99a3ad34a8b82409",
+ "chunk_hash": "99a3ad34a8b82409",
+ "summary": "Metagroups group other groups using children. A group can be in several metagroups; parent group_vars apply to children but child values override, so prefer one parent for predictable inheritance.",
+ "questions": [
+  "How do I make a group of groups in inventory?",
+  "Can a group belong to more than one parent group?",
+  "Do child groups inherit parent group variables?",
+  "Which wins, parent or child group_vars?"
+ ],
+ "answer_card": {
+  "title": "Use metagroups in inventory",
+  "answer_md": "```yaml\nmetagroupname:\n  children:\n    network:\n    webservers:\n```\n- A group can sit under several metagroups (for example `network` under both `datacenter` and `ops`).\n- Parent `group_vars` apply to hosts in child groups; a child group's values override the parent's.\n- For predictable inheritance, give each group only one parent.",
+  "source_url": "https://docs.ansible.com/ansible/latest/getting_started/get_started_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

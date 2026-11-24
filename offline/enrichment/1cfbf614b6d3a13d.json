@@ -1,0 +1,16 @@
+{
+  "chunk_id": "1cfbf614b6d3a13d",
+  "chunk_hash": "1cfbf614b6d3a13d",
+  "summary": "user options: move_home with home to relocate the old home, the required name, and non_unique UIDs.",
+  "questions": [
+    "How do I move a user's home directory to a new location?",
+    "Can two users share a UID?"
+  ],
+  "answer_card": {
+    "title": "user move_home, name, non_unique",
+    "answer_md": "- `name` (required, alias `user`)\n- `move_home` (false): with `home`, move existing home\n- `non_unique` (false): allow duplicate UID (not BusyBox)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

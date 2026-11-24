@@ -1,0 +1,16 @@
+{
+ "chunk_id": "79f78db1e70476e2",
+ "chunk_hash": "79f78db1e70476e2",
+ "summary": "Example: [] | bool warns that the bool filter coerced an invalid value to False, removed in 2.23; use an explicit predicate like | length > 0 or is truthy.",
+ "questions": [
+  "How do I check if a list is non-empty instead of using | bool?",
+  "'The bool filter coerced invalid value' warning, how do I fix it?"
+ ],
+ "answer_card": {
+  "title": "Replace | bool on lists/dicts",
+  "answer_md": "`{{ [] | bool }}` warns *The `bool` filter coerced invalid value [] (list) to False*. Use an explicit check:\n\n```yaml\nwhen: my_list | length > 0\n# or\nwhen: my_list is truthy\n```\n\nThese warnings can be silenced with `deprecation_warnings = False` in `ansible.cfg`, but fixing the content is better because the behaviour is **removed in ansible-core 2.23**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.18.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:08+00:00"
+}

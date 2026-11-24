@@ -1,0 +1,16 @@
+{
+ "chunk_id": "e01220a7753050a8",
+ "chunk_hash": "e01220a7753050a8",
+ "summary": "add_file_common_args=True adds standard file options (document with the ansible.builtin.files fragment), and load_file_common_arguments plus set_fs_attributes_if_different apply them.",
+ "questions": [
+  "How do I give my module owner, group and mode options like the file module?",
+  "How do I apply file permissions requested by the user in my module?"
+ ],
+ "answer_card": {
+  "title": "Add common file options",
+  "answer_md": "```python\nmodule = AnsibleModule(argument_spec, add_file_common_args=True)\nchanged = False\nfile_args = module.load_file_common_arguments(module.params)\nchanged = module.set_fs_attributes_if_different(file_args, changed)\nmodule.exit_json(changed=changed)\n```\nExtend the `ansible.builtin.files` doc fragment so the options are documented.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

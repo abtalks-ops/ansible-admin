@@ -1,0 +1,15 @@
+{
+ "chunk_id": "c48d0c26f2954959",
+ "chunk_hash": "c48d0c26f2954959",
+ "summary": "Prerequisites for the network examples: Ansible 2.10+, compatible devices, basic YAML, Jinja2, Linux CLI and switch/router configuration knowledge.",
+ "questions": [
+  "What do I need to follow the Ansible network examples?"
+ ],
+ "answer_card": {
+  "title": "Network examples prerequisites",
+  "answer_md": "- Ansible 2.10 or higher\n- Ansible-compatible network devices\n- Basic YAML and Jinja2 templating\n- Basic Linux CLI\n- Basic switch and router configuration knowledge",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "chunk_id": "96a8962be777450f",
+  "chunk_hash": "96a8962be777450f",
+  "summary": "community.network is unmaintained and deprecated. Users wanting to keep parts should copy them into their own repositories and announce it on the forum.",
+  "questions": [
+    "What should I do with playbooks that depend on community.network?"
+  ],
+  "answer_card": {
+    "title": "community.network unmaintained",
+    "answer_md": "community.network is unmaintained and deprecated. Copy any content you depend on into your own repository (see the collection creator path) and share it in the forum discussion, or migrate to vendor collections.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "862a0e9bd714dd49",
+  "chunk_hash": "862a0e9bd714dd49",
+  "summary": "script copies a local script to the remote host and runs it through the shell, without needing Python. SSH forces a pty so stderr merges into stdout; quote paths with spaces; vaulted scripts are decrypted automatically.",
+  "questions": [
+    "How do I run a local shell script on remote servers?",
+    "Why is stderr empty when using the script module?",
+    "Does the script module need Python on the target?",
+    "Can script run a vault-encrypted script?",
+    "Should I write a module instead of using script?"
+  ],
+  "answer_card": {
+    "title": "Run local scripts remotely",
+    "answer_md": "`ansible.builtin.script` transfers a local script and runs it via the remote shell. No Python needed; works on Windows.\n- SSH forces `-tt`, so **stderr is merged into stdout**. For separate streams, use `copy` + `command`.\n- Quote paths with spaces; vaulted scripts are auto-decrypted.\n- Encode non-UTF-8 output. Writing a real module is preferred.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/script_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

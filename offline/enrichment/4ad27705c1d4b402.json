@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4ad27705c1d4b402",
+ "chunk_hash": "4ad27705c1d4b402",
+ "summary": "Ansible connects as your local username by default; set a different connection user with remote_user in a play, or ansible_user as a host or group variable. Use become to run tasks as another user.",
+ "questions": [
+  "How do I make Ansible log in as a different user?",
+  "How do I set ansible_user for a group of hosts?",
+  "What's the difference between remote_user and become?"
+ ],
+ "answer_card": {
+  "title": "Set the remote connection user",
+  "answer_md": "Default is your control-node username. To change it:\n\nPlay level:\n```yaml\n- hosts: webservers\n  remote_user: admin\n```\nHost variable:\n```text\nother1.example.com ansible_connection=ssh ansible_user=myuser\n```\nGroup variable:\n```yaml\ncloud:\n  hosts: {cloud1: ..., cloud2: ...}\n  vars:\n    ansible_user: admin\n```\nTo run *tasks* as another user after connecting, use `become`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/connection_details.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

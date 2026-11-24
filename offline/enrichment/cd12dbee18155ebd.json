@@ -1,0 +1,17 @@
+{
+  "chunk_id": "cd12dbee18155ebd",
+  "chunk_hash": "cd12dbee18155ebd",
+  "summary": "deb822_repository options for download targets, marking a source trusted, package types (deb or deb-src), and repository URIs.",
+  "questions": [
+    "How do I add source packages (deb-src) with deb822_repository?",
+    "How do I set the repository base URL?",
+    "How do I mark a repo as trusted?"
+  ],
+  "answer_card": {
+    "title": "deb822_repository parameters (part 3)",
+    "answer_md": "- `uris`: base URL(s) of the archive\n- `types` (default `[deb]`): `deb` and/or `deb-src`\n- `trusted`: treat source as trusted\n- `targets`: download targets to acquire",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/deb822_repository_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

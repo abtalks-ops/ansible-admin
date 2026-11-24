@@ -1,0 +1,16 @@
+{
+ "chunk_id": "e162226814ea0d48",
+ "chunk_hash": "e162226814ea0d48",
+ "summary": "The checksum filter returns the SHA-1 hash of its input.",
+ "questions": [
+  "How do I get a SHA-1 hash of a string in Ansible?",
+  "What hash algorithm does the checksum filter use?"
+ ],
+ "answer_card": {
+  "title": "checksum filter",
+  "answer_md": "`{{ data | checksum }}` returns the **SHA-1** hash of the input.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/checksum_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

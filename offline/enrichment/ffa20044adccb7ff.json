@@ -1,0 +1,15 @@
+{
+ "chunk_id": "ffa20044adccb7ff",
+ "chunk_hash": "ffa20044adccb7ff",
+ "summary": "Each integration test must be in exactly one CI group, such as shippable/posix/group1, picked to match similar tests or randomly if several fit.",
+ "questions": [
+  "Which CI group should I put my new integration test in?"
+ ],
+ "answer_card": {
+  "title": "CI groups",
+  "answer_md": "Add exactly one group to `aliases`, for example `shippable/posix/group1`, `shippable/windows/group2`, `shippable/aws/group1` or `shippable/cloud/group1`. Use the same group as similar tests; if several fit, pick one randomly. Groups balance CI jobs.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/integration-aliases.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

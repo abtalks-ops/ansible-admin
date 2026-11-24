@@ -1,0 +1,18 @@
+{
+ "chunk_id": "b70f08b92a8c02df",
+ "chunk_hash": "b70f08b92a8c02df",
+ "summary": "Rename or redirect collection plugins with a redirect entry in meta/runtime.yml using the new FQCN, optionally adding deprecation; Ansible 2.9 ignores runtime.yml, so use symlinks there, though 2.10+ prefers runtime.yml.",
+ "questions": [
+  "How do I rename a module in my collection without breaking users?",
+  "How do I redirect a module to a different collection?",
+  "Does a redirect need the FQCN even within the same collection?",
+  "How do I rename modules for Ansible 2.9 users?"
+ ],
+ "answer_card": {
+  "title": "Rename or redirect plugins in a collection",
+  "answer_md": "```yaml\nplugin_routing:\n  modules:\n    old_cloud:\n      redirect: foo.bar.new_cloud\n      deprecation:\n        removal_version: 2.0.0\n        warning_text: Use foo.bar.new_cloud instead.\n```\nAlways use the **FQCN** of the target, even in the same collection. Ansible 2.9 doesn't read `meta/runtime.yml`; use symlinks there. ansible-base 2.10+ prefers `runtime.yml` over symlinks.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/module_lifecycle.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:03+00:00"
+}

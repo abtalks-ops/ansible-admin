@@ -9,8 +9,8 @@ Phase 1 covers **ansible-core 2.22 only** and is **search only**: hybrid keyword
 | | |
 |---|---|
 | Passages | 4,014 (2,922 from the ansible-core docs, 1,092 from `ansible.builtin` plugin docs) |
-| Index size | 5.8 MB (1.6 MB of int8 vectors + 4.2 MB of text and metadata; about 2 MB gzipped on the wire) |
-| First download | 55 MB in total: index 5.8 MB, embedder 34.5 MB, ONNX runtime 14.3 MB, app 0.6 MB |
+| Index size | 14.1 MB with enrichment (17,742 int8 vectors, 6.9 MB, plus 7.2 MB of text, questions and answer cards; about 9 MB on the wire). Without enrichment it was 5.8 MB. |
+| First download | about 63 MB in total: index 14.1 MB (about 9 MB compressed), embedder 34.5 MB, ONNX runtime 14.3 MB, app 0.6 MB |
 | Query time | 40 to 200 ms in desktop Chromium (WASM, one thread) |
 
 Retrieval on the 324-question golden set, without enrichment (a page-level hit counts):
@@ -21,9 +21,15 @@ Retrieval on the 324-question golden set, without enrichment (a page-level hit c
 | Vector (bge-small, int8) | 61.4% | 83.0% | 88.3% | 0.707 |
 | **Hybrid (RRF)** | **62.0%** | **86.1%** | **91.7%** | **0.727** |
 
-On the 107 questions about the 48 pilot pages, hybrid recall@5 is 84/107 (78.5%).
+With every page enriched (summary, likely questions, answer card; written with a Claude subscription):
 
-**With the pilot enrichment** (198 chunks, written blind to the golden set), hybrid recall@5 rises to **89.8% overall** and **99/107 (92.5%) on the pilot pages**. The index grows to 6.3 MB. Questions drive most of the gain: run `ENRICH_ROWS=questions|card|none npm run build:index` to compare. With only 5% of chunks enriched, those chunks also attract some unrelated queries: non-pilot recall@1 drops from 145 to 127 of 217. That bias should mostly go away once every chunk is enriched. The golden set is kept outside the repo for now, so the enrichment writer can't see it.
+| Mode | Recall@1 | Recall@5 | Recall@10 | MRR |
+|---|---|---|---|---|
+| Keyword (BM25) | 64.8% | 90.4% | 95.4% | 0.761 |
+| Vector (bge-small, int8) | 66.0% | 92.0% | 96.9% | 0.772 |
+| **Hybrid (RRF)** | **70.4%** | **95.1%** | **96.9%** | **0.810** |
+
+Hybrid recall@5 went from 86.1% to 95.1% (about +9 points), and on the 107 pilot-page questions from 84 to 98. Four non-pilot questions got worse (g113, g148, g223, g303) while 33 got better. Embedding only the questions, not the card title, gives 95.4% recall@5 but lower recall@1 (68.8%) and saves 1.5 MB; the card title rows stay in. The golden set is kept outside the repo, so the enrichment writer can't see it.
 
 ## How it works
 

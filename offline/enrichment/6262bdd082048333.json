@@ -1,0 +1,19 @@
+{
+  "chunk_id": "6262bdd082048333",
+  "chunk_hash": "6262bdd082048333",
+  "summary": "Ansible facts hold remote system data such as OS, IP addresses and filesystems, and live in the ansible_facts variable. They are also exposed as top-level ansible_* variables unless INJECT_FACTS_AS_VARS is disabled. You can list all facts with a debug task on ansible_facts, or ad hoc with the setup module.",
+  "questions": [
+    "How do I see every fact Ansible gathers about a host?",
+    "What's the ad-hoc command to dump facts for one server?",
+    "Why can I use ansible_hostname as a variable directly?",
+    "How do I stop facts from being injected as top-level ansible_ variables?",
+    "Where are gathered facts stored in a playbook?"
+  ],
+  "answer_card": {
+    "title": "Viewing all facts for a host",
+    "answer_md": "Facts are stored in `ansible_facts`. To print them in a play:\n\n```yaml\n- name: Print all available facts\n  ansible.builtin.debug:\n    var: ansible_facts\n```\n\nOr ad hoc:\n\n```shell\nansible <hostname> -m ansible.builtin.setup\n```\n\nBy default some facts are also available as top-level `ansible_*` variables. Turn that off with the `INJECT_FACTS_AS_VARS` setting.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:17:08+00:00"
+}

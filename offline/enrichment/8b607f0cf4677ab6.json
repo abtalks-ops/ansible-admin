@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8b607f0cf4677ab6",
+ "chunk_hash": "8b607f0cf4677ab6",
+ "summary": "Explains check mode for ad hoc commands: with `-C`/`--check`, Ansible reports what it would do without changing remote systems.",
+ "questions": [
+  "How do I do a dry run of an ad hoc command?",
+  "What does the -C flag do?",
+  "Will check mode actually create files on the remote host?"
+ ],
+ "answer_card": {
+  "title": "Dry-run ad hoc commands with check mode",
+  "answer_md": "Add `-C` or `--check` and Ansible makes no changes on remote systems:\n```bash\nansible all -m copy -a \"content=foo dest=/root/bar.txt\" -C\n```\nHere `/root/bar.txt` is not created or updated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:04+00:00"
+}

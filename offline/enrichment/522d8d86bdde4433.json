@@ -1,0 +1,18 @@
+{
+  "chunk_id": "522d8d86bdde4433",
+  "chunk_hash": "522d8d86bdde4433",
+  "summary": "subversion options: checkout, dest, executable, export, force to discard changes, in_place, password (leaks via argv before svn 1.10), repo, revision, switch, update and username.",
+  "questions": [
+    "How do I export an SVN tree without .svn metadata?",
+    "How do I check out a specific SVN revision?",
+    "Is passing an svn password safe?",
+    "What happens if there are local modifications?"
+  ],
+  "answer_card": {
+    "title": "subversion parameters",
+    "answer_md": "- `repo` (required), `dest`\n- `revision` (HEAD, aliases `rev`, `version`)\n- `export` (no): export instead of checkout\n- `force` (no): discard modifications (otherwise fails)\n- `in_place` (no): checkout over existing dir\n- `username`, `password`: before svn 1.10 password leaks into argv; 1.10+ uses stdin\n- `checkout`, `update`, `switch` (yes)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/subversion_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

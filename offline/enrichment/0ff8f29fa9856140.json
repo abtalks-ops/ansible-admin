@@ -1,0 +1,16 @@
+{
+ "chunk_id": "0ff8f29fa9856140",
+ "chunk_hash": "0ff8f29fa9856140",
+ "summary": "The hash filter returns a configurable hash of input data, SHA-1 by default.",
+ "questions": [
+  "How do I hash a string with Ansible?",
+  "What algorithm does the hash filter use by default?"
+ ],
+ "answer_card": {
+  "title": "hash filter",
+  "answer_md": "`{{ data | hash }}` returns a hash of the input, **SHA-1** by default; the algorithm is configurable.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/hash_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "b01083e7b78a7d9c",
+ "chunk_hash": "b01083e7b78a7d9c",
+ "summary": "ansible-core 2.11 made list_no_log_values, list_deprecations and handle_aliases in ansible.module_utils.common.parameters private; use ArgumentSpecValidator.validate() instead.",
+ "questions": [
+  "Can I still call handle_aliases from module_utils.common.parameters?",
+  "What replaces list_no_log_values?"
+ ],
+ "answer_card": {
+  "title": "parameters helpers are now private",
+  "answer_md": "`list_no_log_values`, `list_deprecations` and `handle_aliases` in `ansible.module_utils.common.parameters` are **private** now. Use **`ArgumentSpecValidator.validate()`**, whose result exposes aliases, no_log values and deprecations.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.11.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:22:29+00:00"
+}

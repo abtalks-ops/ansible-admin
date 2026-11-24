@@ -1,0 +1,18 @@
+{
+  "chunk_id": "231d3472a6086481",
+  "chunk_hash": "231d3472a6086481",
+  "summary": "Custom callbacks are activated, depending on NEEDS_ENABLED, by placing them in a configured callback directory or collection and referencing them by FQCN. They load in alphanumeric order. Most shipped callbacks are disabled by default and must be listed in callbacks_enabled.",
+  "questions": [
+    "How do I turn on the timer and profile_roles callbacks?",
+    "In what order do callback plugins run?",
+    "Why isn't my custom callback doing anything?",
+    "How do I enable a callback from a collection?"
+  ],
+  "answer_card": {
+    "title": "Enabling callback plugins",
+    "answer_md": "Most shipped callbacks are disabled by default. Enable them in `ansible.cfg`:\n\n```ini\ncallbacks_enabled = timer, mail, profile_roles, collection_namespace.collection_name.custom_callback\n```\n\nCustom callbacks go in a configured callback directory or a collection (referenced by FQCN). Whether they must be listed depends on the plugin's `NEEDS_ENABLED` property. Plugins load in alphanumeric file order, so `1_first.py` runs before `2_second.py`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/callback.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

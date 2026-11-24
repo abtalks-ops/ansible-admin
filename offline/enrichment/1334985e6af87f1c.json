@@ -1,0 +1,19 @@
+{
+  "chunk_id": "1334985e6af87f1c",
+  "chunk_hash": "1334985e6af87f1c",
+  "summary": "An aws_ec2 inventory config for us-east-1 and us-east-2 using keyed_groups to build tag_Name_ and role groups from tags, groups to create development and private_only groups from conditions, and compose to set ansible_host to the public IP with a private IP fallback. Literal strings in compose need two levels of quotes.",
+  "questions": [
+    "How do I group EC2 instances by their Name tag?",
+    "How do I put hosts without a public IP in their own group?",
+    "How do I make Ansible connect to the private IP when no public IP exists?",
+    "Why does my string value in compose need double quoting?",
+    "How do I create a group for hosts tagged with devel?"
+  ],
+  "answer_card": {
+    "title": "aws_ec2 inventory with keyed_groups, groups and compose",
+    "answer_md": "```yaml\n# demo.aws_ec2.yml\nplugin: amazon.aws.aws_ec2\nregions:\n  - us-east-1\n  - us-east-2\nkeyed_groups:\n  - key: tags.Name\n    prefix: tag_Name_\n    separator: \"\"\n  - key: tags.Role\n    prefix: role\ngroups:\n  development: \"'devel' in (tags|list)\"\n  private_only: \"public_ip_address is not defined\"\ncompose:\n  ansible_host: public_ip_address|default(private_ip_address)\n  some_inventory_wide_string: '\"Yes, you need both types of quotes here\"'\n```\n\n`compose` values are Jinja expressions, so a literal string must be wrapped in two sets of quotes.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/inventory.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:45+00:00"
+}

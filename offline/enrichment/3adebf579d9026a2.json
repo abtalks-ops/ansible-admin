@@ -1,0 +1,15 @@
+{
+ "chunk_id": "3adebf579d9026a2",
+ "chunk_hash": "3adebf579d9026a2",
+ "summary": "Assure means to reassure someone, ensure means to make sure, and insure relates to monetary insurance.",
+ "questions": [
+  "What's the difference between ensure, assure and insure?"
+ ],
+ "answer_card": {
+  "title": "Assure, ensure, insure",
+  "answer_md": "- **Assure**: give someone confidence\n- **Ensure**: make sure\n- **Insure**: financial insurance",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/spelling_word_choice.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

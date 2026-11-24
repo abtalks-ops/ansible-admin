@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ca1adbe4d147e39a",
+ "chunk_hash": "ca1adbe4d147e39a",
+ "summary": "The script inventory plugin runs an executable that returns inventory JSON, accepting --list and --host (used only without _meta); it doesn't cache, and since 2.19 directory sources no longer ignore .ini files by default.",
+ "questions": [
+  "What arguments must a dynamic inventory script support?",
+  "How do I avoid Ansible calling my inventory script once per host?",
+  "Does Ansible cache inventory script results?",
+  "Where did the old contrib inventory scripts go?"
+ ],
+ "answer_card": {
+  "title": "script inventory plugin",
+  "answer_md": "`ansible.builtin.script` runs an executable that returns inventory JSON. The script must accept `--list` and `--host <hostname>`. `--host` is only called if the output has **no `_meta`** key, so include `_meta.hostvars` to avoid one extra call per host.\n\n- Enabled by default; results aren't cached (scripts handle their own caching).\n- Old bundled scripts live at https://github.com/ansible-community/contrib-scripts/.\n- Since 2.19, a directory inventory source no longer ignores `.ini` files by default (configurable).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/script_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

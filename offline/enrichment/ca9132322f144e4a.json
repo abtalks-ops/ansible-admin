@@ -1,0 +1,17 @@
+{
+  "chunk_id": "ca9132322f144e4a",
+  "chunk_hash": "ca9132322f144e4a",
+  "summary": "Explains basic when conditionals: a raw Jinja2 expression without curly braces evaluated per host, with an example enabling an SELinux boolean only where SELinux is enabled.",
+  "questions": [
+    "How do I write a when condition in Ansible?",
+    "Do I need curly braces in a when clause?",
+    "How do I run a task only when SELinux is enabled?"
+  ],
+  "answer_card": {
+    "title": "Basic when conditionals",
+    "answer_md": "Add `when:` with a raw Jinja2 expression (no `{{ }}`). The task runs on hosts where it's true:\n\n```yaml\n- ansible.posix.seboolean:\n    name: mysql_connect_any\n    state: true\n    persistent: true\n  when: ansible_selinux.status == \"enabled\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

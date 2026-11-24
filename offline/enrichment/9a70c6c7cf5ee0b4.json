@@ -1,0 +1,16 @@
+{
+  "chunk_id": "9a70c6c7cf5ee0b4",
+  "chunk_hash": "9a70c6c7cf5ee0b4",
+  "summary": "slurp options: armor (base64 encode, default true, added 2.21) and the required src file path.",
+  "questions": [
+    "Can slurp return plain text instead of base64?",
+    "Can slurp read a directory?"
+  ],
+  "answer_card": {
+    "title": "slurp parameters",
+    "answer_md": "- `src` (required, alias `path`): a file, not a directory\n- `armor` (true, 2.21+): base64-encode; set `false` to get UTF-8 text (risky for binary/non-UTF-8)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/slurp_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "chunk_id": "2b272a0cc2ca342d",
+ "chunk_hash": "2b272a0cc2ca342d",
+ "summary": "Lists commands the sample setup enables: running the whole site, one tag, one tier, a location via --limit, host slices, ad hoc commands, and previewing with --list-tasks and --list-hosts.",
+ "questions": [
+  "How do I run only NTP-related tasks across all servers?",
+  "How do I deploy to 10 servers at a time with --limit?",
+  "How can I see which tasks would run before running a playbook?",
+  "How can I see which hosts a playbook would target?",
+  "How do I reboot all servers in a group ad hoc?"
+ ],
+ "answer_card": {
+  "title": "Common commands with the sample setup",
+  "answer_md": "```shell\nansible-playbook -i production site.yml                       # everything\nansible-playbook -i production site.yml --tags ntp            # just NTP\nansible-playbook -i production webservers.yml                 # one tier\nansible-playbook -i production webservers.yml --limit boston  # one location\nansible-playbook -i production webservers.yml --limit boston[0:9]\nansible-playbook -i production webservers.yml --limit boston[10:19]\n\nansible boston -i production -m ping\nansible boston -i production -m command -a '/sbin/reboot'\n\n# preview\nansible-playbook -i production webservers.yml --tags ntp --list-tasks\nansible-playbook -i production webservers.yml --limit boston --list-hosts\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/tips_tricks/sample_setup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

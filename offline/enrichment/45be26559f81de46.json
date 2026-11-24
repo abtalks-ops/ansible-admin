@@ -1,0 +1,15 @@
+{
+ "chunk_id": "45be26559f81de46",
+ "chunk_hash": "45be26559f81de46",
+ "summary": "Modules should use type='path' in argument_spec, which expands ~ and shell variables, instead of os.path.expanduser.",
+ "questions": [
+  "How do I expand ~ in a module path argument?"
+ ],
+ "answer_card": {
+  "title": "use-argspec-type-path",
+  "answer_md": "Use `type='path'` in the argument_spec instead of `os.path.expanduser`; it ensures a string and expands `~` and shell variables.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/use-argspec-type-path.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:05+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "a6f69ef304555dc0",
+ "chunk_hash": "a6f69ef304555dc0",
+ "summary": "Ansible-base 2.10 lets collection cache plugins be used for inventory caching, and removed undocumented FILE_COMMON_ARGUMENTS entries that some action plugins relied on.",
+ "questions": [
+  "Can I use a cache plugin from a collection for inventory caching?",
+  "My action plugin broke because FILE_COMMON_ARGUMENTS lost src, what do I do?"
+ ],
+ "answer_card": {
+  "title": "Collection cache plugins and FILE_COMMON_ARGUMENTS",
+  "answer_md": "- Cache plugins from **collections** can now be used for **inventory** caching, not only facts.\n- Undocumented `FILE_COMMON_ARGUMENTS` entries `src`, `follow`, `force`, `content`, `backup`, `remote_src`, `regexp`, `delimiter`, `directory_mode` were removed; action plugins using them must handle those args themselves.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_base_2.10.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:22:29+00:00"
+}

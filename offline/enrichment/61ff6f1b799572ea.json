@@ -1,0 +1,16 @@
+{
+ "chunk_id": "61ff6f1b799572ea",
+ "chunk_hash": "61ff6f1b799572ea",
+ "summary": "community.general will make all module utils, plugin utils and doc fragments private in 13.0.0; this doesn't affect playbook use.",
+ "questions": [
+  "Can I import community.general module_utils in my own collection?",
+  "Will community.general 13 break my playbooks by making utils private?"
+ ],
+ "answer_card": {
+  "title": "community.general utils becoming private",
+  "answer_md": "In **community.general 13.0.0**, all module utils, plugin utils and doc fragments become **private** and may break even in bugfix releases. If you import them in your own code, comment on the upstream issue. Using community.general modules in tasks, roles and playbooks is not affected.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:43+00:00"
+}

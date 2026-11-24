@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a357cc286f08c4dd",
+ "chunk_hash": "a357cc286f08c4dd",
+ "summary": "lowlydba.sqlserver requires ansible-core 2.19+, and explicit false values and several options (backup compress/encryption/azure, install_script deployment_method) now actually take effect.",
+ "questions": [
+  "Why did my lowlydba.sqlserver backup become compressed after upgrading?",
+  "Does dtc_support_enabled: false now disable the setting?",
+  "Which ansible-core does lowlydba.sqlserver need?"
+ ],
+ "answer_card": {
+  "title": "lowlydba.sqlserver breaking changes",
+  "answer_md": "- `requires_ansible` raised to **>= 2.19**.\n- `availability_group`: explicit `false` for `dtc_support_enabled`, `basic_availability_group`, `database_health_trigger` or `is_distributed_ag` now **disables** the setting.\n- `backup`: `compress`, `encryption_certificate`, `azure_base_url`, `azure_credential` now take effect (previously ignored).\n- `install_script`: `deployment_method` now takes effect (previously always `NoTransaction`).\n- `login` and `sa`: explicit `false` for `password_policy_enforced` or `password_expiration_enabled` now disables them.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

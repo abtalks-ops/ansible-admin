@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fa279ad44983fcad",
+ "chunk_hash": "fa279ad44983fcad",
+ "summary": "NX-OS supports CLI over SSH (network_cli) with enable via become since 2.5.3, and NX-API over HTTP(S) (httpapi) via web proxy without enable mode; outputs are stdout[0] and stdout[0].messages[0], and local is deprecated.",
+ "questions": [
+  "Should I use CLI or NX-API for Nexus switches?",
+  "Does NX-API support enable mode?",
+  "How do I use enable mode on NX-OS?"
+ ],
+ "answer_card": {
+  "title": "Cisco NX-OS connection options",
+  "answer_md": "| | CLI | NX-API |\n|---|---|---|\n| Protocol | SSH | HTTP(S) |\n| Credentials | SSH keys/agent or `-u myuser -k` | HTTPS certificates if present |\n| Indirect access | bastion | web proxy |\n| `ansible_connection` | `ansible.netcommon.network_cli` | `ansible.netcommon.httpapi` |\n| Enable mode | `ansible_become: true`, `become_method: enable`, `become_password` (since 2.5.3) | not supported |\n| Output | `stdout[0].` | `stdout[0].messages[0].` |\n\n`ansible_connection: local` is deprecated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_nxos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

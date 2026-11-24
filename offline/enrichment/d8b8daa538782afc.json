@@ -1,0 +1,15 @@
+{
+ "chunk_id": "d8b8daa538782afc",
+ "chunk_hash": "d8b8daa538782afc",
+ "summary": "Prefer positive statements over negative ones because they're clearer and easier to translate, e.g. 'Save the file before closing the editor.'",
+ "questions": [
+  "Should I phrase instructions positively or negatively?"
+ ],
+ "answer_card": {
+  "title": "Avoid negative constructions",
+  "answer_md": "State what to do rather than what not to do. Write \"Save the file before closing the editor.\" instead of \"Do not close the editor without saving.\"",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/basic_rules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:01+00:00"
+}

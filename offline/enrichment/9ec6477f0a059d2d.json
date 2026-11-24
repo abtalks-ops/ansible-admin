@@ -1,0 +1,15 @@
+{
+ "chunk_id": "9ec6477f0a059d2d",
+ "chunk_hash": "9ec6477f0a059d2d",
+ "summary": "product returns a list of lists of combined elements.",
+ "questions": [
+  "What does product return?"
+ ],
+ "answer_card": {
+  "title": "product return value",
+  "answer_md": "A list of lists of combined elements from the input lists.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/product_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

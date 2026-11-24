@@ -1,0 +1,17 @@
+{
+ "chunk_id": "62e20e44d5f668a7",
+ "chunk_hash": "62e20e44d5f668a7",
+ "summary": "community.postgresql deprecated the top-level groups option of postgresql_membership, to be removed in 6.0.0; use the memberships list with granted_by_any and the groups key instead.",
+ "questions": [
+  "postgresql_membership warns groups is deprecated, how do I rewrite it?",
+  "How do I remove all memberships with state exact after the change?",
+  "When will the groups option of postgresql_membership be removed?"
+ ],
+ "answer_card": {
+  "title": "postgresql_membership: groups option deprecated",
+  "answer_md": "The top-level **`groups`** option of `community.postgresql.postgresql_membership` is deprecated (removal in **6.0.0**). Use **`memberships`** entries with a `groups` key and `granted_by_any`; `target_roles` stays at the top level. An empty `memberships` list with `state: exact` replaces an empty `groups` list.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:48+00:00"
+}

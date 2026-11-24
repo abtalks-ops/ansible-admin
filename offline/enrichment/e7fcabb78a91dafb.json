@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e7fcabb78a91dafb",
+ "chunk_hash": "e7fcabb78a91dafb",
+ "summary": "Explains AnsibleModule dependency arguments: mutually_exclusive (combine with required_one_of to require exactly one), required_together, and required_one_of.",
+ "questions": [
+  "How do I require exactly one of two module options?",
+  "How do I make two options required together?",
+  "How do I stop users passing path and content at the same time?"
+ ],
+ "answer_card": {
+  "title": "Option dependencies: exclusive, together, one-of",
+  "answer_md": "```python\nmodule = AnsibleModule(argument_spec,\n  mutually_exclusive=[('path', 'content')],\n  required_one_of=[('path', 'content')],\n  required_together=[('file_path', 'file_hash')],\n)\n```\n- `mutually_exclusive`: options in a group can't be combined.\n- `required_together`: if one is given, all must be.\n- `required_one_of`: at least one must be given.\n\nCombine `mutually_exclusive` + `required_one_of` for **exactly one**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

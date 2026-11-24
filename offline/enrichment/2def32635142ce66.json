@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2def32635142ce66",
+ "chunk_hash": "2def32635142ce66",
+ "summary": "Test plugins returning non-boolean results are deprecated; results are coerced for now but become an error in ansible-core 2.23, so wrap returns in bool().",
+ "questions": [
+  "'The test plugin returned a non-boolean result' warning, how do I fix my plugin?",
+  "Will non-boolean test results break in the future?"
+ ],
+ "answer_card": {
+  "title": "Test plugins must return booleans",
+  "answer_md": "Custom test plugins must return **`True`/`False`**. Non-boolean results warn now and **error from ansible-core 2.23**. Fix:\n\n```python\ndef my_test(value):\n    return bool(compute(value))\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.18.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:08+00:00"
+}

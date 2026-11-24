@@ -1,0 +1,17 @@
+{
+ "chunk_id": "3f5a2dc6e2caaf8c",
+ "chunk_hash": "3f5a2dc6e2caaf8c",
+ "summary": "Introduces Ansible's precedence rules, which decide which value wins when the same setting is defined in several places (configuration, command line, playbook keywords, variables).",
+ "questions": [
+  "Why does a setting I changed not seem to take effect in Ansible?",
+  "Where can Ansible settings be defined, and how does Ansible decide which one wins?",
+  "What are Ansible's precedence rules for?"
+ ],
+ "answer_card": {
+  "title": "Why Ansible precedence rules matter",
+  "answer_md": "Ansible lets you control connection and execution behavior from many places: configuration settings, command-line options, playbook keywords and variables. When the same setting is defined in more than one of these, **precedence rules** decide which value is used. If a change appears to be ignored, it is usually being overridden by a higher-precedence source.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/general_precedence.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

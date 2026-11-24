@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ed1592c2b43204a2",
+ "chunk_hash": "ed1592c2b43204a2",
+ "summary": "Ansible assumes SSH keys; use --ask-pass for password logins and --ask-become-pass for sudo passwords. Load keys into ssh-agent, or use --private-key or ansible_ssh_private_key_file.",
+ "questions": [
+  "How do I use a password instead of SSH keys with Ansible?",
+  "How do I give Ansible my sudo password?",
+  "How do I use a .pem key file with Ansible?",
+  "How do I avoid typing my SSH key passphrase every run?"
+ ],
+ "answer_card": {
+  "title": "SSH keys and passwords",
+  "answer_md": "- Password SSH login: `--ask-pass`\n- Privilege escalation password: `--ask-become-pass`\n- Avoid retyping key passphrases:\n  ```bash\n  ssh-agent bash\n  ssh-add ~/.ssh/id_rsa    # or ~/.ssh/keypair.pem\n  ```\n- Or point at a key with `--private-key`, or `ansible_ssh_private_key_file` in inventory.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/connection_details.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

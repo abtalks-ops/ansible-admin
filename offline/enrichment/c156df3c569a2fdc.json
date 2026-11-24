@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c156df3c569a2fdc",
+ "chunk_hash": "c156df3c569a2fdc",
+ "summary": "'Bad address' or 'connecting to host returned an error' can mean the host key isn't in paramiko's known_hosts, since background persistent connections can't prompt; pre-populate with ssh-keyscan or set host_key_auto_add, with care.",
+ "questions": [
+  "Why does my network connection fail with Bad address?",
+  "How do I auto-accept SSH host keys for paramiko?"
+ ],
+ "answer_card": {
+  "title": "Fix 'Bad address' host key errors",
+  "answer_md": "Persistent paramiko connections run in the background and can't answer the host-key prompt. Either pre-populate known_hosts (verify the keys):\n```shell\nssh-keyscan veos01\n```\nor auto-accept (security risk):\n```shell\nexport ANSIBLE_PARAMIKO_HOST_KEY_AUTO_ADD=True\n```\n```ini\n[paramiko_connection]\nhost_key_auto_add = True\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

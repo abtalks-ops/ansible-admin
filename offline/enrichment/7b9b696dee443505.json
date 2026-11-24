@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7b9b696dee443505",
+ "chunk_hash": "7b9b696dee443505",
+ "summary": "The Python 2.6 mock library lacks some assert functions but silently passes them, so avoid assert methods marked new in Python 3 docs, verify each assertion by breaking the code, and keep module unit tests Python 2.6 compatible.",
+ "questions": [
+  "Why do my mock assertions always pass on old Python?",
+  "Do module unit tests need to be Python 2.6 compatible?",
+  "How can I verify my test assertions actually work?"
+ ],
+ "answer_card": {
+  "title": "Python 2.6 traps in mock tests",
+  "answer_md": "With the Python 2.6 `mock`, missing assert methods don't error, they just look like they passed. So:\n- don't use assert functions marked *new* in the Python 3 docs\n- run tests under Python 2.6 and break the code on purpose to confirm each assertion fails\n\nModules (and therefore their unit tests) must stay Python 2.6 compatible.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

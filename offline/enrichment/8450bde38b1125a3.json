@@ -1,0 +1,15 @@
+{
+  "chunk_id": "8450bde38b1125a3",
+  "chunk_hash": "8450bde38b1125a3",
+  "summary": "ibm.spectrum_virtualize was renamed to ibm.storage_virtualize. Both ship for now, and the old one is removed in Ansible 12.",
+  "questions": [
+    "Do I need to change ibm.spectrum_virtualize FQCNs before Ansible 12?"
+  ],
+  "answer_card": {
+    "title": "Update ibm.spectrum_virtualize FQCNs",
+    "answer_md": "Switch FQCNs from `ibm.spectrum_virtualize.*` to `ibm.storage_virtualize.*`. The old collection is removed in Ansible 12.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:26:20+00:00"
+}

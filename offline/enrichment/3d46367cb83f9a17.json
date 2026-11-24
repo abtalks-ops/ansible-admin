@@ -1,0 +1,17 @@
+{
+ "chunk_id": "3d46367cb83f9a17",
+ "chunk_hash": "3d46367cb83f9a17",
+ "summary": "Recommends publishing collection source on a platform like GitHub (personal, org, or ansible-collections), including thorough open source licensing to meet package requirements; collection_template ships with GPL v3.",
+ "questions": [
+  "Where should I host my collection's source code?",
+  "Can I get a repository under the ansible-collections GitHub organization?",
+  "What license should my collection have?"
+ ],
+ "answer_card": {
+  "title": "Publish collection source code",
+  "answer_md": "Host it on a platform like GitHub, under your account, your org, or by requesting a repo in **ansible-collections**. Include complete license information; an open source license is encouraged and required for the Ansible package. `collection_template` already includes **GNU GPL v3**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_path.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

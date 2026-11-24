@@ -1,0 +1,17 @@
+{
+  "chunk_id": "6c37b87a36cec7a2",
+  "chunk_hash": "6c37b87a36cec7a2",
+  "summary": "The ansible.builtin.varnames lookup returns a list of Ansible variable names that match given patterns.",
+  "questions": [
+    "How do I find all variables whose names match a pattern?",
+    "Is there a way to list defined variable names in a play?",
+    "How can I discover variables with a certain prefix?"
+  ],
+  "answer_card": {
+    "title": "List matching variable names with varnames",
+    "answer_md": "`lookup('ansible.builtin.varnames', '<regex>')` returns the names (not values) of Ansible variables matching the regex.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/varnames_lookup.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

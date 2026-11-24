@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0dabd879646a6275",
+ "chunk_hash": "0dabd879646a6275",
+ "summary": "community.general 13.1.0 deprecations: unused cloud, database, known_hosts and saslprep module utils, the dconf fallback without gi.repository, layman, pushbullet and spotinst_aws_elastigroup.",
+ "questions": [
+  "Is the layman module deprecated?",
+  "Will dconf work without gi.repository?",
+  "Is pushbullet being removed from community.general?"
+ ],
+ "answer_card": {
+  "title": "community.general deprecations (13.1.0)",
+  "answer_md": "- `cloud`, `database`, `known_hosts`, `saslprep` module utils: unused, removed in 13.0.0 (copy them if you use them).\n- `dconf`: fallback when `gi.repository` is unavailable removed in 15.0.0.\n- `layman`: Gentoo deprecated it; removed in 14.0.0.\n- `pushbullet`: depends on a Python 3.2-only package; removed in 13.0.0.\n- `spotinst_aws_elastigroup`: depends on a Python 2.7-only package; removed in 13.0.0.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:43+00:00"
+}

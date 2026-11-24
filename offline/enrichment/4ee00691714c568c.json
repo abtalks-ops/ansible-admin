@@ -1,0 +1,18 @@
+{
+ "chunk_id": "4ee00691714c568c",
+ "chunk_hash": "4ee00691714c568c",
+ "summary": "ansible-test is the main collection testing tool; run it from the collection root inside an ansible_collections path, target the ansible-core versions you support, and use Docker to avoid installing requirements. CI is typically Azure Pipelines or GitHub Actions via collection_template.",
+ "questions": [
+  "Where do I need to run ansible-test from when testing a collection?",
+  "Why does ansible-test say my collection isn't in an ansible_collections directory?",
+  "Can I run collection tests without installing all the dependencies locally?",
+  "What CI do big community collections use for tests?"
+ ],
+ "answer_card": {
+  "title": "Testing tools for collections",
+  "answer_md": "- Use `ansible-test` (in both `ansible` and `ansible-core`).\n- Run it **from the collection root**, which must sit under an `ansible_collections` path, e.g. `collections/ansible_collections/community/general`.\n- Test against the ansible-core versions you target.\n- Use `--docker` to run in containers without extra local requirements.\n- Large collections use Azure Pipelines; many others use GitHub Actions with the `collection_template` workflows.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_testing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:30+00:00"
+}

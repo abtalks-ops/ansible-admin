@@ -1,0 +1,19 @@
+{
+  "chunk_id": "4d0d5c7bce177562",
+  "chunk_hash": "4d0d5c7bce177562",
+  "summary": "Examples of the vars lookup: building a variable name dynamically, supplying a default, erroring on missing vars, fetching multiple play variables, combining with varnames, accessing nested values, and looping over prefixed names.",
+  "questions": [
+    "How do I read a variable whose name is concatenated from another variable?",
+    "How do I return an empty string instead of failing when a dynamic var is missing?",
+    "How do I access a sub-key of a variable fetched with the vars lookup?",
+    "How do I get ansible_play_hosts and ansible_play_batch in one query?",
+    "How do I loop over variable names with a common prefix and print their values?"
+  ],
+  "answer_card": {
+    "title": "vars lookup examples",
+    "answer_md": "```yaml\n- debug: msg=\"{{ lookup('ansible.builtin.vars', 'variabl' + myvar) }}\"\n- debug: msg=\"{{ lookup('ansible.builtin.vars', 'variabl' + myvar, default='') }}\"\n- debug: msg=\"{{ query('ansible.builtin.vars', 'ansible_play_hosts', 'ansible_play_batch') }}\"\n- debug: msg=\"{{ lookup('ansible.builtin.vars', 'variabl' + myvar).sub_var }}\"\n- debug: msg=\"{{ lookup('ansible.builtin.vars', 'ansible_play_' + item) }}\"\n  loop: [hosts, batch, hosts_all]\n```\nWithout `default`, a missing name raises an error.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/vars_lookup.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

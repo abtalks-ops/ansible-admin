@@ -1,0 +1,16 @@
+{
+ "chunk_id": "510f1c873608b609",
+ "chunk_hash": "510f1c873608b609",
+ "summary": "On CentOS Stream, AlmaLinux, Rocky and similar, enable EPEL and use the same dnf commands as Fedora; report bugs against Fedora EPEL.",
+ "questions": [
+  "How do I install Ansible on Rocky Linux or AlmaLinux?",
+  "Is Ansible available in EPEL?"
+ ],
+ "answer_card": {
+  "title": "Install Ansible from EPEL",
+  "answer_md": "1. Enable the EPEL repository.\n2. `sudo dnf install ansible` (or `ansible-core`, or collection packages) as on Fedora.\n\nReport issues in Red Hat Bugzilla against `Fedora EPEL`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

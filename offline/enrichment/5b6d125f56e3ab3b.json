@@ -1,0 +1,17 @@
+{
+ "chunk_id": "5b6d125f56e3ab3b",
+ "chunk_hash": "5b6d125f56e3ab3b",
+ "summary": "grafana.grafana changes in Ansible 12.2.0, including fixing the apt repository, switching YUM URLs to rpm.grafana.com, deb822 for newer Debian, and several Mimir and dashboard import fixes.",
+ "questions": [
+  "What changed in the grafana.grafana collection for Ansible 12.2.0?",
+  "Which YUM repo URL does the grafana role use now?",
+  "Does the grafana collection support deb822 sources?"
+ ],
+ "answer_card": {
+  "title": "grafana.grafana changes in 12.2.0",
+  "answer_md": "Highlights for `grafana.grafana` in Ansible 12.2.0:\n\n- YUM repo URLs moved from `packages.grafana.com` to `rpm.grafana.com`\n- Fixed broken Grafana apt repository addition; uses deb822 on newer Debian\n- Falls back to an empty dict when `grafana_ini` is undefined\n- Uses `grafana_ini` credentials when importing dashboards; imports custom dashboards only if the directory exists\n- Mimir fixes: config validation, default listen address/port restored, download URLs fixed\n- Latest GitHub version scraping no longer skipped in check mode",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:06+00:00"
+}

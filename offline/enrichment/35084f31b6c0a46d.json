@@ -1,0 +1,16 @@
+{
+ "chunk_id": "35084f31b6c0a46d",
+ "chunk_hash": "35084f31b6c0a46d",
+ "summary": "More netapp.ontap Ansible 15 changes: AWS Lambda for nvme subsystem, publickey, rest_cli, security, snaplock, unix users/groups, users, roles, vscan and audit modules, and GCNV for qtree, quotas, rest modules, snapshots and volumes.",
+ "questions": [
+  "Does na_ontap_volume support GCNV?",
+  "Which security modules in netapp.ontap support AWS Lambda?"
+ ],
+ "answer_card": {
+  "title": "netapp.ontap Lambda and GCNV support (part 2)",
+  "answer_md": "- **AWS Lambda:** `nvme_subsystem`, `publickey`, `rest_cli`, `security_certificates`, `security_ipsec_config`, `security_ipsec_policy`, `security_key_manager`, `security_ssh`, `snaplock_clock`, `unix_group`, `unix_user`, `user`, `user_role`, vscan modules, `vserver_audit`.\n- **GCNV:** `qtree`, `quotas`, `rest_cli`, `rest_info`, `restit`, `snapshot`, `snapshot_policy`, `volume`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:28+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "369293a48668e39f",
+ "chunk_hash": "369293a48668e39f",
+ "summary": "Example skip entries using !skip, such as validate-modules!skip and compile-2.6!skip, with a pointer to the full list of sanity tests.",
+ "questions": [
+  "How do I skip a sanity test for one file?"
+ ],
+ "answer_card": {
+  "title": "Skip entries",
+  "answer_md": "```text\nplugins/module_utils/my_util.py validate-modules!skip # waiting for bug fix\nplugins/lookup/my_plugin.py compile-2.6!skip # Python 2.6 unsupported on controller\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/ignores.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

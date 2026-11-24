@@ -1,0 +1,17 @@
+{
+  "chunk_id": "0d468b1fed852edf",
+  "chunk_hash": "0d468b1fed852edf",
+  "summary": "Shows json_query returning hash maps of name and port, and using starts_with and contains in queries, which require passing data through to_json | from_json first.",
+  "questions": [
+    "How do I return multiple fields per item with json_query?",
+    "How do I filter by name prefix with json_query?",
+    "Why do starts_with and contains fail in my json_query?"
+  ],
+  "answer_card": {
+    "title": "Projections and string functions in json_query",
+    "answer_md": "Multiple fields:\n\n```yaml\nq: \"domain.server[?cluster=='cluster1'].{name: name, port: port}\"\n```\n\nString functions need `to_json | from_json` first:\n\n```yaml\nmsg: \"{{ domain_definition | to_json | from_json | community.general.json_query(q) }}\"\nvars:\n  q: \"domain.server[?starts_with(name,'server1')].port\"   # or contains(name,'server1')\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

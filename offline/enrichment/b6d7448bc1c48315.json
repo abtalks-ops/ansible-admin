@@ -1,0 +1,11 @@
+{
+ "chunk_id": "b6d7448bc1c48315",
+ "chunk_hash": "b6d7448bc1c48315",
+ "summary": "If your question isn't answered in the FAQ, ask the Ansible community via the communication guide.",
+ "questions": [
+  "Where can I ask an Ansible question not covered by the FAQ?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

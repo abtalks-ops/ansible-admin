@@ -1,0 +1,16 @@
+{
+  "chunk_id": "0349ffd4d300e19c",
+  "chunk_hash": "0349ffd4d300e19c",
+  "summary": "Shows the append_rp and prepend_rp results and an example using recursive=True together with list_merge='append_rp' on nested data.",
+  "questions": [
+    "What does prepend_rp do in combine?",
+    "Can I use recursive and list_merge together?"
+  ],
+  "answer_card": {
+    "title": "append_rp, prepend_rp and combining options",
+    "answer_md": "With left `[1,1,2,3]` and right `[3,4,5,5]`:\n- `append_rp` gives `[1,1,2,3,4,5,5]`\n- `prepend_rp` gives `[3,4,5,5,1,1,2]`\n\nBoth options together:\n\n```jinja\n{{ default | combine(patch, recursive=True, list_merge='append_rp') }}\n```\n\nThis merges nested dicts and appends lists without duplicating shared items.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

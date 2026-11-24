@@ -1,0 +1,15 @@
+{
+  "chunk_id": "0fc3427a2b277313",
+  "chunk_hash": "0fc3427a2b277313",
+  "summary": "The none test is Jinja's builtin check for whether a variable is None.",
+  "questions": [
+    "How do I check if a variable is null/None?"
+  ],
+  "answer_card": {
+    "title": "none test",
+    "answer_md": "`value is none` returns true if the value is `None` (Jinja builtin).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/none_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

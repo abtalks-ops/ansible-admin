@@ -1,0 +1,18 @@
+{
+  "chunk_id": "7081f5e22e698ac3",
+  "chunk_hash": "7081f5e22e698ac3",
+  "summary": "Shows looping over a simple list inline or from a variable to add users, and recommends passing a list directly to modules like yum and apt instead of looping, which is faster and handles dependencies better.",
+  "questions": [
+    "How do I create multiple users with one task?",
+    "How do I loop over a list variable?",
+    "Should I loop over packages or pass a list to yum?",
+    "Why is looping over packages slow?"
+  ],
+  "answer_card": {
+    "title": "Looping over a simple list",
+    "answer_md": "```yaml\n- ansible.builtin.user:\n    name: \"{{ item }}\"\n    state: present\n    groups: \"wheel\"\n  loop:\n     - testuser1\n     - testuser2\n```\n\nOr `loop: \"{{ somelist }}\"`.\n\nFor packages, pass the list directly where the module supports it (faster, fewer dependency problems):\n\n```yaml\n- ansible.builtin.yum:\n    name: \"{{ list_of_packages }}\"\n    state: present\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

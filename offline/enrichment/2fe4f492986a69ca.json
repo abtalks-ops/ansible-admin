@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2fe4f492986a69ca",
+ "chunk_hash": "2fe4f492986a69ca",
+ "summary": "Variant of the rolling update where a QA script runs from a separate testing server against each node (via delegate_to) before it is re-added to the pool; failed hosts can be redeployed using the retry file.",
+ "questions": [
+  "How do I run a test script from a separate test server against each deployed node?",
+  "How do I redeploy only the servers that failed?"
+ ],
+ "answer_card": {
+  "title": "Run tests from a testing server during rollout",
+  "answer_md": "Delegate the test to a testing machine before re-adding the host:\n\n```yaml\n  roles:\n    - common\n    - webserver\n  tasks:\n    - ansible.builtin.script: /srv/qa_team/app_testing_script.sh --server {{ inventory_hostname }}\n      delegate_to: testing_server\n```\n\n(with the same `serial`, `pre_tasks` and `post_tasks` load balancer steps). If some servers fail, fix them and use Ansible's generated retry file to rerun on just those hosts.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "731ebe87a312758b",
+  "chunk_hash": "731ebe87a312758b",
+  "summary": "Legacy network playbooks with connection: local can still use provider authorize and auth_pass for enable mode, but become is recommended as provider dicts will be deprecated.",
+  "questions": [
+    "Can I still use authorize and auth_pass for enable mode?",
+    "Should I migrate from provider authorize to become?"
+  ],
+  "answer_card": {
+    "title": "Legacy authorize and auth_pass",
+    "answer_md": "With `connection: local`, legacy playbooks can still use:\n\n```yaml\nprovider:\n  authorize: true\n  auth_pass: \"{{ secret_auth_pass }}\"\n```\n\nMigrate to `become`; `authorize` and `provider` will be deprecated.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

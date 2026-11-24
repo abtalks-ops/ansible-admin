@@ -1,0 +1,15 @@
+{
+ "chunk_id": "4e4fec5373a446be",
+ "chunk_hash": "4e4fec5373a446be",
+ "summary": "symmetric_difference returns a unique list of elements unique to each list.",
+ "questions": [
+  "What does symmetric_difference return?"
+ ],
+ "answer_card": {
+  "title": "symmetric_difference return value",
+  "answer_md": "A unique list of elements that appear in only one of the two lists.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/symmetric_difference_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

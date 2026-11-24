@@ -1,0 +1,11 @@
+{
+ "chunk_id": "b4b313bb1042c593",
+ "chunk_hash": "b4b313bb1042c593",
+ "summary": "Notes that ansible-core includes a few swappable plugins but is mostly non-modular, and these docs explain how its parts fit together.",
+ "questions": [
+  "Is there documentation on how ansible-core works internally?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

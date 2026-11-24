@@ -1,0 +1,17 @@
+{
+  "chunk_id": "43bd3809e4f14973",
+  "chunk_hash": "43bd3809e4f14973",
+  "summary": "Explains zip (shortest list wins) and zip_longest (fills with fillvalue) for combining lists, and building a dict with dict(keys | zip(values)).",
+  "questions": [
+    "How do I pair up items from two lists?",
+    "What's the difference between zip and zip_longest?",
+    "How do I create a dictionary from a keys list and a values list?"
+  ],
+  "answer_card": {
+    "title": "Combining lists with zip and zip_longest",
+    "answer_md": "```jinja\n{{ [1,2,3] | zip(['a','b','c','d']) | list }}\n# => [[1,\"a\"],[2,\"b\"],[3,\"c\"]]   (stops at the shortest)\n\n{{ [1,2,3] | zip_longest(['a','b','c','d'], fillvalue='X') | list }}\n# => [[1,\"a\"],[2,\"b\"],[3,\"c\"],[\"X\",\"d\"]]\n```\n\nBuild a dict:\n\n```jinja\n{{ dict(keys_list | zip(values_list)) }}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

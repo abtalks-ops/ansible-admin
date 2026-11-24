@@ -1,0 +1,15 @@
+{
+ "chunk_id": "af1ae8b62efd85e5",
+ "chunk_hash": "af1ae8b62efd85e5",
+ "summary": "The native engine ships with cli_parse and fills a data structure from regex captures defined in a YAML template.",
+ "questions": [
+  "Do I need extra Python libraries for the native cli_parse engine?"
+ ],
+ "answer_card": {
+  "title": "Native parsing engine",
+  "answer_md": "No extra libraries. The native engine is built into `cli_parse`; it uses regular expressions from a YAML template file to build structured data.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

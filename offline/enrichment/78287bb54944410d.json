@@ -1,0 +1,16 @@
+{
+ "chunk_id": "78287bb54944410d",
+ "chunk_hash": "78287bb54944410d",
+ "summary": "Two RETURN block examples: simple dest, src and md5sum fields, and a nested packages dict with contains for missing and badversion lists.",
+ "questions": [
+  "What does a complete RETURN block example look like?",
+  "How do I document a dict return value with nested lists?"
+ ],
+ "answer_card": {
+  "title": "RETURN block examples",
+  "answer_md": "```yaml\nRETURN = r'''\ndest:\n    description: Destination file/path.\n    returned: success\n    type: str\n    sample: /path/to/file.txt\npackages:\n    description: Information about package requirements.\n    returned: success\n    type: dict\n    contains:\n        missing:\n            description: Packages that are missing from the system.\n            returned: success\n            type: list\n            elements: str\n            sample: [libxml2-dev]\n'''\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_documenting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

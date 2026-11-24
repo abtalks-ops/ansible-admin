@@ -1,0 +1,15 @@
+{
+ "chunk_id": "8ded58c4a3216d73",
+ "chunk_hash": "8ded58c4a3216d73",
+ "summary": "Putting custom modules and plugins in a collection makes them usable in any playbook or role and easy to share via Galaxy; the rest of the page covers standalone alternatives.",
+ "questions": [
+  "What's the best way to make my custom modules usable from any playbook?"
+ ],
+ "answer_card": {
+  "title": "Local modules via collections",
+  "answer_md": "Create a collection: its modules and plugins work in any playbook or role and can be shared through Ansible Galaxy at any time.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

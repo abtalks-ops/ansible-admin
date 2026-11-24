@@ -1,0 +1,16 @@
+{
+ "chunk_id": "fd6363426d7735b6",
+ "chunk_hash": "fd6363426d7735b6",
+ "summary": "kubernetes.core removed the deprecated k8s inventory plugin and support for ansible-core < 2.16.",
+ "questions": [
+  "Is the kubernetes.core k8s inventory plugin still available?",
+  "Which ansible-core does kubernetes.core require?"
+ ],
+ "answer_card": {
+  "title": "kubernetes.core removed k8s inventory",
+  "answer_md": "kubernetes.core (Ansible 12.0.0) **removed the deprecated `k8s` inventory plugin** and dropped support for ansible-core **< 2.16**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

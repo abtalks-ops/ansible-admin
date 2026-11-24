@@ -1,0 +1,18 @@
+{
+  "chunk_id": "a782f0c70f60f85f",
+  "chunk_hash": "a782f0c70f60f85f",
+  "summary": "Unmaintained collections community.azure, gluster.gluster, hpe.nimble, netapp.aws, netapp.azure, netapp.elementsw and netapp.um_info were removed from Ansible 10 but can still be installed with ansible-galaxy. community.sap was renamed to community.sap_libs, and purestorage.fusion was removed.",
+  "questions": [
+    "How do I keep using gluster.gluster after upgrading to Ansible 10?",
+    "What is community.sap called now?",
+    "Can I still install netapp.elementsw?",
+    "Why did my community.azure modules disappear?"
+  ],
+  "answer_card": {
+    "title": "Getting removed collections back",
+    "answer_md": "These were removed from the Ansible 10 package as unmaintained but can still be installed manually: `community.azure`, `gluster.gluster`, `hpe.nimble`, `netapp.aws`, `netapp.azure`, `netapp.elementsw`, `netapp.um_info`.\n\n```shell\nansible-galaxy collection install gluster.gluster\n```\n\n`community.sap` is now `community.sap_libs`, so update your FQCNs. `purestorage.fusion` was removed.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:23:46+00:00"
+}

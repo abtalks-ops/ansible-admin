@@ -1,0 +1,17 @@
+{
+ "chunk_id": "158355e0151cf472",
+ "chunk_hash": "158355e0151cf472",
+ "summary": "Read files in binary mode and decode with to_text(errors='surrogate_or_strict'), handling UnicodeError; write with to_bytes. Ansible assumes UTF-8.",
+ "questions": [
+  "How should I read a UTF-8 file in Ansible code portable across Python versions?",
+  "What encoding does Ansible assume for text?",
+  "Do I need to catch UnicodeError when writing files?"
+ ],
+ "answer_card": {
+  "title": "Reading and writing files",
+  "answer_md": "```python\nwith open('file.txt', 'rb') as f:\n    b_data = f.read()\n    try:\n        data = to_text(b_data, errors='surrogate_or_strict')\n    except UnicodeError:\n        pass  # show a helpful error\n\nwith open('file.txt', 'wb') as f:\n    f.write(to_bytes(some_text_string))\n```\nAnsible assumes **UTF-8**. No need to catch `UnicodeError` when writing.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_python_3.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

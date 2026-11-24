@@ -1,0 +1,16 @@
+{
+ "chunk_id": "28c090a514ac6bad",
+ "chunk_hash": "28c090a514ac6bad",
+ "summary": "community.postgresql deprecates the db alias in postgresql_info and postgresql_user in favor of login_db, and keep_comments_at_rules in postgresql_pg_hba now does nothing.",
+ "questions": [
+  "What replaces the db argument in postgresql_user?",
+  "Does keep_comments_at_rules still do anything in postgresql_pg_hba?"
+ ],
+ "answer_card": {
+  "title": "community.postgresql deprecations",
+  "answer_md": "- `postgresql_info` and `postgresql_user`: the `db` alias is deprecated; use **`login_db`**.\n- `postgresql_pg_hba`: `keep_comments_at_rules` is deprecated and has no effect (comments stay with their rules by default); removed in 5.0.0.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "cda145e283eb3653",
+  "chunk_hash": "cda145e283eb3653",
+  "summary": "Ansible gathers facts at the start of each play by default. You can turn this off with gather_facts: false at the play level to improve scalability, especially with very large numbers of hosts.",
+  "questions": [
+    "How do I skip fact gathering to make my play faster?",
+    "Where do I put gather_facts: false?",
+    "Does disabling facts help with huge inventories?"
+  ],
+  "answer_card": {
+    "title": "Turning off fact gathering",
+    "answer_md": "Set `gather_facts` on the play:\n\n```yaml\n- hosts: whatever\n  gather_facts: false\n```\n\nThis helps performance with very many hosts, or when you already know everything about your systems.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:17:08+00:00"
+}

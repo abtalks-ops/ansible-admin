@@ -1,0 +1,19 @@
+{
+ "chunk_id": "a08e779c101b3356",
+ "chunk_hash": "a08e779c101b3356",
+ "summary": "Recommends running integration tests in Docker or restricted environments, shows running all or specific targets with ansible-test integration, using -vvv or --retry-on-error, and notes ansible-test isn't getting new collection-testing features.",
+ "questions": [
+  "How do I run integration tests for my collection in a container?",
+  "How do I run only one integration test target?",
+  "How can I get more verbose output when an integration test fails?",
+  "Which Docker image should I use for cloud module integration tests?",
+  "Is ansible-test still being actively developed for collections?"
+ ],
+ "answer_card": {
+  "title": "Run collection integration tests",
+  "answer_md": "Run in Docker since tests can install packages and start services:\n```shell-session\nansible-test integration --docker fedora -v\nansible-test integration --docker fedora -v connection_bar\n```\n- Multiple target names are allowed (directory names under `tests/integration/targets/`).\n- Use `-vvv`, or `--retry-on-error` to rerun failures more verbosely.\n- Use the `default` image for platform-independent tests such as cloud modules.\n\n`ansible-test` no longer gets feature enhancements for new collection testing needs; discussion is on the Ansible Forum (`collection-test-strat` tag).",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_testing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

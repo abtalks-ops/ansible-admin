@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a1b2a7f065272f38",
+ "chunk_hash": "a1b2a7f065272f38",
+ "summary": "httpapi requests use HTTP Basic by default. Implement update_auth() to pull a token (like a cookie) from responses and return headers to merge, or implement login() to call a login endpoint, which runs once up front and again on a 401.",
+ "questions": [
+  "How do I use token auth in an httpapi plugin?",
+  "How do I handle session cookies in httpapi?",
+  "When is the httpapi login method called?"
+ ],
+ "answer_card": {
+  "title": "httpapi authentication hooks",
+  "answer_md": "Default is HTTP Basic auth.\n\n- **`update_auth(self, response, response_text)`**: inspect responses for a token; return a dict to merge into headers (the default does this for cookies):\n  ```python\n  def update_auth(self, response, response_text):\n      cookie = response.info().get('Set-Cookie')\n      return {'Cookie': cookie} if cookie else None\n  ```\n  If the token goes elsewhere (for example a query string), store it on the instance and add it in `send_request()`.\n- **`login(self, username, password)`**: call an explicit login endpoint. Runs once before other requests, and by default once more on an HTTP 401.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_plugins_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

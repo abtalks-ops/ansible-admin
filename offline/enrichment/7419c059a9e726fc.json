@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7419c059a9e726fc",
+ "chunk_hash": "7419c059a9e726fc",
+ "summary": "Add -o ServerAliveInterval=N to ssh_args, or set it in your SSH config, so Ansible notices dead targets quickly instead of waiting for TCP timeout; with ServerAliveCountMax=3 the wait is tripled.",
+ "questions": [
+  "Ansible hangs for a long time when a host dies, how do I detect it faster?",
+  "Where do I set ServerAliveInterval for Ansible?"
+ ],
+ "answer_card": {
+  "title": "Detect dead targets faster",
+  "answer_md": "Add a keepalive to SSH args:\n\n```ini\n[ssh_connection]\nssh_args = -C -o ControlMaster=auto -o ControlPersist=60s -o ServerAliveInterval=15\n```\n\nThe default `ServerAliveCountMax=3` means the session ends after about 3 × the interval without replies.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

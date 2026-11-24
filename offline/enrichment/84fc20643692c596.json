@@ -1,0 +1,17 @@
+{
+ "chunk_id": "84fc20643692c596",
+ "chunk_hash": "84fc20643692c596",
+ "summary": "Action plugins combine local processing with module functionality; subclass ActionBase as ActionModule and call _execute_module to run the underlying module, then modify its return data.",
+ "questions": [
+  "How do I write an action plugin that wraps a module?",
+  "How does an action plugin call the real module?",
+  "When should I use an action plugin?"
+ ],
+ "answer_card": {
+  "title": "Action plugin basics",
+  "answer_md": "```python\nfrom ansible.plugins.action import ActionBase\n\nclass ActionModule(ActionBase):\n    def run(self, tmp=None, task_vars=None):\n        module_return = self._execute_module(module_name='<NAME_OF_MODULE>',\n                                             module_args=module_args,\n                                             task_vars=task_vars, tmp=tmp)\n```\nAction plugins run on the control node, letting you mix local data/processing with a module and post-process its result.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

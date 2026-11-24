@@ -1,0 +1,16 @@
+{
+  "chunk_id": "90e6ca0ecb4a4558",
+  "chunk_hash": "90e6ca0ecb4a4558",
+  "summary": "The debugger is off by default and can be enabled with the debugger keyword, via configuration/environment variable, or as a strategy.",
+  "questions": [
+    "How do I turn on the Ansible debugger?",
+    "Is the task debugger enabled by default?"
+  ],
+  "answer_card": {
+    "title": "Ways to enable the debugger",
+    "answer_md": "It's off by default. Enable it with:\n- the **`debugger`** keyword\n- **configuration** or an **environment variable**\n- the **debug strategy**",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_debugger.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:03:26+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "5e10142917c3f03c",
+ "chunk_hash": "5e10142917c3f03c",
+ "summary": "community.general deprecated rhsm_repository state present/absent (use enabled/disabled, removal 10.0.0), and stackdriver and webfaction modules whose APIs no longer exist (removal 9.0.0).",
+ "questions": [
+  "rhsm_repository state present is deprecated, what should I use?",
+  "Are the webfaction modules being removed?",
+  "Does stackdriver module still work?"
+ ],
+ "answer_card": {
+  "title": "rhsm_repository states and dead API modules",
+  "answer_md": "- `rhsm_repository`: `state: present`/`absent` deprecated (removal 10.0.0); use **`state: enabled`** / **`disabled`**.\n- Removed in 9.0.0 (APIs gone): `stackdriver`, `webfaction_app`, `webfaction_db`, `webfaction_domain`, `webfaction_mailbox`, `webfaction_site`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:02+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "92c0d5901b365e1c",
+ "chunk_hash": "92c0d5901b365e1c",
+ "summary": "Install argcomplete with pipx inject --include-apps ansible argcomplete, or pip install --user argcomplete.",
+ "questions": [
+  "How do I install argcomplete for Ansible?"
+ ],
+ "answer_card": {
+  "title": "Install argcomplete",
+  "answer_md": "pipx install: `pipx inject --include-apps ansible argcomplete`\n\npip install: `python3 -m pip install --user argcomplete`",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

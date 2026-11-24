@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0f4d8d50ffc35779",
+ "chunk_hash": "0f4d8d50ffc35779",
+ "summary": "ansible-core 2.22 major changes: non-destructive secret masking of output, the ansible.module_utils.secrets API and Ansible.Secrets C# util, Python 3.15 support, dropping Python 3.12 on the controller, and callbacks always receiving masked results (ANSIBLE_SUPPORTS_MASKING removed).",
+ "questions": [
+  "Does ansible-core 2.22 support Python 3.12 on the controller?",
+  "Can a callback opt out of receiving masked results?",
+  "What is ANSIBLE_SUPPORTS_MASKING?",
+  "Does ansible-core 2.22 support Python 3.15?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.22 major changes",
+  "answer_md": "- **Secret masking:** known secrets are redacted as `$REDACTED$` in display output, module logging and callback results. It's non-destructive; tasks still see real values.\n- **`ansible.module_utils.secrets`** API: `register_secret`, `register_secrets`, `mask_secrets`, usable on the controller and in modules. PowerShell modules use `[Ansible.Secrets.SecretMasker]::RegisterSecret()` and `MaskString()`. Secrets registered in modules or workers propagate to the controller.\n- Adds **Python 3.15**; drops **Python 3.12** on the controller.\n- Callbacks always get masked results; the `ANSIBLE_SUPPORTS_MASKING` attribute from 2.22.0b1 was removed and is ignored.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:28+00:00"
+}

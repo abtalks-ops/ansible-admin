@@ -1,0 +1,16 @@
+{
+  "chunk_id": "8bd78a07591d0d71",
+  "chunk_hash": "8bd78a07591d0d71",
+  "summary": "Notes that many Windows installers don't return error information properly over WinRM (use become if it works locally), and some installers restart WinRM/HTTP services, making Ansible think the host is unreachable.",
+  "questions": [
+    "Why does my Windows installer fail silently over WinRM but work locally?",
+    "Why does Ansible say the host is unreachable during a software install?"
+  ],
+  "answer_card": {
+    "title": "Installer errors and unreachable hosts over WinRM",
+    "answer_md": "- Many installers don't pass error info back over WinRM. If the install works locally, run the task with **`become`**.\n- Some installers restart the WinRM or HTTP services (or make them briefly unavailable), so Ansible may report the host as **unreachable**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8dabf536a098860f",
+ "chunk_hash": "8dabf536a098860f",
+ "summary": "Passing a list to the string-only `replace` filter silently converts it to a string; in ansible-core 2.19 the result stays a string, so use `map('replace', ...)` to keep a list.",
+ "questions": [
+  "Why does replace on a list return a string?",
+  "How do I run replace on every item in a list in Jinja?",
+  "My list became a string after ansible-core 2.19, why?"
+ ],
+ "answer_card": {
+  "title": "Use map('replace') to keep lists as lists",
+  "answer_md": "`replace` works only on strings, so this converts the list to a string:\n\n```yaml\n- debug:\n    msg: \"{{ ['test1', 'test2'] | replace('test', 'prod') }}\"\n```\n\nResult: `\"['prod1', 'prod2']\"` (a string). Older versions often re-parsed it as a list, hiding the mistake.\n\nApply the filter per element with `map`:\n\n```yaml\n- debug:\n    msg: \"{{ ['test1', 'test2'] | map('replace', 'test', 'prod') }}\"\n```\n\nThe result is a real list: `[\"prod1\", \"prod2\"]`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.19.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

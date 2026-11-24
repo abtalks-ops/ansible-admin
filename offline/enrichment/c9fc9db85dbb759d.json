@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c9fc9db85dbb759d",
+ "chunk_hash": "c9fc9db85dbb759d",
+ "summary": "Jinja plugins using broad `except Exception` may misbehave with container variables containing lazily reported faults such as undefined or undecryptable vault values; catch specific exceptions around minimal code.",
+ "questions": [
+  "Why does my custom filter behave wrongly with undefined values inside a dict?",
+  "Is it OK to use except Exception in a Jinja filter plugin?",
+  "How should custom filters handle vaulted values that fail to decrypt?"
+ ],
+ "answer_card": {
+  "title": "Avoid broad exception handling in Jinja plugins",
+  "answer_md": "With lazy templating, accessing the contents of a `dict` or `list` can raise errors for undefined values, undecryptable vault values and similar faults. A broad `except Exception` can swallow these and produce wrong results.\n\nCatch **specific** exception types, wrap only the **smallest** needed code, and be especially careful around code that reads container contents.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:06+00:00"
+}

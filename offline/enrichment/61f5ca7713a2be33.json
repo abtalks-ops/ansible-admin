@@ -1,0 +1,17 @@
+{
+  "chunk_id": "61f5ca7713a2be33",
+  "chunk_hash": "61f5ca7713a2be33",
+  "summary": "community.zabbix breaking changes: roles drop CentOS 7, Python 2, Debian 10 and Ubuntu 18.04, Ansible below 2.15, Python below 3.9 and Zabbix 6.2. The zabbix_agent role removes zabbix_agent_zabbix_alias, zabbix_get_package, zabbix_sender_package and all zabbix_agent2_* variables.",
+  "questions": [
+    "Can the zabbix roles still deploy to CentOS 7?",
+    "What happened to zabbix_agent2_* variables?",
+    "Is Zabbix 6.2 still supported by community.zabbix?"
+  ],
+  "answer_card": {
+    "title": "community.zabbix breaking changes",
+    "answer_md": "- Roles no longer support CentOS 7, Debian 10, Ubuntu 18.04 or Python 2.\n- Requires Ansible 2.15+ and Python 3.9+. Zabbix 6.2 is no longer supported.\n- `zabbix_agent` role: `zabbix_agent_zabbix_alias`, `zabbix_get_package`, `zabbix_sender_package` and all `zabbix_agent2_*` variables are removed.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:26:20+00:00"
+}

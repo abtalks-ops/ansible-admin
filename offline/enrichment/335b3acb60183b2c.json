@@ -1,0 +1,19 @@
+{
+  "chunk_id": "335b3acb60183b2c",
+  "chunk_hash": "335b3acb60183b2c",
+  "summary": "wait_for pauses until a timeout, a port opens or closes, a file appears or disappears, a regex shows up in a file, or connections drain. Notes cover MAC making paths look absent, symlinks being followed, and avoiding self-matches in logs.",
+  "questions": [
+    "How do I wait for a port to open after starting a service?",
+    "How do I wait for a file to appear?",
+    "How do I wait until connections drain from a node?",
+    "Why does wait_for match its own log line?",
+    "How do I wait on Windows hosts?"
+  ],
+  "answer_card": {
+    "title": "Wait for conditions with wait_for",
+    "answer_md": "`ansible.builtin.wait_for` waits for: a timeout (default), a port to open/close, a file to exist/disappear, a regex in a file, or active connections to drain.\n- Symlinks are followed.\n- With MAC (e.g. SELinux) a path may appear absent.\n- When searching logs, avoid matching Ansible's own entries: use `this t[h]ing` instead of `this thing`.\n- Windows: `ansible.windows.win_wait_for`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/wait_for_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

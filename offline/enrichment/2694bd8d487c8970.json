@@ -1,0 +1,18 @@
+{
+  "chunk_id": "2694bd8d487c8970",
+  "chunk_hash": "2694bd8d487c8970",
+  "summary": "amazon.aws breaking changes in 10.0.0: dropped ansible-core below 2.15, iam_role/iam_role_info assume_role_policy_document no longer converted to snake_case, kms_key/kms_key_info return policies renamed to key_policies, and lambda_event batch_size no longer defaults to 100 (boto3 defaults to 10 for SQS and 100 for streams).",
+  "questions": [
+    "Why did my kms_key policies return value disappear?",
+    "Why is assume_role_policy_document now in CamelCase?",
+    "What batch size does lambda_event use for SQS now?",
+    "Which ansible-core versions does amazon.aws support now?"
+  ],
+  "answer_card": {
+    "title": "amazon.aws breaking changes in Ansible 10",
+    "answer_md": "- Requires ansible-core 2.15+.\n- `iam_role` / `iam_role_info`: `assume_role_policy_document` is no longer converted from CamelCase to snake_case.\n- `kms_key` / `kms_key_info`: `policies` renamed to `key_policies` (same contents).\n- `lambda_event`: `batch_size` no longer defaults to 100. The boto3 default applies, which is 10 for SQS and 100 for streams.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:22:19+00:00"
+}

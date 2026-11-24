@@ -1,0 +1,15 @@
+{
+  "chunk_id": "419b97534065c63b",
+  "chunk_hash": "419b97534065c63b",
+  "summary": "Introduces Kerberos as a modern Windows authentication method with mutual identity verification and modern encryption such as AES.",
+  "questions": [
+    "What is Kerberos authentication and why use it for Windows?"
+  ],
+  "answer_card": {
+    "title": "What Kerberos provides",
+    "answer_md": "Kerberos is a modern Windows authentication method where client and server verify each other's identity, with support for modern encryption like **AES**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm_kerberos.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

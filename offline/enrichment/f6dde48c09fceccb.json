@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f6dde48c09fceccb",
+ "chunk_hash": "f6dde48c09fceccb",
+ "summary": "Callback plugins now receive result.result already masked at all nesting levels; numbers matching secrets become the string $REDACTED$, colliding keys get numeric suffixes, std*_lines are rebuilt, and other data written outside Display must be passed through mask_secrets.",
+ "questions": [
+  "Do callback plugins see real secret values in ansible-core 2.22?",
+  "Why did a number in my callback result become a string?",
+  "What parts of a task result are masked for callbacks?",
+  "Do I need to mask task names in my callback?"
+ ],
+ "answer_card": {
+  "title": "Secret masking in callback plugins",
+  "answer_md": "Before a callback receives a task result, every string value and string key in **`result.result`** is masked at any depth, including loop results. Existing callbacks keep working but no longer see registered secrets.\n\nOther effects:\n- An `int`/`float` whose text is a secret becomes the string `$REDACTED$`.\n- Keys that mask to the same placeholder get suffixes like `$REDACTED$ (2)`.\n- `stdout_lines`/`stderr_lines` are rebuilt from masked `stdout`/`stderr`.\n\nOnly `result.result` is masked. Task/play names, `warnings`, `deprecations`, `exception`, stats for `v2_playbook_on_stats()` and derived data are masked only via `Display()`. Anything written to files, sockets, HTTP, databases, etc. must go through `ansible.module_utils.secrets.mask_secrets()` first.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

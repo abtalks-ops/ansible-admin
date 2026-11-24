@@ -1,0 +1,16 @@
+{
+ "chunk_id": "259647cb3731323f",
+ "chunk_hash": "259647cb3731323f",
+ "summary": "New modules and plugins contributed to Ansible should always have integration tests, marked with the unsupported alias if they can't run in Ansible CI.",
+ "questions": [
+  "Do I need integration tests if my module can't run in Ansible's CI?",
+  "How do I mark integration tests that can't run in CI?"
+ ],
+ "answer_card": {
+  "title": "Integration tests for new modules",
+  "answer_md": "Yes, every new module and plugin contributed to Ansible needs integration tests. If they can't run on Ansible CI, mark them with the `unsupported` alias in the target's `aliases` file.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

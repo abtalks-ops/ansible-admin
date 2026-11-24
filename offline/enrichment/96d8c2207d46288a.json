@@ -1,0 +1,15 @@
+{
+  "chunk_id": "96d8c2207d46288a",
+  "chunk_hash": "96d8c2207d46288a",
+  "summary": "The urn test validates that a string conforms to the URN standard.",
+  "questions": [
+    "How do I check if a string is a URN?"
+  ],
+  "answer_card": {
+    "title": "urn test",
+    "answer_md": "`value is urn` checks the string conforms to the URN standard (e.g. `urn:isbn:...`).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/urn_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

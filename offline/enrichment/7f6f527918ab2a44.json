@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7f6f527918ab2a44",
+ "chunk_hash": "7f6f527918ab2a44",
+ "summary": "Ansible 9.8.0 deprecated the unmaintained frr.frr and openvswitch.openvswitch collections, which will be removed from Ansible 11 unless someone maintains them.",
+ "questions": [
+  "Is frr.frr removed from Ansible 11?",
+  "Will openvswitch.openvswitch still be in the Ansible package?",
+  "How do I keep using openvswitch modules after removal?"
+ ],
+ "answer_card": {
+  "title": "frr.frr and openvswitch.openvswitch deprecated",
+  "answer_md": "**frr.frr** and **openvswitch.openvswitch** are unmaintained and will be removed from **Ansible 11** unless someone takes them over. Install them yourself with `ansible-galaxy collection install` if needed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:28+00:00"
+}

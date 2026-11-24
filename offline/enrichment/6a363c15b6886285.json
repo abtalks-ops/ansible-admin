@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6a363c15b6886285",
+ "chunk_hash": "6a363c15b6886285",
+ "summary": "Examples of the dict lookup looping over users with item.key and item.value, with_dict on an inline dict, and using item.key in a when condition.",
+ "questions": [
+  "How do I print each user's name and phone from a dict?",
+  "How do I use with_dict with an inline dictionary?",
+  "Can I use item.key in a when condition when looping a dict?"
+ ],
+ "answer_card": {
+  "title": "dict lookup examples",
+  "answer_md": "```yaml\nvars:\n  users:\n    alice: {name: Alice Appleworth, telephone: 123-456-7890}\n    bob: {name: Bob Bananarama, telephone: 987-654-3210}\ntasks:\n  - ansible.builtin.debug:\n      msg: \"User {{ item.key }} is {{ item.value.name }} ({{ item.value.telephone }})\"\n    loop: \"{{ lookup('ansible.builtin.dict', users) }}\"\n\n  - ansible.builtin.debug:\n      msg: \"{{ item.key }}: {{ item.value }}\"\n    with_dict: {a: 1, b: 2, c: 3}\n\n  - ansible.builtin.set_fact:\n      alice_exists: true\n    loop: \"{{ lookup('ansible.builtin.dict', users) }}\"\n    when: \"'alice' in item.key\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dict_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

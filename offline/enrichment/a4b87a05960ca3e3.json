@@ -1,0 +1,18 @@
+{
+ "chunk_id": "a4b87a05960ca3e3",
+ "chunk_hash": "a4b87a05960ca3e3",
+ "summary": "Build a first inventory: with SSH key access to at least one host, create inventory.ini with a [myhosts] group of IPs or FQDNs, verify with ansible-inventory --list, and ping the group; use -u if usernames differ.",
+ "questions": [
+  "How do I create my first Ansible inventory file?",
+  "How do I test that Ansible can reach my hosts?",
+  "How do I check what's in my inventory?",
+  "What if my remote username is different from my local one?"
+ ],
+ "answer_card": {
+  "title": "Build and test a first inventory",
+  "answer_md": "Prereq: your public SSH key is in each host's `authorized_keys`.\n\n`inventory.ini`:\n```ini\n[myhosts]\n192.0.2.50\n192.0.2.51\n```\nVerify and test:\n```bash\nansible-inventory -i inventory.ini --list\nansible myhosts -m ping -i inventory.ini\n```\nAdd `-u <user>` if the remote username differs from the one on the control node.",
+  "source_url": "https://docs.ansible.com/ansible/latest/getting_started/get_started_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

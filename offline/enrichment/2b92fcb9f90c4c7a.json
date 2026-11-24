@@ -1,0 +1,15 @@
+{
+  "chunk_id": "2b92fcb9f90c4c7a",
+  "chunk_hash": "2b92fcb9f90c4c7a",
+  "summary": "Examples test if /etc/hosts is a file and select only file paths from a list.",
+  "questions": [
+    "How do I keep only regular files from a list of paths?"
+  ],
+  "answer_card": {
+    "title": "file test examples",
+    "answer_md": "```yaml\nvars:\n  my_etc_hosts_is_a_file: \"{{ '/etc/hosts' is file }}\"\n  list_of_files: \"{{ list_of_paths | select('file') }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

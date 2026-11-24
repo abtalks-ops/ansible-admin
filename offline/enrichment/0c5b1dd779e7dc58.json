@@ -1,0 +1,19 @@
+{
+  "chunk_id": "0c5b1dd779e7dc58",
+  "chunk_hash": "0c5b1dd779e7dc58",
+  "summary": "Examples of wait_for: sleeping, waiting for a port with delay, draining connections with exclusions, waiting for files or strings, avoiding self-matches in syslog, capturing named groups, waiting for lock or pid removal, custom messages, and waiting for SSH from localhost.",
+  "questions": [
+    "How do I wait for SSH to come back after a reboot from the controller?",
+    "How do I wait for a lock file to be removed?",
+    "How do I wait until a process exits?",
+    "How do I extract a value from a file once it appears?",
+    "How do I just sleep for 5 minutes in a play?"
+  ],
+  "answer_card": {
+    "title": "wait_for examples",
+    "answer_md": "```yaml\n- ansible.builtin.wait_for: {timeout: 300}\n  delegate_to: localhost\n- ansible.builtin.wait_for: {port: 8000, delay: 10}\n- ansible.builtin.wait_for: {host: 0.0.0.0, port: 8000, state: drained, exclude_hosts: 10.2.1.2}\n- ansible.builtin.wait_for: {path: /var/log/syslog, search_regex: 'tomcat [u]p'}\n- ansible.builtin.wait_for: {path: /tmp/foo, search_regex: 'completed (?P<task>\\w+)'}\n  register: waitfor   # waitfor.match_groupdict.task\n- ansible.builtin.wait_for: {path: /proc/3466/status, state: absent}\n- ansible.builtin.wait_for:\n    port: 22\n    host: '{{ (ansible_ssh_host|default(ansible_host))|default(inventory_hostname) }}'\n    search_regex: OpenSSH\n    delay: 10\n  delegate_to: localhost\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/wait_for_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:27+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7c54ddcc11f05e34",
+ "chunk_hash": "7c54ddcc11f05e34",
+ "summary": "ansible-core 2.15 fixed handlers from dynamically included roles so the last-defined handler of a given name is the one run, which changes behaviour when the same role is included multiple times with different vars and conditions.",
+ "questions": [
+  "My role handler runs only on one host after upgrading to 2.15, why?",
+  "Which handler runs when two include_role calls define the same handler name?",
+  "Does when on a block around include_role apply to its handlers?"
+ ],
+ "answer_card": {
+  "title": "Duplicate handler names with include_role",
+  "answer_md": "If several handlers share a name, the **last one added to the play** runs. Since 2.15 this also applies to handlers from `include_role`. Including the same role twice with different vars creates distinct roles, and a `when` on a wrapping `block` also applies to the included handlers. So the second include's handler (with its `when`) wins. Give handlers unique names or use `listen` if you relied on the old behaviour.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

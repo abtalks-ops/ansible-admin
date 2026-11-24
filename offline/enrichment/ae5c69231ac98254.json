@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ae5c69231ac98254",
+ "chunk_hash": "ae5c69231ac98254",
+ "summary": "A full example that sets up an IIS website with DSC: installing xWebAdministration, enabling Web-Server and ASP.NET features, creating web content, and creating an xWebsite with HTTPS/HTTP bindings and authentication settings. Ends with see-also links.",
+ "questions": [
+  "How do I set up an IIS website using Ansible and DSC?",
+  "How do I install IIS Windows features with win_dsc?",
+  "How do I configure HTTPS bindings for an IIS site with xWebsite?",
+  "Can I loop over Windows features with win_dsc?"
+ ],
+ "answer_card": {
+  "title": "Setting up an IIS website with win_dsc",
+  "answer_md": "```yaml+jinja\n- name: Install xWebAdministration module\n  win_psmodule:\n    name: xWebAdministration\n    state: present\n\n- name: Install IIS features that are required\n  win_dsc:\n    resource_name: WindowsFeature\n    Name: '{{ item }}'\n    Ensure: Present\n  loop:\n  - Web-Server\n  - Web-Asp-Net45\n\n- name: Setup web content\n  win_dsc:\n    resource_name: File\n    DestinationPath: C:\\inetpub\\IISSite\\index.html\n    Type: File\n    Contents: |\n      <html>\n      <head><title>IIS Site</title></head>\n      <body>This is the body</body>\n      </html>\n    Ensure: present\n\n- name: Create new website\n  win_dsc:\n    resource_name: xWebsite\n    Name: NewIISSite\n    State: Started\n    PhysicalPath: C:\\inetpub\\IISSite\\index.html\n    BindingInfo:\n    - Protocol: https\n      Port: 8443\n      CertificateStoreName: My\n      CertificateThumbprint: C676A89018C4D5902353545343634F35E6B3A659\n      HostName: DSCTest\n      IPAddress: '*'\n      SSLFlags: 1\n    - Protocol: http\n      Port: 8080\n      IPAddress: '*'\n    AuthenticationInfo:\n      Anonymous: false\n      Basic: true\n      Digest: false\n      Windows: true\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_dsc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

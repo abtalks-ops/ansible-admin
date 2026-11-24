@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ca0a7b68c2761df5",
+ "chunk_hash": "ca0a7b68c2761df5",
+ "summary": "ansible.utils.validate workflow: get structured data (or convert it with cli_parse), define criteria, then test with an engine; examples use jsonschema, with Red Hat support limited to its public APIs.",
+ "questions": [
+  "How do I validate network data with ansible.utils?",
+  "Which validation engine does ansible.utils provide?"
+ ],
+ "answer_card": {
+  "title": "How validation works",
+  "answer_md": "The `validate` module is in `ansible.utils`.\n1. Get structured data (or convert text with `cli_parse`).\n2. Define the criteria.\n3. Pick an engine and validate.\n\nData and criteria format depend on the engine; the examples use `ansible.utils.jsonschema`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/validate.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

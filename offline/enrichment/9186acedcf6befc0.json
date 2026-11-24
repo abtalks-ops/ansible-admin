@@ -1,0 +1,19 @@
+{
+  "chunk_id": "9186acedcf6befc0",
+  "chunk_hash": "9186acedcf6befc0",
+  "summary": "Lists WinRM limitations (no credential delegation for most auth types, blocked Windows Update API calls, failed installs, non-interactive sessions, no DPAPI) and mitigations: CredSSP or Kerberos delegation, become, or scheduled tasks.",
+  "questions": [
+    "Why can't my Windows task access a network share over WinRM?",
+    "Why do some programs refuse to install over WinRM?",
+    "How do I get around the double-hop problem in Ansible?",
+    "Why does SQL Server install fail through Ansible?",
+    "Does become remove all WinRM restrictions?"
+  ],
+  "answer_card": {
+    "title": "WinRM limitations and workarounds",
+    "answer_md": "Limitations: no credential delegation for most auth types (network resource errors), many Windows Update API calls blocked, some installers fail, sessions are non-interactive, and no DPAPI access (affects e.g. SQL Server installers).\n\nWorkarounds:\n- Use **`credssp`** or **`kerberos`** with delegation enabled.\n- Use **`become`**: runs as if local, also lifting non-interactive, WUA and DPAPI restrictions.\n- Use a **scheduled task** (`win_scheduled_task`): bypasses all restrictions but runs only commands, not modules.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "569ab2c79ccfb0d4",
+ "chunk_hash": "569ab2c79ccfb0d4",
+ "summary": "validate-modules codes for incompatible defaults, reserved argument names, invalid argument specs, invalid documentation YAML or markup, invalid examples, and bad extensions.",
+ "questions": [
+  "Why can't I name a module option 'message'?",
+  "What does invalid-documentation-markup mean?"
+ ],
+ "answer_card": {
+  "title": "validate-modules codes (invalid specs and docs)",
+  "answer_md": "- `incompatible-choices` / `incompatible-default-type`: values incompatible with type\n- `invalid-argument-name`: `message` and `syslog_facility` are reserved\n- `invalid-argument-spec(-options)`: spec or suboptions malformed\n- `invalid-documentation`, `invalid-examples`: not valid YAML\n- `invalid-documentation-markup`: bad markup in DOCUMENTATION/RETURN\n- `invalid-extension`: must be `.py` or `.ps1`\n- `invalid-module-schema`: AnsibleModule schema error",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/validate-modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:05+00:00"
+}

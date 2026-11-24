@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9302425eaf3fecbd",
+ "chunk_hash": "9302425eaf3fecbd",
+ "summary": "The password lookup generates a random password stored in a file (or reads it if it exists), supports per-host paths and /dev/null for no storage; Vault is often preferable, and it runs on the controller without become.",
+ "questions": [
+  "How do I generate a random password per host and keep it?",
+  "How do I generate a password without saving it?",
+  "Why does the password lookup fail to write to /etc?",
+  "Should I use the password lookup or Vault?"
+ ],
+ "answer_card": {
+  "title": "password lookup",
+  "answer_md": "Generates a random plaintext password and stores it at the given file path; if the file exists, its contents are returned instead. Use `{{ inventory_hostname }}` in the path for per-host passwords. Use `/dev/null` to get a new password each time without storing it.\n\nNotes:\n- If you don't need per-host random passwords, **Vault** is usually better.\n- An empty file returns an empty password.\n- Runs on the controller as the playbook user; `become` doesn't apply, so writing to places like `/etc` fails unless running as root.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/password_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:58+00:00"
+}

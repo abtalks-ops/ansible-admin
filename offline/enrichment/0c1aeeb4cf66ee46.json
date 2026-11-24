@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0c1aeeb4cf66ee46",
+ "chunk_hash": "0c1aeeb4cf66ee46",
+ "summary": "Marking a plugin option secret: true registers its value from any source; only str, string and list types are allowed (others fail to load), suboptions aren't supported, and core connection and become plugins use it for passwords and keys.",
+ "questions": [
+  "How do I make a plugin's api_token option always masked?",
+  "What happens if I mark a dict option as secret?",
+  "Can sub-options be marked secret?",
+  "Which core plugins use secret: true?"
+ ],
+ "answer_card": {
+  "title": "Mark plugin options as secret",
+  "answer_md": "```yaml\noptions:\n  api_token:\n    type: str\n    secret: true\n    env:\n      - name: MYCOLLECTION_API_TOKEN\n```\n- Registered regardless of source (env, ansible.cfg, vars, CLI, direct).\n- Only `str`, `string`, `list` (string elements registered). Other types → plugin **fails to load**.\n- Not supported on `suboptions`; use `register_secret()` after reading them.\n- Core connection and become plugins use it for passwords, keys and passphrases.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_secret_masking.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

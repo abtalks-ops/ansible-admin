@@ -1,0 +1,11 @@
+{
+ "chunk_id": "852edafc470c8128",
+ "chunk_hash": "852edafc470c8128",
+ "summary": "textfsm is a template-based state machine for semi-formatted text; the example template is stored as templates/nxos_show_interface.textfsm.",
+ "questions": [
+  "What is textfsm?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

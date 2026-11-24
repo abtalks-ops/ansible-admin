@@ -1,0 +1,16 @@
+{
+  "chunk_id": "bf0e2158fca76847",
+  "chunk_hash": "bf0e2158fca76847",
+  "summary": "Example of fail used with when to abort if a CMDB status variable isn't 'to-be-staged'.",
+  "questions": [
+    "How do I abort a play if a host isn't in the right state?",
+    "How do I combine fail and when?"
+  ],
+  "answer_card": {
+    "title": "fail example",
+    "answer_md": "```yaml\n- ansible.builtin.fail:\n    msg: The system may not be provisioned according to the CMDB status.\n  when: cmdb_status != \"to-be-staged\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fail_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

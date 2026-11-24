@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bb10ba0fe982c57f",
+ "chunk_hash": "bb10ba0fe982c57f",
+ "summary": "Shows kinit -f and klist -f to confirm a forwardable ticket (F flag), and setting GSSAPIDelegateCredentials=yes in ~/.ssh/config or ansible_ssh_common_args. Unlike psrp or winrm, the SSH plugin can't get a Kerberos ticket from a username and password, so you need a valid ticket before running.",
+ "questions": [
+  "How do I check my Kerberos ticket is forwardable?",
+  "Where do I set GSSAPIDelegateCredentials for Ansible?",
+  "Can the SSH connection plugin get a Kerberos ticket from ansible_password?",
+  "Why does Kerberos over SSH fail even though I set a password?"
+ ],
+ "answer_card": {
+  "title": "Kerberos delegation over SSH to Windows",
+  "answer_md": "Get and check a forwardable ticket; look for `F` in the flags:\n\n```bash\nkinit -f username@REALM.COM\nklist -f\n# ... Flags: FRIA\n```\n\nSet delegation in `~/.ssh/config` or as an inventory hostvar:\n\n```yaml+jinja\nansible_ssh_common_args: -o GSSAPIDelegateCredentials=yes\n```\n\nUnlike `psrp` and `winrm`, the SSH plugin **can't** get a Kerberos TGT from an explicit username and password, so you must have a valid ticket before running the playbook.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_ssh.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

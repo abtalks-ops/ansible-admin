@@ -1,0 +1,18 @@
+{
+  "chunk_id": "a18cdfdc14a2fe0e",
+  "chunk_hash": "a18cdfdc14a2fe0e",
+  "summary": "Explains vars_prompt to ask users for input (hidden by default, private: false to show), with 2.22+ masking of private values; prompts are skipped when vars are set via --extra-vars or in non-interactive runs. Defaults can be provided.",
+  "questions": [
+    "How do I prompt for a password when running a playbook?",
+    "How do I make prompt input visible?",
+    "Why isn't my vars_prompt prompting in AWX or cron?",
+    "How do I set a default for a prompted variable?"
+  ],
+  "answer_card": {
+    "title": "Prompting for input with vars_prompt",
+    "answer_md": "```yaml\n- hosts: all\n  vars_prompt:\n    - name: username\n      prompt: What is your username?\n      private: false\n    - name: password\n      prompt: What is your password?\n    - name: release_version\n      prompt: Product release version\n      default: \"1.0\"\n```\n\nInput is hidden by default (`private: false` shows it). From ansible-core 2.22, private values are masked in output. Prompts are skipped if the variable is passed via `--extra-vars` or the run is non-interactive (cron, AWX).",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_prompts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

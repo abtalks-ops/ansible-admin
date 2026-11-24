@@ -1,0 +1,17 @@
+{
+  "chunk_id": "920d83ece2b96cba",
+  "chunk_hash": "920d83ece2b96cba",
+  "summary": "Shows host vars for certificate auth with psrp and winrm (paths to public and private PEM files), the PowerShell command to enable certificate auth, and notes the private key must be unencrypted and TLS 1.3 requirements.",
+  "questions": [
+    "What inventory variables configure WinRM certificate auth?",
+    "How do I enable certificate authentication on the WinRM service?",
+    "What do I need for certificate auth over TLS 1.3?"
+  ],
+  "answer_card": {
+    "title": "Configuring certificate auth in Ansible",
+    "answer_md": "```yaml\n# psrp\nansible_connection: psrp\nansible_psrp_auth: certificate\nansible_psrp_certificate_pem: /path/public_key.pem\nansible_psrp_certificate_key_pem: /path/private_key.pem\n# winrm\nansible_connection: winrm\nansible_winrm_transport: certificate\nansible_winrm_cert_pem: /path/public_key.pem\nansible_winrm_cert_key_pem: /path/private_key.pem\n```\n\nEnable on the host: `Set-Item -Path WSMan:\\localhost\\Service\\Auth\\Certificate -Value $true`\n\nThe private key must be unencrypted. TLS 1.3 needs Python 3.8+ (or 3.7.1 / 3.6.7) and urllib3>=2.0.7.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm_certificate.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

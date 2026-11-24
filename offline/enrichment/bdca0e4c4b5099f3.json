@@ -1,0 +1,17 @@
+{
+ "chunk_id": "bdca0e4c4b5099f3",
+ "chunk_hash": "bdca0e4c4b5099f3",
+ "summary": "Inventory tips: meaningful, unique, case-sensitive group names without spaces, hyphens or leading digits, and grouping hosts by what they are, where they are, and their stage.",
+ "questions": [
+  "What are good naming rules for inventory groups?",
+  "Can inventory group names contain hyphens?",
+  "How should I organize hosts into groups?"
+ ],
+ "answer_card": {
+  "title": "Inventory grouping tips",
+  "answer_md": "- Group names must be meaningful and unique, and they're case sensitive.\n- Avoid spaces, hyphens and leading numbers (`floor_19`, not `19th_floor`).\n- Group by:\n  - **What**: topology, such as db, web, leaf, spine\n  - **Where**: datacenter, region, floor, building\n  - **When**: development, test, staging, production",
+  "source_url": "https://docs.ansible.com/ansible/latest/getting_started/get_started_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

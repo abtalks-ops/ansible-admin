@@ -1,0 +1,15 @@
+{
+ "chunk_id": "fad102f041bbedf4",
+ "chunk_hash": "fad102f041bbedf4",
+ "summary": "Write 'file system' as two words, not 'filesystem', and it refers to how an OS organizes and tracks files.",
+ "questions": [
+  "Is it 'filesystem' or 'file system' in Ansible docs?"
+ ],
+ "answer_card": {
+  "title": "File system",
+  "answer_md": "Use **file system** (two words), not \"filesystem\".",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/spelling_word_choice.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:27+00:00"
+}

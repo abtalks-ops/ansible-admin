@@ -1,0 +1,16 @@
+{
+ "chunk_id": "86276fd1da77f155",
+ "chunk_hash": "86276fd1da77f155",
+ "summary": "Examples of path_join with tuples and lists, including the case where an absolute later component replaces earlier ones.",
+ "questions": [
+  "What's an example of path_join?",
+  "What happens if a path_join component starts with a slash?"
+ ],
+ "answer_card": {
+  "title": "path_join examples",
+  "answer_md": "```yaml\n{{ ('/etc', path, 'subdir', file) | path_join }}\n# path='foo/bar', file='baz.txt' -> '/etc/foo/bar/subdir/baz.txt'\n\ntrustme: \"{{ ['/etc', 'apt', 'trusted.d', 'mykey.gpg'] | path_join }}\"  # /etc/apt/trusted.d/mykey.gpg\n\n# absolute component resets the path\nbackup_path: \"{{ ('/etc', backup_dir, backup_file) | path_join }}\"\n# backup_dir='/tmp', backup_file='/sample/baz.txt' -> '/sample/baz.txt'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/path_join_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

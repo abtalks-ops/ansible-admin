@@ -1,0 +1,17 @@
+{
+  "chunk_id": "79e0d59e8aab5b1e",
+  "chunk_hash": "79e0d59e8aab5b1e",
+  "summary": "uri options use_netrc, use_proxy and validate_certs (true).",
+  "questions": [
+    "How do I skip TLS verification in uri?",
+    "How do I stop uri from using a proxy?",
+    "How do I ignore ~/.netrc in uri?"
+  ],
+  "answer_card": {
+    "title": "uri netrc, proxy, validate_certs",
+    "answer_md": "- `validate_certs` (true)\n- `use_proxy` (true)\n- `use_netrc` (true)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/uri_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

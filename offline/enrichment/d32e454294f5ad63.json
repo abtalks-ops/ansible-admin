@@ -1,0 +1,17 @@
+{
+  "chunk_id": "d32e454294f5ad63",
+  "chunk_hash": "d32e454294f5ad63",
+  "summary": "host_group_vars options: _valid_extensions for vars files (.yml, .yaml, .json) and stage (all, task, inventory) controlling when the plugin runs, defaulting to RUN_VARS_PLUGINS.",
+  "questions": [
+    "How do I add another valid extension for vars files?",
+    "When does the host_group_vars plugin run?",
+    "What does RUN_VARS_PLUGINS control?"
+  ],
+  "answer_card": {
+    "title": "host_group_vars parameters",
+    "answer_md": "- `_valid_extensions` (`.yml`, `.yaml`, `.json`): affects vars_files, include_vars, inventory and vars plugins\n- `stage`: `all` (after inventory and on task demand), `task`, or `inventory`; unset uses global `RUN_VARS_PLUGINS`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/host_group_vars_vars.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "1b74e367ef41329a",
+  "chunk_hash": "1b74e367ef41329a",
+  "summary": "Explains matching rules: registered strings are masked wherever they appear (no length minimum or word boundaries), surrounding whitespace is stripped, empty values ignored, only strings registered, and adjacent or overlapping secrets merge into one placeholder.",
+  "questions": [
+    "Does Ansible mask a secret when it's part of a longer word?",
+    "Are trailing newlines part of a registered secret?",
+    "Can booleans or numbers be registered as secrets?"
+  ],
+  "answer_card": {
+    "title": "How registered secrets are matched",
+    "answer_md": "- Masked **anywhere** it appears, even inside longer words; no minimum length or word boundary.\n- Leading/trailing whitespace is stripped before registering, so trailing newlines don't matter.\n- Empty or whitespace-only values are ignored.\n- Only strings are registered (numbers only in cases like vaulted files; booleans/None never).\n- Adjacent or overlapping secrets merge into a **single** placeholder.\n\nThese rules may change; don't depend on exact behavior.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_secret_masking.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

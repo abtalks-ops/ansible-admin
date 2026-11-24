@@ -1,0 +1,17 @@
+{
+  "chunk_id": "22f2a84c11c1021c",
+  "chunk_hash": "22f2a84c11c1021c",
+  "summary": "Explains Windows become_flags (2.5+) logon_type values: interactive (default, bypasses WinRM limits), batch, new_credentials (like runas /netonly), and network. Flags shouldn't be used with service accounts.",
+  "questions": [
+    "What logon types can I use with become on Windows?",
+    "How do I access an SMB share with different credentials?",
+    "What does logon_type=batch do?"
+  ],
+  "answer_card": {
+    "title": "Windows become_flags: logon_type",
+    "answer_md": "Set with the `become_flags` directive or `ansible_become_flags` (not for service accounts):\n\n- `interactive` (default): same as a local process, bypasses WinRM limits; recommended\n- `batch`: like a scheduled task with a password; for users who can't log on interactively\n- `new_credentials`: caller's token locally, become user's credentials for outbound connections (like `runas /netonly`); pair with `logon_flags=netcredentials_only`\n- `network`: like normal WinRM without delegation",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

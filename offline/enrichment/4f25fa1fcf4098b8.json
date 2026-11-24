@@ -1,0 +1,15 @@
+{
+ "chunk_id": "4f25fa1fcf4098b8",
+ "chunk_hash": "4f25fa1fcf4098b8",
+ "summary": "The commonpath filter takes a required list of paths as input.",
+ "questions": [
+  "What input does the commonpath filter expect?"
+ ],
+ "answer_card": {
+  "title": "commonpath parameters",
+  "answer_md": "`_input` (list of paths, required).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/commonpath_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

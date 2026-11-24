@@ -1,0 +1,18 @@
+{
+ "chunk_id": "8a0624094b3073f1",
+ "chunk_hash": "8a0624094b3073f1",
+ "summary": "DEFAULT_VAULT_PASSWORD_FILE or the ANSIBLE_VAULT_PASSWORD_FILE environment variable sets a default vault password file (plain text or executable script), handy in CI systems like Jenkins.",
+ "questions": [
+  "How do I avoid passing --vault-password-file every time?",
+  "How do I provide the vault password in Jenkins or CI?",
+  "Which environment variable sets the vault password file?",
+  "Can the default vault password file be a script?"
+ ],
+ "answer_card": {
+  "title": "Default vault password file",
+  "answer_md": "Set the `DEFAULT_VAULT_PASSWORD_FILE` config option or the environment variable:\n\n```bash\nexport ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass.txt\n```\n\nAnsible will read the password from that file automatically, which is useful in CI such as Jenkins. The file can contain the password in plain text or be an executable script that returns it.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_using_encrypted_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

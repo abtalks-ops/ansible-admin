@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7cb5496306c62d1b",
+ "chunk_hash": "7cb5496306c62d1b",
+ "summary": "Ansible doesn't support interactive MFA, 2FA, biometrics or OTP prompts because they don't scale across many hosts; secure around Ansible with an automation user and use AWX or Automation Platform RBAC and credentials.",
+ "questions": [
+  "Can Ansible handle an MFA prompt on every SSH login?",
+  "How should I use Ansible where hosts require 2FA?"
+ ],
+ "answer_card": {
+  "title": "Ansible and MFA/2FA",
+  "answer_md": "No. Per-host interactive prompts (MFA, OTP, biometrics) don't scale. Use a dedicated **automation user** exempt from those prompts and secure access around Ansible, e.g. with **AWX/Automation Platform** RBAC, credential management and controlled job execution.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "a006ca77796a5a58",
+ "chunk_hash": "a006ca77796a5a58",
+ "summary": "Ansible masks no_log strings such as passwords as ******** everywhere they appear, so a common-word password like Admin hides that word throughout output; pick a password that won't appear elsewhere.",
+ "questions": [
+  "Why is some of my Ansible output replaced with asterisks?",
+  "Why does the word Admin show as ******** in my output?"
+ ],
+ "answer_card": {
+  "title": "Why output shows ********",
+  "answer_md": "Ansible replaces any `no_log` string, including passwords, with `********`, and it replaces **every** occurrence of that string. If your password is a common word such as `Admin`, every \"Admin\" in the output gets masked. Choose a secure password that won't appear elsewhere.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

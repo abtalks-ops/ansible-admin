@@ -1,0 +1,18 @@
+{
+ "chunk_id": "48f1403a01c7be1b",
+ "chunk_hash": "48f1403a01c7be1b",
+ "summary": "Checklist for the PR that removes migrated content from the old collection, including runtime.yml redirects for every plugin and BOTMETA cleanup, with a warning not to release before the new collection ships the content and only in a new major version after 1.0.0.",
+ "questions": [
+  "What do I remove from the old collection after migrating modules?",
+  "When is it safe to release the old collection after removing moved content?",
+  "Why must removal of migrated modules wait for a major release?",
+  "Do I need redirects for every plugin that moved?"
+ ],
+ "answer_card": {
+  "title": "Remove migrated content from the old collection",
+  "answer_md": "Remove modules, module_utils, plugins and doc fragments (with paired action plugins/modules), their sanity ignore lines, integration tests (`tests/integration/targets/`) and unit tests, and `BOTMETA.yml` entries for community.general/network. Update `meta/runtime.yml` with **redirects for every plugin** to the new collection.\n\n**Warning:** don't release this until the new collection has released with the content, or redirects break. After 1.0.0, merge such PRs only for a new **major** version.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_migrating.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

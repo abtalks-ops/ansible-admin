@@ -1,0 +1,19 @@
+{
+ "chunk_id": "28146344d95237b3",
+ "chunk_hash": "28146344d95237b3",
+ "summary": "ansible-core 2.19 deprecations: --inventory-file alias, non-boolean test results, warnings/deprecations keys in exit_json, third-party strategy plugins, ShellModule.checksum, collections.count, !!omap/!!pairs and !vault-encrypted YAML tags, importlib_resources and datetime compat shims, and bool coercion.",
+ "questions": [
+  "Is --inventory-file deprecated?",
+  "Can I keep using third-party strategy plugins like Mitogen?",
+  "How should a module emit warnings instead of the warnings key?",
+  "What replaces the !vault-encrypted YAML tag?",
+  "When will ansible.module_utils.compat.datetime be removed?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.19 deprecations (part 1)",
+  "answer_md": "- CLI `--inventory-file` alias → use `-i` / `--inventory`.\n- Jinja tests returning non-booleans are deprecated.\n- `warnings`/`deprecations` keys in `exit_json`/`fail_json` → use `AnsibleModule.warn` / `AnsibleModule.deprecate`.\n- **Strategy plugins** outside `ansible.builtin` are deprecated with no compatibility guarantees; external strategies will be removed and no alternative is planned.\n- `ShellModule.checksum` → `ActionBase._execute_remote_stat()` (removed in 2.23).\n- `common.collections.count()` → `collections.Counter()` (2.23).\n- YAML `!!omap`/`!!pairs` → standard mappings; `!vault-encrypted` → `!vault`.\n- `ansible.compat.importlib_resources` → `importlib.resources` (2.23).\n- `module_utils.compat.datetime` shims (`UTC`, `utcfromtimestamp()`, `utcnow`) removed in 2.21.\n- `bool` filter coercion of unrecognized values deprecated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

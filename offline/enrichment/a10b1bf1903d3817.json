@@ -1,0 +1,19 @@
+{
+  "chunk_id": "a10b1bf1903d3817",
+  "chunk_hash": "a10b1bf1903d3817",
+  "summary": "find options: age with units and negative values, age_stamp (mtime/atime/ctime), checksum algorithm, contains regex, depth, encoding, and exact_mode.",
+  "questions": [
+    "How do I find files older than 7 days?",
+    "How do I find files modified recently (younger than an hour)?",
+    "How do I search file contents with the find module?",
+    "How do I limit recursion depth in find?",
+    "Can find use access time instead of modification time?"
+  ],
+  "answer_card": {
+    "title": "find parameters: age, contents, depth",
+    "answer_md": "- `age`: ≥ age; negative = ≤ age. Units `s`,`m`,`h`,`d`,`w` (e.g. `1w`, `-1h`)\n- `age_stamp`: `mtime` (default), `atime`, `ctime`\n- `contains`: regex on content (files only); line-start match unless `read_whole_file`\n- `depth`: max levels (`recurse: false` = depth 1)\n- `checksum_algorithm` (sha1), `encoding`, `exact_mode` (true)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/find_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

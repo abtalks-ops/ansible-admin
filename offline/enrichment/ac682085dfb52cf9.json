@@ -1,0 +1,15 @@
+{
+ "chunk_id": "ac682085dfb52cf9",
+ "chunk_hash": "ac682085dfb52cf9",
+ "summary": "permutations returns a list of permutation lists.",
+ "questions": [
+  "What does permutations return?"
+ ],
+ "answer_card": {
+  "title": "permutations return value",
+  "answer_md": "A list of permutation lists.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/permutations_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "073c96006436965f",
+  "chunk_hash": "073c96006436965f",
+  "summary": "Explains registering loop output: the variable has a results list with one entry per item, plus overall changed/failed (true if any) and skipped (true only if all skipped).",
+  "questions": [
+    "What does a registered variable look like after a loop?",
+    "How do I tell if any loop iteration changed something?",
+    "When is a looped task marked skipped?"
+  ],
+  "answer_card": {
+    "title": "Registering a loop's results",
+    "answer_md": "With a loop, the registered variable has a **`results`** list, one module response per item. The top-level `changed` / `failed` are `true` if **any** iteration changed/failed; `skipped` is `true` only if **all** iterations were skipped.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

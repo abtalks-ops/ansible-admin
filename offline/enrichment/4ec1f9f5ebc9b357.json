@@ -1,0 +1,15 @@
+{
+  "chunk_id": "4ec1f9f5ebc9b357",
+  "chunk_hash": "4ec1f9f5ebc9b357",
+  "summary": "Example tests a registered async poll result with is started.",
+  "questions": [
+    "How do I check an async poll result has started?"
+  ],
+  "answer_card": {
+    "title": "started test example",
+    "answer_md": "```yaml\n{{ asynctaskpoll is started }}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/started_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "chunk_id": "de85c4c172c35422",
+ "chunk_hash": "de85c4c172c35422",
+ "summary": "ansible-core 2.19 breaking changes: toml library dropped for TOML inventory, assert quiet must be boolean, non-boolean conditionals error, first_found drops undefined elements with a warning, YAML loader/dumper and native_jinja internals changed, and lookup terms are always positional.",
+ "questions": [
+  "Which TOML library does the toml inventory plugin need in ansible-core 2.19?",
+  "Why does assert quiet: something fail now?",
+  "How does first_found handle undefined paths now?",
+  "Can I subclass AnsibleLoader in ansible-core 2.19?",
+  "How are terms passed to lookup plugins with with_ syntax?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.19 breaking changes (part 1)",
+  "answer_md": "- **TOML inventory:** `toml` library support removed. Use `tomli` on Python 3.10 (3.11+ has built-in parsing) and `tomli-w` to write TOML.\n- **assert:** `quiet` must be a real boolean; unknown values used to be treated as False.\n- **Conditionals:** non-boolean results are errors by default; `ALLOW_BROKEN_CONDITIONALS` makes them deprecation warnings (literal `None` or empty string then evaluate true).\n- **first_found:** undefined elements in templated `files`/`paths` are dropped with a warning instead of discarding the whole list.\n- **Internals:** `AnsibleLoader`/`AnsibleDumper` are now factory functions and can't be extended; `ansible.utils.native_jinja` was removed.\n- **Lookups:** `with_<lookup>` no longer sets `_subdir`; `terms` is always the first positional argument to `run`.\n- **Loops:** `omit` placeholders no longer leak from loop items into task templating.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

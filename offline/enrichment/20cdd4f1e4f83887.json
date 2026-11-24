@@ -1,0 +1,19 @@
+{
+  "chunk_id": "20cdd4f1e4f83887",
+  "chunk_hash": "20cdd4f1e4f83887",
+  "summary": "The pip module manages Python packages and needs name or requirements. PEP 668 externally-managed Pythons need a virtualenv or break_system_packages, virtualenv must be installed to create venvs, and setuptools is required for the Ansible interpreter.",
+  "questions": [
+    "How do I install a Python package with Ansible?",
+    "Why does pip fail with externally-managed-environment errors?",
+    "Do I need virtualenv installed on the target to create a venv?",
+    "Which pip does the pip module use by default?",
+    "Why does the pip module complain about setuptools?"
+  ],
+  "answer_card": {
+    "title": "Install Python packages with pip",
+    "answer_md": "`ansible.builtin.pip` manages Python libraries; set `name` or `requirements`.\n- On PEP 668 \"externally-managed\" systems (pip ≥ 23.0.1), use a `virtualenv` or `break_system_packages: true`.\n- `virtualenv` must be installed on the host to create one.\n- Uses the Ansible interpreter's pip by default; override with `executable`.\n- The Ansible interpreter needs `setuptools`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pip_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

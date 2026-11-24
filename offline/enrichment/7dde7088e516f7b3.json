@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7dde7088e516f7b3",
+ "chunk_hash": "7dde7088e516f7b3",
+ "summary": "Plugins extend Ansible's core and run on the control node in the ansible process, unlike modules which run on targets; they handle data transformation, output, inventory and more, and must be Python.",
+ "questions": [
+  "Where do plugins run compared to modules?",
+  "Can I write an inventory plugin for my own JSON data source?"
+ ],
+ "answer_card": {
+  "title": "Plugins overview",
+  "answer_md": "Plugins run on the **control node** inside `/usr/bin/ansible`, while modules run on targets in separate processes. Plugins transform data, log output, connect to inventory, etc. They must be **Python**; e.g. an inventory plugin can connect to any JSON-returning source.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/overview_architecture.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:03+00:00"
+}

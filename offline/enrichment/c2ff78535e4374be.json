@@ -1,0 +1,18 @@
+{
+ "chunk_id": "c2ff78535e4374be",
+ "chunk_hash": "c2ff78535e4374be",
+ "summary": "The bool filter converts well-known truthy and falsy values (case-insensitive) to True or False and warns on invalid values; truthy/falsy tests are more permissive.",
+ "questions": [
+  "How do I convert 'yes' or 'no' strings to booleans?",
+  "Which values does the bool filter treat as true?",
+  "Why does the bool filter give a deprecation warning?",
+  "Is the bool filter case sensitive?"
+ ],
+ "answer_card": {
+  "title": "bool filter",
+  "answer_md": "Converts common values to a boolean (case-insensitive):\n\n- **True**: `True`, `'yes'`, `'on'`, `'1'`, `'true'`, `1`\n- **False**: `False`, `'no'`, `'off'`, `'0'`, `'false'`, `0`\n\nAny other value triggers a **deprecation warning**. For looser conversion use the `truthy` or `falsy` tests.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/bool_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

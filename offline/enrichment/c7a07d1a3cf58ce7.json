@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c7a07d1a3cf58ce7",
+ "chunk_hash": "c7a07d1a3cf58ce7",
+ "summary": "vault filter parameters: data, required secret, optional salt (reproducible output but lower security), vault_id, and wrap_object to return a VaultedValue for inline vault YAML output.",
+ "questions": [
+  "How do I make the vault filter output the same each run?",
+  "Is it safe to set a salt for the vault filter?",
+  "How do I output inline vault format with to_yaml?"
+ ],
+ "answer_card": {
+  "title": "vault filter parameters",
+  "answer_md": "- `_input` (required): data to vault\n- `secret` (required): vault password\n- `salt`: random if omitted; setting one makes output reproducible but **can lower security**\n- `vault_id` (default `filter_default`)\n- `wrap_object` (default false): return a `VaultedValue`-tagged object instead of a plain string; useful with `to_yaml` for inline vault format",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/vault_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

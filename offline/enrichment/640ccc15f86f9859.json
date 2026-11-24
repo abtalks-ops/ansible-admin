@@ -1,0 +1,17 @@
+{
+ "chunk_id": "640ccc15f86f9859",
+ "chunk_hash": "640ccc15f86f9859",
+ "summary": "Intermittent network_cli failures with truncated output or 'operation requires privilege escalation' can come from prompt mismatch; tune ansible_buffer_read_timeout (default 0.2s) per task or buffer_read_timeout globally, or 0 to disable.",
+ "questions": [
+  "Why do I get truncated output from network_cli sometimes?",
+  "How do I fix intermittent operation requires privilege escalation errors?",
+  "What is buffer_read_timeout?"
+ ],
+ "answer_card": {
+  "title": "Fix intermittent network_cli failures",
+  "answer_md": "Since 2.7.1 a buffer read timer (default 0.2 s) helps match prompts and capture full output. Raise it per task:\n```yaml\n- cisco.ios.ios_facts:\n    gather_subset: all\n  vars:\n    ansible_buffer_read_timeout: 2\n```\nor globally:\n```ini\n[persistent_connection]\nbuffer_read_timeout = 2\n```\nSet `0` to disable the delay.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "3898b386aee01b24",
+  "chunk_hash": "3898b386aee01b24",
+  "summary": "ansible.builtin.systemd is the legacy alias of systemd_service for managing systemd units. state/enabled/masked need name, globs aren't supported, and operations run in order: enable, mask, then state.",
+  "questions": [
+    "Is ansible.builtin.systemd deprecated?",
+    "Can I use wildcards in systemd unit names?",
+    "In what order does systemd module apply enabled, masked, and state?"
+  ],
+  "answer_card": {
+    "title": "systemd module (alias of systemd_service)",
+    "answer_md": "`ansible.builtin.systemd` is an alias kept for compatibility; the module is now `ansible.builtin.systemd_service`.\n- `state`, `enabled`, `masked` require `name`.\n- No globs (`postgres*.service`).\n- Order: enable/disable → mask/unmask → state.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

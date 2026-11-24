@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d3aa2e5cae5e0fad",
+ "chunk_hash": "d3aa2e5cae5e0fad",
+ "summary": "Shows the verbose return value of a win_dsc Registry task, including invocation.module_args listing set and unset options, module_version, reboot_required and the verbose_set log from the DSC Local Configuration Manager.",
+ "questions": [
+  "What does win_dsc return when run with -vvv?",
+  "How do I tell if a DSC resource needs a reboot from Ansible?",
+  "Where can I see the DSC LCM output in Ansible results?"
+ ],
+ "answer_card": {
+  "title": "Reading win_dsc verbose output",
+  "answer_md": "With `-vvv`, a `win_dsc` result includes:\n- `invocation.module_args`: every option for the resource, with the values you set and `null` for ones you didn't\n- `module_version`: the resource version used (for example `1.1`)\n- `reboot_required`: whether the host needs a reboot\n- `verbose_set` / `verbose_test`: the DSC Local Configuration Manager log for the Set and Test operations",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_dsc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

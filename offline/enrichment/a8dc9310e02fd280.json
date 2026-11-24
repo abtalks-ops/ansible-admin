@@ -1,0 +1,18 @@
+{
+ "chunk_id": "a8dc9310e02fd280",
+ "chunk_hash": "a8dc9310e02fd280",
+ "summary": "Use the ssh connection type (native OpenSSH) instead of paramiko to get connection reuse via ControlPersist, Kerberized SSH and your local SSH config; old OpenSSH on RHEL 6 or SLES 10/11 may not support ControlPersist.",
+ "questions": [
+  "How do I make Ansible use my ~/.ssh/config?",
+  "How do I enable SSH connection reuse?",
+  "Does Ansible support Kerberos SSH login?",
+  "Should I use paramiko or ssh?"
+ ],
+ "answer_card": {
+  "title": "Use OpenSSH for ControlPersist and ssh config",
+  "answer_md": "Use the **`ssh`** connection (native OpenSSH) via `-c ssh` or in ansible.cfg:\n\n```ini\n[defaults]\ntransport = ssh\n```\n\nThat gives ControlPersist connection reuse, Kerberos/GSSAPI and `~/.ssh/config` support. It's the default when OpenSSH supports ControlPersist. On very old OpenSSH (RHEL 6, SLES 10/11) run Ansible from a newer control host or use paramiko.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

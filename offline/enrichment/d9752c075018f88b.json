@@ -1,0 +1,19 @@
+{
+ "chunk_id": "d9752c075018f88b",
+ "chunk_hash": "d9752c075018f88b",
+ "summary": "Glossary entries for check mode (dry run with --check), collections, collection names, and the community.general collection.",
+ "questions": [
+  "How do I do a dry run of a playbook?",
+  "Is check mode a reliable substitute for testing in staging?",
+  "What is an Ansible collection?",
+  "What is in community.general?",
+  "What does the collection name part of an FQCN mean?"
+ ],
+ "answer_card": {
+  "title": "Glossary: check mode, collections, community.general",
+  "answer_md": "- **Check mode**: run with `--check` to report what would change without changing anything (a dry run). It does not account for unexpected command failures or cascading effects, so do not treat it as a replacement for a staging environment.\n- **Collection**: a packaging format for modules, plugins, roles and more, released independently of ansible-core. Install with `ansible-galaxy collection install <namespace.collection>`.\n- **Collection name**: the second part of an FQCN, e.g. `ios` in `cisco.ios`.\n- **community.general**: a community-maintained collection holding Ansible 2.9 modules/plugins that did not get their own collection.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

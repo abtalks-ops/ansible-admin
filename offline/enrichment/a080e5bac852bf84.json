@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a080e5bac852bf84",
+ "chunk_hash": "a080e5bac852bf84",
+ "summary": "Warns that the Ansible Python API is internal and unsupported for external use, recommending ansible-runner for running playbooks or modules and AWX for non-Python, async, or access-controlled use.",
+ "questions": [
+  "Is it supported to call Ansible from my own Python code?",
+  "What should I use instead of the Ansible Python API to run playbooks from a script?",
+  "How can I trigger Ansible runs from another language with logging and access control?"
+ ],
+ "answer_card": {
+  "title": "Using Ansible from Python",
+  "answer_md": "The Ansible Python API is for **internal use** and can change at any time, so external use is unsupported. To run playbooks or modules programmatically, use **ansible-runner**. For other languages, async triggers, access control or logging, look at **AWX**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_api.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

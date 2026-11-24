@@ -1,0 +1,19 @@
+{
+ "chunk_id": "3dc8fafc2d15ebe9",
+ "chunk_hash": "3dc8fafc2d15ebe9",
+ "summary": "The ssh connection plugin now uses SSH_ASKPASS by default instead of sshpass (switchable via password_mechanism), and the bool filter only accepts known true/false values, deprecating others and returning False for None.",
+ "questions": [
+  "How do I make Ansible use sshpass again instead of SSH_ASKPASS?",
+  "What is ANSIBLE_SSH_PASSWORD_MECHANISM?",
+  "Which values does the bool filter accept now?",
+  "Why does | bool give a deprecation warning?",
+  "What does bool return for None in ansible-core 2.19?"
+ ],
+ "answer_card": {
+  "title": "SSH_ASKPASS default and stricter bool filter",
+  "answer_md": "**SSH passwords:** the `ssh` connection plugin now uses `SSH_ASKPASS` by default instead of `sshpass`. To switch back, set `password_mechanism` in one of these ways:\n\n```ini\n[ssh_connection]\npassword_mechanism = sshpass\n```\n\n- `export ANSIBLE_SSH_PASSWORD_MECHANISM=sshpass`\n- variable `ansible_ssh_password_mechanism: sshpass`\n\n**bool filter:** it now returns only `True` or `False`:\n- `True` for `True`, `1`, and case-insensitive \"yes\", \"on\", \"true\", \"1\"\n- `False` for `False`, `0`, and \"no\", \"off\", \"false\", \"0\"\n\nOther input gives a deprecation warning (an error in ansible-core 2.23) and returns `False` unless it equals `1` (such as `1.0`). `None` now returns `False` with the same warning.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.19.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

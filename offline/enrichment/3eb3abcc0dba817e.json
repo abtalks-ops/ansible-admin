@@ -1,0 +1,17 @@
+{
+  "chunk_id": "3eb3abcc0dba817e",
+  "chunk_hash": "3eb3abcc0dba817e",
+  "summary": "set_stats records or accumulates custom stats per host or globally for the run; they only display if show_custom_stats or ANSIBLE_SHOW_CUSTOM_STATS is enabled.",
+  "questions": [
+    "How do I show custom statistics at the end of a playbook run?",
+    "Why don't my set_stats values appear in the output?",
+    "Can I track counters across hosts in a run?"
+  ],
+  "answer_card": {
+    "title": "Custom run stats with set_stats",
+    "answer_md": "`ansible.builtin.set_stats` sets/aggregates custom stats per host or for all hosts. To display them, set `show_custom_stats = true` in `[defaults]` or `ANSIBLE_SHOW_CUSTOM_STATS=true`. Works on Windows.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/set_stats_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

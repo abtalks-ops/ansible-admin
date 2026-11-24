@@ -1,0 +1,18 @@
+{
+ "chunk_id": "797980db530fcc30",
+ "chunk_hash": "797980db530fcc30",
+ "summary": "Simple arrays like string[] or UInt32[] can be a YAML list or a comma-separated string, with lists recommended. Arrays of CimInstance are written as a list of dictionaries, shown with IIS binding info.",
+ "questions": [
+  "How do I pass a string array to win_dsc?",
+  "Should I use a list or comma-separated string for DSC arrays?",
+  "How do I define multiple IIS bindings with win_dsc?",
+  "How do I set ReturnCode values like 0 and 3010 in win_dsc?"
+ ],
+ "answer_card": {
+  "title": "Setting array properties in win_dsc",
+  "answer_md": "Simple arrays (`[string[]]`, `[UInt32[]]`) can be a list or comma-separated string. A **list is recommended**, since it isn't parsed manually by `win_dsc`:\n\n```yaml+jinja\nValueData:\n- entry1\n- entry2\n- entry3\n\nReturnCode:\n- 0\n- 3010\n```\n\nArrays of `[CimInstance[]]` are a list of dictionaries:\n\n```yaml+jinja\n# [CimInstance[]]BindingInfo == DSC_WebBindingInformation\nBindingInfo:\n- Protocol: https\n  Port: 443\n  CertificateStoreName: My\n  CertificateThumbprint: C676A89018C4D5902353545343634F35E6B3A659\n  HostName: DSCTest\n  IPAddress: '*'\n  SSLFlags: 1\n- Protocol: http\n  Port: 80\n  IPAddress: '*'\n```\n\nCheck the resource docs for which keys to use.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_dsc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

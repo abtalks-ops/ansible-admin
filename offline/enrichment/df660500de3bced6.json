@@ -1,0 +1,15 @@
+{
+ "chunk_id": "df660500de3bced6",
+ "chunk_hash": "df660500de3bced6",
+ "summary": "combinations returns a list of combination sets.",
+ "questions": [
+  "What does the combinations filter return?"
+ ],
+ "answer_card": {
+  "title": "combinations return value",
+  "answer_md": "A list of combination sets built from the supplied elements and set size.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/combinations_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

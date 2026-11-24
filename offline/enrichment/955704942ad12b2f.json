@@ -1,0 +1,17 @@
+{
+ "chunk_id": "955704942ad12b2f",
+ "chunk_hash": "955704942ad12b2f",
+ "summary": "Modules must convert non-string dict keys (int, float, bool, None) to strings before exit_json; otherwise the task fails with a 'not JSON serializable by the module_legacy_m2c profile' error.",
+ "questions": [
+  "What does \"Key of type ... is not JSON serializable by the 'module_legacy_m2c' profile\" mean?",
+  "Can Ansible module results have integer dictionary keys?",
+  "How do I fix a module returning non-string keys after upgrading?"
+ ],
+ "answer_card": {
+  "title": "Convert non-string dict keys in module results",
+  "answer_md": "Older versions relied on `json.dumps` to convert `int`, `float`, `bool` and `None` keys to strings. Now modules must convert them before `exit_json()`:\n\n```python\noid = 123\nd = {str(oid): \"value\"}\nmodule.exit_json(return_value=d)\n```\n\nIf you see `Key of type '<NON-STRING>' is not JSON serializable by the 'module_legacy_m2c' profile`, the module in that task needs this fix.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:06+00:00"
+}

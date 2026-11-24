@@ -1,0 +1,17 @@
+{
+  "chunk_id": "35f3a1bda09025a5",
+  "chunk_hash": "35f3a1bda09025a5",
+  "summary": "Further community.aws changes: ec2_vpc_peer, ec2_vpc_peering_info, ec2_vpc_vgw(_info), ec2_vpc_vpn(_info) and elb_classic_lb_info moved to amazon.aws. ecs_cluster purge_capacity_providers now defaults to true, and the iam_policy connection_properties return key was removed.",
+  "questions": [
+    "Why did ecs_cluster remove my capacity providers?",
+    "Where did ec2_vpc_vpn move to?",
+    "What's the FQCN for elb_classic_lb_info now?"
+  ],
+  "answer_card": {
+    "title": "VPC peering/VPN modules moved and ecs_cluster default",
+    "answer_md": "- Moved to amazon.aws: `ec2_vpc_peer`, `ec2_vpc_peering_info`, `ec2_vpc_vgw`, `ec2_vpc_vgw_info`, `ec2_vpc_vpn`, `ec2_vpc_vpn_info`, `elb_classic_lb_info`.\n- `ecs_cluster`: `purge_capacity_providers` now defaults to `true`. Set it to `false` to keep unlisted providers.\n- The `connection_properties` return key was removed. Use `raw_connection_properties`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:26:20+00:00"
+}

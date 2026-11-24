@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2bb173c7a0d49605",
+ "chunk_hash": "2bb173c7a0d49605",
+ "summary": "Platforms like EOS and IOS have privilege modes required by some modules; with network_cli, set become yes and become_method enable to enter privileged mode for tasks.",
+ "questions": [
+  "How do I enter privileged mode on Arista EOS with Ansible?",
+  "Why does my user-management task fail on a Cisco switch?"
+ ],
+ "answer_card": {
+  "title": "Privilege escalation on EOS and IOS",
+  "answer_md": "Modules that change system state (users, for example) need high privilege. With `network_cli`:\n```ini\n[eos:vars]\nansible_connection=ansible.netcommon.network_cli\nansible_network_os=arista.eos.eos\nansible_become=yes\nansible_become_method=enable\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

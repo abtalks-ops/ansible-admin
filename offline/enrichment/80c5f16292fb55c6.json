@@ -1,0 +1,17 @@
+{
+  "chunk_id": "80c5f16292fb55c6",
+  "chunk_hash": "80c5f16292fb55c6",
+  "summary": "unarchive options: remote_src for archives already on the target, SELinux fields, and src as a local path, remote path, or URL (downloaded by the remote when remote_src is true).",
+  "questions": [
+    "How do I extract an archive downloaded from a URL directly?",
+    "Where does unarchive look for src by default?",
+    "How do I unarchive a file already on the target?"
+  ],
+  "answer_card": {
+    "title": "unarchive src and remote_src",
+    "answer_md": "- `src` (required): controller path by default; with `remote_src: yes`, a path on the target, or a URL (`://`) the target downloads (simple cases; use `get_url` for full control)\n- `remote_src` (false)\n- SELinux: `seuser`, `serole`, `setype`, `selevel`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/unarchive_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

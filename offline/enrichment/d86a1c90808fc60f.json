@@ -1,0 +1,15 @@
+{
+ "chunk_id": "d86a1c90808fc60f",
+ "chunk_hash": "d86a1c90808fc60f",
+ "summary": "expandvars takes a required string containing environment variables.",
+ "questions": [
+  "What input does expandvars take?"
+ ],
+ "answer_card": {
+  "title": "expandvars parameters",
+  "answer_md": "`_input` (str, required): a string containing environment variables.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/expandvars_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

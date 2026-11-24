@@ -1,0 +1,15 @@
+{
+ "chunk_id": "b717018010b4379b",
+ "chunk_hash": "b717018010b4379b",
+ "summary": "Since Ansible 2.10, related modules should be developed in a collection; the section gives tips for companies and users building modules for products.",
+ "questions": [
+  "Should I put a set of related modules in a collection?"
+ ],
+ "answer_card": {
+  "title": "Develop related modules in a collection",
+  "answer_md": "Yes. Starting with **Ansible 2.10**, related modules should be developed in a collection. See the developing collections guide for format details.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_in_groups.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

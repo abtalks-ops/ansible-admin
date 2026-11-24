@@ -1,0 +1,19 @@
+{
+ "chunk_id": "c56fe4abedf1f570",
+ "chunk_hash": "c56fe4abedf1f570",
+ "summary": "community.general removals: ansible-core 2.11/2.12 support, Ansible 2.9 support in ansible_galaxy_install, some consul options with state absent, gconftool2/manageiq state list or get (use info modules), the gitlab_runner access_level default, old passlib code, CmdMixin/ArgFormat/CmdModuleHelper (use CmdRunner), and xfconf disable_facts.",
+ "questions": [
+  "gconftool2 state=get no longer works, what should I use?",
+  "How do I list ManageIQ tags now?",
+  "gitlab_runner changed access_level, how do I keep the old behaviour?",
+  "My custom module used CmdMixin and broke, what replaces it?",
+  "Does community.general still support ansible-core 2.12?"
+ ],
+ "answer_card": {
+  "title": "community.general removed features",
+  "answer_md": "- ansible-core **2.11/2.12** no longer supported.\n- `gconftool2 state=get` → **`gconftool2_info`**; `manageiq_policies`/`manageiq_tags` `state=list` → **`manageiq_policies_info`** / **`manageiq_tags_info`**.\n- `gitlab_runner`: no default for `access_level`; set **`access_level: ref_protected`** to keep old behaviour.\n- `consul` with `state=absent`: can't pass `script`, `ttl`, `tcp`, `http`, `interval`.\n- `xfconf`: `disable_facts` removed. `htpasswd`: passlib < 1.6 dropped.\n- Module utils `ArgFormat`, `CmdMixin`, `CmdModuleHelper`, `CmdStateModuleHelper` removed → use **`cmd_runner.CmdRunner`**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:02+00:00"
+}

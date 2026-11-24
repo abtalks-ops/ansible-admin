@@ -1,0 +1,17 @@
+{
+  "chunk_id": "ec742425adf121f9",
+  "chunk_hash": "ec742425adf121f9",
+  "summary": "systemd_service controls systemd units (services, timers, etc.); systemd remains an alias. name is required with state/enabled/masked, globs aren't supported, and actions run enable, mask, then state.",
+  "questions": [
+    "What module manages systemd services in Ansible?",
+    "Can I pass a glob to systemd_service?",
+    "What order are systemd_service changes applied?"
+  ],
+  "answer_card": {
+    "title": "Manage systemd units with systemd_service",
+    "answer_md": "`ansible.builtin.systemd_service` manages systemd units (services, timers, ...). `ansible.builtin.systemd` is an alias.\n- `state`/`enabled`/`masked` require `name`; no globs.\n- Order: enable/disable → mask/unmask → state.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_service_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

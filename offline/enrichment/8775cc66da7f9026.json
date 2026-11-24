@@ -1,0 +1,16 @@
+{
+ "chunk_id": "8775cc66da7f9026",
+ "chunk_hash": "8775cc66da7f9026",
+ "summary": "mask_secrets parameters: required input string and mask_placeholder (default $REDACTED$).",
+ "questions": [
+  "How do I change the placeholder used by mask_secrets?",
+  "What placeholder does mask_secrets use by default?"
+ ],
+ "answer_card": {
+  "title": "mask_secrets parameters",
+  "answer_md": "- `_input` (string, required)\n- `mask_placeholder` (default `$REDACTED$`): text substituted for each secret",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/mask_secrets_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

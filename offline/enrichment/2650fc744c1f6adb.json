@@ -1,0 +1,11 @@
+{
+ "chunk_id": "2650fc744c1f6adb",
+ "chunk_hash": "2650fc744c1f6adb",
+ "summary": "The example inventory defines eos, ios and vyos groups plus a switches group of groups, and recommends [group:vars] for connection details and credentials.",
+ "questions": [
+  "Where should I put connection settings for network device groups?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

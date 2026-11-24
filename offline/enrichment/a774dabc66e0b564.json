@@ -1,0 +1,15 @@
+{
+  "chunk_id": "a774dabc66e0b564",
+  "chunk_hash": "a774dabc66e0b564",
+  "summary": "Example checks that [1,2,3,4,5] is a superset of [3,4].",
+  "questions": [
+    "How do I write a superset check?"
+  ],
+  "answer_card": {
+    "title": "issuperset test example",
+    "answer_md": "```yaml\nbig: [1,2,3,4,5]\nsmall: [3,4]\nissmallinbig: '{{ big is superset(small) }}'   # True\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/issuperset_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "818af56159de7a82",
+  "chunk_hash": "818af56159de7a82",
+  "summary": "Shows setting environment at task level (http_proxy), reusing a dict variable for environment, storing proxy settings in group_vars, and setting environment at play level.",
+  "questions": [
+    "How do I set an HTTP proxy for a package install task?",
+    "How can I reuse proxy settings across playbooks?",
+    "Can I set environment variables for a whole play?"
+  ],
+  "answer_card": {
+    "title": "Setting the remote environment",
+    "answer_md": "```yaml\n- ansible.builtin.package:\n    name: cobbler\n    state: present\n  environment:\n    http_proxy: http://proxy.example.com:8080\n```\n\nReuse via a variable:\n\n```yaml\n# group_vars/boston\nproxy_env:\n  http_proxy: http://proxy.bos.example.com:8080\n  https_proxy: http://proxy.bos.example.com:8080\n```\n\n`environment: \"{{ proxy_env }}\"` on a task, or `environment:` at play level.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_environment.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:03:26+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "e1a48be3517b96f1",
+  "chunk_hash": "e1a48be3517b96f1",
+  "summary": "Explains includes don't inherit tags by default; to get inheritance on an include without switching to imports, use the apply keyword or wrap the include in a tagged block.",
+  "questions": [
+    "How do I make tags on include_tasks apply to the included tasks?",
+    "What does the apply keyword do on include_tasks?",
+    "Can I get tag inheritance without using import_tasks?"
+  ],
+  "answer_card": {
+    "title": "Tag inheritance for includes: apply and blocks",
+    "answer_md": "Includes don't pass tags down. Imports do, but mixing imports and includes causes bugs, so use either:\n\n```yaml\n- include_tasks:\n    file: db.yml\n    apply:\n      tags: db   # tags tasks inside db.yml\n  tags: db       # tags the include itself\n```\n\nor a block:\n\n```yaml\n- block:\n   - include_tasks: db.yml\n  tags: db\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

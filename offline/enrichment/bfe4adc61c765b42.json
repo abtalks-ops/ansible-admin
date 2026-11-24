@@ -1,0 +1,15 @@
+{
+ "chunk_id": "bfe4adc61c765b42",
+ "chunk_hash": "bfe4adc61c765b42",
+ "summary": "The expandvars filter performs shell-like substitution of environment variables in a string.",
+ "questions": [
+  "How do I expand $HOME or other environment variables in a string?"
+ ],
+ "answer_card": {
+  "title": "expandvars filter",
+  "answer_md": "`{{ value | expandvars }}` performs shell-like substitution of environment variables in the input.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/expandvars_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

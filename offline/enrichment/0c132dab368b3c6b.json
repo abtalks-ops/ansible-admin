@@ -1,0 +1,16 @@
+{
+  "chunk_id": "0c132dab368b3c6b",
+  "chunk_hash": "0c132dab368b3c6b",
+  "summary": "Registered variables are host-level; with loops they contain a results list; failed or skipped tasks still register a status, except tasks skipped by tags.",
+  "questions": [
+    "Is a registered variable set if the task is skipped?",
+    "Are registered variables per host?"
+  ],
+  "answer_card": {
+    "title": "Registered variables: scope and skipped tasks",
+    "answer_md": "Registered variables are **host-level**. With a loop they contain a `results` list. If a task fails or is skipped, a variable is still registered with that status, **except** when the task is skipped because of tags.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:32+00:00"
+}

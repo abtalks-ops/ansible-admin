@@ -1,0 +1,16 @@
+{
+  "chunk_id": "c6f80010382b6f8e",
+  "chunk_hash": "c6f80010382b6f8e",
+  "summary": "The falsy test takes the input expression and convert_bool, which interprets yes/no, on/off, 0/1 strings as booleans.",
+  "questions": [
+    "Will falsy treat the string 'no' as false?",
+    "How do I make falsy understand yes/no values?"
+  ],
+  "answer_card": {
+    "title": "falsy test parameters",
+    "answer_md": "- `_input` (required)\n- `convert_bool` (false): treat `yes`/`no`, `on`/`off`, `0`/`1` as booleans, e.g. `'no' is falsy(convert_bool=true)`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/falsy_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:13+00:00"
+}

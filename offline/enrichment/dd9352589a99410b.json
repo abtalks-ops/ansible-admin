@@ -1,0 +1,16 @@
+{
+ "chunk_id": "dd9352589a99410b",
+ "chunk_hash": "dd9352589a99410b",
+ "summary": "The ini lookup reads the value of a key in a given section of an INI file, or from a properties file without sections.",
+ "questions": [
+  "How do I read a value from an INI file in Ansible?",
+  "Can I read a Java properties file with Ansible?"
+ ],
+ "answer_card": {
+  "title": "ini lookup",
+  "answer_md": "The ini lookup returns the value after `=` for a key in a given `[section]` of an INI file. It can also read properties files, which have no sections.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ini_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

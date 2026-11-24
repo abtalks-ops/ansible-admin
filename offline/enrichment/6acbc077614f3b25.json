@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6acbc077614f3b25",
+ "chunk_hash": "6acbc077614f3b25",
+ "summary": "To test a PR, clone ansible into a fresh directory, preferably on a VM since PR code may be unsafe, and fetch the PR into a local branch with git fetch origin refs/pull/XXXX/head; only PRs targeting devel are accepted.",
+ "questions": [
+  "How do I check out someone's Ansible pull request locally?",
+  "Is it safe to test PR code on my laptop?",
+  "Which branch should PRs target?"
+ ],
+ "answer_card": {
+  "title": "Checking out a PR to test",
+  "answer_md": "Test in a VM; PR code may contain mistakes or malicious code.\n```shell-session\ngit clone https://github.com/ansible/ansible.git ansible-pr-testing\ncd ansible-pr-testing\ngit fetch origin refs/pull/XXXX/head:testing_PRXXXX\ngit checkout testing_PRXXXX\n```\nReplace XXXX with the PR number. Only test PRs targeting `ansible:devel`; dot releases are cherry-picked by staff.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:19+00:00"
+}

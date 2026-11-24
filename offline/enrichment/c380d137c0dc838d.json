@@ -1,0 +1,16 @@
+{
+  "chunk_id": "c380d137c0dc838d",
+  "chunk_hash": "c380d137c0dc838d",
+  "summary": "Continues type casting examples (int/float round trips) and shows which values are natively boolean: yes, true/True/TRUE, no/No/NO, false/False/FALSE, with yes being the only case-sensitive variant.",
+  "questions": [
+    "Which YAML values does Ansible treat as native booleans?",
+    "Is 'Yes' a boolean in Ansible?"
+  ],
+  "answer_card": {
+    "title": "Native boolean values",
+    "answer_md": "Natively boolean (`item is boolean`): `yes`, `true`, `True`, `TRUE`, `no`, `No`, `NO`, `false`, `False`, `FALSE`. `yes` is the only case-sensitive variant listed. Other values can be cast with `| bool` but aren't natively boolean.\n\nCasting a float to int and back to string doesn't round-trip (`a_float | int | string != a_float | string`).",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

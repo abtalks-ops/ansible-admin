@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ac6c46f45162b8a8",
+ "chunk_hash": "ac6c46f45162b8a8",
+ "summary": "Each distribution server needs its own API token; Galaxy and Automation Hub docs explain how to get one.",
+ "questions": [
+  "Can I reuse the same API token for Galaxy and Automation Hub?",
+  "Where do I get an API token for publishing collections?"
+ ],
+ "answer_card": {
+  "title": "API tokens for distribution servers",
+  "answer_md": "You need a **separate API token for each server**. Get Galaxy tokens per the Galaxy docs and Automation Hub tokens per Red Hat's automation content docs.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

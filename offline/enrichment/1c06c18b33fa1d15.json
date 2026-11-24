@@ -1,0 +1,15 @@
+{
+ "chunk_id": "1c06c18b33fa1d15",
+ "chunk_hash": "1c06c18b33fa1d15",
+ "summary": "Run the PEP 8 check locally with ansible-test sanity --test pep8 and optional paths.",
+ "questions": [
+  "How do I run pep8 checks locally?"
+ ],
+ "answer_card": {
+  "title": "Run pep8 locally",
+  "answer_md": "```shell\nansible-test sanity --test pep8 [path ...]\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/pep8.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:05+00:00"
+}

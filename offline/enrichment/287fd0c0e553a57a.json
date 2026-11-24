@@ -1,0 +1,15 @@
+{
+  "chunk_id": "287fd0c0e553a57a",
+  "chunk_hash": "287fd0c0e553a57a",
+  "summary": "Example compares /etc/hosts with ../etc/hosts to see if the current directory is one level below root.",
+  "questions": [
+    "How do I compare an absolute and relative path for the same file?"
+  ],
+  "answer_card": {
+    "title": "is_same_file test example",
+    "answer_md": "```yaml\namionelevelfromroot: \"{{ '/etc/hosts' is same_file('../etc/hosts') }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/is_same_file_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

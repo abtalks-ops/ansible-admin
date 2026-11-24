@@ -1,0 +1,17 @@
+{
+  "chunk_id": "d6d5486cf917e8f7",
+  "chunk_hash": "d6d5486cf917e8f7",
+  "summary": "Shows hashing prompted values with encrypt (e.g. sha512_crypt), confirm and salt_size; lists passlib schemes and the four crypt fallbacks (bcrypt, md5_crypt, sha256_crypt, sha512_crypt) when passlib isn't installed.",
+  "questions": [
+    "How do I hash a prompted password for the user module?",
+    "How do I make vars_prompt ask for confirmation?",
+    "Which hash schemes does vars_prompt support without passlib?"
+  ],
+  "answer_card": {
+    "title": "Hashing prompted values",
+    "answer_md": "```yaml\nvars_prompt:\n  - name: my_password2\n    prompt: Enter password2\n    private: true\n    encrypt: sha512_crypt\n    confirm: true\n    salt_size: 7\n```\n\nOnly `salt` or `salt_size` are accepted (default salt size 8). With **passlib**, many schemes work (bcrypt, sha256_crypt, md5_crypt, pbkdf2_digest, ...). Without it, the crypt fallback supports at most `bcrypt`, `md5_crypt`, `sha256_crypt`, `sha512_crypt`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_prompts.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

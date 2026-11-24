@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ee81215902f7862f",
+ "chunk_hash": "ee81215902f7862f",
+ "summary": "In ansible-core 2.13, fetch_url returns the captured HTTPError as the response object, so modules should check info['status'] >= 400 to detect failures rather than r being None.",
+ "questions": [
+  "fetch_url no longer returns None on HTTP errors, how do I detect a failure?",
+  "How can my module read the body of a 404 response from fetch_url?"
+ ],
+ "answer_card": {
+  "title": "fetch_url returns HTTPError responses",
+  "answer_md": "`fetch_url` now returns the **`HTTPError`** as `r` (a response-like object you can `.read()`). Detect failures by status:\n\n```python\nr, info = fetch_url(module, url)\nif info['status'] >= 400:\n    module.fail_json(msg='HTTP error', status=info['status'], body=r.read() if r else None)\n```\n\nDon't rely on `r is None` or catching `AttributeError`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "127f59827392042a",
+ "chunk_hash": "127f59827392042a",
+ "summary": "community.crypto deprecated the false default of get_certificate's asn1_base64 option, which becomes true in 3.0.0.",
+ "questions": [
+  "get_certificate warns about asn1_base64, what should I set?",
+  "Will get_certificate output change in community.crypto 3?"
+ ],
+ "answer_card": {
+  "title": "get_certificate asn1_base64 default",
+  "answer_md": "The default of **`asn1_base64`** in `community.crypto.get_certificate` changes from `false` to **`true`** in 3.0.0. Set it explicitly to avoid the warning and keep stable output.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:02+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "593810318f8d32d8",
+  "chunk_hash": "593810318f8d32d8",
+  "summary": "The boolean test is Jinja's builtin test that returns true when a value is a boolean.",
+  "questions": [
+    "How do I check that a variable is an actual boolean?",
+    "Is there a Jinja test for boolean type?"
+  ],
+  "answer_card": {
+    "title": "boolean test",
+    "answer_md": "`value is boolean` returns true if the object is a boolean (Jinja builtin test).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/boolean_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:12+00:00"
+}

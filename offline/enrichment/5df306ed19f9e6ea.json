@@ -1,0 +1,15 @@
+{
+  "chunk_id": "5df306ed19f9e6ea",
+  "chunk_hash": "5df306ed19f9e6ea",
+  "summary": "The urn test returns true if the string is a URN, false otherwise.",
+  "questions": [
+    "What does the urn test return?"
+  ],
+  "answer_card": {
+    "title": "urn test return value",
+    "answer_md": "`true` if a URN, else `false`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/urn_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

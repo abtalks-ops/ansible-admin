@@ -1,0 +1,16 @@
+{
+  "chunk_id": "90638370efac4619",
+  "chunk_hash": "90638370efac4619",
+  "summary": "pause returns delta, echo, start and stop times, stdout, and user_input when no wait time was set.",
+  "questions": [
+    "How do I read what the user typed at a pause prompt?",
+    "How long did the pause last?"
+  ],
+  "answer_card": {
+    "title": "pause return values",
+    "answer_md": "- `user_input`: typed text (only when no duration)\n- `delta`, `start`, `stop`, `stdout`, `echo`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pause_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:05:46+00:00"
+}

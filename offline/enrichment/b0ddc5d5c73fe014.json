@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b0ddc5d5c73fe014",
+ "chunk_hash": "b0ddc5d5c73fe014",
+ "summary": "Warns that editors can leak vault secrets via swap, backup and clipboard files and lists vim settings (noswapfile, nobackup, nowritebackup, viminfo=, clipboard=) and Emacs settings to disable clipboard, backups and autosave.",
+ "questions": [
+  "Can ansible-vault edit leak secrets through my editor?",
+  "Which vim settings should I use when editing vault files?",
+  "How do I stop Emacs from making backup files of vault content?"
+ ],
+ "answer_card": {
+  "title": "Secure your editor for Vault",
+  "answer_md": "Editors may write plaintext copies (swap, backup, clipboard). Configure them to avoid this.\n\n**vim**:\n```text\nset noswapfile\nset nobackup\nset nowritebackup\nset viminfo=\nset clipboard=\n```\nAdd to `.vimrc` for all files or specific paths.\n\n**Emacs**:\n```text\n(setq x-select-enable-clipboard nil)\n(setq make-backup-files nil)\n(setq auto-save-default nil)\n```\n\nThis isn't exhaustive, especially with plugins; check your editor docs.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_encrypting_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "dc223e673df85778",
+ "chunk_hash": "dc223e673df85778",
+ "summary": "Describes verifying signed collections with GPG keyrings, adding extra detached signatures with `--signature`, using a requirements.yml, and verifying offline using signatures saved at install time.",
+ "questions": [
+  "How do I check the GPG signature of a collection I already installed?",
+  "Can I supply extra detached signatures when verifying a collection?",
+  "Is it possible to verify a signed collection without contacting the Galaxy server?",
+  "Where does Ansible keep the signatures it downloaded when installing a collection?"
+ ],
+ "answer_card": {
+  "title": "Verify signed collections",
+  "answer_md": "- Verify with a keyring:\n```bash\nansible-galaxy collection verify my_namespace.my_collection --keyring ~/.ansible/pubring.kbx\n```\n- Add extra signatures with `--signature <url-or-file>` (repeatable).\n- Works with `-r requirements.yml` too.\n- Signatures from the distribution server are saved alongside installed collections, so `--offline` can verify without querying the server.\n- Signing support depends on the distribution server; not all servers provide signatures.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections_guide/collections_verifying.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:04+00:00"
+}

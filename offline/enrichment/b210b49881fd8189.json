@@ -1,0 +1,16 @@
+{
+ "chunk_id": "b210b49881fd8189",
+ "chunk_hash": "b210b49881fd8189",
+ "summary": "cli_parse in ansible.utils 1.0.0+ can run a CLI command and parse its output, or parse any text, using cli_parser plugins for various engines.",
+ "questions": [
+  "Which collection provides cli_parse?",
+  "Can cli_parse parse text that isn't from a device?"
+ ],
+ "answer_card": {
+  "title": "What cli_parse does",
+  "answer_md": "`cli_parse` is in `ansible.utils` (1.0.0+). It either runs a CLI command on a device and parses the result, or parses any text you give it. Parsing is done by cli_parser plugins for different engines. Useful for CLI-only devices whose commands return semi-structured text.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

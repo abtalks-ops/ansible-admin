@@ -1,0 +1,17 @@
+{
+  "chunk_id": "685b7c484e114c37",
+  "chunk_hash": "685b7c484e114c37",
+  "summary": "Explains that a YAML value starting with {{ must be quoted entirely, otherwise the parser mistakes it for a dictionary and raises a YAML syntax error.",
+  "questions": [
+    "Why do I get 'Syntax Error while loading YAML' with a variable?",
+    "When do I need to quote variables in YAML?",
+    "Why does app_path: {{ base_path }}/22 fail?"
+  ],
+  "answer_card": {
+    "title": "Quote values that start with {{",
+    "answer_md": "If a value **starts** with `{{`, quote the whole thing:\n\n```yaml\n# Fails: ERROR! Syntax Error while loading YAML.\napp_path: {{ base_path }}/22\n# Works\napp_path: \"{{ base_path }}/22\"\n```\n\nUnquoted, YAML can't tell a variable from the start of a dictionary.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:32+00:00"
+}

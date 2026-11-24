@@ -1,0 +1,17 @@
+{
+  "chunk_id": "7cbfcf6c9fed7a50",
+  "chunk_hash": "7cbfcf6c9fed7a50",
+  "summary": "Sample list of ansible_facts['os_family'] values (AIX, Darwin, Debian, FreeBSD, RedHat, Solaris, Suse, Windows and more); if no mapping matches, platform.system() is returned.",
+  "questions": [
+    "What values can ansible_facts['os_family'] have?",
+    "What os_family does macOS report?",
+    "What happens if Ansible doesn't recognize the OS family?"
+  ],
+  "answer_card": {
+    "title": "Possible ansible_facts['os_family'] values",
+    "answer_md": "Sample values: AIX, Alpine, Altlinux, Archlinux, Darwin, Debian, FreeBSD, Gentoo, HP-UX, Mandrake, RedHat, SMGL, Slackware, Solaris, Suse, Windows.\n\nAnsible checks `OS_FAMILY_MAP`; if nothing matches it returns `platform.system()`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:03:26+00:00"
+}

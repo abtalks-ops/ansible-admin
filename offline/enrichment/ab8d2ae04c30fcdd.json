@@ -1,0 +1,18 @@
+{
+  "chunk_id": "ab8d2ae04c30fcdd",
+  "chunk_hash": "ab8d2ae04c30fcdd",
+  "summary": "grafana.grafana changes in 10.6.0, including Mimir distributor config support, the alloy_user_groups variable restored, Alloy role improvements and variables moved to the grafana_alloy_ namespace, check mode for the otel collector, a dashboard task fix, grafana_plugins_ops defaults, a google_analytics_4_id option and lint fixes.",
+  "questions": [
+    "Did the Grafana Alloy role variable names change?",
+    "Does the grafana collection support Mimir distributor configuration?",
+    "Can I set a Google Analytics 4 ID with the grafana role?",
+    "Does the otel collector role work in check mode?"
+  ],
+  "answer_card": {
+    "title": "grafana.grafana changes in 10.6.0",
+    "answer_md": "Notable changes:\n- Alloy variables renamed to the `grafana_alloy_` namespace (check your vars).\n- `alloy_user_groups` allowed again, plus Alloy role improvements.\n- Mimir config supports a `distributor` section.\n- Check mode works for the otel collector.\n- `grafana_plugins_ops` added to defaults, and a `google_analytics_4_id` option added.\n- Dashboard task message fix and lint fixes.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

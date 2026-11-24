@@ -1,0 +1,15 @@
+{
+ "chunk_id": "9982a5d5ea18d352",
+ "chunk_hash": "9982a5d5ea18d352",
+ "summary": "unvault retrieves information from an encrypted Ansible Vault.",
+ "questions": [
+  "How do I read a vault-encrypted file's contents in a template?"
+ ],
+ "answer_card": {
+  "title": "unvault filter",
+  "answer_md": "`ansible.builtin.unvault` retrieves the content from an encrypted Ansible Vault.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/unvault_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

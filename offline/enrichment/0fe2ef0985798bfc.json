@@ -1,0 +1,15 @@
+{
+ "chunk_id": "0fe2ef0985798bfc",
+ "chunk_hash": "0fe2ef0985798bfc",
+ "summary": "Run the example with ansible-playbook -i inventory facts-demo.yml and expect a recap with ok and changed counts per device.",
+ "questions": [
+  "How do I run the network facts demo playbook?"
+ ],
+ "answer_card": {
+  "title": "Run the facts demo",
+  "answer_md": "```console\nansible-playbook -i inventory facts-demo.yml\n```\nThe recap should show each device with `ok=6` or `7`, `changed=2`, no failures.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

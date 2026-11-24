@@ -1,0 +1,16 @@
+{
+ "chunk_id": "89726f007b145ebb",
+ "chunk_hash": "89726f007b145ebb",
+ "summary": "Cheat sheet for the Ansible tone: active voice, present tense, address the reader, standard English, and American spelling, with good and bad examples.",
+ "questions": [
+  "Should docs use active or passive voice?",
+  "Should I write 'will create' or 'creates' in docs?"
+ ],
+ "answer_card": {
+  "title": "Ansible tone cheat sheet",
+  "answer_md": "| Rule | Good | Bad |\n|---|---|---|\n| Active voice | You can run a task by | A task can be run by |\n| Present tense | This command creates a | This command will create a |\n| Address the reader | As you expand your inventory | When the number of managed nodes grows |\n| Standard English | Return to this page | Hop back to this page |\n| American English | color | colour |",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:42+00:00"
+}

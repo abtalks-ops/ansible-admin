@@ -1,0 +1,17 @@
+{
+ "chunk_id": "eec99f7454625e13",
+ "chunk_hash": "eec99f7454625e13",
+ "summary": "community.crypto deprecated the default acme docs fragment (use acme.basic and acme.account), requires ACME backends to implement get_cert_information() from 3.0.0, and deprecated crypto.module_backends.common in favour of argspec.",
+ "questions": [
+  "What replaces the community.crypto.acme docs fragment?",
+  "My custom ACME backend lacks get_cert_information, will it break?",
+  "Is crypto.module_backends.common going away?"
+ ],
+ "answer_card": {
+  "title": "community.crypto deprecations for plugin authors",
+  "answer_md": "For custom code built on community.crypto (all removals in **3.0.0**):\n\n- Docs fragment `community.crypto.acme` → use both **`community.crypto.acme.basic`** and **`community.crypto.acme.account`**.\n- ACME crypto backends must implement **`get_cert_information()`**.\n- `crypto.module_backends.common` module util → use the **`argspec`** module util.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:28+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "6081df57c4bb97e2",
+  "chunk_hash": "6081df57c4bb97e2",
+  "summary": "find's patterns match base names as globs or, with use_regex, as prefix-anchored Python regexes; patterns with commas must be given as lists. Also covers read_whole_file for contains and recurse.",
+  "questions": [
+    "How do I match all .log files with a regex in find?",
+    "Why does my find regex match more than I expect?",
+    "Why is my pattern with a comma being split?",
+    "How do I make find search subdirectories?",
+    "When should I set read_whole_file?"
+  ],
+  "answer_card": {
+    "title": "find patterns and recursion",
+    "answer_md": "- `patterns`: matched against base name. Globs by default (`*`); with `use_regex: true` it's `re.match` (prefix), so anchor with `$`: `.*\\.md$`.\n- Patterns containing commas **must be in a YAML list** to avoid splitting.\n- `recurse` (false): descend into subdirs\n- `read_whole_file` (false): use `re.search` across whole file for `contains` (memory cost)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/find_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

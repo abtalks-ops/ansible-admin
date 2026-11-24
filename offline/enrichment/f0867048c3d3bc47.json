@@ -1,0 +1,16 @@
+{
+ "chunk_id": "f0867048c3d3bc47",
+ "chunk_hash": "f0867048c3d3bc47",
+ "summary": "Examples of extract with a list index, a dict key, and morekeys for nested access.",
+ "questions": [
+  "What are examples of using the extract filter?",
+  "How do I use morekeys with extract?"
+ ],
+ "answer_card": {
+  "title": "extract examples",
+  "answer_md": "```yaml\nextracted: \"{{ 1 | extract(['a', 'b', 'c']) }}\"           # 'b'\nextracted_key: \"{{ 'b' | extract({'a': 1, 'b': 2, 'c': 3}) }}\"  # 2\nextracted_key_r: \"{{ 0 | extract([{'a': 1, 'b': 2, 'c': 3}, {'x': 9, 'y': 10}], morekeys='b') }}\"  # 2\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/extract_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

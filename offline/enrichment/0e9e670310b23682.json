@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0e9e670310b23682",
+ "chunk_hash": "0e9e670310b23682",
+ "summary": "to_nice_yaml parameters: canonical, default_style, encoding, explicit_end, explicit_start, indent, line_break, sort_keys (default true) and width.",
+ "questions": [
+  "How do I add --- at the start of YAML output?",
+  "How do I stop to_nice_yaml from sorting keys?",
+  "How do I set line width in to_nice_yaml?"
+ ],
+ "answer_card": {
+  "title": "to_nice_yaml parameters",
+  "answer_md": "- `canonical`: export tag types\n- `default_style`: `\"\"`, `'`, `\"`, `|`, `>`\n- `encoding`, `line_break`, `width`, `indent`\n- `explicit_start`: add `---`; `explicit_end`: add `...`\n- `sort_keys` (default **true**)",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/to_nice_yaml_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

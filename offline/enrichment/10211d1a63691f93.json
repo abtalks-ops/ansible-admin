@@ -1,0 +1,17 @@
+{
+  "chunk_id": "10211d1a63691f93",
+  "chunk_hash": "10211d1a63691f93",
+  "summary": "Known ansible-test issues on Ubuntu 24.04 with Podman: run ansible-test as non-root to avoid AppArmor permission issues, and disable the unix-chkpwd AppArmor profile so SSH works into the Fedora 40 container.",
+  "questions": [
+    "Why does ansible-test fail with Podman on Ubuntu 24.04?",
+    "How do I fix SSH into the Fedora 40 ansible-test container on Ubuntu 24.04?",
+    "Should I run ansible-test as root with Podman?"
+  ],
+  "answer_card": {
+    "title": "ansible-test with Podman on Ubuntu 24.04",
+    "answer_md": "- Run `ansible-test` as a **non-root** user to avoid AppArmor permission issues.\n- For the Fedora 40 container, disable the `unix-chkpwd` AppArmor profile on the host so SSH connections work.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:26:20+00:00"
+}

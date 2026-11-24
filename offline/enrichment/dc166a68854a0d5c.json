@@ -1,0 +1,15 @@
+{
+ "chunk_id": "dc166a68854a0d5c",
+ "chunk_hash": "dc166a68854a0d5c",
+ "summary": "SSH is the default but you can pick any connection plugin per host with ansible_connection.",
+ "questions": [
+  "How do I use a non-SSH connection for a host?"
+ ],
+ "answer_card": {
+  "title": "Change connection type per host",
+  "answer_md": "Set `ansible_connection=<connection plugin name>` on the host. See the connection plugin list for options.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

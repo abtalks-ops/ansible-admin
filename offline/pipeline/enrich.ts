@@ -50,7 +50,10 @@ function loadFiles(m: Map<string, Enrichment>) {
   if (!fs.existsSync(ENRICH_DIR)) return;
   for (const f of fs.readdirSync(ENRICH_DIR)) {
     if (!f.endsWith(".json")) continue;
-    const p = EnrichmentFile.safeParse(JSON.parse(fs.readFileSync(path.join(ENRICH_DIR, f), "utf8")));
+    const raw = JSON.parse(fs.readFileSync(path.join(ENRICH_DIR, f), "utf8"));
+    let p = EnrichmentFile.safeParse(raw);
+    // A card that fails validation (for example a one-line answer) is dropped; the summary and questions still count.
+    if (!p.success && p.error.issues.every((i) => i.path[0] === "answer_card")) p = EnrichmentFile.safeParse({ ...raw, answer_card: null });
     if (!p.success) {
       console.warn(`  ignoring ${f}: ${p.error.issues.map((i) => `${i.path.join(".")} ${i.message}`).join("; ")}`);
       continue;

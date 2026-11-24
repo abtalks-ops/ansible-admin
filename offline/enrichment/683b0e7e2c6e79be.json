@@ -1,0 +1,17 @@
+{
+ "chunk_id": "683b0e7e2c6e79be",
+ "chunk_hash": "683b0e7e2c6e79be",
+ "summary": "netapp.ontap makes netapp-lib optional, adds REST-only automatic update support (ONTAP 9.10+), ASA r2 compatibility for LUN and NVMe modules, and a snapshot_policy option for S3 buckets (ONTAP 9.16.1+).",
+ "questions": [
+  "Is netapp-lib still required for netapp.ontap?",
+  "Do netapp.ontap LUN modules support ASA r2?",
+  "How do I set a snapshot policy on an ONTAP S3 bucket with Ansible?"
+ ],
+ "answer_card": {
+  "title": "netapp.ontap changes in Ansible 12",
+  "answer_md": "- `netapp-lib` is now **optional**.\n- `na_ontap_autoupdate_support`: REST-only automatic software update, ONTAP **9.10+**.\n- ASA r2 compatibility: `na_ontap_lun`, `na_ontap_lun_map`, `na_ontap_lun_map_reporting_nodes`, `na_ontap_nvme_namespace`, `na_ontap_nvme_subsystem`; `na_ontap_lun_copy` refuses unsupported ASA r2 systems.\n- `na_ontap_s3_buckets`: new `snapshot_policy` option (REST, ONTAP **9.16.1+**).",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

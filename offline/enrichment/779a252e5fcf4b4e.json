@@ -1,0 +1,17 @@
+{
+  "chunk_id": "779a252e5fcf4b4e",
+  "chunk_hash": "779a252e5fcf4b4e",
+  "summary": "Shows extracting nested keys from a dictionary for a list of selected keys using map('extract'), map(attribute=...) and flatten, and getting a unique list of a variable across all hosts from hostvars.",
+  "questions": [
+    "How do I pull a nested value out of a dict for several keys in Jinja2?",
+    "How do I get a unique list of a variable's values across all hosts?",
+    "How does the extract filter work with hostvars?"
+  ],
+  "answer_card": {
+    "title": "Extracting values with map('extract')",
+    "answer_md": "```yaml\nmsg: \"{{ chains | map('extract', chains_config) | map(attribute='configs') | flatten | map(attribute='type') | flatten }}\"\n```\n\nWith `chains: [1, 2]` this returns `[\"routed\", \"bridged\", \"routed\", \"bridged\"]`.\n\nUnique values of a var across all hosts:\n\n```yaml\nunique_value_list: \"{{ groups['all'] | map('extract', hostvars, 'varname') | list | unique }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/complex_data_manipulation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

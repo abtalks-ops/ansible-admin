@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f4fc156a7b619449",
+ "chunk_hash": "f4fc156a7b619449",
+ "summary": "Describes keeping vaulted variables discoverable: encrypt individual values with ansible-vault encrypt_string, or use a group_vars directory with a plain vars file that references vault_-prefixed variables in an encrypted vault file.",
+ "questions": [
+  "How do I encrypt secrets but still grep for variable names?",
+  "What is the vars and vault file pattern in group_vars?",
+  "How do I encrypt a single variable value with Ansible Vault?",
+  "Do I need all vault passwords when running a playbook with that inventory?"
+ ],
+ "answer_card": {
+  "title": "Keep vaulted variable names visible",
+  "answer_md": "Encrypting whole files hides variable names. Either encrypt values individually with `ansible-vault encrypt_string`, or use indirection:\n\n1. Create `group_vars/<group>/`.\n2. Add two files: `vars` and `vault`.\n3. Define all variables in `vars`.\n4. Copy sensitive ones into `vault` with a `vault_` prefix.\n5. Point to them from `vars`: `db_password: \"{{ vault_db_password }}\"`.\n6. Encrypt the `vault` file.\n7. Use the `vars` names in playbooks.\n\nAll vault passwords for the inventory are still required at run time.",
+  "source_url": "https://docs.ansible.com/ansible/latest/tips_tricks/ansible_tips_tricks.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

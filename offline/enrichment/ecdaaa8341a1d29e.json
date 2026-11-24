@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ecdaaa8341a1d29e",
+ "chunk_hash": "ecdaaa8341a1d29e",
+ "summary": "ansible-core 2.12 filter changes: unique with old Jinja2 errors correctly on case_sensitive=False, set theory filters (intersect, difference, symmetric_difference, union) are case-sensitive by default, and password_hash follows passlib defaults (bcrypt now 2b).",
+ "questions": [
+  "union filter now treats 'A' and 'a' as different, how do I restore the old behaviour?",
+  "password_hash bcrypt output changed from $2a$ to $2b$, why?",
+  "How do I get the 2a bcrypt format?"
+ ],
+ "answer_card": {
+  "title": "Set filters case-sensitive; password_hash defaults",
+  "answer_md": "- `intersect`, `difference`, `symmetric_difference`, `union` are **case-sensitive**. Old behaviour: `| union(other, case_sensitive=False)`.\n- `unique` with Jinja2 < 2.10 now errors consistently on `case_sensitive=False`.\n- `password_hash` uses **passlib defaults**: `bcrypt` produces the **2b** format; request `ident='2a'` if you need 2a.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

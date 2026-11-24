@@ -1,0 +1,18 @@
+{
+  "chunk_id": "c71cc52aae26ae82",
+  "chunk_hash": "c71cc52aae26ae82",
+  "summary": "Covers managing local Windows users and groups with win_user, win_group and win_group_membership, with an example creating a group, users, a folder, and ACLs via win_acl and win_acl_inheritance.",
+  "questions": [
+    "How do I create local users and groups on a Windows server with Ansible?",
+    "How can I grant a local group full control of a folder on Windows?",
+    "How do I disable ACL inheritance on a Windows directory using Ansible?",
+    "Which modules manage local Windows group membership?"
+  ],
+  "answer_card": {
+    "title": "Managing local Windows users, groups and folder ACLs",
+    "answer_md": "Use `win_group`, `win_user`, and `win_group_membership` for local accounts, then `win_acl` / `win_acl_inheritance` for permissions:\n\n```yaml\n- win_group:\n    name: LocalGroup\n- win_user:\n    name: '{{ item.name }}'\n    password: '{{ item.password }}'\n    groups: LocalGroup\n    update_password: false\n    password_never_expires: true\n  loop: [...]\n- win_file: {path: C:\\Development, state: directory}\n- win_acl:\n    path: C:\\Development\n    rights: FullControl\n    type: allow\n    user: LocalGroup\n    state: present\n- win_acl_inheritance:\n    path: C:\\Development\n    reorganize: true\n    state: absent\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

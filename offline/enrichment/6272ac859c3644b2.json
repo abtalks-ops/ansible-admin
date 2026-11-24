@@ -1,0 +1,15 @@
+{
+ "chunk_id": "6272ac859c3644b2",
+ "chunk_hash": "6272ac859c3644b2",
+ "summary": "ansible.builtin.string is the Jinja builtin filter converting an object to a string if needed.",
+ "questions": [
+  "How do I convert a value to a string in Ansible?"
+ ],
+ "answer_card": {
+  "title": "string filter",
+  "answer_md": "`{{ value | string }}` converts an object to a string if it isn't one already (Jinja builtin).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/string_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:11+00:00"
+}

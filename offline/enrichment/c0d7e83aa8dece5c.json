@@ -1,0 +1,19 @@
+{
+ "chunk_id": "c0d7e83aa8dece5c",
+ "chunk_hash": "c0d7e83aa8dece5c",
+ "summary": "Ansible officially supports only the OpenSSH that ships with Windows, at version 7.9.0.0 or later, which effectively means Windows Server 2022 and up. A PowerShell script installs the OpenSSH server capability, starts sshd automatically, opens port 22 in the firewall and sets PowerShell as the default shell.",
+ "questions": [
+  "How do I install OpenSSH server on Windows Server 2022?",
+  "Is Windows Server 2019 supported for SSH with Ansible?",
+  "What minimum OpenSSH version does Ansible need on Windows?",
+  "Is the upstream Win32-OpenSSH package supported by Ansible?",
+  "How do I open the firewall for sshd on Windows?"
+ ],
+ "answer_card": {
+  "title": "Setting up OpenSSH on Windows for Ansible",
+  "answer_md": "Ansible officially supports only the OpenSSH shipped with Windows (not the upstream Win32-OpenSSH package), version **7.9.0.0** or later. Server 2019 ships 7.7.2.1, so official support effectively starts with **Windows Server 2022**. Older versions or the upstream package may work but aren't supported.\n\nInstall on Server 2022+:\n\n```powershell\nGet-WindowsCapability -Name OpenSSH.Server* -Online |\n    Add-WindowsCapability -Online\nSet-Service -Name sshd -StartupType Automatic -Status Running\n\n$firewallParams = @{\n    Name        = 'sshd-Server-In-TCP'\n    DisplayName = 'Inbound rule for OpenSSH Server (sshd) on TCP port 22'\n    Action      = 'Allow'\n    Direction   = 'Inbound'\n    Enabled     = 'True'  # enum, not boolean\n    Profile     = 'Any'\n    Protocol    = 'TCP'\n    LocalPort   = 22\n}\nNew-NetFirewallRule @firewallParams\n\n$shellParams = @{\n    Path         = 'HKLM:\\SOFTWARE\\OpenSSH'\n    Name         = 'DefaultShell'\n    Value        = 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe'\n    PropertyType = 'String'\n    Force        = $true\n}\nNew-ItemProperty @shellParams\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_ssh.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

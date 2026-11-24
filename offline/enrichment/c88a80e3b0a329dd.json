@@ -1,0 +1,19 @@
+{
+  "chunk_id": "c88a80e3b0a329dd",
+  "chunk_hash": "c88a80e3b0a329dd",
+  "summary": "blockinfile options for appending a blank line after the block, file attributes, backups, the block text (empty removes it), creating the file, encoding, and group ownership.",
+  "questions": [
+    "How do I create the file if it doesn't exist with blockinfile?",
+    "How do I remove a block by giving empty content?",
+    "How do I add a blank line after the inserted block?",
+    "Can blockinfile handle files that aren't UTF-8?",
+    "How do I back up the file before blockinfile changes it?"
+  ],
+  "answer_card": {
+    "title": "blockinfile parameters (part 1)",
+    "answer_md": "- `block` (alias `content`): text inside markers; empty/missing removes the block\n- `create` (false): create file if missing\n- `backup` (false)\n- `append_newline` (false): add a blank line after the block\n- `encoding` (utf-8; since 2.20)\n- `group`, `attributes`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/blockinfile_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

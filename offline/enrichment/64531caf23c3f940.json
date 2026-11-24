@@ -1,0 +1,17 @@
+{
+  "chunk_id": "64531caf23c3f940",
+  "chunk_hash": "64531caf23c3f940",
+  "summary": "Filter plugins manipulate data, for example by extracting values, converting types and formats, doing math, splitting or joining strings and inserting dates. Ansible uses Jinja2's standard filters plus its own, and you can write custom ones.",
+  "questions": [
+    "What can filters do to my variables?",
+    "Does Ansible support the normal Jinja2 filters?",
+    "Can I write my own filter?"
+  ],
+  "answer_card": {
+    "title": "What filter plugins are",
+    "answer_md": "Filters transform data: extracting values, converting types and formats, math, splitting and joining strings, dates, and more. Ansible includes Jinja2's standard filters plus its own specialized ones, and you can create custom filter plugins.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/filter.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

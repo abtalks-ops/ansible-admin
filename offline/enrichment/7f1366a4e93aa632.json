@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7f1366a4e93aa632",
+ "chunk_hash": "7f1366a4e93aa632",
+ "summary": "Search engines ignore URL fragments after #, so subheadings link to the page top (local TOCs help, or make separate pages for critical content), and the first ~140 characters serve as the search description.",
+ "questions": [
+  "Why do search results link to the top of the page instead of the section?",
+  "What text do search engines show as the description of a docs page?"
+ ],
+ "answer_card": {
+  "title": "Other search hints",
+  "answer_md": "- Search engines ignore `#` fragments, so results point to the page top. Local TOCs help; critical topics may deserve their own page.\n- Without description metadata, search engines show the **first ~140 characters**, so make the opening sentences describe the page clearly.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/search_hints.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

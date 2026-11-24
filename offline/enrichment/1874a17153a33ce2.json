@@ -1,0 +1,15 @@
+{
+ "chunk_id": "1874a17153a33ce2",
+ "chunk_hash": "1874a17153a33ce2",
+ "summary": "to_nice_json returns a nicely formatted JSON string.",
+ "questions": [
+  "What does to_nice_json return?"
+ ],
+ "answer_card": {
+  "title": "to_nice_json return value",
+  "answer_md": "A nicely formatted JSON string.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/to_nice_json_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

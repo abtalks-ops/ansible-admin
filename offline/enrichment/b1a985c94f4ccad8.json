@@ -1,0 +1,19 @@
+{
+  "chunk_id": "b1a985c94f4ccad8",
+  "chunk_hash": "b1a985c94f4ccad8",
+  "summary": "Examples of pip: installing packages with exact or ranged versions, multiple packages, via a proxy, from VCS URLs or local tarballs, into virtualenvs with or without site packages, with a specific virtualenv command, and with --user.",
+  "questions": [
+    "How do I install a package with a version range via pip?",
+    "How do I install a pip package through a proxy?",
+    "How do I install from a git URL with pip?",
+    "How do I install into the user's home directory with pip?",
+    "How do I install into a venv with a specific Python?"
+  ],
+  "answer_card": {
+    "title": "pip examples (part 1)",
+    "answer_md": "```yaml\n- ansible.builtin.pip: {name: bottle==0.11}\n- ansible.builtin.pip:\n    name: [django>1.11.0,<1.12.0, bottle>0.10,<0.20,!=0.11]\n- ansible.builtin.pip: {name: six}\n  environment:\n    https_proxy: 'https://127.0.0.1:8080'\n- ansible.builtin.pip: {name: git+http://myrepo/app/MyApp}\n- ansible.builtin.pip: {name: file:///path/to/MyApp.tar.gz}\n- ansible.builtin.pip: {name: bottle, virtualenv: /my_app/venv, virtualenv_command: virtualenv-3.13}\n- ansible.builtin.pip: {name: bottle, extra_args: --user}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pip_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

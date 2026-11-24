@@ -1,0 +1,19 @@
+{
+  "chunk_id": "b37375e3a72b65e2",
+  "chunk_hash": "b37375e3a72b65e2",
+  "summary": "include_role dynamically loads and runs a role as a task; keywords apply only to the include statement, so use apply to affect the role's tasks. It ignores until/retries, doesn't work in handlers, and since 2.21 has a rescuable option for include errors.",
+  "questions": [
+    "How do I run a role conditionally at runtime?",
+    "Why don't tags on include_role apply to the role's tasks?",
+    "Can I loop over include_role?",
+    "Can I use until/retries with include_role?",
+    "How do I make include_role errors rescuable?"
+  ],
+  "answer_card": {
+    "title": "include_role (dynamic role loading)",
+    "answer_md": "`ansible.builtin.include_role` loads and runs a role dynamically. Use in `tasks`, `pre_tasks`, `post_tasks` or inside a role (not handlers).\n- Keywords, loops, conditions apply to the **include itself**. To push `tags`/`become` to the role's tasks, use `apply`.\n- `until`/`retries` are ignored.\n- Since 2.21, `rescuable` controls whether include errors are task failures or fatal.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

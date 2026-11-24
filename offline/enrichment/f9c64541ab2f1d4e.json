@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f9c64541ab2f1d4e",
+ "chunk_hash": "f9c64541ab2f1d4e",
+ "summary": "Compares the Ansible community package with ansible-core: versioning, semantic versioning, number of maintained versions, contents, and where each is developed.",
+ "questions": [
+  "What is the difference between the ansible package and ansible-core?",
+  "Should I install ansible or ansible-core?",
+  "How many ansible-core versions are maintained at once?",
+  "Does ansible-core follow semantic versioning?"
+ ],
+ "answer_card": {
+  "title": "Ansible community package vs ansible-core",
+  "answer_md": "| | Ansible community package | ansible-core |\n|---|---|---|\n| Versioning | 2.10, then 3.0.0+ | classic 2.11, 2.12... |\n| SemVer | Yes | No |\n| Maintained | One version at a time | Latest + two older |\n| Contents | Language, runtime and 85+ selected collections | Language, runtime and builtin plugins |\n| Developed in | Collection repos | ansible/ansible |\n\nMost users install the community package. Choose `ansible-core` if you want to install only the collections you need.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:57+00:00"
+}

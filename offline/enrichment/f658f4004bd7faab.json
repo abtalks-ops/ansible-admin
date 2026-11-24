@@ -1,0 +1,15 @@
+{
+ "chunk_id": "f658f4004bd7faab",
+ "chunk_hash": "f658f4004bd7faab",
+ "summary": "junipernetworks.junos is deprecated and will be removed from Ansible 14 unless it regains a maintainer.",
+ "questions": [
+  "Will junipernetworks.junos be in Ansible 14?"
+ ],
+ "answer_card": {
+  "title": "junipernetworks.junos deprecated",
+  "answer_md": "`junipernetworks.junos` is deprecated and will be **removed from Ansible 14** unless someone starts maintaining it before then.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:43+00:00"
+}

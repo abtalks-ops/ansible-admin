@@ -1,0 +1,17 @@
+{
+  "chunk_id": "fc4e1846cb12c876",
+  "chunk_hash": "fc4e1846cb12c876",
+  "summary": "Example callbacks: log_plays records playbook events to a log file, mail sends email on failures and say speaks playbook events with synthesized speech.",
+  "questions": [
+    "Is there a callback to log playbook runs to a file?",
+    "How can I get emailed when a playbook fails?",
+    "Which callback reads events aloud?"
+  ],
+  "answer_card": {
+    "title": "Example callback plugins",
+    "answer_md": "- `log_plays`: records playbook events to a log file.\n- `mail`: sends email on playbook failures.\n- `say`: announces events with synthesized speech.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/callback.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

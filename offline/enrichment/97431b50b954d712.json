@@ -1,0 +1,17 @@
+{
+ "chunk_id": "97431b50b954d712",
+ "chunk_hash": "97431b50b954d712",
+ "summary": "With multiple sources, variables merge in the order you pass -i, so the last wins; in a directory, sources merge alphabetically by filename, so use numeric prefixes to control order.",
+ "questions": [
+  "Which inventory wins if I pass -i staging -i production?",
+  "How do I control load order of inventory files in a directory?",
+  "Why is my variable taking the value from the wrong inventory file?"
+ ],
+ "answer_card": {
+  "title": "Control inventory variable load order",
+  "answer_md": "- Command line: merge order = order of `-i`. With `myvar=1` in staging and `2` in production, `-i staging -i production` gives `2`; reversed gives `1`.\n- Directory: alphabetical by filename. Prefix files to control it:\n```text\ninventory/\n  01-openstack.yml\n  02-dynamic-inventory.py\n  03-static-inventory      # its myvar wins\n  group_vars/all.yml\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

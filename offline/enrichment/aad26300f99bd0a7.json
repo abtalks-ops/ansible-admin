@@ -1,0 +1,17 @@
+{
+ "chunk_id": "aad26300f99bd0a7",
+ "chunk_hash": "aad26300f99bd0a7",
+ "summary": "Explains removed_at_date, removed_from_collection (ansible.builtin or collection name), and deprecated_aliases entries with name plus version or date and collection_name.",
+ "questions": [
+  "How do I deprecate an option by date?",
+  "How do I deprecate just an alias of an option?",
+  "What value should removed_from_collection have for ansible-core?"
+ ],
+ "answer_card": {
+  "title": "argument_spec: date deprecation and deprecated aliases",
+  "answer_md": "- `removed_at_date`: e.g. `'2020-12-31'`; needs `removed_from_collection`; exclusive with `removed_in_version`.\n- `removed_from_collection`: `ansible.builtin` for core or `ns.coll`.\n- `deprecated_aliases`:\n```python\n'aliases': ['foo', 'bar'],\n'deprecated_aliases': [\n  {'name': 'foo', 'version': '2.0.0', 'collection_name': 'testns.testcol'},\n  {'name': 'foo', 'date': '2020-12-31', 'collection_name': 'testns.testcol'},\n],\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

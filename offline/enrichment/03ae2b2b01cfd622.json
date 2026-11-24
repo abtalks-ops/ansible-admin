@@ -1,0 +1,17 @@
+{
+  "chunk_id": "03ae2b2b01cfd622",
+  "chunk_hash": "03ae2b2b01cfd622",
+  "summary": "Shows truthy and falsy tests (2.10+) for Python-like truthiness, with convert_bool=True to interpret strings like 'yes' and 'off' as booleans.",
+  "questions": [
+    "How do I check if a variable is truthy in Ansible?",
+    "How do I treat 'yes' or 'off' strings as booleans in a test?",
+    "Is an empty string falsy in Ansible?"
+  ],
+  "answer_card": {
+    "title": "truthy and falsy tests",
+    "answer_md": "```yaml\nwhen: value is truthy     # \"some string\"\nwhen: value is falsy      # \"\"\nwhen: value is truthy(convert_bool=True)   # \"yes\"\nwhen: value is falsy(convert_bool=True)    # \"off\"\n```\n\nAvailable since 2.10.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

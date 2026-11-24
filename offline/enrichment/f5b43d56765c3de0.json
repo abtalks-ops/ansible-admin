@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f5b43d56765c3de0",
+ "chunk_hash": "f5b43d56765c3de0",
+ "summary": "Resource module components: the module calls execute_module; argspec; facts with entries in facts.py and FACTS_RESOURCE_SUBSETS; a config package that loads config and returns changed/commands/before/after using get_facts or on-box diff; and platform utils.",
+ "questions": [
+  "How is a network resource module structured internally?",
+  "What keys does execute_module return?",
+  "Why isn't my resource showing up in facts gathering?"
+ ],
+ "answer_card": {
+  "title": "Resource module structure",
+  "answer_md": "- **Module** `library/<os>_<resource>.py`: `result = <resource_package>(module).execute_module()`\n- **Argspec** `module_utils/<os>/argspec/<resource>/`\n- **Facts** `module_utils/<os>/facts/<resource>/`; also add an entry in `facts/facts.py` for `get_facts`, and the resource in `FACTS_RESOURCE_SUBSETS` so facts collection works.\n- **Config package** `module_utils/<os>/config/<resource>/`: implement `execute_module`, which calls `get_facts` (or uses on-box diff), compares with the requested values, builds the final config, loads it, and returns `changed`, `commands`, `before`, `after`.\n- **Utils** `module_utils/<os>/utils`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

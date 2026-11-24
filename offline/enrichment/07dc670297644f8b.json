@@ -1,0 +1,16 @@
+{
+ "chunk_id": "07dc670297644f8b",
+ "chunk_hash": "07dc670297644f8b",
+ "summary": "grafana.grafana changes in Ansible 13.0.0: SUSE and macOS Alloy support, empty-dict fallback for grafana_ini, Mimir fixes, rpm.grafana.com repo URLs, apt repo fix, deb822, and safer length checks.",
+ "questions": [
+  "Does the grafana Alloy role support SUSE and macOS?",
+  "What changed in grafana.grafana in Ansible 13.0.0?"
+ ],
+ "answer_card": {
+  "title": "grafana.grafana 13.0.0 changes",
+  "answer_md": "- Alloy role: **SUSE** and **macOS** support\n- Falls back to an empty dict if `grafana_ini` is undefined\n- Mimir: config validation fix, default listen address/port restored, download URL fixes\n- RedHat install via `ansible.builtin.package`; YUM URLs moved to `rpm.grafana.com`\n- Fixed apt repository addition; deb822 on newer Debian\n- Dashboards: imports only if the directory exists, uses `grafana_ini` credentials\n- `None` replaced with `[]` for safe length checks",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:43+00:00"
+}

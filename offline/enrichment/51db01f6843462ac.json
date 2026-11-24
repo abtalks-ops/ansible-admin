@@ -1,0 +1,17 @@
+{
+ "chunk_id": "51db01f6843462ac",
+ "chunk_hash": "51db01f6843462ac",
+ "summary": "Parameters for the jsonfile cache: _uri (required path), _prefix, _timeout (default 86400 seconds), and persist_metadata (2.22, default true) to keep or drop internal metadata.",
+ "questions": [
+  "How do I set the directory for the jsonfile fact cache?",
+  "How long does the jsonfile fact cache last by default?",
+  "How do I make the fact cache use the pre-2.19 file format?"
+ ],
+ "answer_card": {
+  "title": "jsonfile cache parameters",
+  "answer_md": "- `_uri` (path, **required**): directory where JSON files are saved\n- `_prefix`: prefix for the file names\n- `_timeout` (int, default **86400**): cache expiration in seconds\n- `persist_metadata` (bool, default `true`, added 2.22): keep internal metadata such as deprecation notices and variable origin. Set `false` to drop it and use the pre-2.19 filename and format.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/jsonfile_cache.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7e37f78a725f6fa3",
+ "chunk_hash": "7e37f78a725f6fa3",
+ "summary": "Since ansible-core 2.14, filter and test plugins can be documented either inline per plugin or with adjacent YAML files for a multi-plugin Python file.",
+ "questions": [
+  "How do I document a custom filter plugin?",
+  "Can filter plugin docs live in YAML files?"
+ ],
+ "answer_card": {
+  "title": "Documenting filter and test plugins",
+  "answer_md": "Since **ansible-core 2.14**, either:\n- a Python file with inline docs for each plugin, or\n- one Python file for multiple plugins plus adjacent YAML doc files.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

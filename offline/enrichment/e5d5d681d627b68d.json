@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e5d5d681d627b68d",
+ "chunk_hash": "e5d5d681d627b68d",
+ "summary": "Shows running the shell module ad hoc and warns about local shell quoting: single quotes pass the variable to the remote host, while double quotes expand it on the control machine.",
+ "questions": [
+  "Why does my ad hoc shell command print the variable value from my laptop instead of the remote host?",
+  "Should I use single or double quotes around ad hoc shell arguments?",
+  "How do I run a shell command with environment variables on remote hosts ad hoc?"
+ ],
+ "answer_card": {
+  "title": "Quoting in ad hoc shell commands",
+  "answer_md": "```bash\nansible raleigh -m ansible.builtin.shell -a 'echo $TERM'\n```\nUse **single quotes** so your local shell doesn't expand the variable. With double quotes, `$TERM` is evaluated on the control machine before Ansible sees it.",
+  "source_url": "https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:04+00:00"
+}

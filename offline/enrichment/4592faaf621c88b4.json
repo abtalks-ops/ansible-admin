@@ -1,0 +1,16 @@
+{
+  "chunk_id": "4592faaf621c88b4",
+  "chunk_hash": "4592faaf621c88b4",
+  "summary": "Shows to_uuid for namespaced UUIDv5 values (custom or default Ansible namespace) and using map(attribute=...) with join to list mount points.",
+  "questions": [
+    "How do I generate a deterministic UUID from a string in Ansible?",
+    "How do I get a comma-separated list of mount points?"
+  ],
+  "answer_card": {
+    "title": "UUIDs and mapping attributes",
+    "answer_md": "```jinja\n{{ string | to_uuid(namespace='11111111-2222-3333-4444-555555555555') }}\n{{ string | to_uuid }}   # default Ansible namespace\n```\n\n```jinja\n{{ ansible_mounts | map(attribute='mount') | join(',') }}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

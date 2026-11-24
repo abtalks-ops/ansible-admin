@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f7ed179f453ea350",
+ "chunk_hash": "f7ed179f453ea350",
+ "summary": "Explains vault password client scripts for keyrings, databases or secret managers: name ending in -client, executable, prints password to stdout, accepts --vault-id, prompts on the TTY. Pass via --vault-id label@script, and Ansible calls it with --vault-id label.",
+ "questions": [
+  "How do I write a script that gives Ansible the vault password from a secret manager?",
+  "What must a vault password client script be named?",
+  "How does the client script know which vault ID is requested?",
+  "How do I use a vault password from the system keyring?"
+ ],
+ "answer_card": {
+  "title": "Vault password client scripts",
+  "answer_md": "To create one:\n\n- name it ending in `-client` or `-client.EXTENSION`\n- make it executable\n- have it print the password to stdout\n- accept a `--vault-id` option\n- show any prompts on the TTY\n\nUse it as the source:\n\n```bash\nansible-playbook --vault-id dev@path/to/vault-keyring-client.py\n```\n\nAnsible runs `path/to/vault-keyring-client.py --vault-id dev`, so the script can return the `dev` or `prod` password accordingly. See the bundled `vault-keyring-client` example for the system keyring.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_managing_passwords.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

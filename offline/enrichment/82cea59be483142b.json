@@ -1,0 +1,17 @@
+{
+ "chunk_id": "82cea59be483142b",
+ "chunk_hash": "82cea59be483142b",
+ "summary": "Get VLANs with ios_facts gather_network_resources vlans, save ansible_network_resources to host_vars with to_nice_yaml, edit the file, and apply with ios_vlans state merged.",
+ "questions": [
+  "How do I manage Cisco VLANs as code with Ansible?",
+  "How do I save network facts to host_vars?",
+  "How do I update VLANs from a local file?"
+ ],
+ "answer_card": {
+  "title": "Gather, store and update VLANs",
+  "answer_md": "1. Gather:\n```yaml\n- cisco.ios.ios_facts:\n    gather_subset: ['!all', '!min']\n    gather_network_resources: ['vlans']\n```\n2. Store:\n```yaml\n- copy:\n    content: \"{{ ansible_network_resources | to_nice_yaml }}\"\n    dest: \"{{ playbook_dir }}/host_vars/{{ inventory_hostname }}\"\n```\n3. Edit that file.\n4. Apply:\n```yaml\n- cisco.ios.ios_vlans:\n    config: \"{{ vlans }}\"\n    state: merged\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_resource_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

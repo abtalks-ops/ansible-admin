@@ -1,0 +1,18 @@
+{
+  "chunk_id": "7a28973403dadbfa",
+  "chunk_hash": "7a28973403dadbfa",
+  "summary": "Describes CredSSP, which allows credential delegation by sending encrypted credentials to the server, works for local and domain accounts, and encrypts over HTTP. Shows host vars, the PowerShell command to enable it, and the pipx extras to install.",
+  "questions": [
+    "How do I set up CredSSP authentication for WinRM in Ansible?",
+    "How do I enable CredSSP on a Windows server?",
+    "What do I need to install on the control node for CredSSP?",
+    "What are the security risks of CredSSP double-hop?"
+  ],
+  "answer_card": {
+    "title": "Configuring CredSSP authentication",
+    "answer_md": "CredSSP sends your (encrypted) credentials to the server for double-hop auth, so only use it when the hosts the Windows server talks to are trusted. It supports local and domain accounts and HTTP message encryption.\n\n```yaml\nansible_user: Username\nansible_password: Password\nansible_connection: psrp\nansible_psrp_auth: credssp     # or ansible_winrm_transport: credssp\n```\n\nEnable on the host: `Enable-WSManCredSSP -Role Server -Force`\n\nInstall extras: `pipx inject \"pypsrp[credssp]<=1.0.0\"` or `pipx inject \"pywinrm[credssp]>=0.4.0\"`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

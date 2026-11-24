@@ -1,0 +1,20 @@
+{
+  "chunk_id": "f5f22c704fd0fb25",
+  "chunk_hash": "f5f22c704fd0fb25",
+  "summary": "apt module options covering force (dangerous), forcing apt-get over aptitude, recommended packages, apt lock wait time, package name and version specifiers, and upgrade-only mode.",
+  "questions": [
+    "How do I install a specific version of a package with apt?",
+    "How do I skip recommended packages during install?",
+    "How long does the apt module wait for the dpkg lock?",
+    "How do I upgrade a package only if it's already installed?",
+    "Is apt force=yes safe to use?",
+    "Should I quote versions like foo=1.0 in the name?"
+  ],
+  "answer_card": {
+    "title": "apt options: name, versions, recommends, lock",
+    "answer_md": "- `name` (aliases `package`, `pkg`): list of names or specifiers like `foo=1.0`, `foo>=1.0`; wildcards like `apt*` or `foo=1.0*` work. **Don't quote** the version.\n- `install_recommends`: `false` = `--no-install-recommends`; default follows the OS\n- `lock_timeout` (default 60s): wait for apt db lock\n- `only_upgrade` (no): upgrade only if installed\n- `force_apt_get`: use apt-get instead of aptitude\n- `force`: `--force-yes`, disables signature/cert checks. **Destructive; almost never use.**",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b738651eeece0443",
+ "chunk_hash": "b738651eeece0443",
+ "summary": "Recommends collections depend only on ansible-core, but otherwise list dependencies in galaxy.yml and set the ansible-core version in meta/runtime.yml. Git repo dependencies are fine for local development but not for published collections.",
+ "questions": [
+  "How do I declare that my collection needs another collection?",
+  "Where do I set the minimum ansible-core version for my collection?",
+  "Can a published collection depend on a Git repository?"
+ ],
+ "answer_card": {
+  "title": "Collection dependencies",
+  "answer_md": "- Prefer standalone collections depending only on ansible-core.\n- Otherwise list collections under `dependencies` in `galaxy.yml`.\n- Set required ansible-core in `meta/runtime.yml`.\n- Git dependencies are OK for local dev: `dependencies: {'git@github.com:organization/repo_name.git': 'devel'}`\n- **Don't** use Git deps in published collections; they must depend on published collections.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_shared.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:07+00:00"
+}

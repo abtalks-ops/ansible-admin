@@ -1,0 +1,18 @@
+{
+ "chunk_id": "d4f706f6a7d06b64",
+ "chunk_hash": "d4f706f6a7d06b64",
+ "summary": "Glossary entries for loops (and modules like yum/apt that accept lists directly), modules (run remotely, return JSON, removed after execution), and multi-tier orchestration.",
+ "questions": [
+  "Should I loop over packages or pass a list to the package module?",
+  "What is an Ansible module?",
+  "Does Ansible leave anything running on managed nodes?",
+  "Can modules be written in Bash or Ruby?"
+ ],
+ "answer_card": {
+  "title": "Glossary: loops, modules, multi-tier",
+  "answer_md": "- **Loops**: `loop` repeats a task per item. Modules such as `yum` and `apt` accept a list directly and install everything in one transaction, which is much faster than looping.\n- **Modules**: units of work shipped to remote machines. They can be written in any language and just need to return JSON. They are removed after running, so no daemons are left behind.\n- **Multi-tier**: Ansible models ordered interactions across systems (web, database, load balancers) rather than one system at a time.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

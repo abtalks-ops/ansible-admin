@@ -1,0 +1,17 @@
+{
+  "chunk_id": "9dc9da6532a53714",
+  "chunk_hash": "9dc9da6532a53714",
+  "summary": "Lists become command-line options: --ask-become-pass/-K, --become/-b, --become-method and --become-user, noting -K and --become-user don't imply become.",
+  "questions": [
+    "What command line flag enables become?",
+    "Does -K turn on become?",
+    "How do I set the become user from the command line?"
+  ],
+  "answer_card": {
+    "title": "become command-line options",
+    "answer_md": "- `--ask-become-pass`, `-K`: prompt for the escalation password (used for all hosts); doesn't enable become\n- `--become`, `-b`: run with become\n- `--become-method=...`: `sudo` (default), `su`, `pbrun`, `pfexec`, `doas`, `dzdo`, `ksu`, `runas`, `machinectl`\n- `--become-user=...`: default `root`; doesn't imply `-b`",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

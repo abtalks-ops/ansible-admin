@@ -1,0 +1,17 @@
+{
+ "chunk_id": "42abb6c0b4a20969",
+ "chunk_hash": "42abb6c0b4a20969",
+ "summary": "For dict or list-of-dict options, PowerShell specs support apply_defaults and nested validation keys, types can be custom delegate functions (e.g. UInt64), and Windows offers several ways to do a task in a preferred order.",
+ "questions": [
+  "How do I validate suboptions of a dict option in a PowerShell module?",
+  "What does apply_defaults do?",
+  "Can I define a custom type converter in a PowerShell argument spec?"
+ ],
+ "answer_card": {
+  "title": "Nested specs and custom types (PowerShell)",
+  "answer_md": "For `type=dict` or `list` with `elements=dict`: `apply_defaults` (use sub-option defaults when unset), plus nested `options`, `mutually_exclusive`, `required_if`, `required_by`, `required_together`, `required_one_of`.\n\nCustom type via delegate:\n```powershell\n$spec = @{\n    uint64_type = @{ type = [Func[[Object], [UInt64]]]{ [System.UInt64]::Parse($args[0]) } }\n}\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

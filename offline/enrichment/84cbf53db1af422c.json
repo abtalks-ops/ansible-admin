@@ -1,0 +1,15 @@
+{
+ "chunk_id": "84cbf53db1af422c",
+ "chunk_hash": "84cbf53db1af422c",
+ "summary": "splitext returns a list of the path root and extension.",
+ "questions": [
+  "What does splitext return?"
+ ],
+ "answer_card": {
+  "title": "splitext return value",
+  "answer_md": "A list of the path's root and its extension.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/splitext_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:11+00:00"
+}

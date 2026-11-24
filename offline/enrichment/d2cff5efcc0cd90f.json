@@ -1,0 +1,16 @@
+{
+  "chunk_id": "d2cff5efcc0cd90f",
+  "chunk_hash": "d2cff5efcc0cd90f",
+  "summary": "The truthy test is a Pythonic truthiness check and the opposite of falsy.",
+  "questions": [
+    "How do I check if a value is non-empty or true-ish?",
+    "What's the difference between true and truthy tests?"
+  ],
+  "answer_card": {
+    "title": "truthy test",
+    "answer_md": "`value is truthy` uses Python truthiness (non-empty strings/lists, non-zero numbers are true). Opposite of `falsy`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/truthy_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

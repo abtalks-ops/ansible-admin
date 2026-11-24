@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e537f47c1092d17d",
+ "chunk_hash": "e537f47c1092d17d",
+ "summary": "Describes the parse method's parameters (inventory, loader, path, cache) and the base class assignments of loader, inventory and templar.",
+ "questions": [
+  "What arguments does an inventory plugin's parse method receive?",
+  "What can the DataLoader do in an inventory plugin?",
+  "What is the cache argument in parse for?"
+ ],
+ "answer_card": {
+  "title": "Inventory plugin parse parameters",
+  "answer_md": "`parse(self, inventory, loader, path, cache=True)`:\n- `inventory`: object to add hosts/groups/vars\n- `loader`: DataLoader (reads files, parses JSON/YAML, decrypts vault, caches)\n- `path`: the inventory source string\n- `cache`: whether to use or avoid caches\n\nThe base class sets `self.loader`, `self.inventory` and `self.templar`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

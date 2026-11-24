@@ -1,0 +1,18 @@
+{
+  "chunk_id": "9449454654a44b20",
+  "chunk_hash": "9449454654a44b20",
+  "summary": "include_vars loads YAML/JSON variables from a file or directory at task runtime, loading directory files alphabetically; use delegate_to with delegate_facts to assign them to another host.",
+  "questions": [
+    "How do I load variables from a file during a play?",
+    "In what order are var files in a directory loaded?",
+    "How do I load variables onto a different host?",
+    "Does include_vars work on Windows?"
+  ],
+  "answer_card": {
+    "title": "Load variables at runtime with include_vars",
+    "answer_md": "`ansible.builtin.include_vars` loads YAML/JSON vars from a file or directory (recursively) during runtime. Directory files are loaded **alphabetically**. To assign to another host, use `delegate_to` + `delegate_facts: yes`. Works on Windows.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_vars_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

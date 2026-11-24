@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ccdbbd0b641418cd",
+ "chunk_hash": "ccdbbd0b641418cd",
+ "summary": "The mandatory filter forces an error if a variable is undefined, rather than it being ignored or skipped.",
+ "questions": [
+  "How do I make a playbook fail if a required variable isn't set?",
+  "How do I force an error on undefined variables?"
+ ],
+ "answer_card": {
+  "title": "mandatory filter",
+  "answer_md": "Depending on context, undefined variables can be ignored or skipped. `{{ myvar | mandatory }}` forces an **error** if the variable isn't defined.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/mandatory_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

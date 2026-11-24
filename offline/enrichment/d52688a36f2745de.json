@@ -1,0 +1,16 @@
+{
+ "chunk_id": "d52688a36f2745de",
+ "chunk_hash": "d52688a36f2745de",
+ "summary": "Interface conventions: name the object option name (or alias it), accept all common boolean spellings via type='bool', and avoid imperative action/command options.",
+ "questions": [
+  "What should I call the option that identifies the object my module manages?",
+  "How do I make my module accept yes/no/true/false for booleans?"
+ ],
+ "answer_card": {
+  "title": "Designing module interfaces",
+  "answer_md": "- Call the object option `name`, or accept `name` as an alias.\n- Use `type='bool'` so `yes`, `no`, `true`, `false`, etc. all work.\n- Avoid `action`/`command` options; they're imperative, not declarative.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_best_practices.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

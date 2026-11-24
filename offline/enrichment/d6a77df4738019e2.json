@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d6a77df4738019e2",
+ "chunk_hash": "d6a77df4738019e2",
+ "summary": "Different login users, ports or connection types per host are easiest to set with inventory variables such as ansible_user, ansible_port and ansible_connection, or in group_vars.",
+ "questions": [
+  "How do I use a different SSH port for one host?",
+  "Can each host have its own login user?",
+  "How do I set connection local for localhost in inventory?"
+ ],
+ "answer_card": {
+  "title": "Per-host user, port and connection",
+  "answer_md": "Set them in inventory:\n\n```ini\n[webservers]\nasdf.example.com ansible_port=5000 ansible_user=alice\njkl.example.com  ansible_port=5001 ansible_user=bob\n\n[testcluster]\nlocalhost ansible_connection=local\n```\n\nOr put them in `group_vars/<group>` / `host_vars/<host>`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

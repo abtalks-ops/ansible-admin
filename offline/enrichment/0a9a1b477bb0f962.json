@@ -1,0 +1,15 @@
+{
+  "chunk_id": "0a9a1b477bb0f962",
+  "chunk_hash": "0a9a1b477bb0f962",
+  "summary": "The file test takes a single path input.",
+  "questions": [
+    "What input does the file test take?"
+  ],
+  "answer_card": {
+    "title": "file test parameters",
+    "answer_md": "`_input` (path).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

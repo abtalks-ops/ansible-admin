@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c64dc671557a769c",
+ "chunk_hash": "c64dc671557a769c",
+ "summary": "ansible-core 2.22 breaking changes: AnsibleModule logs only redact registered secrets, run_command stops rewriting passwords, no_log values are kept (not VALUE_SPECIFIED_IN_NO_LOG_PARAMETER), ansible-config defaults to -t all, and uri stops stripping no_log keys.",
+ "questions": [
+  "Why does ansible-config now validate [ssh_connection] keys?",
+  "How do I get the old ansible-config behavior?",
+  "Why is invocation.module_args showing real no_log values?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.22 breaking changes",
+  "answer_md": "- `AnsibleModule.log()` and invocation logging redact only registered secrets (no heuristics); placeholders are `$REDACTED$`.\n- `run_command()` no longer rewrites password-like args in failure `cmd` or sanitizes `msg`; register non-`no_log` secrets with `register_secret()`.\n- `no_log: true` values are no longer replaced with `VALUE_SPECIFIED_IN_NO_LOG_PARAMETER` in results and `invocation.module_args`; they're registered and masked in output. Update tests checking the placeholder.\n- **ansible-config** actions default to `-t all`, so plugin sections like `[ssh_connection]` are recognized and validated. Use `-t base` for the old behavior.\n- `uri`: no longer strips `no_log` values from response keys.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:17+00:00"
+}

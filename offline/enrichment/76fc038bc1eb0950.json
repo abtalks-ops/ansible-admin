@@ -1,0 +1,16 @@
+{
+ "chunk_id": "76fc038bc1eb0950",
+ "chunk_hash": "76fc038bc1eb0950",
+ "summary": "community.routeros api_modify deprecates writing numbers fields and copy-from/place-before in routing bfd configuration, removed in 4.0.0.",
+ "questions": [
+  "Can I still set numbers with community.routeros api_modify?",
+  "Is place-before deprecated in api_modify?"
+ ],
+ "answer_card": {
+  "title": "api_modify numbers fields deprecated",
+  "answer_md": "In `community.routeros.api_modify`, writing any existing **`numbers`** fields is deprecated, as are `copy-from` and `place-before` in `routing bfd configuration`. Support is removed in community.routeros 4.0.0.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:56+00:00"
+}

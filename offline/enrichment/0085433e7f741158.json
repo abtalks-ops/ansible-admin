@@ -1,0 +1,11 @@
+{
+ "chunk_id": "0085433e7f741158",
+ "chunk_hash": "0085433e7f741158",
+ "summary": "Westermo WeOS 4 is in community.network and supports only CLI via network_cli.",
+ "questions": [
+  "Which collection supports Westermo WeOS 4?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

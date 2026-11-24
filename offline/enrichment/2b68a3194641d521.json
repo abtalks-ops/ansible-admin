@@ -1,0 +1,16 @@
+{
+ "chunk_id": "2b68a3194641d521",
+ "chunk_hash": "2b68a3194641d521",
+ "summary": "to_nice_yaml converts a variable to a YAML string via PyYAML yaml.dump; default_flow_style and allow_unicode are overridden.",
+ "questions": [
+  "How do I write a variable out as readable YAML?",
+  "Which yaml.dump options does to_nice_yaml ignore?"
+ ],
+ "answer_card": {
+  "title": "to_nice_yaml filter",
+  "answer_md": "`{{ data | to_nice_yaml }}` converts a variable to a YAML string with PyYAML's `yaml.dump`. `default_flow_style` and `allow_unicode` are overridden internally. More options may be available per PyYAML docs.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/to_nice_yaml_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

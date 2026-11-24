@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fa33dc701f5cb298",
+ "chunk_hash": "fa33dc701f5cb298",
+ "summary": "'Authentication failed' means credentials didn't work; paramiko may be using SSH keys and ignoring your password, so disable key lookup with ANSIBLE_PARAMIKO_LOOK_FOR_KEYS=False or look_for_keys = False.",
+ "questions": [
+  "Why does Ansible ignore my network device password?",
+  "How do I stop paramiko from trying SSH keys?",
+  "How do I fix Authentication failed for a Cisco device?"
+ ],
+ "answer_card": {
+  "title": "Fix 'Authentication failed'",
+  "answer_md": "If you pass a password (via `password:`, `provider:` or `ANSIBLE_NET_PASSWORD`), paramiko may be trying SSH keys instead. Disable key lookup:\n```shell\nexport ANSIBLE_PARAMIKO_LOOK_FOR_KEYS=False\n```\nPermanently in `ansible.cfg`:\n```ini\n[paramiko_connection]\nlook_for_keys = False\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

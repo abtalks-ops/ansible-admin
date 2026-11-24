@@ -1,0 +1,18 @@
+{
+ "chunk_id": "143c2cd60a2b129e",
+ "chunk_hash": "143c2cd60a2b129e",
+ "summary": "Known issues in dellemc.openmanage: idrac_firmware cannot use authenticated HTTP/HTTPS/FTP shares on iDRAC8, several modules give poor error messages for unsupported values, quick deploy skips slots with IPv6 disabled, SupportAssist export fails on OME 4.0.0, and same-name uplinks are modified instead of created.",
+ "questions": [
+  "Why can't idrac_firmware update from an authenticated HTTPS share on iDRAC8?",
+  "ome_diagnostics export fails on OME 4.0.0, is that known?",
+  "Why did ome_smart_fabric_uplink modify my existing uplink?",
+  "ome_device_power_settings says PowerCap does not exist, what does that mean?"
+ ],
+ "answer_card": {
+  "title": "dellemc.openmanage known issues",
+  "answer_md": "- `idrac_firmware`: no firmware update from **authenticated** HTTP/HTTPS/FTP shares on **iDRAC8**.\n- `idrac_network_attributes`, `ome_device_network_services`: unclear errors for unsupported values.\n- `ome_device_power_settings`: `power_cap` outside 0 to 32767 gives *PowerCap does not exist or is not applicable*.\n- `ome_device_quick_deploy`: won't deploy to a slot with IPv6 disabled.\n- `ome_diagnostics`: SupportAssist log export to a share fails on **OME 4.0.0**.\n- `ome_smart_fabric_uplink`: creating an uplink with an existing name **modifies** the existing one; use unique names.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:28+00:00"
+}

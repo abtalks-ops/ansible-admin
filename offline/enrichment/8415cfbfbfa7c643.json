@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8415cfbfbfa7c643",
+ "chunk_hash": "8415cfbfbfa7c643",
+ "summary": "Provides setup code for debugging a PowerShell module locally: set ErrorActionPreference to Stop, provide args via args.json or $complex_args, load C# utils with Add-CSharpType and PowerShell utils with Import-Module; debug in PowerShell ISE or VS Code.",
+ "questions": [
+  "How do I pass arguments to a PowerShell module when debugging it outside Ansible?",
+  "How do I load the C# utils when running a Windows module by hand?",
+  "Which IDEs can I use to debug PowerShell modules?"
+ ],
+ "answer_card": {
+  "title": "Debug setup code for Windows modules",
+  "answer_md": "```powershell\n$ErrorActionPreference = \"Stop\"\n$args = @(\"$($pwd.Path)\\args.json\")\n# or\n$complex_args = @{ _ansible_check_mode = $false; _ansible_diff = $false; path = \"C:\\temp\"; state = \"present\" }\nImport-Module -Name \"$($pwd.Path)\\powershell\\Ansible.ModuleUtils.AddType.psm1\"\n$_csharp_utils = @([System.IO.File]::ReadAllText(\"$($pwd.Path)\\csharp\\Ansible.Basic.cs\"))\nAdd-CSharpType -References $_csharp_utils -IncludeDebugInfo\nImport-Module -Name \"$($pwd.Path)\\powershell\\Ansible.ModuleUtils.Legacy.psm1\"\n```\n`args.json` uses `{\"ANSIBLE_MODULE_ARGS\": {...}}`. Debug in PowerShell ISE or VS Code.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

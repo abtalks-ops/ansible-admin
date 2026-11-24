@@ -1,0 +1,15 @@
+{
+  "chunk_id": "18fbfc729cb0b64f",
+  "chunk_hash": "18fbfc729cb0b64f",
+  "summary": "Introduces human_readable and human_to_bytes for checking size formats in playbooks.",
+  "questions": [
+    "How can I convert between bytes and human-readable sizes in Ansible?"
+  ],
+  "answer_card": {
+    "title": "Size format helpers",
+    "answer_md": "`human_readable` and `human_to_bytes` let you use byte values for machines and human-readable sizes for people, and test that you're using the right format.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

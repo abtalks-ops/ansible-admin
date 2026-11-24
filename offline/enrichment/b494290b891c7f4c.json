@@ -1,0 +1,15 @@
+{
+ "chunk_id": "b494290b891c7f4c",
+ "chunk_hash": "b494290b891c7f4c",
+ "summary": "Example group_vars/voss.yml with network_cli, community.network.voss, user, become enable, vaulted password and optional proxy command.",
+ "questions": [
+  "What group_vars do I need for VOSS?"
+ ],
+ "answer_card": {
+  "title": "VOSS group_vars example",
+  "answer_md": "```yaml\nansible_connection: ansible.netcommon.network_cli\nansible_network_os: community.network.voss\nansible_user: myuser\nansible_become: true\nansible_become_method: enable\nansible_password: !vault...\nansible_paramiko_proxy_command: '-o ProxyCommand=\"ssh -W %h:%p -q bastion01\"'\n```\nDrop the password with SSH keys and the proxy line for direct access.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_voss.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

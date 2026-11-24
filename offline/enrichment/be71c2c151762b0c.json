@@ -1,0 +1,18 @@
+{
+  "chunk_id": "be71c2c151762b0c",
+  "chunk_hash": "be71c2c151762b0c",
+  "summary": "Introduces loop, with_<lookup> and until for repeating tasks. loop (added in 2.5) is recommended for most cases, with_<lookup> isn't deprecated, and loop and with_<lookup> are mutually exclusive.",
+  "questions": [
+    "How do I repeat a task several times in Ansible?",
+    "Is with_items deprecated?",
+    "Should I use loop or with_items?",
+    "Can I use loop and with_items in the same task?"
+  ],
+  "answer_card": {
+    "title": "Loop keywords in Ansible",
+    "answer_md": "Ansible has three ways to repeat a task: `loop`, `with_<lookup>`, and `until`.\n\n- `loop` (added in 2.5) is recommended for most cases.\n- `with_<lookup>` is **not deprecated** and stays valid.\n- `loop` and `with_<lookup>` are mutually exclusive. Both can be combined with `until`, which then applies to each iteration.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:01+00:00"
+}

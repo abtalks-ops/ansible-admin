@@ -1,0 +1,17 @@
+{
+ "chunk_id": "5e287e97e8cf0323",
+ "chunk_hash": "5e287e97e8cf0323",
+ "summary": "Network resource modules manage one config section (interfaces, VLANs, ACLs) by gathering, normalizing to structured data, and pushing changes back. They have config (dict or list of dicts) and state options.",
+ "questions": [
+  "What is a network resource module?",
+  "Should config be a dict or a list in a resource module?",
+  "How do resource modules avoid manual config parsing?"
+ ],
+ "answer_card": {
+  "title": "What network resource modules do",
+  "answer_md": "A resource module manages one section of device config (interfaces, VLANs, ACLs...). It:\n1. gathers that part of the config,\n2. converts it to key-value pairs,\n3. stores it in a normalized structured format,\n\nso you can edit the data and send it back, a full round trip with no manual parsing.\n\nTwo top-level options:\n- `config`: the data model. A `dict` for a single global config (for example LLDP), a `list` of dicts for multiple instances (for example interfaces).\n- `state`: what action to take on the device.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

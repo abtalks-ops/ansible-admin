@@ -1,0 +1,18 @@
+{
+  "chunk_id": "feac502b3947ded4",
+  "chunk_hash": "feac502b3947ded4",
+  "summary": "yum_repository options: include external config, includepkgs to whitelist packages, ip_resolve, metadata_expire, metalink and mirrorlist.",
+  "questions": [
+    "How do I only allow certain packages from a repo?",
+    "How do I use a mirrorlist instead of baseurl?",
+    "How do I force IPv4 for a yum repo?",
+    "How do I change metadata expiry?"
+  ],
+  "answer_card": {
+    "title": "yum_repository parameters (part 3)",
+    "answer_md": "- `includepkgs`: only these packages (globs, `$releasever` ok)\n- `mirrorlist`, `metalink`\n- `metadata_expire` (default 6h)\n- `ip_resolve`: `4`/`IPv4`, `6`/`IPv6`, `whatever`\n- `include`: external config file or URL",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:27+00:00"
+}

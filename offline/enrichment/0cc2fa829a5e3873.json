@@ -1,0 +1,16 @@
+{
+  "chunk_id": "0cc2fa829a5e3873",
+  "chunk_hash": "0cc2fa829a5e3873",
+  "summary": "The is_mount test checks whether a path is a mount point on the controller.",
+  "questions": [
+    "How do I check if a local path is a mount point?",
+    "Is is_mount the same as mount test?"
+  ],
+  "answer_card": {
+    "title": "is_mount test (controller paths)",
+    "answer_md": "`ansible.builtin.is_mount` (same as `mount`): true if the path is a mount point on the **controller**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/is_mount_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

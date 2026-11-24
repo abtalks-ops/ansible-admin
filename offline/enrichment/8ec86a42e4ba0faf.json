@@ -1,0 +1,18 @@
+{
+  "chunk_id": "8ec86a42e4ba0faf",
+  "chunk_hash": "8ec86a42e4ba0faf",
+  "summary": "The find module returns files matching criteria that are ANDed together. It is a simple, slower Python implementation, not the find command, and Windows needs win_find.",
+  "questions": [
+    "How do I list files matching certain criteria on a remote host?",
+    "Does Ansible find use the unix find command?",
+    "How do I find files on Windows with Ansible?",
+    "Are multiple find criteria combined with AND or OR?"
+  ],
+  "answer_card": {
+    "title": "Search for files with the find module",
+    "answer_md": "`ansible.builtin.find` returns files matching criteria (all criteria are **AND**ed). It's a simple Python implementation, slower than `find`; for heavy use run `find` directly. On Windows use `ansible.windows.win_find`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/find_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

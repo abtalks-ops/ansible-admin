@@ -1,0 +1,17 @@
+{
+  "chunk_id": "b1ce792b915adcc0",
+  "chunk_hash": "b1ce792b915adcc0",
+  "summary": "ansible-core breaking changes in Ansible 11: SSH commands to Windows are no longer wrapped in powershell.exe, so raw uses the sshd default shell without guaranteed UTF-8. Use win_command, win_shell or win_powershell, or wrap raw yourself. ANSIBLE_CONNECTION_PATH no longer has any effect.",
+  "questions": [
+    "How do I make raw commands on Windows SSH hosts use PowerShell again?",
+    "Does ANSIBLE_CONNECTION_PATH still do anything?",
+    "Why did my raw command output encoding change on Windows?"
+  ],
+  "answer_card": {
+    "title": "Windows SSH raw change in ansible-core 2.18",
+    "answer_md": "Commands sent over SSH to Windows are no longer wrapped in `powershell.exe`. Only `raw` is really affected: it now runs in the default shell configured for Windows sshd, and UTF-8 output isn't guaranteed. Use `ansible.windows.win_command`, `win_shell` or `win_powershell`, or wrap the raw command yourself to set the console encoding.\n\nAlso, `ANSIBLE_CONNECTION_PATH` no longer has any effect.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:26:20+00:00"
+}

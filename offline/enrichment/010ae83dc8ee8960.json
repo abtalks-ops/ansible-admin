@@ -1,0 +1,15 @@
+{
+  "chunk_id": "010ae83dc8ee8960",
+  "chunk_hash": "010ae83dc8ee8960",
+  "summary": "Notes the Kerberos guidance assumes MIT Kerberos; FreeBSD and macOS use Heimdal, which behaves similarly but may differ.",
+  "questions": [
+    "Does the Kerberos guide apply to macOS or FreeBSD?"
+  ],
+  "answer_card": {
+    "title": "MIT Kerberos vs Heimdal",
+    "answer_md": "The guide assumes **MIT Kerberos** (default on most Linux). FreeBSD and macOS use **Heimdal**, which is similar but may behave differently in places.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm_kerberos.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

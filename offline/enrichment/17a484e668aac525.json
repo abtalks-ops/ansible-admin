@@ -1,0 +1,17 @@
+{
+ "chunk_id": "17a484e668aac525",
+ "chunk_hash": "17a484e668aac525",
+ "summary": "Collections can depend on specific ansible-core, Python, Python package, system package and other collection versions, which can conflict; virtualenvs only partially solve this.",
+ "questions": [
+  "Why do my Ansible collections have conflicting dependencies?",
+  "Are Python virtualenvs enough to isolate Ansible dependencies?",
+  "What kinds of dependencies do collections have?"
+ ],
+ "answer_card": {
+  "title": "Dependency problems EEs solve",
+  "answer_md": "Collections can depend on specific versions of `ansible-core`, Python, Python packages, system packages and other collections. Installing these with RPM or pip on the host can lead to conflicts. Python virtual environments only **partially** fix this and have their own limits, which is a key reason to use Execution Environments.",
+  "source_url": "https://docs.ansible.com/ansible/latest/getting_started_ee/introduction.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

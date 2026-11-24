@@ -1,0 +1,18 @@
+{
+  "chunk_id": "2e63123b02c95bca",
+  "chunk_hash": "2e63123b02c95bca",
+  "summary": "Explains that a WinRM listener must exist on the Windows host and gives a PowerShell snippet that enables PSRemoting, opens TCP 5985 in the firewall, and sets LocalAccountTokenFilterPolicy for local accounts.",
+  "questions": [
+    "How do I quickly set up WinRM on a Windows host for Ansible?",
+    "Which port does WinRM HTTP use?",
+    "How do I let local admin accounts connect over WinRM?",
+    "What PowerShell commands prepare a Windows box for Ansible?"
+  ],
+  "answer_card": {
+    "title": "Quick WinRM HTTP listener setup",
+    "answer_md": "Run on the Windows host:\n\n```powershell\nEnable-PSRemoting -Force\n\nNew-NetFirewallRule -Action Allow -Direction Inbound -DisplayName 'Windows Remote Management (HTTP-In)' -LocalPort 5985 -Profile Any -Protocol TCP\n\n# Only needed for local (non-domain) accounts\nNew-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System' -Name LocalAccountTokenFilterPolicy -Value 1 -PropertyType DWORD -Force\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

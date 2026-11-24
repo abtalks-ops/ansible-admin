@@ -1,0 +1,17 @@
+{
+  "chunk_id": "80aceb61a0300422",
+  "chunk_hash": "80aceb61a0300422",
+  "summary": "Explains reusing playbooks with import_playbook (static only), which runs imported plays in order, and selecting the playbook to import via variables from --extra-vars or vars.",
+  "questions": [
+    "How do I combine several playbooks into one main playbook?",
+    "Can I choose which playbook to import at runtime?",
+    "Is there an include_playbook?"
+  ],
+  "answer_card": {
+    "title": "Reusing playbooks with import_playbook",
+    "answer_md": "Playbooks can only be reused with **imports**:\n\n```yaml\n- import_playbook: webservers.yml\n- import_playbook: databases.yml\n```\n\nThey run in order as if defined inline. Choose at runtime with a variable:\n\n```yaml\n- import_playbook: \"/path/to/{{ import_from_extra_var }}\"\n- import_playbook: \"{{ import_from_vars }}\"\n  vars:\n    import_from_vars: /path/to/one_playbook.yml\n```\n\n`ansible-playbook my_playbook -e import_from_extra_var=other_playbook.yml`",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:58+00:00"
+}

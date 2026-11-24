@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6353840fdeeab02c",
+ "chunk_hash": "6353840fdeeab02c",
+ "summary": "Recommends using fully qualified collection names, including the ansible.builtin prefix for built-in modules like ansible.builtin.copy.",
+ "questions": [
+  "Should I write copy or ansible.builtin.copy?",
+  "Why should I use FQCNs in tasks?",
+  "What prefix do built-in modules use?"
+ ],
+ "answer_card": {
+  "title": "Use fully qualified collection names",
+  "answer_md": "Use FQCNs so Ansible doesn't have to guess which collection a module or plugin comes from. For built-in modules and plugins, prefix with `ansible.builtin`, e.g. `ansible.builtin.copy`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/tips_tricks/ansible_tips_tricks.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

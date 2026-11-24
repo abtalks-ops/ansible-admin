@@ -1,0 +1,19 @@
+{
+  "chunk_id": "5c175e08e70cc95f",
+  "chunk_hash": "5c175e08e70cc95f",
+  "summary": "setup's gather_subset limits which fact groups are collected (hardware, network, virtual, facter, etc.), supports ! exclusions, and !all,!min skips even the minimum facts.",
+  "questions": [
+    "How do I speed up fact gathering by skipping hardware facts?",
+    "How do I collect only network facts?",
+    "How do I gather no facts at all with setup?",
+    "What fact subsets are available?",
+    "What's the difference between gather_subset and filter?"
+  ],
+  "answer_card": {
+    "title": "Limit facts with gather_subset",
+    "answer_md": "`gather_subset` (default `all`) picks fact groups: `hardware`, `network`, `virtual`, `facter`, `ohai`, `distribution`, `dns`, `mounts`, `selinux`, `service_mgr`, and many more.\n- Prefix `!` to exclude: `!hardware,!network,!facter,!ohai`\n- `!all` = only the minimum subset\n- `!all,!min` = nothing; add specific subsets after it\n\n`filter` only hides collected facts; `gather_subset` controls what is collected.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/setup_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

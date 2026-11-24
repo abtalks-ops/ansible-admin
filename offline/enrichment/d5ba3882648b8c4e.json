@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d5ba3882648b8c4e",
+ "chunk_hash": "d5ba3882648b8c4e",
+ "summary": "A module is a standalone script Ansible runs locally or remotely that takes arguments and returns JSON on stdout. Local modules can be in any language; this guide covers Python and adding the module where Ansible can find it.",
+ "questions": [
+  "What exactly is an Ansible module?",
+  "How does a module return results to Ansible?",
+  "Can I write my own module if nothing existing fits?"
+ ],
+ "answer_card": {
+  "title": "What a module is",
+  "answer_md": "A module is a reusable standalone script Ansible runs locally or remotely to perform tasks (e.g. change a DB password, launch a cloud instance). It accepts arguments and returns info by printing **JSON to stdout**. You can write your own in any language for local use; add it to a directory Ansible searches.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

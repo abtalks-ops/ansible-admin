@@ -1,0 +1,17 @@
+{
+ "chunk_id": "91bd15d7664b652a",
+ "chunk_hash": "91bd15d7664b652a",
+ "summary": "PowerShell utils can expose shared option specs (like API auth settings) via a uniquely named Get-<namespace.name.util>Spec function plus a function taking the AnsibleModule, and should use specific prefixed option names to avoid conflicts.",
+ "questions": [
+  "How can several Windows modules share the same connection options?",
+  "How should I name a shared spec function in a PowerShell util?",
+  "Why should shared util option names have a prefix?"
+ ],
+ "answer_card": {
+  "title": "Shared module options in PowerShell utils",
+  "answer_md": "Convention:\n- A `Get-<namespace.name.util>Spec` function (unique name) returning a spec hashtable.\n- A function that takes the `AnsibleModule` via `-Module` to read the shared options.\n\nUse specific names like `acme_password`, not `password`; clashing names or aliases can make the util unusable by modules with the same option names.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

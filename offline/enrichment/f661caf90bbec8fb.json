@@ -1,0 +1,15 @@
+{
+ "chunk_id": "f661caf90bbec8fb",
+ "chunk_hash": "f661caf90bbec8fb",
+ "summary": "checksum returns the SHA-1 checksum of the input as a string.",
+ "questions": [
+  "What does the checksum filter return?"
+ ],
+ "answer_card": {
+  "title": "checksum return value",
+  "answer_md": "A string containing the SHA-1 checksum of the input.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/checksum_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

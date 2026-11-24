@@ -1,0 +1,18 @@
+{
+  "chunk_id": "85bf8089a9d3eae0",
+  "chunk_hash": "85bf8089a9d3eae0",
+  "summary": "Lists the 22-level variable precedence order from command-line values and role defaults (lowest) through inventory, facts, play vars, role vars, block/task vars, include_vars, registered vars/set_facts, role and include params, to extra vars (highest).",
+  "questions": [
+    "What is Ansible's variable precedence order?",
+    "Do extra vars always win?",
+    "Do role defaults override inventory variables?",
+    "Which wins, include_vars or inventory host_vars?"
+  ],
+  "answer_card": {
+    "title": "Variable precedence order",
+    "answer_md": "Lowest to highest:\n\n1. Command-line values (e.g. `-u`, not variables)\n2. Role defaults\n3. Inventory file/script group vars\n4. Inventory `group_vars/all`\n5. Playbook `group_vars/all`\n6. Inventory `group_vars/*`\n7. Playbook `group_vars/*`\n8. Inventory file/script host vars\n9. Inventory `host_vars/*`\n10. Playbook `host_vars/*`\n11. Host facts / cached set_facts\n12. Play vars\n13. Play vars_prompt\n14. Play vars_files\n15. Role vars\n16. Block vars\n17. Task vars\n18. include_vars\n19. Registered vars and set_facts\n20. Role (and include_role) params\n21. include params\n22. **Extra vars** (`-e`, always win)",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:32+00:00"
+}

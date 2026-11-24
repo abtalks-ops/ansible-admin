@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f63c068fb344babc",
+ "chunk_hash": "f63c068fb344babc",
+ "summary": "password_hash parameters: required secret, hashtype (default sha512; md5, blowfish, sha256, sha512, bcrypt), ident, rounds, and salt (letters, digits, . and /).",
+ "questions": [
+  "What algorithms does password_hash support?",
+  "What is the default algorithm for password_hash?",
+  "How do I set the number of rounds for password_hash?",
+  "What characters can a password_hash salt contain?"
+ ],
+ "answer_card": {
+  "title": "password_hash parameters",
+  "answer_md": "- `_input` (string, required): secret to hash\n- `hashtype` (default `sha512`): `md5`, `blowfish`, `sha256`, `sha512`, `bcrypt`\n- `ident`: algorithm identifier\n- `rounds`: number of rounds (default varies by algorithm)\n- `salt`: if omitted a random one can be generated; use only characters matching `[./0-9A-Za-z]+`",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/password_hash_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

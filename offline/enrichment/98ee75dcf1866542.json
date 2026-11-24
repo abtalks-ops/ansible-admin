@@ -1,0 +1,17 @@
+{
+ "chunk_id": "98ee75dcf1866542",
+ "chunk_hash": "98ee75dcf1866542",
+ "summary": "Guidelines for scoping modules: do one thing well, create separate _info or _facts modules instead of get/list states, don't require knowing all API options, encapsulate real logic, and don't make modules that run other modules (write a role).",
+ "questions": [
+  "Should I add a list or info state to an existing module?",
+  "Can my module call other modules?",
+  "How much functionality should a single module have?"
+ ],
+ "answer_card": {
+  "title": "Scoping modules",
+  "answer_md": "- One well-defined function per module (UNIX philosophy).\n- Don't add `get`/`list`/`info` states; create a separate `_info` or `_facts` module.\n- Don't require knowing every underlying API option.\n- Include real logic; split complex APIs into multiple modules.\n- Don't duplicate other modules' work. If you want a module that runs other modules, write a **role**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_best_practices.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "2b3e8aa1249bfb39",
+  "chunk_hash": "2b3e8aa1249bfb39",
+  "summary": "Explains Jinja2 list-comprehension filters map, select, reject, selectattr and rejectattr, and shows an exponential backoff loop using range | map('pow', 2) with wait_for_connection.",
+  "questions": [
+    "How do I do a for-loop style transform on a list in Jinja2?",
+    "What's the difference between select and selectattr?",
+    "How do I implement exponential backoff retries in a playbook?",
+    "How do I filter a list of dicts by an attribute value?"
+  ],
+  "answer_card": {
+    "title": "List comprehensions in Jinja2 and exponential backoff",
+    "answer_md": "- **`map`**: transform every item (use `attribute=` for an element attribute).\n- **`select` / `reject`**: keep or drop items by a test.\n- **`selectattr` / `rejectattr`**: same, but test a specific attribute.\n\nExponential backoff:\n\n```yaml\n- ansible.builtin.wait_for_connection:\n    delay: '{{ item | int }}'\n    timeout: 1\n  loop: '{{ range(1, 11) | map(\"pow\", 2) }}'\n  loop_control:\n    extended: true\n  ignore_errors: \"{{ not ansible_loop.last }}\"\n  register: result\n  when: result is not defined or result is failed\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/complex_data_manipulation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

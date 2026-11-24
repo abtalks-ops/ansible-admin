@@ -1,0 +1,15 @@
+{
+ "chunk_id": "bd3fe334c3f328d1",
+ "chunk_hash": "bd3fe334c3f328d1",
+ "summary": "ansible.builtin.filesizeformat is the Jinja builtin filter that formats a number as a human-readable file size.",
+ "questions": [
+  "How do I show bytes as a human-readable size like 1.2 MB?"
+ ],
+ "answer_card": {
+  "title": "filesizeformat filter",
+  "answer_md": "`{{ bytes | filesizeformat }}` formats a value as a human-readable file size (Jinja builtin).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/filesizeformat_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

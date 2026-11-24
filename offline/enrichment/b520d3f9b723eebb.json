@@ -1,0 +1,16 @@
+{
+ "chunk_id": "b520d3f9b723eebb",
+ "chunk_hash": "b520d3f9b723eebb",
+ "summary": "YAML documentation is mainly for filters, tests and modules; other plugin types should usually keep docs in the code file.",
+ "questions": [
+  "Should I use YAML doc files for lookup or callback plugins?",
+  "Which plugin types are adjacent YAML docs meant for?"
+ ],
+ "answer_card": {
+  "title": "Plugin types for YAML docs",
+  "answer_md": "Mainly **filters, tests and modules**. Other types can use it, but keeping docs in the same file as the code is recommended.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/sidecar.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:16:01+00:00"
+}

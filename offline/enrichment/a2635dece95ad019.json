@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a2635dece95ad019",
+ "chunk_hash": "a2635dece95ad019",
+ "summary": "Desired State Configuration (DSC) is a PowerShell tool for defining Windows host setup as code, with the same goal as Ansible. Since Ansible 2.4 the win_dsc module lets Ansible use existing DSC resources.",
+ "questions": [
+  "What is PowerShell DSC and how does it relate to Ansible?",
+  "Can Ansible use DSC resources?",
+  "Since when has win_dsc been available?"
+ ],
+ "answer_card": {
+  "title": "What DSC is and how Ansible uses it",
+  "answer_md": "Desired State Configuration (DSC) is built into PowerShell and defines a Windows host's setup through code. It has the same goal as Ansible but runs differently. Since Ansible 2.4, the `win_dsc` module lets you use existing DSC resources from Ansible tasks.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_dsc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

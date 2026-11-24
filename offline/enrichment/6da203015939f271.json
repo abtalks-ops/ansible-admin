@@ -1,0 +1,17 @@
+{
+  "chunk_id": "6da203015939f271",
+  "chunk_hash": "6da203015939f271",
+  "summary": "Examples of include_role: basic, alternate tasks file, passing vars, looping over role names with loop_var, conditional inclusion, and applying tags to role tasks.",
+  "questions": [
+    "How do I include different roles in a loop?",
+    "How do I tag all tasks inside an included role?",
+    "How do I conditionally include a role?"
+  ],
+  "answer_card": {
+    "title": "include_role examples",
+    "answer_md": "```yaml\n- ansible.builtin.include_role: {name: myrole, tasks_from: other}\n- ansible.builtin.include_role:\n    name: '{{ roleinputvar }}'\n  loop: ['{{ roleinput1 }}', '{{ roleinput2 }}']\n  loop_control:\n    loop_var: roleinputvar\n- ansible.builtin.include_role: {name: myrole}\n  when: not idontwanttorun\n- ansible.builtin.include_role:\n    name: install\n    apply:\n      tags: [install]\n  tags: [always]\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

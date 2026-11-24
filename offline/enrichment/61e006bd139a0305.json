@@ -1,0 +1,16 @@
+{
+ "chunk_id": "61e006bd139a0305",
+ "chunk_hash": "61e006bd139a0305",
+ "summary": "fortinet.fortimanager added support for all FortiManager 6.2 to 7.4 versions with 139 new modules and token-based authentication.",
+ "questions": [
+  "Does fortinet.fortimanager support token authentication?",
+  "Which FortiManager versions are supported?"
+ ],
+ "answer_card": {
+  "title": "fortinet.fortimanager versions and tokens",
+  "answer_md": "`fortinet.fortimanager` supports FortiManager **6.2, 6.4, 7.0, 7.2 and 7.4** (139 new modules) and **token-based authentication**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:38+00:00"
+}

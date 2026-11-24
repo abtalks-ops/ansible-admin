@@ -1,0 +1,16 @@
+{
+  "chunk_id": "c401384f038c7614",
+  "chunk_hash": "c401384f038c7614",
+  "summary": "Notes Ansible supports load balancers like NetScaler, F5 BigIP and AWS ELB; others may need shell commands or API calls, and API-based modules can be run as local_action.",
+  "questions": [
+    "Does Ansible support F5 or NetScaler load balancers?",
+    "How do I manage a load balancer that only has an API?"
+  ],
+  "answer_card": {
+    "title": "Managing other load balancers",
+    "answer_md": "Ansible has modules for Citrix NetScaler, F5 BigIP, Amazon ELB and more. For others, send shell commands or call their API. Modules that talk to an API are often best run as a **`local_action`** (see delegation docs).",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/guide_rolling_upgrade.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

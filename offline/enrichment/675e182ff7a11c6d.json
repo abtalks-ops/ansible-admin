@@ -1,0 +1,18 @@
+{
+ "chunk_id": "675e182ff7a11c6d",
+ "chunk_hash": "675e182ff7a11c6d",
+ "summary": "Concludes that Ansible's ordered, fail-fast design means you rarely need a separate framework for basic infrastructure checks; focus on application tests, use stat/assert when needed, and Ansible's return codes make it fit CI/CD pipelines.",
+ "questions": [
+  "Do I need a separate infrastructure testing framework with Ansible?",
+  "Should I unit test my playbooks?",
+  "Does Ansible return a non-zero exit code when a host fails, for CI?",
+  "What kind of tests should I focus on when deploying with Ansible?"
+ ],
+ "answer_card": {
+  "title": "Testing philosophy with Ansible",
+  "answer_md": "- Ansible stops configuring a host on unhandled errors and shows failures in the end summary, so basic infrastructure checks don't need another framework.\n- Errors propagate to Ansible's **exit code**, which makes it easy to use in CI/CD pipelines.\n- Focus on **application** tests agreed with your QA team, not infrastructure tests. Don't unit test playbooks; they are declarative.\n- When you do need to confirm something, use `stat` and `assert`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

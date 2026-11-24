@@ -1,0 +1,17 @@
+{
+ "chunk_id": "babe9b7f96aef5e1",
+ "chunk_hash": "babe9b7f96aef5e1",
+ "summary": "Modules and module_utils may only import the standard library unchecked, while other plugins may also import ansible-core and its public dependencies Jinja2, PyYAML and MarkupSafe.",
+ "questions": [
+  "Can my lookup plugin import Jinja2 without a try/except?",
+  "Which imports are allowed unchecked in modules?",
+  "What are ansible-core's public dependencies?"
+ ],
+ "answer_card": {
+  "title": "Allowed unchecked imports",
+  "answer_md": "- **modules / module_utils** (core or collections): standard library only.\n- **other plugins**: standard library, ansible-core itself, and its public dependencies **Jinja2**, **PyYAML** and **MarkupSafe**.\n\nEverything else must be guarded.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/import.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

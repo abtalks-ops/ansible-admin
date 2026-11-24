@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e0140c46e1aca55c",
+ "chunk_hash": "e0140c46e1aca55c",
+ "summary": "The AnsiballZ wrapper now catches unhandled exceptions in Python modules and returns a structured result with optional traceback, so broad try/except blocks that call fail_json are unnecessary.",
+ "questions": [
+  "Why did my module task show MODULE FAILURE in older Ansible?",
+  "Do I still need try/except around my whole Ansible module?",
+  "How are unhandled exceptions in Python modules reported in ansible-core 2.19?"
+ ],
+ "answer_card": {
+  "title": "Unhandled module exceptions are now structured results",
+  "answer_md": "Previously an unhandled exception in a Python module printed a traceback and exited, so the task showed a generic `MODULE FAILURE` plus raw output. Module authors often wrapped code in generic `try/except` just to call `fail_json`.\n\nNow the **AnsiballZ wrapper** captures all unhandled exceptions and returns them as a structured module result, including the traceback when enabled on the controller. Those broad try/except blocks are no longer needed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.19.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:41+00:00"
+}

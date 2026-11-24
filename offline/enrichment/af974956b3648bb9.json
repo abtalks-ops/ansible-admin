@@ -1,0 +1,17 @@
+{
+  "chunk_id": "af974956b3648bb9",
+  "chunk_hash": "af974956b3648bb9",
+  "summary": "Explains that unvault output is registered as one string, so values inside are masked only if the whole text appears; use register_secret on parsed values. Also describes no_log module options, which prompts are registered, and secret: true plugin options in ansible-core.",
+  "questions": [
+    "Why isn't a password from my unvault lookup masked?",
+    "Which prompts get registered as secrets?",
+    "Which ansible-core connection options are treated as secrets?"
+  ],
+  "answer_card": {
+    "title": "unvault, no_log options, prompts and plugin secrets",
+    "answer_md": "- With `unvault`, only the **full** decrypted text is registered, so a value inside it is masked only when the whole text appears. Parse it and register values with `register_secret`.\n- `no_log: true` in a module's argument spec registers that option's value (including defaults and fallbacks). This is separate from the `no_log` task keyword.\n- Prompted values: `vars_prompt` with `private: true`, `pause` with `echo: false`, `--ask-pass`, `--ask-become-pass`, `--ask-vault-pass`.\n- `secret: true` plugin options include ssh/winrm/psrp passwords, the ssh private key and passphrase, sudo/su/runas passwords, and the `url` lookup password.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_secret_masking.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f6c4dc0b7b702b6f",
+ "chunk_hash": "f6c4dc0b7b702b6f",
+ "summary": "File-level encryption is easy and supports rekeying and hides variable names, but makes files hard to read (an issue for tasks files), and Ansible decrypts the whole file whenever it is loaded.",
+ "questions": [
+  "What are the pros and cons of encrypting whole files with Vault?",
+  "How do I rotate the password on encrypted files?",
+  "Does file encryption hide variable names too?"
+ ],
+ "answer_card": {
+  "title": "Pros and cons of file-level encryption",
+  "answer_md": "**Pros**: easy to use, easy password rotation with `rekey`, and hides variable names as well as values.\n\n**Cons**: file contents are no longer readable, which is awkward for encrypted tasks files. Ansible decrypts the entire file whenever it's loaded or referenced. For vars files, consider keeping references in an unencrypted file (the vars/vault tip).",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_encrypting_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ab86a6e7f79794d4",
+ "chunk_hash": "ab86a6e7f79794d4",
+ "summary": "AnsibleModule.log masks its message and log_args, the invocation log always shows no_log options as $REDACTED$, and respawned modules keep and return secrets normally.",
+ "questions": [
+  "Are no_log values masked in the module invocation log?",
+  "Do secrets survive when a module respawns under another Python?"
+ ],
+ "answer_card": {
+  "title": "Module logging and respawn masking",
+  "answer_md": "`AnsibleModule.log()` masks its message and `log_args`. The invocation log entry always shows `no_log` options as `$REDACTED$` regardless of length. Respawned modules keep the controller's secrets and return newly registered ones as usual.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_secret_masking.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

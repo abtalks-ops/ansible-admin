@@ -1,0 +1,17 @@
+{
+  "chunk_id": "5ddb600d38d7334f",
+  "chunk_hash": "5ddb600d38d7334f",
+  "summary": "Explains how delegate_to with loop runs tasks on monitoring and load balancer servers on behalf of each web server, that other load balancers or monitoring tools can be substituted, and that the roles are re-applied to update the app.",
+  "questions": [
+    "How does delegate_to with a loop work in a rolling update?",
+    "Can I use F5 or NetScaler instead of HAProxy in this pattern?",
+    "How is the application code updated during the rolling upgrade?"
+  ],
+  "answer_card": {
+    "title": "Delegation in the rolling update",
+    "answer_md": "`delegate_to` + `loop` runs the task on each monitoring/LB server **on behalf of** the current web server (outer loop: web servers, inner loop: monitoring/LB servers). You can swap HAProxy or Nagios for F5, NetScaler, AWS, or other modules.\n\nThen the roles are re-applied, which updates config and the app code:\n\n```yaml\nroles:\n- common\n- base-apache\n- web\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/guide_rolling_upgrade.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

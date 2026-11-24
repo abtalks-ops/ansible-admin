@@ -1,0 +1,16 @@
+{
+ "chunk_id": "8634ad26aab7fd7b",
+ "chunk_hash": "8634ad26aab7fd7b",
+ "summary": "vmware.vmware_rest deprecates modules that moved to vmware.vmware, including vcenter_vm_guest_customization and the vcenter_vm_hardware_* modules for SATA, SCSI, CD-ROM, CPU, disk, ethernet and memory.",
+ "questions": [
+  "Is vcenter_vm_hardware_disk in vmware_rest deprecated?",
+  "Which vmware_rest modules moved to vmware.vmware?"
+ ],
+ "answer_card": {
+  "title": "vmware_rest modules moved to vmware.vmware",
+  "answer_md": "vmware.vmware_rest deprecates modules that moved to the **vmware.vmware** collection, including `vcenter_vm_guest_customization`, `vcenter_vm_hardware_adapter_sata`, `vcenter_vm_hardware_adapter_scsi`, `vcenter_vm_hardware_cdrom`, `vcenter_vm_hardware_cpu`, `vcenter_vm_hardware_disk`, `vcenter_vm_hardware_ethernet` and `vcenter_vm_hardware_memory` (the list continues in the full guide).",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:43+00:00"
+}

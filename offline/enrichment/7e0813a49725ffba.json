@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7e0813a49725ffba",
+ "chunk_hash": "7e0813a49725ffba",
+ "summary": "In ansible-core 2.12 INTERPRETER_PYTHON defaults to auto and the fallback list prefers Python 3, so remote hosts quietly use Python 3 over Python 2; the fallback list can be changed with ansible_interpreter_python_fallback.",
+ "questions": [
+  "Why did Ansible start using python3 on my hosts instead of /usr/bin/python?",
+  "How do I change the list of Python interpreters Ansible tries?",
+  "What is the default interpreter_python setting now?"
+ ],
+ "answer_card": {
+  "title": "Python interpreter discovery defaults to auto",
+  "answer_md": "`INTERPRETER_PYTHON` defaults to **`auto`** and `INTERPRETER_PYTHON_FALLBACK` prefers **Python 3**, so Python 3 is used quietly when available. To force an interpreter set `ansible_python_interpreter`; to change the search order set **`ansible_interpreter_python_fallback`**:\n\n```yaml\nansible_interpreter_python_fallback: ['/usr/bin/python3.11', '/usr/bin/python3']\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

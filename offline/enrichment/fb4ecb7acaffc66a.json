@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fb4ecb7acaffc66a",
+ "chunk_hash": "fb4ecb7acaffc66a",
+ "summary": "Callback plugins respond to events and drive most CLI output; subclass CallbackBase as CallbackModule and override v2_* methods listed in the callback __init__.py.",
+ "questions": [
+  "How do I write a callback plugin?",
+  "Which callback methods should I override?",
+  "What controls Ansible's console output?"
+ ],
+ "answer_card": {
+  "title": "Callback plugin basics",
+  "answer_md": "```python\nfrom ansible.plugins.callback import CallbackBase\n\nclass CallbackModule(CallbackBase):\n    pass\n```\nOverride only methods starting with `v2` (Ansible 2.0+). See `lib/ansible/plugins/callback/__init__.py` for the full list. Callbacks control most CLI output.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:21+00:00"
+}

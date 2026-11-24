@@ -1,0 +1,16 @@
+{
+ "chunk_id": "74d2adda8312fcb8",
+ "chunk_hash": "74d2adda8312fcb8",
+ "summary": "cisco.nxos in Ansible 9 removed four previously deprecated modules; see the Removed Features section.",
+ "questions": [
+  "Which cisco.nxos modules were removed in Ansible 9?",
+  "Why is my nxos module missing after upgrade?"
+ ],
+ "answer_card": {
+  "title": "cisco.nxos removed four modules",
+  "answer_md": "cisco.nxos removed **four previously deprecated modules**. See the cisco.nxos entries under *Removed Features* in the Ansible 9 porting guide for names and replacements.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:38+00:00"
+}

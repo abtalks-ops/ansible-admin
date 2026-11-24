@@ -1,0 +1,16 @@
+{
+  "chunk_id": "f37847c8edf64e06",
+  "chunk_hash": "f37847c8edf64e06",
+  "summary": "Ansible 10 is based on ansible-core 2.17. Read the porting guide together with the Ansible 10 changelog.",
+  "questions": [
+    "Which ansible-core version does Ansible 10 use?",
+    "What should I read before upgrading to Ansible 10?"
+  ],
+  "answer_card": {
+    "title": "Ansible 10 core version",
+    "answer_md": "Ansible 10 is built on **ansible-core 2.17**. Read the porting guide alongside the Ansible 10 changelog before upgrading.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

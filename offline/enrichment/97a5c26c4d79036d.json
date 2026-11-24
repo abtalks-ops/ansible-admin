@@ -1,0 +1,16 @@
+{
+ "chunk_id": "97a5c26c4d79036d",
+ "chunk_hash": "97a5c26c4d79036d",
+ "summary": "Module utilities are named and placed by purpose: generic ones live in ansible-core's lib/ansible/module_utils (root or common), and ones for specific modules live in the same collection, like openstack.cloud or ansible.netcommon.",
+ "questions": [
+  "Where are generic module utilities located?",
+  "Where should I put module_utils specific to my collection's modules?"
+ ],
+ "answer_card": {
+  "title": "Where module utilities live",
+  "answer_md": "- Generic utilities: `lib/ansible/module_utils/` root or `common/` in ansible-core (e.g. `urls.py`).\n- Module-family utilities: in the same collection, e.g. `openstack.cloud.plugins.module_utils.openstack.py`, `ansible.netcommon.plugins.module_utils.network.common.config.py`.\n\nFollow the same pattern for your own.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_module_utilities.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

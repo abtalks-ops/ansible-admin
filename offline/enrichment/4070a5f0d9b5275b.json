@@ -1,0 +1,19 @@
+{
+  "chunk_id": "4070a5f0d9b5275b",
+  "chunk_hash": "4070a5f0d9b5275b",
+  "summary": "cron options: insertbefore for env vars, job command, minute, month, required name, special_time nicknames like reboot or daily, state, user and weekday.",
+  "questions": [
+    "How do I run a cron job at reboot?",
+    "How do I manage another user's crontab?",
+    "Is the name parameter required for cron?",
+    "Can I combine special_time with hour and minute?",
+    "How do I remove a cron job?"
+  ],
+  "answer_card": {
+    "title": "cron parameters (part 2)",
+    "answer_md": "- `name` (required since 2.12)\n- `job` (alias `value`): command (no line breaks); required for `present`\n- `minute`, `month`, `weekday` (dow): default `*`\n- `special_time`: `annually`, `daily`, `hourly`, `monthly`, `reboot`, `weekly`, `yearly`; can't combine with time fields\n- `user`: crontab owner (default current user)\n- `state`: `present` / `absent`\n- `insertbefore`: position for env vars",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/cron_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

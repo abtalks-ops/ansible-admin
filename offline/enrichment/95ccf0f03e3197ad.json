@@ -1,0 +1,17 @@
+{
+  "chunk_id": "95ccf0f03e3197ad",
+  "chunk_hash": "95ccf0f03e3197ad",
+  "summary": "async_status returns the job id, the path of an erased job file, finished and started booleans, and stdout/stderr from async_wrapper.",
+  "questions": [
+    "What fields does async_status return?",
+    "How do I know if async_status deleted the job file?",
+    "Where can I see output from an async job?"
+  ],
+  "answer_card": {
+    "title": "async_status return values",
+    "answer_md": "- `ansible_job_id`: job id\n- `finished`, `started` (bool, always)\n- `erased`: path to erased job file (cleanup mode)\n- `stdout`, `stderr`: output/errors from async_wrapper",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/async_status_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

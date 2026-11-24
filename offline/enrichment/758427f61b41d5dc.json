@@ -1,0 +1,15 @@
+{
+ "chunk_id": "758427f61b41d5dc",
+ "chunk_hash": "758427f61b41d5dc",
+ "summary": "community.zabbix web role renamed zabbix_web_SSLSessionCacheTimeout and zabbix_web_SSLSessionCache to snake_case names.",
+ "questions": [
+  "What is the new name for zabbix_web_SSLSessionCache?"
+ ],
+ "answer_card": {
+  "title": "Zabbix web role SSL variable renames",
+  "answer_md": "In the community.zabbix web role:\n\n- `zabbix_web_SSLSessionCacheTimeout` → `zabbix_web_ssl_session_cache_timeout`\n- `zabbix_web_SSLSessionCache` → `zabbix_web_ssl_session_cache`",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:24+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "7fa442feb6e3f083",
+  "chunk_hash": "7fa442feb6e3f083",
+  "summary": "gather_facts' parallel option controls running fact modules in parallel or serially; it defaults to true with multiple modules and can be set via ansible_facts_parallel.",
+  "questions": [
+    "How do I make fact modules run in order?",
+    "Is parallel fact gathering always faster?",
+    "What variable controls parallel fact gathering?"
+  ],
+  "answer_card": {
+    "title": "gather_facts parallel option",
+    "answer_md": "`parallel`: run fact modules in parallel (default true if more than one) or serially in order (guarantees merge order). Not always faster for cheap modules. Override with `ansible_facts_parallel` (direct task option wins).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/gather_facts_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

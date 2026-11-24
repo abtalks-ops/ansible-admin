@@ -1,0 +1,16 @@
+{
+ "chunk_id": "e66801f039a4cc68",
+ "chunk_hash": "e66801f039a4cc68",
+ "summary": "The control node used the Unicode Sandwich: convert bytes to text at I/O borders, use text internally, convert back on output; to_text, to_bytes and to_native remain in use.",
+ "questions": [
+  "What is the Unicode Sandwich?",
+  "Are to_text and to_bytes still needed now that Python 2 is gone?"
+ ],
+ "answer_card": {
+  "title": "Unicode Sandwich",
+  "answer_md": "Convert incoming **bytes to text** at the borders (file/network I/O, env vars, some libraries), use **text** internally, and convert **back to bytes** when sending out. Ansible still uses `to_text`/`to_bytes`/`to_native` because they help in other unicode edge cases.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_python_3.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "cef4d41aec51444a",
+  "chunk_hash": "cef4d41aec51444a",
+  "summary": "Explains roles as reusable bundles of tasks, handlers, templates and files; lamp_haproxy uses six roles, and most sites have common roles plus app-specific ones. Roles can take variables, dependencies and parameters.",
+  "questions": [
+    "How should I organize my Ansible roles?",
+    "What goes into an Ansible role?"
+  ],
+  "answer_card": {
+    "title": "Organizing roles",
+    "answer_md": "Roles package tasks, handlers, templates and files into reusable components. The example has six: `common`, `base-apache`, `db`, `haproxy`, `nagios`, `web`. Typically you have one or more common roles for all systems plus application-specific roles. Roles can have variables, dependencies and parameters.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/guide_rolling_upgrade.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

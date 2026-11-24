@@ -1,0 +1,16 @@
+{
+ "chunk_id": "784714022922d094",
+ "chunk_hash": "784714022922d094",
+ "summary": "community.docker deprecated support for end-of-life ansible-core versions; its next major release drops ansible-core 2.11 through 2.14.",
+ "questions": [
+  "Will community.docker keep working on ansible-core 2.14?",
+  "Which ansible-core versions does the next community.docker major release drop?"
+ ],
+ "answer_card": {
+  "title": "community.docker drops EOL ansible-core",
+  "answer_md": "The next major **community.docker** release no longer supports **ansible-core 2.11, 2.12, 2.13 and 2.14** (all EOL). Upgrade ansible-core before upgrading the collection.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:28+00:00"
+}

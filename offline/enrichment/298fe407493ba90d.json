@@ -1,0 +1,19 @@
+{
+ "chunk_id": "298fe407493ba90d",
+ "chunk_hash": "298fe407493ba90d",
+ "summary": "Commands can fail under Ansible on Windows even though they work locally, because Ansible uses a network logon that can't delegate credentials, run interactive apps, use some APIs or reach DPAPI. The fix is to use become with explicit credentials, or a connection auth method that supports credential delegation such as CredSSP or Kerberos with delegation.",
+ "questions": [
+  "Why does my command work when I run it on the Windows box but fail through Ansible?",
+  "I get Access is Denied when a Windows task touches a network share, how do I fix it?",
+  "How do I access DPAPI secrets from an Ansible task on Windows?",
+  "Does become help with double-hop problems on Windows?",
+  "Which WinRM auth options allow credential delegation?"
+ ],
+ "answer_card": {
+  "title": "Windows command works locally but fails under Ansible",
+  "answer_md": "Ansible runs commands through a **network logon**, which changes how Windows authorizes actions. Typical symptoms:\n- `Access is Denied` or `Resource Unavailable` when reaching network resources (credentials can't be delegated)\n- apps that need an interactive session don't work\n- some Windows APIs are restricted\n- the `DPAPI` secrets store isn't available\n\nFixes:\n1. Use `become` with explicit credentials. This turns the logon into an interactive one, so the command can reach network resources and unlock DPAPI.\n2. Use a connection auth option that allows credential delegation: for SSH, an explicit username and password or Kerberos/GSSAPI with delegation; for WinRM, CredSSP or Kerberos with delegation.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

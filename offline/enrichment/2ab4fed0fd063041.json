@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2ab4fed0fd063041",
+ "chunk_hash": "2ab4fed0fd063041",
+ "summary": "Callback task results are masked at any depth: strings and dict keys (with numeric suffixes on collisions), numbers whose text is a secret (become strings), and stdout_lines rebuilt from masked output; task names, host, warnings, stats and derived data are not masked.",
+ "questions": [
+  "Are secrets masked inside loop results passed to callbacks?",
+  "Why did a numeric value in my callback result become a string?",
+  "Are task names masked before reaching my callback?",
+  "Which callback data is not masked?"
+ ],
+ "answer_card": {
+  "title": "What gets masked in callback results",
+  "answer_md": "Only `result.result` is masked, at any depth:\n- **Strings** and string dict keys (`$REDACTED$`, `$REDACTED$ (2)` on collisions)\n- **Numbers** whose text is a secret become the placeholder string\n- `stdout_lines`/`stderr_lines` rebuilt from masked text\n\nBooleans, bytes, `None` unchanged. **Not masked:** task/play names, `task`, `host`, `warnings`, `deprecations`, `exception`, stats, other callback args, and data you derive.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_secret_masking.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:04+00:00"
+}

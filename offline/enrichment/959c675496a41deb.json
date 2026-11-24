@@ -1,0 +1,16 @@
+{
+  "chunk_id": "959c675496a41deb",
+  "chunk_hash": "959c675496a41deb",
+  "summary": "Support for other network devices can be added with a custom plugin in the netconf_plugins directory.",
+  "questions": [
+    "Where do custom netconf plugins go?",
+    "How do I add Netconf support for a new device type?"
+  ],
+  "answer_card": {
+    "title": "Adding a netconf plugin",
+    "answer_md": "Drop a custom plugin into the `netconf_plugins` directory.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/netconf.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:45+00:00"
+}

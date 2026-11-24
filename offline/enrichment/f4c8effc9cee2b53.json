@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f4c8effc9cee2b53",
+ "chunk_hash": "f4c8effc9cee2b53",
+ "summary": "Explains handling OS and distro differences with group_by to create dynamic OS-based groups targeted in later plays, plus matching group_vars files (e.g. os_CentOS.yml) or include_vars for OS-specific variables; the group names must match.",
+ "questions": [
+  "How do I run different tasks for CentOS and Ubuntu?",
+  "How do I set OS-specific variables without listing hosts in inventory?",
+  "What does the group_by module do?",
+  "Why aren't my os_CentOS group vars being applied?"
+ ],
+ "answer_card": {
+  "title": "Handle OS differences with group_by and group vars",
+  "answer_md": "Use the `group_by` module to create dynamic groups (e.g. by OS name) that don't need to exist in inventory, then target those groups in later plays' `hosts:` lines. Add matching group vars files:\n\n```yaml\n# group_vars/all\nasdf: 10\n\n# group_vars/os_CentOS.yml\nasdf: 42\n```\n\nCentOS hosts get 42, others 10. The `group_by` group name, the play pattern and the group vars file name **must all match**. If you only need variables, not tasks, use `include_vars` to load `group_vars/os_CentOS.yml`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/tips_tricks/ansible_tips_tricks.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

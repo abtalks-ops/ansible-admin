@@ -1,0 +1,16 @@
+{
+  "chunk_id": "2ce709afa3003633",
+  "chunk_hash": "2ce709afa3003633",
+  "summary": "Shows math filters (1.9+): log (natural or base), pow, and root (square or nth), with Jinja2 providing abs and round.",
+  "questions": [
+    "How do I calculate a logarithm or square root in an Ansible template?",
+    "How do I raise a number to a power in Jinja2?"
+  ],
+  "answer_card": {
+    "title": "Math filters",
+    "answer_md": "```jinja\n{{ 8 | log }}       # natural log\n{{ 8 | log(10) }}   # base 10\n{{ 8 | pow(5) }}    # 32768.0\n{{ 8 | root }}      # square root\n{{ 8 | root(5) }}   # 5th root\n```\n\nJinja2 also provides `abs()` and `round()`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

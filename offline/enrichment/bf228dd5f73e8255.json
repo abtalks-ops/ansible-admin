@@ -1,0 +1,17 @@
+{
+  "chunk_id": "bf228dd5f73e8255",
+  "chunk_hash": "bf228dd5f73e8255",
+  "summary": "Shows loading variables from external files with vars_files, which keeps sensitive data out of playbooks so they can be shared; each file is a simple YAML dictionary.",
+  "questions": [
+    "How do I load variables from an external file?",
+    "How do I keep passwords out of my playbook?",
+    "What format is a vars_files file?"
+  ],
+  "answer_card": {
+    "title": "Variables in external files",
+    "answer_md": "```yaml\n- hosts: all\n  vars:\n    favcolor: blue\n  vars_files:\n    - /vars/external_vars.yml\n```\n\n```yaml\n# vars/external_vars.yml\nsomevar: somevalue\npassword: magic\n```\n\nThis keeps sensitive values separate so playbooks can go into source control.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:32+00:00"
+}

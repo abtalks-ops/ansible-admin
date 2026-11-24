@@ -1,0 +1,18 @@
+{
+ "chunk_id": "525c14bc4f4f560a",
+ "chunk_hash": "525c14bc4f4f560a",
+ "summary": "Enabling Ansible pipelining is encouraged for z/OS since Python tags its pipes correctly and it is faster than file I/O. Set PYTHONSTDINENCODING to cp1047, or you may get a 'SyntaxError: Non-UTF-8 code' error.",
+ "questions": [
+  "Should I enable pipelining for z/OS hosts?",
+  "What does SyntaxError Non-UTF-8 code starting with \\x81 mean on z/OS?",
+  "What value should PYTHONSTDINENCODING have for z/OS?",
+  "Why is pipelining faster on z/OS?"
+ ],
+ "answer_card": {
+  "title": "Enabling pipelining for z/OS hosts",
+  "answer_md": "Enable `ANSIBLE_PIPELINING` in `ansible.cfg`. Module code is then sent through Python's stdin pipe in one call instead of via temp files. This is encouraged on z/OS because Python tags its pipes with the right encoding (fewer encoding errors) and pipes are faster than file I/O.\n\nAlso set this in the environment for z/OS tasks:\n\n```yaml\nPYTHONSTDINENCODING: \"cp1047\"\n```\n\nIf pipelining is on but this isn't set correctly, you may see:\n\n```text\nSyntaxError: Non-UTF-8 code starting with '\\x81' in file <stdin> on line 1, but no encoding declared\n```\n(the hex value may vary).",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_zos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

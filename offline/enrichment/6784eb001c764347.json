@@ -1,0 +1,16 @@
+{
+ "chunk_id": "6784eb001c764347",
+ "chunk_hash": "6784eb001c764347",
+ "summary": "To join the Ansible community package, a collection must meet its requirements and be selected by the Steering Committee via the inclusion process.",
+ "questions": [
+  "How does a collection get included in the Ansible community package?",
+  "Who decides which collections are in the Ansible package?"
+ ],
+ "answer_card": {
+  "title": "Getting into the Ansible package",
+  "answer_md": "Meet the Ansible community package collection requirements, then go through the inclusion process. The **Steering Committee** selects collections.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_path.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

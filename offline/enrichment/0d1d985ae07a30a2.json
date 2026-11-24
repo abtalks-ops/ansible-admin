@@ -1,0 +1,19 @@
+{
+  "chunk_id": "0d1d985ae07a30a2",
+  "chunk_hash": "0d1d985ae07a30a2",
+  "summary": "The cron module manages crontab entries and environment variables, tagging each job with a '#Ansible: <name>' comment used to find it later. Names must be unique, and special characters like % need escaping.",
+  "questions": [
+    "How do I schedule a cron job with Ansible?",
+    "How does Ansible know which crontab line it manages?",
+    "What happens if I rename a cron job's name in my playbook?",
+    "Do I need to escape % in cron commands?",
+    "Can Ansible set environment variables in a crontab?"
+  ],
+  "answer_card": {
+    "title": "Manage cron jobs with the cron module",
+    "answer_md": "`ansible.builtin.cron` manages crontab jobs and env vars. Each job gets a `#Ansible: <name>` comment line used to identify it, so:\n- keep `name` **unique**\n- **changing `name` creates a new job** (the old one stays unless removed)\n\nEnv vars get no comment; they're found by `name`. Escape `%` in commands.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/cron_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

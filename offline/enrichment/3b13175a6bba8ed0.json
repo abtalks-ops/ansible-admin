@@ -1,0 +1,16 @@
+{
+ "chunk_id": "3b13175a6bba8ed0",
+ "chunk_hash": "3b13175a6bba8ed0",
+ "summary": "Continuation of a Python inventory script example that builds groups, hosts, children and _meta hostvars from a custom API and handles --list, --host and --pretty arguments.",
+ "questions": [
+  "How do I write a dynamic inventory script in Python?",
+  "What should --host return if my script already provides _meta?"
+ ],
+ "answer_card": {
+  "title": "Python inventory script example",
+  "answer_md": "The Python example builds a dict with each group's `hosts`, `vars` and `children`, fills `_meta.hostvars` (setting `ansible_host` from an address when available), and prints `json.dumps(data)`.\n\nIt uses argparse with mutually exclusive `--list` and `--host`, plus `--pretty`. Because `--list` already returns `_meta`, `--host` just prints `{\"_meta\":{}}` and notes on stderr that the option is ignored.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/script_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:13:11+00:00"
+}

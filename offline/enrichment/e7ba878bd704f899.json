@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e7ba878bd704f899",
+ "chunk_hash": "e7ba878bd704f899",
+ "summary": "ansible --version shows the installed ansible-core version; ansible-community --version shows the ansible package version.",
+ "questions": [
+  "How do I check which Ansible version is installed?",
+  "Why does ansible --version show a different number than the ansible package?",
+  "How do I see the ansible community package version?"
+ ],
+ "answer_card": {
+  "title": "Check your Ansible version",
+  "answer_md": "```console\nansible --version            # ansible-core version\nansible-community --version  # ansible package version\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

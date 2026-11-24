@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e64efe884a05030e",
+ "chunk_hash": "e64efe884a05030e",
+ "summary": "Lists formatting macros for module docs, C() for monospace, B() bold, I() italic, and HORIZONTALLINE, advising sparing use and noting that C(), B() and I() can't contain a closing parenthesis.",
+ "questions": [
+  "How do I make text monospace in a module's description?",
+  "Why does my C() markup get cut off at a parenthesis?",
+  "How do I add a horizontal rule in module documentation?"
+ ],
+ "answer_card": {
+  "title": "Formatting macros in module docs",
+  "answer_md": "- `C()` monospace, `B()` bold, `I()` italic, `HORIZONTALLINE` for an `<hr>`.\n- Use them sparingly.\n- `C()`, `B()` and `I()` **don't support escaping**, so they can't contain `)`. Use `V()` instead if you need it.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/ansible_markup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

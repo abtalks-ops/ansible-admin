@@ -1,0 +1,16 @@
+{
+ "chunk_id": "7c40a1f6031b5f17",
+ "chunk_hash": "7c40a1f6031b5f17",
+ "summary": "Don't rely on sensory cues: avoid instructions based only on color, shape or position, and ensure sufficient contrast in images.",
+ "questions": [
+  "Can I say 'click the blue button' in docs?",
+  "What accessibility rules apply to colors in docs?"
+ ],
+ "answer_card": {
+  "title": "Color and visual information",
+  "answer_md": "- Don't write \"Click the square, blue button\".\n- Don't convey meaning by color alone.\n- Keep enough contrast in images and diagrams.\n- Navigation instructions must work without left/right/above/below.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "7b89cd39c77955b2",
+  "chunk_hash": "7b89cd39c77955b2",
+  "summary": "Explains become for network devices (2.6+) to enter enable mode, replacing authorize/auth_pass; requires network_cli or httpapi connections and become_method: enable at task or play level. 'privileged mode required' errors indicate enable is needed.",
+  "questions": [
+    "How do I enter enable mode on a network switch with Ansible?",
+    "What does 'Invalid input (privileged mode required)' mean?",
+    "Which connection type do I need for become on network devices?"
+  ],
+  "answer_card": {
+    "title": "become for network device enable mode",
+    "answer_md": "Since 2.6, `become` enters `enable` mode on supported network platforms, replacing `authorize`/`auth_pass`. You need `connection: ansible.netcommon.network_cli` or `ansible.netcommon.httpapi`.\n\n```yaml\n- arista.eos.eos_facts:\n    gather_subset: [\"!hardware\"]\n  become: true\n  become_method: enable\n```\n\nOr set `become`/`become_method` at play level. `Invalid input (privileged mode required)` means the task needs enable mode.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

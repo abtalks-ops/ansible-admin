@@ -1,0 +1,18 @@
+{
+  "chunk_id": "da614a852d84c66a",
+  "chunk_hash": "da614a852d84c66a",
+  "summary": "include_role options: allow_duplicates, apply for task keywords, defaults_from, handlers_from, name, public (false by default), rescuable, rolespec_validate, tasks_from and vars_from.",
+  "questions": [
+    "How do I make include_role variables available to later tasks?",
+    "How do I apply become to all tasks in an included role?",
+    "Are include_role variables public by default?",
+    "What does rescuable do in include_role?"
+  ],
+  "answer_card": {
+    "title": "include_role parameters",
+    "answer_md": "- `name` (required)\n- `apply`: task keywords (e.g. `tags`, `become`) for all role tasks\n- `public` (**false**): true exposes vars/defaults to tasks after the include\n- `rescuable` (true, 2.21+): include errors become rescuable task failures\n- `tasks_from`/`vars_from`/`defaults_from`/`handlers_from` (main)\n- `allow_duplicates` (true), `rolespec_validate` (true)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

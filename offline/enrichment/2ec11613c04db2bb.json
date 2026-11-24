@@ -1,0 +1,15 @@
+{
+ "chunk_id": "2ec11613c04db2bb",
+ "chunk_hash": "2ec11613c04db2bb",
+ "summary": "When a guarded import is used as a base class, either define the subclass conditionally or define a stub base class in the except handler.",
+ "questions": [
+  "How do I subclass a class from an optional library without breaking the import test?"
+ ],
+ "answer_card": {
+  "title": "Guarded imports used as base classes",
+  "answer_md": "Option 1, conditional class:\n```python\nif not ANOTHER_LIBRARY_IMPORT_ERROR:\n    class CustomThing(UsefulThing):\n        pass\n```\nOption 2, stub base class:\n```python\ntry:\n    from another_library import UsefulThing\nexcept ImportError:\n    class UsefulThing:\n        pass\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/import.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

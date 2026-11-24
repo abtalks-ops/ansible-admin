@@ -1,0 +1,16 @@
+{
+  "chunk_id": "4a5aff1570ac2354",
+  "chunk_hash": "4a5aff1570ac2354",
+  "summary": "Advises turning complex playbooks into roles, which separate defaults, handlers, vars and tasks into directories, are easier to maintain, and can be shared on Galaxy.",
+  "questions": [
+    "When should I convert a playbook into a role?",
+    "What are the benefits of roles over one big playbook?"
+  ],
+  "answer_card": {
+    "title": "When to turn a playbook into a role",
+    "answer_md": "Past a certain complexity, roles beat all-in-one playbooks: defaults, handlers, variables and tasks live in separate directories, they're easier to read and maintain, and they're easy to share on **Ansible Galaxy**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

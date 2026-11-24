@@ -1,0 +1,16 @@
+{
+  "chunk_id": "b848c7228bcd9d39",
+  "chunk_hash": "b848c7228bcd9d39",
+  "summary": "Explains reusing task files as handlers (e.g. restarts.yml): with include you notify the include itself (running all tasks), with import you notify individual tasks.",
+  "questions": [
+    "Can I put my handlers in a separate file and reuse them?",
+    "How do I notify a handler that lives in an included file?"
+  ],
+  "answer_card": {
+    "title": "Reusing tasks as handlers",
+    "answer_md": "Put restart tasks in a file like `restarts.yml` and pull it into `handlers:` with an include or import:\n\n- **Include**: notify the **include's name**, which runs all tasks in the file.\n- **Import**: notify the **individual task names** inside the file.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

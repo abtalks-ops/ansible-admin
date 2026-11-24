@@ -1,0 +1,16 @@
+{
+ "chunk_id": "b925af80f39c5bac",
+ "chunk_hash": "b925af80f39c5bac",
+ "summary": "All community.mysql modules are deprecated for removal in 5.0.0; the content moved as-is to ansible.mysql, so change FQCNs.",
+ "questions": [
+  "Are community.mysql modules deprecated?",
+  "How do I migrate from community.mysql to ansible.mysql?"
+ ],
+ "answer_card": {
+  "title": "Migrate from community.mysql to ansible.mysql",
+  "answer_md": "All community.mysql modules are deprecated and removed in version 5.0.0. The content moved **as-is** to `ansible.mysql`. Install it and change FQCNs, for example `community.mysql.mysql_info` → `ansible.mysql.mysql_info`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:42+00:00"
+}

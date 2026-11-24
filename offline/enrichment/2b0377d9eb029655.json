@@ -1,0 +1,18 @@
+{
+  "chunk_id": "2b0377d9eb029655",
+  "chunk_hash": "2b0377d9eb029655",
+  "summary": "Explains set theory filters (unique, union, intersect, difference, symmetric_difference), which remove duplicates as multisets aren't supported.",
+  "questions": [
+    "How do I remove duplicates from a list in Ansible?",
+    "How do I find items in one list but not another?",
+    "How do I get the intersection of two lists?",
+    "Do union and intersect keep duplicates?"
+  ],
+  "answer_card": {
+    "title": "Set operations on lists",
+    "answer_md": "All of these return unique items:\n\n```jinja\n{{ list1 | unique }}\n{{ list1 | union(list2) }}\n{{ list1 | intersect(list2) }}\n{{ list1 | difference(list2) }}            # in list1, not list2\n{{ list1 | symmetric_difference(list2) }}  # in exactly one list\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

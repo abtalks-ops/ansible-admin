@@ -1,0 +1,18 @@
+{
+  "chunk_id": "887c34f9626c4b10",
+  "chunk_hash": "887c34f9626c4b10",
+  "summary": "Gives good vs bad patterns for prefixing or suffixing each list item with map('regex_replace'), notes the pre-2.0 backslash escaping rule, and shows regex_escape for Python and POSIX basic regexes.",
+  "questions": [
+    "How do I add https:// to every item in a list?",
+    "How do I append :80 to each host in a list?",
+    "How do I escape special characters for use in a regex?",
+    "Do I need four backslashes for backreferences in YAML?"
+  ],
+  "answer_card": {
+    "title": "Prefixing list items and escaping regexes",
+    "answer_md": "```jinja\n{{ hosts | map('regex_replace', '^(.*)$', 'https://\\\\1') | list }}   # good\n{{ hosts | map('regex_replace', '^', 'https://') | list }}           # good\n{{ hosts | map('regex_replace', '$', ':80') | list }}                # good\n{{ hosts | map('regex_replace', '(.*)', 'https://\\\\1') | list }}     # bad\n```\n\nEscape a regex:\n\n```jinja\n{{ '^f.*o(.*)$' | regex_escape() }}               # Python\n{{ '^f.*o(.*)$' | regex_escape('posix_basic') }}  # 2.8+\n```\n\nThe four-backslash rule for backreferences only applied before Ansible 2.0.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

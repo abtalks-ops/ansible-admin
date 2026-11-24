@@ -1,0 +1,17 @@
+{
+  "chunk_id": "e3c74ebcd6b7e487",
+  "chunk_hash": "e3c74ebcd6b7e487",
+  "summary": "Lists Windows limitations: Ansible cannot upgrade PowerShell or interact with WinRM listeners, because both break the connection. async or scheduled tasks can technically work but are fragile; do it during bootstrapping or image building.",
+  "questions": [
+    "Can I upgrade PowerShell on Windows hosts with Ansible?",
+    "Can Ansible reconfigure WinRM listeners on a host?",
+    "Why does my connection drop when changing WinRM with a playbook?"
+  ],
+  "answer_card": {
+    "title": "Things Ansible can't do on Windows",
+    "answer_md": "Ansible can't reliably **upgrade PowerShell** or **interact with WinRM listeners**, because both break the WinRM connection Ansible is using. `async` or a scheduled task can technically work around it, but it's fragile. Do these during bootstrapping or before building the image.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

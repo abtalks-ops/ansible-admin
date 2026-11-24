@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f0e2aa0b065d36c8",
+ "chunk_hash": "f0e2aa0b065d36c8",
+ "summary": "To run an EE against a remote host you need a reachable host, credentials and a sudo user; create an inventory and playbook, then run ansible-navigator with -i, the image, and -u/-k/-K as needed.",
+ "questions": [
+  "How do I run an EE playbook against a remote server?",
+  "How do I pass SSH and sudo passwords with ansible-navigator?",
+  "What do I need before running an EE on a remote target?"
+ ],
+ "answer_card": {
+  "title": "Run an EE against a remote host",
+  "answer_md": "Needs: a reachable IP or hostname, valid credentials, and a user with `sudo` on the target.\n```bash\nmkdir inventory   # add inventory/hosts.yml\nansible-navigator run test_remote.yml -i inventory \\\n  --execution-environment-image postgresql_ee:latest \\\n  --mode stdout --pull-policy missing --enable-prompts -u student -k -K\n```\nReplace `student` with your user; `-k`/`-K` (SSH and become password prompts) may be unnecessary depending on your auth.",
+  "source_url": "https://docs.ansible.com/ansible/latest/getting_started_ee/run_execution_environment.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

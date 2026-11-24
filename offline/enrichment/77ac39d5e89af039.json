@@ -1,0 +1,17 @@
+{
+  "chunk_id": "77ac39d5e89af039",
+  "chunk_hash": "77ac39d5e89af039",
+  "summary": "Shows using a register projection in a when during iteration (needs default) and _task.polymorphic_result to mimic plain register in the multi-variable format.",
+  "questions": [
+    "How do I use a registered projection in a when during the loop?",
+    "What is _task.polymorphic_result?",
+    "How do I register both a single result variable and others at once?"
+  ],
+  "answer_card": {
+    "title": "Projections during iteration and polymorphic_result",
+    "answer_md": "```yaml\nregister:\n  first_output: _task.loop_result.results[0].stdout | default('')\nloop: [1, 2, 3]\nwhen: first_output != 'skip'\n```\n\n`_task.polymorphic_result` holds the latest iteration's result during the loop and the full task result afterward, so these are equivalent:\n\n```yaml\nregister: foo_bar_result\n# same as\nregister:\n  foo_bar_result: _task.polymorphic_result\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:02+00:00"
+}

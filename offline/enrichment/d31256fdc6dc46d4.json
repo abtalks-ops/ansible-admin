@@ -1,0 +1,18 @@
+{
+ "chunk_id": "d31256fdc6dc46d4",
+ "chunk_hash": "d31256fdc6dc46d4",
+ "summary": "--docker alone uses the default container, which is recommended for sanity and unit tests. You can name another container right after --docker, or a custom one with --python to state its Python version.",
+ "questions": [
+  "Which container image should I use for ansible-test sanity tests?",
+  "How do I list the containers ansible-test supports?",
+  "How do I run ansible-test in my own container image?",
+  "Why do I need --python with a custom container?"
+ ],
+ "answer_card": {
+  "title": "Choose an ansible-test container",
+  "answer_md": "- `--docker` alone uses the `default` container, recommended for sanity and unit tests.\n- `--docker <name>` picks another supported container. See the list with `ansible-test <command> --help` (it differs per command).\n- For your own image, pass it after `--docker` and also give `--python <version>` so ansible-test knows which Python is inside.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_running_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d21f7e7f3de0cf8e",
+ "chunk_hash": "d21f7e7f3de0cf8e",
+ "summary": "Most modules moved from ansible/ansible into collections in Ansible 2.10; ansible-core (briefly ansible-base) contains only basic features, while collections are maintained by the Ansible team, community or partners.",
+ "questions": [
+  "Why are most modules no longer in ansible-core?",
+  "When did Ansible start using collections?",
+  "What is the difference between ansible-core and collections?"
+ ],
+ "answer_card": {
+  "title": "Where did all the modules go?",
+  "answer_md": "Since **Ansible 2.10**, most modules live in **collections** (support began in 2.9). The ansible/ansible repo is now **ansible-core** (briefly ansible-base in 2.10) with only core features and `ansible.builtin` content. Install collections with `ansible-galaxy collection install <ns.name>`, or install the full `ansible` package, which bundles many of them.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:25:50+00:00"
+}

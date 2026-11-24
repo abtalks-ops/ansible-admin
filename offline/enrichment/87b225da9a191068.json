@@ -1,0 +1,15 @@
+{
+  "chunk_id": "87b225da9a191068",
+  "chunk_hash": "87b225da9a191068",
+  "summary": "Examples test whether /etc/hosts is a link and select symlinks from a list of paths.",
+  "questions": [
+    "How do I list symlinks from a set of local paths?"
+  ],
+  "answer_card": {
+    "title": "link test examples",
+    "answer_md": "```yaml\nismyhostsalink: \"{{ '/etc/hosts' is link }}\"\nlist_of_symlinks: \"{{ list_of_paths | select('link') }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/link_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

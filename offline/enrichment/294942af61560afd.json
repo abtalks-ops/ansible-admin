@@ -1,0 +1,16 @@
+{
+ "chunk_id": "294942af61560afd",
+ "chunk_hash": "294942af61560afd",
+ "summary": "Aliases such as needs/privileged, needs/root, needs/ssh and needs/httptester declare test requirements.",
+ "questions": [
+  "How do I mark an integration test as needing root?",
+  "What does needs/ssh mean?"
+ ],
+ "answer_card": {
+  "title": "Requirement aliases",
+  "answer_md": "- `needs/privileged`: needs `--docker-privileged` with `--docker`\n- `needs/root`: run as root or with `--docker`\n- `needs/ssh`: passwordless SSH to localhost/container\n- `needs/httptester`: needs the http-test-container",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/integration-aliases.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

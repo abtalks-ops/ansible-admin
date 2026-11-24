@@ -1,0 +1,16 @@
+{
+ "chunk_id": "8822fd1fae47844f",
+ "chunk_hash": "8822fd1fae47844f",
+ "summary": "The password_hash filter itself is unchanged, but because utils.encrypt moved from passlib to libcrypt/libxcrypt its hashes are valid yet differ from earlier output for the same input.",
+ "questions": [
+  "Why does password_hash give a different hash in Ansible 14?",
+  "Do password_hash results from Ansible 14 still work for logins?"
+ ],
+ "answer_card": {
+  "title": "password_hash output changed",
+  "answer_md": "The `password_hash` filter is unchanged, but it depends on `utils.encrypt`, which moved from passlib (deprecated) to **libcrypt/libxcrypt**. It still creates **valid** hashes, but they are not identical to the previous ones for the same input. Expect changed output (and possibly reported changes) in tasks that compare hashes.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:59+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "7cbd063664e0ed13",
+  "chunk_hash": "7cbd063664e0ed13",
+  "summary": "Collections removed from the Ansible 11 package: frr.frr, inspur.sm, ngine_io.exoscale, openvswitch.openvswitch and t_systems_mms.icinga_director. They can still be installed with ansible-galaxy.",
+  "questions": [
+    "Which collections were dropped in Ansible 11?",
+    "How do I get openvswitch.openvswitch back after upgrading?"
+  ],
+  "answer_card": {
+    "title": "Collections removed in Ansible 11",
+    "answer_md": "Removed: `frr.frr` (2.0.2), `inspur.sm` (2.3.0), `ngine_io.exoscale` (1.1.0), `openvswitch.openvswitch` (2.1.1), `t_systems_mms.icinga_director` (2.0.1).\n\nInstall any of them manually if needed:\n\n```shell\nansible-galaxy collection install openvswitch.openvswitch\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "chunk_id": "10f4e98ec2413dad",
+ "chunk_hash": "10f4e98ec2413dad",
+ "summary": "psrp connection options for auth (default negotiate, falling back from Kerberos to NTLM), certificate validation and CA path, certificate auth files and key password, configuration endpoint name, and connection timeout (30s).",
+ "questions": [
+  "How do I use Kerberos with the psrp connection?",
+  "How do I skip certificate validation for psrp?",
+  "How do I use certificate authentication with psrp?",
+  "What is the default psrp connection timeout?",
+  "How do I connect to a custom PowerShell endpoint?"
+ ],
+ "answer_card": {
+  "title": "psrp connection options (part 1)",
+  "answer_md": "- `auth` (default `negotiate`; also `basic`, `certificate`, `kerberos`, `ntlm`, `credssp`). Negotiate tries Kerberos, falls back to NTLM.\n- `cert_validation` (`validate` default or `ignore`) and `ca_cert` (PEM chain path, ignored when validation is `ignore`).\n- `certificate_pem` / `certificate_key_pem`: client cert and key for certificate auth; `certificate_key_password` (2.21+, needs pypsrp >= 0.9.0) if the key is encrypted.\n- `configuration_name` (default `Microsoft.PowerShell`): endpoint.\n- `connection_timeout` (default **30** seconds).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/psrp_connection.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:39+00:00"
+}

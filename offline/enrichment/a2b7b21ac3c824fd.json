@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a2b7b21ac3c824fd",
+ "chunk_hash": "a2b7b21ac3c824fd",
+ "summary": "Test cases follow setup, test, assert, idempotency test, assert, teardown; name non-assert tasks, use .yaml files, name target dirs after the module, and have main.yaml import the transport file, as in vyos_l3_interfaces.",
+ "questions": [
+  "How should I structure a network module integration test?",
+  "What file extension do network test cases need?",
+  "How do I lay out tests for modules supporting multiple connections?"
+ ],
+ "answer_card": {
+  "title": "Integration test structure",
+  "answer_md": "- Flow: setup → test → assert → test again (idempotency) → assert → teardown.\n- Name every non-assert task.\n- Test case files must end in `.yaml`.\n- Name `targets/` dirs after the module; `main.yaml` only references the transport:\n```yaml\n# targets/vyos_l3_interfaces/tasks/main.yaml\n- import_tasks: cli.yaml\n  tags: [cli]\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "8c6f9afb6089686d",
+ "chunk_hash": "8c6f9afb6089686d",
+ "summary": "A complete module test skeleton: helpers for set_module_args, exception classes and patched exit_json/fail_json/get_bin_path, a TestCase that patches AnsibleModule in setUp, a test for missing required args, and a test that run_command is called with the expected command.",
+ "questions": [
+  "Can I see a full template for unit testing my module?",
+  "How do I mock get_bin_path in a unit test?",
+  "How do I patch several AnsibleModule methods at once?",
+  "How do I test that required args are enforced?"
+ ],
+ "answer_card": {
+  "title": "Full module unit test skeleton",
+  "answer_md": "Key pieces:\n```python\ndef set_module_args(args):\n    basic._ANSIBLE_ARGS = to_bytes(json.dumps({'ANSIBLE_MODULE_ARGS': args}))\n\ndef get_bin_path(self, arg, required=False):\n    if arg.endswith('my_command'):\n        return '/usr/bin/my_command'\n    if required:\n        fail_json(msg='%r not found !' % arg)\n\nclass TestMyModule(unittest.TestCase):\n    def setUp(self):\n        self.mock_module_helper = patch.multiple(basic.AnsibleModule,\n            exit_json=exit_json, fail_json=fail_json, get_bin_path=get_bin_path)\n        self.mock_module_helper.start()\n        self.addCleanup(self.mock_module_helper.stop)\n\n    def test_module_fail_when_required_args_missing(self):\n        with self.assertRaises(AnsibleFailJson):\n            set_module_args({})\n            my_module.main()\n```\nA second test patches `run_command` and asserts `assert_called_once_with('/usr/bin/my_command --value 10 --name test')`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_units_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

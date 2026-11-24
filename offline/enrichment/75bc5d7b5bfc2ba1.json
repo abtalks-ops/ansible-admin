@@ -1,0 +1,16 @@
+{
+ "chunk_id": "75bc5d7b5bfc2ba1",
+ "chunk_hash": "75bc5d7b5bfc2ba1",
+ "summary": "Advises keeping Ansible content simple and using advanced features only when needed, for example not combining vars, vars_files, vars_prompt and extra vars with external inventory.",
+ "questions": [
+  "What is a best practice for structuring Ansible playbooks?",
+  "Should I use all the different ways to define variables at once?"
+ ],
+ "answer_card": {
+  "title": "Keep automation simple",
+  "answer_md": "Use advanced features only when you need them and pick the one that fits. You likely don't need `vars`, `vars_files`, `vars_prompt` and `--extra-vars` all at once alongside an external inventory. If something feels complicated, look for a simpler approach.",
+  "source_url": "https://docs.ansible.com/ansible/latest/tips_tricks/ansible_tips_tricks.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

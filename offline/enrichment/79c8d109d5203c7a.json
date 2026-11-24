@@ -1,0 +1,15 @@
+{
+  "chunk_id": "79c8d109d5203c7a",
+  "chunk_hash": "79c8d109d5203c7a",
+  "summary": "Skipping always wins over selecting: with --tags and --skip-tags both given, skipped tags take precedence.",
+  "questions": [
+    "What happens if a task matches both --tags and --skip-tags?"
+  ],
+  "answer_card": {
+    "title": "Tag precedence",
+    "answer_md": "`--skip-tags` wins. `--tags tag1,tag3,tag4 --skip-tags tag3` runs tasks tagged `tag1` or `tag4`, but never ones tagged `tag3`, even if they also have another selected tag.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

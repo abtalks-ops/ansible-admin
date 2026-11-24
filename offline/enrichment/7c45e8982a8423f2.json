@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7c45e8982a8423f2",
+ "chunk_hash": "7c45e8982a8423f2",
+ "summary": "Local custom modules and plugins can be stored on the control node and shared with a team or via a collection. This page covers making Ansible find them, with shortcuts like any language for modules and no PRs or mandatory tests.",
+ "questions": [
+  "How do I use a custom module without publishing it?",
+  "Ansible can't find my local module; where do I look?",
+  "Can I write a local module in a language other than Python?"
+ ],
+ "answer_card": {
+  "title": "Adding local modules and plugins",
+  "answer_md": "You can keep custom or copied modules/plugins on the control node and share them with your team, or package them in a collection. Local use means you can copy others' code, write modules in any language, and skip cloning repos, PRs and (though recommended) tests. This page explains how to make Ansible find them.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

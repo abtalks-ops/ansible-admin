@@ -1,0 +1,17 @@
+{
+ "chunk_id": "741108998090062b",
+ "chunk_hash": "741108998090062b",
+ "summary": "Ad hoc tasks can use any module to reboot servers, copy files, manage packages and users, and more. Like playbooks they are declarative and achieve idempotence by checking current state first.",
+ "questions": [
+  "Can I use any Ansible module in an ad hoc command?",
+  "Are ad hoc commands idempotent?",
+  "What kinds of jobs are ad hoc commands typically used for?"
+ ],
+ "answer_card": {
+  "title": "What ad hoc tasks can do",
+  "answer_md": "Any Ansible module can be used in an ad hoc task: rebooting servers, copying files, managing packages and users, and more. They're declarative like playbooks and achieve idempotence by checking the current state and doing nothing if it already matches the desired state.",
+  "source_url": "https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:04+00:00"
+}

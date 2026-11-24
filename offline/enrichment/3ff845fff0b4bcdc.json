@@ -1,0 +1,17 @@
+{
+  "chunk_id": "3ff845fff0b4bcdc",
+  "chunk_hash": "3ff845fff0b4bcdc",
+  "summary": "find returns the number examined, the list of matched files (stat-like dicts), the match count, and skipped paths with reasons.",
+  "questions": [
+    "How do I get the list of file paths from a find result?",
+    "How many files did find match?",
+    "Why were some paths skipped by find?"
+  ],
+  "answer_card": {
+    "title": "find return values",
+    "answer_md": "- `files`: list of matches (stat-like dicts; use `files | map(attribute='path')`)\n- `matched`: count\n- `examined`: objects looked at\n- `skipped_paths`: dict of path → reason",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/find_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

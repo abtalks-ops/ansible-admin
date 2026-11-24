@@ -1,0 +1,17 @@
+{
+ "chunk_id": "3449c73d6852c1a6",
+ "chunk_hash": "3449c73d6852c1a6",
+ "summary": "backup: yes on eos_config and vyos_config saves the full running-config to the backup folder in the playbook root (created if missing) before changes; register the result to move the file via backup_path, using quoted {{ }} for variables.",
+ "questions": [
+  "Where does backup: yes save network configs?",
+  "How do I move a config backup to another location?",
+  "Does backup happen before or after changes?"
+ ],
+ "answer_card": {
+  "title": "How config backups work",
+  "answer_md": "With `backup: yes`, `eos_config`/`vyos_config` save the full `running-config` **before** making changes, into `backup/` in the playbook root (created if needed). Register the result and use `\"{{ result.backup_path }}\"` (quoted) to copy or move the file elsewhere.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

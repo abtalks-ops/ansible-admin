@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ec022a7200d95478",
+ "chunk_hash": "ec022a7200d95478",
+ "summary": "Parameters of b64decode: required input string, encoding (default utf-8), and urlsafe (2.19+) for the URL-safe alphabet.",
+ "questions": [
+  "How do I decode URL-safe Base64 in Ansible?",
+  "Can b64decode use an encoding other than utf-8?"
+ ],
+ "answer_card": {
+  "title": "b64decode parameters",
+  "answer_md": "- `_input` (required): Base64 string\n- `encoding`: defaults to `utf-8`\n- `urlsafe` (default false, 2.19+): use the URL-safe alphabet (`-` and `_` instead of `+` and `/`)",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64decode_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

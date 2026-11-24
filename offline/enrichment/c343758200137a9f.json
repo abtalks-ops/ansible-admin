@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c343758200137a9f",
+ "chunk_hash": "c343758200137a9f",
+ "summary": "ICX supports CLI over SSH via network_cli with keys or -u/-k, bastion access, and enable mode with become, become_method enable and become_password; output in stdout[0].",
+ "questions": [
+  "How do I use enable mode on ICX?",
+  "What connection does ICX use?"
+ ],
+ "answer_card": {
+  "title": "ICX connection options",
+  "answer_md": "- CLI over SSH: `ansible_connection: ansible.netcommon.network_cli`\n- Credentials: SSH keys/agent or `-u myuser -k`\n- Indirect access: bastion/jump host\n- Enable mode: `ansible_become: true`, `ansible_become_method: enable`, `ansible_become_password:`\n- Output: `stdout[0].`",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_icx.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

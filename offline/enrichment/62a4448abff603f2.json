@@ -1,0 +1,16 @@
+{
+ "chunk_id": "62a4448abff603f2",
+ "chunk_hash": "62a4448abff603f2",
+ "summary": "The persistent connect retry timeout defaults to 15 seconds; raise ANSIBLE_PERSISTENT_CONNECT_RETRY_TIMEOUT or connect_retry_timeout, keeping it above the SSH timeout and below connect_timeout.",
+ "questions": [
+  "How do I fix connect retry timeout expired?",
+  "What should connect_retry_timeout be set to?"
+ ],
+ "answer_card": {
+  "title": "Increase connect retry timeout",
+  "answer_md": "```shell\nexport ANSIBLE_PERSISTENT_CONNECT_RETRY_TIMEOUT=30\n```\n```ini\n[persistent_connection]\nconnect_retry_timeout = 30\n```\nDefault 15 seconds. Keep it **greater** than the SSH timeout (`[defaults] timeout`) and **less** than `connect_timeout`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

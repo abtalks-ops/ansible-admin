@@ -1,0 +1,11 @@
+{
+ "chunk_id": "01dbf7724df3dfbd",
+ "chunk_hash": "01dbf7724df3dfbd",
+ "summary": "Introduces core Ansible concepts that apply to all uses and should be understood before using Ansible.",
+ "questions": [
+  "What basic concepts should I learn before using Ansible?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

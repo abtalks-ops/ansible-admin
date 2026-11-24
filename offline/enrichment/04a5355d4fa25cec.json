@@ -1,0 +1,16 @@
+{
+ "chunk_id": "04a5355d4fa25cec",
+ "chunk_hash": "04a5355d4fa25cec",
+ "summary": "community.routeros deprecated support for EOL Ansible versions; its next major release drops Ansible 2.9, ansible-base 2.10 and ansible-core 2.11 through 2.14.",
+ "questions": [
+  "Does community.routeros still support Ansible 2.9?",
+  "Which versions will the next community.routeros major release require?"
+ ],
+ "answer_card": {
+  "title": "community.routeros drops EOL Ansible versions",
+  "answer_md": "The next major **community.routeros** release drops **Ansible 2.9, ansible-base 2.10 and ansible-core 2.11 to 2.14**. Use a supported ansible-core (2.15 or newer at that time).",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:18:28+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9c79b87b815bdbe2",
+ "chunk_hash": "9c79b87b815bdbe2",
+ "summary": "The file lookup returns contents of a file on the controller and doesn't support globbing (use fileglob).",
+ "questions": [
+  "How do I read a local file's contents into a variable?",
+  "Can the file lookup read files on the managed host?",
+  "Can I use wildcards with the file lookup?"
+ ],
+ "answer_card": {
+  "title": "file lookup",
+  "answer_md": "`lookup('ansible.builtin.file', '/path')` returns a file's contents from the **controller**. It doesn't support globbing; use the `fileglob` lookup for patterns.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_lookup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:14:46+00:00"
+}

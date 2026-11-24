@@ -1,0 +1,16 @@
+{
+ "chunk_id": "422d4b48d1f447d0",
+ "chunk_hash": "422d4b48d1f447d0",
+ "summary": "Interaction with other programs is byte-oriented, so pass bytes to subprocess; connection plugins' exec_command takes text and returns bytes, while higher-level helpers like _low_level_execute_command convert to text.",
+ "questions": [
+  "Should subprocess get bytes or text in Ansible code?",
+  "What type does exec_command return?"
+ ],
+ "answer_card": {
+  "title": "Interacting with other programs",
+  "answer_md": "OS interfaces are byte-oriented, so give `subprocess` bytes and expect bytes back. Connection plugins' `exec_command` converts commands to bytes and returns stdout/stderr as bytes; higher-level functions like `_low_level_execute_command` convert output to text.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_python_3.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

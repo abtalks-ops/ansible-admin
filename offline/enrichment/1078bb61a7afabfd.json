@@ -1,0 +1,19 @@
+{
+  "chunk_id": "1078bb61a7afabfd",
+  "chunk_hash": "1078bb61a7afabfd",
+  "summary": "Advises against Basic and NTLM over HTTP, explains psrp's Negotiate option (Kerberos with NTLM fallback), shows the ansible_psrp_auth and ansible_winrm_transport variables, and recommends Kerberos over HTTP in domains or Basic/NTLM over HTTPS for local accounts, with CredSSP only when necessary.",
+  "questions": [
+    "Which WinRM auth method should I use in a domain?",
+    "How do I set the WinRM authentication type in inventory?",
+    "Is it safe to use Basic auth over HTTP?",
+    "What does negotiate auth do in the psrp plugin?",
+    "Why is CredSSP considered risky?"
+  ],
+  "answer_card": {
+    "title": "Choosing and setting WinRM authentication",
+    "answer_md": "Set the protocol with:\n\n```yaml\nansible_psrp_auth: basic|certificate|negotiate|kerberos|ntlm|credssp\nansible_winrm_transport: basic|certificate|kerberos|ntlm|credssp\n```\n\n- Don't use **Basic** or **NTLM** over an HTTP listener (no or weak encryption).\n- `psrp`'s **negotiate** tries Kerberos then falls back to NTLM; `winrm` must specify `kerberos` or `ntlm`.\n- Recommended: **Kerberos over HTTP** in a domain, **Basic/NTLM over HTTPS** for local accounts.\n- Use **CredSSP** only when absolutely necessary (unconstrained delegation is a security risk).",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

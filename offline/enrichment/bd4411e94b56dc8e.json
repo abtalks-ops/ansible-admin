@@ -1,0 +1,15 @@
+{
+ "chunk_id": "bd4411e94b56dc8e",
+ "chunk_hash": "bd4411e94b56dc8e",
+ "summary": "File names may not contain < > : \" / \\ | ? * or control characters 0 to 31, and may not end in a period or space.",
+ "questions": [
+  "Which characters are not allowed in file names in Ansible repos?"
+ ],
+ "answer_card": {
+  "title": "Illegal filename characters",
+  "answer_md": "Not allowed anywhere: `< > : \" / \\ | ? *` and characters 0 to 31 (like `\\n`). Not allowed as the last character: `.` or a space.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/no-illegal-filenames.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:05+00:00"
+}

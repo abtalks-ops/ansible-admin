@@ -1,0 +1,16 @@
+{
+ "chunk_id": "b5194bd2f65dd080",
+ "chunk_hash": "b5194bd2f65dd080",
+ "summary": "community.libvirt virt_volume removed the PoolConnection class, the 'deleted' state (replaced by a wipe option on absent/delete), and unused flags and functions.",
+ "questions": [
+  "How do I wipe a libvirt volume when deleting it with virt_volume?",
+  "Is state: deleted still valid in virt_volume?"
+ ],
+ "answer_card": {
+  "title": "virt_volume removed features",
+  "answer_md": "- `PoolConnection` class removed.\n- `deleted` state removed; use the new `wipe` boolean with `state: absent` or `command: delete`.\n- Unused FLAGS and functions (`get_status`, `get_status2`, `get_state`, `get_uuid`, `build`) removed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "chunk_id": "03834fd06256d1e3",
+ "chunk_hash": "03834fd06256d1e3",
+ "summary": "Example group_vars/mlx.yml for IronWare with network_cli, community.network.ironware, vaulted passwords, become enable and optional proxy.",
+ "questions": [
+  "What group_vars do I need for IronWare MLX devices?"
+ ],
+ "answer_card": {
+  "title": "IronWare group_vars example",
+  "answer_md": "```yaml\nansible_connection: ansible.netcommon.network_cli\nansible_network_os: community.network.ironware\nansible_user: myuser\nansible_password: !vault...\nansible_become: true\nansible_become_method: enable\nansible_become_password: !vault...\nansible_paramiko_proxy_command: '-o ProxyCommand=\"ssh -W %h:%p -q bastion01\"'\n```\nDrop `ansible_password` with SSH keys and the proxy line for direct access.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_ironware.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

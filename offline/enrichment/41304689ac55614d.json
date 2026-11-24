@@ -1,0 +1,18 @@
+{
+ "chunk_id": "41304689ac55614d",
+ "chunk_hash": "41304689ac55614d",
+ "summary": "Lists file types Vault can encrypt in full: inventory group and host vars, -e @file vars, include_vars/vars_files, role vars and defaults, tasks and handlers files, and arbitrary binary files; it uses an editor to create or modify them.",
+ "questions": [
+  "Which files can I encrypt with Ansible Vault?",
+  "Can I encrypt a tasks file or handlers file?",
+  "Can Ansible Vault encrypt binary files?",
+  "Can I encrypt group_vars files?"
+ ],
+ "answer_card": {
+  "title": "Files Ansible Vault can encrypt",
+  "answer_md": "Vault can encrypt the whole of any structured data file Ansible uses:\n\n- inventory group_vars and host_vars files\n- vars files passed with `-e @file.yml` / `-e @file.json`\n- files loaded by `include_vars` or `vars_files`\n- role vars and defaults files\n- tasks and handlers files\n- binary or other arbitrary files\n\nVault uses your editor to create or modify encrypted files, so secure your editor.",
+  "source_url": "https://docs.ansible.com/ansible/latest/vault_guide/vault_encrypting_content.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

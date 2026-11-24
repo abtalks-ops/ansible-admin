@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d7aebccb47da93d7",
+ "chunk_hash": "d7aebccb47da93d7",
+ "summary": "community.general also removed git_config list_all, hipchat, the manifold lookup, profitbrick modules, the stackpath_compute inventory and several module_helper utilities, and pipx modules need pipx 1.7.0+.",
+ "questions": [
+  "Is the hipchat module still in community.general?",
+  "What pipx version does community.general.pipx need?",
+  "Where is VarDict imported from now in module_helper?"
+ ],
+ "answer_card": {
+  "title": "community.general removals (part 2)",
+  "answer_md": "- `git_config`: `list_all` removed; use `git_config_info`.\n- Removed modules/plugins: `hipchat`, `manifold` lookup, `profitbrick*`, `stackpath_compute` inventory.\n- module_helper utils: `mh.mixins.deps` (use `deps`), `mh.mixins.vars` (use `VarDict` from `vardict`) removed; `AnsibleModule`, `VarsMixin`, `StateMixin`, `DependencyCtxMgr`, `VarMeta` no longer provided; `use_old_vardict` and `mute_vardict_deprecation` attributes removed.\n- `pipx`, `pipx_info`: require **pipx 1.7.0+**.\n- `redfish_utils`: `_init_session` removed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:04+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "02a7b2ba9dd41e24",
+ "chunk_hash": "02a7b2ba9dd41e24",
+ "summary": "_ansible_no_log (bool) is True when a task or play sets no_log; AnsibleModule.log respects it automatically, and custom loggers should check AnsibleModule.no_log. Argument spec no_log is separate.",
+ "questions": [
+  "How does my module know a task set no_log?",
+  "Is task-level no_log the same as no_log in the argument_spec?"
+ ],
+ "answer_card": {
+  "title": "_ansible_no_log",
+  "answer_md": "Type `bool`. `True` when the task or play sets `no_log`. `AnsibleModule.log` honors it automatically; if you log yourself, check `module.no_log`. `no_log` in an `argument_spec` is a different mechanism.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

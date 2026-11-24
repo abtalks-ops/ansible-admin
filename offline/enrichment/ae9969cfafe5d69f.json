@@ -1,0 +1,15 @@
+{
+  "chunk_id": "ae9969cfafe5d69f",
+  "chunk_hash": "ae9969cfafe5d69f",
+  "summary": "The vault_encrypted test returns True if the input is a valid Ansible vault.",
+  "questions": [
+    "What does vault_encrypted return?"
+  ],
+  "answer_card": {
+    "title": "vault_encrypted test return value",
+    "answer_md": "`True` if a valid vault, else `False`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/vault_encrypted_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

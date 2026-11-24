@@ -1,0 +1,18 @@
+{
+  "chunk_id": "d75088afe3e4eefd",
+  "chunk_hash": "d75088afe3e4eefd",
+  "summary": "There are three callback types. stdout handles main console output, only one can be active and it gets events first. aggregate adds extra console output alongside it. notification informs other systems, for example through logging, chat alerts or email.",
+  "questions": [
+    "What kinds of callback plugins exist?",
+    "Which callback receives an event first?",
+    "Can I add a run summary without replacing the default output?",
+    "What type of callback would post failures to a chat app?"
+  ],
+  "answer_card": {
+    "title": "Types of callback plugins",
+    "answer_md": "- **stdout**: main console output. Only one can be active, and it gets each event first.\n- **aggregate**: adds extra console output next to the stdout callback, such as end-of-run summaries or per-task output.\n- **notification**: informs other applications, such as logging to a database, chat messages on errors, or email when a host is unreachable.\n\nNon-stdout callbacks receive events in the order they are configured.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/callback.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

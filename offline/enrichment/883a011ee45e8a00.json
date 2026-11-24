@@ -1,0 +1,16 @@
+{
+  "chunk_id": "883a011ee45e8a00",
+  "chunk_hash": "883a011ee45e8a00",
+  "summary": "Relative paths in tasks usually refer to remote paths, but lookup plugin paths and some action plugin paths, like src for template and copy, refer to the control node.",
+  "questions": [
+    "Is the src path in copy local or remote?",
+    "Do relative paths in tasks point to the managed node?"
+  ],
+  "answer_card": {
+    "title": "Local vs remote task paths",
+    "answer_md": "Relative task paths usually refer to the **managed node**. Exceptions: lookup plugin paths and some action plugin paths, such as `src` for `template` and `copy`, refer to the **control node**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbook_pathing.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

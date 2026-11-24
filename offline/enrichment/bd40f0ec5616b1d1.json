@@ -1,0 +1,17 @@
+{
+  "chunk_id": "bd40f0ec5616b1d1",
+  "chunk_hash": "bd40f0ec5616b1d1",
+  "summary": "Examples assert version comparisons with various operators, the old version_compare name, strict mode, semver and pep440 comparisons.",
+  "questions": [
+    "How do I check that the OS version is at least 2.0?",
+    "How do I compare a release candidate to a final release?",
+    "How do I compare semver versions in an assert?"
+  ],
+  "answer_card": {
+    "title": "version test examples",
+    "answer_md": "```yaml\n- assert:\n    that:\n      - \"'1.0' is version('2.0', '<')\"\n      - \"'2.0' is version('1.0', '>')\"\n      - \"'1.0' is version('1.0', '==', strict=true)\"\n      - \"'1.2.3' is version('2.0.0', 'lt', version_type='semver')\"\n      - \"'2.14.0rc1' is version('2.14.0', 'lt', version_type='pep440')\"\n```\n`version_compare` is the old name.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/version_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

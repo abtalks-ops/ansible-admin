@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5146f0a6a632734f",
+ "chunk_hash": "5146f0a6a632734f",
+ "summary": "unique parameters: required list, attribute to dedupe objects by, and case_sensitive (default false).",
+ "questions": [
+  "Is the unique filter case sensitive?",
+  "How do I dedupe a list of dicts by one attribute?"
+ ],
+ "answer_card": {
+  "title": "unique parameters",
+  "answer_md": "- `_input` (list, required)\n- `attribute`: keep objects with unique values for this attribute\n- `case_sensitive` (default **false**)",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/unique_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:33+00:00"
+}

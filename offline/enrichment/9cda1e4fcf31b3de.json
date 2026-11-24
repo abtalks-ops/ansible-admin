@@ -1,0 +1,16 @@
+{
+  "chunk_id": "9cda1e4fcf31b3de",
+  "chunk_hash": "9cda1e4fcf31b3de",
+  "summary": "Shows task result tests failed, changed, succeeded/success and skipped on a registered result; from 2.1 alternative forms like failure, change and skip also work.",
+  "questions": [
+    "How do I check whether a registered task failed or changed?",
+    "What task status tests are available?"
+  ],
+  "answer_card": {
+    "title": "Testing task results",
+    "answer_md": "```yaml\n- shell: /usr/bin/foo\n  register: result\n  ignore_errors: true\n- debug: { msg: \"it failed\" }\n  when: result is failed\n```\n\nAlso: `result is changed`, `succeeded` (or `success`), `skipped`. Since 2.1, `failure`, `change` and `skip` also work.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tests.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

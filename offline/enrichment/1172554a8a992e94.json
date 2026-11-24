@@ -1,0 +1,16 @@
+{
+ "chunk_id": "1172554a8a992e94",
+ "chunk_hash": "1172554a8a992e94",
+ "summary": "Server configuration is a one-time step per distribution server (create a namespace, get and set an API token), while building, preparing and publishing repeat for every release.",
+ "questions": [
+  "Do I need to configure Galaxy credentials every time I publish?",
+  "What one-time setup is required before publishing collections?"
+ ],
+ "answer_card": {
+  "title": "One-time distribution server setup",
+  "answer_md": "Configure each server once:\n1. Create a namespace.\n2. Get an API token.\n3. Specify the token.\n\nBuilding, preparing and publishing must be repeated for every new collection or version.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

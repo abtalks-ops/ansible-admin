@@ -1,0 +1,16 @@
+{
+ "chunk_id": "9c4350c153cf233f",
+ "chunk_hash": "9c4350c153cf233f",
+ "summary": "Glossary entry explaining why Ansible uses YAML for playbooks and variable files, plus see-also links.",
+ "questions": [
+  "Why does Ansible use YAML?",
+  "What file format are playbooks and variable files written in?"
+ ],
+ "answer_card": {
+  "title": "Why Ansible uses YAML",
+  "answer_md": "Ansible uses YAML for playbooks and variable files so you do not have to write programming code. YAML has minimal syntax, is easy for people to read, and is also machine readable, with libraries in many languages.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

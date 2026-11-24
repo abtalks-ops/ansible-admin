@@ -1,0 +1,16 @@
+{
+ "chunk_id": "3f7561c2e126c4ab",
+ "chunk_hash": "3f7561c2e126c4ab",
+ "summary": "Shows running the edited exploded module with the wrapper's execute subcommand, which puts debug_dir first on sys.path and uses the args file, so you can iterate before copying fixes back.",
+ "questions": [
+  "How do I rerun a module after editing its exploded code?",
+  "How does execute pick up my modified module files?"
+ ],
+ "answer_card": {
+  "title": "Run an exploded module",
+  "answer_md": "```shell-session\n$ python AnsiballZ_ping.py execute\n```\n`execute` puts `debug_dir` first on `sys.path` and runs with the `args` file. Iterate until you find the problem, then copy changes into your real module and test with `ansible` or `ansible-playbook`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/debugging.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

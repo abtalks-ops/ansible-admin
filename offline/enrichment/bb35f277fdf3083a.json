@@ -1,0 +1,19 @@
+{
+  "chunk_id": "bb35f277fdf3083a",
+  "chunk_hash": "bb35f277fdf3083a",
+  "summary": "Using an inventory plugin needs an inventory source, either a hosts file or a YAML config with plugin: <name> (FQCN for collections), passed with -i or a default path. Plugins enforce filename patterns such as *.kubevirt.yml or *.servicenow.yml, and YAML configs must end in yml or yaml for auto. ansible-inventory --graph shows the result, and --playbook-dir helps with playbook-adjacent collections.",
+  "questions": [
+    "How do I start using the aws_ec2 dynamic inventory plugin?",
+    "Why is my inventory config file being ignored by the auto plugin?",
+    "How do I check what hosts and groups my dynamic inventory produced?",
+    "Does the inventory config file name matter?",
+    "How do I test a playbook-adjacent collection's inventory plugin with ansible-inventory?"
+  ],
+  "answer_card": {
+    "title": "Setting up a YAML inventory plugin source",
+    "answer_md": "1. Create a config file whose name matches the plugin's required pattern and ends in `.yml` or `.yaml`, for example `demo.aws_ec2.yml`:\n\n```yaml\nplugin: amazon.aws.aws_ec2\n```\n\nUse the FQCN for collection plugins. Some plugins need specific patterns, such as `*.kubevirt.yml` or `*.servicenow.yml`.\n\n2. Add any required options, then check the result:\n\n```bash\nansible-inventory -i demo.aws_ec2.yml --graph\n```\n\n3. Use it with `-i`, for example `ansible hostname -i demo.aws_ec2.yml -m ansible.builtin.ping`.\n\nFor a plugin in a playbook-adjacent collection, add `--playbook-dir` when testing with `ansible-inventory`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/inventory.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:19:43+00:00"
+}

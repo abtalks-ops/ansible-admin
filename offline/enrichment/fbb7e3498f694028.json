@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fbb7e3498f694028",
+ "chunk_hash": "fbb7e3498f694028",
+ "summary": "Galaxy imports semver Git tags as role versions; install one with role,version, or install from Git with a branch or commit hash after the comma.",
+ "questions": [
+  "How do I install a specific version of a Galaxy role?",
+  "How do I install a role from a specific Git commit?",
+  "How do I see what versions a role has?"
+ ],
+ "answer_card": {
+  "title": "Install a specific role version",
+  "answer_md": "See available versions on the role's Galaxy page. Then:\n```bash\nansible-galaxy role install geerlingguy.apache,3.2.0\n```\nOr straight from Git with a branch or commit:\n```bash\nansible-galaxy role install git+https://github.com/geerlingguy/ansible-role-apache.git,0b7cd353c0250e87a26e0499e59e7fd265cc2f25\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/user_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

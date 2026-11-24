@@ -1,0 +1,15 @@
+{
+  "chunk_id": "f4d2d9b4b1e19539",
+  "chunk_hash": "f4d2d9b4b1e19539",
+  "summary": "TAGS_RUN and TAGS_SKIP config options set default tags to run or skip.",
+  "questions": [
+    "Can I set default tags to run or skip in ansible.cfg?"
+  ],
+  "answer_card": {
+    "title": "Configuring default tags",
+    "answer_md": "Use the **`TAGS_RUN`** and **`TAGS_SKIP`** configuration options to set tags that are run or skipped by default.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:14:17+00:00"
+}

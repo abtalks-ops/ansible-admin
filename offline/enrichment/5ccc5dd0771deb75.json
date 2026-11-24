@@ -1,0 +1,15 @@
+{
+  "chunk_id": "5ccc5dd0771deb75",
+  "chunk_hash": "5ccc5dd0771deb75",
+  "summary": "The failed test takes a registered task result dictionary.",
+  "questions": [
+    "What do I pass to the failed test?"
+  ],
+  "answer_card": {
+    "title": "failed test parameters",
+    "answer_md": "`_input` (required): registered task result.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/failed_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:13+00:00"
+}

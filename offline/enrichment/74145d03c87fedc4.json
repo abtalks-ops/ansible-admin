@@ -1,0 +1,16 @@
+{
+ "chunk_id": "74145d03c87fedc4",
+ "chunk_hash": "74145d03c87fedc4",
+ "summary": "The open-source web interface for Ansible is AWX; the supported Red Hat product is Red Hat Ansible Automation Platform.",
+ "questions": [
+  "Is there a web UI or REST API for running Ansible?",
+  "What is AWX?"
+ ],
+ "answer_card": {
+  "title": "Web UI / REST API for Ansible",
+  "answer_md": "Use **AWX** (open source) for a web UI and REST API, or the supported **Red Hat Ansible Automation Platform**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

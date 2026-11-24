@@ -1,0 +1,15 @@
+{
+  "chunk_id": "8b98f53978531a4c",
+  "chunk_hash": "8b98f53978531a4c",
+  "summary": "Known community.general issue: jenkins_node can't update the offline message of a node that's already offline because it uses the toggleOffline API.",
+  "questions": [
+    "Why can't jenkins_node change the offline message on an offline node?"
+  ],
+  "answer_card": {
+    "title": "jenkins_node offline message limitation",
+    "answer_md": "`jenkins_node` can't update the offline message if the node is already offline, because it uses Jenkins' `toggleOffline` API internally. Bring the node online first, then take it offline with the new message.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:26:20+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "6cffd63c1509a922",
+ "chunk_hash": "6cffd63c1509a922",
+ "summary": "awx.awx will be removed from Ansible 14 because it is being heavily refactored and doesn't meet community package standards, but can still be installed separately.",
+ "questions": [
+  "Is awx.awx being removed from the Ansible package?",
+  "How do I install awx.awx after Ansible 14?"
+ ],
+ "answer_card": {
+  "title": "awx.awx removal from Ansible 14",
+  "answer_md": "`awx.awx` will be **removed from Ansible 14** because it is being heavily refactored and doesn't currently meet the community package standards. Afterwards, install it directly:\n\n```bash\nansible-galaxy collection install awx.awx\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:56+00:00"
+}

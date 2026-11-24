@@ -1,0 +1,18 @@
+{
+ "chunk_id": "e4c4be083fb57204",
+ "chunk_hash": "e4c4be083fb57204",
+ "summary": "Table of Ansible community package versions with status and their ansible-core dependency: 15.0.0 in development on core 2.22, 14.x current on 2.21, 13.x EOL in June 2026 on 2.20, and older versions unmaintained.",
+ "questions": [
+  "Which ansible-core version does Ansible 14 use?",
+  "Is Ansible 13 still maintained?",
+  "What is the latest Ansible community package version?",
+  "Which Ansible package version matches ansible-core 2.19?"
+ ],
+ "answer_card": {
+  "title": "Ansible package versions and core dependency",
+  "answer_md": "| Package | Status | ansible-core |\n|---|---|---|\n| 15.0.0 | In development | 2.22 |\n| 14.x | Current, latest | 2.21 |\n| 13.x | EOL June 2026 | 2.20 |\n| 12.x | Unmaintained | 2.19 |\n| 11.x | Unmaintained | 2.18 |\n| 10.x | Unmaintained | 2.17 |\n| 9.x | Unmaintained | 2.16 |\n\n8.x to 2.10 are also unmaintained (core 2.15 down to 2.10).",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:57+00:00"
+}

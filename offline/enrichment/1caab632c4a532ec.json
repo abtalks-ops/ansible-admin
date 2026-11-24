@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1caab632c4a532ec",
+ "chunk_hash": "1caab632c4a532ec",
+ "summary": "community.postgresql now needs psycopg2 2.5.1+, removed postgresql_pg_hba order, postgresql_privs usage_on_types, postgresql_query path_to_script/as_single_query and postgresql_user groups, and postponed removal of postgresql_user privs to 4.0.0.",
+ "questions": [
+  "How do I run a SQL script now that path_to_script is removed?",
+  "postgresql_user rejects groups, what's the replacement?",
+  "How do I grant privileges on PG types without usage_on_types?",
+  "Why is the order argument gone from postgresql_pg_hba?"
+ ],
+ "answer_card": {
+  "title": "community.postgresql removed arguments",
+  "answer_md": "- Minimum **psycopg2 2.5.1**.\n- `postgresql_pg_hba`: `order` removed; sort order `sdu` is fixed.\n- `postgresql_privs`: `usage_on_types` removed; use `type: type`.\n- `postgresql_query`: `path_to_script`, `as_single_query` removed; use **`postgresql_script`**.\n- `postgresql_user`: `groups` removed; use **`postgresql_membership`**. `privs` removal moved to 4.0.0.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_9.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:38+00:00"
+}

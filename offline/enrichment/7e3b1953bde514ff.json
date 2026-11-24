@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7e3b1953bde514ff",
+ "chunk_hash": "7e3b1953bde514ff",
+ "summary": "Describes C# util compilation comments //AssemblyReference and //NoWarn with optional -CLR targeting, and the CORECLR, WINDOWS and UNIX preprocessor symbols, with a cross-runtime example.",
+ "questions": [
+  "How do I reference an extra assembly in a C# module util?",
+  "How can a C# util work on both .NET Core and .NET Framework?",
+  "How do I suppress a compiler warning in a C# module util?"
+ ],
+ "answer_card": {
+  "title": "C# util compile directives",
+  "answer_md": "- `//AssemblyReference -Name <dll> [-CLR Core|Framework]`\n- `//NoWarn -Name <id> [-CLR Core|Framework]`\n- Symbols: `CORECLR`, `WINDOWS`, `UNIX`\n```csharp\n#if CORECLR\nusing Newtonsoft.Json;\n#else\nusing System.Web.Script.Serialization;\n#endif\n//AssemblyReference -Name Newtonsoft.Json.dll -CLR Core\n//AssemblyReference -Name System.Web.Extensions.dll -CLR Framework\n//NoWarn -Name CS1702\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:43+00:00"
+}

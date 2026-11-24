@@ -1,0 +1,17 @@
+{
+  "chunk_id": "74566ce10a6a85c2",
+  "chunk_hash": "74566ce10a6a85c2",
+  "summary": "Examples of include_tasks: including a file, a templated file name with a condition, and applying tags to included tasks with both file and free-form syntax.",
+  "questions": [
+    "How do I include a task file named after a variable?",
+    "How do I apply tags to included tasks using free-form syntax?",
+    "Why do I need tags: always on include_tasks with apply?"
+  ],
+  "answer_card": {
+    "title": "include_tasks examples",
+    "answer_md": "```yaml\n- ansible.builtin.include_tasks: {file: stuff.yaml}\n- ansible.builtin.include_tasks: \"{{ hostvar }}.yaml\"\n  when: hostvar is defined\n- ansible.builtin.include_tasks:\n    file: install.yml\n    apply:\n      tags: [install]\n  tags: [always]\n# free-form:\n- ansible.builtin.include_tasks: install.yml\n  args:\n    apply: {tags: [install]}\n  tags: [always]\n```\n`tags: always` ensures the include runs so inner tags can be selected.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_tasks_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:09+00:00"
+}

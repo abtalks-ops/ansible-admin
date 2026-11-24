@@ -1,0 +1,16 @@
+{
+ "chunk_id": "d8f13d2d4121c79b",
+ "chunk_hash": "d8f13d2d4121c79b",
+ "summary": "ansible-galaxy role delete github_user github_repo removes a role from Galaxy only, needs an API token, and requires access to the GitHub repo.",
+ "questions": [
+  "How do I remove my role from Galaxy?",
+  "Does deleting a role on Galaxy delete my GitHub repo?"
+ ],
+ "answer_card": {
+  "title": "Delete a role from Galaxy",
+  "answer_md": "```bash\nansible-galaxy role delete github_user github_repo\n```\nNeeds your API token (`ansible.cfg` or `--token`) and access to the GitHub repo. It only removes the role from Galaxy; the GitHub repository is untouched.",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/dev_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

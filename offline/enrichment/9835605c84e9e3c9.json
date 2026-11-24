@@ -1,0 +1,16 @@
+{
+  "chunk_id": "9835605c84e9e3c9",
+  "chunk_hash": "9835605c84e9e3c9",
+  "summary": "Shows referencing variables with Jinja2 double curly braces, e.g. in a template dest path, and notes Jinja2 loops and conditionals are allowed in templates but not in playbooks, which are pure YAML.",
+  "questions": [
+    "How do I reference a variable in a playbook?",
+    "Can I use Jinja2 for loops inside a playbook?"
+  ],
+  "answer_card": {
+    "title": "Referencing simple variables",
+    "answer_md": "Use double curly braces:\n\n```yaml\nansible.builtin.template:\n  src: foo.cfg.j2\n  dest: '{{ remote_install_path }}/foo.cfg'\n```\n\nJinja2 loops and conditionals work in **templates**, not in playbooks; playbooks are pure YAML, so you can't create a loop of tasks with Jinja2.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:30+00:00"
+}

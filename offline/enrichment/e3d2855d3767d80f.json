@@ -1,0 +1,19 @@
+{
+ "chunk_id": "e3d2855d3767d80f",
+ "chunk_hash": "e3d2855d3767d80f",
+ "summary": "Major community package releases take the latest ansible-core and collection releases and may break things, while minor releases only accept backwards-compatible collection updates under semantic versioning. Also points to porting guides, pip install and old release downloads.",
+ "questions": [
+  "Can a minor Ansible package update include breaking changes?",
+  "Will Ansible 3.x ever ship community.general 3.0?",
+  "How do I install the Ansible package?",
+  "Where can I download old Ansible releases?",
+  "How do I prepare playbooks for a new major Ansible version?"
+ ],
+ "answer_card": {
+  "title": "Semantic versioning in the community package",
+  "answer_md": "- **Major** releases include the latest ansible-core and collections and can contain breaking changes.\n- **Minor** releases only take backwards-compatible collection updates. If Ansible 3.0.0 shipped community.general 2.0.0, every 3.x keeps a 2.x community.general.\n- Use the porting guides when upgrading, install with `pip` (2.10+), and find old releases at https://releases.ansible.com/ansible/.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:57+00:00"
+}

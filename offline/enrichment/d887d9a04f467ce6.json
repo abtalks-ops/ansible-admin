@@ -1,0 +1,18 @@
+{
+ "chunk_id": "d887d9a04f467ce6",
+ "chunk_hash": "d887d9a04f467ce6",
+ "summary": "Explains _facts modules (host-specific ansible_facts) versus _info modules (general, non-host information) since Ansible 2.8, and their requirements: singular names, correct return location, check mode support, no changes, documented returns.",
+ "questions": [
+  "Should I add state: list to my module or make a new info module?",
+  "What's the difference between an _info module and a _facts module?",
+  "Do info modules need to support check mode?",
+  "Can an info module change anything on the system?"
+ ],
+ "answer_card": {
+  "title": "Info and facts modules",
+  "answer_md": "- `*_facts`: main purpose is returning **host-specific** `ansible_facts` (interfaces, OS, installed programs).\n- `*_info`: general, non-host info (cloud services, VMs, files).\n\nRequirements:\n1. Named `<singular>_info` or `<singular>_facts`\n2. `_info` returns in the result dict; `_facts` in `ansible_facts`\n3. Must support check_mode\n4. Must not change the system\n5. Must document returns and examples\n\nWanting `state: info`/`list` usually means you need a new info module.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:09+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "7c09884cbab1d9ec",
+ "chunk_hash": "7c09884cbab1d9ec",
+ "summary": "Modules like ios_command and nxos_command take a prompt regex (escape special characters like ?), and cli_command handles multiple prompts with ordered answers and check_all; without check_all the first answer is used for every prompt.",
+ "questions": [
+  "How do I answer a confirmation prompt on a network device?",
+  "Why does my prompt with a question mark time out?",
+  "How do I reload an IOS device with Ansible?",
+  "What does check_all do in cli_command?"
+ ],
+ "answer_card": {
+  "title": "Handle prompts in network modules",
+  "answer_md": "`prompt` is a **Python regex**, so escape special characters (`Save\\?`) or it won't match and times out.\n```yaml\n- ansible.netcommon.cli_command:\n    command: \"copy sftp sftp://user@host//user/test.img\"\n    check_all: True\n    prompt:\n      - \"Confirm download operation\"\n      - \"Password\"\n      - \"Do you want to change that to the standby image\"\n    answer: ['y', '<password>', 'y']\n```\nPrompts and answers pair by order. Without `check_all: True`, the first answer is given to every prompt (fine only if all answers match, as in a `reload` with `Save\\?` and `confirm` both answered `y`).",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_working_with_command_output.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

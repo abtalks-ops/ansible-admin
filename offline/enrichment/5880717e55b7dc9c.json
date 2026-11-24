@@ -1,0 +1,16 @@
+{
+  "chunk_id": "5880717e55b7dc9c",
+  "chunk_hash": "5880717e55b7dc9c",
+  "summary": "Shows mapping the imported certificate to a local account via New-Item on WSMan:\\localhost\\ClientCertificate, with Subject as the UPN, Issuer as the CA thumbprint, and the user's credential.",
+  "questions": [
+    "How do I map a client certificate to a local Windows user for WinRM?",
+    "What goes in the Issuer field of a WinRM certificate mapping?"
+  ],
+  "answer_card": {
+    "title": "Mapping the certificate to a local account",
+    "answer_md": "```powershell\n$credential = Get-Credential local-user\n$cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new(\"cert.pem\")\n$chain = [System.Security.Cryptography.X509Certificates.X509Chain]::new()\n[void]$chain.Build($cert)\n$caThumbprint = $chain.ChainElements.Certificate[-1].Thumbprint\n\nNew-Item -Path WSMan:\\localhost\\ClientCertificate -Subject $cert.GetNameInfo('UpnName', $false) -Issuer $caThumbprint -Credential $credential -Force\n```\n\n`Subject` = the cert's UPN, `Issuer` = the issuing CA's thumbprint, `Credential` = the local user's username/password.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm_certificate.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

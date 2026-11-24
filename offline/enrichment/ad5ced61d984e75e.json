@@ -1,0 +1,15 @@
+{
+ "chunk_id": "ad5ced61d984e75e",
+ "chunk_hash": "ad5ced61d984e75e",
+ "summary": "Parameters of combinations: the required input list and required set_size.",
+ "questions": [
+  "What arguments does the combinations filter need?"
+ ],
+ "answer_card": {
+  "title": "combinations parameters",
+  "answer_md": "- `_input` (list, required): elements to combine\n- `set_size` (int, required): size of each combination",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/combinations_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

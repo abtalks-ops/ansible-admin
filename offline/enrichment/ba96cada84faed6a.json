@@ -1,0 +1,16 @@
+{
+ "chunk_id": "ba96cada84faed6a",
+ "chunk_hash": "ba96cada84faed6a",
+ "summary": "Run integration tests like ansible-test integration -v ping, then comment on the PR with results and ansible --version output, or with failure output if it doesn't work.",
+ "questions": [
+  "How do I report my PR test results?",
+  "What command runs an integration test for one module?"
+ ],
+ "answer_card": {
+  "title": "Run integration tests and report",
+  "answer_md": "```shell\nansible-test integration -v ping\n```\nComment on the PR with your results and `ansible --version`, such as \"Works for me! Tested on Ansible 2.3.0 on CentOS 6.5 and Ubuntu 14.04.\" On failure, paste the error output.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:19+00:00"
+}

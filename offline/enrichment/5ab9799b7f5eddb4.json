@@ -1,0 +1,18 @@
+{
+  "chunk_id": "5ab9799b7f5eddb4",
+  "chunk_hash": "5ab9799b7f5eddb4",
+  "summary": "dellemc.openmanage known issues for 10.0.0 add to the usual list: poor error messages for unsupported values in idrac_network_attributes and ome_device_network_services, a confusing PowerCap message in ome_device_power_settings outside 0 to 32767, and ome_device_quick_deploy not deploying to slots with IPv6 disabled.",
+  "questions": [
+    "Why does ome_device_power_settings say PowerCap does not exist?",
+    "Why doesn't ome_device_quick_deploy configure a slot with IPv6 disabled?",
+    "What's the valid range for power_cap in OME?",
+    "Why do I get an unhelpful error from ome_device_network_services?"
+  ],
+  "answer_card": {
+    "title": "dellemc.openmanage known issues (10.0.0)",
+    "answer_md": "In addition to the SOCKS proxy, iDRAC8 share, BOSS-N1, OME 4.0.0 diagnostics and duplicate uplink issues:\n- `idrac_network_attributes`: wrong error message for unsupported `ome_network_attributes` values.\n- `ome_device_network_services`: no proper error for unsupported `port_number`, `community_name`, `max_sessions`, `max_auth_retries` or `idle_timeout`.\n- `ome_device_power_settings`: a `power_cap` outside 0 to 32767 gives \"PowerCap does not exist or is not applicable\".\n- `ome_device_quick_deploy`: won't deploy to a slot with IPv6 disabled.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:22:19+00:00"
+}

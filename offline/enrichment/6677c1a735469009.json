@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6677c1a735469009",
+ "chunk_hash": "6677c1a735469009",
+ "summary": "ansible-galaxy role setup travis links a role to Travis so builds trigger Galaxy imports. The Travis token is used to compute a verification hash but isn't stored, and .travis.yml needs a webhook notification to Galaxy.",
+ "questions": [
+  "How do I make Travis builds update my role on Galaxy?",
+  "Does Galaxy store my Travis token?",
+  "What webhook do I add to .travis.yml for Galaxy?"
+ ],
+ "answer_card": {
+  "title": "Connect a role to Travis",
+  "answer_md": "```bash\nansible-galaxy role setup travis github_user github_repo xxx-travis-token-xxx\n```\nThe Travis token isn't stored; it's used to create a hash Galaxy uses to verify notifications. Then add to `.travis.yml`:\n```yaml\nnotifications:\n  webhooks: https://galaxy.ansible.com/api/v1/notifications/\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/dev_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

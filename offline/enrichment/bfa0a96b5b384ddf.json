@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bfa0a96b5b384ddf",
+ "chunk_hash": "bfa0a96b5b384ddf",
+ "summary": "PSCredential properties can't be serialized over JSON, so you set them in win_dsc with two options suffixed _username and _password. On Ansible older than 2.8 you should set no_log: true.",
+ "questions": [
+  "How do I pass a PSCredential to a DSC resource with win_dsc?",
+  "How do I set PsDscRunAsCredential in Ansible?",
+  "Do I need no_log for credentials in win_dsc?",
+  "What does EmbeddedInstance MSFT_Credential mean in a MOF?"
+ ],
+ "answer_card": {
+  "title": "Setting PSCredential properties in win_dsc",
+  "answer_md": "A `[PSCredential]` can't be sent over JSON, so split it into two options with `_username` and `_password` suffixes:\n\n```yaml+jinja\nPsDscRunAsCredential_username: '{{ ansible_user }}'\nPsDscRunAsCredential_password: '{{ ansible_password }}'\n\nSourceCredential_username: AdminUser\nSourceCredential_password: PasswordForAdminUser\n```\n\nOn Ansible older than 2.8, also set `no_log: true` on the task so credentials aren't logged. In a MOF, these properties appear as `EmbeddedInstance(\"MSFT_Credential\")`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_dsc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

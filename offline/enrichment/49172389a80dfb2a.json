@@ -1,0 +1,18 @@
+{
+ "chunk_id": "49172389a80dfb2a",
+ "chunk_hash": "49172389a80dfb2a",
+ "summary": "Cheatsheet examples for installing a single collection, installing collections from requirements.yml, and listing installed collections with ansible-galaxy.",
+ "questions": [
+  "How do I install one collection from Galaxy?",
+  "How do I install every collection listed in a requirements file?",
+  "How can I see which collections are already installed?",
+  "Which Galaxy server does ansible-galaxy use by default?"
+ ],
+ "answer_card": {
+  "title": "Install and list collections with ansible-galaxy",
+  "answer_md": "- Single collection: `ansible-galaxy collection install mynamespace.mycollection` (from `galaxy.ansible.com` by default).\n- From a file: `ansible-galaxy collection install -r requirements.yml`\n- List installed: `ansible-galaxy collection list`",
+  "source_url": "https://docs.ansible.com/ansible/latest/command_guide/cheatsheet.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:04+00:00"
+}

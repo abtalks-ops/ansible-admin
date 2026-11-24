@@ -1,0 +1,16 @@
+{
+ "chunk_id": "b823c994499b0473",
+ "chunk_hash": "b823c994499b0473",
+ "summary": "Use a custom parser via cli_parse with parser name set to its FQCN. Rules: a CliParser class, a parse function, return errors or parsed, and place it in plugins/cli_parsers.",
+ "questions": [
+  "How do I call my custom cli_parser from a task?",
+  "Where do I put a cli_parser plugin in my collection?"
+ ],
+ "answer_card": {
+  "title": "Use and package a custom cli_parser",
+  "answer_md": "```yaml\n- name: Use a custom cli_parser\n  ansible.netcommon.cli_parse:\n    command: ls -l\n    parser:\n      name: my_organization.my_collection.custom_parser\n```\nRequirements: a `CliParser` class, a `parse` function, always return a dict with `errors` or `parsed`, and put the file in the collection's `plugins/cli_parsers/`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_plugins_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

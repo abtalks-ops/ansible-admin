@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e1bef60c12950f85",
+ "chunk_hash": "e1bef60c12950f85",
+ "summary": "Explains testing resource queries: capture module JSON with register or -vvv, run the jq expression on a saved file, and confirm a valid name and non-empty canonical_facts.",
+ "questions": [
+  "How do I test my resource reporting jq expression before publishing?",
+  "How can I capture module output to test a jq query?",
+  "What should I check in the output of my resource query?"
+ ],
+ "answer_card": {
+  "title": "Test a resource query",
+  "answer_md": "1. Run a playbook with your module and capture output (`register` or `-vvv`).\n2. Save it and test:\n```bash\ncat module_output.json | jq '{\n  name: .instance.hw_name,\n  canonical_facts: { uuid: .instance.hw_uuid },\n  facts: { device_type: \"virtual_machine\" }\n}'\n```\n3. Check that `name` is a valid string and `canonical_facts` is non-empty.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_resource_reporting.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:07+00:00"
+}

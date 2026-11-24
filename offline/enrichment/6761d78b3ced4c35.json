@@ -1,0 +1,17 @@
+{
+  "chunk_id": "6761d78b3ced4c35",
+  "chunk_hash": "6761d78b3ced4c35",
+  "summary": "Shows that a when on include_tasks is evaluated only at include time, so all included tasks run. Conditions on import_playbook produce repetitive skipped output; group_by is often cleaner.",
+  "questions": [
+    "How do I apply a condition once to an included task file?",
+    "Can I put a when on import_playbook?",
+    "Is there a cleaner alternative to conditional imports for OS differences?"
+  ],
+  "answer_card": {
+    "title": "Using include_tasks for a one-time condition",
+    "answer_md": "```yaml\n- include_tasks: other_tasks.yml\n  when: x is not defined\n```\n\nThe condition is evaluated at include time only, so the included tasks all run.\n\nYou can also put conditions on `import_playbook` and other `import_*` statements, but you'll get a \"skipped\" message for every task on every non-matching host. The `group_by` module is often cleaner.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:03:26+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "5613f1b906c86ffa",
+  "chunk_hash": "5613f1b906c86ffa",
+  "summary": "Explains the label account_name in win_whoami: Medium means a limited token without admin rights, High means an elevated token, System means NT AUTHORITY\\System.",
+  "questions": [
+    "How do I read the label in win_whoami to know if I'm elevated?",
+    "What does Medium Mandatory Level mean for become on Windows?"
+  ],
+  "answer_card": {
+    "title": "Interpreting the win_whoami label",
+    "answer_md": "Check `label.account_name`:\n- **Medium**: elevation failed; limited token, no admin rights\n- **High**: elevated token; all the user's privileges available\n- **System**: running as `NT AUTHORITY\\System`, the highest level",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c8a1f72f32e030e3",
+ "chunk_hash": "c8a1f72f32e030e3",
+ "summary": "Galaxy role import, delete and setup need an API key from a Galaxy account: open Collections > API Token, load and copy it, and save it at GALAXY_TOKEN_PATH.",
+ "questions": [
+  "How do I get a Galaxy API token?",
+  "Where do I save my Galaxy token?",
+  "Why does ansible-galaxy role import ask for authentication?"
+ ],
+ "answer_card": {
+  "title": "Get a Galaxy API token",
+  "answer_md": "Create a Galaxy account, then:\n1. Click **Collections > API Token**.\n2. Click **Load Token** and copy it.\n3. Save it at the path set by `GALAXY_TOKEN_PATH`.\n\nThe token is needed for `import`, `delete` and `setup`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/dev_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

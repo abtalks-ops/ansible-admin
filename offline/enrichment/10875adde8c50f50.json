@@ -1,0 +1,15 @@
+{
+ "chunk_id": "10875adde8c50f50",
+ "chunk_hash": "10875adde8c50f50",
+ "summary": "ansible.builtin.last is the Jinja builtin filter returning the last item of a sequence.",
+ "questions": [
+  "How do I get the last element of a list in Ansible?"
+ ],
+ "answer_card": {
+  "title": "last filter",
+  "answer_md": "`{{ mylist | last }}` returns the last item of a sequence (Jinja builtin).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/last_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:45+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e6ffac3ea91d4ac5",
+ "chunk_hash": "e6ffac3ea91d4ac5",
+ "summary": "ansible-galaxy role import github_user github_repo imports a role using your API token from ansible.cfg or --token, and by default waits and shows progress until done.",
+ "questions": [
+  "How do I publish a role from GitHub to Galaxy?",
+  "How do I pass my Galaxy token on the command line?",
+  "What does a successful role import look like?"
+ ],
+ "answer_card": {
+  "title": "Import a role to Galaxy",
+  "answer_md": "Provide the token in `ansible.cfg` or with `--token`, then:\n```bash\nansible-galaxy role import github_user github_repo\n```\nIt waits for Galaxy to finish and prints progress (parsing `meta/main.yml`, README, tags as versions), ending with `Status SUCCESS`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/dev_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

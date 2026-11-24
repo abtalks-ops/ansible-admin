@@ -1,0 +1,17 @@
+{
+  "chunk_id": "4f75651d645858c9",
+  "chunk_hash": "4f75651d645858c9",
+  "summary": "Known issues in dellemc.openmanage for Ansible 10.7.0: idrac_diagnostics can't export via a SOCKS proxy to HTTP/HTTPS shares, idrac_firmware can't update from authenticated HTTP/HTTPS/FTP shares on iDRAC8, and ome_smart_fabric_uplink modifies an existing uplink when the same name is reused.",
+  "questions": [
+    "Can idrac_firmware update firmware from an authenticated share on iDRAC8?",
+    "Why did creating a fabric uplink overwrite my existing one?",
+    "Does idrac_diagnostics work through a SOCKS proxy?"
+  ],
+  "answer_card": {
+    "title": "dellemc.openmanage known issues (10.7.0)",
+    "answer_md": "- `idrac_diagnostics`: can't export to HTTP/HTTPS shares through a SOCKS proxy.\n- `idrac_firmware`: no firmware updates from HTTP, HTTPS or FTP shares with authentication on iDRAC8.\n- `ome_smart_fabric_uplink`: reusing an existing uplink name modifies that uplink instead of creating a new one.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "65401f279138de00",
+ "chunk_hash": "65401f279138de00",
+ "summary": "ansible-core 2.12: ANSIBLE_ASYNC_DIR under environment no longer sets the async directory, use the ansible_async_dir variable; and a new undef() template function creates undefined variables, optionally with a hint.",
+ "questions": [
+  "Setting ANSIBLE_ASYNC_DIR in environment doesn't change where async files go, why?",
+  "How do I set a custom async directory for a task?",
+  "How can I make a variable that must be overridden and fails with a clear message?",
+  "What does undef() do in templates?"
+ ],
+ "answer_card": {
+  "title": "Async dir and undef() in ansible-core 2.12",
+  "answer_md": "- Set the async directory with the **`ansible_async_dir`** variable, not `environment: ANSIBLE_ASYNC_DIR`:\n\n```yaml\n- dnf:\n    name: '*'\n    state: latest\n  async: 300\n  poll: 5\n  vars:\n    ansible_async_dir: /path/to/dir\n```\n\n- **`undef()`** creates an undefined value, with an optional hint:\n\n```yaml\nvars:\n  db_password: \"{{ undef(hint='You must override db_password') }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:24:01+00:00"
+}

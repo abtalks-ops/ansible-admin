@@ -1,0 +1,18 @@
+{
+  "chunk_id": "b77428164a358ba6",
+  "chunk_hash": "b77428164a358ba6",
+  "summary": "Connection plugins let Ansible reach target hosts and run tasks there, with one plugin per host at a time. Common ones are paramiko, native ssh and local. You can change the plugin with the connection keyword or write a custom one.",
+  "questions": [
+    "Which connection types does Ansible ship with?",
+    "How do I run a task on the control node instead of SSH?",
+    "Can a host use two connection plugins at once?",
+    "How do I switch the connection type for my tasks?"
+  ],
+  "answer_card": {
+    "title": "What connection plugins are",
+    "answer_md": "Connection plugins handle how Ansible talks to targets. Only one is used per host at a time. The most common are `ssh` (native), `paramiko` SSH and `local`. Change it with the `connection` keyword, or create a custom plugin.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/connection.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

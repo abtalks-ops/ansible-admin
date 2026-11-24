@@ -1,0 +1,16 @@
+{
+ "chunk_id": "caf6db52a06a7f0d",
+ "chunk_hash": "caf6db52a06a7f0d",
+ "summary": "The --controller and --target options are composite alternatives to --docker, --remote and --venv for more flexible setups; the shell command uses three platform-specific options instead of --target.",
+ "questions": [
+  "What are --controller and --target in ansible-test?",
+  "How do I run the controller and target in different environments with ansible-test?"
+ ],
+ "answer_card": {
+  "title": "Composite environment options",
+  "answer_md": "For setups the simple options can't express, use `--controller` and `--target` instead of `--docker`, `--remote` or `--venv`. With the `shell` command, `--target` is replaced by three platform-specific options. Run your command with `--help` for details.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_running_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

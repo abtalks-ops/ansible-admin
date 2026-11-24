@@ -1,0 +1,16 @@
+{
+  "chunk_id": "bcfec4620cb667ff",
+  "chunk_hash": "bcfec4620cb667ff",
+  "summary": "version_compare is the older name of the version test, comparing version strings with loose, strict, semver/semantic or pep440 rules.",
+  "questions": [
+    "Is version_compare still supported?",
+    "What's the difference between version and version_compare?"
+  ],
+  "answer_card": {
+    "title": "version_compare test",
+    "answer_md": "`version_compare` is the old name of `version`. Same schemes: `loose` (default), `strict`, `semver`/`semantic`, `pep440` (2.14+).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/version_compare_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:15:17+00:00"
+}

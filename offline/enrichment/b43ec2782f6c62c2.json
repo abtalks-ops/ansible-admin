@@ -1,0 +1,21 @@
+{
+  "chunk_id": "b43ec2782f6c62c2",
+  "chunk_hash": "b43ec2782f6c62c2",
+  "summary": "Lists the url lookup's options for TLS (ca_path, ciphers), redirects, caching, basic auth, headers, user agent, credentials, line splitting, timeout, unix sockets and unredirected headers.",
+  "questions": [
+    "How do I send custom HTTP headers with the url lookup?",
+    "How do I point the url lookup at a custom CA bundle?",
+    "How can I get the whole response as one string instead of a list of lines?",
+    "What is the default timeout for the url lookup and how do I change it?",
+    "How do I authenticate to a password-protected URL with the url lookup?",
+    "Can the url lookup connect over a unix socket?",
+    "How do I control redirect following in the url lookup?"
+  ],
+  "answer_card": {
+    "title": "url lookup options (part 1)",
+    "answer_md": "Key options:\n- `headers` (dict): HTTP request headers\n- `username` / `password`: HTTP auth; `force_basic_auth: true` to send basic auth upfront\n- `ca_path`: CA bundle path; `ciphers`: list of TLS ciphers (joined with `:`)\n- `follow_redirects`: `all`, `none`, `safe`, `urllib2` (default `urllib2`)\n- `force`: send `cache-control: no-cache` (default false)\n- `http_agent`: User-Agent (default `ansible-httpget`)\n- `split_lines` (default true): set false to get a single text blob\n- `timeout` (default 10 seconds)\n- `unix_socket`: connect via a unix socket\n- `unredirected_headers`: headers not to send on redirects",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/url_lookup.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

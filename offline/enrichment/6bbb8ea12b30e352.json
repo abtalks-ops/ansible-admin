@@ -1,0 +1,15 @@
+{
+  "chunk_id": "6bbb8ea12b30e352",
+  "chunk_hash": "6bbb8ea12b30e352",
+  "summary": "In community.hrobot, the robot inventory plugin's filters option was renamed to simple_filters, and the old name stops working in 2.0.0.",
+  "questions": [
+    "What do I rename filters to in the hrobot inventory?"
+  ],
+  "answer_card": {
+    "title": "hrobot inventory filters renamed",
+    "answer_md": "Rename `filters` to `simple_filters` in the community.hrobot robot inventory config. The old name stops working in 2.0.0.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:23:46+00:00"
+}

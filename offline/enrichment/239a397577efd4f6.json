@@ -1,0 +1,17 @@
+{
+ "chunk_id": "239a397577efd4f6",
+ "chunk_hash": "239a397577efd4f6",
+ "summary": "Declare check mode with supports_check_mode=True and check module.check_mode to avoid changes; otherwise check-mode runs are skipped with a 'does not support check mode' message.",
+ "questions": [
+  "How do I add check mode support to my module?",
+  "Why does my module get skipped in check mode?",
+  "How does a module know it's running in check mode?"
+ ],
+ "answer_card": {
+  "title": "Declare check mode support",
+  "answer_md": "```python\nmodule = AnsibleModule(argument_spec, supports_check_mode=True)\nif module.check_mode:\n    ...  # make no changes\n```\nWith the default `supports_check_mode=False`, the module exits in check mode with `skipped=True` and `remote module (<name>) does not support check mode`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:12:46+00:00"
+}

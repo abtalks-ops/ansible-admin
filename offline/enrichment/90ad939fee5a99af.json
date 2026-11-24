@@ -1,0 +1,20 @@
+{
+  "chunk_id": "90ad939fee5a99af",
+  "chunk_hash": "90ad939fee5a99af",
+  "summary": "apt module options for cache validity time, apt-get clean, installing a .deb file or URL, default release pinning, dpkg options, and failing instead of removing packages.",
+  "questions": [
+    "How do I only run apt-get update if the cache is older than an hour?",
+    "How do I install a local .deb file with Ansible?",
+    "Can Ansible install a .deb directly from a URL?",
+    "How do I pass dpkg force-confold options?",
+    "How do I make an apt task fail rather than remove conflicting packages?",
+    "How do I clear /var/cache/apt/archives with Ansible?"
+  ],
+  "answer_card": {
+    "title": "apt options: cache, .deb, dpkg",
+    "answer_md": "- `cache_valid_time` (seconds, default 0): update cache only if older; setting it implies `update_cache=yes`\n- `clean`: equivalent of `apt-get clean` (runs before install)\n- `deb`: path to a .deb on the remote; if it contains `://` it is downloaded first (needs `xz-utils`)\n- `default_release`: like `apt -t`, sets pin priorities\n- `dpkg_options` (default `force-confdef,force-confold`): comma-separated dpkg options\n- `fail_on_autoremove` (no): like `--no-remove`; fail instead of removing packages",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

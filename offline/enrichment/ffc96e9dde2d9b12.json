@@ -1,0 +1,15 @@
+{
+  "chunk_id": "ffc96e9dde2d9b12",
+  "chunk_hash": "ffc96e9dde2d9b12",
+  "summary": "Introduces the WinRM guide: Windows hosts use WinRM rather than SSH by default.",
+  "questions": [
+    "What protocol does Ansible use to connect to Windows hosts?"
+  ],
+  "answer_card": {
+    "title": "Windows hosts use WinRM",
+    "answer_md": "Unlike Linux/Unix hosts, which use SSH by default, Windows hosts are managed over **WinRM**.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

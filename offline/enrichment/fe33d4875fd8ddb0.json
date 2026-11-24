@@ -1,0 +1,16 @@
+{
+ "chunk_id": "fe33d4875fd8ddb0",
+ "chunk_hash": "fe33d4875fd8ddb0",
+ "summary": "theforeman.foreman activation_key deprecates content_view and lifecycle_environment in favor of content_view_environments.",
+ "questions": [
+  "How do I set the content view on a Foreman activation key now?",
+  "Is lifecycle_environment deprecated in activation_key?"
+ ],
+ "answer_card": {
+  "title": "activation_key content_view deprecated",
+  "answer_md": "In `theforeman.foreman.activation_key`, `content_view` and `lifecycle_environment` are deprecated. Use **`content_view_environments`** instead.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:08:59+00:00"
+}

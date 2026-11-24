@@ -1,0 +1,17 @@
+{
+  "chunk_id": "0cd9a6991329055a",
+  "chunk_hash": "0cd9a6991329055a",
+  "summary": "Explains to_json escapes non-ASCII by default and ensure_ascii=False preserves Unicode, and from_yaml_all (2.7+) parses multi-document YAML into a generator.",
+  "questions": [
+    "Why does to_json turn ü into \\u00fc?",
+    "How do I keep Unicode characters in JSON output?",
+    "How do I parse a YAML file with multiple documents?"
+  ],
+  "answer_card": {
+    "title": "Unicode in to_json and multi-document YAML",
+    "answer_md": "`to_json` / `to_nice_json` escape to ASCII (`'München'` becomes `'M\\u00fcnchen'`). Keep Unicode with:\n\n```jinja\n{{ 'München' | to_json(ensure_ascii=False) }}\n```\n\nFor multi-document YAML (2.7+):\n\n```yaml\nloop: '{{ result.stdout | from_yaml_all | list }}'\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:04:56+00:00"
+}

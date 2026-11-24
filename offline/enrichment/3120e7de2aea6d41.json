@@ -1,0 +1,15 @@
+{
+  "chunk_id": "3120e7de2aea6d41",
+  "chunk_hash": "3120e7de2aea6d41",
+  "summary": "In community.dns, the filters option of the hetzner_dns_records and hosttech_dns_records inventory plugins is renamed to simple_filters, and the old name stops working in 2.0.0.",
+  "questions": [
+    "Should I rename filters in my Hetzner DNS inventory config?"
+  ],
+  "answer_card": {
+    "title": "DNS inventory filters renamed",
+    "answer_md": "In the `hetzner_dns_records` and `hosttech_dns_records` inventory plugins, rename `filters` to `simple_filters`. The old name stops working.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:23:46+00:00"
+}

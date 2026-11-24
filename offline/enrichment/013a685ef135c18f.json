@@ -1,0 +1,15 @@
+{
+ "chunk_id": "013a685ef135c18f",
+ "chunk_hash": "013a685ef135c18f",
+ "summary": "Lists sanity tests available via ansible-test sanity --test for collections, also shown by --list-tests --allow-disabled, with extra tests for ansible-core.",
+ "questions": [
+  "How do I list all available sanity tests?"
+ ],
+ "answer_card": {
+  "title": "List sanity tests",
+  "answer_md": "```shell\nansible-test sanity --list-tests --allow-disabled\n```\nUse a name with `ansible-test sanity --test <name>`. ansible-core has some extra tests.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "chunk_id": "7557b2e7492ded89",
+  "chunk_hash": "7557b2e7492ded89",
+  "summary": "If no CA path is set, the default CA chain from the certifi Python package is used, though some Linux distros configure requests to use the system certificate store instead.",
+  "questions": [
+    "Which CA certificates does Ansible use for WinRM by default?",
+    "Does the WinRM plugin use my system trust store?"
+  ],
+  "answer_card": {
+    "title": "Default CA chain for WinRM",
+    "answer_md": "If no CA path variable is set, the CA bundle from the Python **certifi** package is used. Some Linux distributions configure the `requests` library (used by `psrp` and `winrm`) to use the **system certificate store** instead.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_winrm.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:00:25+00:00"
+}

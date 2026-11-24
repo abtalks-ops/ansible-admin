@@ -1,0 +1,11 @@
+{
+ "chunk_id": "2c28e98b96707934",
+ "chunk_hash": "2c28e98b96707934",
+ "summary": "Sample pyATS output for mgmt0 with admin state, counters, rates, duplex, encapsulation and IPv4 details.",
+ "questions": [
+  "What data does pyATS return for show interface?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

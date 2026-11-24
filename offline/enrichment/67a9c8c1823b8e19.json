@@ -1,0 +1,17 @@
+{
+ "chunk_id": "67a9c8c1823b8e19",
+ "chunk_hash": "67a9c8c1823b8e19",
+ "summary": "Ansible 12 is built on ansible-core 2.19, and the porting guide should be read together with the Ansible 12 changelog.",
+ "questions": [
+  "Which ansible-core version does Ansible 12 ship with?",
+  "What should I read before upgrading to Ansible 12?",
+  "Is Ansible 12 based on core 2.19?"
+ ],
+ "answer_card": {
+  "title": "Ansible 12 is based on ansible-core 2.19",
+  "answer_md": "Ansible 12 is built on **ansible-core 2.19**. Read the Ansible 12 porting guide alongside the Ansible 12 changelog to find the updates your content may need.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:45+00:00"
+}

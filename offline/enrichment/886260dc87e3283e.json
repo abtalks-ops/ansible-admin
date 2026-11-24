@@ -1,0 +1,16 @@
+{
+ "chunk_id": "886260dc87e3283e",
+ "chunk_hash": "886260dc87e3283e",
+ "summary": "Introduces a sample setup for automating a web service that organizes playbooks, roles, inventory and variable files by function, with tags for finer control.",
+ "questions": [
+  "How should I organize an Ansible project for a web service?",
+  "Is there a recommended example Ansible project structure?"
+ ],
+ "answer_card": {
+  "title": "Sample Ansible setup overview",
+  "answer_md": "The sample setup organizes playbooks, roles, inventory and variable files **by function**, and uses tags at play and task level for finer control. It is one flexible approach; adapt it to your needs.",
+  "source_url": "https://docs.ansible.com/ansible/latest/tips_tricks/sample_setup.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:14+00:00"
+}

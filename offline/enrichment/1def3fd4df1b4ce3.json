@@ -1,0 +1,16 @@
+{
+  "chunk_id": "1def3fd4df1b4ce3",
+  "chunk_hash": "1def3fd4df1b4ce3",
+  "summary": "The link test checks whether a path is an existing symlink on the controller.",
+  "questions": [
+    "How do I check that a local path is a symbolic link?",
+    "Does link test remote paths?"
+  ],
+  "answer_card": {
+    "title": "link test (controller paths)",
+    "answer_md": "`path is link` is true if the path is an existing symlink on the **controller**. Use `stat` for remote paths.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/link_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:13:49+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "14a9df617337b0b5",
+ "chunk_hash": "14a9df617337b0b5",
+ "summary": "Cisco IOS supports CLI over SSH via network_cli with keys or -u/-k, bastion access, and enable mode with become, become_method enable and become_password; output in stdout[0], local deprecated.",
+ "questions": [
+  "How do I use enable mode on Cisco IOS?",
+  "What connection should I use for Cisco IOS?"
+ ],
+ "answer_card": {
+  "title": "Cisco IOS connection options",
+  "answer_md": "- CLI over SSH: `ansible_connection: ansible.netcommon.network_cli`\n- Credentials: SSH keys/agent or `-u myuser -k`\n- Indirect access: bastion/jump host\n- Enable mode: `ansible_become: true`, `ansible_become_method: enable`, `ansible_become_password:`\n- Output: `stdout[0].`\n\n`ansible_connection: local` is deprecated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_ios.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

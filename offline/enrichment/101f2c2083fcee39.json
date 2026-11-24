@@ -1,0 +1,17 @@
+{
+ "chunk_id": "101f2c2083fcee39",
+ "chunk_hash": "101f2c2083fcee39",
+ "summary": "ansible.builtin and ansible.legacy are synthetic collections: builtin covers only plugins shipped with ansible-core, while legacy (the default for short names) also includes custom plugins from configured paths that can override builtins.",
+ "questions": [
+  "What's the difference between ansible.builtin.shell and shell?",
+  "What is ansible.legacy?",
+  "Can a local module override a builtin one?"
+ ],
+ "answer_card": {
+  "title": "ansible.builtin vs ansible.legacy",
+  "answer_md": "- **`ansible.builtin`**: only plugins shipped with ansible-core.\n- **`ansible.legacy`**: builtin **plus** custom plugins in configured/adjacent paths, which can override builtins of the same name.\n\nA short name like `shell` means `ansible.legacy.shell`. Use `ansible.builtin.shell` to be sure you get the core module.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

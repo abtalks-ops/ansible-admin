@@ -1,0 +1,19 @@
+{
+  "chunk_id": "8f07ca24d495fd10",
+  "chunk_hash": "8f07ca24d495fd10",
+  "summary": "Explains serial for updating a few hosts at a time and shows pre_tasks that disable Nagios alerts and remove the web server from HAProxy via delegate_to loops. Notes each serial batch acts as a full play, so a fully failed batch fails the run.",
+  "questions": [
+    "How do I update web servers one at a time in Ansible?",
+    "What does the serial keyword do?",
+    "How do I take a server out of the load balancer before updating it?",
+    "What happens if all hosts in a serial batch fail?",
+    "What are pre_tasks used for?"
+  ],
+  "answer_card": {
+    "title": "Rolling updates with serial and pre_tasks",
+    "answer_md": "```yaml\n- hosts: webservers\n  serial: 1        # e.g. 10 for 100 hosts\n  pre_tasks:\n  - nagios:\n      action: disable_alerts\n      host: \"{{ inventory_hostname }}\"\n      services: webserver\n    delegate_to: \"{{ item }}\"\n    loop: \"{{ groups.monitoring }}\"\n  - shell: echo \"disable server myapplb/{{ inventory_hostname }}\" | socat stdio /var/lib/haproxy/stats\n    delegate_to: \"{{ item }}\"\n    loop: \"{{ groups.lbservers }}\"\n```\n\nWithout `serial`, Ansible parallelizes up to `forks`. Each serial batch is a full play: if every host in a batch fails, the whole run fails (consider this with `max_fail_percentage`). `pre_tasks` run before roles.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/guide_rolling_upgrade.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

@@ -1,0 +1,16 @@
+{
+ "chunk_id": "40012e1136d18cce",
+ "chunk_hash": "40012e1136d18cce",
+ "summary": "Older releases could hide syntax errors such as a trailing comma in a conditional as a truthy result; ansible-core 2.19 reports 'Syntax error in expression: chunk after expression'.",
+ "questions": [
+  "What does 'Syntax error in expression: chunk after expression' mean?",
+  "Why does a trailing comma in my assert break after upgrading?"
+ ],
+ "answer_card": {
+  "title": "Trailing comma in a conditional is now a syntax error",
+  "answer_md": "Earlier versions could mask a syntax error as a truthy value:\n\n```yaml\n- assert:\n    that: 1 == 2,\n```\n\nansible-core 2.19 reports `Syntax error in expression: chunk after expression`. Remove the invalid comma after the expression.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:45+00:00"
+}

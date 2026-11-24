@@ -1,0 +1,15 @@
+{
+ "chunk_id": "6ddcc4886a3275dd",
+ "chunk_hash": "6ddcc4886a3275dd",
+ "summary": "A custom integration_config.yml tunes test parameters, and cloud tests run only when credentials are supplied per the cloud-config-*.template files.",
+ "questions": [
+  "How do I configure credentials for cloud integration tests?"
+ ],
+ "answer_card": {
+  "title": "integration_config.yml",
+  "answer_md": "Create your own `integration_config.yml` to tune parameters. Cloud tests run only with credentials; see the `cloud-config-*.template` files in `tests/integration/`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing_integration.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:21:46+00:00"
+}

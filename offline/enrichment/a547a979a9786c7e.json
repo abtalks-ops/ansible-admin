@@ -1,0 +1,16 @@
+{
+  "chunk_id": "a547a979a9786c7e",
+  "chunk_hash": "a547a979a9786c7e",
+  "summary": "Explains selecting variables, files or templates by fact: name files after the differentiating fact and choose them with a variable based on it, keeping playbooks free of nested conditionals.",
+  "questions": [
+    "How do I handle different package names across CentOS and Debian cleanly?",
+    "How do I pick a different template per OS without lots of when statements?"
+  ],
+  "answer_card": {
+    "title": "Selecting vars, files or templates by fact",
+    "answer_md": "1. Name your vars files, templates or files after the fact that differs (for example `RedHat.yml`, `Debian.yml`).\n2. Select the right one per host with a variable built from that fact.\n\nThis keeps variables separate from tasks and avoids nested conditionals.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:03:26+00:00"
+}

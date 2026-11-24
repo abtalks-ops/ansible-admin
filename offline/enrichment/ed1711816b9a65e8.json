@@ -1,0 +1,15 @@
+{
+ "chunk_id": "ed1711816b9a65e8",
+ "chunk_hash": "ed1711816b9a65e8",
+ "summary": "Google's featured snippets favor numbered steps, so add a numbered list near the top of pages where it fits.",
+ "questions": [
+  "How can my docs page show up as a Google featured snippet?"
+ ],
+ "answer_card": {
+  "title": "Numbered lists for featured snippets",
+  "answer_md": "Google builds featured snippets from numbered steps. Where it makes sense, put a numbered list (the procedure or a high-level overview) near the top of the page.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/search_hints.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

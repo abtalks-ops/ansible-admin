@@ -1,0 +1,16 @@
+{
+ "chunk_id": "5134efcde3a26fd7",
+ "chunk_hash": "5134efcde3a26fd7",
+ "summary": "Run cli_parse with the native parser on ip addr show; it needs gathered facts for ansible_distribution or an explicit template_path, and yields per-interface data like IP, mask, MTU and state.",
+ "questions": [
+  "Why can't cli_parse find my Linux template?",
+  "Do I need gather_facts for cli_parse on Linux?"
+ ],
+ "answer_card": {
+  "title": "Parse Linux output with cli_parse",
+  "answer_md": "```yaml\n- ansible.utils.cli_parse:\n    command: ip addr show\n    parser:\n      name: ansible.netcommon.native\n    set_fact: interfaces\n```\nThe template is located using `ansible_distribution`, so gather facts first, or set `parser.template_path`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

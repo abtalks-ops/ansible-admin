@@ -1,0 +1,18 @@
+{
+ "chunk_id": "da38ce3ff9537e5d",
+ "chunk_hash": "da38ce3ff9537e5d",
+ "summary": "Windows SSH authentication commonly uses keys, GSSAPI or passwords. Keys work for local and AD accounts without delegation, GSSAPI works only for AD accounts with delegation, passwords work for both with delegation, and keys or GSSAPI are recommended over passwords.",
+ "questions": [
+  "Which SSH authentication methods work for Windows hosts?",
+  "Can I use SSH keys with Active Directory accounts on Windows?",
+  "Which Windows SSH auth methods support credential delegation?",
+  "Should I use password auth for Windows SSH?"
+ ],
+ "answer_card": {
+  "title": "SSH authentication options for Windows",
+  "answer_md": "| Option | Local accounts | AD accounts | Credential delegation |\n|---|---|---|---|\n| Key | Yes | Yes | No |\n| GSSAPI | No | Yes | Yes |\n| Password | Yes | Yes | Yes |\n\nIn most cases use key or GSSAPI authentication rather than passwords.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_ssh.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

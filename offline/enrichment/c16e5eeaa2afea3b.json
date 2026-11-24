@@ -1,0 +1,11 @@
+{
+  "chunk_id": "c16e5eeaa2afea3b",
+  "chunk_hash": "c16e5eeaa2afea3b",
+  "summary": "community.vmware vmware_guest_tools_upgrade and vmware_vm_shell stopped using the deprecated guest.toolsStatus property.",
+  "questions": [
+    "Do vmware_vm_shell and vmware_guest_tools_upgrade still use guest.toolsStatus?"
+  ],
+  "answer_card": null,
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

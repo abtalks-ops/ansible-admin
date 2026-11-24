@@ -1,0 +1,18 @@
+{
+ "chunk_id": "87fa1f23def2ede1",
+ "chunk_hash": "87fa1f23def2ede1",
+ "summary": "Explains the difference between plugins, which extend core features and mostly run on the control node, and modules, which are standalone scripts run on targets that exchange JSON and can be written in any language.",
+ "questions": [
+  "What's the difference between an Ansible module and a plugin?",
+  "Where do plugins run versus modules?",
+  "Do modules have to be written in Python?",
+  "How does a module return data to Ansible?"
+ ],
+ "answer_card": {
+  "title": "Modules vs plugins",
+  "answer_md": "- **Plugins** extend core functionality (data transforms, logging, inventory, connections). Most run on the control node inside the `ansible` process and must be Python.\n- **Modules** are plugins that run tasks on a target in their own process. They take arguments and print a JSON result to stdout. They can be written in **any language**, though Ansible ships Python and PowerShell modules.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_locally.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

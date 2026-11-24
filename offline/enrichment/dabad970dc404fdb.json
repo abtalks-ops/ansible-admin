@@ -1,0 +1,19 @@
+{
+  "chunk_id": "dabad970dc404fdb",
+  "chunk_hash": "dabad970dc404fdb",
+  "summary": "Filters work anywhere templating works, including plays, vars files and templates. Use a test instead when you always want a boolean. A filter follows a | and takes the left side as input. It accepts positional and named arguments, with positional ones first. In the docs the _input option is the piped value.",
+  "questions": [
+    "How do I pass named parameters to a filter like to_yaml?",
+    "Should I use a filter or a test to get true or false?",
+    "What order do positional and keyword filter arguments go in?",
+    "What does _input mean in filter documentation?",
+    "Can I use filters in a vars file?"
+  ],
+  "answer_card": {
+    "title": "Using filters and passing arguments",
+    "answer_md": "Filters work anywhere templating does: plays, vars files and templates. The value left of `|` is the input. If you always want a boolean, use a test instead.\n\nArguments can be positional, named, or both (positional first):\n\n```yaml+jinja\npositional: \"{{ (x == 32) | ternary('x is 32', 'x is not 32') }}\"\nnamed: \"{{ some_variable | to_yaml(indent=8, width=1337) }}\"\nboth: \"{{ some_variable | ternary('true value', 'false value', none_val='NULL') }}\"\n```\n\nIn filter docs, `_input` is the piped-in value, and the `positional:` field shows positional order.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/filter.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:18:30+00:00"
+}

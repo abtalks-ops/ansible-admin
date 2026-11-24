@@ -1,0 +1,16 @@
+{
+ "chunk_id": "4d69bd4a15a8614e",
+ "chunk_hash": "4d69bd4a15a8614e",
+ "summary": "A custom cli_parser plugin subclasses CliParserBase, sets template options, and implements parse() returning a dict with errors or parsed data.",
+ "questions": [
+  "How do I write my own parser for cli_parse?",
+  "What should a cli_parser's parse method return?"
+ ],
+ "answer_card": {
+  "title": "Write a custom cli_parser plugin",
+  "answer_md": "```python\nfrom ansible_collections.ansible.netcommon.plugins.module_utils.cli_parser.cli_parserbase import CliParserBase\n\nclass CliParser(CliParserBase):\n    DEFAULT_TEMPLATE_EXTENSION = \"txt\"\n    PROVIDE_TEMPLATE_CONTENTS = True\n\n    def parse(self, *_args, **kwargs):\n        template_contents = kwargs[\"template_contents\"]\n        text = self._task_args.get(\"text\")\n        try:\n            parsed = myparser(text, template_contents)\n        except Exception as exc:\n            return {\"errors\": [f\"Custom parser returned an error while parsing. Error: {to_native(exc)}\"]}\n        return {\"parsed\": parsed}\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_plugins_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

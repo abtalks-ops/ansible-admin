@@ -1,0 +1,15 @@
+{
+ "chunk_id": "f6b3abfcff61c607",
+ "chunk_hash": "f6b3abfcff61c607",
+ "summary": "Example: 'test2' | checksum produces 109f4b3c50d7b0df729d299bc6f8e9ef9066971f.",
+ "questions": [
+  "What does a checksum filter example look like?"
+ ],
+ "answer_card": {
+  "title": "checksum example",
+  "answer_md": "```yaml\ncsum: \"{{ 'test2' | checksum }}\"\n# => \"109f4b3c50d7b0df729d299bc6f8e9ef9066971f\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/checksum_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:07:25+00:00"
+}

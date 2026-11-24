@@ -1,0 +1,16 @@
+{
+  "chunk_id": "7465ad33e647833f",
+  "chunk_hash": "7465ad33e647833f",
+  "summary": "wait_for_connection options: connect_timeout (5), delay (0), sleep (1) and timeout (600 seconds).",
+  "questions": [
+    "How long does wait_for_connection wait by default?",
+    "How do I poll less often with wait_for_connection?"
+  ],
+  "answer_card": {
+    "title": "wait_for_connection parameters",
+    "answer_md": "- `timeout` (600s)\n- `delay` (0), `sleep` (1s), `connect_timeout` (5s)",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/wait_for_connection_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:27+00:00"
+}

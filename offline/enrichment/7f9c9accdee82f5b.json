@@ -1,0 +1,18 @@
+{
+ "chunk_id": "7f9c9accdee82f5b",
+ "chunk_hash": "7f9c9accdee82f5b",
+ "summary": "Tips for cross-platform PowerShell modules: use $IsWindows, $IsLinux, $IsMacOS, $IsCoreCLR or $PSVersionTable checks (defining $IsWindows for 5.1), and avoid Windows-only cmdlets like Get-WmiObject. Use .NET APIs supported on target platforms, test on multiple platforms and document requirements.",
+ "questions": [
+  "How do I write a PowerShell module that works on both Windows and Linux?",
+  "How can my module tell if it's running on PowerShell 5.1 or 7?",
+  "Why is $IsWindows undefined in Windows PowerShell 5.1?",
+  "Which cmdlets should I avoid in cross-platform modules?"
+ ],
+ "answer_card": {
+  "title": "Writing cross-platform PowerShell modules",
+  "answer_md": "**Platform checks:**\n\n```powershell\n# $IsWindows doesn't exist in 5.1, so define it\nif (-not (Get-Variable -Name IsWindows -ErrorAction Ignore)) {\n    $IsWindows = $true\n}\n\nif ($IsWindows) { } elseif ($IsLinux) { } elseif ($IsMacOS) { }\n\nif ($IsCoreCLR) {\n    # PowerShell 7\n} else {\n    # Windows PowerShell 5.1\n}\n\nif ($PSVersionTable.PSVersion -lt '6.0') {\n    # Windows PowerShell 5.1\n}\n```\n\n**Other tips:**\n- Avoid Windows-only cmdlets like `Get-WmiObject` and `Get-ComputerInfo`; use cross-platform alternatives.\n- Rely on .NET APIs supported on your target platforms.\n- Test on multiple platforms and document platform requirements.\n- Use platform checks for platform-specific code paths.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_pwsh.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

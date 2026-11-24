@@ -1,0 +1,17 @@
+{
+  "chunk_id": "03700b26caf094b7",
+  "chunk_hash": "03700b26caf094b7",
+  "summary": "Shows listing multiple when conditions as an implicit AND, casting string facts with int or float for numeric comparisons, and storing a fact with set_fact to use in later conditions.",
+  "questions": [
+    "How do I require several conditions to all be true?",
+    "How do I compare a fact numerically if it's a string?",
+    "Can I store a fact in a variable and use it in a when?"
+  ],
+  "answer_card": {
+    "title": "AND conditions and numeric comparisons",
+    "answer_md": "A list means all must be true:\n\n```yaml\nwhen:\n  - ansible_facts['distribution'] == \"CentOS\"\n  - ansible_facts['distribution_major_version'] == \"6\"\n```\n\nCast strings for math:\n\n```yaml\nwhen: ansible_facts['os_family'] == \"RedHat\" and ansible_facts['lsb']['major_release'] | int >= 6\n```\n\nOr store with `set_fact` (`temperature: \"{{ ansible_facts['cpu_temperature'] }}\"`) and test `when: temperature | float > 90`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:59+00:00"
+}

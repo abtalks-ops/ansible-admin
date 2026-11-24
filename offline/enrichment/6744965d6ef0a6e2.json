@@ -1,0 +1,15 @@
+{
+  "chunk_id": "6744965d6ef0a6e2",
+  "chunk_hash": "6744965d6ef0a6e2",
+  "summary": "service_facts returns ansible_facts with service information.",
+  "questions": [
+    "What does service_facts return?"
+  ],
+  "answer_card": {
+    "title": "service_facts return value",
+    "answer_md": "Returns `ansible_facts` (with `services`).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_facts_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

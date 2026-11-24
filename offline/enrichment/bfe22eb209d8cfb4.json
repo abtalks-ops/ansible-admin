@@ -1,0 +1,15 @@
+{
+ "chunk_id": "bfe22eb209d8cfb4",
+ "chunk_hash": "bfe22eb209d8cfb4",
+ "summary": "In vyos.vyos, VyOS 1.3 facility protocol and facility level settings are incompatible; only one is set and level takes priority.",
+ "questions": [
+  "Can I set both facility protocol and level for VyOS 1.3 logging in Ansible?"
+ ],
+ "answer_card": {
+  "title": "vyos 1.3 logging facility limitation",
+  "answer_md": "For VyOS 1.3, facility protocol and facility level are not compatible in `vyos.vyos`. Only one is set, and **level takes priority**.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:35+00:00"
+}

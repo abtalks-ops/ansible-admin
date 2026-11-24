@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4bcd54924553de0f",
+ "chunk_hash": "4bcd54924553de0f",
+ "summary": "Patterns only match what's in inventory; unknown hosts cause 'Could not match supplied host pattern' warnings, and aliased hosts must be targeted by alias, not their ansible_host IP.",
+ "questions": [
+  "Why do I get Could not match supplied host pattern?",
+  "Can I target a host by its IP if inventory uses an alias?",
+  "Why does Ansible say only implicit localhost is available?"
+ ],
+ "answer_card": {
+  "title": "Pattern limitations",
+  "answer_md": "Patterns can only target hosts and groups in your inventory. Otherwise you'll see:\n```text\n[WARNING]: Could not match supplied host pattern, ignoring: *.not_in_inventory.com\n```\nIf a host is defined by alias (`host1` with `ansible_host: 127.0.0.2`), you must use `host1`; using `127.0.0.2` gives the same warning.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_patterns.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

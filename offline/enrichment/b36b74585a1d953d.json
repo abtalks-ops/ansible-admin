@@ -1,0 +1,19 @@
+{
+  "chunk_id": "b36b74585a1d953d",
+  "chunk_hash": "b36b74585a1d953d",
+  "summary": "Custom vars plugins go in a vars_plugins directory next to the play, inside a role or in a configured path, but plays and roles load too late for inventory-time plugins. Most are disabled by default except host_group_vars. Enable them with vars_plugins_enabled or ANSIBLE_VARS_ENABLED. Collection vars plugins (2.10+) must be enabled explicitly by FQCN.",
+  "questions": [
+    "How do I enable a vars plugin from a collection?",
+    "Why doesn't my vars plugin in a role run during inventory loading?",
+    "Which vars plugins are enabled by default?",
+    "Which environment variable lists the enabled vars plugins?",
+    "Do I need to keep host_group_vars in vars_plugins_enabled?"
+  ],
+  "answer_card": {
+    "title": "Enabling vars plugins",
+    "answer_md": "Put custom vars plugins in `vars_plugins/` next to your play, in a role, or in a configured directory. Plugins that must run while inventory builds can't live in a play or role, because those load later.\n\nOnly `host_group_vars` is on by default. Enable others in `ansible.cfg` (or with `ANSIBLE_VARS_ENABLED`). Collection plugins need the FQCN:\n\n```ini\n[defaults]\nvars_plugins_enabled = host_group_vars,namespace.collection_name.vars_plugin_name\n```\n\nKeep `host_group_vars` in the list, or `host_vars`/`group_vars` stop loading.",
+    "source_url": "https://docs.ansible.com/ansible/latest/plugins/vars.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:21:03+00:00"
+}

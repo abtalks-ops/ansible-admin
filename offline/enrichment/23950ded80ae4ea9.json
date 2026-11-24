@@ -1,0 +1,18 @@
+{
+  "chunk_id": "23950ded80ae4ea9",
+  "chunk_hash": "23950ded80ae4ea9",
+  "summary": "Ansible-core deprecations: old-style vars plugins using get_host_vars/get_group_vars (use BaseVarsPlugin.get_vars), the required parameter of get_bin_path, convenience imports from ansible.module_utils.basic such as get_exception, PY2/PY3 and iteritems, role entrypoint attributes in ansible-doc (from 2.20), and global paramiko config constants.",
+  "questions": [
+    "How should I update an old vars plugin that uses get_host_vars?",
+    "Which imports from ansible.module_utils.basic are deprecated?",
+    "Is the required argument of get_bin_path deprecated?",
+    "Do I need to change my paramiko settings?"
+  ],
+  "answer_card": {
+    "title": "ansible-core deprecations in Ansible 10",
+    "answer_md": "- Vars plugins with `get_host_vars` / `get_group_vars` are deprecated. Inherit from `BaseVarsPlugin` and implement `get_vars`.\n- `get_bin_path(required=...)` is deprecated.\n- Importing helpers like `get_exception`, `literal_eval`, `PY2`, `PY3`, `iteritems`, `string_types` or `shlex_quote` from `ansible.module_utils.basic` is deprecated.\n- Role entrypoint attributes won't be shown in ansible-doc from core 2.20.\n- Paramiko global config constants are deprecated. Users don't need to change anything, but plugin authors should use `get_option()`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:23:46+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "chunk_id": "4eaca156660c94a7",
+  "chunk_hash": "4eaca156660c94a7",
+  "summary": "Examples of shell: redirecting output, chdir and creates via args, cmd with pipes, using bash for non-POSIX features, quoting variables, and running an expect script delegated to localhost.",
+  "questions": [
+    "How do I pipe commands with the shell module?",
+    "How do I run an expect script inline with shell?",
+    "How do I safely pass a filename variable to shell?",
+    "How do I make a shell command idempotent with creates?"
+  ],
+  "answer_card": {
+    "title": "shell examples",
+    "answer_md": "```yaml\n- ansible.builtin.shell: somescript.sh >> somelog.txt\n  args:\n    chdir: somedir/\n    creates: somelog.txt\n- ansible.builtin.shell:\n    cmd: ls -l | grep log\n    chdir: somedir/\n- ansible.builtin.shell: cat < /tmp/*txt\n  args:\n    executable: /bin/bash\n- ansible.builtin.shell: cat {{ myfile|quote }}\n```\nInline expect: pass the script as a block and set `executable: /usr/bin/expect`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "bc971fef5be79e4b",
+  "chunk_hash": "bc971fef5be79e4b",
+  "summary": "dnf options: security-only updates, skip_broken, sslverify, state semantics, update_cache, update_only for upgrading installed packages, and use_backend choice.",
+  "questions": [
+    "How do I apply only security updates with dnf?",
+    "How do I update packages only if they're already installed?",
+    "What's the default state of the dnf module?",
+    "How do I force a metadata refresh?",
+    "How do I skip packages with broken deps?"
+  ],
+  "answer_card": {
+    "title": "dnf parameters (part 4)",
+    "answer_md": "- `security` (no): with `latest`, only security updates\n- `update_only` (no): with `latest`, update installed packages only\n- `state`: `present`/`installed`, `latest`, `absent`/`removed`; default acts as `present` (or `absent` with `autoremove`)\n- `update_cache` (alias `expire-cache`)\n- `skip_broken` (no)\n- `sslverify` (yes): false for self-signed repos\n- `use_backend`: `auto`, `dnf`, `dnf4`, `dnf5`, `yum`, `yum4`",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:01:07+00:00"
+}

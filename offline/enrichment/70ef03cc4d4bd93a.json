@@ -1,0 +1,16 @@
+{
+ "chunk_id": "70ef03cc4d4bd93a",
+ "chunk_hash": "70ef03cc4d4bd93a",
+ "summary": "Use active voice rather than passive, and avoid future tense, because readers use the docs while they are working on the system.",
+ "questions": [
+  "Why should docs avoid 'will display'?",
+  "How do I rewrite a passive sentence in docs?"
+ ],
+ "answer_card": {
+  "title": "Active voice",
+  "answer_md": "Write \"Start Linuxconf by typing...\" not \"Linuxconf can be started by typing...\". Write \"The screen displays\" not \"The screen will display\", because readers consult docs *while* using the system.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/voice_style.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:19+00:00"
+}

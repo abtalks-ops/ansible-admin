@@ -1,0 +1,16 @@
+{
+ "chunk_id": "07b21d29b73e8f8e",
+ "chunk_hash": "07b21d29b73e8f8e",
+ "summary": "Tests that can't run in CI get the unsupported alias from their contributor; run them with --allow-unsupported or an unsupported/ prefix.",
+ "questions": [
+  "How do I mark a test that can't run in CI?",
+  "How do I run an unsupported integration test locally?"
+ ],
+ "answer_card": {
+  "title": "Unsupported tests",
+  "answer_md": "Mark with `unsupported` (by the contributor) when simulators or cloud plugins can't make it CI-runnable. Run with `--allow-unsupported` or prefix `unsupported/`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/integration-aliases.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

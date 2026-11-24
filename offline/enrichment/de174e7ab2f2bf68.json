@@ -1,0 +1,17 @@
+{
+  "chunk_id": "de174e7ab2f2bf68",
+  "chunk_hash": "de174e7ab2f2bf68",
+  "summary": "Shows the register_secret filter for registering your own strings (inline with register projections), registering lists with map, and validation_action warn or ignore for empty or non-string values.",
+  "questions": [
+    "How do I mask an API token I fetched in a playbook?",
+    "How do I register a list of passwords as secrets?",
+    "Why does register_secret fail on an empty value?"
+  ],
+  "answer_card": {
+    "title": "Registering your own secrets",
+    "answer_md": "```yaml\n- ansible.builtin.uri:\n    url: https://example.com/token\n    return_content: true\n  register:\n    api_token: _task.result.json.token | register_secret\n  no_log: true\n- ansible.builtin.debug:\n    msg: \"Using token {{ api_token }}\"   # prints $REDACTED$\n```\n\nLists: `\"{{ raw_passwords | map('register_secret') | list }}\"`.\n\nNon-strings or empty values raise an error by default; use `register_secret(validation_action='ignore')` or `'warn'`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_secret_masking.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:59+00:00"
+}

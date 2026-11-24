@@ -1,0 +1,16 @@
+{
+  "chunk_id": "330426ff1d6a2953",
+  "chunk_hash": "330426ff1d6a2953",
+  "summary": "replace options group and mode, with guidance to quote octal modes.",
+  "questions": [
+    "How do I set group ownership with replace?",
+    "How do I set file mode with replace?"
+  ],
+  "answer_card": {
+    "title": "replace group and mode",
+    "answer_md": "- `group`\n- `mode`: quote octal (`'0644'`) or symbolic",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/replace_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:07:27+00:00"
+}

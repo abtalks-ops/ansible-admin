@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4de2125c446f3622",
+ "chunk_hash": "4de2125c446f3622",
+ "summary": "To cache inventory, add the inventory_cache doc fragment and Cacheable base class, load the cache plugin (automatic with _read_config_data, otherwise load_cache_plugin), and get a unique key with get_cache_key.",
+ "questions": [
+  "How do I add caching to my inventory plugin?",
+  "Do I need to call load_cache_plugin myself?",
+  "How do I get a cache key for my inventory source?"
+ ],
+ "answer_card": {
+  "title": "Enable inventory caching",
+  "answer_md": "1. Add `extends_documentation_fragment: [inventory_cache]` and the `Cacheable` base class.\n2. Load the cache: done inside `_read_config_data`; otherwise call `self.load_cache_plugin()`.\n3. Get a key: `cache_key = self.get_cache_key(path)`.\n\n`get_cache_key` gives one key per plugin+source; avoid designs needing multiple cache entries per source.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

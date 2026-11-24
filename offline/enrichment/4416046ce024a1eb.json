@@ -1,0 +1,16 @@
+{
+ "chunk_id": "4416046ce024a1eb",
+ "chunk_hash": "4416046ce024a1eb",
+ "summary": "Example vars plugin returning a value wrapped with wrap_var so Ansible treats it as unsafe and doesn't template it, with a link to core vars plugin source.",
+ "questions": [
+  "How do I return a value from a vars plugin that shouldn't be templated?",
+  "What does wrap_var do in a vars plugin?"
+ ],
+ "answer_card": {
+  "title": "Return unsafe values from a vars plugin",
+  "answer_md": "```python\nfrom ansible.plugins.vars import BaseVarsPlugin\nfrom ansible.utils.unsafe_proxy import wrap_var\n\nclass VarsPlugin(BaseVarsPlugin):\n    def get_vars(self, loader, path, entities):\n        return dict(something_unsafe=wrap_var(\"{{ SOMETHING_UNSAFE }}\"))\n```\n`wrap_var` marks the value unsafe so Jinja2 syntax in it isn't evaluated.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:32+00:00"
+}

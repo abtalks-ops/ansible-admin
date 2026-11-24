@@ -1,0 +1,15 @@
+{
+ "chunk_id": "327e784ed883a498",
+ "chunk_hash": "327e784ed883a498",
+ "summary": "Files can be excluded from a collection build with build_ignore or manifest directives in galaxy.yml.",
+ "questions": [
+  "How do I keep certain files out of my collection tarball?"
+ ],
+ "answer_card": {
+  "title": "Excluding files from a collection build",
+  "answer_md": "Use either `build_ignore` or `manifest` directives in `galaxy.yml`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_distributing.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:00:43+00:00"
+}

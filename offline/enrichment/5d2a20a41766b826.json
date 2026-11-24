@@ -1,0 +1,19 @@
+{
+  "chunk_id": "5d2a20a41766b826",
+  "chunk_hash": "5d2a20a41766b826",
+  "summary": "The expect module runs a command and answers its interactive prompts. It doesn't use a shell unless you invoke one, uses a 2000-byte non-multiline search window, and is for simple cases only.",
+  "questions": [
+    "How do I answer interactive prompts from a command in Ansible?",
+    "Why don't pipes or $HOME work in my expect command?",
+    "How do I do a case-insensitive prompt match with expect?",
+    "What should I use for complex expect scripts?",
+    "How do I handle non-UTF-8 output with expect?"
+  ],
+  "answer_card": {
+    "title": "Answer prompts with the expect module",
+    "answer_md": "`ansible.builtin.expect` runs a command and responds to prompts.\n- No shell: `$HOME`, `<`, `>`, `|`, `&` don't work. Use `/bin/bash -c \"cmd | grep x\"` if needed.\n- `(?i)` prefix for case-insensitive; `(?m)^pattern` for start-of-line.\n- pexpect search window is 2000 bytes, no multiline match.\n- For complex cases, use expect code via `shell` or `script`.\n- Non-UTF-8 output: encode it, e.g. pipe through `base64`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/expect_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:02:40+00:00"
+}

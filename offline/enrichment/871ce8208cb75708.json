@@ -1,0 +1,16 @@
+{
+  "chunk_id": "871ce8208cb75708",
+  "chunk_hash": "871ce8208cb75708",
+  "summary": "The equalto test is Jinja's builtin equivalent of a == b, often used with selectattr.",
+  "questions": [
+    "How do I filter a list of dicts where a key equals a value?",
+    "What does equalto do?"
+  ],
+  "answer_card": {
+    "title": "equalto test",
+    "answer_md": "`a is equalto(b)` means `a == b`. Common use: `items | selectattr('state', 'equalto', 'running')`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/equalto_test.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:12:13+00:00"
+}

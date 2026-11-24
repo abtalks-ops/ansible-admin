@@ -1,0 +1,18 @@
+{
+ "chunk_id": "660b63e46c1044af",
+ "chunk_hash": "660b63e46c1044af",
+ "summary": "Module security rules: avoid shell input, check return codes, use module.run_command (with use_unsafe_shell=True and quoting if a shell is unavoidable), use fetch_url/open_url for HTTPS, and mark secrets no_log; since ansible-core 2.22 no_log values are kept in results but redacted in output.",
+ "questions": [
+  "Should I use subprocess in my Ansible module?",
+  "How do I safely run a shell command from a module?",
+  "What should I use to fetch URLs in a module?",
+  "How does no_log behave in ansible-core 2.22 and later?"
+ ],
+ "answer_card": {
+  "title": "Module security",
+  "answer_md": "- Use `module.run_command`, never `subprocess`, `Popen` or `os.system`. Always check return codes.\n- Avoid the shell; if needed, pass `use_unsafe_shell=True` and quote user input with `pipes.quote(x)`.\n- Fetch URLs with `fetch_url`/`open_url` from `ansible.module_utils.urls`, not `urllib2` (no TLS verification).\n- Mark secrets `no_log=True`. Since **ansible-core 2.22** the value stays in the result but is redacted in output; earlier versions redact it in the result itself.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_best_practices.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:48+00:00"
+}

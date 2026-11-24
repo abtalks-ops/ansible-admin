@@ -1,0 +1,18 @@
+{
+  "chunk_id": "d2aa221d7e46aea7",
+  "chunk_hash": "d2aa221d7e46aea7",
+  "summary": "Shows playbook examples installing and removing 7-Zip with win_chocolatey, win_package, and win_command (with a win_reg_stat check). Notes that installers needing credential delegation or WinRM-restricted components should be run with become.",
+  "questions": [
+    "Can you show an example of installing 7-Zip on Windows with Ansible?",
+    "How do I make a win_command msiexec install idempotent?",
+    "My SQL Server or Office installer fails over WinRM, how do I fix it?",
+    "How do I uninstall a package with win_chocolatey?"
+  ],
+  "answer_card": {
+    "title": "Installing 7-Zip three ways, and using become for tricky installers",
+    "answer_md": "```yaml\n- win_chocolatey:\n    name: 7zip\n    state: present   # or absent\n\n- win_get_url:\n    url: https://www.7-zip.org/a/7z1701-x64.msi\n    dest: C:\\temp\\7z.msi\n- win_package:\n    path: C:\\temp\\7z.msi\n    state: present\n```\n\nWith `win_command`, check the uninstall registry key with `win_reg_stat` first and run `msiexec.exe /i ... /qn /norestart` only `when: 7zip_installed.exists == false`.\n\nInstallers like **Microsoft Office or SQL Server** that need credential delegation or WinRM-restricted components should be run with **`become`**, so the installer runs as if run interactively.",
+    "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:58:54+00:00"
+}

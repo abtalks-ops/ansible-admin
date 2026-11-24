@@ -1,0 +1,19 @@
+{
+ "chunk_id": "4cd12bf567e19a93",
+ "chunk_hash": "4cd12bf567e19a93",
+ "summary": "ansible-core 2.21 deprecations: get_all_subclasses, get_platform and load_platform_subclass in module_utils.basic, PluginLoader aliases, module_utils.six, apt_key and apt_repository (use deb822_repository), connection attributes has_native_async/always_pipeline_modules, and rc-based failure inference.",
+ "questions": [
+  "Is apt_repository deprecated?",
+  "What replaces apt_key in Ansible?",
+  "Is ansible.module_utils.six deprecated?",
+  "What should I use instead of get_platform()?",
+  "How should connection plugins customize pipelining now?"
+ ],
+ "answer_card": {
+  "title": "ansible-core 2.21 deprecations",
+  "answer_md": "- `module_utils.basic`: `get_all_subclasses()` → `module_utils.common._utils.get_all_subclasses()`; `get_platform()` → `platform.system()`; `load_platform_subclass()` → `common.sys_info.get_platform_subclass()` (all removed in 2.24).\n- `PluginLoader.aliases` deprecated; define aliases with `redirect` in `meta/runtime.yml`.\n- `ansible.module_utils.six` deprecated, removal planned in 2.24.\n- **`apt_key` and `apt_repository` deprecated** in favor of **`deb822_repository`**.\n- Connection attributes `has_native_async` and `always_pipeline_modules` soft-deprecated; override `is_pipelining_enabled(self, wrap_async=False)`.\n- Task failure inferred from non-zero `rc` without `failed` will be deprecated in 2.22; set `failed` explicitly.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:42+00:00"
+}

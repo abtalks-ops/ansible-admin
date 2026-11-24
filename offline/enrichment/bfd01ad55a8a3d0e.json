@@ -1,0 +1,16 @@
+{
+  "chunk_id": "bfd01ad55a8a3d0e",
+  "chunk_hash": "bfd01ad55a8a3d0e",
+  "summary": "Become methods can't be chained; you can't use sudo /bin/su -, you need direct sudo or su rights to the target user.",
+  "questions": [
+    "Can I use sudo su - as my become method?",
+    "Can I chain sudo and su in Ansible?"
+  ],
+  "answer_card": {
+    "title": "Only one become method per host",
+    "answer_md": "Methods can't be chained. You can't do `sudo /bin/su -`; you need permission to run as the target user directly with sudo, or to `su` to it directly (same for pbrun, pfexec, etc.).",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_privilege_escalation.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:11:26+00:00"
+}

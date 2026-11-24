@@ -1,0 +1,16 @@
+{
+  "chunk_id": "05b81775ae32e123",
+  "chunk_hash": "05b81775ae32e123",
+  "summary": "community.vmware deprecates vmware_cluster, vmware_cluster_dpm, vmware_cluster_drs, vmware_cluster_drs_recommendations and vmware_cluster_vcls for removal in 6.0.0.",
+  "questions": [
+    "Which vmware_cluster* modules are deprecated?",
+    "When will vmware_cluster_drs be removed?"
+  ],
+  "answer_card": {
+    "title": "vmware_cluster module deprecations",
+    "answer_md": "`vmware_cluster`, `vmware_cluster_dpm`, `vmware_cluster_drs`, `vmware_cluster_drs_recommendations` and `vmware_cluster_vcls` are deprecated and will be removed in community.vmware 6.0.0.",
+    "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_11.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:27:34+00:00"
+}

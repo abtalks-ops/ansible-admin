@@ -1,0 +1,18 @@
+{
+  "chunk_id": "e2209c647d53ff8f",
+  "chunk_hash": "e2209c647d53ff8f",
+  "summary": "The user module manages accounts and attributes using platform tools: useradd/usermod/userdel generally, dscl on macOS, pw on FreeBSD, and BusyBox adduser/deluser. Windows uses win_user.",
+  "questions": [
+    "How do I create a Linux user with Ansible?",
+    "What commands does the user module use under the hood?",
+    "How are users managed on macOS by Ansible?",
+    "How do I manage Windows users?"
+  ],
+  "answer_card": {
+    "title": "Manage user accounts",
+    "answer_md": "`ansible.builtin.user` manages accounts using:\n- Linux: `useradd`/`usermod`/`userdel`\n- macOS: `dscl`, `dseditgroup`\n- FreeBSD: `pw`, `chpass`\n- BusyBox: `adduser`, `chpasswd`, `deluser` (`move_home` needs `shadow`)\n\nShadow files are backed up. Windows: `ansible.windows.win_user`.",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

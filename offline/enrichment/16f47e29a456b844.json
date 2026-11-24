@@ -1,0 +1,17 @@
+{
+ "chunk_id": "16f47e29a456b844",
+ "chunk_hash": "16f47e29a456b844",
+ "summary": "Ansible can be installed in a virtualenv on the control node with pip; libraries not on pip such as SELinux bindings need --system-site-packages or must be copied into the virtualenv manually.",
+ "questions": [
+  "How do I install Ansible in a virtualenv?",
+  "SELinux bindings aren't available in my Ansible venv, how do I fix it?",
+  "What does --system-site-packages do for Ansible?"
+ ],
+ "answer_card": {
+  "title": "Install Ansible in a virtualenv",
+  "answer_md": "```bash\nvirtualenv -p python3 ansible\nsource ./ansible/bin/activate\npip install ansible\n```\n\nFor libraries pip can't provide (e.g. **SELinux bindings** on RHEL/Fedora), either create the venv with `--system-site-packages`, or copy them in, e.g. `/usr/lib64/python3.*/site-packages/selinux/` and `*selinux*.so` into the venv's `site-packages`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/faq.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:27:21+00:00"
+}

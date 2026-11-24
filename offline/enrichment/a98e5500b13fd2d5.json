@@ -1,0 +1,18 @@
+{
+ "chunk_id": "a98e5500b13fd2d5",
+ "chunk_hash": "a98e5500b13fd2d5",
+ "summary": "Integration tests for resource modules need a case per state, empty-config cases, a round-trip test, and assertions against hard-coded before/after data. Zuul runs CI; the chunk explains finding reports and logs and fixing static failures with tox -e black.",
+ "questions": [
+  "What integration tests does a new resource module need?",
+  "What is a round trip test for a resource module?",
+  "How do I view Zuul test logs for my PR?",
+  "How do I fix black failures in a network collection?"
+ ],
+ "answer_card": {
+  "title": "Resource module integration test requirements",
+  "answer_md": "Required:\n1. A test for every state.\n2. Tests with an empty `config.yaml`.\n3. A round trip: `merged` → gather facts → `merged` with more config → revert with `overridden` using the gathered facts.\n4. Assert `before`/`after` dicts against a hard-coded source of truth.\n\nZuul CI: click **Details** on the CI comment for the report, **ansible/check** for failures, the Zuul status board for live logs. In a failed job: **Logs** → **console** → **>** for details. Fix static failures with `tox -e black` in the collection root.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

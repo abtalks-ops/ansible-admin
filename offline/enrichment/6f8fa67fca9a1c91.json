@@ -1,0 +1,16 @@
+{
+ "chunk_id": "6f8fa67fca9a1c91",
+ "chunk_hash": "6f8fa67fca9a1c91",
+ "summary": "To remove a deprecated plugin from a collection, delete the file and related tests and docs, then add a tombstone entry with removal_version or removal_date (next major release) in meta/runtime.yml.",
+ "questions": [
+  "How do I fully remove a deprecated module from my collection?",
+  "What is a tombstone entry?"
+ ],
+ "answer_card": {
+  "title": "Tombstone a plugin in a collection",
+  "answer_md": "1. Remove the module/plugin and related tests and docs.\n2. Add to `meta/runtime.yml`:\n```yaml\nplugin_routing:\n  modules:\n    old_cloud:\n      tombstone:\n        removal_version: 2.0.0\n        warning_text: Use foo.bar.new_cloud instead.\n```\nOr `removal_date` set to the next major release date.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/module_lifecycle.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:15:03+00:00"
+}

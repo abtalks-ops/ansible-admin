@@ -1,0 +1,16 @@
+{
+ "chunk_id": "accded85922f42a2",
+ "chunk_hash": "accded85922f42a2",
+ "summary": "awx.awx was removed from Ansible 14 because of heavy refactoring, and the deprecated cisco.dnac and junipernetworks.junos collections were removed.",
+ "questions": [
+  "Why was awx.awx removed from Ansible 14?",
+  "Can I still install awx.awx?"
+ ],
+ "answer_card": {
+  "title": "Why awx.awx, cisco.dnac and junos were removed",
+  "answer_md": "- **awx.awx:** removed because it is being heavily refactored and doesn't meet community package standards. Install with `ansible-galaxy collection install awx.awx`.\n- **cisco.dnac** and **junipernetworks.junos:** previously deprecated, now removed.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:42+00:00"
+}

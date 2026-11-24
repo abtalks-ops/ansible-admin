@@ -1,0 +1,19 @@
+{
+ "chunk_id": "194a50cbb1c19029",
+ "chunk_hash": "194a50cbb1c19029",
+ "summary": "Explains that configuration settings come from ansible.cfg and environment variables, with environment variables taking precedence, and lists the order in which Ansible searches for ansible.cfg (only the first one found is used).",
+ "questions": [
+  "Which ansible.cfg file does Ansible actually use?",
+  "Where does Ansible look for its config file and in what order?",
+  "Do environment variables override ansible.cfg?",
+  "Can I have Ansible merge several ansible.cfg files?",
+  "How do I point Ansible at a specific config file?"
+ ],
+ "answer_card": {
+  "title": "Which ansible.cfg is used, and env var precedence",
+  "answer_md": "Ansible uses the **first** `ansible.cfg` it finds and ignores the rest. Search order:\n\n1. `ANSIBLE_CONFIG` environment variable (if set)\n2. `ansible.cfg` in the current directory\n3. `~/.ansible.cfg`\n4. `/etc/ansible/ansible.cfg`\n\nEnvironment variables override values from whichever `ansible.cfg` was loaded. For env vars, normal shell rules apply: the last value set wins.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/general_precedence.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "59d993dd4c919a93",
+ "chunk_hash": "59d993dd4c919a93",
+ "summary": "win_dsc takes free-form options that depend on the DSC resource. Set resource_name to the resource, optionally module_version (defaults to latest), and pass the resource's properties like Key and ValueName; options aren't case sensitive but keeping their case is recommended.",
+ "questions": [
+  "How do I translate a DSC resource definition into a win_dsc task?",
+  "What does module_version do in win_dsc?",
+  "Are win_dsc options case sensitive?",
+  "Where can I find the list of built-in DSC resources?"
+ ],
+ "answer_card": {
+  "title": "How win_dsc options map to a DSC resource",
+  "answer_md": "`win_dsc` takes free-form options that follow the resource being managed:\n- `resource_name`: the DSC resource, for example `Registry`\n- `module_version`: a specific installed version of the resource; defaults to the latest\n- other options: the resource's properties, such as `Key`, `ValueName`, `ValueData`, `Ensure`\n\nOptions aren't case sensitive, but keeping the DSC case makes it easier to tell resource properties apart from `win_dsc`'s own options.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/windows_dsc.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

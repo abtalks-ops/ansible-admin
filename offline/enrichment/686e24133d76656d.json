@@ -1,0 +1,18 @@
+{
+ "chunk_id": "686e24133d76656d",
+ "chunk_hash": "686e24133d76656d",
+ "summary": "ansible_python_interpreter sets the target Python path (Ansible avoids /usr/bin/env), ansible_*_interpreter does the same for other languages, and ansible_shell_executable overrides /bin/sh only when needed. INI examples show port, key, FreeBSD Python and Ruby paths.",
+ "questions": [
+  "How do I tell Ansible where Python is on a FreeBSD host?",
+  "Why doesn't Ansible use /usr/bin/env python?",
+  "How do I set the Ruby interpreter for a host?",
+  "When should I change ansible_shell_executable?"
+ ],
+ "answer_card": {
+  "title": "Interpreter and shell executable variables",
+  "answer_md": "- `ansible_python_interpreter`: Python path on the target, for hosts with several Pythons or Python not at `/usr/bin/python` (for example BSD). Ansible avoids `/usr/bin/env` because it depends on the remote PATH and the binary name.\n- `ansible_<lang>_interpreter`: same for Ruby, Perl, etc.; replaces the module shebang.\n- `ansible_shell_executable` (2.1+): shell used on the target, default `/bin/sh`. Change only if `/bin/sh` is missing or can't run under sudo.\n\n```ini\nsome_host        ansible_port=2222 ansible_user=manager\naws_host         ansible_ssh_private_key_file=/home/example/.ssh/aws.pem\nfreebsd_host     ansible_python_interpreter=/usr/local/bin/python\nruby_module_host ansible_ruby_interpreter=/usr/bin/ruby.1.9.3\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

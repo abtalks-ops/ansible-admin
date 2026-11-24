@@ -1,0 +1,18 @@
+{
+ "chunk_id": "95b0381f97d4a515",
+ "chunk_hash": "95b0381f97d4a515",
+ "summary": "Create parent groups with :children in INI or children: in YAML. Child members are parent members, groups can have many parents but no cycles, hosts are processed once with data merged, and hosts/groups are global so redefinitions add to or overwrite them.",
+ "questions": [
+  "How do I create a group of groups in inventory?",
+  "Can inventory groups be circular?",
+  "What happens if I define the same host in two places?",
+  "Is a host in two groups run twice?"
+ ],
+ "answer_card": {
+  "title": "Parent and child groups",
+  "answer_md": "INI uses `[prod:children]`; YAML uses `children:`:\n```yaml\nprod:\n  children:\n    east:\ntest:\n  children:\n    west:\n```\n- Hosts in a child group are automatically in the parent.\n- Multiple parents/children are fine, but no circular relationships.\n- A host in several groups runs **once**; its data is merged.\n- Hosts and groups are global: redefining one adds info or overwrites conflicting values with the latest definition.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

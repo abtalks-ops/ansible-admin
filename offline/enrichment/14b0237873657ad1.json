@@ -1,0 +1,17 @@
+{
+ "chunk_id": "14b0237873657ad1",
+ "chunk_hash": "14b0237873657ad1",
+ "summary": "To avoid one --host call per host, an inventory script can return a top-level _meta.hostvars with all host variables (at least an empty hostvars); scripts replacing static inventory should include all and ungrouped groups.",
+ "questions": [
+  "How do I stop Ansible from calling my inventory script once per host?",
+  "What is the _meta key in inventory script output?",
+  "What groups must my script output to replace a static inventory file?"
+ ],
+ "answer_card": {
+  "title": "Speed up inventory scripts with _meta",
+  "answer_md": "Return all host vars in one run:\n```json\n{\"_meta\": {\"hostvars\": {\"host001\": {\"var001\": \"value\"}}}}\n```\nIf `_meta.hostvars` exists (even `{}`), Ansible won't call `--host` per host, a big win for large inventories. To replace a static inventory, include an `all` group (all hosts and groups as children) and an `ungrouped` group.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:04:31+00:00"
+}

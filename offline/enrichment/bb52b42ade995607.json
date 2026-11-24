@@ -1,0 +1,15 @@
+{
+ "chunk_id": "bb52b42ade995607",
+ "chunk_hash": "bb52b42ade995607",
+ "summary": "Example [ce:vars] for NETCONF uses ansible.netcommon.netconf with community.network.ce, user, vaulted password and optional proxy command.",
+ "questions": [
+  "What inventory settings do I need for CloudEngine over NETCONF?"
+ ],
+ "answer_card": {
+  "title": "CloudEngine NETCONF inventory",
+  "answer_md": "```ini\n[ce:vars]\nansible_connection=ansible.netcommon.netconf\nansible_network_os=community.network.ce\nansible_user=myuser\nansible_password=!vault |\nansible_paramiko_proxy_command='-o ProxyCommand=\"ssh -W %h:%p -q bastion01\"'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_ce.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

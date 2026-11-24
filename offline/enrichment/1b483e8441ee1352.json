@@ -1,0 +1,19 @@
+{
+  "chunk_id": "1b483e8441ee1352",
+  "chunk_hash": "1b483e8441ee1352",
+  "summary": "Examples of setup: saving facts to a tree, filtering memory or interface facts, collecting only facter or network/virtual subsets, minimal or no facts, Windows custom fact paths, and delegating fact gathering to db servers.",
+  "questions": [
+    "How do I show only memory facts for all hosts?",
+    "How do I gather facts for db servers while running on app servers?",
+    "How do I collect only the minimum facts ad hoc?",
+    "How do I use custom facts from C:\\custom_facts on Windows?",
+    "How do I skip facter and ohai even if installed?"
+  ],
+  "answer_card": {
+    "title": "setup examples",
+    "answer_md": "```\nansible all -m ansible.builtin.setup --tree /tmp/facts\nansible all -m ansible.builtin.setup -a 'filter=ansible_*_mb'\nansible all -m ansible.builtin.setup -a 'gather_subset=!all,network,virtual'\nansible all -m ansible.builtin.setup -a 'gather_subset=!facter,!ohai'\nansible all -m ansible.builtin.setup -a 'gather_subset=!all,!min'\nansible windows -m ansible.builtin.setup -a \"fact_path='c:\\custom_facts'\"\n```\nDelegated facts:\n```yaml\n- ansible.builtin.setup:\n  delegate_to: \"{{ item }}\"\n  delegate_facts: true\n  loop: \"{{ groups['dbservers'] }}\"\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/setup_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

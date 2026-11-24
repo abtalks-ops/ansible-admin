@@ -1,0 +1,17 @@
+{
+ "chunk_id": "5633df9e7caa3183",
+ "chunk_hash": "5633df9e7caa3183",
+ "summary": "Ansible cannot run on Windows as a control node because of platform API limits. You can run it through WSL or in a container, but WSL is not supported and shouldn't be used in production.",
+ "questions": [
+  "Can I install Ansible on my Windows laptop as the control node?",
+  "Is running Ansible under WSL supported for production?",
+  "How can I use Ansible if my workstation runs Windows?"
+ ],
+ "answer_card": {
+  "title": "Running Ansible from a Windows machine",
+  "answer_md": "Ansible can't run natively on Windows as the control node because of API limitations. Options:\n- Run it in the Windows Subsystem for Linux (WSL).\n- Run it in a container.\n\nNote: WSL is **not supported** by Ansible and shouldn't be used for production systems.",
+  "source_url": "https://docs.ansible.com/ansible/latest/os_guide/intro_windows.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

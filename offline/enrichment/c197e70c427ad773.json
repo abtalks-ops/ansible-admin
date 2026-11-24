@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c197e70c427ad773",
+ "chunk_hash": "c197e70c427ad773",
+ "summary": "Variables can go directly on hosts and groups in inventory, but separate host_vars and group_vars files via the default host_group_vars plugin are more robust.",
+ "questions": [
+  "Where should I define host and group variables?",
+  "What is the host_group_vars plugin?"
+ ],
+ "answer_card": {
+  "title": "Where to put inventory variables",
+  "answer_md": "You can add variables directly to hosts and groups in a YAML or INI inventory. A more robust approach is separate files in `host_vars/` and `group_vars/`, loaded by the default `host_group_vars` vars plugin.",
+  "source_url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

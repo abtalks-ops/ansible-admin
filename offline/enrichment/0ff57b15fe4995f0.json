@@ -1,0 +1,16 @@
+{
+ "chunk_id": "0ff57b15fe4995f0",
+ "chunk_hash": "0ff57b15fe4995f0",
+ "summary": "More cloudfront_distribution items deprecations: lambda_function_associations, cache_behaviors, custom_error_responses and default_cache_behavior sub-fields now use elements.",
+ "questions": [
+  "Is items deprecated in default_cache_behavior output of cloudfront_distribution?",
+  "What key replaces items in custom_error_responses?"
+ ],
+ "answer_card": {
+  "title": "cloudfront_distribution items → elements (part 2)",
+  "answer_md": "Also deprecated in favor of `elements` (removal after 2026-12-15): `items` in `cache_behaviors.items.lambda_function_associations`, `cache_behaviors`, `custom_error_responses`, and in `default_cache_behavior`: `allowed_methods`, `allowed_methods.cached_methods`, `forwarded_values.cookies.whitelisted_names` and `forwarded_values.headers`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_14.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:43+00:00"
+}

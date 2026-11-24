@@ -1,0 +1,15 @@
+{
+ "chunk_id": "5dcd91820358dcc6",
+ "chunk_hash": "5dcd91820358dcc6",
+ "summary": "The demo uses hostvars to read variables of a named host rather than the current host.",
+ "questions": [
+  "How do I read another host's facts in a playbook?"
+ ],
+ "answer_card": {
+  "title": "Read another host's variables",
+  "answer_md": "Use `hostvars['<hostname>']`, for example `hostvars['vyos01.example.net'].ansible_net_version`. Without it you only get the current host's values.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_best_practices_2.5.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

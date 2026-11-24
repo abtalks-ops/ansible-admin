@@ -1,0 +1,15 @@
+{
+ "chunk_id": "28444fcf5160f47f",
+ "chunk_hash": "28444fcf5160f47f",
+ "summary": "Example task gets version info on NOS with nos_command and registers it.",
+ "questions": [
+  "How do I get version info from Extreme NOS?"
+ ],
+ "answer_card": {
+  "title": "Get Extreme NOS version",
+  "answer_md": "```yaml\n- name: Get version information (nos)\n  community.network.nos_command:\n    commands: \"show version\"\n  register: show_ver\n  when: ansible_network_os == 'community.network.nos'\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/platform_nos.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

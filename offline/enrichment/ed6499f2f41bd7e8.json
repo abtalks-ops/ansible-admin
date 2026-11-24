@@ -1,0 +1,11 @@
+{
+ "chunk_id": "ed6499f2f41bd7e8",
+ "chunk_hash": "ed6499f2f41bd7e8",
+ "summary": "The Cisco IOS-XR collection supports multiple connection types.",
+ "questions": [
+  "What connections does Cisco IOS-XR support?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:19:12+00:00"
+}

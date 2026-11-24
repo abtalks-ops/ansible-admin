@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0218fa3c2b8867d0",
+ "chunk_hash": "0218fa3c2b8867d0",
+ "summary": "dellemc.openmanage 13.6.0 known issues: ome_smart_fabric_info qualification pending for 2.19, idrac_diagnostics no SOCKS proxy, idrac_license ignores proxy on import, idrac_os_deployment reports success with outdated dates, PatrolReadRatePercent unsettable on iDRAC10, SCP revert doesn't remove new users, and read-only redfish volume properties.",
+ "questions": [
+  "Why are proxy settings ignored when importing an iDRAC license?",
+  "Can I set PatrolReadRatePercent on iDRAC10?",
+  "Why doesn't reverting a server config profile remove new users?",
+  "Is ome_smart_fabric_info qualified for ansible-core 2.19?"
+ ],
+ "answer_card": {
+  "title": "dellemc.openmanage known issues (13.6.0)",
+  "answer_md": "- `ome_smart_fabric_info`: formal ansible-core 2.19 qualification pending.\n- `idrac_diagnostics`: no export to HTTP/HTTPS via SOCKS proxy.\n- `idrac_license`: proxy parameters ignored on import; error messages differ between iDRAC9 and iDRAC10 for invalid share names.\n- `idrac_os_deployment`: returns 200 and completes even with an outdated Expose duration date.\n- `idrac_redfish_storage_controller`: `PatrolReadRatePercent` can't be set on iDRAC10.\n- `idrac_server_config_profile`: reverting with an older SCP completes with errors if a user was added after export (the new user isn't removed).\n- `ome_smart_fabric_uplink`: same-name uplinks modify the existing one.\n- `redfish_storage_volume`: encryption type and `block_io_size_bytes` are read-only on iDRAC9/10 and ignored.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_13.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:05:56+00:00"
+}

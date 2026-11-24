@@ -1,0 +1,16 @@
+{
+ "chunk_id": "c8e8508efbc69e9b",
+ "chunk_hash": "c8e8508efbc69e9b",
+ "summary": "ansible-galaxy role list shows each installed role in roles_path with its version.",
+ "questions": [
+  "How do I see which roles are installed?",
+  "How do I check installed role versions?"
+ ],
+ "answer_card": {
+  "title": "List installed roles",
+  "answer_md": "```bash\nansible-galaxy role list\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/galaxy/user_guide.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:03:58+00:00"
+}

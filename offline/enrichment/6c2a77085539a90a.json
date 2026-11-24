@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6c2a77085539a90a",
+ "chunk_hash": "6c2a77085539a90a",
+ "summary": "Introduces the collection creator path, explaining collections, sharing via Galaxy or Automation Hub, that the Ansible community package is ansible-core plus community collections, and that the guide walks from first module or role to inclusion in the package.",
+ "questions": [
+  "What is in the Ansible community package?",
+  "What does the collection creator path cover?",
+  "Who maintains ansible.builtin?"
+ ],
+ "answer_card": {
+  "title": "The collection creator path",
+  "answer_md": "The Ansible community package is `ansible-core` (including `ansible.builtin`, maintained by the Core team) plus community-maintained collections. The creator path walks you from an idea for a module or role to having your collection included in that package, via milestones covered in the following sections.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_path.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:56+00:00"
+}

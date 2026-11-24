@@ -1,0 +1,16 @@
+{
+ "chunk_id": "bee7fd41e8d9111f",
+ "chunk_hash": "bee7fd41e8d9111f",
+ "summary": "The playbook now just lists roles: system_demo. Output prefixes tasks with the role name and shows ok rather than changed since config already matches.",
+ "questions": [
+  "Why do task names show the role name prefix?",
+  "Why does my role run show ok instead of changed?"
+ ],
+ "answer_card": {
+  "title": "Call the role from a playbook",
+  "answer_md": "```yaml\n- name: configure cisco routers\n  hosts: routers\n  connection: ansible.netcommon.network_cli\n  gather_facts: false\n  roles:\n    - system_demo\n```\nTask names now appear as `system_demo : configure hostname`, which helps when many roles run. It shows `ok` because the config already matches (idempotent).",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/getting_started/network_roles.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:11:00+00:00"
+}

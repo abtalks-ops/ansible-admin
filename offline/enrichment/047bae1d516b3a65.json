@@ -1,0 +1,18 @@
+{
+ "chunk_id": "047bae1d516b3a65",
+ "chunk_hash": "047bae1d516b3a65",
+ "summary": "ansible-core 2.19 inverts the template trust model: only strings from trusted sources can be rendered as templates, untrusted values can be referenced but not executed, and rendering an untrusted template silently returns the original string.",
+ "questions": [
+  "What is the new template trust model in ansible-core 2.19?",
+  "Why are templates in module results not rendered anymore?",
+  "How did Ansible handle unsafe strings before 2.19?",
+  "Do template results keep trust automatically?"
+ ],
+ "answer_card": {
+  "title": "Template trust model inversion",
+  "answer_md": "**Before:** every string was trusted as a template, and strings from untrusted sources (like module results) were wrapped as \"unsafe\". Any code that forgot to propagate that wrapper risked remote code execution, which led to several CVEs.\n\n**Now:** only strings marked as coming from a **trusted source** can be rendered as templates. Untrusted values can still be *referenced* by templates, but the template expression itself must be trusted.\n\n- Rendering a template found in an untrusted string returns the string unchanged (silently by default; can be made a warning or error).\n- New strings produced by template operations are never automatically trusted, though returning an existing trusted string unmodified keeps its trust.\n- Plugins can explicitly apply trust.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:58:45+00:00"
+}

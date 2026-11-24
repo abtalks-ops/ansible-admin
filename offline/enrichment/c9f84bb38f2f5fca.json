@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c9f84bb38f2f5fca",
+ "chunk_hash": "c9f84bb38f2f5fca",
+ "summary": "Code blocks must be indented and surrounded by blank lines, and may only use approved Pygments lexers such as bash, console, ini, jinja, json, powershell, python, shell-session, yaml, yaml+jinja and ansible-output.",
+ "questions": [
+  "Which code-block languages are allowed in Ansible docs?",
+  "Is there a lexer for Ansible output?",
+  "Why did my code block fail the docs lint test?"
+ ],
+ "answer_card": {
+  "title": "Allowed code-block lexers",
+  "answer_md": "Allowed: `none`, `ansible-output`, `bash`, `console`, `csharp`, `diff`, `ini`, `jinja`, `json`, `md`, `powershell`, `python`, `rst`, `sh`, `shell`, `shell-session`, `text`, `yaml`, `yaml+jinja` (enforced by `rst-yamllint.py`).\n```rst\n.. code-block:: python\n\n   def my_beautiful_python_code():\n      pass\n```\nIndent correctly and surround with blank lines.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/style_guide/index.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:17:43+00:00"
+}

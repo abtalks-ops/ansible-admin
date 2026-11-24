@@ -1,0 +1,15 @@
+{
+ "chunk_id": "0d1e404360446a49",
+ "chunk_hash": "0d1e404360446a49",
+ "summary": "Unstable and disabled tests get tracking issues assigned to the AWS, Azure, Windows or General project.",
+ "questions": [
+  "How are unstable tests tracked?"
+ ],
+ "answer_card": {
+  "title": "Issues for unstable or disabled tests",
+  "answer_md": "Each unstable or disabled test gets a tracking issue in one of: AWS, Azure, Windows, General.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/testing/sanity/integration-aliases.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:20:08+00:00"
+}

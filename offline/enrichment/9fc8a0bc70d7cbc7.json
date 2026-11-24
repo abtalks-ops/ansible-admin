@@ -1,0 +1,17 @@
+{
+  "chunk_id": "9fc8a0bc70d7cbc7",
+  "chunk_hash": "9fc8a0bc70d7cbc7",
+  "summary": "Explains ansible.netcommon.parse_cli (2.4+) for turning network CLI output into JSON using a YAML spec file, with an example spec that parses show vlan into a list of VLAN hashes via regex items.",
+  "questions": [
+    "How do I convert network device CLI output into structured data?",
+    "How do I write a parse_cli spec file?",
+    "How do I parse show vlan output with Ansible?"
+  ],
+  "answer_card": {
+    "title": "Parsing CLI output with parse_cli",
+    "answer_md": "```jinja\n{{ output | ansible.netcommon.parse_cli('path/to/spec') }}\n```\n\nThe YAML spec defines `vars` (output shape) and `keys` with regex `items` using named groups:\n\n```yaml\nvars:\n  vlan:\n    vlan_id: \"{{ item.vlan_id }}\"\n    name: \"{{ item.name }}\"\n    state: \"{{ item.state }}\"\nkeys:\n  vlans:\n    value: \"{{ vlan }}\"\n    items: \"^(?P<vlan_id>\\\\d+)\\\\s+(?P<name>\\\\w+)\\\\s+(?P<state>active|act/lshut|suspended)\"\n```\n\nThis returns a list of VLAN hashes.",
+    "source_url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_filters.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:06:37+00:00"
+}

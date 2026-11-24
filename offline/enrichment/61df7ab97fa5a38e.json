@@ -1,0 +1,17 @@
+{
+ "chunk_id": "61df7ab97fa5a38e",
+ "chunk_hash": "61df7ab97fa5a38e",
+ "summary": "Describes antsibull-changelog, which adds breaking_changes, security_fixes and trivial fragment categories and generates the changelog.yaml used for the combined CHANGELOG.rst and porting guide. Maintainers set each collection's changelog policy.",
+ "questions": [
+  "What changelog fragment categories does antsibull-changelog add?",
+  "What is the changelog.yaml file used for?",
+  "Who decides the changelog rules for a collection?"
+ ],
+ "answer_card": {
+  "title": "About antsibull-changelog",
+  "answer_md": "`antsibull-changelog` adds fragment categories `breaking_changes`, `security_fixes` and `trivial`, and generates `changelog.yaml`, which Ansible uses to build the combined `CHANGELOG.rst` and the Porting Guide. Each collection's maintainers set its changelog policy.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_changelogs.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:25+00:00"
+}

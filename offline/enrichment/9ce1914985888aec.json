@@ -1,0 +1,19 @@
+{
+  "chunk_id": "9ce1914985888aec",
+  "chunk_hash": "9ce1914985888aec",
+  "summary": "user options: append to groups (required with groups since 2.21), Solaris authorization, comment/GECOS, create_home, expires epoch (negative removes), and force deletion.",
+  "questions": [
+    "How do I add a user to a group without removing other groups?",
+    "How do I set an account expiry date?",
+    "How do I remove an account expiry?",
+    "How do I set the full name of a user?",
+    "Do I need append when using groups in newer Ansible?"
+  ],
+  "answer_card": {
+    "title": "user parameters (part 1)",
+    "answer_md": "- `append` (false): true adds to `groups`; false makes `groups` the exact list. **Required with `groups` since 2.21.**\n- `comment`: GECOS\n- `create_home` (true)\n- `expires`: epoch time; negative removes expiry (Linux/FreeBSD)\n- `force`: like `userdel --force` (with absent); overwrites SSH key with `generate_ssh_key`\n- `authorization`: Solaris only",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:10:19+00:00"
+}

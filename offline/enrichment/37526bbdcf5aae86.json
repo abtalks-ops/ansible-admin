@@ -1,0 +1,17 @@
+{
+  "chunk_id": "37526bbdcf5aae86",
+  "chunk_hash": "37526bbdcf5aae86",
+  "summary": "systemd scope (system, user, global) requires a user dbus and XDG_RUNTIME_DIR for user units; state options started, stopped, restarted and reloaded (which starts if stopped).",
+  "questions": [
+    "How do I manage a systemd user service with Ansible?",
+    "Why do I get Failed to connect to bus with scope user?",
+    "Does reloaded start a stopped unit?"
+  ],
+  "answer_card": {
+    "title": "systemd scope and state",
+    "answer_md": "- `scope`: `system` (default), `user`, `global`. User scope needs the user's dbus; set `XDG_RUNTIME_DIR=/run/user/<uid>` or you'll get \"Failed to connect to bus\".\n- `state`: `started`/`stopped` idempotent; `restarted` always; `reloaded` always (starts if not running).",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:08:46+00:00"
+}

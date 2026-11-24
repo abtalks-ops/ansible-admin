@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2d0052680b44ee8a",
+ "chunk_hash": "2d0052680b44ee8a",
+ "summary": "Shows a rolling update with serial: 5 that removes each host from the load balancer in pre_tasks, applies roles, flushes handlers, runs a testing role, and only re-adds the host if tests pass; max_fail_percentage can stop the rollout.",
+ "questions": [
+  "How do I only put a server back in the load balancer if its tests pass?",
+  "How do I do a rolling deploy with health checks in Ansible?",
+  "How can I stop a rolling update if too many hosts fail?",
+  "How do I run handlers before my test tasks?"
+ ],
+ "answer_card": {
+  "title": "Gate rolling updates with tests",
+  "answer_md": "```yaml\n- hosts: webservers\n  serial: 5\n  pre_tasks:\n    - name: take out of load balancer pool\n      ansible.builtin.command: /usr/bin/take_out_of_pool {{ inventory_hostname }}\n      delegate_to: 127.0.0.1\n  tasks:\n    - ansible.builtin.include_role:\n        name: \"{{ item }}\"\n      loop: [common, webserver]\n    - ansible.builtin.meta: flush_handlers\n    - ansible.builtin.include_role:\n        name: apply_testing_checks\n  post_tasks:\n    - name: add back to load balancer pool\n      ansible.builtin.command: /usr/bin/add_back_to_pool {{ inventory_hostname }}\n      delegate_to: 127.0.0.1\n```\n\nIf the tests fail, the host never returns to the pool. Use `max_fail_percentage` to stop the rollout after too many failures.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:01:58+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "chunk_id": "625e23d6154f805a",
+  "chunk_hash": "625e23d6154f805a",
+  "summary": "Examples of known_hosts: adding a key from a local file to the system-wide file, adding a key with hostname and IP, and adding a host with a custom SSH port.",
+  "questions": [
+    "How do I add a host key for a server on port 2222?",
+    "How do I load a host key from a file in my repo?",
+    "How do I add a host key to /etc/ssh/ssh_known_hosts?"
+  ],
+  "answer_card": {
+    "title": "known_hosts examples",
+    "answer_md": "```yaml\n- ansible.builtin.known_hosts:\n    path: /etc/ssh/ssh_known_hosts\n    name: foo.com.invalid\n    key: \"{{ lookup('ansible.builtin.file', 'pubkeys/foo.com.invalid') }}\"\n- ansible.builtin.known_hosts:\n    name: host1.example.com\n    key: host1.example.com,10.9.8.77 ssh-rsa AAAA...\n    path: /etc/ssh/ssh_known_hosts\n- ansible.builtin.known_hosts:\n    name: '[host1.example.com]:2222'\n    key: '[host1.example.com]:2222 ssh-rsa AAAA...'\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/known_hosts_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T11:05:46+00:00"
+}

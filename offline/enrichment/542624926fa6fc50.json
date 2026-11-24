@@ -1,0 +1,19 @@
+{
+  "chunk_id": "542624926fa6fc50",
+  "chunk_hash": "542624926fa6fc50",
+  "summary": "Examples for managing apt keys: a keyless approach using get_url plus a signed-by repository, adding keys by id from a keyserver or URL, removing a key, adding from file contents, using a specific keyring, and adding a key file on the remote.",
+  "questions": [
+    "How do I add a third-party apt repo without apt_key?",
+    "How do I use signed-by with a key downloaded to /etc/apt/keyrings?",
+    "How do I remove an apt signing key by fingerprint?",
+    "How do I add a key from a file on the control node?",
+    "Should armored keys use .asc or .gpg extension?"
+  ],
+  "answer_card": {
+    "title": "apt_key examples and the signed-by alternative",
+    "answer_md": "Preferred approach without apt_key:\n```yaml\n- ansible.builtin.get_url:\n    url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x36a1...\n    dest: /etc/apt/keyrings/myrepo.asc\n- ansible.builtin.apt_repository:\n    repo: \"deb [arch=amd64 signed-by=/etc/apt/keyrings/myrepo.asc] https://download.example.com/linux/ubuntu {{ ansible_distribution_release }} stable\"\n```\nArmored keys use `.asc`, binary `.gpg`.\n\napt_key forms:\n```yaml\n- apt_key: {keyserver: keyserver.ubuntu.com, id: 36A1D786...}\n- apt_key: {url: https://ftp-master.debian.org/keys/archive-key-6.0.asc}\n- apt_key: {id: 0x9FED2BCB..., state: absent}\n- apt_key: {data: \"{{ lookup('ansible.builtin.file', 'apt.asc') }}\"}\n```",
+    "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html"
+  },
+  "model": "claude-opus-5-5 (subscription)",
+  "created_at": "2026-11-24T10:59:24+00:00"
+}

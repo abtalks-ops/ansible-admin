@@ -1,0 +1,15 @@
+{
+ "chunk_id": "c454ccf3e75f5c25",
+ "chunk_hash": "c454ccf3e75f5c25",
+ "summary": "ansible.builtin.reverse is the Jinja builtin filter that reverses an object or iterates it backwards.",
+ "questions": [
+  "How do I reverse a list or string in Ansible?"
+ ],
+ "answer_card": {
+  "title": "reverse filter",
+  "answer_md": "`{{ mylist | reverse }}` reverses the object or returns an iterator over it in reverse (Jinja builtin).",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/reverse_filter.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T11:10:11+00:00"
+}

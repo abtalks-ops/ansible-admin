@@ -1,0 +1,18 @@
+{
+ "chunk_id": "47db847b735fd6e6",
+ "chunk_hash": "47db847b735fd6e6",
+ "summary": "Glossary entries for collection namespaces, notify and handler ordering, and orchestration.",
+ "questions": [
+  "If several tasks notify the same handler, how many times does it run?",
+  "In what order do handlers run?",
+  "What is a collection namespace?",
+  "When do notified handlers run?"
+ ],
+ "answer_card": {
+  "title": "Glossary: namespace, notify, orchestration",
+  "answer_md": "- **Namespace**: first part of an FQCN, e.g. `cisco` in `cisco.ios.ios_config`. Reserved and distributed by Red Hat.\n- **Notify**: a changed task informs a handler to run at the end of the play. A handler notified by multiple tasks runs **only once**, and handlers run in the order they are **listed**, not the order notified.\n- **Orchestration**: coordinating many systems in a specific order, such as rolling updates.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-24T10:59:11+00:00"
+}
