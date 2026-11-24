@@ -39,7 +39,7 @@ jobs:
           cache-dependency-path: offline/package-lock.json
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.13"
       - name: Install ansible-core (for ansible.builtin plugin docs)
         run: pip install "ansible-core>=2.22,<2.23"
       - run: npm ci
