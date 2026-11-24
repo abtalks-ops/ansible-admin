@@ -1,0 +1,82 @@
+name: offline index
+
+# Builds the on-device index and the PWA, and checks retrieval quality.
+# Nightly and on demand. Deploying to GitHub Pages is manual (deploy: true) because
+# the doc licence checks in the design doc must be done before the index is published.
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: "Deploy the PWA to GitHub Pages"
+        type: boolean
+        default: false
+  pull_request:
+    paths: ["offline/**", ".github/workflows/offline-index.yml"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: offline-index-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: offline
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: offline/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ansible-core (for ansible.builtin plugin docs)
+        run: pip install "ansible-core>=2.22,<2.23"
+      - run: npm ci
+      - name: Restore embedding cache (unchanged chunks are not re-embedded)
+        uses: actions/cache@v4
+        with:
+          path: offline/work
+          key: offline-work-${{ github.run_id }}
+          restore-keys: offline-work-
+      - name: Fetch embedder (pinned revision)
+        run: ./scripts/fetch-model.sh
+      - name: Build index
+        run: npm run build:index
+      - name: Retrieval gate (fails if hybrid recall@5 drops more than 2 points)
+        run: npm run eval -- --set eval/smoke.jsonl --gate eval/baseline-unenriched-smoke.json
+      - name: Build PWA
+        run: npm run build:pwa
+      - uses: actions/upload-artifact@v4
+        with:
+          name: offline-pwa
+          path: offline/pwa/dist
+          retention-days: 14
+      - if: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: offline/pwa/dist
+
+  deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy }}
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

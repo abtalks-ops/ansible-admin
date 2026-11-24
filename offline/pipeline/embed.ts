@@ -12,6 +12,9 @@ async function load(): Promise<FeatureExtractionPipeline> {
   if (fs.existsSync(path.join(MODELS_DIR, EMBEDDER.id, "config.json"))) {
     env.localModelPath = MODELS_DIR + path.sep;
     env.allowRemoteModels = false;
+  } else {
+    // Download from the hub into MODELS_DIR, where the PWA build picks the files up.
+    env.cacheDir = MODELS_DIR;
   }
   extractor = (await pipeline("feature-extraction", EMBEDDER.id, { dtype: EMBEDDER.dtype })) as FeatureExtractionPipeline;
   return extractor;

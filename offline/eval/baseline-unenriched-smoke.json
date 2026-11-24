@@ -1,0 +1,31 @@
+{
+  "set": "eval/smoke.jsonl",
+  "questions": 40,
+  "built_at": "2026-11-24T10:37:22.987Z",
+  "index": {
+    "chunks": 4014,
+    "rows": 4014,
+    "bytes": 5753850,
+    "enriched": 0
+  },
+  "report": {
+    "keyword": {
+      "recall@1": 0.65,
+      "recall@5": 0.875,
+      "recall@10": 0.975,
+      "mrr": 0.7575297619047618
+    },
+    "vector": {
+      "recall@1": 0.675,
+      "recall@5": 0.85,
+      "recall@10": 0.9,
+      "mrr": 0.7538194444444444
+    },
+    "hybrid": {
+      "recall@1": 0.675,
+      "recall@5": 0.825,
+      "recall@10": 0.925,
+      "mrr": 0.7461706349206348
+    }
+  }
+}
