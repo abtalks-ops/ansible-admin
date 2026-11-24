@@ -1,9 +1,9 @@
 // Ansible Admin Offline: download the index once, then search the docs with no network.
 // Phase 1 is search only: hybrid BM25 + vector retrieval, answer cards when present, sources always shown.
 import { SearchIndex, tokenize, unpack, type Chunk, type LoadedShard, type Manifest, type ShardMeta } from "../../shared/search.ts";
-import { buildPrompt, citedNumbers, isNotInDocs, stripInvalidCitations, type Used } from "../../shared/answer.ts";
+import { buildPrompt, citedNumbers, isDeviceLost, isNotInDocs, PROFILES, stripInvalidCitations, type Used } from "../../shared/answer.ts";
 import { MAX_CONVS, newConv, parse as parseChats, remove as removeConv, serialize as serializeChats, titleFrom, upsert as upsertConv, type Conv, type Turn } from "../../shared/chats.ts";
-import { checkDevice, isDownloaded, loadEngine, mock, modelFor, statsText, TIERS, DEFAULT_TIER, type Engine, type Tier } from "./llm.ts";
+import { addDiagnostic, checkDevice, getDiagnostics, isDownloaded, loadEngine, mock, modelFor, statsText, TIERS, DEFAULT_TIER, type Engine, type Tier } from "./llm.ts";
 import { startRain } from "./rain.ts";
 
 const DATA_CACHE = "aa-data-v1";
@@ -21,7 +21,7 @@ const ui = {
   sizeInfo: $("sizeInfo"), downloadBtn: $<HTMLButtonElement>("downloadBtn"), progress: $("progress"), bar: $("bar"), progressText: $("progressText"),
   form: $<HTMLFormElement>("searchForm"), q: $<HTMLInputElement>("q"), status: $("status"), results: $("thread"),
   newBtn: $("newBtn"), historyBtn: $("historyBtn"), drawer: $("drawer"), historyList: $("historyList"), newBtn2: $("newBtn2"), closeDrawer: $("closeDrawer"), backdrop: $("backdrop"), aiChip: $("aiChip"),
-  aiInfo: $("aiInfo"), aiBtn: $<HTMLButtonElement>("aiBtn"), aiModel: $<HTMLSelectElement>("aiModel"), aiProgress: $("aiProgress"), aiBar: $("aiBar"),
+  aiInfo: $("aiInfo"), aiDiag: $("aiDiag"), aiBtn: $<HTMLButtonElement>("aiBtn"), aiModel: $<HTMLSelectElement>("aiModel"), aiProgress: $("aiProgress"), aiBar: $("aiBar"),
   menuBtn: $("menuBtn"), updateBtn: $<HTMLButtonElement>("updateBtn"), deleteBtn: $<HTMLButtonElement>("deleteBtn"), rainToggle: $<HTMLInputElement>("rainToggle"),
 };
 
@@ -456,12 +456,16 @@ async function ensureEngine(onProgress: (f: number, t: string) => void): Promise
 async function toggleAi() {
   if (aiOn()) {
     setAi(false);
+    try {
+      localStorage.removeItem(FLAKY); // turning AI off and on again gives the normal prompt size another go
+    } catch {}
     await engine?.unload().catch(() => {});
     engine = null;
     setChip("off");
     return renderAiPanel();
   }
-  const dev = await checkDevice();
+  const dev = await checkDevice(tier);
+  renderDiag();
   if (!dev.ok) return renderAiPanel(dev.reason);
   if (!(await isDownloaded(tier)) && !confirm(`Download ${tier.label} (about ${tier.downloadMB} MB)? Wi-Fi recommended. It stays on this device.`)) return;
   ui.aiBtn.disabled = true;
@@ -534,46 +538,91 @@ function checkCrash(): boolean {
   return false;
 }
 
+const renderDiag = () => (ui.aiDiag.textContent = getDiagnostics() || "(turn on AI answers to collect GPU details)");
+
+// After a GPU reset the phone gets shorter prompts and answers from then on.
+const FLAKY = "aa-gpu-flaky";
+const isFlaky = () => {
+  try {
+    return localStorage.getItem(FLAKY) === "1";
+  } catch {
+    return false;
+  }
+};
+const setFlaky = () => {
+  try {
+    localStorage.setItem(FLAKY, "1");
+  } catch {}
+};
+
 async function generateFor(turn: Turn, el: HTMLElement, chunks: Chunk[]) {
   generating = true;
   ui.q.disabled = true;
-  const { messages, used } = buildPrompt(turn.q, chunks);
   const aiEl = el.querySelector(".ai") as HTMLElement;
   turn.model = modelFor(tier);
   turn.state = "done";
   guard(true);
+  let used: Used[] = buildPrompt(turn.q, chunks).used;
   try {
-    if (!engine || engineModel !== modelFor(tier)) {
-      setChip("loading");
-      aiEl.innerHTML = answerHtml(turn, used, true, "Loading the AI model into memory…");
-      await ensureEngine((f, t) => {
-        setChip("loading", `${Math.round(f * 100)}%`);
-        aiEl.innerHTML = answerHtml(turn, used, true, `${t} (${Math.round(f * 100)}%)`);
-      });
+    // Attempt 2 exists for GPU resets: the engine is rebuilt and the prompt is shortened.
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const budget = attempt > 0 || isFlaky() ? PROFILES.lite : PROFILES.normal;
+      const prompt = buildPrompt(turn.q, chunks, budget);
+      used = prompt.used;
+      try {
+        if (!engine || engineModel !== modelFor(tier)) {
+          setChip("loading");
+          aiEl.innerHTML = answerHtml(turn, used, true, "Loading the AI model into memory…");
+          await ensureEngine((f, t) => {
+            setChip("loading", `${Math.round(f * 100)}%`);
+            aiEl.innerHTML = answerHtml(turn, used, true, `${t} (${Math.round(f * 100)}%)`);
+          });
+        }
+        setChip("busy");
+        aiEl.innerHTML = answerHtml(turn, used, true);
+        const r = await engine!.generate(
+          prompt.messages,
+          (t) => {
+            turn.answer = stripInvalidCitations(t, used);
+            // Hold back a reply that is still spelling out NOT_IN_DOCS.
+            if ("NOT_IN_DOCS".startsWith(t.trim().toUpperCase().replace(/[^A-Z_]/g, "")) && t.trim()) return;
+            aiEl.innerHTML = answerHtml(turn, used, true);
+          },
+          budget.maxTokens,
+        );
+        turn.stats = statsText(r) + (budget === PROFILES.lite ? " · short mode" : "");
+        if (isNotInDocs(r.text)) {
+          turn.state = "notindocs";
+          turn.answer = undefined;
+        } else turn.answer = stripInvalidCitations(r.text, used);
+        turn.note = undefined;
+        setChip("ready");
+        return;
+      } catch (e) {
+        const msg = (e as Error).message ?? String(e);
+        addDiagnostic(`error (${new Date().toLocaleTimeString()}): ${msg}`);
+        await engine?.unload().catch(() => {});
+        engine = null;
+        turn.answer = undefined;
+        if (isDeviceLost(msg) && attempt === 0) {
+          // The GPU was reset or ran out of memory. Remember it, rebuild the engine and try once more with less.
+          setFlaky();
+          aiEl.innerHTML = answerHtml(turn, used, true, "The phone's GPU was reset. Reloading the model and trying again with a shorter prompt…");
+          continue;
+        }
+        turn.state = "error";
+        turn.note = isDeviceLost(msg)
+          ? "The phone's GPU was reset again (likely out of memory). Close other tabs and apps and try again, or turn AI answers off. Details are under AI answers in settings."
+          : `The AI answer failed: ${msg}.`;
+        setChip("failed");
+        return;
+      }
     }
-    setChip("busy");
-    aiEl.innerHTML = answerHtml(turn, used, true);
-    const r = await engine!.generate(messages, (t) => {
-      turn.answer = stripInvalidCitations(t, used);
-      // Hold back a reply that is still spelling out NOT_IN_DOCS.
-      if ("NOT_IN_DOCS".startsWith(t.trim().toUpperCase().replace(/[^A-Z_]/g, "")) && t.trim()) return;
-      aiEl.innerHTML = answerHtml(turn, used, true);
-    });
-    turn.stats = statsText(r);
-    if (isNotInDocs(r.text)) {
-      turn.state = "notindocs";
-      turn.answer = undefined;
-    } else turn.answer = stripInvalidCitations(r.text, used);
-    setChip("ready");
-  } catch (e) {
-    engine = null;
-    turn.state = "error";
-    turn.note = `The AI answer failed: ${(e as Error).message}.`;
-    setChip("failed");
   } finally {
     guard(false);
     generating = false;
     ui.q.disabled = false;
+    renderDiag();
     aiEl.innerHTML = answerHtml(turn, used, false);
     el.querySelector(".res")!.innerHTML = resultsBlock(turn, chunks);
     saveChats();

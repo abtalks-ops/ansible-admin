@@ -104,7 +104,8 @@ Optional. In the settings panel (⚙), **Turn on AI answers** checks the device 
 - Delete downloaded data also removes the model.
 - Chat: each question is a turn in a chat. Chats are kept on the device (the ☰ drawer lists them, ＋ starts a new one) and are removed by Delete downloaded data. Each turn is answered on its own; earlier turns aren't passed to the model.
 - Crash safeguard: the app sets a flag while the model loads or answers. If the browser died in that window, the next open turns AI off and says so. The model runs with a 2,048-token window and a shorter prompt to keep phone memory low.
-- Testing without a GPU: open the app with `?llm=mock` for a canned model. The model picker is in the same panel and switching downloads the new model if needed. To try a model that is not in the picker, add `?model=<WebLLM model id>`.
+- GPU resets: some phones kill the GPU job (out of memory, or a watchdog on long jobs), which shows up as errors like `mapAsync … external Instance reference no longer exists`. The app then reloads the model and retries once with a shorter prompt (2 passages, 250-token answers, marked "short mode" under the answer) and keeps using short mode until AI is turned off and on. Settings has an **AI diagnostics** box with the GPU, limits, chosen model and any error, to paste into a bug report. GPUs without 16-bit shaders get the q4f32 build of the model.
+- Testing without a GPU: open the app with `?llm=mock` for a canned model (`?llm=mock-gpufail` makes the first answer fail like a GPU reset). The model picker is in the same panel and switching downloads the new model if needed. To try a model that is not in the picker, add `?model=<WebLLM model id>`.
 - `npm test` covers the prompt, citation and not-in-docs logic. Answer quality of the real model has **not** been measured yet: the build machine can't download it and has no GPU. That needs a device run.
 
 ## Known limits and next steps
