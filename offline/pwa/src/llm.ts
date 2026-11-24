@@ -3,13 +3,20 @@
 import type { MLCEngineInterface } from "@mlc-ai/web-llm";
 
 export interface Tier {
-  id: "small";
+  id: "llama" | "qwen" | "gemma";
   label: string;
   modelId: string; // an id from WebLLM's prebuilt model list
   downloadMB: number; // approximate, shown before the download
+  note: string;
 }
 
-export const SMALL: Tier = { id: "small", label: "Small", modelId: "Llama-3.2-1B-Instruct-q4f16_1-MLC", downloadMB: 700 };
+/** The small models users can choose between (all about 1 to 1.5 billion parameters, 4-bit). */
+export const TIERS: Tier[] = [
+  { id: "llama", label: "Llama 3.2 1B (Meta)", modelId: "Llama-3.2-1B-Instruct-q4f16_1-MLC", downloadMB: 700, note: "smallest memory, good default" },
+  { id: "qwen", label: "Qwen 2.5 1.5B (Alibaba)", modelId: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC", downloadMB: 950, note: "often better with code and YAML, needs more memory" },
+  { id: "gemma", label: "Gemma 3 1B (Google)", modelId: "gemma3-1b-it-q4f16_1-MLC", downloadMB: 700, note: "small and fast" },
+];
+export const DEFAULT_TIER = TIERS[0];
 
 // Read once: the app rewrites the query string as you search.
 const PARAMS = new URLSearchParams(location.search);

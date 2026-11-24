@@ -2,7 +2,7 @@
 // Phase 1 is search only: hybrid BM25 + vector retrieval, answer cards when present, sources always shown.
 import { SearchIndex, tokenize, unpack, type Chunk, type LoadedShard, type Manifest, type ShardMeta } from "../../shared/search.ts";
 import { buildPrompt, citedNumbers, isNotInDocs, stripInvalidCitations, type Used } from "../../shared/answer.ts";
-import { checkDevice, isDownloaded, loadEngine, mock, modelFor, SMALL, type Engine } from "./llm.ts";
+import { checkDevice, isDownloaded, loadEngine, mock, modelFor, TIERS, DEFAULT_TIER, type Engine, type Tier } from "./llm.ts";
 import { startRain } from "./rain.ts";
 
 const DATA_CACHE = "aa-data-v1";
@@ -20,7 +20,7 @@ const ui = {
   sizeInfo: $("sizeInfo"), downloadBtn: $<HTMLButtonElement>("downloadBtn"), progress: $("progress"), bar: $("bar"), progressText: $("progressText"),
   form: $<HTMLFormElement>("searchForm"), q: $<HTMLInputElement>("q"), status: $("status"), results: $("results"),
   answerBar: $("answerBar"), answerBtn: $<HTMLButtonElement>("answerBtn"), answer: $("answer"),
-  aiInfo: $("aiInfo"), aiBtn: $<HTMLButtonElement>("aiBtn"), aiProgress: $("aiProgress"), aiBar: $("aiBar"),
+  aiInfo: $("aiInfo"), aiBtn: $<HTMLButtonElement>("aiBtn"), aiModel: $<HTMLSelectElement>("aiModel"), aiProgress: $("aiProgress"), aiBar: $("aiBar"),
   menuBtn: $("menuBtn"), updateBtn: $<HTMLButtonElement>("updateBtn"), deleteBtn: $<HTMLButtonElement>("deleteBtn"), rainToggle: $<HTMLInputElement>("rainToggle"),
 };
 
@@ -29,6 +29,8 @@ let installed: Manifest | null = null;
 let embedQuery: ((q: string) => Promise<Float32Array>) | null = null;
 let embedderState: "idle" | "loading" | "ready" | "failed" = "idle";
 let engine: Engine | null = null;
+let engineModel = ""; // model id the loaded engine belongs to
+let tier: Tier = DEFAULT_TIER;
 let lastQuery = "";
 let lastHits: Chunk[] = [];
 let generating = false;
@@ -250,13 +252,20 @@ const setAi = (on: boolean) => {
   } catch {}
 };
 
+try {
+  tier = TIERS.find((t) => t.id === localStorage.getItem("aa-ai-model")) ?? DEFAULT_TIER;
+} catch {}
+ui.aiModel.innerHTML = TIERS.map((t) => `<option value="${t.id}">${esc(t.label)} · about ${t.downloadMB} MB · ${esc(t.note)}</option>`).join("");
+ui.aiModel.value = tier.id;
+
 function renderAiPanel(msg = "") {
   const on = aiOn();
-  ui.aiBtn.textContent = on ? "Turn off AI answers" : `Turn on AI answers (about ${SMALL.downloadMB} MB)`;
+  ui.aiModel.value = tier.id;
+  ui.aiBtn.textContent = on ? "Turn off AI answers" : `Turn on AI answers (about ${tier.downloadMB} MB)`;
   ui.aiInfo.textContent =
     msg ||
     (on
-      ? `On. ${SMALL.label} model, runs on this device after a one-time download. Answers are written from the search results and can be wrong: check the sources.`
+      ? `On. ${tier.label}, runs on this device after a one-time download. Answers are written from the search results and can be wrong: check the sources.`
       : "A small language model on this device can write a short answer from the top search results. Needs a recent browser with WebGPU. Search works without it.");
 }
 
@@ -272,12 +281,17 @@ async function cacheWebLlm() {
 }
 
 async function ensureEngine(onProgress: (f: number, t: string) => void): Promise<Engine> {
-  if (engine) return engine;
+  if (engine && engineModel === modelFor(tier)) return engine;
+  if (engine) {
+    await engine.unload().catch(() => {});
+    engine = null;
+  }
   await cacheWebLlm().catch((e) => {
     if (!mock()) throw e;
   });
   await navigator.storage?.persist?.();
-  engine = await loadEngine(SMALL, onProgress);
+  engine = await loadEngine(tier, onProgress);
+  engineModel = modelFor(tier);
   return engine;
 }
 
@@ -292,7 +306,7 @@ async function toggleAi() {
   }
   const dev = await checkDevice();
   if (!dev.ok) return renderAiPanel(dev.reason);
-  if (!(await isDownloaded(SMALL)) && !confirm(`Download the ${SMALL.label} AI model (about ${SMALL.downloadMB} MB)? Wi-Fi recommended. It stays on this device.`)) return;
+  if (!(await isDownloaded(tier)) && !confirm(`Download ${tier.label} (about ${tier.downloadMB} MB)? Wi-Fi recommended. It stays on this device.`)) return;
   ui.aiBtn.disabled = true;
   ui.aiProgress.hidden = false;
   try {
@@ -340,7 +354,7 @@ function showAnswer(text: string, used: Used[], state: "busy" | "done" | "notind
       : state === "error"
         ? `<p class="muted">${esc(note)}</p>`
         : withCitations(md(text), used);
-  ui.answer.innerHTML = `<h3><span>✦ Answer</span><span class="tools">${stop}</span></h3><div class="body">${body}</div>${sources}${state === "done" ? `<p class="muted small note">Written on this device by ${esc(modelFor(SMALL))} from the results below. It can make mistakes: check the sources.</p>` : ""}`;
+  ui.answer.innerHTML = `<h3><span>✦ Answer</span><span class="tools">${stop}</span></h3><div class="body">${body}</div>${sources}${state === "done" ? `<p class="muted small note">Written on this device by ${esc(modelFor(tier))} from the results below. It can make mistakes: check the sources.</p>` : ""}`;
 }
 
 async function writeAnswer() {
@@ -431,6 +445,20 @@ async function runInstall(btn: HTMLButtonElement) {
 ui.downloadBtn.addEventListener("click", () => runInstall(ui.downloadBtn));
 ui.answerBtn.addEventListener("click", () => void writeAnswer());
 ui.aiBtn.addEventListener("click", () => void toggleAi());
+ui.aiModel.addEventListener("change", async () => {
+  tier = TIERS.find((t) => t.id === ui.aiModel.value) ?? DEFAULT_TIER;
+  try {
+    localStorage.setItem("aa-ai-model", tier.id);
+  } catch {}
+  ui.answer.hidden = true;
+  if (!aiOn()) return renderAiPanel();
+  // AI is on: switch now, downloading the new model if it isn't on this device yet.
+  setAi(false);
+  await engine?.unload().catch(() => {});
+  engine = null;
+  renderAiPanel();
+  await toggleAi();
+});
 ui.answer.addEventListener("click", (e) => {
   if ((e.target as HTMLElement).id === "stopBtn") engine?.interruptGenerate();
 });
