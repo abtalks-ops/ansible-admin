@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fc92ee630343aad1",
+ "chunk_hash": "fc92ee630343aad1",
+ "summary": "If jobs stop syncing to automation dashboard after an upgrade, an interrupted sync job is stuck: connect to the aapdashboard database with psql, find rows in scheduler_syncjob still pending, waiting or running after a minute, and delete them by id.",
+ "questions": [
+  "Automation dashboard not syncing new jobs after upgrade",
+  "How do I delete stuck sync jobs in automation dashboard?",
+  "What is the scheduler_syncjob table?"
+ ],
+ "answer_card": {
+  "title": "Clear stuck automation dashboard sync jobs",
+  "answer_md": "```bash\nPOSTGRES_PASSWORD=<dashboard_pg_password> psql -h 127.0.0.1 -p 5432 -U aapdashboard -d aapdashboard\n```\n```sql\nSELECT * FROM scheduler_syncjob WHERE status IN ('pending','waiting','running');\n-- wait a minute, run again; IDs still listed are stuck\nDELETE from scheduler_syncjob WHERE id IN (<id>);\n```\nRefresh the dashboard to confirm sync resumed.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_dashboard/index#proc-troubleshooting-sync-failures"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:16:33+00:00"
+}

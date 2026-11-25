@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d6fccd4b9de190fb",
+ "chunk_hash": "d6fccd4b9de190fb",
+ "summary": "Already-installed components can be linked to a new AAP instance; the example keeps an existing controller and adds hub and Event-Driven Ansible.",
+ "questions": [
+  "Can I add the platform gateway to an existing automation controller on OpenShift?",
+  "Link an existing controller to a new AAP instance",
+  "Add hub and EDA to an existing controller deployment"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

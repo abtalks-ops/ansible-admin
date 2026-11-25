@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a00b46ffff2492cb",
+ "chunk_hash": "a00b46ffff2492cb",
+ "summary": "Read container logs with `journalctl CONTAINER_NAME=<name>` or follow them with `podman logs -f <container_name>`.",
+ "questions": [
+  "How do I see logs of a containerized AAP service?",
+  "How do I tail automation-gateway-proxy logs?",
+  "journalctl for podman containers in AAP"
+ ],
+ "answer_card": {
+  "title": "Container logs",
+  "answer_md": "```bash\njournalctl CONTAINER_NAME=automation-gateway-proxy\npodman logs -f <container_name>\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#diagnosing-the-problem"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:09+00:00"
+}

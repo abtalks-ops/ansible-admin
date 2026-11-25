@@ -1,0 +1,14 @@
+{
+ "chunk_id": "6ca24d8bc4fd977e",
+ "chunk_hash": "6ca24d8bc4fd977e",
+ "summary": "Prompt 'Validate my webserver playbook to check for any issues' to run ansible-lint in check-only mode, listing rule IDs, line numbers and descriptions (e.g. missing FQCN, YAML formatting); the assistant then asks permission, and allow applies the fixes while skip just lists suggested fixes.",
+ "questions": [
+  "How do I validate a playbook with the AI assistant without changing it?",
+  "Does the assistant change my code without asking?",
+  "What happens if I choose skip when the assistant offers fixes?",
+  "Run ansible-lint in check-only mode from Copilot"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

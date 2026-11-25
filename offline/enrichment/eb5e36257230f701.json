@@ -1,0 +1,17 @@
+{
+ "chunk_id": "eb5e36257230f701",
+ "chunk_hash": "eb5e36257230f701",
+ "summary": "Secure logging uses an external, protected log store with time-correlated events: in Settings > Automation Execution > Logging set the aggregator host, Enable External Logging On, Level Threshold DEBUG, TCP Connection Timeout 5 and HTTPS certificate verification On. AAP should shut down on log failure unless it is part of a high availability system.",
+ "questions": [
+  "What logging settings does STIG require for AAP?",
+  "How do I configure secure logging in AAP?",
+  "Should AAP shut down on logging failure?"
+ ],
+ "answer_card": {
+  "title": "Secure logging settings",
+  "answer_md": "**Settings > Automation Execution > Logging > Edit**:\n- Logging Aggregator: external log server\n- Enable External Logging: **On**\n- Logging Aggregator Level Threshold: **DEBUG**\n- TCP Connection Timeout: **5** (or your org value)\n- HTTPS certificate verification: **On**\n\nSave.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-implement-security-control"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

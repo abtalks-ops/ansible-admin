@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8b33a259aea28e58",
+ "chunk_hash": "8b33a259aea28e58",
+ "summary": "For GitLab, create a personal access token with the api scope, save it as a GitLab PAT credential, select GitLab and the credential on the job template, then add the webhook under the repository's Settings > Integrations.",
+ "questions": [
+  "What scope does the GitLab token need for controller webhooks?",
+  "How do I set up a GitLab webhook for automation controller?",
+  "Where do I add a webhook in GitLab?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

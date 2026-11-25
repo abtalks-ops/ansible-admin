@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1f1d81833380b41f",
+ "chunk_hash": "1f1d81833380b41f",
+ "summary": "Organization administrators manage the organization's membership and settings, such as creating users and teams. Add them from the organization's Administrators tab with Add administrators; removing the admin role keeps prior membership but removes users who were added only by the admin assignment.",
+ "questions": [
+  "How do I make a user an organization administrator?",
+  "What can an organization administrator do?",
+  "Does removing an org admin remove them from the organization?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

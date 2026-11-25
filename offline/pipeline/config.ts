@@ -17,7 +17,22 @@ export interface RepoSource {
   dir: string;
   licence: string; // still to be verified before launch, see the design doc
   url: (relPath: string) => string;
+  /** "rst" (default): RST/Markdown pages. "asciidoc": Red Hat books under titles/ (ansible/aap-docs). */
+  kind?: "rst" | "asciidoc";
+  /** Product and version the shard is labelled with; defaults to PRODUCT and VERSION. */
+  product?: string;
+  version?: string;
 }
+
+/** Red Hat Ansible Automation Platform docs version (ansible/aap-docs branch). */
+export const AAP_VERSION = process.env.AAP_VERSION ?? "2.6";
+/**
+ * The aap-docs commit the committed chunks and enrichment were made from. Chunk ids hash the
+ * text, so building from a newer commit can orphan enrichment; move the pin on purpose, then run
+ * `npm run check:enrichment`. AAP_REF overrides it (a branch name or commit).
+ */
+const AAP_PIN: Record<string, string> = { "2.6": "0eb284c4d9011314f865be991ae63a6a1b4faeb3" };
+export const AAP_REF = process.env.AAP_REF ?? AAP_PIN[AAP_VERSION] ?? AAP_VERSION;
 
 export const SOURCES: RepoSource[] = [
   {
@@ -27,6 +42,19 @@ export const SOURCES: RepoSource[] = [
     dir: "docs/docsite/rst",
     licence: "GPL-3.0-or-later",
     url: (rel) => `https://docs.ansible.com/ansible/latest/${rel.replace(/\.rst$/, ".html")}`,
+  },
+  {
+    // Red Hat's own source for docs.redhat.com. CC BY-SA 4.0 (LICENSE.txt in the repo):
+    // passages and the enrichment written from them are shared under the same licence, credited to Red Hat.
+    name: "Red Hat AAP docs",
+    repo: "ansible/aap-docs",
+    ref: AAP_REF,
+    dir: "downstream",
+    licence: "CC-BY-SA-4.0",
+    url: () => `https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/${AAP_VERSION}`,
+    kind: "asciidoc",
+    product: "aap",
+    version: AAP_VERSION,
   },
 ];
 

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2627f79e4706d7e8",
+ "chunk_hash": "2627f79e4706d7e8",
+ "summary": "Lightspeed variables lightspeed_secret_key, lightspeed_tls_cert/key, lightspeed_tls_remote and backup compression settings.",
+ "questions": [
+  "How do I set a TLS certificate for Ansible Lightspeed?",
+  "What is lightspeed_secret_key?",
+  "Lightspeed backup compression variables"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:03:21+00:00"
+}

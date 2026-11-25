@@ -1,0 +1,13 @@
+{
+ "chunk_id": "14eb73b836bfdcb7",
+ "chunk_hash": "14eb73b836bfdcb7",
+ "summary": "Grant access to an existing credential from its User Access tab with Add roles, then assign it to job templates from the Job templates tab.",
+ "questions": [
+  "How do I give a user access to a credential?",
+  "How do I add a credential to more job templates?",
+  "Where do I see who can use a credential?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

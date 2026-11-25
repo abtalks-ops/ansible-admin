@@ -1,0 +1,17 @@
+{
+ "chunk_id": "39da442dbf9f0de5",
+ "chunk_hash": "39da442dbf9f0de5",
+ "summary": "Schedule metrics-utility with `crontab -e`; the example runs the gather script hourly (`0 */1 * * *`) and the report script at 4:00 AM on the 2nd of each month (`0 4 2 * *`).",
+ "questions": [
+  "How do I schedule metrics-utility with cron?",
+  "How often should metrics-utility gather run?",
+  "crontab example for metrics-utility build_report"
+ ],
+ "answer_card": {
+  "title": "Schedule metrics-utility on RHEL",
+  "answer_md": "Run `crontab -e` and add:\n```\n0 */1 * * * /home/my-user/cron-gather   # gather hourly\n0 4 2 * * /home/my-user/cron-report      # report 04:00 on the 2nd\n```\nVerify with `crontab -l` and `/var/log/cron`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#controller-metrics-utility-rhel"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:00:30+00:00"
+}

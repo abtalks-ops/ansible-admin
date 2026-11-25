@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b0e88ff20856fe76",
+ "chunk_hash": "b0e88ff20856fe76",
+ "summary": "Using a custom inventory plugin such as servicenow.itsm.now: a project with requirements.yml listing the collection and an inventory file ending now.yml, then a Sourced from a Project inventory pointing at / (project root) and sync.",
+ "questions": [
+  "How do I use the ServiceNow inventory plugin in AAP?",
+  "How do I use a collection inventory plugin in controller?",
+  "Why must my ServiceNow inventory file end in now.yml?"
+ ],
+ "answer_card": {
+  "title": "Use a collection inventory plugin",
+  "answer_md": "1. In a Git project, add `collections/requirements.yml` (or `requirements.yml`) listing the collection, e.g. `servicenow.itsm`.\n2. Add a plugin config file with the plugin's required name, e.g. `inventories/myinventory.now.yml` with `plugin: servicenow.itsm.now`.\n3. Create an inventory source **Sourced from a Project**, choose the project and `/ (project root)` as the inventory file.\n4. Sync the source.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#proc-controller-use-custom-inventory"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

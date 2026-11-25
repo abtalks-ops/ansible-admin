@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ccc0fbfa8ab44472",
+ "chunk_hash": "ccc0fbfa8ab44472",
+ "summary": "If mesh-CA.crt (/etc/receptor/tls/ca/ on RPM, $HOME/aap/receptor/etc/ on containerized) holds more than 10 certificates an error occurs: back it up, keep only the first certificate, and restart receptor on every controller and execution node.",
+ "questions": [
+  "Error with too many certificates in mesh-CA.crt",
+  "How do I fix multiple signed certificates in receptor?",
+  "Where is mesh-CA.crt on a containerized install?"
+ ],
+ "answer_card": {
+  "title": "Fix mesh-CA.crt with more than 10 certificates",
+  "answer_md": "On every controller and execution node:\n```bash\n# RPM\ncp -p /etc/receptor/tls/ca/mesh-CA.crt /etc/receptor/tls/ca/mesh-CA.crt-$(date +%F)\n# keep only the first certificate in the file, then\nsystemctl restart receptor\n\n# Containerized\ncp -p $HOME/aap/receptor/etc/mesh-CA.crt $HOME/aap/receptor/etc/mesh-CA.crt-$(date +%F)\n# keep only the first certificate, then\nsystemctl --user restart receptor\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_vm_environments/index#importing-mesh-ca_setting-up"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:17:07+00:00"
+}

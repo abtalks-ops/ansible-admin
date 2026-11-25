@@ -1,0 +1,13 @@
+{
+ "chunk_id": "220b7e2ca1046ed3",
+ "chunk_hash": "220b7e2ca1046ed3",
+ "summary": "Devices join a fleet when their labels match the fleet's selector, e.g. type=pos-terminal for all terminals or type=pos-terminal,stage=development for a dev fleet; selectors must not overlap, and if two fleets select the same device it stays in its current fleet.",
+ "questions": [
+  "How are devices assigned to fleets?",
+  "How do I split devices into dev and production fleets?",
+  "What happens if two fleet selectors match the same device?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

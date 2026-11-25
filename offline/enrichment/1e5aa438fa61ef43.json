@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1e5aa438fa61ef43",
+ "chunk_hash": "1e5aa438fa61ef43",
+ "summary": "Credentials authenticate jobs, inventory syncs and project imports (SSH and AWS are most common); list credential types with curl and a bearer token against /api/controller/v2/credential_types/.",
+ "questions": [
+  "How do I list credential types in AAP?",
+  "Which credential types can the Resource Operator create?",
+  "/api/controller/v2/credential_types/"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

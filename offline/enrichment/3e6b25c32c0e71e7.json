@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3e6b25c32c0e71e7",
+ "chunk_hash": "3e6b25c32c0e71e7",
+ "summary": "After upgrading, controller admins become platform admins who can administer hub; a 2.4 to 2.6 upgrade with private hub shows an in-product dialog for reconfiguring hub, and controller-only environments need roles added to grant hub and EDA access.",
+ "questions": [
+  "Can controller admins manage automation hub after upgrading to 2.6?",
+  "What is the post-upgrade dialog about private automation hub?",
+  "How do users get access to hub and EDA after upgrading a controller-only install?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

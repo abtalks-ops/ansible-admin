@@ -1,0 +1,14 @@
+{
+ "chunk_id": "ced467271ef81610",
+ "chunk_hash": "ced467271ef81610",
+ "summary": "Set baseDomain to the host's DNS name (e.g. rhem-example.com) so URLs and certificates are right; enable and start flightctl.target and check the 7 services flightctl-db, -kv, -api, -periodic, -worker, -ui and -cli-artifacts; open the UI at baseDomain and debug with journalctl -u flightctl-<service> -b --no-pager.",
+ "questions": [
+  "What services should be running for Red Hat Edge Manager?",
+  "How do I find the Edge Manager UI address?",
+  "Why are Edge Manager certificates wrong for my domain?",
+  "How do I troubleshoot a failing flightctl service?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4ef4e0c68facfbf8",
+ "chunk_hash": "4ef4e0c68facfbf8",
+ "summary": "Terraform Community Edition users can migrate to Terraform Enterprise or HCP Terraform and integrate AAP with cloud.terraform, though hashicorp.terraform is recommended; existing cloud.terraform users can migrate to hashicorp.terraform.",
+ "questions": [
+  "How do Terraform community users integrate with AAP?",
+  "Can I move from cloud.terraform to hashicorp.terraform?",
+  "Which collection is recommended after migrating from Terraform Community Edition?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

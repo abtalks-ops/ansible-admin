@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4ab45a1c01a3544a",
+ "chunk_hash": "4ab45a1c01a3544a",
+ "summary": "Exported inventory scripts are directly executable and print inventory JSON; check them with ansible-inventory -i <script> --list --export, then git init the folder, push it and create an SCM inventory source.",
+ "questions": [
+  "How do I test an exported inventory script?",
+  "How do I move old inventory scripts into source control?",
+  "How do I check script output with ansible-inventory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

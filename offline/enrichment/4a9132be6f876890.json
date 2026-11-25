@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4a9132be6f876890",
+ "chunk_hash": "4a9132be6f876890",
+ "summary": "Savings formulas: manual cost per template = manual time per host × total hosts across runs × cost per hour; automation cost per template = automation cost per hour × total elapsed hours; savings = sum of (manual − automation cost) across templates.",
+ "questions": [
+  "What formula does the automation calculator use?",
+  "How is manual cost per template calculated?",
+  "How are automation savings computed?"
+ ],
+ "answer_card": {
+  "title": "Automation savings formulas",
+  "answer_md": "- **Manual cost per template** = time for a manual run on one host × sum of hosts across job runs × cost per hour\n- **Automation cost per template** = automation cost per hour × total elapsed hours for the template\n- **Savings** = Σ (manual cost − automation cost) across all templates",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_analytics/index#con-automation-formula"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

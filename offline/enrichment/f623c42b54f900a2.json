@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f623c42b54f900a2",
+ "chunk_hash": "f623c42b54f900a2",
+ "summary": "Hub access variables: read-only access and unauthenticated collection downloads for anonymous users (both default false), and hub_firewall_zone (container default public).",
+ "questions": [
+  "How do I allow anonymous collection downloads from automation hub?",
+  "Enable read-only hub access for unauthenticated users",
+  "What firewall zone does automation hub use?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:09+00:00"
+}

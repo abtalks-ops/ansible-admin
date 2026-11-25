@@ -1,0 +1,13 @@
+{
+ "chunk_id": "500b5b2b86515875",
+ "chunk_hash": "500b5b2b86515875",
+ "summary": "Workflows with Run or Check jobs can have surveys set up in the workflow job template screens, configured the same way as job template surveys.",
+ "questions": [
+  "Can I add a survey to a workflow job template?",
+  "How do workflow surveys work?",
+  "Do optional survey rules apply to workflows?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

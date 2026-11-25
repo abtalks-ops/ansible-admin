@@ -1,0 +1,14 @@
+{
+ "chunk_id": "1f96035fbd07153e",
+ "chunk_hash": "1f96035fbd07153e",
+ "summary": "build_arg_defaults sets default build args (ANSIBLE_GALAXY_CLI_COLLECTION_OPTS, ANSIBLE_GALAXY_CLI_ROLE_OPTS, PKGMGR_PRESERVE_CACHE) that are hard-coded into the Containerfile; a CLI --build-arg overrides them.",
+ "questions": [
+  "How do I install pre-release collections with ansible-builder?",
+  "What does PKGMGR_PRESERVE_CACHE do?",
+  "Does --build-arg override build_arg_defaults?",
+  "Pass --no-deps to role installation in ansible-builder"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b98b1ea8409290d1",
+ "chunk_hash": "b98b1ea8409290d1",
+ "summary": "AAP hardening guidance covers RHEL deployments from planning to Day 2, not OpenShift or cloud marketplace managed services, and must be combined with RHEL hardening.",
+ "questions": [
+  "Does the AAP hardening guide cover OpenShift?",
+  "Which AAP deployments does the hardening guide cover?",
+  "Do I need RHEL hardening too?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:03:21+00:00"
+}

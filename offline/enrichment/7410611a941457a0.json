@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7410611a941457a0",
+ "chunk_hash": "7410611a941457a0",
+ "summary": "Automation mesh is an overlay network that distributes automation to execution nodes (which run execution environments and playbooks) over peer-to-peer connections, improving resilience to latency and allowing independent scaling of control and execution capacity.",
+ "questions": [
+  "What is automation mesh?",
+  "Where do playbooks actually run in AAP?",
+  "How does automation mesh help with network latency?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

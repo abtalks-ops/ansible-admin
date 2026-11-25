@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f42f23bb86a21df8",
+ "chunk_hash": "f42f23bb86a21df8",
+ "summary": "Test a selector with `flightctl get devices -l type=pos-terminal -l stage=development`, define a Fleet with spec.selector.matchLabels, apply it, then check the OverlappingSelectors condition with `flightctl get fleets/my_fleet -o json | jq ...`.",
+ "questions": [
+  "How do I create a fleet with a label selector on the CLI?",
+  "How do I check for overlapping fleet selectors?",
+  "How do I preview which devices a fleet will select?"
+ ],
+ "answer_card": {
+  "title": "Create a fleet from labels",
+  "answer_md": "```bash\nflightctl get devices -l type=pos-terminal -l stage=development   # preview\n```\n```yaml\napiVersion: flightctl.io/v1alpha1\nkind: Fleet\nmetadata: {name: my_fleet}\nspec:\n  selector:\n    matchLabels:\n      type: pos-terminal\n      stage: development\n```\n```bash\nflightctl apply -f my_fleet.yaml\nflightctl get fleets/my_fleet -o json | jq -r '.status.conditions[] | select(.type==\"OverlappingSelectors\").status'   # expect False\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_device_fleets_with_the_red_hat_edge_manager/index#edge-manager-add-devices-cli"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

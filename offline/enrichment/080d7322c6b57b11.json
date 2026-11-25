@@ -1,0 +1,14 @@
+{
+ "chunk_id": "080d7322c6b57b11",
+ "chunk_hash": "080d7322c6b57b11",
+ "summary": "How jobs behave with instance groups: any instance in a group is equally likely to get a job, new instances add capacity to the cluster and their groups, a busy instance in several groups reduces capacity in all of them, and deprovisioning removes its capacity everywhere.",
+ "questions": [
+  "How are jobs distributed across instances in an instance group?",
+  "Does an instance in multiple groups reduce capacity in all of them?",
+  "What happens to capacity when I deprovision an instance?",
+  "Do all instances need equal capacity?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

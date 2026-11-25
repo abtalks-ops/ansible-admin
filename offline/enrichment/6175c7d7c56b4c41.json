@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6175c7d7c56b4c41",
+ "chunk_hash": "6175c7d7c56b4c41",
+ "summary": "After upgrading automation dashboard, copy clusters.yaml into the automation-dashboard-web container and run manage.py setclusters; verify with manage.py getclusters --decrypt that access_token, refresh_token, client_id and client_secret appear.",
+ "questions": [
+  "How do I apply clusters.yaml to automation dashboard?",
+  "How do I check the automation dashboard cluster configuration?",
+  "manage.py setclusters automation dashboard"
+ ],
+ "answer_card": {
+  "title": "Load clusters.yaml into automation dashboard",
+  "answer_md": "```bash\npodman cp clusters.yaml automation-dashboard-web:/tmp/\npodman exec -it automation-dashboard-web /venv/bin/python manage.py setclusters /tmp/clusters.yaml\n# verify\npodman exec -it automation-dashboard-web /venv/bin/python ./manage.py getclusters --decrypt\n```\nThe output should show `access_token`, `refresh_token`, `client_id` and `client_secret`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_dashboard/index#proc-upgrading-automation-dashboard"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:16:33+00:00"
+}

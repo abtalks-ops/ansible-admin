@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ec4c7a81c354ed0a",
+ "chunk_hash": "ec4c7a81c354ed0a",
+ "summary": "The install playbook must first include ansible.mcp_builder.common with public: true, then your role, then fix ownership of common_mcp_base_path for common_runtime_user; the built-in install_mcp playbook only handles ansible.mcp_builder roles.",
+ "questions": [
+  "Why must ansible.mcp_builder.common use public: true?",
+  "Can I use ansible.mcp_builder.install_mcp with my own role?",
+  "How do I write the install playbook for a custom MCP role?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:45+00:00"
+}

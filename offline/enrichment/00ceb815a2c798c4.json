@@ -1,0 +1,13 @@
+{
+ "chunk_id": "00ceb815a2c798c4",
+ "chunk_hash": "00ceb815a2c798c4",
+ "summary": "The Ansible MCP server gives AI tools a standard, secure interface to query AAP data and run workflows, enabling agentic workflows without custom API code or middleware.",
+ "questions": [
+  "What are the benefits of the Ansible MCP server?",
+  "Why use MCP instead of the AAP API directly?",
+  "Can AI agents run AAP workflows?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:00:58+00:00"
+}

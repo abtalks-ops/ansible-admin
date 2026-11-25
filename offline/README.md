@@ -52,7 +52,8 @@ docs repo ──fetch──> normalize ──> chunk ──> tag ──> enrich 
 
 ### The PWA (`pwa/`)
 
-- First open: it shows the download size and downloads everything into Cache Storage with progress. It asks for persistent storage so the browser doesn't evict the index.
+- Doc sets: ansible-core is always included. Red Hat Ansible Automation Platform 2.6 (3,147 passages, about 11 MB) is optional: the first screen and Settings list each doc set with its passage count and size. It is ticked by default on a desktop and unticked on a phone. Unticking it in Settings removes its shards; ticking it downloads them.
+- First open: it shows the download size of the chosen doc sets and downloads them into Cache Storage with progress. It asks for persistent storage so the browser doesn't evict the index.
 - Updates: it compares the remote manifest with the installed one and downloads only the shard files that are new. Shard file names change whenever their content changes. The new manifest is swapped in only after every file is cached, so a half-finished download never breaks search.
 - Search: keyword search is ready as soon as the index loads, and semantic search joins once the embedder has loaded (about 1 to 2 s). Results show highlighted matches, the source link and the licence, with copy buttons on code blocks.
 - Offline: a service worker serves the app shell and all downloaded files. This was tested by loading and searching in Chromium with the network switched off.
@@ -65,7 +66,9 @@ npm ci
 pip install "ansible-core>=2.22,<2.23"     # for the ansible.builtin plugin docs
 ./scripts/fetch-model.sh                    # embedder files, pinned revision, into models/
 
-npm run build:index                         # -> dist/index (shards + manifest), chunks/ansible-core-2.22.jsonl
+npm run build:index                         # -> dist/index (shards + manifest), chunks/ansible-core-2.22.jsonl and chunks/aap-2.6.jsonl
+npm run check:enrichment                    # every chunk has one valid enrichment file, card links match, no {attr} in URLs
+npm run eval -- --set eval/smoke-aap.jsonl  # 32 AAP questions (report only, no gate yet)
 npm run eval -- --set eval/smoke.jsonl      # or --set <golden.jsonl> --subset <pilot_meta.json>
 npm run build:pwa                           # -> pwa/dist (static site)
 npm run serve                               # http://localhost:8080
@@ -75,7 +78,7 @@ To try it on a phone, serve `pwa/dist` over HTTPS (service workers need it), for
 
 ## Contributing enrichment
 
-Add one file per chunk at `enrichment/<chunk_hash>.json`. Chunk hashes are listed in `chunks/ansible-core-2.22.jsonl`.
+Add one file per chunk at `enrichment/<chunk_hash>.json`. Chunk hashes are listed in `chunks/ansible-core-2.22.jsonl` and `chunks/aap-2.6.jsonl`. The AAP chunks are built from a pinned `ansible/aap-docs` commit (`AAP_REF` in `pipeline/config.ts`), so their ids stay stable. See [NOTICE.md](NOTICE.md) for the licence of each part.
 
 ```json
 {
@@ -89,7 +92,7 @@ Add one file per chunk at `enrichment/<chunk_hash>.json`. Chunk hashes are liste
 }
 ```
 
-`answer_card` is optional (null or left out). Files are validated when the index is built, and invalid ones are skipped with a warning. A file whose hash no longer matches any chunk is ignored.
+`answer_card` is optional (null or left out). Its `source_url` must be the chunk's own URL. Files are validated when the index is built, and invalid ones are skipped with a warning. A file whose hash no longer matches any chunk is ignored by the build, and `npm run check:enrichment` (run in CI) reports it.
 
 ## CI
 
@@ -115,6 +118,8 @@ With AI on, every question gets an answer written on the device. The chip in the
 
 ## Known limits and next steps
 
+- Long code blocks are still cut at exactly 1,800 characters, sometimes mid-line (58 AAP and 131 ansible-core passages). Cutting at a line break changes those chunk ids, so it is a separate change with re-enrichment of about 290 passages.
+- The AAP smoke set has no gate yet: record a baseline from the first CI run, then gate on it like the ansible-core set.
 - The smoke-set gate in CI uses 40 questions. Switch it to the golden set once that can live in the repo.
 - Some sections produce several adjacent chunks, so the same heading can appear more than once in the results. Grouping results by section is a small UI follow-up.
 - The embedder used for the numbers above was quantized locally from the official fp32 export, because this build machine can't reach huggingface.co. CI uses the official `model_quantized.onnx` at a pinned revision, so its numbers may differ slightly.

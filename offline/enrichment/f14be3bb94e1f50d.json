@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f14be3bb94e1f50d",
+ "chunk_hash": "f14be3bb94e1f50d",
+ "summary": "Test playbooks in a non-production environment with ansible-navigator, a TUI that runs content in execution environments; ansible-navigator run <playbook> --eei <ee_image> replicates the AAP production setup and lets you step into each play and task.",
+ "questions": [
+  "How do I test a playbook against an execution environment?",
+  "ansible-navigator run with a specific execution environment image",
+  "What does --eei do in ansible-navigator?",
+  "How can I replicate my AAP environment when testing playbooks locally?"
+ ],
+ "answer_card": {
+  "title": "Test a playbook in an execution environment",
+  "answer_md": "```bash\nansible-navigator run site.yml --eei ee-minimal-rhel8\n```\n`--eei` (`--execution-environment-image`) picks the EE so the test matches how Ansible Automation Platform runs the job. Run it against a lab or VM, then step into each play and task in the output.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/developing_automation_content/index#test-playbook_writing-running-playbook"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

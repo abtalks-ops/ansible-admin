@@ -1,0 +1,13 @@
+{
+ "chunk_id": "03aa82288501c086",
+ "chunk_hash": "03aa82288501c086",
+ "summary": "Covers planning an Operator upgrade from a 2.4 multi-node controller and automation hub deployment to the 2.6 enterprise topology.",
+ "questions": [
+  "How do I upgrade a multi node controller and hub Operator deployment to 2.6?",
+  "Which 2.6 topology does a redundant 2.4 controller and hub map to?",
+  "What should I review before upgrading 2.4 multi-node AAP on OpenShift?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "75813a56c962df12",
+ "chunk_hash": "75813a56c962df12",
+ "summary": "Upgrade the chart on the CLI with helm repo update, helm search repo openshift-helm-charts/redhat-rhaap-portal and helm upgrade <release> openshift-helm-charts/redhat-rhaap-portal --version <chart_version>, or in the console via Helm > release > Actions > Upgrade choosing the Chart Version and checking custom values; then confirm pods are Running in Topology.",
+ "questions": [
+  "helm upgrade command for self-service automation portal",
+  "How do I find the latest portal chart version?",
+  "Upgrade the portal chart from the OpenShift console"
+ ],
+ "answer_card": {
+  "title": "Upgrade the portal Helm chart",
+  "answer_md": "**CLI**\n```bash\nhelm repo update\nhelm search repo openshift-helm-charts/redhat-rhaap-portal\nhelm upgrade <release_name> openshift-helm-charts/redhat-rhaap-portal --version <chart_version>\n```\n**Console**: Developer > **Helm** > release > **Actions > Upgrade** > pick *Chart Version*, check the YAML keeps your custom values > **Upgrade**.\n\nThen check Topology: all portal pods *Running*.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#rhdh-update-helm_self-service-upgrading"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

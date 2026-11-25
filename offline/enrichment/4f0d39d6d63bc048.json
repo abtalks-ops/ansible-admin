@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4f0d39d6d63bc048",
+ "chunk_hash": "4f0d39d6d63bc048",
+ "summary": "Example step using rhaap:create-project with the AAP token, deleteIfExist true, project name and organization from parameters, a GitHub scmUrl, branch main, scmUpdateOnLaunch true and a GitHub Token credential.",
+ "questions": [
+  "Show an example of rhaap:create-project in a template",
+  "How do I set the SCM branch in rhaap:create-project?",
+  "How do I pass the AAP token to a Backstage action?"
+ ],
+ "answer_card": {
+  "title": "rhaap:create-project example",
+  "answer_md": "```yaml\nsteps:\n  - id: create-aap-project\n    name: Create AAP Project\n    action: rhaap:create-project\n    input:\n      token: ${{ parameters.AAP_TOKEN }}\n      deleteIfExist: true\n      values:\n        projectName: ${{ parameters.projectName }}\n        organization: ${{ parameters.organization }}\n        scmUrl: https://github.com/my-org/ansible-playbooks\n        scmBranch: main\n        scmUpdateOnLaunch: true\n        credentials: GitHub Token\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_self_service_automation_portal/index#devtools-create-project_self-service-rbac"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:23+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b439cca1c4d67358",
+ "chunk_hash": "b439cca1c4d67358",
+ "summary": "Automation content navigator helps content creators develop playbooks, collections and roles compatible with AAP, with the same results on local machines and in execution environments, and produces artifact files for troubleshooting. It is part of Ansible development tools, which you must install to use it.",
+ "questions": [
+  "What is automation content navigator?",
+  "How do I get ansible-navigator?",
+  "Is ansible-navigator part of Ansible development tools?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

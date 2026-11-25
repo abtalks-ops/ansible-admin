@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8336d17aeee1821a",
+ "chunk_hash": "8336d17aeee1821a",
+ "summary": "enable_insights_collection (default true) registers nodes with Red Hat Lightspeed for AAP; registry_password and registry_url define the image registry and are not needed for bundled installs.",
+ "questions": [
+  "How do I stop AAP registering with Red Hat Insights?",
+  "When is registry_password required?",
+  "What does registry_url do?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:48+00:00"
+}

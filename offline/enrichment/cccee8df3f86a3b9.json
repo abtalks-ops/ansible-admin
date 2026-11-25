@@ -1,0 +1,17 @@
+{
+ "chunk_id": "cccee8df3f86a3b9",
+ "chunk_hash": "cccee8df3f86a3b9",
+ "summary": "Create an AAP instance from the Ansible Automation Platform tile (Details tab) with a spec setting database requests, controller, eda and hub (file storage on a RWX storage class), then check All instances and that pods are Running or Completed.",
+ "questions": [
+  "How do I create an Ansible Automation Platform instance in the OpenShift console?",
+  "Example spec for AAP with controller, EDA and hub",
+  "How do I link components to the platform gateway?"
+ ],
+ "answer_card": {
+  "title": "Create the AAP instance",
+  "answer_md": "Operators > Installed Operators > AAP > Details > *Ansible Automation Platform* > Create instance > YAML view:\n```yaml\nspec:\n  database:\n    resource_requirements:\n      requests: {cpu: 200m, memory: 512Mi}\n    storage_requirements:\n      requests: {storage: 100Gi}\n  controller:\n    disabled: false\n  eda:\n    disabled: false\n  hub:\n    disabled: false\n    storage_type: file\n    file_storage_storage_class: <read-write-many-storage-class>\n    file_storage_size: 10Gi\n```\nVerify instances in *All instances* and pods *Running*/*Completed*.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#operator-link-components_install-aap-gateway"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

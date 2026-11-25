@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a0422fd8a65d494d",
+ "chunk_hash": "a0422fd8a65d494d",
+ "summary": "For jobs stuck in pending, list them with awx-manage shell_plus and UnifiedJob.objects.filter(status='pending'), then cancel all with .update(status='canceled') or one by filtering on id.",
+ "questions": [
+  "How do I cancel jobs stuck in pending in automation controller?",
+  "How do I list pending jobs from the controller shell?",
+  "Why are my controller jobs stuck in pending?"
+ ],
+ "answer_card": {
+  "title": "Cancel jobs stuck in pending",
+  "answer_md": "```bash\nawx-manage shell_plus\n```\n```python\n>>> UnifiedJob.objects.filter(status='pending')            # list\n>>> UnifiedJob.objects.filter(status='pending').update(status='canceled')  # cancel all\n>>> UnifiedJob.objects.filter(id=<job_id>).update(status='canceled')       # cancel one\n```\nSee \"Playbook stays in pending\" in Configuring automation execution for root causes.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/troubleshooting_ansible_automation_platform/index#troubleshoot-job-pending"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

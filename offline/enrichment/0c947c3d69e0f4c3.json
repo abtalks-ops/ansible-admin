@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0c947c3d69e0f4c3",
+ "chunk_hash": "0c947c3d69e0f4c3",
+ "summary": "Scale the platform gateway proxy and authentication service horizontally, since vertical scaling does not adjust gRPC, Envoy, Nginx and WSGI worker pools, keeping in mind more database connections. Scaling gRPC helps CPU bottlenecks but not slow external providers. Token and session auth are fastest; avoid Basic auth (CPU-heavy password hashing, worse with LDAP) for high-frequency API automation and use OAuth tokens.",
+ "questions": [
+  "Should I use basic authentication for AAP API automation?",
+  "How do I scale platform gateway authentication?",
+  "Why is basic auth slow in AAP?",
+  "How do I measure gRPC authentication latency?"
+ ],
+ "answer_card": {
+  "title": "Authentication for high-volume API automation",
+  "answer_md": "- Fastest: **token** and **session** authentication.\n- Do **not** use Basic authentication for frequent API automation: password hashing is CPU-heavy, and with LDAP each request may call the LDAP server.\n- Create OAuth tokens for automation against the API.\n- Scale the gateway **horizontally**; vertical scaling does not resize the gRPC, Envoy, Nginx and WSGI worker pools. Scaling won't help if the external auth provider is the slow part.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_tuning_for_ansible_automation_platform/index#scaling-gateway-proxy-and-authentication_aap-api-performance"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

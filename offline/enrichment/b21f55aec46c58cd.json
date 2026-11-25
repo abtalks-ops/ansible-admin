@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b21f55aec46c58cd",
+ "chunk_hash": "b21f55aec46c58cd",
+ "summary": "Provisioning callbacks let nodes request configuration on demand via curl or wget from init scripts or kickstarts, suit cloud autoscaling, need no agent and can be restricted to inventory hosts.",
+ "questions": [
+  "What is a provisioning callback?",
+  "How do autoscaled instances get configured by controller?",
+  "Provisioning callback with kickstart"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:28:40+00:00"
+}

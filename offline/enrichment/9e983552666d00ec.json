@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9e983552666d00ec",
+ "chunk_hash": "9e983552666d00ec",
+ "summary": "Limit instance or container groups with max_concurrent_jobs and max_forks. For container groups: max jobs = workers × CPU per worker / pod CPU request (2 CPU at 250m = 8), and max forks = workers × memory per worker / pod memory request; task impact is forks + 1.",
+ "questions": [
+  "How do I calculate max_concurrent_jobs for a container group?",
+  "How do I set max_forks on an instance group?",
+  "How do I limit jobs on OpenShift container groups?"
+ ],
+ "answer_card": {
+  "title": "Size a container group",
+  "answer_md": "```text\nmax_concurrent_jobs = (worker nodes * CPU per worker) / pod_spec CPU request\nmax_forks           = (worker nodes * memory per worker) / pod_spec memory request\n```\nExample: 1 worker with 2 CPU, pods request 250m CPU gives 8 jobs. Each job uses forks + 1. Set both on the instance or container group.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#ref-controller-capacity-instance-container"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

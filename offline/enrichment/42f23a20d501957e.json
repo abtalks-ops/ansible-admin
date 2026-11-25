@@ -1,0 +1,13 @@
+{
+ "chunk_id": "42f23a20d501957e",
+ "chunk_hash": "42f23a20d501957e",
+ "summary": "Reference tables of inventory variables for RPM-based and container-based AAP installations.",
+ "questions": [
+  "Where is the list of AAP inventory variables?",
+  "Inventory variables for containerized and RPM install",
+  "AAP installer variables reference"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:09+00:00"
+}

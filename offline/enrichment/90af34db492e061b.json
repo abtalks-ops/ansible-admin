@@ -1,0 +1,13 @@
+{
+ "chunk_id": "90af34db492e061b",
+ "chunk_hash": "90af34db492e061b",
+ "summary": "Ansible Builder builds execution environments from collection or user metadata; after building, push the image to a registry such as Quay and point to it when creating the execution environment in automation controller.",
+ "questions": [
+  "How do I use a custom execution environment in a job template?",
+  "Do I need to push my execution environment to a registry?",
+  "What is Ansible Builder?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:17:39+00:00"
+}

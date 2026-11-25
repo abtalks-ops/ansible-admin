@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7d3356bd939598bb",
+ "chunk_hash": "7d3356bd939598bb",
+ "summary": "Migrate from earlier collections or Terraform community editions to use the full HashiCorp and AAP integration features.",
+ "questions": [
+  "Why migrate my Terraform collection in AAP?",
+  "What migration paths exist for Terraform and AAP?",
+  "Can I migrate from Terraform Community Edition to use AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

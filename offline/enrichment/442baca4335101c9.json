@@ -1,0 +1,14 @@
+{
+ "chunk_id": "442baca4335101c9",
+ "chunk_hash": "442baca4335101c9",
+ "summary": "The Kubernetes Secret Provider writes a secret (Name, NameSpace) to MountPath on the device, but only from the cluster Edge Manager runs on; grant the flightctl-worker service account get/list on secrets in that namespace with a ClusterRole and ClusterRoleBinding.",
+ "questions": [
+  "How do I deliver a Kubernetes secret to an edge device?",
+  "Can Edge Manager read secrets from another cluster?",
+  "What RBAC does flightctl-worker need for secrets?",
+  "What parameters does the Kubernetes Secret Provider take?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

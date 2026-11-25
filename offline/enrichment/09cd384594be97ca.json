@@ -1,0 +1,12 @@
+{
+ "chunk_id": "09cd384594be97ca",
+ "chunk_hash": "09cd384594be97ca",
+ "summary": "November 19, 2025 containerized installer enhancements: ALIA support for lightspeed-stack 0.3.0 and llama-stack 0.2.22, and for the Azure and OpenAI providers.",
+ "questions": [
+  "Does the containerized installer support Lightspeed with Azure OpenAI?",
+  "Which llama-stack version does containerized AAP 2.6-3 deploy?",
+  "Containerized AAP OpenAI provider for intelligent assistant"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

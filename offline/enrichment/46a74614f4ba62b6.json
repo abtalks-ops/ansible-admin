@@ -1,0 +1,13 @@
+{
+ "chunk_id": "46a74614f4ba62b6",
+ "chunk_hash": "46a74614f4ba62b6",
+ "summary": "Tune the Automation Calculator by entering manual and automated process costs and adjusting manual time for the top templates; Total savings updates live but calculations are not saved in Automation Analytics.",
+ "questions": [
+  "How do I adjust the automation calculator values?",
+  "Are automation calculator settings saved?",
+  "Change manual time for top templates"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

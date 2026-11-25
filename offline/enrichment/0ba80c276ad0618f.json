@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0ba80c276ad0618f",
+ "chunk_hash": "0ba80c276ad0618f",
+ "summary": "An AnsibleProject CR creates a controller project with repo, branch, name, scm_type, organization, description, connection_secret and runner_pull_policy.",
+ "questions": [
+  "How do I create a controller project from Kubernetes?",
+  "AnsibleProject custom resource example",
+  "Create a Git project with the Resource Operator"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

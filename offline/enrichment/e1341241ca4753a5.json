@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e1341241ca4753a5",
+ "chunk_hash": "e1341241ca4753a5",
+ "summary": "Back up the AAP database, configuration files and keys with `./setup.sh` or playbooks into compressed artifacts, which can restore single nodes, clusters or secondary instances. Back up with the installer for your current version, restore with the latest, and use a supported PostgreSQL.",
+ "questions": [
+  "How do I back up Ansible Automation Platform?",
+  "Which installer version should I use to back up AAP?",
+  "What does an AAP backup include?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

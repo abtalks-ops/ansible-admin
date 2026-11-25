@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7ec97e8e24e7748a",
+ "chunk_hash": "7ec97e8e24e7748a",
+ "summary": "Copy the collection tarballs into ee-build/ and list them in requirements.yml with source /build/configs/<file> and type: file (the required path inside the build), plus ansible.mcp; published collections can be listed by name.",
+ "questions": [
+  "How do I reference a local collection tarball in requirements.yml for ansible-builder?",
+  "Why use /build/configs/ in requirements.yml?",
+  "requirements.yml for an MCP execution environment"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:45+00:00"
+}

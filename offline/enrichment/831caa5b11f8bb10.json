@@ -1,0 +1,17 @@
+{
+ "chunk_id": "831caa5b11f8bb10",
+ "chunk_hash": "831caa5b11f8bb10",
+ "summary": "For S3-compatible storage (AWS S3, Ceph, MinIO) set METRICS_UTILITY_SHIP_TARGET=s3 plus METRICS_UTILITY_BUCKET_NAME, BUCKET_ENDPOINT, BUCKET_REGION (AWS) and BUCKET_ACCESS_KEY/SECRET_KEY.",
+ "questions": [
+  "How do I store metrics-utility reports in S3?",
+  "Can metrics-utility use MinIO or Ceph?",
+  "metrics-utility S3 environment variables"
+ ],
+ "answer_card": {
+  "title": "metrics-utility to S3 storage",
+  "answer_md": "```sh\nexport METRICS_UTILITY_SHIP_TARGET=s3\nexport METRICS_UTILITY_SHIP_PATH=path_to_data_and_reports/\nexport METRICS_UTILITY_BUCKET_NAME=metricsutilitys3\nexport METRICS_UTILITY_BUCKET_ENDPOINT=\"https://s3.us-east-1.amazonaws.com\"\nexport METRICS_UTILITY_BUCKET_REGION=\"us-east-1\"   # AWS only\nexport METRICS_UTILITY_BUCKET_ACCESS_KEY=<access_key>\nexport METRICS_UTILITY_BUCKET_SECRET_KEY=<secret_key>\n```\nWorks for AWS S3, Ceph Object storage and MinIO.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#proc-object-storaage-with-s3"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:50+00:00"
+}

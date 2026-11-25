@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c441f2534bdeb0a7",
+ "chunk_hash": "c441f2534bdeb0a7",
+ "summary": "Session authentication is used when logging in through platform gateway in a browser; a session cookie keeps you logged in across pages.",
+ "questions": [
+  "What is session authentication in AAP?",
+  "How does the AAP session cookie work?",
+  "Browser login API authentication"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:26:30+00:00"
+}

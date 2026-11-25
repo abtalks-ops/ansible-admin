@@ -1,0 +1,17 @@
+{
+ "chunk_id": "25776afe675129ef",
+ "chunk_hash": "25776afe675129ef",
+ "summary": "Deprovision nodes or instance groups by adding `node_state=deprovision` to a host or a group's `:vars` and rerunning the installer, which removes their configuration and logs; the first `[automationcontroller]` host can't be deprovisioned.",
+ "questions": [
+  "How do I remove a node from AAP?",
+  "What does node_state=deprovision do?",
+  "How do I deprovision an instance group?"
+ ],
+ "answer_card": {
+  "title": "Deprovision a node or instance group",
+  "answer_md": "```ini\n[automationcontroller]\nhost1.example.com\nhost2.example.com\nhost4.example.com   node_state=deprovision\n\n[instance_group_restrictedzone:vars]\nnode_state=deprovision\n```\nThen rerun the installer. The first host in `[automationcontroller]` cannot be deprovisioned.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#ref-deprovisioning"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

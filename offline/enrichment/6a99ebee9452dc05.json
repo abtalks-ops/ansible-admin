@@ -1,0 +1,18 @@
+{
+ "chunk_id": "6a99ebee9452dc05",
+ "chunk_hash": "6a99ebee9452dc05",
+ "summary": "Syncing collections needs a subscription, org admin on console.redhat.com, a requirements file, allowlisted domains (galaxy.ansible.com, cloud.redhat.com, console.redhat.com, sso.redhat.com, ansible-galaxy-ng S3, automation-hub-prd.s3.us-east-2.amazonaws.com, ansible-galaxy.s3.amazonaws.com) and no SSL inspection; hub does not resolve dependencies from other repositories, so disable dependency download.",
+ "questions": [
+  "Which domains must be allowlisted to sync automation hub content?",
+  "Why does collection sync fail on dependencies?",
+  "Does SSL inspection break automation hub sync?",
+  "What are the prerequisites for syncing collections?"
+ ],
+ "answer_card": {
+  "title": "Firewall allowlist for hub content sync",
+  "answer_md": "Allow:\n- `galaxy.ansible.com`, `cloud.redhat.com`, `console.redhat.com`, `sso.redhat.com`\n- `ansible-galaxy-ng.s3.dualstack.us-east-1.amazonaws.com`\n- `automation-hub-prd.s3.us-east-2.amazonaws.com`\n- `ansible-galaxy.s3.amazonaws.com`\n\nDisable SSL inspection for these Red Hat domains. Hub does not fetch dependencies from other repos, so turn off dependency download on the remote to avoid errors.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_automation_content/index#proc-create-synclist"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

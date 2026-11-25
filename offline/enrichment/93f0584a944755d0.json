@@ -1,0 +1,18 @@
+{
+ "chunk_id": "93f0584a944755d0",
+ "chunk_hash": "93f0584a944755d0",
+ "summary": "Add a GPG key: export it with gpg --export --armour <fingerprint> > my_public_key.asc, then create a GPG Public Key credential under Automation Execution > Infrastructure > Credentials and select it on the project; Cache Timeout controls how often content is re-validated.",
+ "questions": [
+  "How do I add a GPG public key to automation controller?",
+  "How do I export a GPG public key for AAP?",
+  "How do I enable signature verification on a project?",
+  "How do I stop project validation running too often?"
+ ],
+ "answer_card": {
+  "title": "Add a GPG public key for project verification",
+  "answer_md": "1. Export the key: `gpg --list-keys` then `gpg --export --armour <key fingerprint> > my_public_key.asc`\n2. **Automation Execution > Infrastructure > Credentials > Create credential**, type **GPG Public Key**, upload `my_public_key.asc`.\n3. Select it as the project's *Content signature validation credential*. Future syncs verify content.\n\nIf the project updates on launch, set a **Cache Timeout** to limit how often it re-validates.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#proc-controller-adding-gpg-key"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

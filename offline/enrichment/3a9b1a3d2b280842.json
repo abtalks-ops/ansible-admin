@@ -1,0 +1,18 @@
+{
+ "chunk_id": "3a9b1a3d2b280842",
+ "chunk_hash": "3a9b1a3d2b280842",
+ "summary": "Job template Timeout: negative means no timeout, 0 uses the global timeout (default none), positive sets seconds. Also covers Show changes, Instance groups in order of preference (prompting replaces the org and inventory hierarchy; container groups need admin), Job tags and Skip tags.",
+ "questions": [
+  "How do I set a job timeout in automation controller?",
+  "What does a timeout of 0 mean on a job template?",
+  "How do instance groups on a job template get chosen?",
+  "How do I skip tags in a job template?"
+ ],
+ "answer_card": {
+  "title": "Job template timeout values",
+  "answer_md": "- **Negative** (`<0`): no timeout for this job.\n- **0**: use the global job timeout setting (0 by default, meaning no timeout).\n- **Positive**: the job is canceled after that many seconds.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-create-job-template"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "64264153b3589406",
+ "chunk_hash": "64264153b3589406",
+ "summary": "An instance group's Jobs tab lists its jobs with status, ID and name, type, start and finish time, and launcher plus template, inventory, project and execution environment.",
+ "questions": [
+  "How do I see jobs that ran on an instance group?",
+  "How do I check what is running on an instance group?",
+  "Where are instance group jobs listed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

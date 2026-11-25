@@ -1,0 +1,13 @@
+{
+ "chunk_id": "550905cd9ad02b7c",
+ "chunk_hash": "550905cd9ad02b7c",
+ "summary": "For automatic setup, create a Write-scope OAuth token in AAP (Access Management > Users > a user with write access to Default, admin recommended > Tokens > Create token) and add it to service-config.yaml; the OAuth application is created and client ID updated on service start.",
+ "questions": [
+  "How do I set up the Edge Manager OAuth application automatically?",
+  "What token scope does Edge Manager need?",
+  "Which user should create the Edge Manager OAuth token?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "175adc9fc7db6433",
+ "chunk_hash": "175adc9fc7db6433",
+ "summary": "output.links shows clickable buttons with title, url and an optional icon; URLs can use step output such as steps['launch-job'].output.data.url, and multiple links are allowed.",
+ "questions": [
+  "How do I add a link to the AAP job in self-service output?",
+  "Can I set an icon on output links?",
+  "How do I add multiple buttons to a template's output?"
+ ],
+ "answer_card": {
+  "title": "Link to the launched job in template output",
+  "answer_md": "```yaml\noutput:\n  links:\n    - title: View job in Ansible Automation Platform\n      url: ${{ steps['launch-job'].output.data.url }}\n    - title: RHEL documentation\n      url: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/\n      icon: docs\n```\nEach link takes `title`, `url` and an optional `icon`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_self_service_automation_portal/index#output-links_self-service-rbac"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

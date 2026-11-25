@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2e0d5e4cb4e80ead",
+ "chunk_hash": "2e0d5e4cb4e80ead",
+ "summary": "By default controller picks any instance group with capacity; instance groups set on the job template, then the inventory, then the organization (via project) override that, and a job with associated groups stays pending if they are all full unless the default group is also associated.",
+ "questions": [
+  "In what order does controller choose an instance group for a job?",
+  "Why is my job stuck pending when instance groups are full?",
+  "Does a job template instance group take precedence over the inventory's?",
+  "How do I use the default instance group as a fallback?"
+ ],
+ "answer_card": {
+  "title": "Instance group precedence for a job",
+  "answer_md": "When a job launches, controller tries instance groups associated with, in order:\n\n1. Job template\n2. Inventory\n3. Organization (by way of project)\n\nIf all associated groups are out of capacity, the job stays **pending**; it does not fall back to any instance. Associate the global `default` group too (for example on the inventory) if you want a fallback.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-control-job-run"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f9cec2748a552ca0",
+ "chunk_hash": "f9cec2748a552ca0",
+ "summary": "Complex patching can be a controller workflow: sync project and inventory in parallel, snapshot each host (ticket on failure), patch (on failure restore the snapshot and open a ticket), then delete snapshots of hosts that patched successfully.",
+ "questions": [
+  "How do I snapshot VMs before patching with AAP?",
+  "Workflow example for patching with rollback",
+  "Can AAP open a ticket when patching fails?"
+ ],
+ "answer_card": {
+  "title": "Patching workflow with snapshots and rollback",
+  "answer_md": "Chain jobs in an automation controller **workflow**:\n\n1. Project sync and inventory sync (in parallel)\n2. Snapshot each target host. On failure: submit a ticket\n3. Patch each host. On failure: restore the snapshot and submit a ticket\n4. On success: delete the snapshot",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/implementing_security_automation/index#ref-complex-patching-scenarios"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

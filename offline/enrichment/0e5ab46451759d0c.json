@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0e5ab46451759d0c",
+ "chunk_hash": "0e5ab46451759d0c",
+ "summary": "HTTP registry setup: set DYNAMIC_PLUGIN_ROOT_DIR, download 'Ansible self-service automation portal Setup Bundle' (self-service-automation-portal-plugins-x.y.z.tar.gz) from the AAP 2.6 Product Software downloads, extract with tar --exclude='*code*', check the rhaap and scaffolder .tgz plus .integrity files, then oc new-build httpd --name=plugin-registry --binary, oc start-build --from-dir and oc new-app.",
+ "questions": [
+  "How do I build the portal plug-in registry with httpd?",
+  "Where do I download the self-service automation portal setup bundle?",
+  "What files are in the portal plug-ins tarball?",
+  "What are the .integrity files?"
+ ],
+ "answer_card": {
+  "title": "Build the HTTP plug-in registry",
+  "answer_md": "```bash\nexport DYNAMIC_PLUGIN_ROOT_DIR=/path/to/plugins\n# download self-service-automation-portal-plugins-x.y.z.tar.gz\n# (AAP 2.6 Product Software downloads)\ntar --exclude='*code*' -xzf self-service-automation-portal-plugins-x.y.z.tar.gz -C $DYNAMIC_PLUGIN_ROOT_DIR\nls $DYNAMIC_PLUGIN_ROOT_DIR   # rhaap + scaffolder .tgz and .integrity files\noc new-build httpd --name=plugin-registry --binary\noc start-build plugin-registry --from-dir=$DYNAMIC_PLUGIN_ROOT_DIR --wait\noc new-app --image-stream=plugin-registry\n```\nThe `.integrity` files hold each plug-in's SHA. Then set `redhat-developer-hub.global.pluginMode: tarball`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#rhdh-download-tar_self-service-create-ocp-registry"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

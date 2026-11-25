@@ -1,0 +1,13 @@
+{
+ "chunk_id": "dec19f96dd5755a5",
+ "chunk_hash": "dec19f96dd5755a5",
+ "summary": "Password-based authenticators (LDAP, RADIUS, TACACS+) use layered timeouts: Envoy (top), gRPC, then the authenticator timeout; each upstream timeout should be slightly longer than the sum of the ones below it.",
+ "questions": [
+  "LDAP login times out in AAP",
+  "How should I set authenticator timeouts?",
+  "What is the Envoy timeout in platform gateway?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:19:16+00:00"
+}

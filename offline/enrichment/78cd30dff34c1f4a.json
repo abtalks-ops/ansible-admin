@@ -1,0 +1,17 @@
+{
+ "chunk_id": "78cd30dff34c1f4a",
+ "chunk_hash": "78cd30dff34c1f4a",
+ "summary": "To install all available updates on a schedule (for example lab systems), run a weekly job template whose playbook uses ansible.builtin.dnf with name '*' and state latest, with become: true.",
+ "questions": [
+  "How do I update all packages with Ansible?",
+  "Playbook to install all RPM updates weekly",
+  "dnf name '*' state latest example"
+ ],
+ "answer_card": {
+  "title": "Install all RPM updates",
+  "answer_md": "```yaml\n- name: Install all available RPM updates\n  hosts: target_hosts\n  become: true\n  tasks:\n    - name: Install latest RPMs\n      ansible.builtin.dnf:\n        name: '*'\n        state: latest\n```\nUse it in a job template on a weekly schedule, for example for lab or non-production servers.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/implementing_security_automation/index#ref-keep-up-to-date"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

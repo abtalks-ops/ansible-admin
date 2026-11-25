@@ -1,0 +1,14 @@
+{
+ "chunk_id": "b9db773ec7b36e08",
+ "chunk_hash": "b9db773ec7b36e08",
+ "summary": "To sync an execution environment from a remote registry into private automation hub, first configure the remote registry (for example https://registry.redhat.io) with credentials and an optional rate limit under Advanced Options, then Create execution environment, choosing the registry, the local Name and the Upstream name of the image.",
+ "questions": [
+  "How do I sync an execution environment from registry.redhat.io into automation hub?",
+  "What is the difference between Name and Upstream name for an execution environment?",
+  "How do I avoid rate limiting when syncing images from a remote registry?",
+  "Do I need a remote registry before syncing container images?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

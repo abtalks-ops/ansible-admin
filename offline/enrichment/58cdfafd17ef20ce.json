@@ -1,0 +1,17 @@
+{
+ "chunk_id": "58cdfafd17ef20ce",
+ "chunk_hash": "58cdfafd17ef20ce",
+ "summary": "Deregister a custom self-service template by opening it from Templates as an administrator, choosing Unregister Template, confirming, and clicking Delete Entity; the template then disappears from the Templates view.",
+ "questions": [
+  "How do I delete a custom template from self-service automation portal?",
+  "What does Unregister Template do?",
+  "How do I verify a self-service template was deregistered?"
+ ],
+ "answer_card": {
+  "title": "Deregister a custom self-service template",
+  "answer_md": "1. Log in to self-service automation portal as an administrator and open **Templates**.\n2. Click the custom template to open **Template detail**.\n3. Click **Unregister Template** in the navigation bar and confirm.\n4. Click **Delete Entity**.\n\nCheck the **Templates** view to confirm it is gone.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_self_service_automation_portal/index#self-service-deregister-templates_self-service-rbac"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:23+00:00"
+}

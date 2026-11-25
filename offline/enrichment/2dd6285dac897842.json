@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2dd6285dac897842",
+ "chunk_hash": "2dd6285dac897842",
+ "summary": "OpenShift installs use operators with rolling, no-downtime upgrades (with termination_grace_period_seconds), built-in log aggregation and Prometheus/Grafana monitoring; VM-based (RPM) and containerized (Podman with systemd) installs use the playbook installer, halt the platform during upgrades, and need external logging (ELK, Splunk) and monitoring tools.",
+ "questions": [
+  "Can I upgrade AAP without downtime?",
+  "How are AAP logs aggregated on VM installs?",
+  "Does OpenShift AAP include monitoring dashboards?",
+  "How is containerized AAP managed?"
+ ],
+ "answer_card": {
+  "title": "Operations by installation type",
+  "answer_md": "| Task | OpenShift | VM-based (RPM) | Containerized (Podman) |\n|---|---|---|---|\n| Install | Operators | Playbook installer, RPMs | Playbook installer, containers under systemd |\n| Upgrade | Rolling, no downtime with `termination_grace_period_seconds` | Installer run, platform halted | Installer run, platform halted |\n| Logs | Built-in logging stack | External (ELK, Splunk) | External (ELK, Splunk) |\n| Monitoring | Built-in Prometheus/Grafana | External tools | External tools |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_tuning_for_ansible_automation_platform/index#scaling-and-management-by-installer-type_aap-deployment-scaling"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

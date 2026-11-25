@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ccfb6f06b94c066c",
+ "chunk_hash": "ccfb6f06b94c066c",
+ "summary": "Users, teams, organizations, memberships and common roles move from controller 2.4 to platform gateway 2.6, and controller admins become gateway admins; migration time grows with data, for example 4,000 users, 400 teams and 40 organizations take close to two hours.",
+ "questions": [
+  "How long does the AAP 2.4 to 2.6 upgrade take?",
+  "Do controller admins become platform admins after upgrade?",
+  "What IAM data moves to platform gateway?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e5953a18098ac569",
+ "chunk_hash": "e5953a18098ac569",
+ "summary": "Place a custom ansible.cfg at the project root; controller runs ansible-playbook from there, and an ansible.cfg elsewhere in the project is ignored.",
+ "questions": [
+  "Where do I put ansible.cfg for automation controller?",
+  "Does controller use my project's ansible.cfg?",
+  "ansible.cfg ignored in subdirectory"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:21:20+00:00"
+}

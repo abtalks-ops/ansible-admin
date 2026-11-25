@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5361ef87e5abe374",
+ "chunk_hash": "5361ef87e5abe374",
+ "summary": "March 2026 operator fixes: deleting a restored AAP object now removes deployments and pods, IRSA S3 auth for hub (access keys optional), and restores with force_drop_db for Galaxy, EDA, gateway and AWX operators.",
+ "questions": [
+  "force_drop_db restore fails in AAP operator",
+  "Does the hub operator support IRSA for S3?",
+  "Orphaned pods after deleting a restored AAP object"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

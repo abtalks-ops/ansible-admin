@@ -1,0 +1,13 @@
+{
+ "chunk_id": "623c1b62ce066bc5",
+ "chunk_hash": "623c1b62ce066bc5",
+ "summary": "Standard Red Hat disclaimer that external links in the inventory rules section are provided for convenience and are not endorsed.",
+ "questions": [
+  "Does Red Hat endorse the shlex parsing link?",
+  "External link disclaimer in AAP docs",
+  "Is the Python shlex page reviewed by Red Hat?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

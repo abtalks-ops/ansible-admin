@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ce8172b60d1786c0",
+ "chunk_hash": "ce8172b60d1786c0",
+ "summary": "As a platform administrator you enable users and teams: log in the first time, configure authentication, and manage access with role-based access control.",
+ "questions": [
+  "What should a new AAP administrator do first?",
+  "How do I get started as a platform administrator?",
+  "Where do I configure RBAC in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

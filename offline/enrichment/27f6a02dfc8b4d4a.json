@@ -1,0 +1,18 @@
+{
+ "chunk_id": "27f6a02dfc8b4d4a",
+ "chunk_hash": "27f6a02dfc8b4d4a",
+ "summary": "Example inventory: `[automationcontroller]`, `[automationgateway]` and `[database]` hosts plus `[all:vars]` with `admin_password`, `redis_mode=standalone`, `pg_host`/`pg_port`/`pg_database='awx'`/`pg_username`/`pg_password`, `pg_sslmode='prefer'` (`verify-full` to enforce), `registry_url='registry.redhat.io'` with credentials, and `automationgateway_admin_password` and `automationgateway_pg_*`; optional `automationgateway_main_url`, SSL cert and `postgres_use_ssl` settings are commented.",
+ "questions": [
+  "Example inventory for platform gateway and controller RPM install",
+  "What does redis_mode=standalone mean?",
+  "What is automationgateway_main_url?",
+  "Default pg_sslmode in the AAP inventory"
+ ],
+ "answer_card": {
+  "title": "Gateway + controller + database inventory",
+  "answer_md": "```ini\n[automationcontroller]\ncontroller.example.com\n[automationgateway]\ngateway.example.com\n[database]\ndata.example.com\n\n[all:vars]\nadmin_password='<password>'\nredis_mode=standalone\npg_host='data.example.com'\npg_port=5432\npg_database='awx'\npg_username='awx'\npg_password='<password>'\npg_sslmode='prefer'   # verify-full to enforce\nregistry_url='registry.redhat.io'\nregistry_username='<registry username>'\nregistry_password='<registry password>'\nautomationgateway_admin_password='<password>'\nautomationgateway_pg_host='data.example.com'\nautomationgateway_pg_port=5432\nautomationgateway_pg_database='automationgateway'\nautomationgateway_pg_username='automationgateway'\nautomationgateway_pg_password='<password>'\nautomationgateway_pg_sslmode='prefer'\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#ref-gateway-controller-ext-db"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

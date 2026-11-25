@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0bbf5d238f3ae43a",
+ "chunk_hash": "0bbf5d238f3ae43a",
+ "summary": "routable_hostname is a host variable used when the installer can only reach a host by a specific name (defaults to ansible_host, then inventory_hostname); use_archive_compression compresses backups globally.",
+ "questions": [
+  "What is routable_hostname in the AAP inventory?",
+  "Can I use short names in the AAP installer inventory?",
+  "Where do I set routable_hostname?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:48+00:00"
+}

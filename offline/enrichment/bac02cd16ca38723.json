@@ -1,0 +1,13 @@
+{
+ "chunk_id": "bac02cd16ca38723",
+ "chunk_hash": "bac02cd16ca38723",
+ "summary": "TF Actions add an imperative action block to HCL so post-provisioning steps run inside the Terraform workflow. The AAP provider implements two actions: launch a specific job template directly, or post an event to Event-Driven Ansible, where rulebooks pick the playbook from the payload.",
+ "questions": [
+  "What is a Terraform action block?",
+  "Which TF Actions does the AAP Terraform provider offer?",
+  "Should I launch a job directly or use Event-Driven Ansible from Terraform?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

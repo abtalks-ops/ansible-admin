@@ -1,0 +1,17 @@
+{
+ "chunk_id": "3471345a57e46098",
+ "chunk_hash": "3471345a57e46098",
+ "summary": "The default AWX-style execution environment example builds awx.awx with pytz from the collection's requirements.txt; use the image in ansible-runner by setting container_image, process_isolation_executable and process_isolation in env/settings.",
+ "questions": [
+  "How do I use a custom execution environment with ansible-runner?",
+  "What goes in ansible-runner env/settings for containers?",
+  "Where is the awx-ee default image defined?"
+ ],
+ "answer_card": {
+  "title": "Use an EE image with ansible-runner",
+  "answer_md": "In the private data directory, `env/settings`:\n\n```\n---\ncontainer_image: image-name\nprocess_isolation_executable: podman # or docker\nprocess_isolation: true\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#ref-controller-awx-default-ee"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

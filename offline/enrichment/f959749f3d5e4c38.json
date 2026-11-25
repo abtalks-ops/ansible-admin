@@ -1,0 +1,19 @@
+{
+ "chunk_id": "f959749f3d5e4c38",
+ "chunk_hash": "f959749f3d5e4c38",
+ "summary": "Inventory source update options: Overwrite removes hosts and groups gone from the source, Overwrite variables replaces instead of merging, and Update on launch refreshes before each job with a Cache Timeout; dependent jobs share one update, and callbacks with dynamic inventory need Update on launch.",
+ "questions": [
+  "What does Overwrite do on an inventory source?",
+  "Why were my manually added hosts removed after inventory sync?",
+  "What does Update on launch do for an inventory source?",
+  "Does Update on launch stop two jobs running together?",
+  "What is the inventory source cache timeout?"
+ ],
+ "answer_card": {
+  "title": "Inventory source update options",
+  "answer_md": "- **Overwrite**: hosts and groups removed from the external source are removed from controller. Unchecked, local hosts and groups are left alone.\n- **Overwrite variables**: replace host and group variables with the source's. Unchecked, variables are merged.\n- **Update on launch**: sync before every job that uses the inventory. Set a **Cache Timeout** so jobs started close together reuse one sync.\n\nUpdate on launch is a dependency, not a lock: two different job templates can still run at the same time once the update finishes.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#proc-controller-add-source"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

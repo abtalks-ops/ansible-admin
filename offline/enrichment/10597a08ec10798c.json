@@ -1,0 +1,17 @@
+{
+ "chunk_id": "10597a08ec10798c",
+ "chunk_hash": "10597a08ec10798c",
+ "summary": "CrashLoopBackOff after upgrade comes from a failed DB migration or config errors: check oc logs --previous; for DB errors test pg_isready -h <host>, check DB secrets and external DB user permissions; for config errors review helm get values, compare with the last working config and revert.",
+ "questions": [
+  "Portal pods in CrashLoopBackOff after upgrade",
+  "Portal database migration failed after upgrade",
+  "How do I see logs of a crashed portal pod?"
+ ],
+ "answer_card": {
+  "title": "Portal CrashLoopBackOff after upgrade",
+  "answer_md": "```bash\noc logs -n <namespace> <pod_name> --previous\n```\n**Database migration errors**\n```bash\noc exec -it -n <namespace> <pod_name> -- pg_isready -h <database_host>\noc get secret -n <namespace> | grep -i database\n```\nCheck the external DB user's permissions.\n\n**Configuration errors**\n```bash\nhelm get values <release_name> -n <namespace>\n```\nCompare with the last working values, revert the bad change, upgrade again.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-upgrade-troubleshooting_self-service-upgrading"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

@@ -1,0 +1,12 @@
+{
+ "chunk_id": "600dff5878d700b5",
+ "chunk_hash": "600dff5878d700b5",
+ "summary": "Verify RBAC by logging in as a non-admin team member: they should see only tagged templates with conditional access (or all templates they can execute otherwise), and launching a template with Execute permission in AAP should succeed.",
+ "questions": [
+  "How do I test portal RBAC?",
+  "Verify conditional access in the portal",
+  "How do I check a non-admin user can launch portal templates?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

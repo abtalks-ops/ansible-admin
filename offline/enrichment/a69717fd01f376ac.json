@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a69717fd01f376ac",
+ "chunk_hash": "a69717fd01f376ac",
+ "summary": "The platform UI centralizes authentication, access management and global settings; on first login you enter subscription information, and admins configure authenticators and maps, OAuth 2 tokens for external apps, RBAC and platform settings.",
+ "questions": [
+  "What can I configure in AAP access management?",
+  "Why does AAP ask for a subscription on first login?",
+  "Where do I configure authentication in AAP 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:19:16+00:00"
+}

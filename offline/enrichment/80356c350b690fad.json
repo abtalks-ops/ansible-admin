@@ -1,0 +1,17 @@
+{
+ "chunk_id": "80356c350b690fad",
+ "chunk_hash": "80356c350b690fad",
+ "summary": "Create a custom credential type for cloud.terraform: input field token (string, secret) and an injector env TF_TOKEN_<hostname> for Terraform Enterprise or TF_TOKEN_app_terraform_io for HCP Terraform, both set to '{{ token }}'. Then create a credential of that type with the API token.",
+ "questions": [
+  "How do I create a credential type for cloud.terraform?",
+  "What environment variable does the Terraform CLI use for HCP Terraform tokens?",
+  "What injector configuration does a Terraform Enterprise credential need?"
+ ],
+ "answer_card": {
+  "title": "Credential type for cloud.terraform",
+  "answer_md": "**Input configuration**\n```yaml\nfields:\n  - id: token\n    type: string\n    label: token\n    secret: true\n```\n**Injector configuration**\n- Terraform Enterprise: `env: { TF_TOKEN_<hostname>: '{{ token }}' }`\n- HCP Terraform: `env: { TF_TOKEN_app_terraform_io: '{{ token }}' }`\n\nThen create a credential of this type under **Automation Execution > Infrastructure > Credentials** and enter the token.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#cloud-terraform-creating-credential"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

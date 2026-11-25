@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c32f9f188a7c54b3",
+ "chunk_hash": "c32f9f188a7c54b3",
+ "summary": "The infra.controller_configuration.dispatch role retries 30 times with a 1-second delay; raise controller_configuration_async_delay (for example to 2) in [all:vars] and rerun the installer.",
+ "questions": [
+  "How do I fix configuration seeding timeouts in the installer?",
+  "What is controller_configuration_async_delay?",
+  "Increase retry delay for controller configuration"
+ ],
+ "answer_card": {
+  "title": "Fix seeding retries",
+  "answer_md": "```ini\n[all:vars]\ncontroller_configuration_async_delay=2\n```\nThen rerun the installer.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#troubleshooting-containerized-ansible-automation-platform-configuration"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:09+00:00"
+}

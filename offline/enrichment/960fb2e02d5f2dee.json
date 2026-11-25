@@ -1,0 +1,17 @@
+{
+ "chunk_id": "960fb2e02d5f2dee",
+ "chunk_hash": "960fb2e02d5f2dee",
+ "summary": "Collect diagnostics for support with oc adm must-gather --image=registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9, then browse the tarball with omc use <path> and omc get pods.",
+ "questions": [
+  "How do I run must-gather for AAP 2.6?",
+  "Which must-gather image does AAP 2.6 use?",
+  "How do I read a must-gather with omc?"
+ ],
+ "answer_card": {
+  "title": "must-gather for AAP 2.6",
+  "answer_md": "```bash\noc adm must-gather --image=registry.redhat.io/ansible-automation-platform-26/aap-must-gather-rhel9\nomc use <path-to-must-gather>\nomc get pods\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-operator-collect-diagnostic-data_operator-troubleshoot"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

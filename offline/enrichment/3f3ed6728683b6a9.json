@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3f3ed6728683b6a9",
+ "chunk_hash": "3f3ed6728683b6a9",
+ "summary": "Upgrading a 2.4 deployment of one controller VM, one hub VM and a managed PostgreSQL 15 database leads to the same 2.6 growth topology: platform gateway with Redis, controller, private automation hub, EDA controller, an execution node and managed PostgreSQL 15.",
+ "questions": [
+  "What VMs do I need to upgrade AAP 2.4 controller and hub to 2.6 growth?",
+  "Does a 2.4 controller and hub deployment need new VMs for 2.6?",
+  "2.6 growth topology requirements"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

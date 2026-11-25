@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b90de3a557e19db8",
+ "chunk_hash": "b90de3a557e19db8",
+ "summary": "Execution nodes trust receptor connections signed by a CA; the operator generates a self-signed CA unless you create a TLS secret named <controller CR name>-receptor-ca from your ca.crt and ca.key and, if controller is already deployed, restart its deployment. Changing the CA makes existing execution nodes unavailable until you re-run their install bundles.",
+ "questions": [
+  "How do I use my own CA for automation mesh on OpenShift?",
+  "What is the receptor-ca secret?",
+  "Why are execution nodes unavailable after changing the receptor CA?"
+ ],
+ "answer_card": {
+  "title": "Custom receptor CA on the operator",
+  "answer_md": "1. Create the secret, named `<Controller CR name>-receptor-ca`:\n   ```\n   kubectl create secret tls <controller-cr>-receptor-ca \\\n     --cert=/path/to/ca.crt --key=/path/to/ca.key\n   ```\n2. If controller is already deployed: `kubectl rollout restart deployment <controller-cr>`\n\nChanging the CA breaks existing execution nodes. Download and re-run each node's install bundle to get certificates from the new CA; nodes become ready after a few minutes.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_managed_cloud_or_operator_environments/index#proc-use-custom-signed-certificates"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

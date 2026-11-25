@@ -1,0 +1,14 @@
+{
+ "chunk_id": "7c3186dd3a59298a",
+ "chunk_hash": "7c3186dd3a59298a",
+ "summary": "RHEL servers running AAP should be dedicated to it; installing other services is unsupported. The bundled nginx, Pulp and PostgreSQL must not be reused for other sites or databases, and manual changes to their configuration may be undone on upgrade.",
+ "questions": [
+  "Can I run other applications on AAP servers?",
+  "Can I host other databases on the AAP PostgreSQL?",
+  "Can I use the AAP nginx for another website?",
+  "Why were my nginx changes reverted after an AAP upgrade?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

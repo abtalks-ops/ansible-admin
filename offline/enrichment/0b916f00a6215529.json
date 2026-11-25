@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0b916f00a6215529",
+ "chunk_hash": "0b916f00a6215529",
+ "summary": "Inventory fields: Labels, and for constructed inventories Input inventories (empty groups are copied), Cached timeout in seconds and Verbosity (Normal through Connection Debug and WinRM Debug).",
+ "questions": [
+  "How do I choose input inventories for a constructed inventory?",
+  "What is the cached timeout on a constructed inventory?",
+  "What verbosity levels exist for inventory updates?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

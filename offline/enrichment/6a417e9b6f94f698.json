@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6a417e9b6f94f698",
+ "chunk_hash": "6a417e9b6f94f698",
+ "summary": "Finish the GitHub authenticator with Create objects, Enabled and Remove users, verify by logging out and seeing the GitHub logo on the login page, then add mappings.",
+ "questions": [
+  "How do I verify GitHub login works in AAP?",
+  "GitHub login button not showing in AAP",
+  "What to do after creating a GitHub authenticator"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:20:40+00:00"
+}

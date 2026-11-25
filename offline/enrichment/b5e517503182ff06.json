@@ -1,0 +1,18 @@
+{
+ "chunk_id": "b5e517503182ff06",
+ "chunk_hash": "b5e517503182ff06",
+ "summary": "Profiles like DISA STIG may set `user.max_user_namespaces` to 0 to block containers, but AAP needs containers for execution environments and containerized installs. Check with `sudo sysctl user.max_user_namespaces`; if 0, set it to 65535 in `/etc/sysctl.conf` or `/etc/sysctl.d/`, apply with `sudo sysctl -p <file>` and recheck.",
+ "questions": [
+  "AAP fails because user namespaces are disabled",
+  "How do I set user.max_user_namespaces for AAP?",
+  "Does the STIG max_user_namespaces control break AAP?",
+  "Podman error user namespaces not enabled on AAP node"
+ ],
+ "answer_card": {
+  "title": "Re-enable user namespaces",
+  "answer_md": "On each AAP node:\n```bash\nsudo sysctl user.max_user_namespaces          # 0 means disabled\n# edit the file in /etc/sysctl.conf or /etc/sysctl.d/ that sets it:\nuser.max_user_namespaces = 65535\nsudo sysctl -p <file>\nsudo sysctl user.max_user_namespaces          # expect 65535\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-namespaces_hardening-aap"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

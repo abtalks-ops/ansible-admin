@@ -1,0 +1,13 @@
+{
+ "chunk_id": "bd47cc46a931c80c",
+ "chunk_hash": "bd47cc46a931c80c",
+ "summary": "The platform gateway activity stream records changes to gateway resources such as organizations, users and service clusters, with timestamp, user, action and changes, available at /api/gateway/v1/activitystream/.",
+ "questions": [
+  "How do I see who changed a user or organization in AAP?",
+  "Where is the platform gateway activity stream API?",
+  "What does the gateway activity stream record?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

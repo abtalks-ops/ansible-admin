@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ad6c6abfa79cc8be",
+ "chunk_hash": "ad6c6abfa79cc8be",
+ "summary": "Integration of the Lightspeed intelligent assistant with an MCP server is a Technology Preview, configured through MCP server variables in the Lightspeed inventory settings.",
+ "questions": [
+  "Does Ansible Lightspeed support MCP?",
+  "Is the Lightspeed MCP integration supported in production?",
+  "How do I connect the Lightspeed assistant to an MCP server?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:00:20+00:00"
+}

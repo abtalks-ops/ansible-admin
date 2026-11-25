@@ -1,0 +1,13 @@
+{
+ "chunk_id": "37dc19c167a0e997",
+ "chunk_hash": "37dc19c167a0e997",
+ "summary": "Search specific fields such as type:run on Jobs; find valid values with an OPTIONS request to the API endpoint (e.g. /api/v2/jobs), and see related searches at the bottom of each screen.",
+ "questions": [
+  "How do I find valid values for a search field?",
+  "Search jobs by type in the UI",
+  "OPTIONS request to see field choices"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:32:40+00:00"
+}

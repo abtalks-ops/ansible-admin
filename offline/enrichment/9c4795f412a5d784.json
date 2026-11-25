@@ -1,0 +1,14 @@
+{
+ "chunk_id": "9c4795f412a5d784",
+ "chunk_hash": "9c4795f412a5d784",
+ "summary": "January 2026 UI fixes: gateway in pure IPv4 with IPv6 enabled, full search in resource dropdowns, collection name search, editing credential client certificate and key, workflow node credentials lost on save, mapping order reset, UI staying usable during controller outages, survey newlines, approval node review and Days of Data to Keep on cleanup schedules.",
+ "questions": [
+  "Can't edit Client Certificate on a credential",
+  "AAP UI inaccessible when controller is down",
+  "Days of Data to Keep missing on cleanup job schedule",
+  "Workflow node credentials missing after save"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

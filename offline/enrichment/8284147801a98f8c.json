@@ -1,0 +1,12 @@
+{
+ "chunk_id": "8284147801a98f8c",
+ "chunk_hash": "8284147801a98f8c",
+ "summary": "October 16, 2025 platform fix: claims processing failed to migrate services during the post-migrate upgrade step (AAP-55631).",
+ "questions": [
+  "Claims processing fails during AAP upgrade post-migrate",
+  "What is AAP-55631?",
+  "Which AAP 2.6 patch fixed claims processing migration?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

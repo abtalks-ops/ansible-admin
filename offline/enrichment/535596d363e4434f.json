@@ -1,0 +1,18 @@
+{
+ "chunk_id": "535596d363e4434f",
+ "chunk_hash": "535596d363e4434f",
+ "summary": "If the controller `SECRET_KEY` may be compromised, back up the database and run `setup.sh -k` with the same inventory used for backups to generate a new key; a copy of the old key is saved in `/etc/tower/`. Keep external secret systems redundant, since controller can't fetch secrets while they're down.",
+ "questions": [
+  "How do I rotate the automation controller SECRET_KEY?",
+  "What does setup.sh -k do?",
+  "SECRET_KEY compromised in AAP",
+  "Where is the old secret key saved after rotation?"
+ ],
+ "answer_card": {
+  "title": "Rotate the controller SECRET_KEY",
+  "answer_md": "1. Back up the AAP database (`./setup.sh -b`).\n2. With the same inventory used for backups:\n```bash\n./setup.sh -k\n```\nThe previous key is saved in `/etc/tower/`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-rotate-database-secret-key"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

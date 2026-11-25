@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bbc01dcfe10dc2b0",
+ "chunk_hash": "bbc01dcfe10dc2b0",
+ "summary": "Each component VM needs at least 16 GB RAM, 4 vCPU and 3000 IOPS; storage is 60 GB for gateway, execution, hop and EDA, while control nodes 80 GB with 20 GB under `/var/lib/awx`; hub 60 GB with 40 GB for `/var/lib/pulp`; database 100 GB for `/var/lib/pgsql`. Scale up in 2x steps.",
+ "questions": [
+  "How much disk does automation hub need?",
+  "What are the VM requirements for AAP components?",
+  "How much storage for /var/lib/pgsql?",
+  "Minimum RAM for an AAP execution node?"
+ ],
+ "answer_card": {
+  "title": "Per-VM minimums (RPM)",
+  "answer_md": "All: 16 GB RAM, 4 vCPU, 3000 IOPS.\n\n| Component | Storage |\n|---|---|\n| Gateway, execution, hop, EDA | 60 GB |\n| Control | 80 GB, 20 GB free in `/var/lib/awx` |\n| Hub | 60 GB, 40 GB for `/var/lib/pulp` |\n| Database | 100 GB for `/var/lib/pgsql` |\n\nScale in 2x steps.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#ref-platform-system-requirements_licensing-gw"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

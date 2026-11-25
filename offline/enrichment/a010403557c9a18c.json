@@ -1,0 +1,18 @@
+{
+ "chunk_id": "a010403557c9a18c",
+ "chunk_hash": "a010403557c9a18c",
+ "summary": "For source plugins like `redhat.insights_eda`, add safe plugins to EDA: create `./group_vars/automationedacontroller/custom.yml` with `automationedacontroller_additional_settings: SAFE_PLUGINS: [ansible.eda.webhook, ansible.eda.alertmanager]`, which extends the EDA `settings.yaml` template.",
+ "questions": [
+  "How do I add SAFE_PLUGINS to Event-Driven Ansible?",
+  "redhat.insights_eda port mappings not shown",
+  "What is automationedacontroller_additional_settings?",
+  "How do I extend EDA settings.yaml from the installer?"
+ ],
+ "answer_card": {
+  "title": "Add safe plugins to EDA (RPM)",
+  "answer_md": "```bash\nmkdir -p ./group_vars/automationedacontroller\n```\n```yaml\n# ./group_vars/automationedacontroller/custom.yml\nautomationedacontroller_additional_settings:\n  SAFE_PLUGINS:\n    - ansible.eda.webhook\n    - ansible.eda.alertmanager\n```\nThen rerun the installer.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#proc-add-eda-safe-plugin-var"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

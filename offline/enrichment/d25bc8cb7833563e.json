@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d25bc8cb7833563e",
+ "chunk_hash": "d25bc8cb7833563e",
+ "summary": "Importing a license opts you in to Automation Analytics (requires controller on RHEL); it collects minimal data, never credential secrets, personal data, variables or task output, and can be turned off in settings.",
+ "questions": [
+  "How do I opt out of Automation Analytics?",
+  "What data does Automation Analytics not collect?",
+  "Does Automation Analytics work if controller is not on RHEL?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:15:10+00:00"
+}

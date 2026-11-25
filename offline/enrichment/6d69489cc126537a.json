@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6d69489cc126537a",
+ "chunk_hash": "6d69489cc126537a",
+ "summary": "Uninstalling the Ansible plug-ins from a Helm install means removing software templates that use the `ansible:content:create` action and removing the plug-in configuration from the Helm chart.",
+ "questions": [
+  "How do I uninstall the Ansible plug-ins from RHDH?",
+  "What is the ansible:content:create action?",
+  "Remove Ansible plug-ins Helm installation"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "29acaf10a1202d2b",
+ "chunk_hash": "29acaf10a1202d2b",
+ "summary": "The installer creates a local authenticator with the inventory's admin credentials; to add another, use Create authentication with type Local, optional Additional Authenticator Fields (which override UI fields), Create objects, Enabled and Remove users, then continue to Mapping.",
+ "questions": [
+  "How do I configure local authentication in AAP?",
+  "Is a local authenticator created at install?",
+  "What do Additional Authenticator Fields do?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:19:39+00:00"
+}

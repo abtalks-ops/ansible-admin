@@ -1,0 +1,17 @@
+{
+ "chunk_id": "dcf60d9f37ea1d41",
+ "chunk_hash": "dcf60d9f37ea1d41",
+ "summary": "A boolean toggle can reveal extra fields: define showAdvanced (default false) and under dependencies.showAdvanced.allOf add an if (showAdvanced const true) / then block adding maxSyncDelay. When the toggle is off the field is hidden and not submitted.",
+ "questions": [
+  "How do I show advanced options only when a toggle is on in a self-service template?",
+  "Are hidden dynamic fields submitted with the form?",
+  "Show an example of a boolean toggle with dependencies"
+ ],
+ "answer_card": {
+  "title": "Toggle extra fields with a boolean",
+  "answer_md": "```yaml\nproperties:\n  showAdvanced:\n    title: Show advanced options?\n    type: boolean\n    default: false\ndependencies:\n  showAdvanced:\n    allOf:\n      - if:\n          properties:\n            showAdvanced:\n              const: true\n        then:\n          properties:\n            maxSyncDelay:\n              type: number\n              title: Max sync delay (ms)\n              default: 500\n```\nWhen the toggle is off, `maxSyncDelay` is hidden and not submitted.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_self_service_automation_portal/index#dynamic-toggle-fields_self-service-rbac"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

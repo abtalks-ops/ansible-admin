@@ -1,0 +1,18 @@
+{
+ "chunk_id": "7ba0a7da4911c605",
+ "chunk_hash": "7ba0a7da4911c605",
+ "summary": "Deploy the Ansible MCP server by creating an AAP instance with spec.mcp.disabled: false and allow_write_operations (false, the default, is read-only; true lets the agent run jobs and change state), then check the aap-mcp deployment's pod logs.",
+ "questions": [
+  "How do I deploy the Ansible MCP server on OpenShift?",
+  "What does allow_write_operations do?",
+  "Can the MCP server launch jobs?",
+  "Is the Ansible MCP server read-only by default?"
+ ],
+ "answer_card": {
+  "title": "Deploy the Ansible MCP server",
+  "answer_md": "Installed Operators > AAP > Create instance (e.g. `aap-mcp`), YAML:\n```yaml\nspec:\n  mcp:\n    disabled: false\n    allow_write_operations: false   # true lets the agent run jobs and change state\n```\nRead-only is the default. Check Workloads > Deployments for `aap-mcp` and its pod logs.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-configure-mcp-server-operator-install_deploying-ansible-mcp-server"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

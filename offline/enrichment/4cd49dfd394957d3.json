@@ -1,0 +1,14 @@
+{
+ "chunk_id": "4cd49dfd394957d3",
+ "chunk_hash": "4cd49dfd394957d3",
+ "summary": "Fact caching avoids repeated fact gathering on large inventories; enable it with Enable fact storage rather than ansible.cfg (custom fact caching conflicts), clear facts with meta: clear_facts, and read them at /api/v2/hosts/<id>/ansible_facts.",
+ "questions": [
+  "Should I configure fact caching in ansible.cfg for AAP?",
+  "How do I clear cached facts in controller?",
+  "What is the API endpoint for a host's cached facts?",
+  "Why use fact caching in automation controller?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

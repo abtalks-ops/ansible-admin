@@ -1,0 +1,14 @@
+{
+ "chunk_id": "3e6cdf4c5ed611ef",
+ "chunk_hash": "3e6cdf4c5ed611ef",
+ "summary": "Custom EDA credential types define Input and Injector configuration in YAML or JSON and inject secrets as extra vars; activations can attach several cloud, vault and AAP credentials. Avoid extra_vars collisions, never start variable names with EDA_ (reserved), and you need superuser rights to create types or view injectors.",
+ "questions": [
+  "How do I create a custom credential type in Event-Driven Ansible?",
+  "Why can't I use an EDA_ prefix in my credential type variables?",
+  "Who can view the Injector configuration in EDA?",
+  "Can I attach multiple credentials to a rulebook activation?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

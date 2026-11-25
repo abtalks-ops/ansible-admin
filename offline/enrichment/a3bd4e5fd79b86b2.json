@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a3bd4e5fd79b86b2",
+ "chunk_hash": "a3bd4e5fd79b86b2",
+ "summary": "Copy a custom rootCA.crt into an execution environment by listing it in additional_build_files and, in prepend_base, COPY it to /usr/share/pki/ca-trust-source/anchors and RUN update-ca-trust so every build stage trusts it.",
+ "questions": [
+  "How do I add a custom CA certificate to an execution environment?",
+  "How do I copy arbitrary files into an execution environment?",
+  "update-ca-trust in ansible-builder"
+ ],
+ "answer_card": {
+  "title": "Trust a custom CA in an execution environment",
+  "answer_md": "```yaml\nadditional_build_files:\n  - src: files/rootCA.crt\n    dest: configs\n\nadditional_build_steps:\n  prepend_base:\n    - COPY _build/configs/rootCA.crt /usr/share/pki/ca-trust-source/anchors\n    - RUN update-ca-trust\n```\nBecause it runs in `base`, all later stages and the final image trust the CA.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/creating_and_using_execution_environments/index#con-additional-custom-build-steps"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:12+00:00"
+}

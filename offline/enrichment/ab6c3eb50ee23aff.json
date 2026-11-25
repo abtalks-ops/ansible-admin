@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ab6c3eb50ee23aff",
+ "chunk_hash": "ab6c3eb50ee23aff",
+ "summary": "October 28, 2025 platform fixes: ansible-builder and ansible-navigator now default to EE images from the ansible-automation-platform-26 namespace, the decision environment dropdown shows No results found, cookie/xcrf resource creation, Platform Auditor component labels, empty extra vars on job details, Load More in auth mapping roles, custom EDA/hub roles, topology fullscreen, autocomplete=new-password, and selecting the default EE in settings.",
+ "questions": [
+  "Which EE images does ansible-navigator use by default in AAP 2.6?",
+  "Cannot create EDA or hub custom roles in the AAP UI",
+  "Unable to select default execution environment in automation settings",
+  "Decision environment dropdown is empty in rulebook activation"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

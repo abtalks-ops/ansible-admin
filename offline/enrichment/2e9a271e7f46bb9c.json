@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2e9a271e7f46bb9c",
+ "chunk_hash": "2e9a271e7f46bb9c",
+ "summary": "Example version 3 definition: build_arg_defaults, dependencies (galaxy, python, system), images.base_image, options.package_manager_path and additional_build_steps such as prepend_galaxy ENV settings for the automation hub server and token.",
+ "questions": [
+  "Example execution-environment.yml version 3",
+  "How do I pass the automation hub token to ansible-builder?",
+  "How do I set package_manager_path to microdnf?",
+  "Which base image is supported by Red Hat?"
+ ],
+ "answer_card": {
+  "title": "execution-environment.yml (version 3)",
+  "answer_md": "```yaml\nversion: 3\ndependencies:\n  galaxy: requirements.yml\n  python:\n    - six\n  system: bindep.txt\nimages:\n  base_image:\n    name: registry.redhat.io/ansible-automation-platform-26/ee-minimal-rhel9:latest\noptions:\n  package_manager_path: /usr/bin/microdnf\nadditional_build_steps:\n  prepend_galaxy:\n    - ENV ANSIBLE_GALAXY_SERVER_LIST=automation_hub\n    - ENV ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_URL=https://console.redhat.com/api/automation-hub/content/published/\n    - ARG ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN\n```\nPass `--build-arg ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN` when building.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/creating_and_using_execution_environments/index#con-building-definition-file"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:17:39+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d81161c4450522f4",
+ "chunk_hash": "d81161c4450522f4",
+ "summary": "Management Jobs under Automation Execution > Administration > Management Jobs clean old data: Cleanup Activity Stream, Cleanup Expired Sessions and Cleanup Job Details, for retention policies or reducing database size.",
+ "questions": [
+  "What management jobs does automation controller have?",
+  "How do I clean up old job history?",
+  "Where are management jobs in AAP 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

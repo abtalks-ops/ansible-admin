@@ -1,0 +1,13 @@
+{
+ "chunk_id": "986012db6909ad97",
+ "chunk_hash": "986012db6909ad97",
+ "summary": "Controller connects to PostgreSQL with password auth over TCP (optionally SSL/TLS) and to Redis over a local UNIX socket restricted to the awx user.",
+ "questions": [
+  "Does automation controller use TLS to PostgreSQL?",
+  "How does controller connect to Redis?",
+  "Is the PostgreSQL connection encrypted in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:11:50+00:00"
+}

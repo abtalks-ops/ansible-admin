@@ -1,0 +1,14 @@
+{
+ "chunk_id": "28244dd864cfcbd8",
+ "chunk_hash": "28244dd864cfcbd8",
+ "summary": "Configuration as Code manages AAP configuration in version-controlled YAML or JSON. All CasC playbooks must authenticate through platform gateway (aap_hostname = gateway URL); direct component APIs and legacy controller PATs are not supported. Prerequisites: Git, gateway access, a gateway token or credentials, and an EE with ansible.platform.",
+ "questions": [
+  "What is Configuration as Code for AAP?",
+  "Can CasC playbooks talk to automation controller directly?",
+  "Do controller PATs work with ansible.platform?",
+  "What should aap_hostname point to?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "525191e8f67bfca2",
+ "chunk_hash": "525191e8f67bfca2",
+ "summary": "Keep MANAGE_ORGANIZATION_AUTH the same in platform gateway and controller. AAP 2.5/2.6 still expose per-service APIs for compatibility but will remove them, so move integrations to gateway endpoints like /api/gateway/v1, /api/controller/v2 and /api/eda/v1.",
+ "questions": [
+  "Should MANAGE_ORGANIZATION_AUTH match in gateway and controller?",
+  "Will direct automation controller API access be removed?",
+  "What is the API URL for automation controller in AAP 2.6?",
+  "Do my 2.4 API integrations need to change for 2.6?"
+ ],
+ "answer_card": {
+  "title": "MANAGE_ORGANIZATION_AUTH and API access",
+  "answer_md": "- `MANAGE_ORGANIZATION_AUTH` (*Organization Admins Can Manage Users and Teams*) exists in both gateway and controller; the controller value is imported on upgrade. Keep both values the same.\n- Direct service APIs still work in 2.5/2.6 but will be removed. Use gateway-exposed endpoints:\n  - Gateway: `https://<gateway>/api/gateway/v1`\n  - Controller: `https://<gateway>/api/controller/v2`\n  - EDA: `https://<gateway>/api/eda/v1`",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-google-auth"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

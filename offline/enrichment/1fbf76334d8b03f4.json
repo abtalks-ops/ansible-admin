@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1fbf76334d8b03f4",
+ "chunk_hash": "1fbf76334d8b03f4",
+ "summary": "Platform gateway handles authentication and authorization for AAP, providing the single entry point and serving the platform UI.",
+ "questions": [
+  "What is the platform gateway?",
+  "Which AAP component serves the UI?",
+  "What handles authentication in AAP 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

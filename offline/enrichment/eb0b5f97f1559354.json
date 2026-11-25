@@ -1,0 +1,18 @@
+{
+ "chunk_id": "eb0b5f97f1559354",
+ "chunk_hash": "eb0b5f97f1559354",
+ "summary": "To log LDAP authentication, add `LOGGING['loggers']['django_auth_ldap']['level'] = 'DEBUG'` to the gateway `settings.py` (`~/aap/gateway/etc/settings.py` containerized, `/etc/ansible-automation-platform/gateway/settings.py` RPM), then restart with `systemctl --user restart automation-gateway` or `automation-gateway-service restart`.",
+ "questions": [
+  "How do I debug LDAP login in AAP 2.6?",
+  "How do I enable django_auth_ldap logging in platform gateway?",
+  "How do I restart platform gateway?",
+  "Where is the gateway settings.py on containerized AAP?"
+ ],
+ "answer_card": {
+  "title": "Enable LDAP debug logging",
+  "answer_md": "Append to the gateway settings file:\n- Containerized: `~/aap/gateway/etc/settings.py`\n- RPM: `/etc/ansible-automation-platform/gateway/settings.py`\n```python\nLOGGING['loggers']['django_auth_ldap']['level'] = 'DEBUG'\n```\nRestart:\n```bash\nsystemctl --user restart automation-gateway   # containerized\nautomation-gateway-service restart           # RPM, as root\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-configure-ldap-logging"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "5dcbb65a6920c972",
+ "chunk_hash": "5dcbb65a6920c972",
+ "summary": "Port table entries: hub 443 (8444 containerized) and controller 80/443 (80/8443), EDA 80/443 (80/8445) from platform gateway; Redis 6379; EDA to controller 80/443 to launch jobs; receptor 27199 between controller and execution nodes (`receptor_listener_port`, `receptor_port`); EDA event streams on 8443.",
+ "questions": [
+  "What port does receptor use?",
+  "Which port does the gateway use to reach controller in containerized AAP?",
+  "What port does EDA use to launch controller jobs?",
+  "Event stream port for Event-Driven Ansible"
+ ],
+ "answer_card": {
+  "title": "Key AAP 2.6 ports (containerized values in brackets)",
+  "answer_md": "| From | To | Port |\n|---|---|---|\n| Installer | every node | 22 (SSH) |\n| Platform gateway | automation controller | 80/443 [80/8443] |\n| Platform gateway | automation hub | 443 [8444] |\n| Platform gateway | Event-Driven Ansible | 80/443 [80/8445] |\n| Event-Driven Ansible | controller | 80/443 (launch jobs) |\n| Controller / execution / hop nodes | each other | 27199 (receptor) |\n| Components | Redis | 6379; Redis cluster bus 16379 |\n| Components | PostgreSQL | 5432 |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#network-ports-protocols_table"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

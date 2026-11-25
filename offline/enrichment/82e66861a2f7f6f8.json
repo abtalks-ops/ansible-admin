@@ -1,0 +1,13 @@
+{
+ "chunk_id": "82e66861a2f7f6f8",
+ "chunk_hash": "82e66861a2f7f6f8",
+ "summary": "After creating an event stream its Details page shows events received, last event and type, a warning if forwarding is disabled, and the generated webhook URL for the remote system; its credential can't be deleted while the stream exists.",
+ "questions": [
+  "Where do I find the URL for my event stream?",
+  "How do I know my event stream is receiving events?",
+  "Why can't I delete the credential used by an event stream?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

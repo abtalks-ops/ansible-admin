@@ -1,0 +1,13 @@
+{
+ "chunk_id": "140f05357d014d36",
+ "chunk_hash": "140f05357d014d36",
+ "summary": "A GitHub team authenticator needs an OAuth2 key and secret unique to that app, the GitHub OAuth2 Team ID and a scope (default read:org).",
+ "questions": [
+  "How do I configure GitHub team authentication in AAP?",
+  "Where do I find the GitHub team ID?",
+  "Can I reuse a GitHub OAuth app for two authenticators?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:20:40+00:00"
+}

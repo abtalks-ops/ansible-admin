@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b5dc8ddab0f94802",
+ "chunk_hash": "b5dc8ddab0f94802",
+ "summary": "Set `AAP_TEMP_POSTGRES` to the temp pod name, `oc cp` `artifact.tar` and `artifact.tar.sha256` into `/tmp/aap-temp-pvc/`, read the controller, hub and gateway database credentials and admin password by base64-decoding the `aap-*-postgres-configuration` secrets, then `oc exec -it deployment.apps/aap-temp-postgres -- /bin/bash`.",
+ "questions": [
+  "How do I get AAP database passwords on OpenShift?",
+  "How do I copy the migration artifact into a pod?",
+  "aap-gateway-postgres-configuration postgres_admin_password"
+ ],
+ "answer_card": {
+  "title": "Copy artifact and read DB secrets",
+  "answer_md": "```bash\nexport AAP_TEMP_POSTGRES=$(oc get pods --no-headers -o custom-columns=\"metadata.name\" | grep aap-temp-postgres)\noc cp artifact.tar $AAP_TEMP_POSTGRES:/tmp/aap-temp-pvc/\noc cp artifact.tar.sha256 $AAP_TEMP_POSTGRES:/tmp/aap-temp-pvc/\noc get secrets aap-controller-postgres-configuration -o jsonpath=\"{.data['password']}\" | base64 -d\noc get secrets aap-gateway-postgres-configuration -o jsonpath=\"{.data['postgres_admin_password']}\" | base64 -d\noc exec -it deployment.apps/aap-temp-postgres -- /bin/bash\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/ansible_automation_platform_migration/index#ocp-target-import"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

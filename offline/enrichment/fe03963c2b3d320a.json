@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fe03963c2b3d320a",
+ "chunk_hash": "fe03963c2b3d320a",
+ "summary": "Known issue in the November 19, 2025 patch: with IBM Granite 3.3 models the Ansible Lightspeed intelligent assistant may take about one minute to respond; restart the chat session as a workaround (AAP-58186).",
+ "questions": [
+  "Lightspeed intelligent assistant takes a minute to respond",
+  "Why is Granite 3.3 slow in the Lightspeed chat?",
+  "Workaround for delayed chat responses in Lightspeed"
+ ],
+ "answer_card": {
+  "title": "Slow Lightspeed chat with Granite 3.3",
+  "answer_md": "Known issue (AAP-58186): with an IBM Granite 3.3 model the Ansible Lightspeed intelligent assistant can take ~1 minute to reply.\n\n**Workaround:** restart the chat session.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

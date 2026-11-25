@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b4c4b6f00bb33ec8",
+ "chunk_hash": "b4c4b6f00bb33ec8",
+ "summary": "Automation controller runs playbooks in execution environment containers, so a playbook can only read files in its own project directory by default; extra host directories can be exposed in the Job Settings.",
+ "questions": [
+  "Why can't my playbook read files outside the project directory in AAP?",
+  "What data is exposed to ansible-playbook inside the job container?",
+  "How do I expose extra host directories to controller jobs?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

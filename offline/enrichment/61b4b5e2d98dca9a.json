@@ -1,0 +1,13 @@
+{
+ "chunk_id": "61b4b5e2d98dca9a",
+ "chunk_hash": "61b4b5e2d98dca9a",
+ "summary": "Some API fields are read-only, such as url, id and created_by; values posted to them do not change.",
+ "questions": [
+  "Why can't I change created_by via the API?",
+  "Which API fields are read-only?",
+  "API field not updating after POST"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:26:10+00:00"
+}

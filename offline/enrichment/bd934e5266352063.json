@@ -1,0 +1,14 @@
+{
+ "chunk_id": "bd934e5266352063",
+ "chunk_hash": "bd934e5266352063",
+ "summary": "Content signing on private automation hub needs a GnuPG key pair and a signing script that takes a filename, writes an ASCII-armored detached signature with the key in `PULP_SIGNING_KEY_FINGERPRINT` (for example with `gpg --detach-sign --armor`) and prints `{\"file\": \"filename\", \"signature\": \"filename.asc\"}`.",
+ "questions": [
+  "How do I set up collection signing on private automation hub?",
+  "What should the hub signing script output?",
+  "What is PULP_SIGNING_KEY_FINGERPRINT?",
+  "Example gpg signing script for automation hub"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

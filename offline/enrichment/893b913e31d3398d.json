@@ -1,0 +1,13 @@
+{
+ "chunk_id": "893b913e31d3398d",
+ "chunk_hash": "893b913e31d3398d",
+ "summary": "Network diagrams for a fully deployed AAP (RPM client-initiated and internally initiated connections, and container-based); hop nodes can link control and execution nodes and use little CPU or memory, and direct client connections to hub, EDA and controller apply only to 2.4-to-2.6 upgrades.",
+ "questions": [
+  "What is a hop node used for?",
+  "Do clients connect directly to controller in AAP 2.6?",
+  "Network diagram for containerized AAP"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

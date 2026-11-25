@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a5b7ee9c5986f5ff",
+ "chunk_hash": "a5b7ee9c5986f5ff",
+ "summary": "Coding assistant variables: lightspeed_wca_model_type (wca cloud or wca-onprem), lightspeed_wca_model_url, lightspeed_wca_model_api_key (required), lightspeed_wca_model_id and lightspeed_wca_model_verify_ssl.",
+ "questions": [
+  "How do I configure watsonx Code Assistant for Lightspeed?",
+  "What is lightspeed_wca_model_type?",
+  "Is the watsonx API key required for Lightspeed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:03:21+00:00"
+}

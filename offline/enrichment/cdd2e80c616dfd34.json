@@ -1,0 +1,13 @@
+{
+ "chunk_id": "cdd2e80c616dfd34",
+ "chunk_hash": "cdd2e80c616dfd34",
+ "summary": "Run :config (or ansible-navigator config) to review the Ansible configuration from an accessible ansible.cfg, or the defaults if none exists, and drill into each setting; some values come from the execution environment and show as non-default settings you cannot set in your config file.",
+ "questions": [
+  "How do I review my ansible.cfg with ansible-navigator?",
+  "Why does ansible-navigator config show settings I did not set?",
+  "What does ansible-navigator config show if there is no ansible.cfg?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

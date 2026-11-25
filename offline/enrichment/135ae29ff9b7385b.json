@@ -1,0 +1,13 @@
+{
+ "chunk_id": "135ae29ff9b7385b",
+ "chunk_hash": "135ae29ff9b7385b",
+ "summary": "`clusters.yaml` can list several AAP instances of the same version, each with tokens, `verify_ssl` and `sync_schedules` using rrules (such as every 5 minutes); tokens and client secrets are stored encrypted in the dashboard database.",
+ "questions": [
+  "Can automation dashboard connect to multiple AAP instances?",
+  "How do I schedule data sync in automation dashboard?",
+  "Are tokens stored encrypted in automation dashboard?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

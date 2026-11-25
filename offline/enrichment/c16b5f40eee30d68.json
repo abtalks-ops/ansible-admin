@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c16b5f40eee30d68",
+ "chunk_hash": "c16b5f40eee30d68",
+ "summary": "With Simple Content Access (the default), attaching an AAP subscription only needs `subscription-manager register`; verify with `subscription-manager refresh` and `subscription-manager identity`, no pool attach required.",
+ "questions": [
+  "How do I attach my AAP subscription on RHEL?",
+  "Do I still need subscription-manager attach --pool with SCA?",
+  "How do I verify my system registration for AAP?"
+ ],
+ "answer_card": {
+  "title": "Attach the AAP subscription (SCA)",
+  "answer_md": "```bash\nsudo subscription-manager register --username <user> --password <pass>\nsudo subscription-manager refresh\nsudo subscription-manager identity   # verify\n```\nWith Simple Content Access, registering is the only step; `attach --pool` is not needed.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#proc-attaching-subscriptions"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T15:58:49+00:00"
+}

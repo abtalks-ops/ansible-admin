@@ -1,0 +1,19 @@
+{
+ "chunk_id": "33d3c908f2d8cb39",
+ "chunk_hash": "33d3c908f2d8cb39",
+ "summary": "Per-template fact caching (use_fact_cache=True) stores each host's ansible_facts in the controller so --limit jobs can still read facts for the whole inventory; Per-Host Ansible Fact Cache Timeout is in Settings > Automation Execution > Job, changes are logged to the system_tracking logger, and hostnames containing / are not cached.",
+ "questions": [
+  "How does fact caching work in automation controller?",
+  "How do I set the fact cache timeout in AAP?",
+  "Why are facts not cached for one host?",
+  "Can I use cached facts with --limit?",
+  "What does use_fact_cache do?"
+ ],
+ "answer_card": {
+  "title": "Fact caching in controller",
+  "answer_md": "- Enable **Enable fact storage** on the job template (`use_fact_cache=True`). It is off by default.\n- After the job, each host's `ansible_facts` are stored in controller; later jobs (even with `--limit`) can read facts for all hosts in the inventory.\n- Set a per-host expiry in **Settings > Automation Execution > Job > Per-Host Ansible Fact Cache Timeout** (seconds).\n- New or changed facts are logged to the `system_tracking` logger with `host_name`, `inventory_id`, `ansible_facts`.\n- Hosts with `/` in the name are not cached.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-fact-caching"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

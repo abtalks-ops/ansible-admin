@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a459371471303ce7",
+ "chunk_hash": "a459371471303ce7",
+ "summary": "Receptor fix: the work results command no longer emits misleading warnings during connection shutdown (AAP-43847).",
+ "questions": [
+  "Why does receptor work results show warnings on shutdown?",
+  "Was AAP-43847 fixed?",
+  "Receptor misleading warnings fix"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

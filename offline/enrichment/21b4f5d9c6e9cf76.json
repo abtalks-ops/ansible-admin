@@ -1,0 +1,13 @@
+{
+ "chunk_id": "21b4f5d9c6e9cf76",
+ "chunk_hash": "21b4f5d9c6e9cf76",
+ "summary": "Edit a namespace (Change Namespaces permission) to add a logo, description, links and markdown Resources for users.",
+ "questions": [
+  "How do I add a logo or links to a namespace?",
+  "Can I add markdown documentation to a namespace?",
+  "What permission is needed to edit a namespace?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

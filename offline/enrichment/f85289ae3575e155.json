@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f85289ae3575e155",
+ "chunk_hash": "f85289ae3575e155",
+ "summary": "config.json holds a subset of /api/v2/config, such as ansible_version, authentication_backends, external logger settings, free_instances, install and instance UUIDs and license details.",
+ "questions": [
+  "What is in analytics config.json?",
+  "Where does config.json data come from?",
+  "Does analytics include license info?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:10+00:00"
+}

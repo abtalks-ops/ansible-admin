@@ -1,0 +1,14 @@
+{
+ "chunk_id": "fbbc983f41c2ae08",
+ "chunk_hash": "fbbc983f41c2ae08",
+ "summary": "Playbooks run top to bottom; each play needs a host pattern and at least one task. Example: one play updates httpd with ansible.builtin.yum and template on webservers, another updates and starts postgresql on databases. Use FQCNs because collections can share module names.",
+ "questions": [
+  "Why should I use FQCN for modules in playbooks?",
+  "How do I target web and database servers in one playbook?",
+  "What is the minimum a play needs?",
+  "Example of a multi-play Ansible playbook"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

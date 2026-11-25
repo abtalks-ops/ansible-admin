@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3653d41705a0e2cb",
+ "chunk_hash": "3653d41705a0e2cb",
+ "summary": "You can opt out of, or change, usability analytics and data collection from the automation controller user interface.",
+ "questions": [
+  "How do I opt out of automation controller data collection?",
+  "Can I turn off usability analytics in controller?",
+  "Does automation controller send usage data?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

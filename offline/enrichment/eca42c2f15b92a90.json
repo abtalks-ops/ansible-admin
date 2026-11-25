@@ -1,0 +1,18 @@
+{
+ "chunk_id": "eca42c2f15b92a90",
+ "chunk_hash": "eca42c2f15b92a90",
+ "summary": "Write a first playbook in VS Code next to site.yml: a single play on localhost running ansible.builtin.ping. ansible-lint runs in the background and reports in the Problems tab; files must end with a blank line, have no trailing spaces, and every play needs a name.",
+ "questions": [
+  "How do I write my first Ansible playbook in VS Code?",
+  "What lint rules does ansible-lint enforce on a new playbook?",
+  "Where does ansible-lint show errors in VS Code?",
+  "Example ping playbook for localhost"
+ ],
+ "answer_card": {
+  "title": "Minimal first playbook",
+  "answer_md": "```yaml\n---\n- name: My first play\n  hosts: localhost\n  tasks:\n    - name: Ping my hosts\n      ansible.builtin.ping:\n\n```\nRules ansible-lint checks: end the file with a blank line, no trailing spaces, and give every play (and task) a `name`. Errors appear in the *Problems* tab.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/developing_automation_content/index#writing-playbook_writing-running-playbook"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

@@ -1,0 +1,12 @@
+{
+ "chunk_id": "a9a6de149613374f",
+ "chunk_hash": "a9a6de149613374f",
+ "summary": "Check the deployment logs in the OpenShift console, especially the install-dynamic-plugins container, to confirm the plug-ins installed.",
+ "questions": [
+  "Which container logs show portal plug-in installation?",
+  "How do I confirm portal plug-ins installed?",
+  "Where do I see portal deployment logs in OpenShift?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

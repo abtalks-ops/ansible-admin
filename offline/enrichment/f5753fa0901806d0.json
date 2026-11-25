@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f5753fa0901806d0",
+ "chunk_hash": "f5753fa0901806d0",
+ "summary": "Patch updates on OpenShift happen within a channel: a new version creates an InstallPlan, approved manually (recommended) or automatically, and new subscription, CSV and operator containers replace the old ones.",
+ "questions": [
+  "How do I apply a patch update to AAP on OpenShift?",
+  "Why is my AAP Operator update waiting for approval?",
+  "Manual or automatic install strategy for AAP patches"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

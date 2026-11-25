@@ -1,0 +1,13 @@
+{
+ "chunk_id": "66bed89bfdf309a1",
+ "chunk_hash": "66bed89bfdf309a1",
+ "summary": "Validate the target: gateway dashboard at `https://<gateway_hostname>/`, controller projects, inventories and job templates, hub collections and namespaces, EDA rule audits and activations, and `podman logs <container_name>` for errors. Then run key job and workflow templates and check execution environments, job artifacts and schedules.",
+ "questions": [
+  "How do I validate AAP after migration?",
+  "How do I check containerized AAP logs?",
+  "Which tests to run after migrating AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

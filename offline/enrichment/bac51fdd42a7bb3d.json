@@ -1,0 +1,17 @@
+{
+ "chunk_id": "bac51fdd42a7bb3d",
+ "chunk_hash": "bac51fdd42a7bb3d",
+ "summary": "For the conditional role, select catalog.entity.read, click Conditional and add a rule HAS_METADATA with key tags and the tag value (for example network-automation), enable all scaffolder permissions, then create the role.",
+ "questions": [
+  "How do I filter portal catalog access by tag?",
+  "HAS_METADATA rule for tags in portal RBAC",
+  "Conditional policy example for network templates"
+ ],
+ "answer_card": {
+  "title": "Conditional access by tag",
+  "answer_md": "In the role's permission policies:\n\n1. Plugin **Catalog** > `catalog.entity.read` > **Conditional**\n2. Rule: `HAS_METADATA`, Key: `tags`, Value: e.g. `network-automation`\n3. Plugin **Scaffolder**: enable all scaffolder permissions\n4. Next > Create\n\nAAP label `Network-Automation` syncs as tag `network-automation`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#portal-config-conditional-access_self-service-accessing-deployment"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

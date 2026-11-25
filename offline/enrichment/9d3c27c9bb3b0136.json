@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9d3c27c9bb3b0136",
+ "chunk_hash": "9d3c27c9bb3b0136",
+ "summary": "`flightctl get device` shows only references to external config and secrets; authorized users can view the effective configuration the service renders to the agent with `flightctl get device/${device_name} --rendered | jq`.",
+ "questions": [
+  "How do I see the actual configuration sent to a device?",
+  "Why does flightctl get device not show my config contents?",
+  "What does flightctl get device --rendered do?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

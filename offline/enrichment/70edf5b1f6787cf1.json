@@ -1,0 +1,13 @@
+{
+ "chunk_id": "70edf5b1f6787cf1",
+ "chunk_hash": "70edf5b1f6787cf1",
+ "summary": "Red Hat Ansible Lightspeed with IBM watsonx Code Assistant is a generative AI service that turns natural-language prompts into Ansible code recommendations following best practices.",
+ "questions": [
+  "What is Ansible Lightspeed?",
+  "Which models does Ansible Lightspeed use?",
+  "Can Lightspeed generate Ansible code from a prompt?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

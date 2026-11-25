@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c5007b12adf9b8c9",
+ "chunk_hash": "c5007b12adf9b8c9",
+ "summary": "Migration to Managed AAP is done by Red Hat: with a migration artifact ready, open a Customer Portal support ticket with the source type (RPM, containerized, OpenShift), the Managed AAP URL or deployment name and the source version; the Ansible SRE team explains how to upload it, imports it and notifies you.",
+ "questions": [
+  "How do I request migration to Managed AAP?",
+  "What do I include in a Managed AAP migration ticket?",
+  "Who imports the artifact into Managed AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

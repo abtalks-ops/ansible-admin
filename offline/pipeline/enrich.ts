@@ -23,7 +23,7 @@ const Enrichment = z.object({
 });
 
 /** enrichment/<chunk_hash>.json */
-const EnrichmentFile = Enrichment.extend({
+export const EnrichmentFile = Enrichment.extend({
   chunk_id: z.string(),
   chunk_hash: z.string(),
   model: z.string().optional(),

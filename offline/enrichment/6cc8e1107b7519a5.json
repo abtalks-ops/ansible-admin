@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6cc8e1107b7519a5",
+ "chunk_hash": "6cc8e1107b7519a5",
+ "summary": "The Organizations page under Access Management > Organizations lets you search, filter and sort organizations by Name, Created or Last modified, and click a name to see details.",
+ "questions": [
+  "How do I find an organization in the AAP UI?",
+  "How do I sort the Organizations list?",
+  "Where do I view organization details?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

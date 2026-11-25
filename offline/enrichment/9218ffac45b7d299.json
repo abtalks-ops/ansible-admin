@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9218ffac45b7d299",
+ "chunk_hash": "9218ffac45b7d299",
+ "summary": "hashicorp.vault.kv1_secret has no community.hashi_vault equivalent, so it needs no migration, but you can change the default auth_method and state afterwards.",
+ "questions": [
+  "Do I need to configure hashicorp.vault.kv1_secret when migrating?",
+  "Is there a community.hashi_vault equivalent of kv1_secret?",
+  "Can I change auth_method defaults for kv1_secret?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

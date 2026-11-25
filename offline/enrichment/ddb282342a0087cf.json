@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ddb282342a0087cf",
+ "chunk_hash": "ddb282342a0087cf",
+ "summary": "Edge Manager supports only the BatchSequence rollout strategy: batches run in order, each proceeding only if successful rollouts / devices in the batch meets the success threshold, and a final implicit batch picks all remaining fleet devices.",
+ "questions": [
+  "What rollout strategies does Edge Manager support?",
+  "How does BatchSequence decide to continue to the next batch?",
+  "What is the implicit final batch in a rollout?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

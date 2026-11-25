@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e6bcfc40b915504b",
+ "chunk_hash": "e6bcfc40b915504b",
+ "summary": "Sign in at the portal URL with Sign In and your AAP credentials. The error 'Login failed; caused by Error: Failed to send POST request: fetch failed' means the portal can't verify AAP's SSL certificate; trust the custom CA rather than setting checkSSL: false.",
+ "questions": [
+  "Login failed; caused by Error: Failed to send POST request: fetch failed",
+  "How do I sign in to self-service automation portal?",
+  "Portal login fails with self-signed certificate"
+ ],
+ "answer_card": {
+  "title": "'Failed to send POST request: fetch failed' at portal login",
+  "answer_md": "The portal can't verify the SSL certificate of your AAP instance (custom or self-signed CA).\n\n**Fix:** configure the portal to trust the CA (ConfigMap with the CA mounted at `/etc/pki/ca-trust/source/anchors/`, then `helm upgrade`).\n\n`checkSSL: false` also works but disables verification; not recommended for production.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-sign-in_self-service-accessing-deployment"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

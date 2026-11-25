@@ -1,0 +1,18 @@
+{
+ "chunk_id": "7dacac10830e0e04",
+ "chunk_hash": "7dacac10830e0e04",
+ "summary": "Containerized AAP stores the same operational secrets as Podman secrets, listed with `podman secret list` and kept base64-encoded (only obfuscated) in `$HOME/.local/share/containers/storage/secrets/filedriver/secretsdata.json` of the install user; `podman secret inspect --showsecret <secret>` shows a value. Monitor that file for unauthorized access.",
+ "questions": [
+  "Where are secrets stored in a containerized AAP install?",
+  "How do I list Podman secrets for AAP?",
+  "How do I view the value of an AAP Podman secret?",
+  "Are containerized AAP secrets encrypted?"
+ ],
+ "answer_card": {
+  "title": "Inspect containerized AAP secrets",
+  "answer_md": "Run as the user that installed AAP:\n```bash\npodman secret list\npodman secret inspect --showsecret <secret>\n```\nThey are stored base64-encoded (obfuscated, not encrypted) in `$HOME/.local/share/containers/storage/secrets/filedriver/secretsdata.json`. Monitor this file.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#ref-aap-operational-secrets_hardening-aap"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

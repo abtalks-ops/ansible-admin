@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ce4ea763432760e1",
+ "chunk_hash": "ce4ea763432760e1",
+ "summary": "Introduction to the guide on installing and configuring automation dashboard to evaluate automation usage and savings.",
+ "questions": [
+  "What is automation dashboard?",
+  "How do I install automation dashboard?",
+  "Measure AAP usage and savings"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

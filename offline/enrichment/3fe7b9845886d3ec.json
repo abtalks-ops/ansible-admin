@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3fe7b9845886d3ec",
+ "chunk_hash": "3fe7b9845886d3ec",
+ "summary": "An inventory CR creates a controller inventory with name, organization, state, instance_groups and variables.",
+ "questions": [
+  "How do I create a controller inventory with the Resource Operator?",
+  "Inventory custom resource variables example",
+  "Set instance_groups on an inventory CR"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

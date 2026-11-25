@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f24a94de32b90e3a",
+ "chunk_hash": "f24a94de32b90e3a",
+ "summary": "December 2025 containerized enhancement: podman PID limits, inotify and kernel keys sysctls, and nofile ulimit for the AAP service user are now sized from system resources (AAP-59438).",
+ "questions": [
+  "How does the containerized installer set podman PID limits?",
+  "Does containerized AAP set inotify sysctls?",
+  "ulimit nofile for AAP containers"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7d17bac865ec48a5",
+ "chunk_hash": "7d17bac865ec48a5",
+ "summary": "The Hosts page lists hosts from recent jobs; a host's Details show inventory, creator, last modified and variables (YAML or JSON), with Facts, Groups (Associate groups) and Jobs tabs.",
+ "questions": [
+  "How do I see facts for a host in controller?",
+  "How do I see which jobs ran on a host?",
+  "How do I add a host to a group from the host page?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

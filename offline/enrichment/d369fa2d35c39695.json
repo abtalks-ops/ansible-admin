@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d369fa2d35c39695",
+ "chunk_hash": "d369fa2d35c39695",
+ "summary": "Create a password hash by running `awx-manage shell_plus` on the controller node and calling encrypt_value('<password>') from awx.main.utils; save the full output beginning with $encrypted$.",
+ "questions": [
+  "How do I encrypt a password with awx-manage?",
+  "How do I generate an $encrypted$ value for postgres.py?",
+  "What does encrypt_value return?"
+ ],
+ "answer_card": {
+  "title": "Hash a password for controller config",
+  "answer_md": "```python\n# awx-manage shell_plus\n>>> from awx.main.utils import encrypt_value, get_encryption_key\n>>> print(encrypt_value('<plain_text_password>'))\n$encrypted$UTF8$AESCBC$...\n```\nKeep the **whole** value, including the `$encrypted$` prefix.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#proc-create-password-hashes"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

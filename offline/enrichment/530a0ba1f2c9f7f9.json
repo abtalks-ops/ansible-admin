@@ -1,0 +1,13 @@
+{
+ "chunk_id": "530a0ba1f2c9f7f9",
+ "chunk_hash": "530a0ba1f2c9f7f9",
+ "summary": "Rulebook activations can fail for many reasons; Event-Driven Ansible adds unique tracking identifiers to all log output to help troubleshoot failures across distributed services.",
+ "questions": [
+  "Why does my rulebook activation fail?",
+  "How do I troubleshoot Event-Driven Ansible activations?",
+  "Does EDA logging include tracking IDs?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

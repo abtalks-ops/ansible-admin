@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1678b6f818a8105d",
+ "chunk_hash": "1678b6f818a8105d",
+ "summary": "Red Hat Ansible Automation Platform inventory source pulls inventory from another AAP using the controller inventory plugin, with an AAP credential and Source Variables.",
+ "questions": [
+  "How do I import inventory from another automation controller?",
+  "Which plugin does the AAP inventory source use?",
+  "What credential does the AAP inventory source need?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

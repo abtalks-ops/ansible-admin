@@ -1,0 +1,14 @@
+{
+ "chunk_id": "f6fb89522f38cfdd",
+ "chunk_hash": "f6fb89522f38cfdd",
+ "summary": "A fleet groups devices under a label selector, a device template that is enforced on members, and policies such as rollout; it scales operations, reduces drift, auto-configures added or replaced devices, and can coexist with individually managed devices.",
+ "questions": [
+  "What is a device fleet in Edge Manager?",
+  "What are the parts of a fleet specification?",
+  "Why manage devices as a fleet?",
+  "Can I mix fleet and individually managed devices?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

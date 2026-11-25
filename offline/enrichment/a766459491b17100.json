@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a766459491b17100",
+ "chunk_hash": "a766459491b17100",
+ "summary": "Run `sudo flightctl-must-gather` on the device to create a .tar diagnostic log bundle of the agent for troubleshooting and bug reports; retrieving it requires SSH access.",
+ "questions": [
+  "How do I collect logs from an Edge Manager device?",
+  "What is flightctl-must-gather?",
+  "How do I create a log bundle for a bug report?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "chunk_id": "0d16eeda4835b574",
+ "chunk_hash": "0d16eeda4835b574",
+ "summary": "Add hosts on the inventory's Hosts tab with Create host, either new (toggle On to include in jobs, Name, Variables such as ansible_user, ansible_ssh_pass, ansible_become_pass) or existing; hosts can be disassociated and ad hoc commands run from there.",
+ "questions": [
+  "How do I add a host to an inventory in AAP?",
+  "How do I set ansible_user for a host?",
+  "How do I disable a host so jobs skip it?",
+  "How do I remove a host from an inventory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

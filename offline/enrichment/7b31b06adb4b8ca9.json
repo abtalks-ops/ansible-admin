@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7b31b06adb4b8ca9",
+ "chunk_hash": "7b31b06adb4b8ca9",
+ "summary": "Read VMware credential values in a playbook with lookup('env', ...) on VMWARE_HOST, VMWARE_USER and VMWARE_PASSWORD.",
+ "questions": [
+  "How do I access vCenter credentials in a playbook?",
+  "Use VMWARE_HOST in a task",
+  "Get the VMware password from a controller credential"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "66f5eab21c5b40d3",
+ "chunk_hash": "66f5eab21c5b40d3",
+ "summary": "rhaap:create-job-template creates an AAP job template. Required values: templateName, project {id}, jobInventory {id}, playbook. Optional: templateDescription, organization, scmType (Github/Gitlab), executionEnvironment {id}, extraVariables, plus token and deleteIfExist inputs.",
+ "questions": [
+  "What fields does rhaap:create-job-template require?",
+  "How do I create a job template from a Backstage software template?",
+  "Can rhaap:create-job-template set extra variables?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:23+00:00"
+}

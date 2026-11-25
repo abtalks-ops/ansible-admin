@@ -1,0 +1,17 @@
+{
+ "chunk_id": "744a7771afd6d231",
+ "chunk_hash": "744a7771afd6d231",
+ "summary": "Static PVC names: database postgres-15-<aap_cr_name>-postgres-15-0 (ReadWriteOnce), hub file storage <instance_name>-hub-file-storage (ReadWriteMany, when storage_type is file) and hub Redis <instance_name>-hub-redis-data (ReadWriteOnce).",
+ "questions": [
+  "What PVC names does the AAP Operator expect?",
+  "Name of the automation hub file storage PVC",
+  "AAP database PVC name for static provisioning"
+ ],
+ "answer_card": {
+  "title": "Static PVC names",
+  "answer_md": "| Component | PVC name | Access |\n|---|---|---|\n| Database | `postgres-15-<aap_cr_name>-postgres-15-0` | RWO |\n| Hub storage (file) | `<instance_name>-hub-file-storage` | RWX |\n| Hub Redis | `<instance_name>-hub-redis-data` | RWO |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#ref-operator-pvc-naming_operator-staic-storage"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

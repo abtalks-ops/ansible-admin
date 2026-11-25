@@ -1,0 +1,13 @@
+{
+ "chunk_id": "cef9fb6051f46623",
+ "chunk_hash": "cef9fb6051f46623",
+ "summary": "The ansible-navigator doc subcommand settings are help-doc (--hd, ansible-doc help in stdout mode), plugin-name (positional) and plugin-type (-t: become, cache, callback, cliconf, connection, httpapi, inventory, lookup, module, netconf, shell, strategy or vars; default module).",
+ "questions": [
+  "How do I view docs for a lookup plugin with ansible-navigator doc?",
+  "What plugin types does ansible-navigator doc support?",
+  "What is the default plugin type for ansible-navigator doc?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

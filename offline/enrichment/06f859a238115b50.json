@@ -1,0 +1,13 @@
+{
+ "chunk_id": "06f859a238115b50",
+ "chunk_hash": "06f859a238115b50",
+ "summary": "Introduction to the guide on setting up and using Ansible development workspaces for browser-based automation content development.",
+ "questions": [
+  "What are Ansible development workspaces?",
+  "Guide for Ansible development workspaces",
+  "Develop Ansible content in a browser"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

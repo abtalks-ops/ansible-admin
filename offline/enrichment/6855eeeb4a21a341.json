@@ -1,0 +1,18 @@
+{
+ "chunk_id": "6855eeeb4a21a341",
+ "chunk_hash": "6855eeeb4a21a341",
+ "summary": "Template placeholder functions are upper, lower, replace and getOrDefault, combinable in pipelines; labels with hyphens need `{{ index .metadata.labels \"target-revision\" }}`; placeholders let images or Git paths vary by stage or site labels.",
+ "questions": [
+  "What functions can I use in fleet template placeholders?",
+  "How do I reference a label with a hyphen in a template?",
+  "How do I default a missing label in a device template?",
+  "How do I use a stage label in an OS image tag?"
+ ],
+ "answer_card": {
+  "title": "Fleet template placeholder functions",
+  "answer_md": "```\n{{ upper .metadata.name }}\n{{ lower .metadata.labels.key }}\n{{ replace \"old\" \"new\" .metadata.labels.key }}\n{{ getOrDefault .metadata.labels \"key\" \"default\" | upper | replace \" \" \"-\" }}\n{{ index .metadata.labels \"target-revision\" }}   # hyphenated keys\n```\nExample: `image: quay.io/myorg/myimage:latest-{{ .metadata.labels.stage }}`",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_device_fleets_with_the_red_hat_edge_manager/index#edge-manager-device-templates"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

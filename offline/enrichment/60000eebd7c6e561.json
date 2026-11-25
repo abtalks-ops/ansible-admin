@@ -1,0 +1,17 @@
+{
+ "chunk_id": "60000eebd7c6e561",
+ "chunk_hash": "60000eebd7c6e561",
+ "summary": "Example rhaap:create-job-template step that chains outputs from earlier steps: project from steps['create-aap-project'].output.project and executionEnvironment from steps['create-ee'].output.executionEnvironment, with playbook deploy.yml and extra variables.",
+ "questions": [
+  "How do I pass the project from rhaap:create-project to rhaap:create-job-template?",
+  "Show an example rhaap:create-job-template step",
+  "How do I reference output of a previous Backstage step?"
+ ],
+ "answer_card": {
+  "title": "Chain rhaap actions in a template",
+  "answer_md": "Reference earlier step outputs with `steps['<id>'].output`:\n\n```yaml\n- id: create-job-template\n  action: rhaap:create-job-template\n  input:\n    token: ${{ parameters.AAP_TOKEN }}\n    deleteIfExist: true\n    values:\n      templateName: Deploy Application\n      project: ${{ steps['create-aap-project'].output.project }}\n      organization: ${{ parameters.organization }}\n      jobInventory: ${{ parameters.jobInventory }}\n      playbook: deploy.yml\n      executionEnvironment: ${{ steps['create-ee'].output.executionEnvironment }}\n      extraVariables:\n        app_version: 1.0.0\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_self_service_automation_portal/index#devtools-create-job-template_self-service-rbac"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:23+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c6f1dba9fb6e78f0",
+ "chunk_hash": "c6f1dba9fb6e78f0",
+ "summary": "Shows LDAP organization admin group maps converting to gateway organization maps with a groups has_or trigger and role Organization Admin, and AUTH_LDAP_USER_FLAGS_BY_GROUP is_superuser converting to an is_superuser map with a groups trigger.",
+ "questions": [
+  "How is AUTH_LDAP_USER_FLAGS_BY_GROUP converted in platform gateway?",
+  "How do LDAP org admin group mappings migrate to 2.6?",
+  "What is a has_or trigger in an authenticator map?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

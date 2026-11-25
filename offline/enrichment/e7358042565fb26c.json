@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e7358042565fb26c",
+ "chunk_hash": "e7358042565fb26c",
+ "summary": "With a managed database, restore from a temporary `registry.redhat.io/rhel8/postgresql-15:latest` container run on the database node with host networking, the `~/aap/tls/extracted` CA trust and `~/aap/postgresql/server.crt`/`.key` mounted, and `~/artifact` mounted read-only at `/var/lib/pgsql/backups`; check images with `podman images ls` if it's missing.",
+ "questions": [
+  "How do I restore databases into containerized AAP?",
+  "Temporary postgres container for pg_restore",
+  "Which image do I use for the migration restore container?"
+ ],
+ "answer_card": {
+  "title": "Temporary restore container",
+  "answer_md": "On the database node:\n```bash\npodman run -it --rm --name postgresql_restore_temp --network host \\\n  --volume ~/aap/tls/extracted:/etc/pki/ca-trust/extracted:z \\\n  --volume ~/aap/postgresql/server.crt:/var/lib/pgsql/server.crt:ro,z \\\n  --volume ~/aap/postgresql/server.key:/var/lib/pgsql/server.key:ro,z \\\n  --volume ~/artifact:/var/lib/pgsql/backups:ro,z \\\n  registry.redhat.io/rhel8/postgresql-15:latest bash\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/ansible_automation_platform_migration/index#containerized-target-import"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "02447b96b0ca3de6",
+ "chunk_hash": "02447b96b0ca3de6",
+ "summary": "Create an external-postgres-configuration Secret (host, port 5432, database, username, password without quotes or backslashes, sslmode prefer/disable/allow/require/verify-ca/verify-full, type unmanaged) and set spec.controller.postgres_configuration_secret; without controller.name a new <aap>-controller instance is created.",
+ "questions": [
+  "How do I configure an external database for automation controller on OpenShift?",
+  "What sslmode values does the controller database secret accept?",
+  "What is postgres_configuration_secret?",
+  "Use an external database for an existing controller instance"
+ ],
+ "answer_card": {
+  "title": "External database for controller",
+  "answer_md": "```yaml\napiVersion: v1\nkind: Secret\nmetadata:\n  name: external-postgres-configuration\n  namespace: <target_namespace>\nstringData:\n  host: \"<db_host>\"\n  port: \"5432\"\n  database: \"<db_name>\"\n  username: \"<user>\"\n  password: \"<password>\"\n  sslmode: \"prefer\"   # disable, allow, require, verify-ca, verify-full\n  type: \"unmanaged\"\ntype: Opaque\n```\n```yaml\nspec:\n  controller:\n    name: controller-dev   # optional, existing instance\n    postgres_configuration_secret: external-postgres-configuration\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-operator-external-db-controller"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

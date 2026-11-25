@@ -1,0 +1,18 @@
+{
+ "chunk_id": "3de67f485ff76195",
+ "chunk_hash": "3de67f485ff76195",
+ "summary": "Configure OPA under Settings > Automation Execution > Policy > Edit policy settings: hostname, port, auth type, custom header, timeout and retry count, plus a token or mTLS client certificate, key and CA, and Use SSL for OPA connection. Without an OPA server, no policy evaluation happens.",
+ "questions": [
+  "How do I connect AAP to an OPA server?",
+  "How do I use mTLS with OPA in AAP?",
+  "Why are my policies not evaluated when jobs run?",
+  "Where are policy settings in AAP 2.6?"
+ ],
+ "answer_card": {
+  "title": "Connect AAP to OPA",
+  "answer_md": "1. **Settings > Automation Execution > Policy > Edit policy settings** (admin only).\n2. Set **OPA Server hostname**, **port**, **authentication type**, timeout and retry count.\n3. For *Token*, enter the token; for *Certificate*, paste client certificate, client key and CA certificate.\n4. Tick **Use SSL for OPA connection** if needed, then **Save policy settings**.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#configure-pac-settings_controller-pac"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

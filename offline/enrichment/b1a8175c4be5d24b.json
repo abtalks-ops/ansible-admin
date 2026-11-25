@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b1a8175c4be5d24b",
+ "chunk_hash": "b1a8175c4be5d24b",
+ "summary": "Migration example for the KV2 lookup: lookup('community.hashi_vault.hashi_vault', 'secret=secret/data/hello token=... url=...') becomes lookup('hashicorp.vault.kv2_secret_get', 'secret=secret/data/hello url=...').",
+ "questions": [
+  "How do I convert a community.hashi_vault lookup for KV2?",
+  "Show a hashicorp.vault.kv2_secret_get lookup example",
+  "Does the kv2_secret_get lookup still need a token argument?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

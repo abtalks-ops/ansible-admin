@@ -1,0 +1,13 @@
+{
+ "chunk_id": "05672ac3d470952f",
+ "chunk_hash": "05672ac3d470952f",
+ "summary": "Set the ee-minimal image as base_image, add kubernetes.core under dependencies.galaxy.collections, build with ansible-builder build -t <user>/new-ee, and confirm it with podman images; community collections need no ansible.cfg.",
+ "questions": [
+  "How do I build a custom execution environment with kubernetes.core?",
+  "How do I check my new execution environment image exists?",
+  "Do I need ansible.cfg for Galaxy collections in ansible-builder?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:12+00:00"
+}

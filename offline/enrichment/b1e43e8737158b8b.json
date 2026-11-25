@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b1e43e8737158b8b",
+ "chunk_hash": "b1e43e8737158b8b",
+ "summary": "Pass the automation hub API token into a build without exposing it: export ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN from a token file, declare ARG for it in prepend_galaxy with the server ENV settings, and pass --build-arg.",
+ "questions": [
+  "How do I authenticate to automation hub during an execution environment build?",
+  "Where do I store the automation hub token for ansible-builder?",
+  "Keep the hub token out of the execution environment image"
+ ],
+ "answer_card": {
+  "title": "Hub token in an ansible-builder build",
+  "answer_md": "```bash\nexport ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN=$(cat token.txt)\n```\n```yaml\nadditional_build_steps:\n  prepend_galaxy:\n    - ARG ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN\n    - ENV ANSIBLE_GALAXY_SERVER_LIST=automation_hub\n    - ENV ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_URL=https://console.redhat.com/api/automation-hub/content/published/\n    - ENV ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_AUTH_URL=https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token\n```\n```bash\nansible-builder build --build-arg ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/creating_and_using_execution_environments/index#ref-scenario-using-authentication-ee"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:12+00:00"
+}

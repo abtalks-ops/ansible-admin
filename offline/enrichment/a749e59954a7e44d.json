@@ -1,0 +1,18 @@
+{
+ "chunk_id": "a749e59954a7e44d",
+ "chunk_hash": "a749e59954a7e44d",
+ "summary": "Create a git Repository resource (e.g. site-settings with spec.type git and url), apply it with flightctl, confirm ACCESSIBLE True with `flightctl get repository/site-settings`, then add a GitConfigProviderSpec entry in the device spec.config with gitRef repository, targetRevision and path.",
+ "questions": [
+  "How do I create a Git Repository resource in Edge Manager?",
+  "How do I check that Edge Manager can access my Git repo?",
+  "How do I apply Git-based configuration to a device?",
+  "What does GitConfigProviderSpec look like?"
+ ],
+ "answer_card": {
+  "title": "Device configuration from Git",
+  "answer_md": "```yaml\napiVersion: flightctl.io/v1alpha1\nkind: Repository\nmetadata: {name: site-settings}\nspec:\n  type: git\n  url: https://github.com/<org>/<repo>.git\n```\n```bash\nflightctl apply -f site-settings-repo.yaml\nflightctl get repository/site-settings   # ACCESSIBLE True\n```\n```yaml\n# Device spec\nspec:\n  config:\n  - name: example-site\n    configType: GitConfigProviderSpec\n    gitRef:\n      repository: site-settings\n      targetRevision: production\n      path: /etc/example-site\n```\nThe root `/` is not writable on bootc systems, so target a writable path.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_device_fleets_with_the_red_hat_edge_manager/index#edge-manager-config-git-cli"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

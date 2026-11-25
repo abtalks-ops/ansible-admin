@@ -1,0 +1,18 @@
+{
+ "chunk_id": "fdb72cdbdd08fcc6",
+ "chunk_hash": "fdb72cdbdd08fcc6",
+ "summary": "Shows how organization maps (users: true) become gateway organization authenticator maps with role Organization Member, user flags by attribute become is_superuser maps with attribute triggers, and how AUTH_LDAP_SERVER_URI, BIND_DN, USER_SEARCH and USER_ATTR_MAP map to gateway LDAP configuration keys.",
+ "questions": [
+  "How do AUTH_LDAP settings map to platform gateway LDAP configuration?",
+  "How is ORGANIZATION_MAP converted to an authenticator map?",
+  "How does SOCIAL_AUTH_SAML_USER_FLAGS_BY_ATTR map in 2.6?",
+  "What does an is_superuser authenticator map look like?"
+ ],
+ "answer_card": {
+  "title": "LDAP settings 2.4 → 2.6",
+  "answer_md": "Controller `AUTH_LDAP_*` settings drop the prefix in the gateway LDAP `configuration`:\n\n- `AUTH_LDAP_SERVER_URI` → `SERVER_URI`\n- `AUTH_LDAP_BIND_DN` / `_BIND_PASSWORD` → `BIND_DN` / `BIND_PASSWORD`\n- `AUTH_LDAP_START_TLS` → `START_TLS`\n- `AUTH_LDAP_USER_SEARCH` → `USER_SEARCH`\n- `AUTH_LDAP_USER_ATTR_MAP` → `USER_ATTR_MAP`\n\nOrganization and user-flag maps become authenticator maps (`map_type` organization or is_superuser) with triggers.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-oidc-auth"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

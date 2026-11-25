@@ -1,0 +1,17 @@
+{
+ "chunk_id": "525a95129ed739ae",
+ "chunk_hash": "525a95129ed739ae",
+ "summary": "Open the Ansible Automation Platform route from Networking > Routes, log in as admin with the password from the <instance>-admin-password secret, then apply a subscription manifest or credentials and accept the license.",
+ "questions": [
+  "How do I log in to the platform gateway on OpenShift?",
+  "What is the admin password for AAP on OpenShift?",
+  "Where is the AAP route in the OpenShift console?"
+ ],
+ "answer_card": {
+  "title": "First login on OpenShift",
+  "answer_md": "1. Networking > Routes > open the *Ansible Automation Platform* location.\n2. Username `admin`; password from Workloads > Secrets > `<instance>-admin-password`.\n3. Add a subscription manifest or username/password, pick the subscription, Next through Analytics, accept the license.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#operator-access-aap_install-aap-gateway"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

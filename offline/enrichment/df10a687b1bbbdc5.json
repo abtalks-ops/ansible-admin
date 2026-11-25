@@ -1,0 +1,13 @@
+{
+ "chunk_id": "df10a687b1bbbdc5",
+ "chunk_hash": "df10a687b1bbbdc5",
+ "summary": "Automation content navigator lets you browse Ansible collections developed locally or inside execution environments and drill into each one.",
+ "questions": [
+  "Can ansible-navigator browse collections?",
+  "How do I see collections inside an execution environment?",
+  "Does ansible-navigator show locally developed collections?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

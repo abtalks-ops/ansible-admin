@@ -1,0 +1,19 @@
+{
+ "chunk_id": "c372e03a0fee7436",
+ "chunk_hash": "c372e03a0fee7436",
+ "summary": "Git/SVN project fields: Source control URL, branch/tag/commit (default HEAD; some refs need a refspec), refspec, credential, and options Clean, Delete, Track submodules, Update revision on launch (with Cache Timeout) and Allow branch override.",
+ "questions": [
+  "What does Update revision on launch do?",
+  "What is the difference between Clean and Delete on a project?",
+  "What is the project Cache Timeout?",
+  "Which branch does a project use if none is set?",
+  "How do I track git submodules in a project?"
+ ],
+ "answer_card": {
+  "title": "Project source control options",
+  "answer_md": "- **Clean**: remove local modifications before updating\n- **Delete**: delete the whole local repository before updating (slower for big repos)\n- **Track submodules**: follow the latest submodule commit\n- **Update revision on launch**: sync the project (and its roles/collections) before each job; set a **Cache Timeout** to reuse a recent sync instead of syncing for every job\n- **Allow branch override**: let job templates and inventory sources pick another branch or revision\n\nIf *Source control branch/tag/commit* is blank, `HEAD` is used.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#proc-scm-git-subversion"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

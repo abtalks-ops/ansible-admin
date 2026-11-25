@@ -1,0 +1,17 @@
+{
+ "chunk_id": "224cf89b0cd565ba",
+ "chunk_hash": "224cf89b0cd565ba",
+ "summary": "AAP rejects MCP requests such as job stdout with HTTP 406 when the output is not JSON; ask the AI tool to request JSON and convert it afterwards.",
+ "questions": [
+  "Why does the Ansible MCP server return 406?",
+  "How do I get job stdout through the MCP server?",
+  "MCP 406 Not Acceptable from AAP"
+ ],
+ "answer_card": {
+  "title": "MCP 406 errors",
+  "answer_md": "AAP returns **406** when the MCP server asks for non-JSON output (for example job stdout). Tell the AI tool to request **JSON**, then convert it to the format you want.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#troubleshoot-ansible-mcp-server-errors"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:01:36+00:00"
+}

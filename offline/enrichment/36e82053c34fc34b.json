@@ -1,0 +1,13 @@
+{
+ "chunk_id": "36e82053c34fc34b",
+ "chunk_hash": "36e82053c34fc34b",
+ "summary": "Launch a job template from Automation Execution > Templates via the launch icon; templates store inventory, credentials, extra vars and CLI options; the list is compact by default, sorted by name, and lets you launch, edit or copy.",
+ "questions": [
+  "How do I launch a job template?",
+  "What does the Templates list show?",
+  "How do I copy a job template?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

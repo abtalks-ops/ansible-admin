@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ccf3f61a28fae357",
+ "chunk_hash": "ccf3f61a28fae357",
+ "summary": "Update the HTTP plug-in registry: oc project <portal-project>, find the build config with oc get buildconfig (e.g. aap-self-service-plugins), then oc start-build <build_config_name> --from-dir=$DYNAMIC_PLUGIN_ROOT_DIR --wait with the new TAR files.",
+ "questions": [
+  "How do I update the portal plug-in registry?",
+  "oc start-build for portal plug-ins",
+  "Find the plug-in registry build config name"
+ ],
+ "answer_card": {
+  "title": "Update the portal plug-in registry",
+  "answer_md": "```bash\noc project <portal-project>\noc get buildconfig            # e.g. aap-self-service-plugins\noc start-build <build_config_name> --from-dir=$DYNAMIC_PLUGIN_ROOT_DIR --wait\n```\n`$DYNAMIC_PLUGIN_ROOT_DIR` holds the new plug-in TAR files. Then check the files in the new `<build_config_name>-<n>-build` pod and upgrade the Helm chart.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#rhdh-update-registry_self-service-upgrading"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

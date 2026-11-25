@@ -1,0 +1,17 @@
+{
+ "chunk_id": "165013da4ebe28cc",
+ "chunk_hash": "165013da4ebe28cc",
+ "summary": "Example AnsibleAutomationPlatform CR (aap.ansible.com/v1alpha1) for the growth topology with eda.automation_server_ssl_verify 'no' and hub storage_type 's3' using object_storage_s3_secret.",
+ "questions": [
+  "Show an example AnsibleAutomationPlatform custom resource",
+  "How do I configure S3 storage for automation hub in the AAP CR?",
+  "How do I disable SSL verification from EDA to controller in the CR?"
+ ],
+ "answer_card": {
+  "title": "AnsibleAutomationPlatform CR with S3 hub storage",
+  "answer_md": "```yaml\napiVersion: aap.ansible.com/v1alpha1\nkind: AnsibleAutomationPlatform\nmetadata:\n  name: <aap instance name>\nspec:\n  eda:\n    automation_server_ssl_verify: 'no'\n  hub:\n    storage_type: 's3'\n    object_storage_s3_secret: '<Secret holding the S3 configuration>'\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/tested_deployment_models/index#ocp-a-env-a"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

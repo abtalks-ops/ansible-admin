@@ -1,0 +1,13 @@
+{
+ "chunk_id": "96eb709ec50d56e7",
+ "chunk_hash": "96eb709ec50d56e7",
+ "summary": "Example AnsibleAutomationPlatform custom resource (aap-fresh-controller-eda.yml) that deploys automation controller and Event-Driven Ansible with `hub.disabled: true`, giving myaap-controller and myaap-eda; storage_type options for hub are file, S3 or azure.",
+ "questions": [
+  "AnsibleAutomationPlatform CR with only controller and EDA",
+  "How do I disable automation hub in the operator CR?",
+  "Example CR to deploy controller and Event-Driven Ansible without hub"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

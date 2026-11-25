@@ -1,0 +1,18 @@
+{
+ "chunk_id": "63432e8375ccf26f",
+ "chunk_hash": "63432e8375ccf26f",
+ "summary": "The Source control refspec field sets extra git refs a project update fetches, for example refs/*:refs/remotes/origin/* or refs/pull/*:refs/remotes/origin/pull/* for GitHub pull requests; blank fetches only refs/heads/, and the refspec decides which branch overrides are available.",
+ "questions": [
+  "How do I fetch GitHub pull request refs in an AAP project?",
+  "What is the Source control refspec field?",
+  "What refs does the git module fetch by default in controller?",
+  "How do I run a job against a pull request branch?"
+ ],
+ "answer_card": {
+  "title": "Fetch extra git refs with a refspec",
+  "answer_md": "Set the project's **Source control refspec** to fetch refs beyond `refs/heads/`:\n\n- `refs/*:refs/remotes/origin/*`: all references\n- `refs/pull/*:refs/remotes/origin/pull/*`: all GitHub pull requests\n- `refs/pull/62/head:refs/remotes/origin/pull/62/head`: one pull request\n\nThe first two can be slow on large repositories. Each project update runs an extra `git fetch` for the refspec, and the refspec decides which values can be used as a *Source control branch* override.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-git-refspec"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

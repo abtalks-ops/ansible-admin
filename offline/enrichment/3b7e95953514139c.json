@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3b7e95953514139c",
+ "chunk_hash": "3b7e95953514139c",
+ "summary": "Troubleshooting backup and recovery for the AAP Operator on OpenShift is in the Troubleshooting section of Backup and recovery for operator environments.",
+ "questions": [
+  "Where is troubleshooting for AAP Operator backup and restore?",
+  "How do I troubleshoot AAP backup and recovery on OpenShift?",
+  "Where is backup troubleshooting for operator environments?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

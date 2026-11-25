@@ -1,0 +1,13 @@
+{
+ "chunk_id": "afabe13a16176399",
+ "chunk_hash": "afabe13a16176399",
+ "summary": "The Edge Manager API server has a user-facing endpoint for CLI and web console, using a JWT from the platform gateway, and an mTLS-protected agent endpoint that authenticates devices by X.509 client certificates.",
+ "questions": [
+  "How do users authenticate to the Edge Manager API?",
+  "How do Edge Manager agents authenticate?",
+  "What endpoints does the Edge Manager API server expose?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}

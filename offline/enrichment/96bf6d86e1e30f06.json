@@ -1,0 +1,18 @@
+{
+ "chunk_id": "96bf6d86e1e30f06",
+ "chunk_hash": "96bf6d86e1e30f06",
+ "summary": "Controller exposes Prometheus metrics at /api/v2/metrics. Key performance metrics: awx_status_total, awx_instance_remaining_capacity, callback_receiver_event_processing_avg_seconds (job events lag), callback_receiver_events_insert_db and callback_receiver_events_queue_size_redis, where a high queue can cause OOM.",
+ "questions": [
+  "Where are Prometheus metrics for automation controller?",
+  "What is job events lag?",
+  "Which metric shows remaining capacity?",
+  "Control node running out of memory because of Redis queue"
+ ],
+ "answer_card": {
+  "title": "Key controller metrics at /api/v2/metrics",
+  "answer_md": "| Metric | Use |\n|---|---|\n| `awx_status_total` | jobs per status, spot failure spikes |\n| `awx_instance_remaining_capacity` | capacity left for jobs |\n| `callback_receiver_event_processing_avg_seconds` | job events lag |\n| `callback_receiver_events_insert_db` | event insert rate |\n| `callback_receiver_events_queue_size_redis` | backlog; too high risks OOM |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#ref-controller-metrics-monitoring"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "10a86de72a63ce16",
+ "chunk_hash": "10a86de72a63ce16",
+ "summary": "Sample ServiceAccount, Role (pods, pods/log, pods/attach, secrets) and RoleBinding for container groups; apply with oc apply -f containergroup-sa.yml, get a token with oc create token --duration, and extract the CA from the wildcard-tls secret.",
+ "questions": [
+  "What RBAC does a container group service account need?",
+  "How do I generate a token for the container group service account?",
+  "How do I get the OpenShift CA certificate for a container group credential?",
+  "Example service account YAML for AAP container groups"
+ ],
+ "answer_card": {
+  "title": "Service account for a container group",
+  "answer_md": "Apply the ServiceAccount, Role (verbs on `pods`, `get` on `pods/log`, `create` on `pods/attach`, `get/create/delete` on `secrets`) and RoleBinding:\n\n```\noc apply -f containergroup-sa.yml\noc create token containergroup-service-account --duration=$((365*24))h > containergroup-sa.token\noc get secret -n openshift-ingress wildcard-tls -o jsonpath='{.data.ca\\.crt}' | base64 -d > containergroup-ca.crt\n```\n\nUse the token and CA in an OpenShift or Kubernetes API Bearer Token credential.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-create-service-account"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

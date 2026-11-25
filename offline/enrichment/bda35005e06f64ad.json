@@ -1,0 +1,13 @@
+{
+ "chunk_id": "bda35005e06f64ad",
+ "chunk_hash": "bda35005e06f64ad",
+ "summary": "Content creators use automation hub namespaces to set up curating teams, add namespace info and resources, upload collections and review import logs and approval status.",
+ "questions": [
+  "How do I manage collections in automation hub?",
+  "What can I do with automation hub namespaces?",
+  "Where do I see collection import status?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

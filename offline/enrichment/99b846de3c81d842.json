@@ -1,0 +1,13 @@
+{
+ "chunk_id": "99b846de3c81d842",
+ "chunk_hash": "99b846de3c81d842",
+ "summary": "The portal auto-generates Backstage Software Templates from AAP job templates: form fields from surveys and Prompt on Launch options, metadata from name, description and labels, a single rhaap:launch-job-template step, and job result output. Users only see templates they have Execute permission on in AAP.",
+ "questions": [
+  "How are auto-generated templates built?",
+  "What is rhaap:launch-job-template?",
+  "Do surveys become form fields in the portal?",
+  "What technology are portal templates based on?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

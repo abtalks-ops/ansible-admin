@@ -1,0 +1,13 @@
+{
+ "chunk_id": "14a14576dace9a3d",
+ "chunk_hash": "14a14576dace9a3d",
+ "summary": "Ansible Vault credentials take a Vault Password and optional Vault Identifier for multiple vaults, can prompt on launch, but must not prompt when used by scheduled jobs.",
+ "questions": [
+  "How do I use Ansible Vault in automation controller?",
+  "How do I use multiple vault passwords in a job?",
+  "Can a vault credential prompt for a password at launch?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

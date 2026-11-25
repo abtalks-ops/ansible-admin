@@ -1,0 +1,12 @@
+{
+ "chunk_id": "5e6965c6bd614cdb",
+ "chunk_hash": "5e6965c6bd614cdb",
+ "summary": "If you link external SCM systems to the portal you need a personal access token; GitHub and GitLab are supported.",
+ "questions": [
+  "Which SCMs does self-service automation portal support?",
+  "Does the portal support Bitbucket?",
+  "Do I need a Git token for the portal?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a845273843a7b82c",
+ "chunk_hash": "a845273843a7b82c",
+ "summary": "Decision environments are container images that run Ansible rulebooks, standardising how automation dependencies are built and distributed; the default is the ansible-rulebook image on quay.io, and you can build your own with ansible-builder.",
+ "questions": [
+  "What is a decision environment?",
+  "Where is the default decision environment image?",
+  "What is the difference between a decision environment and an execution environment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

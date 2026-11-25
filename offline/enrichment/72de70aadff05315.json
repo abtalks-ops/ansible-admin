@@ -1,0 +1,13 @@
+{
+ "chunk_id": "72de70aadff05315",
+ "chunk_hash": "72de70aadff05315",
+ "summary": "Controller performance tuning covers the task system, control plane, execution plane, web server, WebSocket system and database; identify needs and limits and monitor the deployment.",
+ "questions": [
+  "How do I tune automation controller performance?",
+  "Which controller components can be tuned?",
+  "Plan controller scaling"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

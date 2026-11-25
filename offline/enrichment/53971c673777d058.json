@@ -1,0 +1,13 @@
+{
+ "chunk_id": "53971c673777d058",
+ "chunk_hash": "53971c673777d058",
+ "summary": "Add the Ansible software templates to RHDH by adding a catalog location of type url targeting `https://github.com/ansible/ansible-rhdh-templates/blob/main/all.yaml` with `allow: [Template]` in `app-config-rhdh.yaml`.",
+ "questions": [
+  "How do I add Ansible software templates to Developer Hub?",
+  "Catalog location for ansible-rhdh-templates",
+  "Templates not showing in the Ansible Create tab"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

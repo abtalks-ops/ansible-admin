@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e008c7c0ae5cfd88",
+ "chunk_hash": "e008c7c0ae5cfd88",
+ "summary": "RBAC restricts custom repositories: users can view all public repositories but cannot modify them, or perform operations such as downloading, unless their role allows it.",
+ "questions": [
+  "How do I restrict access to a custom automation hub repository?",
+  "Can I stop a user downloading from a repository?",
+  "Can all users see public repositories?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

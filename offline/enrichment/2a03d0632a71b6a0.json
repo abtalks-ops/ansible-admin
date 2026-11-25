@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2a03d0632a71b6a0",
+ "chunk_hash": "2a03d0632a71b6a0",
+ "summary": "Execution capacity used by a job equals min(forks, hosts) + 1, so forks 5 on 50 hosts uses 6 units. Scale execution nodes vertically for more forks or horizontally into separate instance groups assigned to organizations, inventories or job templates; lower the capacity adjustment if monitoring shows over-use.",
+ "questions": [
+  "How is job capacity calculated in automation controller?",
+  "How many capacity units does a job with 5 forks use?",
+  "How do I isolate low-priority jobs on separate execution nodes?",
+  "What is capacity adjustment on an execution node?"
+ ],
+ "answer_card": {
+  "title": "How much execution capacity a job uses",
+  "answer_md": "`capacity = min(forks, hosts in inventory) + 1`\nExample: default forks 5 on 50 hosts uses **6** units. Control nodes use **1** unit per job. Add execution nodes into dedicated instance groups to keep low-priority jobs from blocking others.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#ref-scaling-execution-nodes"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

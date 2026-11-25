@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c2e6531a6aa90482",
+ "chunk_hash": "c2e6531a6aa90482",
+ "summary": "A pod is one or more containers on one host with its own IP and port space, a lifecycle from scheduling to exit, and may be kept after exit for logs. AAP's simple default pod specification can be overridden with a custom YAML or JSON document using fields such as ImagePullSecrets.",
+ "questions": [
+  "What does a pod spec override in AAP do?",
+  "Can I add ImagePullSecrets to the AAP container group pod spec?",
+  "Are pods kept after their containers exit?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

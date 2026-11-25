@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ec4a4f1301c987f8",
+ "chunk_hash": "ec4a4f1301c987f8",
+ "summary": "Example Terraform config using ansible/aap provider (host and token, preferably via AAP_TOKEN) that creates aap_inventory, aap_group and aap_host, reads the 'Demo Job Template' with data aap_job_template, and launches aap_job with the new inventory; the job template inventory must be prompt on launch, and depends_on waits for host and group.",
+ "questions": [
+  "How do I launch an AAP job from Terraform?",
+  "How do I create an AAP inventory and host with Terraform?",
+  "Why must the job template inventory be prompt on launch for aap_job?"
+ ],
+ "answer_card": {
+  "title": "Launch an AAP job from Terraform",
+  "answer_md": "```hcl\nterraform {\n  required_providers {\n    aap = { source = \"ansible/aap\" }\n  }\n}\nprovider \"aap\" {\n  host = \"https://AAP_HOST\"   # token via AAP_TOKEN env var\n}\nresource \"aap_inventory\" \"inv\" {\n  name = \"My new inventory\"\n  organization = 1\n}\nresource \"aap_host\" \"h\" {\n  inventory_id = aap_inventory.inv.id\n  name = \"tf_host\"\n}\ndata \"aap_job_template\" \"demo\" {\n  name = \"Demo Job Template\"\n  organization_name = \"Default\"\n}\nresource \"aap_job\" \"run\" {\n  inventory_id    = aap_inventory.inv.id\n  job_template_id = data.aap_job_template.demo.id\n  depends_on      = [aap_host.h]\n}\n```\nThe job template's inventory must be set to prompt on launch.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#terraform-provider-configuring"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

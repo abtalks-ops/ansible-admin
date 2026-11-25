@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d8217de0aa4ddafd",
+ "chunk_hash": "d8217de0aa4ddafd",
+ "summary": "If job templates are missing from the portal: check surveyEnabled matches the templates, check the labels filter names, remove filters temporarily, verify the case-sensitive organization name, and check AAP connectivity and token permissions.",
+ "questions": [
+  "Job templates not showing in self-service automation portal",
+  "Why are my AAP job templates missing from the portal?",
+  "Is the portal organization name case-sensitive?"
+ ],
+ "answer_card": {
+  "title": "Job templates missing from the portal",
+  "answer_md": "1. Check `surveyEnabled` in the Helm values matches your job templates' survey status.\n2. Check the `labels` filter uses the right AAP label names.\n3. Temporarily remove filters to see if templates appear.\n4. Verify the AAP organization name exactly (case-sensitive).\n5. Check AAP connectivity and the token's permissions.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_self_service_automation_portal/index#ref-devsapces-aap-sync-troubleshooting_aap-self-service-config"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

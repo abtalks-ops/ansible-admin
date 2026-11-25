@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5752c6dd0b3415ca",
+ "chunk_hash": "5752c6dd0b3415ca",
+ "summary": "Controller config files in /etc/tower/conf.d/, such as the database connection file, store passwords in plain text readable by anyone with folder access; encrypt each password separately.",
+ "questions": [
+  "Are database passwords stored in plain text in controller?",
+  "Why should I encrypt passwords in /etc/tower/conf.d?",
+  "Security report flags plain text password in controller config"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

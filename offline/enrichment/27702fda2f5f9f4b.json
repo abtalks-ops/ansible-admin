@@ -1,0 +1,13 @@
+{
+ "chunk_id": "27702fda2f5f9f4b",
+ "chunk_hash": "27702fda2f5f9f4b",
+ "summary": "Gateway runs automation-gateway-proxy (Envoy reverse proxy) and automation-gateway (auth and API); hub runs automation-hub-api, -content and -web containers.",
+ "questions": [
+  "What does the automation-gateway-proxy container do?",
+  "What are the automation hub container names?",
+  "Which container handles authentication in containerized AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:09+00:00"
+}

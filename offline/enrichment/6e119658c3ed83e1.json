@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6e119658c3ed83e1",
+ "chunk_hash": "6e119658c3ed83e1",
+ "summary": "Push the vars and playbook to Git, then in the UI create a project (Git source, ee-supported), a Vault credential holding the vault password for aap_password, and a job template running RBAC_settings.yml on Demo Inventory with that credential.",
+ "questions": [
+  "How do I run a CasC playbook from automation controller?",
+  "How do I provide the vault password to a job template?",
+  "What credential type decrypts vaulted variables in a job?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

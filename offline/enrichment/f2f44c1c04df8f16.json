@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f2f44c1c04df8f16",
+ "chunk_hash": "f2f44c1c04df8f16",
+ "summary": "If OIDC login fails because the IdP rejects the default scopes, add IGNORE_DEFAULT_SCOPE: True to the authenticator's Additional Authenticator Fields so only your defined scopes are sent.",
+ "questions": [
+  "OIDC login fails with unsupported scope",
+  "How do I stop AAP adding the default OIDC scope?",
+  "IGNORE_DEFAULT_SCOPE"
+ ],
+ "answer_card": {
+  "title": "OIDC scope mismatch",
+  "answer_md": "Edit the OIDC authenticator and add to *Additional Authenticator Fields* (YAML or JSON, on its own line):\n```yaml\nIGNORE_DEFAULT_SCOPE: True\n```\nOnly the scopes you defined are then requested.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/access_management_and_authentication/index#troubleshoot-oidc-scope-mismatch"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:20:20+00:00"
+}

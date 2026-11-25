@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c5530ed45989fc67",
+ "chunk_hash": "c5530ed45989fc67",
+ "summary": "Security resources to use: existing security functionality, external account stores and Django password policies.",
+ "questions": [
+  "What security features does automation controller offer?",
+  "Which resources help secure AAP?",
+  "Security functionality in automation controller"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:13:30+00:00"
+}

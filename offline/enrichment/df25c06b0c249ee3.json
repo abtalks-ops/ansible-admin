@@ -1,0 +1,13 @@
+{
+ "chunk_id": "df25c06b0c249ee3",
+ "chunk_hash": "df25c06b0c249ee3",
+ "summary": "Legacy-compatible community.vmware.vmware_vm_inventory template: ansible_host from guest.ipAddress, lowercase aliases for camelCase properties, filter for poweredOn VMs, keyed groups by guestId and templates/guests, a property list and with_nested_properties true.",
+ "questions": [
+  "How do I only import powered on VMs from vCenter?",
+  "How do I set ansible_host from guest.ipAddress?",
+  "What vmware_vm_inventory config matches the old script?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

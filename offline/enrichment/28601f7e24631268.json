@@ -1,0 +1,13 @@
+{
+ "chunk_id": "28601f7e24631268",
+ "chunk_hash": "28601f7e24631268",
+ "summary": "Rocket.Chat notifications need the target URL, with optional username and icon URL and an option to disable SSL verification.",
+ "questions": [
+  "How do I send notifications to Rocket.Chat?",
+  "What fields does the Rocket.Chat notifier need?",
+  "Rocket.Chat notification with a private CA"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

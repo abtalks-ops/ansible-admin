@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a815b0b19aac22ff",
+ "chunk_hash": "a815b0b19aac22ff",
+ "summary": "Deprecated guide; Red Hat Edge Manager docs moved to standalone Red Hat Edge Manager 1.0. Edge Manager is a Technology Preview for declaring OS version, host configuration and applications for devices or fleets, rolled out by a device agent that reports health; it is not for production use.",
+ "questions": [
+  "What is Red Hat Edge Manager?",
+  "Is Red Hat Edge Manager supported in production?",
+  "Where is the current Red Hat Edge Manager documentation?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}

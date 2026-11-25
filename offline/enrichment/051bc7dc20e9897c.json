@@ -1,0 +1,14 @@
+{
+ "chunk_id": "051bc7dc20e9897c",
+ "chunk_hash": "051bc7dc20e9897c",
+ "summary": "Cluster requirements: standalone, unclustered PostgreSQL not on a controller node (no failover management); no PgBouncer transaction pooling because controller relies on pg_notify; all instances mutually reachable with stable names and low latency; primary first in the default group for upgrades; manual projects synced by hand; keep the inventory file.",
+ "questions": [
+  "Can I use PgBouncer with automation controller?",
+  "Does controller handle PostgreSQL failover?",
+  "Can controller nodes be in different data centers?",
+  "Can PostgreSQL be installed on a controller node in a cluster?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

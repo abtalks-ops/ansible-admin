@@ -1,0 +1,14 @@
+{
+ "chunk_id": "d860bf4f8c1f753a",
+ "chunk_hash": "d860bf4f8c1f753a",
+ "summary": "When adding a mesh instance, check Enable instance and optionally Managed by policy; check Peers from Control only when the hop or execution node should receive requests directly from automation controller, not when it peers to another hop node. Then Associate peers and check the topology view for traffic direction and firewall needs.",
+ "questions": [
+  "When should I check Peers from Control for an execution node?",
+  "How do I peer an execution node to a hop node?",
+  "How do I verify automation mesh peering?",
+  "What does Managed by policy mean for an instance?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

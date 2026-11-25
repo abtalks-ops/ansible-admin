@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e809722b84eebe54",
+ "chunk_hash": "e809722b84eebe54",
+ "summary": "hub_secret_key (pulp_secret) signs and encrypts hub data; Azure backend variables hub_azure_account_key, hub_azure_account_name, hub_azure_container (default pulp) and hub_azure_extra_settings.",
+ "questions": [
+  "What is hub_secret_key?",
+  "What is the default Azure container name for hub?",
+  "Azure variables for automation hub storage"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:09+00:00"
+}

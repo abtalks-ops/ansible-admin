@@ -1,0 +1,19 @@
+{
+ "chunk_id": "249f4a090b5bf724",
+ "chunk_hash": "249f4a090b5bf724",
+ "summary": "November 19, 2025 platform bug fixes: slow GET on /role_definitions/, 2.5 controller-legacy users who never logged in being unable to authenticate in 2.6, superuser False not syncing from gateway, platform auditors not seeing all settings, auth map 'and' conditions now requiring all attributes, and a /login page that bypasses a misconfigured LOGIN_REDIRECT_OVERRIDE.",
+ "questions": [
+  "How do I bypass a broken LOGIN_REDIRECT_OVERRIDE in AAP?",
+  "Why can't users from AAP 2.5 legacy controller auth log in to 2.6?",
+  "Superuser removed in gateway but still admin in controller",
+  "Why is /role_definitions/ slow?",
+  "Authentication map with and condition skips missing attributes"
+ ],
+ "answer_card": {
+  "title": "Bypass a misconfigured LOGIN_REDIRECT_OVERRIDE",
+  "answer_md": "Since the November 19, 2025 AAP 2.6 patch, a login page at `/login` bypasses the `LOGIN_REDIRECT_OVERRIDE` setting, so you can still sign in locally and fix a misconfigured redirect (AAP-53471).",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

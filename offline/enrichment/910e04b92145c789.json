@@ -1,0 +1,13 @@
+{
+ "chunk_id": "910e04b92145c789",
+ "chunk_hash": "910e04b92145c789",
+ "summary": "Automation dashboard is a web-based container application showing job execution, efficiency and automation value metrics from AAP, comparing manual and automated costs to show savings.",
+ "questions": [
+  "What is the automation dashboard utility?",
+  "Where does automation dashboard get its data?",
+  "Does automation dashboard show automation savings?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

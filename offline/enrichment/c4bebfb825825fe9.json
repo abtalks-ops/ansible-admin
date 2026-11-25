@@ -1,0 +1,18 @@
+{
+ "chunk_id": "c4bebfb825825fe9",
+ "chunk_hash": "c4bebfb825825fe9",
+ "summary": "Populate the hub registry by pulling from registry.redhat.io, tagging and pushing; since April 1, 2025 firewalls must allow outbound 80/443 to cdn.quay.io and cdn01 to cdn06.quay.io (by hostname) to pull Red Hat images, without needing a quay.io login.",
+ "questions": [
+  "Which quay.io hostnames must my firewall allow to pull Red Hat images?",
+  "Why can't I pull from registry.redhat.io after April 2025?",
+  "Do I need a quay.io login to pull Red Hat container images?",
+  "What ports are needed for pulling execution environments?"
+ ],
+ "answer_card": {
+  "title": "Firewall for Red Hat container pulls",
+  "answer_md": "Allow outbound TCP **80 and 443** by hostname (not IP) to:\n`cdn.quay.io`, `cdn01.quay.io`, `cdn02.quay.io`, `cdn03.quay.io`, `cdn04.quay.io`, `cdn05.quay.io`, `cdn06.quay.io`\n\n(cdn04 to cdn06 were added on 1 April 2025.) Apply wherever `registry.redhat.io` or `registry.access.redhat.com` is allowed. No quay.io login is needed.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_automation_content/index#populate-container-registry"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "bf64653d1e65cdf1",
+ "chunk_hash": "bf64653d1e65cdf1",
+ "summary": "First create an external credential of a lookup type (AWS Secrets Manager, Centrify, CyberArk CCP or Conjur, HashiCorp Vault Secret Lookup or Signed SSH, Azure Key Vault, Thycotic, GitHub App token), then link the target credential's fields to it with the key icon.",
+ "questions": [
+  "How do I create an external secret lookup credential?",
+  "Which credential types are secret lookups?",
+  "How do I link a credential field to an external credential?"
+ ],
+ "answer_card": {
+  "title": "Link a credential to a secret manager",
+  "answer_md": "1. Create an **external credential** whose type is a lookup (e.g. *HashiCorp Vault Secret Lookup*, *CyberArk Conjur*, *AWS Secrets Manager Lookup*).\n2. Open the target credential, click the key icon on a field.\n3. Pick the external credential, fill in the **Metadata** (path, key, version...) and **Test**.\n4. Click OK, repeat for other fields, then Save.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#proc-controller-configure-secret-lookups"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:07:30+00:00"
+}

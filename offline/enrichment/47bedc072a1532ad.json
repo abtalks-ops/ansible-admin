@@ -1,0 +1,18 @@
+{
+ "chunk_id": "47bedc072a1532ad",
+ "chunk_hash": "47bedc072a1532ad",
+ "summary": "To migrate a role: rename it with underscores instead of hyphens, copy it into <collection>/roles/, copy its plugins into the collection's plugins/ directory, and update playbooks to the fully qualified name. The scaffold's default run role stays; roles with module_utils imports may need code changes.",
+ "questions": [
+  "How do I move an existing role into a collection?",
+  "Where do role plugins go when migrating to a collection?",
+  "What is the run role in a scaffolded collection?",
+  "Why does my Galaxy role break after moving it into a collection?"
+ ],
+ "answer_card": {
+  "title": "Migrate a standalone role into a collection",
+  "answer_md": "1. Rename the role directory so it has no hyphens (use `_`), e.g. `acl_config`.\n2. Copy it into `<collection>/roles/`, e.g. `myapp_network/roles/acl_config`.\n3. Copy the role's plugins into the collection's `plugins/` directory.\n4. Call the role by its fully qualified name in playbooks, e.g. `company_namespace.myapp_network.acl_config`.\n\nRoles whose plugins import from `module_utils/` may need their imports changed.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/developing_automation_content/index#devtools-migrate-existing-roles-collection_devtools-create-roles-collection"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

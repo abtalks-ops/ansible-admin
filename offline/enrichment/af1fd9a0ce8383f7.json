@@ -1,0 +1,13 @@
+{
+ "chunk_id": "af1fd9a0ce8383f7",
+ "chunk_hash": "af1fd9a0ce8383f7",
+ "summary": "The MCP server-enabled AI assistant in the Ansible VS Code extension can query what is installed in your environment, install ansible-dev-tools, and set up and configure your development environment.",
+ "questions": [
+  "What can the Ansible AI assistant do for my dev environment?",
+  "Can the AI assistant install ansible-dev-tools?",
+  "Set up Ansible development environment with MCP server"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

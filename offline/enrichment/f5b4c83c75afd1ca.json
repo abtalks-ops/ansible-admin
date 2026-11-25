@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f5b4c83c75afd1ca",
+ "chunk_hash": "f5b4c83c75afd1ca",
+ "summary": "Supported RHEL for AAP 2.6: RPM on RHEL 9, containerized on RHEL 9 and RHEL 10, and OpenShift per the OpenShift life cycle policy.",
+ "questions": [
+  "Does RPM AAP 2.6 support RHEL 10?",
+  "Which RHEL versions does containerized AAP 2.6 support?",
+  "Can I run AAP 2.6 on RHEL 8?"
+ ],
+ "answer_card": {
+  "title": "RHEL support for AAP 2.6",
+  "answer_md": "| Deployment | RHEL |\n|---|---|\n| RPM 2.6 | RHEL 9 |\n| Containerized 2.6 | RHEL 9, RHEL 10 |\n| OpenShift 2.6 | As included with OpenShift (see its life cycle policy) |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-rhel-support"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

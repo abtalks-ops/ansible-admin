@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5fdcac9afc26796d",
+ "chunk_hash": "5fdcac9afc26796d",
+ "summary": "Hub sets gunicorn and proxy timeouts for its container registry, adds nginx log markers for direct API access, warns that the ansible.hub ah_token module is deprecated behind gateway, and upgrades to Django 5.2 LTS.",
+ "questions": [
+  "Is the ah_token module deprecated?",
+  "Automation hub container registry timeouts",
+  "How do I detect traffic bypassing gateway to automation hub?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

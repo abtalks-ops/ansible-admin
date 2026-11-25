@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f06d51c823e159c4",
+ "chunk_hash": "f06d51c823e159c4",
+ "summary": "UI clients load the platform gateway proxy, gRPC authentication service, component web servers and database; enterprise login speed depends on the external provider and mapping complexity, after which session authentication is used. The UI polls all components on the Refresh Interval set in User Preferences and receives live job updates over WebSockets; set UI_LIVE_UPDATES_ENABLED to false in controller to disable live job detail streaming.",
+ "questions": [
+  "Why is AAP login slow with LDAP or SAML?",
+  "How do I reduce the load the AAP UI puts on the platform?",
+  "What is UI_LIVE_UPDATES_ENABLED?",
+  "Where do I change the UI Refresh Interval?"
+ ],
+ "answer_card": {
+  "title": "Reduce UI load on AAP",
+  "answer_md": "- **Refresh Interval:** lower the polling frequency in **User Preferences** in the UI.\n- **Live job updates:** set `UI_LIVE_UPDATES_ENABLED = false` in the automation controller configuration to stop WebSocket streaming to job detail pages.\n- Login with enterprise auth depends on the external provider's speed and the complexity of attribute-to-RBAC mapping; later requests use faster session authentication.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_tuning_for_ansible_automation_platform/index#ui-authentication-and-load_aap-workload-types"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

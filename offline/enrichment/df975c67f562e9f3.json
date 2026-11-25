@@ -1,0 +1,12 @@
+{
+ "chunk_id": "df975c67f562e9f3",
+ "chunk_hash": "df975c67f562e9f3",
+ "summary": "Keep the Helm chart, plug-in bundle and AAP versions compatible to avoid install or upgrade failures.",
+ "questions": [
+  "Do portal chart and plug-in versions need to match?",
+  "Portal version compatibility",
+  "Why does a portal upgrade fail with incompatible versions?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

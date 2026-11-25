@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4e14a458170d0f40",
+ "chunk_hash": "4e14a458170d0f40",
+ "summary": "To keep fapolicyd enforcing, trust the service account's Ansible temp dir: create `/etc/fapolicy/rules.d/50-ansible.rules` with `allow perm=any uid=ansible trust=1 : dir=/home/ansible/.ansible/tmp/` and restart `fapolicyd.service`; test the rule with your other rules and get auditor approval.",
+ "questions": [
+  "How do I write a fapolicyd rule for Ansible?",
+  "Allow Ansible temp directory in fapolicyd",
+  "Keep fapolicyd enforcing and still run Ansible"
+ ],
+ "answer_card": {
+  "title": "fapolicyd rule for Ansible",
+  "answer_md": "```\n# /etc/fapolicy/rules.d/50-ansible.rules\nallow perm=any uid=ansible trust=1 : dir=/home/ansible/.ansible/tmp/\n```\n```bash\nsudo systemctl restart fapolicyd.service\n```\nTest it with your existing rules before production.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-create-fapolicyd-rules"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

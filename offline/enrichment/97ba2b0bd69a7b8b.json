@@ -1,0 +1,13 @@
+{
+ "chunk_id": "97ba2b0bd69a7b8b",
+ "chunk_hash": "97ba2b0bd69a7b8b",
+ "summary": "Before migrating an RPM deployment, document its topology (servers, roles, hostnames, IPs, network), the exact AAP version and controller, hub and gateway versions, and database names, users, roles, connection and auth settings and custom PostgreSQL tuning.",
+ "questions": [
+  "What should I document before migrating RPM AAP?",
+  "How do I assess my RPM AAP environment for migration?",
+  "Migration source inventory checklist"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

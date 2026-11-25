@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a81efb93a5faea86",
+ "chunk_hash": "a81efb93a5faea86",
+ "summary": "Duplicate a rulebook activation via More Actions > Duplicate rulebook activation; the copy appears disabled with the original's name plus a 24-hour timestamp. The original keeps running, and enabling an unedited copy may fail or cause duplicate jobs.",
+ "questions": [
+  "How do I duplicate a rulebook activation?",
+  "Why is my duplicated rulebook activation disabled?",
+  "Will a duplicated activation cause duplicate jobs?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

@@ -107,7 +107,7 @@ function sections(text: string, md: boolean): Array<{ trail: string[]; body: str
 }
 
 /** Packs a section into chunks of at most CHUNK_MAX_CHARS, splitting on paragraphs and never inside a code fence. */
-function pack(body: string): string[] {
+export function pack(body: string): string[] {
   if (body.length <= CHUNK_MAX_CHARS) return [body];
   const paras: string[] = [];
   let cur: string[] = [];

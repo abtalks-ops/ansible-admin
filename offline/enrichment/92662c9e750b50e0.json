@@ -1,0 +1,14 @@
+{
+ "chunk_id": "92662c9e750b50e0",
+ "chunk_hash": "92662c9e750b50e0",
+ "summary": "Controller decrypts SSH keys into a named pipe so they never touch disk and answers password prompts directly; duplicate credential names are allowed without an organization, but export and import of two such duplicates keeps only one.",
+ "questions": [
+  "How does automation controller pass SSH keys to jobs?",
+  "Are SSH keys written to disk during jobs?",
+  "Can two credentials have the same name?",
+  "Why was only one credential imported with ansible.controller.import?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

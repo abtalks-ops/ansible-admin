@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b1fd0dc0d5426246",
+ "chunk_hash": "b1fd0dc0d5426246",
+ "summary": "The Operator enterprise topology adds redundancy and compute for large automation on OpenShift; Ansible Automation Platform Service on AWS is an example of it.",
+ "questions": [
+  "What is the Operator enterprise topology?",
+  "Which topology does AAP Service on AWS use?",
+  "Which OpenShift topology provides redundancy for AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

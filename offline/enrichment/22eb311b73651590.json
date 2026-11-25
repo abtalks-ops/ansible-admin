@@ -1,0 +1,12 @@
+{
+ "chunk_id": "22eb311b73651590",
+ "chunk_hash": "22eb311b73651590",
+ "summary": "Create the project in the OpenShift console (Developer: Project > Create Project; Administrator: Home > Project > Create Project); names allow lowercase a-z, 0-9 and hyphens, no underscores, up to 63 characters.",
+ "questions": [
+  "What characters are allowed in OpenShift project names?",
+  "Can an OpenShift project name contain an underscore?",
+  "Create a project in the OpenShift web console"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

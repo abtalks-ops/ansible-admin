@@ -1,0 +1,13 @@
+{
+ "chunk_id": "13e0ac79519e59d7",
+ "chunk_hash": "13e0ac79519e59d7",
+ "summary": "The hidden widget carries a fixed or prefilled value that users cannot see but that is submitted, such as an AAP token declared with AAPTokenField and ui:widget: hidden.",
+ "questions": [
+  "How do I pass a hidden value in a self-service template?",
+  "When should I use the hidden widget?",
+  "How do I keep the AAP token out of the self-service form?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:23+00:00"
+}

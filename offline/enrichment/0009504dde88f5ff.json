@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0009504dde88f5ff",
+ "chunk_hash": "0009504dde88f5ff",
+ "summary": "Legacy-compatible google.cloud.gcp_compute template: auth_kind serviceaccount, compose for ansible_ssh_host (NAT IP or network IP) and gce_* vars, hostnames name/public_ip/private_ip, keyed groups by network, IPs, machine type, zone, tags, status and image.",
+ "questions": [
+  "What gcp_compute config matches the old GCE inventory script?",
+  "How do I set ansible_ssh_host for GCE instances?",
+  "How do I group GCE hosts by zone and tag?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

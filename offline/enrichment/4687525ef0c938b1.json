@@ -1,0 +1,14 @@
+{
+ "chunk_id": "4687525ef0c938b1",
+ "chunk_hash": "4687525ef0c938b1",
+ "summary": "AAP manages three sets of secrets: local user passwords, operational secrets (database and message bus passwords) and automation secrets (SSH keys, cloud and vault credentials). Hardening advice: use a privileged access solution, keep credentials unique and stored only in AAP or a supported external secrets manager, separate automation credentials from admin logins, and use different keys per automation level.",
+ "questions": [
+  "What kinds of secrets does AAP manage?",
+  "Best practices for credential management in AAP",
+  "Should automation use different credentials than sysadmins?",
+  "How do I limit the impact of a leaked SSH key in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

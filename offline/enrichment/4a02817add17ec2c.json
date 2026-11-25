@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4a02817add17ec2c",
+ "chunk_hash": "4a02817add17ec2c",
+ "summary": "Gateway proxy and Redis variables: envoy_http_port 80, envoy_https_port 443, gateway_nginx_https_protocols (TLSv1.2, 1.3), gateway_redis_disable_tls (false), gateway_redis_port 6379 and gateway_extra_settings.",
+ "questions": [
+  "What ports does the Envoy proxy use in AAP?",
+  "How do I change the AAP front-end HTTPS port?",
+  "What is the gateway Redis port?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:03:21+00:00"
+}

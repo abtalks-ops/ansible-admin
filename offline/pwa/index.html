@@ -39,18 +39,23 @@
       <details class="diag"><summary class="muted small">AI diagnostics</summary><pre id="aiDiag" class="small"></pre></details>
       <h2>Docs on this device</h2>
       <dl id="stats"></dl>
+      <div id="docSetsPanel" class="docsets" hidden></div>
       <div class="row">
         <button id="updateBtn" class="ghost">Check for updates</button>
         <button id="deleteBtn" class="ghost danger">Delete downloaded data</button>
       </div>
       <h2>Display</h2>
       <label class="toggle"><input type="checkbox" id="rainToggle" /> Digital rain background (uses more battery)</label>
-      <p class="muted small">Sources are shown under every result. ansible-core documentation is GPL-3.0, © Ansible project contributors.</p>
+      <h2>Sources and licences</h2>
+      <p class="muted small">Every result links to its source page and shows its licence.</p>
+      <p class="muted small">ansible-core documentation is GPL-3.0-or-later, © Ansible project contributors (<a href="https://github.com/ansible/ansible-documentation">ansible/ansible-documentation</a>).</p>
+      <p class="muted small">Red Hat Ansible Automation Platform 2.6 documentation is © Red Hat, Inc., used under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, from <a href="https://github.com/ansible/aap-docs">ansible/aap-docs</a> (published at <a href="https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6">docs.redhat.com</a>). It has been changed: split into passages, with AI-written summaries, questions and answer cards added. Those additions are shared under the same licence. Red Hat and Ansible are trademarks of Red Hat, Inc.; this app is not made or endorsed by Red Hat.</p>
     </section>
 
     <section id="setup" class="setup" hidden>
       <h1 class="glow">wake up, admin<span class="cursor">_</span></h1>
       <p>Download the Ansible docs once and search them offline, anywhere.</p>
+      <div id="docSets" class="docsets" hidden></div>
       <div id="sizeInfo" class="muted"></div>
       <button id="downloadBtn" class="primary">Download</button>
       <div id="progress" class="progress" hidden><div id="bar"></div></div>

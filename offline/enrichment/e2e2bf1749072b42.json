@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e2e2bf1749072b42",
+ "chunk_hash": "e2e2bf1749072b42",
+ "summary": "Minimum resilient mesh: two control nodes and two execution nodes, with peers=execution_nodes so every execution node is reachable from every control node; the capacity algorithm picks which control node runs a job.",
+ "questions": [
+  "What is the minimum resilient automation mesh?",
+  "How is a control node chosen for a job?",
+  "Resilient automation mesh inventory example"
+ ],
+ "answer_card": {
+  "title": "Minimum resilient mesh inventory",
+  "answer_md": "```ini\n[automationcontroller]\naap_c_1.example.com\naap_c_2.example.com\n\n[automationcontroller:vars]\nnode_type=control\npeers=execution_nodes\n\n[execution_nodes]\naap_e_1.example.com\naap_e_2.example.com\n```\nControl nodes peer with each other and with every execution node.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_vm_environments/index#mesh-min-resilient"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:17:07+00:00"
+}

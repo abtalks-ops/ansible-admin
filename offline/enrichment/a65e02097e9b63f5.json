@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a65e02097e9b63f5",
+ "chunk_hash": "a65e02097e9b63f5",
+ "summary": "Cascading timeouts make inner processes stop when an outer layer times out; set the primary timeout on the gateway and AAP syncs it across components.",
+ "questions": [
+  "What are cascading client timeouts in AAP?",
+  "Where do I set the main request timeout for AAP?",
+  "Orphaned requests after a gateway timeout"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

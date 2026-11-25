@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c2a757a1ccf92913",
+ "chunk_hash": "c2a757a1ccf92913",
+ "summary": "With internet access, use the setup tarball (download 'Ansible Automation Platform Setup' and tar xvzf it) or install the installer RPM with sudo dnf install --enablerepo=ansible-automation-platform-2.6-for-rhel-9-x86_64-rpms ansible-automation-platform-installer, which places files in /opt/ansible-automation-platform/installer.",
+ "questions": [
+  "How do I install the AAP 2.6 installer with dnf?",
+  "Where does the RPM installer put its files?",
+  "Where do I download the AAP 2.6 setup tarball?"
+ ],
+ "answer_card": {
+  "title": "Get the online AAP 2.6 installer",
+  "answer_md": "**Tarball:** download *Ansible Automation Platform <version> Setup* from the Red Hat downloads page, then\n```bash\ntar xvzf ansible-automation-platform-setup-<version>.tar.gz\n```\n**RPM (RHEL 9 x86_64):**\n```bash\nsudo dnf install --enablerepo=ansible-automation-platform-2.6-for-rhel-9-x86_64-rpms ansible-automation-platform-installer\n```\nFiles land in `/opt/ansible-automation-platform/installer`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_upgrade/index#proc-choosing-obtaining-installer_aap-upgrading-platform"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

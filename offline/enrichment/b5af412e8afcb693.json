@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b5af412e8afcb693",
+ "chunk_hash": "b5af412e8afcb693",
+ "summary": "Standalone Redis is a simple, easy-to-configure single-node option for Ansible Automation Platform where high availability is not critical.",
+ "questions": [
+  "When should I use standalone Redis?",
+  "Standalone vs clustered Redis in AAP",
+  "Is single-node Redis supported?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

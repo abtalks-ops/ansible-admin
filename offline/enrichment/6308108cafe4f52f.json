@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6308108cafe4f52f",
+ "chunk_hash": "6308108cafe4f52f",
+ "summary": "With signing configured, manually sign or re-sign collections (no auto signing, corrupted signatures, extra signatures, rotation) in Automation Content > Collection Approvals via the thumbs up icon and Approve and sign collections.",
+ "questions": [
+  "How do I manually sign a collection in private automation hub?",
+  "How do I rotate collection signatures?",
+  "Where do I approve and sign collections?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

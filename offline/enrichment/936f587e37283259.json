@@ -1,0 +1,13 @@
+{
+ "chunk_id": "936f587e37283259",
+ "chunk_hash": "936f587e37283259",
+ "summary": "Settings > Automation Execution > Troubleshooting toggles tmp dir cleanup, Debug Web Requests profiling, Release Receptor Work (deletion of job pods after completion) and Keep receptor work on error.",
+ "questions": [
+  "How do I keep job pods after failure for debugging?",
+  "How do I disable tmp directory cleanup after jobs?",
+  "How do I profile slow web requests in controller?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

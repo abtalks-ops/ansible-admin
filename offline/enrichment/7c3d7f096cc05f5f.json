@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7c3d7f096cc05f5f",
+ "chunk_hash": "7c3d7f096cc05f5f",
+ "summary": "Containerized AAP can be installed without internet access by first providing the RPM source dependencies.",
+ "questions": [
+  "Can I install containerized AAP offline?",
+  "What do I need for a disconnected AAP install?",
+  "Air-gapped containerized AAP installation"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:01:36+00:00"
+}

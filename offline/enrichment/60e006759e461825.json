@@ -1,0 +1,17 @@
+{
+ "chunk_id": "60e006759e461825",
+ "chunk_hash": "60e006759e461825",
+ "summary": "Example inventory setting unique certificates per host as host variables: `gateway_tls_cert`/`gateway_tls_key` on each `[automationgateway]` host, `web_server_ssl_cert`/`_key` on each `[automationcontroller]` host and `automationhub_ssl_cert`/`_key` on each `[automationhub]` host.",
+ "questions": [
+  "How do I set different TLS certificates per AAP node in the inventory?",
+  "Example inventory with per-host gateway certificates",
+  "Where do I put certificate variables for each controller node?"
+ ],
+ "answer_card": {
+  "title": "Per-host certificates in the inventory",
+  "answer_md": "```ini\n[automationgateway]\ngateway0.example.com gateway_tls_cert=/path/to/cert0 gateway_tls_key=/path/to/key0\ngateway1.example.com gateway_tls_cert=/path/to/cert1 gateway_tls_key=/path/to/key1\n\n[automationcontroller]\ncontroller0.example.com web_server_ssl_cert=/path/to/cert0 web_server_ssl_key=/path/to/key0\n\n[automationhub]\nhub0.example.com automationhub_ssl_cert=/path/to/cert0 automationhub_ssl_key=/path/to/key0\n```\nEach cert needs a SAN matching the load balancer FQDN.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#ref-install-user-pki_hardening-aap"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

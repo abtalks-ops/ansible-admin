@@ -1,0 +1,18 @@
+{
+ "chunk_id": "68fd7f96582e8d6f",
+ "chunk_hash": "68fd7f96582e8d6f",
+ "summary": "Navigator settings: collection-doc-cache-path (default $HOME/.cache/ansible-navigator/collection_doc_cache.db), container-engine (--ce: auto tries podman then docker), display-color (--dc, or NO_COLOR), editor-command (--ecmd, default vi +{line_number} {filename}), editor-console (--econ) and execution-environment (--ee, enable or disable using an EE, default True).",
+ "questions": [
+  "How do I make ansible-navigator use docker instead of podman?",
+  "How do I run ansible-navigator without an execution environment?",
+  "How do I disable colour in ansible-navigator?",
+  "Where is the ansible-navigator collection doc cache?"
+ ],
+ "answer_card": {
+  "title": "Key ansible-navigator engine and editor settings",
+  "answer_md": "| Setting | CLI | Default |\n|---|---|---|\n| container-engine | `--ce` (`auto`, `podman`, `docker`) | `auto` (podman, then docker) |\n| execution-environment | `--ee` (`True`/`False`) | `True` |\n| display-color | `--dc` (or `NO_COLOR`) | `True` |\n| editor-command | `--ecmd` | `vi +{line_number} {filename}` |\n| editor-console | `--econ` | `True` |\n| collection-doc-cache-path | `--cdcp` | `$HOME/.cache/ansible-navigator/collection_doc_cache.db` |\n\nEach also has an `ANSIBLE_NAVIGATOR_*` environment variable and a settings-file key.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_content_navigator/index#ref-navigator-general-settings_settings-navigator"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

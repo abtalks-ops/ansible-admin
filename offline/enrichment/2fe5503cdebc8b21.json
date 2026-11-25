@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2fe5503cdebc8b21",
+ "chunk_hash": "2fe5503cdebc8b21",
+ "summary": "Link credential fields to an external credential for a third-party secret system and supply metadata so automation controller looks up the value at runtime.",
+ "questions": [
+  "How do I pull a credential password from HashiCorp Vault?",
+  "How does secret lookup linking work in automation controller?",
+  "What is credential input source metadata?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:07:20+00:00"
+}

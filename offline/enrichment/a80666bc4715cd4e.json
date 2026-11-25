@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a80666bc4715cd4e",
+ "chunk_hash": "a80666bc4715cd4e",
+ "summary": "Authenticator maps support {% for_attr_value(<attribute>) %} to loop over IdP attribute values, for example Org {% for_attr_value(users_orgs) %} yields Org Database and Org Networking; using it twice produces every combination.",
+ "questions": [
+  "How do I create organizations dynamically from an IdP attribute?",
+  "What is for_attr_value in authenticator maps?",
+  "Can I map users to many organizations from one map?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:26+00:00"
+}

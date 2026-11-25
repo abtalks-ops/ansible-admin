@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ac9ed865d89aca46",
+ "chunk_hash": "ac9ed865d89aca46",
+ "summary": "After upgrading to 2.6, administrators must verify team permissions in platform gateway and that merged accounts are the same person; gateway IAM becomes the source of truth, and hub and EDA users must be recreated or granted access. Verify login with controller admin credentials.",
+ "questions": [
+  "What should I check after upgrading to AAP 2.6?",
+  "How do I verify the upgrade worked?",
+  "Which system is the source of truth for users after the 2.6 upgrade?"
+ ],
+ "answer_card": {
+  "title": "Post-upgrade IAM checks",
+  "answer_md": "- Verify permissions of every team in platform gateway right away.\n- Confirm merged accounts really belong to the same person.\n- Platform gateway IAM is now the source of truth for users.\n- Recreate hub and EDA users, or grant moved controller users access.\n- Log in with your existing controller admin username and password.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#ref-upgrade-post-upgrade"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

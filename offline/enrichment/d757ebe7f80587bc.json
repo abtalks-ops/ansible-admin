@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d757ebe7f80587bc",
+ "chunk_hash": "d757ebe7f80587bc",
+ "summary": "RPM to OpenShift prerequisites: source on the latest async release, an OpenShift environment ready, the AAP Operator for that version, decisions on internal or external database and Redis, and connectivity between environments.",
+ "questions": [
+  "What do I need to migrate RPM AAP to OpenShift?",
+  "Do I need to decide on external Redis for OpenShift migration?",
+  "Which operator version for RPM to OCP migration?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

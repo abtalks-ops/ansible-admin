@@ -1,0 +1,12 @@
+{
+ "chunk_id": "a440a0496616b24e",
+ "chunk_hash": "a440a0496616b24e",
+ "summary": "During sync the portal reads AAP job template configurations and generates matching templates, mapping job template properties to template fields.",
+ "questions": [
+  "How does the portal generate templates during sync?",
+  "When are auto-generated templates created?",
+  "Which AAP job template properties map to portal template fields?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

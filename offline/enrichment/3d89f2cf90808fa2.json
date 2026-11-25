@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3d89f2cf90808fa2",
+ "chunk_hash": "3d89f2cf90808fa2",
+ "summary": "AAP is modular; the platform gateway fronts components such as controller, hub and EDA. Choose a supported installation scenario by editing the inventory file, starting from the enterprise installer example if you like.",
+ "questions": [
+  "How do I pick an AAP installation scenario?",
+  "What components does AAP deploy?",
+  "Where do I start with the AAP inventory file?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

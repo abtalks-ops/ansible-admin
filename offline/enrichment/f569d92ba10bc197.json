@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f569d92ba10bc197",
+ "chunk_hash": "f569d92ba10bc197",
+ "summary": "On OpenShift the gateway must be scaled out enough because uWSGI drops requests once more than 100 are backlogged, logging '*** uWSGI listen queue of socket \":8000\" (fd: 3) full !!! (101/100) ***' and timing out clients; the backlog is tied to the kernel somaxconn, which can only be raised by allowing unsafe sysctls.",
+ "questions": [
+  "What does 'uWSGI listen queue of socket full' mean?",
+  "Why are AAP API requests timing out on OpenShift?",
+  "How do I raise the uWSGI backlog in AAP on OpenShift?"
+ ],
+ "answer_card": {
+  "title": "uWSGI listen queue full on OpenShift",
+  "answer_md": "```\n*** uWSGI listen queue of socket \":8000\" (fd: 3) full !!! (101/100) ***\n```\n\nuWSGI drops requests once more than 100 are queued, so clients time out. The backlog is tied to the kernel parameter `somaxconn`, which on OpenShift can only be raised by allowing unsafe sysctls.\n\nFix: scale the platform gateway (and API) pods horizontally so requests do not back up.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_tuning_for_ansible_automation_platform/index#scaling-gateway-proxy-and-authentication_aap-api-performance"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6ddd23712577fef1",
+ "chunk_hash": "6ddd23712577fef1",
+ "summary": "Red Hat Developer Hub (RHDH) is an open developer platform for building custom developer portals.",
+ "questions": [
+  "What is Red Hat Developer Hub?",
+  "What is RHDH?",
+  "Is Developer Hub based on Backstage?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

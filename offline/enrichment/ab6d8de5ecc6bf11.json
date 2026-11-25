@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ab6d8de5ecc6bf11",
+ "chunk_hash": "ab6d8de5ecc6bf11",
+ "summary": "Old custom inventory scripts are still in the database after the API removal; export them with awx-manage export_custom_scripts --filename=my_scripts.tar and extract, with names like _<pk>__<name>.",
+ "questions": [
+  "How do I recover old custom inventory scripts?",
+  "What does awx-manage export_custom_scripts do?",
+  "Where did my custom inventory scripts go after upgrade?"
+ ],
+ "answer_card": {
+  "title": "Export old custom inventory scripts",
+  "answer_md": "```\nawx-manage export_custom_scripts --filename=my_scripts.tar\nmkdir my_scripts && tar -xf my_scripts.tar -C my_scripts\n```\n\nEach script is named `_<pk>__<name>`. Commit them to source control and use them through a *Sourced from a Project* inventory source.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#ref-controller-export-old-scripts"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

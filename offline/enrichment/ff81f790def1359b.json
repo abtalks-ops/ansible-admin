@@ -1,0 +1,14 @@
+{
+ "chunk_id": "ff81f790def1359b",
+ "chunk_hash": "ff81f790def1359b",
+ "summary": "Install from Operators > OperatorHub: search Ansible Automation Platform, pick stable-2.x (namespace-scoped, no admin rights) or stable-2.x-cluster-scoped (admin on all namespaces), set mode, namespace and approval strategy; afterwards the controller, hub, EDA and Lightspeed CRs are listed and the operator shows Succeeded.",
+ "questions": [
+  "How do I install the AAP Operator from OperatorHub?",
+  "What is the difference between stable-2.x and stable-2.x-cluster-scoped?",
+  "Which custom resources does the AAP Operator provide?",
+  "How do I verify the AAP Operator installed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

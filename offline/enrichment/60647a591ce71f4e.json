@@ -1,0 +1,14 @@
+{
+ "chunk_id": "60647a591ce71f4e",
+ "chunk_hash": "60647a591ce71f4e",
+ "summary": "Repositories labelled pipeline=approved receive collections only via approval from staging; with auto approve, uploads are promoted to all approved repos, otherwise admins pick target approved repos on the dashboard (automatic if only one); rejected collections go to the pre-installed rejected repository.",
+ "questions": [
+  "How does the automation hub approval pipeline work?",
+  "Can I publish directly to a pipeline=approved repository?",
+  "What does auto approve do in automation hub?",
+  "Where do rejected collections go?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

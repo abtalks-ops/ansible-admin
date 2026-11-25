@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a15809f6d6232711",
+ "chunk_hash": "a15809f6d6232711",
+ "summary": "Legacy-compatible theforeman.foreman.foreman template for Satellite 6: group_prefix foreman_, keyed groups for environment, location, organization, lifecycle environment and content view, legacy_hostvars, want_facts and want_params true, validate_certs false.",
+ "questions": [
+  "How do I group Satellite hosts by lifecycle environment?",
+  "What foreman plugin config matches the old Satellite script?",
+  "How do I get Satellite content view groups in my inventory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

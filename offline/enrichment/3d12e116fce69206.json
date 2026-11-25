@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3d12e116fce69206",
+ "chunk_hash": "3d12e116fce69206",
+ "summary": "Show container IDs, commands and names with `podman ps --format` to see running services such as postgresql, redis, receptor and the controller and EDA containers.",
+ "questions": [
+  "Which containers run on containerized AAP?",
+  "What EDA containers exist?",
+  "podman ps format for AAP"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:09+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "682ee58e3f3623ab",
+ "chunk_hash": "682ee58e3f3623ab",
+ "summary": "For OCI delivery with the Operator you need registry.redhat.io access, a registry service account token, access to the RHDH project and `oc`; first create an auth.json with the base64-encoded `username:password`.",
+ "questions": [
+  "Prerequisites for OCI plug-in delivery with the Operator",
+  "How do I create auth.json for registry.redhat.io?",
+  "Registry service account for Developer Hub"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "chunk_id": "0a3095252a218259",
+ "chunk_hash": "0a3095252a218259",
+ "summary": "To prepare private automation hub for container signing, enable collection and container signing, then create a signing script (for example one using skopeo standalone-sign with the MANIFEST_PATH, PULP_SIGNING_KEY_FINGERPRINT, REFERENCE and SIG_PATH values) and pass its path as an installer parameter. The installer looks for the script and key on the server where the installer runs.",
+ "questions": [
+  "How do I set up container signing in private automation hub?",
+  "What does a container signing script for automation hub look like?",
+  "Where does the installer look for the container signing script and key?",
+  "skopeo standalone-sign script for pulp_container"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

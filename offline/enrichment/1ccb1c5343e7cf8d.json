@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1ccb1c5343e7cf8d",
+ "chunk_hash": "1ccb1c5343e7cf8d",
+ "summary": "Container group prerequisites: a namespace, a service account allowed to manage pods (and secrets for private-registry EE credentials unless ImagePullSecrets are pre-created), its bearer token and the cluster CA certificate.",
+ "questions": [
+  "What do I need to set up a container group?",
+  "Does the service account need secret permissions?",
+  "How do I avoid controller creating image pull secrets?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

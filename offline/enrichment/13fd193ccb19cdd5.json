@@ -1,0 +1,17 @@
+{
+ "chunk_id": "13fd193ccb19cdd5",
+ "chunk_hash": "13fd193ccb19cdd5",
+ "summary": "Add the Ansible plug-ins to the RHDH Helm chart (Helm > developer-hub > Upgrade > YAML) under `global.dynamic.plugins` using OCI packages `oci://registry.redhat.io/ansible-automation-platform/automation-portal:<tag>!ansible-plugin-backstage-rhaap` and `...!ansible-plugin-scaffolder-backend-module-backstage-rhaap`; OCI needs no integrity hashes.",
+ "questions": [
+  "How do I add the Ansible plug-ins to the RHDH Helm chart?",
+  "OCI package path for ansible-plugin-backstage-rhaap",
+  "Do OCI plug-ins need integrity values?"
+ ],
+ "answer_card": {
+  "title": "Ansible plug-ins in the RHDH Helm chart (OCI)",
+  "answer_md": "```yaml\nglobal:\n  dynamic:\n    includes:\n      - dynamic-plugins.default.yaml\n    plugins:\n      - disabled: false\n        package: 'oci://registry.redhat.io/ansible-automation-platform/automation-portal:2.1!ansible-plugin-backstage-rhaap'\n        pluginConfig:\n          dynamicPlugins:\n            frontend:\n              ansible.plugin-backstage-rhaap:\n                appIcons:\n                  - {importName: AnsibleLogo, name: AnsibleLogo}\n                dynamicRoutes:\n                  - importName: AnsiblePage\n                    menuItem: {icon: AnsibleLogo, text: Ansible}\n                    path: /ansible\n      - disabled: false\n        package: 'oci://registry.redhat.io/ansible-automation-platform/automation-portal:2.1!ansible-plugin-scaffolder-backend-module-backstage-rhaap'\n        pluginConfig:\n          dynamicPlugins:\n            backend:\n              ansible.plugin-scaffolder-backend-module-backstage-rhaap: null\n```\nNo `integrity` needed for OCI. Click **Upgrade**; the pods restart.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_ansible_plug_ins_for_red_hat_developer_hub/index#rhdh-add-plugin-config_rhdh-ocp-required-installation"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

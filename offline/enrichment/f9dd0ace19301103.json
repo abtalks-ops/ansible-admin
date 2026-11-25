@@ -1,0 +1,14 @@
+{
+ "chunk_id": "f9dd0ace19301103",
+ "chunk_hash": "f9dd0ace19301103",
+ "summary": "The ansible.mcp_builder collection installs MCP servers in execution environments: its common role installs the runtime, fetches the package from PyPI, npm or Git, writes /opt/mcp/mcpservers.json and creates mcp_manage; your role supplies the metadata.",
+ "questions": [
+  "What is ansible.mcp_builder?",
+  "How do I install an MCP server in an execution environment?",
+  "What does mcp_manage do?",
+  "Where is the MCP server manifest in the execution environment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:12+00:00"
+}

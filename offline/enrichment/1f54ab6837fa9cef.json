@@ -1,0 +1,17 @@
+{
+ "chunk_id": "1f54ab6837fa9cef",
+ "chunk_hash": "1f54ab6837fa9cef",
+ "summary": "Create a Vault credential type under Automation Execution > Infrastructure > Credential Types. For token auth, input vault_token (secret) injected as VAULT_TOKEN; for AppRole, inputs vault_approle_role_id and vault_approle_secret_id injected as VAULT_APPROLE_ROLE_ID and VAULT_APPROLE_SECRET_ID.",
+ "questions": [
+  "How do I create a HashiCorp Vault credential type in AAP?",
+  "What injector configuration does a Vault token credential need?",
+  "How do I configure AppRole authentication for hashicorp.vault in AAP?"
+ ],
+ "answer_card": {
+  "title": "Vault credential type for hashicorp.vault",
+  "answer_md": "**Token auth**\n```yaml\n# Input configuration\nfields:\n  - id: vault_token\n    type: string\n    label: Hashicorp Vault Token\n    secret: true\n# Injector configuration\nenv:\n  VAULT_TOKEN: '{{ vault_token }}'\n```\n**AppRole auth**\n```yaml\nfields:\n  - id: vault_approle_role_id\n    type: string\n    label: Hashicorp Vault appRole Role ID\n    secret: true\n  - id: vault_approle_secret_id\n    type: string\n    label: Hashicorp Vault appRole Secret ID\n    secret: true\n# Injector\nenv:\n  VAULT_APPROLE_ROLE_ID: '{{ vault_approle_role_id }}'\n  VAULT_APPROLE_SECRET_ID: '{{ vault_approle_secret_id }}'\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#vault-creating-credential-type"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

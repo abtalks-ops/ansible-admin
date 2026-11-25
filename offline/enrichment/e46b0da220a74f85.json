@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e46b0da220a74f85",
+ "chunk_hash": "e46b0da220a74f85",
+ "summary": "From RPM AAP 2.5 on RHEL 8, back up and restore onto a fresh RPM 2.5 install on RHEL 9, upgrade to 2.6, and optionally migrate to containerized 2.6 (restoring onto RHEL 10 if needed) or OpenShift 2.6.",
+ "questions": [
+  "How do I upgrade AAP 2.5 on RHEL 8 to 2.6?",
+  "Does AAP 2.6 run on RHEL 8?",
+  "How do I move AAP 2.5 from RHEL 8 to RHEL 9?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

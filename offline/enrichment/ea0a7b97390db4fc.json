@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ea0a7b97390db4fc",
+ "chunk_hash": "ea0a7b97390db4fc",
+ "summary": "To run behind a reverse proxy or load balancer, add HTTP_X_FORWARDED_FOR, REMOTE_ADDR and REMOTE_HOST to Remote Host Headers (Settings > Automation Execution > System) and set USE_X_FORWARDED_PORT and USE_X_FORWARDED_HOST to True in /etc/tower/conf.d/custom.py.",
+ "questions": [
+  "How do I configure automation controller behind a reverse proxy?",
+  "Where do I set Remote Host Headers for X-Forwarded-For?",
+  "Controller shows the load balancer IP instead of the client IP"
+ ],
+ "answer_card": {
+  "title": "Reverse proxy / load balancer headers",
+  "answer_md": "1. **Settings > Automation Execution > System** > *Remote Host Headers*:\n```json\n[\"HTTP_X_FORWARDED_FOR\", \"REMOTE_ADDR\", \"REMOTE_HOST\"]\n```\n2. Add to `/etc/tower/conf.d/custom.py`:\n```python\nUSE_X_FORWARDED_PORT = True\nUSE_X_FORWARDED_HOST = True\n```\n3. Save.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/operating_ansible_automation_platform/index#proc-configuring-reverse-proxy_configuring-proxy-support"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

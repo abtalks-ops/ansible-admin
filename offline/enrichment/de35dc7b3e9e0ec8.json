@@ -1,0 +1,14 @@
+{
+ "chunk_id": "de35dc7b3e9e0ec8",
+ "chunk_hash": "de35dc7b3e9e0ec8",
+ "summary": "Automation mesh is a TLS-encrypted, FIPS-compliant peer-to-peer overlay network that separates control and execution planes, scales capacity dynamically and reroutes around outages; AAP 2 replaces Tower isolated nodes with it.",
+ "questions": [
+  "What is automation mesh?",
+  "Is automation mesh traffic encrypted?",
+  "What replaced isolated nodes in AAP 2?",
+  "Is automation mesh FIPS compliant?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:16:33+00:00"
+}

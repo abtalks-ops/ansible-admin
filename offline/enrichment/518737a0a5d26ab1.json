@@ -1,0 +1,13 @@
+{
+ "chunk_id": "518737a0a5d26ab1",
+ "chunk_hash": "518737a0a5d26ab1",
+ "summary": "Automation mesh design pattern examples; for containerized installs replace node_type with receptor_type, peers with receptor_peers, and group names with comma-separated hostnames. Peering arrows show direction, but connections are bidirectional once established.",
+ "questions": [
+  "How do I convert mesh examples for a containerized install?",
+  "Is automation mesh peering bidirectional?",
+  "Can receptor_peers reference an inventory group?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:17:07+00:00"
+}

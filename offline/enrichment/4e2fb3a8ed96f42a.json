@@ -1,0 +1,18 @@
+{
+ "chunk_id": "4e2fb3a8ed96f42a",
+ "chunk_hash": "4e2fb3a8ed96f42a",
+ "summary": "Network modules run on the control node and use ansible_connection network_cli (CLI over SSH), netconf (XML over SSH) or httpapi (HTTP/HTTPS), all persistent and needing network_os; ansible_connection local with provider is deprecated.",
+ "questions": [
+  "What is the difference between network_cli, netconf and httpapi?",
+  "Is ansible_connection local deprecated for network devices?",
+  "Do I need network_os for network connections?",
+  "Which connection is most common for network devices?"
+ ],
+ "answer_card": {
+  "title": "Network connection types",
+  "answer_md": "| ansible_connection | Protocol | Needs | Persistent |\n|---|---|---|---|\n| `ansible.netcommon.network_cli` | CLI over SSH | `network_os` | yes |\n| `ansible.netcommon.netconf` | XML over SSH | `network_os` | yes |\n| `ansible.netcommon.httpapi` | API over HTTP(S) | `network_os` | yes |\n| `local` | depends on provider | `provider` | no (deprecated) |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#ref-controller-multiple-connection-protocols"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "993556a48f3c6127",
+ "chunk_hash": "993556a48f3c6127",
+ "summary": "Clustered Redis (three primaries, each with a replica, automatic failover) is shared by platform gateway and EDA and is the default for containerized and operator installs; an HA Redis deployment needs 6 VMs and cannot be colocated with execution nodes or PostgreSQL (nor controller on RPM).",
+ "questions": [
+  "How many VMs does clustered Redis need?",
+  "Is clustered Redis the default in containerized AAP?",
+  "Where can I colocate Redis nodes?",
+  "How does Redis failover work in AAP?"
+ ],
+ "answer_card": {
+  "title": "Clustered Redis at a glance",
+  "answer_md": "- Default for **containerized** and **operator** installs; shared by platform gateway and Event-Driven Ansible.\n- 3 primary nodes, each with 1 replica (6 VMs for HA). A failed primary's replica is promoted automatically.\n- Colocation: RPM, on any component VM except automation controller, execution nodes or PostgreSQL; containerized, on any component VM except execution nodes or PostgreSQL.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#gw-clustered-redis_planning"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

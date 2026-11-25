@@ -1,0 +1,14 @@
+{
+ "chunk_id": "d9f977a9b2fdb1e5",
+ "chunk_hash": "d9f977a9b2fdb1e5",
+ "summary": "OpenStack credential fields: username, password, project (tenant) name, auth URL, cloud name, optional region, domain and project domain, and SSL validation; controller writes a clouds.yaml and points OS_CLIENT_CONFIG_FILE at it for the playbook.",
+ "questions": [
+  "How do I create an OpenStack credential in AAP?",
+  "What is OS_CLIENT_CONFIG_FILE?",
+  "How does a playbook read the OpenStack credential?",
+  "How do I disable SSL verification for OpenStack in controller?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

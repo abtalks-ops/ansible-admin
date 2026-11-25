@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f5656a1b9e465103",
+ "chunk_hash": "f5656a1b9e465103",
+ "summary": "Manual projects: create directories under /var/lib/awx/projects/, copy playbooks in, make them owned by the service user and group with suitable permissions; an error shows if no playbook directories exist.",
+ "questions": [
+  "How do I add playbooks to a manual project?",
+  "Why can't controller see playbooks in /var/lib/awx/projects?",
+  "What ownership do manual project files need?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

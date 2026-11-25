@@ -1,0 +1,18 @@
+{
+ "chunk_id": "291fbb02707a86fb",
+ "chunk_hash": "291fbb02707a86fb",
+ "summary": "Pin an instance to specific instance groups only: add it to each group's policy_instance_list and PATCH the instance's managed_by_policy to False so percentage and minimum policies do not add it to other groups.",
+ "questions": [
+  "How do I pin an instance to a specific instance group?",
+  "What does managed_by_policy do on an instance?",
+  "Stop an instance joining groups by percentage policy",
+  "How do I set policy_instance_list through the API?"
+ ],
+ "answer_card": {
+  "title": "Pin an instance to an instance group",
+  "answer_md": "Add the instance to the group's list, then take it out of policy management:\n\n```\nHTTP PATCH /api/v2/instance_groups/N/\n{\"policy_instance_list\": [\"special-instance\"]}\n\nHTTP PATCH /api/v2/instances/X/\n{\"managed_by_policy\": false}\n```\n\nThe instance then belongs only to the groups you assigned it to.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-pin-instances"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

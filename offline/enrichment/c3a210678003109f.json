@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c3a210678003109f",
+ "chunk_hash": "c3a210678003109f",
+ "summary": "Role maps assign a global role such as Platform Auditor, or a team or organization role (same as Organization or Team maps), with optional Revoke to remove it when no trigger matches.",
+ "questions": [
+  "How do I map users to Platform Auditor?",
+  "What is a role map in AAP?",
+  "Assign a global role from an authenticator"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:26+00:00"
+}

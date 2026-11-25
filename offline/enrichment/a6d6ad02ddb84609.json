@@ -1,0 +1,18 @@
+{
+ "chunk_id": "a6d6ad02ddb84609",
+ "chunk_hash": "a6d6ad02ddb84609",
+ "summary": "General CA variables (RPM / container): `aap_ca_cert_file`/`ca_tls_cert` and `aap_ca_key_file`/`ca_tls_key` make the installer sign every service certificate with your CA; `aap_ca_cert_files_remote`/`ca_tls_remote` (default false) says whether they're on the remote server. RPM-only: `aap_ca_cert_size` and `aap_service_cert_size` (4096), `aap_ca_passphrase_cipher` (aes256), `aap_ca_regenerate` and `aap_service_regen_cert` (false).",
+ "questions": [
+  "What is ca_tls_cert in containerized AAP?",
+  "How do I regenerate the AAP internal CA?",
+  "How do I regenerate component certificates in AAP?",
+  "What key size does the AAP internal CA use?"
+ ],
+ "answer_card": {
+  "title": "CA and certificate variables",
+  "answer_md": "| RPM | Container | Default |\n|---|---|---|\n| `aap_ca_cert_file` | `ca_tls_cert` | \u2013 |\n| `aap_ca_key_file` | `ca_tls_key` | \u2013 |\n| `aap_ca_cert_files_remote` | `ca_tls_remote` | `false` |\n| `aap_ca_cert_size` | \u2013 | `4096` |\n| `aap_ca_passphrase_cipher` | \u2013 | `aes256` |\n| `aap_ca_regenerate` | \u2013 | `false` |\n| `aap_service_cert_size` | \u2013 | `4096` |\n| `aap_service_regen_cert` | \u2013 | `false` |\n\nWith a CA cert and key set you don't need per-service `*_tls_cert` variables.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#general-variables"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

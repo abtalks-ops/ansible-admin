@@ -1,0 +1,18 @@
+{
+ "chunk_id": "fa708d3d3c8f58c5",
+ "chunk_hash": "fa708d3d3c8f58c5",
+ "summary": "Mirror the portal images to your disconnected registry and set redhat-developer-hub.global.imageRegistry, a single override for the app, PostgreSQL, OCI plug-in and Ansible Dev Tools sidecar images. It is required even with ImageDigestMirrorSet or ImageTagMirrorSet, because the dynamic plug-in init container ignores cluster mirror config.",
+ "questions": [
+  "What is imageRegistry in the portal Helm chart?",
+  "Does the portal honor ImageDigestMirrorSet?",
+  "Portal plug-in init container pulls from registry.redhat.io despite mirror",
+  "How do I point the portal chart at a mirrored registry?"
+ ],
+ "answer_card": {
+  "title": "Mirrored registry for the portal: imageRegistry",
+  "answer_md": "Set `redhat-developer-hub.global.imageRegistry` to your mirror (e.g. `mirror.example.com` or `quay.io/<org>`). It overrides the registry for the base app image, PostgreSQL, OCI plug-in artifacts and the Ansible Dev Tools sidecar.\n\nThe dynamic plug-in init container **ignores** `ImageDigestMirrorSet`/`ImageTagMirrorSet`, so set `imageRegistry` even if the cluster already redirects `registry.redhat.io`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-install-disconnected-mirror-images_self-service-disconnected-install-prepare"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

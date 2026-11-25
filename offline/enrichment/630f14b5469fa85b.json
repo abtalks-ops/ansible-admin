@@ -1,0 +1,14 @@
+{
+ "chunk_id": "630f14b5469fa85b",
+ "chunk_hash": "630f14b5469fa85b",
+ "summary": "Policy input data for a job includes id, name, created, created_by (id, username, is_superuser), credentials (id, name, organization, credential_type, managed, kind), execution_environment (id, name, image, pull), extra_vars, forks, hosts_count and instance_group.",
+ "questions": [
+  "What input data does AAP send to OPA?",
+  "How do I check credential kind in an OPA policy?",
+  "Can an OPA policy inspect extra_vars?",
+  "How do I block superusers' jobs with a policy?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

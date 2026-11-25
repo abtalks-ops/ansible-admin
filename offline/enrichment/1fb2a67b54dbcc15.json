@@ -1,0 +1,17 @@
+{
+ "chunk_id": "1fb2a67b54dbcc15",
+ "chunk_hash": "1fb2a67b54dbcc15",
+ "summary": "To restore from a PVC, create an AnsibleAutomationPlatformRestore with backup_source: PVC, backup_pvc and backup_dir at the top level and for controller, hub (with storage_type) and eda.",
+ "questions": [
+  "AnsibleAutomationPlatformRestore from PVC example",
+  "How do I set backup_dir for an AAP restore?",
+  "Restore automation hub from a backup PVC"
+ ],
+ "answer_card": {
+  "title": "Restore from a PVC",
+  "answer_md": "```yaml\napiVersion: aap.ansible.com/v1alpha1\nkind: AnsibleAutomationPlatformRestore\nmetadata:\n  name: aap\nspec:\n  deployment_name: aap\n  backup_source: PVC\n  backup_pvc: aap-backup-claim\n  backup_dir: '/backups/aap-openshift-backup-...'\n  controller:\n    backup_source: PVC\n    backup_pvc: aap-controller-backup-claim\n    backup_dir: '/backups/tower-openshift-backup-...'\n  hub:\n    backup_source: PVC\n    backup_pvc: aap-hub-backup-claim\n    backup_dir: '/backups/openshift-backup-...'\n    storage_type: file\n  eda:\n    backup_source: PVC\n    backup_pvc: aap-eda-backup-claim\n    backup_dir: '/backups/eda-openshift-backup-...'\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/backup_and_recovery_for_operator_environments/index#aap-platform-pvc-restore_aap-recovery"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

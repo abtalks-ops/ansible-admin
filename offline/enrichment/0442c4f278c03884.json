@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0442c4f278c03884",
+ "chunk_hash": "0442c4f278c03884",
+ "summary": "Nest groups from a group's Related Groups tab with Add existing group or Create group, then repeat on subgroups to build a hierarchy.",
+ "questions": [
+  "How do I create a child group in an inventory?",
+  "How do I add an existing group inside another group?",
+  "How do I build nested inventory groups in controller?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

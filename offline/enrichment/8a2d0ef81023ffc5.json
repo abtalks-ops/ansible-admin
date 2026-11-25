@@ -1,0 +1,18 @@
+{
+ "chunk_id": "8a2d0ef81023ffc5",
+ "chunk_hash": "8a2d0ef81023ffc5",
+ "summary": "Container growth ports: 80/443 for EDA to hub and controller, controller to hub, and gateway to controller, hub and EDA; 5432 PostgreSQL from each component to the database; 6379 Redis for EDA and gateway; 8443 internal gateway NGINX; 27199 Receptor from controller to execution containers; 8080/8443 controller NGINX.",
+ "questions": [
+  "What ports does containerized AAP growth topology use?",
+  "Which port does Receptor use in containerized AAP?",
+  "What is port 6379 used for in AAP?",
+  "Which components connect to the database on port 5432?"
+ ],
+ "answer_card": {
+  "title": "Container growth topology ports",
+  "answer_md": "| Port | Use |\n|---|---|\n| 80/443 | EDA → hub/controller, controller → hub, gateway → controller/hub/EDA |\n| 5432 | PostgreSQL from gateway, controller, hub, EDA |\n| 6379 | Redis for EDA and gateway |\n| 8443 | internal gateway NGINX |\n| 8080/8443 | controller NGINX |\n| 27199 | Receptor, controller ↔ execution containers |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/tested_deployment_models/index#cont-a-env-a"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8501abdf261de62a",
+ "chunk_hash": "8501abdf261de62a",
+ "summary": "Create a Red Hat Lightspeed credential with client ID and secret (or username and password for basic auth); existing credentials must be recreated and re-associated with projects and inventory sources to use token auth.",
+ "questions": [
+  "How do I create a Red Hat Lightspeed credential?",
+  "Do I need to recreate Insights credentials for service accounts?",
+  "Insights project sync failure"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

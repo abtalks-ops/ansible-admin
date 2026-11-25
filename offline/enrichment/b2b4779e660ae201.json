@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b2b4779e660ae201",
+ "chunk_hash": "b2b4779e660ae201",
+ "summary": "Data collection for Automation Analytics is opted in at first license import. Configure it in Settings > Automation Execution > System with a service account (Automation Analytics Viewer role) client ID and secret and Gather data for Automation Analytics, then run a job and check console.redhat.com reports.",
+ "questions": [
+  "How do I configure Automation Analytics in AAP 2.6?",
+  "What service account role is needed for Automation Analytics?",
+  "Analytics data not showing in console.redhat.com"
+ ],
+ "answer_card": {
+  "title": "Configure Automation Analytics",
+  "answer_md": "1. Create a service account with the **Automation Analytics Viewer** role on console.redhat.com.\n2. **Settings > Automation Execution > System > Edit**: enter **Red Hat Client ID for Analytics** and **Client Secret**, tick **Gather data for Automation Analytics**, **Save**.\n3. Run a job and check reports at console.redhat.com/ansible/automation-analytics.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#proc-controller-configure-analytics"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

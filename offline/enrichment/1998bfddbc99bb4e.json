@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1998bfddbc99bb4e",
+ "chunk_hash": "1998bfddbc99bb4e",
+ "summary": "To use HashiCorp Vault, create a credential of type HashiCorp Vault Secret Lookup with the server URL (for example `https://vault.domain.com:8200`), Token or AppRole `role_id`/`secret_id`, and API version v2. Click Test, enter Path to Secret (prefixed with `kv`, for example `kv/key_name`) and Key Name, Run, then Create Credential.",
+ "questions": [
+  "How do I connect AAP to HashiCorp Vault?",
+  "How do I use AppRole with AAP Vault lookup?",
+  "How do I test a HashiCorp Vault credential in AAP?",
+  "What path format does the Vault secret lookup use?"
+ ],
+ "answer_card": {
+  "title": "HashiCorp Vault Secret Lookup credential",
+  "answer_md": "1. New credential, type **HashiCorp Vault Secret Lookup**.\n2. Server URL, e.g. `https://vault.domain.com:8200`.\n3. Token, or AppRole `role_id` + `secret_id`; API version **v2**.\n4. Click **Test**: Path to Secret (e.g. `kv/key_name`) and Key Name, then **Run**.\n5. When it passes, **Create Credential**.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-configure-hashicorp-vault"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

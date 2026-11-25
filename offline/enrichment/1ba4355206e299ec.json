@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1ba4355206e299ec",
+ "chunk_hash": "1ba4355206e299ec",
+ "summary": "Upload a custom execution environment by checking podman images, then podman login private-hub.example.com and podman push the image so job templates and workflows can use it; related tasks include tagging, repository setup, access, credentials, pulling and syncing.",
+ "questions": [
+  "How do I upload a custom execution environment to private automation hub?",
+  "podman push to private automation hub",
+  "Can I sync images into private automation hub?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:12+00:00"
+}

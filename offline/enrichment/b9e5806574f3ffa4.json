@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b9e5806574f3ffa4",
+ "chunk_hash": "b9e5806574f3ffa4",
+ "summary": "Build the bootc disk image by creating an output directory and running bootc-image-builder with podman (privileged, unconfined_t label, container storage mounted) against ${OCI_IMAGE_REPO}:${OCI_IMAGE_TAG}; the disk image lands under ./output.",
+ "questions": [
+  "How do I run bootc-image-builder to create a disk image?",
+  "Where does bootc-image-builder write the disk image?",
+  "What podman options does bootc-image-builder need?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

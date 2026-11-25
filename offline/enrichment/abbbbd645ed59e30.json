@@ -1,0 +1,14 @@
+{
+ "chunk_id": "abbbbd645ed59e30",
+ "chunk_hash": "abbbbd645ed59e30",
+ "summary": "Not covered by migration and to be recreated manually: Event-Driven Ansible, instance groups, automation hub content, a custom CA for receptor mesh, disconnected environments, and execution environments other than the default.",
+ "questions": [
+  "Does AAP migration move Event-Driven Ansible?",
+  "Is automation hub content migrated?",
+  "Are instance groups migrated between AAP install types?",
+  "Can I migrate a disconnected AAP environment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

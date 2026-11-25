@@ -1,0 +1,14 @@
+{
+ "chunk_id": "18cdda8c5c20a301",
+ "chunk_hash": "18cdda8c5c20a301",
+ "summary": "Controller nodes broadcast all WebSocket messages to each other so any node can serve any browser WebSocket client; configure this in /etc/tower/conf.d/websocket_config.py on all nodes and restart. Nodes are discovered through Instance records; broadcasting should stay on a private trusted subnet, since disabling HTTPS sends playbook stdout unencrypted.",
+ "questions": [
+  "How do controller nodes share WebSocket messages?",
+  "Where is the controller WebSocket configuration file?",
+  "Is WebSocket broadcast traffic between controller nodes encrypted?",
+  "Live job output not updating behind load balancer"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

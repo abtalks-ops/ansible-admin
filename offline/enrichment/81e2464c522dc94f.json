@@ -1,0 +1,13 @@
+{
+ "chunk_id": "81e2464c522dc94f",
+ "chunk_hash": "81e2464c522dc94f",
+ "summary": "Inventory source types: Sourced from a Project, AWS EC2, Google Compute Engine, Azure Resource Manager, VMware vCenter, VMware ESXi, Satellite 6, Red Hat Lightspeed, OpenStack, Red Hat Virtualization, Red Hat Ansible Automation Platform and Terraform State.",
+ "questions": [
+  "What inventory sources does AAP support?",
+  "Can I sync inventory from Satellite?",
+  "Can I use another AAP as an inventory source?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}
