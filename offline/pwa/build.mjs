@@ -61,6 +61,31 @@ await build({
   outfile: path.join(out, "vendor/web-llm.js"),
   logLevel: "warning",
 });
+// The GPU model runs in this worker (WebLLM), off the main thread.
+await build({
+  entryPoints: [path.join(here, "src/webllm-worker.ts")],
+  bundle: true,
+  format: "esm",
+  target: "es2022",
+  minify: process.env.MINIFY !== "0",
+  outfile: path.join(out, "vendor/webllm-worker.js"),
+  logLevel: "warning",
+});
+// CPU models: wllama (llama.cpp on WebAssembly). It starts its own worker; both wasm builds are self-hosted.
+await build({
+  entryPoints: [path.join(root, "node_modules/@wllama/wllama/esm/index.js")],
+  bundle: true,
+  format: "esm",
+  target: "es2022",
+  minify: process.env.MINIFY !== "0",
+  outfile: path.join(out, "vendor/wllama.js"),
+  logLevel: "warning",
+});
+copy(path.join(root, "node_modules/@wllama/wllama/esm/wasm/wllama.wasm"), path.join(out, "vendor/wllama.wasm"));
+copy(path.join(root, "node_modules/@wllama/wllama-compat/wasm/wllama.wasm"), path.join(out, "vendor/wllama-compat.wasm"));
+const AI_VENDOR = ["web-llm.js", "webllm-worker.js", "wllama.js", "wllama.wasm", "wllama-compat.wasm"];
+const vendorHash = createHash("sha256");
+for (const f of AI_VENDOR) vendorHash.update(fs.readFileSync(path.join(out, "vendor", f)));
 const shellHash = createHash("sha256")
   .update(["app.js", "index.html", "styles.css"].map((f) => fs.readFileSync(path.join(out, f))).join(""))
   .digest("hex")
@@ -72,7 +97,7 @@ await build({
   target: "es2022",
   minify: true,
   outfile: path.join(out, "sw.js"),
-  define: { SHELL_VERSION: JSON.stringify(shellHash) },
+  define: { SHELL_VERSION: JSON.stringify(shellHash), VENDOR_VERSION: JSON.stringify(vendorHash.digest("hex").slice(0, 12)), AI_VENDOR: JSON.stringify(AI_VENDOR) },
   logLevel: "warning",
 });
 
