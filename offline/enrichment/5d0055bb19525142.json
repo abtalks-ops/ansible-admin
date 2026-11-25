@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5d0055bb19525142",
+ "chunk_hash": "5d0055bb19525142",
+ "summary": "The hardening guide gives recommended practices for installing, configuring and maintaining AAP securely on RHEL.",
+ "questions": [
+  "Is there a security hardening guide for AAP?",
+  "How do I install AAP securely?",
+  "AAP hardening and compliance guide"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:03:21+00:00"
+}

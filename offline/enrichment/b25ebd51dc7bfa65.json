@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b25ebd51dc7bfa65",
+ "chunk_hash": "b25ebd51dc7bfa65",
+ "summary": "Intelligent assistant variables: lightspeed_chatbot_model_url (inference base URL; Azure uses .../openai/v1), lightspeed_chatbot_model_verify_ssl and lightspeed_chatbot_default_provider (rhelai, rhoai, openai, azure_openai and others).",
+ "questions": [
+  "What URL do I set for the Lightspeed chatbot model?",
+  "Which provider values does lightspeed_chatbot_default_provider accept?",
+  "Azure OpenAI base URL for Lightspeed"
+ ],
+ "answer_card": {
+  "title": "Point the Lightspeed assistant at an LLM",
+  "answer_md": "```ini\nlightspeed_chatbot_model_url=https://your_inference_api/v1   # Azure: .../openai/v1\nlightspeed_chatbot_model_api_key=<token>\nlightspeed_chatbot_model_id=<model>\nlightspeed_chatbot_default_provider=rhelai   # rhoai, openai, ...\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#lightspeed-variables"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:03:21+00:00"
+}

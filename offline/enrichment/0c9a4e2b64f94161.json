@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0c9a4e2b64f94161",
+ "chunk_hash": "0c9a4e2b64f94161",
+ "summary": "Containerized AAP runs the platform as rootless Podman containers on RHEL, installed and operated by a non-root user, with all runtime data, config and container storage under that user's home directory.",
+ "questions": [
+  "What is containerized Ansible Automation Platform?",
+  "Does containerized AAP run as root?",
+  "Where does containerized AAP store its data?"
+ ],
+ "answer_card": {
+  "title": "Containerized AAP in brief",
+  "answer_md": "- Runs AAP as **Podman** containers on RHEL hosts\n- **Rootless** by default; install and run as a non-root user\n- All runtime data, config and container storage live under the installing user's home directory\n- You manage both the product and the infrastructure lifecycle",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#aap-containerized-installation"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T15:58:49+00:00"
+}

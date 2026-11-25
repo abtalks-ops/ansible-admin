@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d19f6b2a122f1e40",
+ "chunk_hash": "d19f6b2a122f1e40",
+ "summary": "Set ca_tls_cert and ca_tls_key to have the installer generate all service certificates signed by your own CA, without per-service certificate variables.",
+ "questions": [
+  "How do I make AAP sign certificates with my CA?",
+  "What are ca_tls_cert and ca_tls_key?",
+  "Do I need gateway_tls_cert if I set ca_tls_cert?"
+ ],
+ "answer_card": {
+  "title": "Sign all certs with your CA",
+  "answer_md": "```ini\nca_tls_cert=<path_to_ca_tls_certificate>\nca_tls_key=<path_to_ca_tls_key>\n```\nThe installer then creates every service certificate from this CA; no `gateway_tls_cert`, `controller_tls_cert` and so on needed.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#use-custom-ca-certs"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:00:20+00:00"
+}

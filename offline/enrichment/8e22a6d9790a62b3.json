@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8e22a6d9790a62b3",
+ "chunk_hash": "8e22a6d9790a62b3",
+ "summary": "Add AAP entitlements to a subscription allocation from its Subscriptions tab with Add Subscriptions, entering the number of entitlements.",
+ "questions": [
+  "How do I add subscriptions to an allocation?",
+  "How many AAP entitlements do I add to a manifest?",
+  "Steps to add subscriptions before exporting a manifest?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T15:58:49+00:00"
+}

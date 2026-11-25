@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a09a9527941db03b",
+ "chunk_hash": "a09a9527941db03b",
+ "summary": "Containerized AAP supports two installation types, online and disconnected (bundled), each with different requirements.",
+ "questions": [
+  "What installation types does containerized AAP support?",
+  "Online vs disconnected containerized install?",
+  "Which containerized install type should I choose?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T15:58:49+00:00"
+}

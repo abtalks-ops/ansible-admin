@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f1b57b0109a904af",
+ "chunk_hash": "f1b57b0109a904af",
+ "summary": "Size EDA API nodes by number of users and worker nodes by number of activations; separate API and worker nodes are the supported scaling approach rather than hybrid nodes.",
+ "questions": [
+  "How many EDA worker nodes do I need?",
+  "Should I use hybrid nodes for EDA?",
+  "EDA sizing guidelines"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:01:36+00:00"
+}

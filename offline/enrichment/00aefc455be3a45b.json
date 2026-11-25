@@ -1,0 +1,17 @@
+{
+ "chunk_id": "00aefc455be3a45b",
+ "chunk_hash": "00aefc455be3a45b",
+ "summary": "On RHEL, hstore comes from the postgresql-contrib package; install it with dnf and run `CREATE EXTENSION hstore;` in the automationhub database.",
+ "questions": [
+  "How do I enable hstore for automation hub?",
+  "Which package provides hstore on RHEL?",
+  "hstore not available in pg_available_extensions"
+ ],
+ "answer_card": {
+  "title": "Enable hstore for the hub database",
+  "answer_md": "```bash\nsudo dnf install postgresql-contrib\npsql -d automationhub -c \"CREATE EXTENSION hstore;\"\npsql -d automationhub -c \"SELECT * FROM pg_available_extensions WHERE name='hstore'\"  # installed_version is set\n```\nRequired for an **external** hub database before installing.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#proc-enable-hstore-extension"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:00:20+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c54f5d6402f15ecf",
+ "chunk_hash": "c54f5d6402f15ecf",
+ "summary": "To deploy Lightspeed on containerized AAP: set the Lightspeed inventory variables, install or upgrade to 2.6, configure the VS Code extension for the coding assistant, and optionally change the LLM later.",
+ "questions": [
+  "What are the steps to deploy Ansible Lightspeed on containerized AAP?",
+  "Do I configure Lightspeed before or after installing AAP?",
+  "How do users access the Lightspeed assistant?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:00:20+00:00"
+}

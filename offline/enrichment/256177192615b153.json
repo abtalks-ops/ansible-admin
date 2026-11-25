@@ -1,0 +1,17 @@
+{
+ "chunk_id": "256177192615b153",
+ "chunk_hash": "256177192615b153",
+ "summary": "MCP requests fail with 400 Bad Request when AAP uses a self-signed certificate; set mcp_ignore_certificate_errors=true (containerized) or IGNORE_CERTIFICATE_ERRORS in spec.mcp.extra_settings (operator).",
+ "questions": [
+  "Why does the Ansible MCP server return 400 Bad Request?",
+  "How do I make the MCP server ignore self-signed certificates?",
+  "IGNORE_CERTIFICATE_ERRORS operator setting"
+ ],
+ "answer_card": {
+  "title": "MCP 400 with self-signed certs",
+  "answer_md": "- **Containerized**: `mcp_ignore_certificate_errors=true`\n- **Operator**:\n```yaml\nspec:\n  mcp:\n    extra_settings:\n      - setting: IGNORE_CERTIFICATE_ERRORS\n        value: true\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#troubleshoot-ansible-mcp-server-errors"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:01:36+00:00"
+}

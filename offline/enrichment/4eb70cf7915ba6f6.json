@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4eb70cf7915ba6f6",
+ "chunk_hash": "4eb70cf7915ba6f6",
+ "summary": "Controller inventory variables: controller_admin_email (default admin@example.com), controller_admin_password (required, no /, quote or @), controller_admin_user (default admin) and controller_nginx_client_max_body_size (default 5m).",
+ "questions": [
+  "What is the RPM name for controller_admin_password?",
+  "How do I raise the upload size limit for automation controller?",
+  "Default controller admin username"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:48+00:00"
+}

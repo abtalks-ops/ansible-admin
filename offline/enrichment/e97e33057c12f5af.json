@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e97e33057c12f5af",
+ "chunk_hash": "e97e33057c12f5af",
+ "summary": "Back up containerized AAP with the installer matching the installed version; only supported PostgreSQL versions work, and S3 or Azure hub content must be backed up through the vendor.",
+ "questions": [
+  "How do I back up containerized AAP?",
+  "Which installer version do I use for backups?",
+  "Are S3 hub contents included in AAP backups?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:01:36+00:00"
+}

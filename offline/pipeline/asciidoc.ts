@@ -135,6 +135,7 @@ export function expand(file: string, attrs: Attrs, offset = 0, depth = 0, out: s
 export function inline(s: string, attrs: Attrs): string {
   return subst(s, attrs)
     .replace(/pass:\w*\[([^\]]*)\]/g, "$1")
+    .replace(/\\(https?:\/\/)/g, "$1") // escaped URL (not a link)
     .replace(/`\+([^`]*?)\+`/g, "`$1`")
     .replace(/\b(?:link|https?):(\/\/)?([^\s\[]*)\[([^\]]*)\]/g, (m, sl, url, text) => {
       const full = m.startsWith("link:") ? url : `${m.slice(0, m.indexOf(":"))}:${sl ?? ""}${url}`;

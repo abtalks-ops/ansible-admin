@@ -1,0 +1,17 @@
+{
+ "chunk_id": "af2173b2bc7c889c",
+ "chunk_hash": "af2173b2bc7c889c",
+ "summary": "Each containerized AAP VM needs 16 GB RAM (32 GB for growth bundled with hub_seed_collections=true), 4 CPUs, 60 GB disk (15 GB install dir, /var/tmp 1-3 GB, /tmp 10 GB for bundled) and 3000 IOPS.",
+ "questions": [
+  "How much RAM does containerized AAP need?",
+  "How much disk space does AAP 2.6 need?",
+  "What are the VM requirements for containerized AAP?"
+ ],
+ "answer_card": {
+  "title": "Containerized AAP VM sizing",
+  "answer_md": "- RAM: **16 GB** (32 GB for growth bundled with `hub_seed_collections=true`)\n- CPUs: **4**\n- Disk: **60 GB** total; install dir 15 GB; `/var/tmp` 1 GB online / 3 GB bundled; `/tmp` 10 GB bundled\n- Disk IOPS: **3000**",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#system-requirements"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T15:58:49+00:00"
+}

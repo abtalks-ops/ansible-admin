@@ -1,0 +1,13 @@
+{
+ "chunk_id": "082daef53ff36350",
+ "chunk_hash": "082daef53ff36350",
+ "summary": "postgresql_port (RPM install_pg_port, default 5432) sets the PostgreSQL server listen port; postgresql_extra_settings passes server settings like ssl_ciphers.",
+ "questions": [
+  "How do I change the PostgreSQL listen port in AAP?",
+  "How do I pass PostgreSQL settings in the AAP installer?",
+  "Difference between postgresql_port and controller_pg_port"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:48+00:00"
+}

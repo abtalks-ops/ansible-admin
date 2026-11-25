@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b209a75577c15caa",
+ "chunk_hash": "b209a75577c15caa",
+ "summary": "To change the Lightspeed intelligent assistant LLM, update lightspeed_chatbot_model_url, lightspeed_chatbot_model_api_key, lightspeed_chatbot_model_id and lightspeed_chatbot_default_provider in the inventory and rerun the install playbook.",
+ "questions": [
+  "How do I change the LLM used by the Lightspeed assistant?",
+  "Which variables set the Lightspeed chatbot model?",
+  "Do I need to rerun the installer to switch LLM providers?"
+ ],
+ "answer_card": {
+  "title": "Change the Lightspeed LLM",
+  "answer_md": "Update in the inventory:\n- `lightspeed_chatbot_model_url`\n- `lightspeed_chatbot_model_api_key`\n- `lightspeed_chatbot_model_id`\n- `lightspeed_chatbot_default_provider`\n\nThen rerun the `install` playbook.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#proc-change-llm-model-containerized-install_licensing-gw"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:00:58+00:00"
+}

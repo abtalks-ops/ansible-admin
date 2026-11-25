@@ -1,0 +1,17 @@
+{
+ "chunk_id": "1ab946071672db45",
+ "chunk_hash": "1ab946071672db45",
+ "summary": "Containerized AAP services are user systemd units; check and control them with `systemctl --user status|start|stop <service>`.",
+ "questions": [
+  "How do I restart a containerized AAP service?",
+  "How do I check the status of automation-gateway-proxy?",
+  "Are containerized AAP services managed by systemd?"
+ ],
+ "answer_card": {
+  "title": "Control services",
+  "answer_md": "```bash\nsystemctl --user status automation-gateway-proxy\nsystemctl --user restart automation-controller-task\n```\nUnits live in `~/.config/systemd/user/`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#diagnosing-the-problem"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:02:09+00:00"
+}

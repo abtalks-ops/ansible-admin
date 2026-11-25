@@ -1,0 +1,17 @@
+{
+ "chunk_id": "2d6f0795c8b72280",
+ "chunk_hash": "2d6f0795c8b72280",
+ "summary": "Content signing is off by default; enable with hub_collection_signing=true and hub_container_signing=true plus GPG key paths (hub_*_signing_key) and passphrases (hub_*_signing_pass); only GPG keys are supported.",
+ "questions": [
+  "How do I enable collection signing in automation hub?",
+  "What variables enable container signing?",
+  "What key types does hub content signing support?"
+ ],
+ "answer_card": {
+  "title": "Enable content signing",
+  "answer_md": "```ini\nhub_collection_signing=true\nhub_collection_signing_key=<path_to_collection_gpg_key>\nhub_collection_signing_pass=<passphrase>   # if protected\nhub_container_signing=true\nhub_container_signing_key=<path_to_container_gpg_key>\nhub_container_signing_pass=<passphrase>\n```\nGPG keys only; create them before installing.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#enabling-automation-hub-collection-and-container-signing"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T15:59:39+00:00"
+}

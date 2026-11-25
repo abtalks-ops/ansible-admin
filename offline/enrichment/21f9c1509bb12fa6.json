@@ -1,0 +1,17 @@
+{
+ "chunk_id": "21f9c1509bb12fa6",
+ "chunk_hash": "21f9c1509bb12fa6",
+ "summary": "To deploy the MCP server on containerized AAP, add an [ansiblemcp] host group and set mcp_allow_write_operations and mcp_ignore_certificate_errors, plus mcp_tls_cert and mcp_tls_key for custom certificates.",
+ "questions": [
+  "How do I deploy the Ansible MCP server on containerized AAP?",
+  "What is mcp_allow_write_operations?",
+  "Which inventory group is used for the MCP server?"
+ ],
+ "answer_card": {
+  "title": "Deploy the MCP server (containerized)",
+  "answer_md": "```ini\n[ansiblemcp]\naap.example.com\n\n[all:vars]\nmcp_allow_write_operations=false   # read-only\nmcp_ignore_certificate_errors=false\nmcp_tls_cert=<path>\nmcp_tls_key=<path>\n```\nRun the `install` playbook; the service listens on HTTPS port **8448**.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#proc-configure-mcp-server-containerized-install_licensing-gw"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:00:58+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b9d7d78a13a089ae",
+ "chunk_hash": "b9d7d78a13a089ae",
+ "summary": "Activate AAP at first login on the Service Account tab with Client ID and Client secret (or Satellite credentials), accept the EULA; Automation Analytics is on by default and can be cleared under Settings > Automation Execution > System.",
+ "questions": [
+  "How do I activate AAP with a service account?",
+  "How do I opt out of Automation Analytics?",
+  "What does Out of Compliance mean in AAP subscriptions?"
+ ],
+ "answer_card": {
+  "title": "Activate AAP with credentials",
+  "answer_md": "1. Log in to AAP and open the subscription wizard.\n2. **Service Account** tab: enter **Client ID** and **Client secret** (or use the **Satellite** tab).\n3. Pick the subscription, accept the EULA, click **Finish**.\n\nOpt out of analytics: **Settings > Automation Execution > System**, clear *Gather data for Automation Analytics*, **Save**.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#proc-aap-activate-with-credentials"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T15:58:49+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "610f692577cbd98d",
+ "chunk_hash": "610f692577cbd98d",
+ "summary": "Verify the MCP connection by asking the AI agent which MCP tools are available for AAP, then try prompts such as listing your AAP jobs.",
+ "questions": [
+  "How do I test my AI agent's connection to the Ansible MCP server?",
+  "What prompt checks the Ansible MCP tools?",
+  "Can I list AAP jobs from Claude Code?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:01:36+00:00"
+}

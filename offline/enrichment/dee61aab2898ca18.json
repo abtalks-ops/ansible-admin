@@ -1,0 +1,17 @@
+{
+ "chunk_id": "dee61aab2898ca18",
+ "chunk_hash": "dee61aab2898ca18",
+ "summary": "Without admin credentials, create a user with CREATEDB and a database it owns for each component (gateway, controller, hub, EDA) via psql, then set *_pg_host, *_pg_database, *_pg_username and *_pg_password.",
+ "questions": [
+  "How do I pre-create AAP databases without superuser?",
+  "What SQL do I run for an AAP external database?",
+  "Does the AAP database user need CREATEDB?"
+ ],
+ "answer_card": {
+  "title": "Pre-create component databases",
+  "answer_md": "For each component (gateway, controller, hub, EDA):\n```sql\nCREATE USER <username> WITH PASSWORD '<password>' CREATEDB;\nCREATE DATABASE <database_name> OWNER <username>;\n```\nThen set `<component>_pg_host`, `_pg_database`, `_pg_username`, `_pg_password` in `[all:vars]`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/containerized_installation/index#setup-ext-db-without-admin-creds"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T15:59:39+00:00"
+}
