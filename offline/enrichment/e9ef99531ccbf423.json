@@ -1,0 +1,14 @@
+{
+ "chunk_id": "e9ef99531ccbf423",
+ "chunk_hash": "e9ef99531ccbf423",
+ "summary": "To use an execution environment in a job template, build it, push it to a registry, and create it under Automation Execution > Infrastructure > Execution Environments with a name and full image path; organization-scoped EEs need org admin rights and EE credentials need username, host and password.",
+ "questions": [
+  "How do I add a custom execution environment to automation controller?",
+  "Do I need to push my execution environment to a registry?",
+  "Who can use an execution environment tied to an organization?",
+  "What image name format does an execution environment need?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

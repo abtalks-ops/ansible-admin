@@ -1,0 +1,14 @@
+{
+ "chunk_id": "549185124a858277",
+ "chunk_hash": "549185124a858277",
+ "summary": "For multi-hop network access through a jumphost, attach a Machine credential for the jumphost plus a Network credential (local/provider) or a second Machine credential (network_cli, netconf, httpapi), with inventory variables like ansible_ssh_common_args for ProxyCommand.",
+ "questions": [
+  "How do I reach network devices through a jumphost in AAP?",
+  "Can a job template use two machine credentials?",
+  "Prerequisites for using Machine and Network credentials together",
+  "Which credential type matches my network connection type?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

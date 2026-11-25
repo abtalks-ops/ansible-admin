@@ -1,0 +1,13 @@
+{
+ "chunk_id": "cf1be63b5ce4aa4f",
+ "chunk_hash": "cf1be63b5ce4aa4f",
+ "summary": "{{ job_metadata }} renders id, name, url, created_by, started, finished, status and traceback, plus inventory, project, playbook, credential, limit, extra_vars and hosts for jobs and body for workflow jobs; individual fields cannot be queried.",
+ "questions": [
+  "What fields are in job_metadata?",
+  "Can I access a single field from job_metadata?",
+  "What does job_metadata contain for a workflow job?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

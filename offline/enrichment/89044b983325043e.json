@@ -1,0 +1,13 @@
+{
+ "chunk_id": "89044b983325043e",
+ "chunk_hash": "89044b983325043e",
+ "summary": "For a Lightspeed project set Source control type to Red Hat Lightspeed, pick the Lightspeed credential and optional EE and signature validation; it syncs on first save and later via the project's Update action.",
+ "questions": [
+  "Which source control type do I use for Insights?",
+  "How do I resync a Red Hat Lightspeed project?",
+  "Fields for a Red Hat Lightspeed project"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

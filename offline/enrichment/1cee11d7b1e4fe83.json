@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1cee11d7b1e4fe83",
+ "chunk_hash": "1cee11d7b1e4fe83",
+ "summary": "The images section defines the base_image with a name in host/namespace/container:tag form; signature_original_name is for mirrored images signed with the original key.",
+ "questions": [
+  "How do I set the base image in an execution environment definition?",
+  "What is signature_original_name?",
+  "Can I use a mirrored base image for ansible-builder?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

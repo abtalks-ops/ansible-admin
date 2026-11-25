@@ -1,0 +1,14 @@
+{
+ "chunk_id": "e90e24eb89a9e89d",
+ "chunk_hash": "e90e24eb89a9e89d",
+ "summary": "Webhook notifications POST or PUT JSON to a target URL, with optional basic auth username and password, JSON HTTP headers and an option to disable SSL verification.",
+ "questions": [
+  "How do I configure a webhook notification?",
+  "How do I add custom headers to a webhook notifier?",
+  "Should my webhook notifier use POST or PUT?",
+  "Basic auth for webhook notifications"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

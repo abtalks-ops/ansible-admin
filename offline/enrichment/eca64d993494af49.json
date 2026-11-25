@@ -1,0 +1,13 @@
+{
+ "chunk_id": "eca64d993494af49",
+ "chunk_hash": "eca64d993494af49",
+ "summary": "VM-based installs automatically mount the system truststore into execution environments; other mounts are set in Paths to expose to isolated jobs in Job Settings using Podman volume syntax.",
+ "questions": [
+  "How do I add certificates to an execution environment without rebuilding?",
+  "What is Paths to expose to isolated jobs?",
+  "Does controller mount the host CA truststore into jobs?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

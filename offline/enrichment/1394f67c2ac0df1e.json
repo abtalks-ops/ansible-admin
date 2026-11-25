@@ -1,0 +1,14 @@
+{
+ "chunk_id": "1394f67c2ac0df1e",
+ "chunk_hash": "1394f67c2ac0df1e",
+ "summary": "On OpenShift deployments you can scale automation mesh by adding or removing nodes from the Instances page without running the installer; it needs System Administrator or Auditor rights, and more CPU and RAM means more concurrent jobs.",
+ "questions": [
+  "How do I scale automation mesh on OpenShift?",
+  "Can I add execution nodes without the installer?",
+  "What permissions do I need to manage instances?",
+  "What determines how many jobs a node can run?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

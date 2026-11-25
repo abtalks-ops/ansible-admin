@@ -1,0 +1,13 @@
+{
+ "chunk_id": "fba718385cbceaf8",
+ "chunk_hash": "fba718385cbceaf8",
+ "summary": "Use the provisioning callback feature so newly booted instances can request their configuration for autoscaling or provisioning.",
+ "questions": [
+  "How do I configure new autoscaled instances with controller?",
+  "What is the callback feature for?",
+  "Provisioning callbacks for autoscaling"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

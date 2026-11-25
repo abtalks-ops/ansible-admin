@@ -1,0 +1,13 @@
+{
+ "chunk_id": "340bc73ae3378281",
+ "chunk_hash": "340bc73ae3378281",
+ "summary": "With Podman, ansible-builder --container-policy controls signature checks: ignore_all generates a policy.json with no validation, system uses existing system policy.json files, and signature_required generates one that validates images.",
+ "questions": [
+  "How do I verify signed base images with ansible-builder?",
+  "What does --container-policy signature_required do?",
+  "Disable image signature validation in ansible-builder"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

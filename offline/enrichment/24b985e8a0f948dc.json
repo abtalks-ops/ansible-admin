@@ -1,0 +1,17 @@
+{
+ "chunk_id": "24b985e8a0f948dc",
+ "chunk_hash": "24b985e8a0f948dc",
+ "summary": "registry.redhat.io needs authentication: check with podman login --get-login registry.redhat.io and log in with podman login; log in before launching VS Code for the devtools container, and inside the devcontainer to pull EEs.",
+ "questions": [
+  "How do I log in to registry.redhat.io?",
+  "Why can't VS Code pull the devtools container?",
+  "Check whether I am logged in to the Red Hat registry"
+ ],
+ "answer_card": {
+  "title": "Log in to registry.redhat.io",
+  "answer_md": "```\npodman login --get-login registry.redhat.io   # shows your login if already logged in\npodman login registry.redhat.io               # Customer Portal username and password\n```\n\nLog in before starting VS Code so it can pull the devtools container, and log in again from a terminal inside the devcontainer to pull execution environments.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/developing_automation_content/index#devtools-setup-registry-redhat-io_develop-automation-content"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

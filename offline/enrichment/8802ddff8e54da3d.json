@@ -1,0 +1,14 @@
+{
+ "chunk_id": "8802ddff8e54da3d",
+ "chunk_hash": "8802ddff8e54da3d",
+ "summary": "MCP servers can run ephemerally inside execution environments for the job's duration via an Ansible plugin framework, installed with ansible-builder either embedded in the image or as remote servers defined in a manifest.",
+ "questions": [
+  "Can Ansible playbooks call MCP servers?",
+  "What is the difference between embedded and remote MCP servers in an EE?",
+  "How long do MCP servers live in an AAP job?",
+  "How do I add an MCP server to an execution environment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

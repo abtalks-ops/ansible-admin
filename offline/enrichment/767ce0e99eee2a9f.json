@@ -1,0 +1,18 @@
+{
+ "chunk_id": "767ce0e99eee2a9f",
+ "chunk_hash": "767ce0e99eee2a9f",
+ "summary": "Instance groups and container groups can cap max_concurrent_jobs and max_forks, for example 10 jobs and 50 forks per organization; extra jobs wait or go to another group with capacity, and task_impact is counted against max_forks.",
+ "questions": [
+  "How do I limit concurrent jobs on an instance group?",
+  "What is max_forks on an instance group?",
+  "Limit the number of forks an organization can use",
+  "Why does my job wait even though the instance group has capacity?"
+ ],
+ "answer_card": {
+  "title": "Cap jobs and forks on an instance group",
+  "answer_md": "Set these on the instance group (or container group):\n\n```\nmax_concurrent_jobs: 10\nmax_forks: 50\n```\n\n- With 10 jobs of 5 forks running, an 11th job waits (or runs on another group with capacity).\n- With 2 jobs of 20 forks running, a job with `task_impact` of 11 or more waits.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-instance-group-capacity"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

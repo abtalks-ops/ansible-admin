@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6af5791805e3a2a6",
+ "chunk_hash": "6af5791805e3a2a6",
+ "summary": "Red Hat Virtualization credentials for the oVirt4 inventory set OVIRT_URL, OVIRT_USERNAME and OVIRT_PASSWORD; the URL must include ovirt-engine/api, the username needs the domain profile (user@ovirt.host.com), and an optional CA file path.",
+ "questions": [
+  "Why does my RHV inventory sync fail?",
+  "Which environment variables does the Red Hat Virtualization credential set?",
+  "What username format does the oVirt credential need?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

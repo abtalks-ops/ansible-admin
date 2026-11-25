@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a1fb065d174a126d",
+ "chunk_hash": "a1fb065d174a126d",
+ "summary": "MCP plugin calls and credential use are logged with job ID, user and timestamp in the AAP audit trail, secrets are masked, and MCP agents leave nothing behind after the job ends.",
+ "questions": [
+  "Are MCP tool calls audited in AAP?",
+  "Are secrets masked in MCP job logs?",
+  "Do MCP servers leave data after a job?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

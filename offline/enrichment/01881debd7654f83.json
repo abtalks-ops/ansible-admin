@@ -1,0 +1,13 @@
+{
+ "chunk_id": "01881debd7654f83",
+ "chunk_hash": "01881debd7654f83",
+ "summary": "Instance options: Enable instance, Managed by policy, and Peers from control, which you check only when the hop or execution node receives work directly from controller rather than via another hop node; then associate peers.",
+ "questions": [
+  "When should I check Peers from control?",
+  "How do I peer an execution node to a hop node?",
+  "What does Managed by policy mean on an instance?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}
