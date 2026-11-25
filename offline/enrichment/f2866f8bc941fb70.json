@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f2866f8bc941fb70",
+ "chunk_hash": "f2866f8bc941fb70",
+ "summary": "Facts module output stays in memory, while most other modules need register to reuse output; run the network playbook with ansible-playbook -i vyos.example.net, -u ansible -k -e ansible_network_os=vyos.vyos.vyos first_playbook.yml.",
+ "questions": [
+  "How do I run a network playbook against a single device?",
+  "Do I need register to use facts in later tasks?",
+  "How do I reuse output from a module in Ansible?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

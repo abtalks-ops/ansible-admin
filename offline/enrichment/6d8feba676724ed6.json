@@ -1,0 +1,18 @@
+{
+ "chunk_id": "6d8feba676724ed6",
+ "chunk_hash": "6d8feba676724ed6",
+ "summary": "The ansible.platform collection adds platform-wide RBAC modules (organization, team, user, role definitions, role assignments) for declaring RBAC as code, and AAP collections now share the AAP_ environment variable prefix (for example aap_hostname) instead of COMPONENT_.",
+ "questions": [
+  "Which collection manages RBAC across AAP 2.6?",
+  "What environment variable prefix do AAP collections use in 2.6?",
+  "Can I manage role assignments as code in AAP?",
+  "Is CONTROLLER_HOST still used in AAP 2.6 collections?"
+ ],
+ "answer_card": {
+  "title": "ansible.platform RBAC and AAP_ variables",
+  "answer_md": "- `ansible.platform` modules: organization, team, user, role definitions, role assignments (team/user); apply RBAC idempotently across services.\n- Controller, hub and EDA collections now use the **`AAP_`** prefix instead of component prefixes, for example `aap_hostname`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index#new-features"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "26b2568c66633ba5",
+ "chunk_hash": "26b2568c66633ba5",
+ "summary": "Hub-only users and Event-Driven Ansible users are not moved to platform gateway in a 2.4 to 2.6 upgrade and must be recreated (with password reset); same-username accounts follow the controller account, and hub admins merged with controller users become normal users.",
+ "questions": [
+  "Why was my automation hub user not migrated to platform gateway?",
+  "Are Event-Driven Ansible users migrated when upgrading to 2.6?",
+  "Do I need to recreate users after upgrading from 2.4 to 2.6?",
+  "What happens to automation hub admins after upgrade?"
+ ],
+ "answer_card": {
+  "title": "Users not migrated in 2.4 → 2.6",
+  "answer_md": "Not moved to platform gateway (recreate manually, reset passwords):\n- Users that exist **only in automation hub**\n- **Event-Driven Ansible** users (EDA data is excluded)\n- Duplicate usernames belonging to different people, or mismatched username/email between hub and controller\n\nA user with the same username in controller and hub follows the controller account. Hub admins merged with controller users become normal users.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#ref-upgrade-2.4-to-2.6"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

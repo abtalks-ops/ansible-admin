@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1b9500f00dfd3af4",
+ "chunk_hash": "1b9500f00dfd3af4",
+ "summary": "Getting started: with Ansible installed and a text editor, create a project folder such as ansible_quickstart to hold the inventory and Hello World playbook.",
+ "questions": [
+  "How do I start my first Ansible project?",
+  "What do I need before writing my first playbook?",
+  "Why keep Ansible content in one directory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

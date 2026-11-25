@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b97878fc6fa3a751",
+ "chunk_hash": "b97878fc6fa3a751",
+ "summary": "EDA fixes: projects can no longer be deleted during a project sync (AAP-71406), and an incorrect event-stream node tag in gateway config that broke routing (AAP-69827).",
+ "questions": [
+  "EDA event stream routing issues through gateway",
+  "Can I delete an EDA project while it is syncing?",
+  "Was AAP-69827 fixed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

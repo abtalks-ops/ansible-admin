@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6494f7416fb3f8c6",
+ "chunk_hash": "6494f7416fb3f8c6",
+ "summary": "Containerized AAP 2.6 requires RHEL 9.4 or later 9.x (RHEL 10 unchanged) and supports PostgreSQL 15, 16 and 17 for external databases; with 16 or 17 you must use external backup and restore.",
+ "questions": [
+  "What RHEL version does containerized AAP 2.6 need?",
+  "Which PostgreSQL versions are supported for external databases in containerized AAP?",
+  "Does AAP backup work with PostgreSQL 16?"
+ ],
+ "answer_card": {
+  "title": "Containerized AAP 2.6 requirements",
+  "answer_md": "- RHEL **9.4 or later** 9.x (RHEL 10 requirements unchanged)\n- External DB: PostgreSQL **15, 16, 17**\n- With PostgreSQL 16/17, use **external backup and restore**; built-in backup depends on PostgreSQL 15 utilities.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index#new-features"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

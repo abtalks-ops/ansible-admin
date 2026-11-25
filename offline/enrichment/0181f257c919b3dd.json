@@ -1,0 +1,14 @@
+{
+ "chunk_id": "0181f257c919b3dd",
+ "chunk_hash": "0181f257c919b3dd",
+ "summary": "AAP 2.6 collections share a standard environment and module variable name for config as code; latest 2.5 to 2.6 is supported for RPM, containerized and OpenShift, and latest 2.4 to 2.6 directly is recommended for RPM and OpenShift but not for EDA 2.4 or 2.4 containerized (Tech Preview).",
+ "questions": [
+  "Can I upgrade directly from AAP 2.4 to 2.6?",
+  "Can I upgrade containerized AAP 2.4 to 2.6?",
+  "Is upgrading Event-Driven Ansible 2.4 supported?",
+  "Which deployment types support 2.5 to 2.6 upgrades?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ce2ce9f2ee6c233b",
+ "chunk_hash": "ce2ce9f2ee6c233b",
+ "summary": "Lightspeed fixes: Azure OpenAI base URL for Llama Stack 0.4.3 in containerized installs, /api/lightspeed/v1/ai/chat schema matching docs, MCP prompts failing on max_tokens, wisdom-manage output with Django 5.2, and oversized backups.",
+ "questions": [
+  "Why does containerized Lightspeed fail with Azure OpenAI?",
+  "Lightspeed backups are very large",
+  "MCP prompts failing with max_tokens in Lightspeed"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

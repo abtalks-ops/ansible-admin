@@ -1,0 +1,14 @@
+{
+ "chunk_id": "6f2e4740f522ce57",
+ "chunk_hash": "6f2e4740f522ce57",
+ "summary": "March 2026 platform fixes: Organization Admins Can Manage Users and Teams now disables team create, edit and delete when off, cross-org team visibility, org admins assigning team access to projects, slow gateway list views, next redirects with a plus sign, and concurrent EDA project creation errors.",
+ "questions": [
+  "Org admins can still delete teams with Organization Admins Can Manage Users and Teams disabled",
+  "Org admin can't assign team access to projects in 2.6",
+  "Redirect fails when next contains a plus sign",
+  "Gateway UI list views slow"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

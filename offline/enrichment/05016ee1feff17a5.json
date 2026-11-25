@@ -1,0 +1,13 @@
+{
+ "chunk_id": "05016ee1feff17a5",
+ "chunk_hash": "05016ee1feff17a5",
+ "summary": "December 2025: devtools RPMs for RHEL 10 are now built on a dedicated channel, fixing missing AAP 2.6 repositories that stopped devtools mirroring on RHEL 10 (AAP-53866).",
+ "questions": [
+  "Are Ansible devtools available for RHEL 10?",
+  "Can't mirror AAP 2.6 devtools on RHEL 10",
+  "Was AAP-53866 fixed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

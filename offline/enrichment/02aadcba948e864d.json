@@ -1,0 +1,13 @@
+{
+ "chunk_id": "02aadcba948e864d",
+ "chunk_hash": "02aadcba948e864d",
+ "summary": "EDA adds nginx log markers for direct API access (AAP-66105).",
+ "questions": [
+  "How do I see direct API access to Event-Driven Ansible?",
+  "Does EDA log traffic that bypasses gateway?",
+  "What is AAP-66105?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

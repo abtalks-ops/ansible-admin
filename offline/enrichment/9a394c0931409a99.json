@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9a394c0931409a99",
+ "chunk_hash": "9a394c0931409a99",
+ "summary": "May 2026 EDA CVE fixes: wheel unpacking (CVE-2026-24049) in the EDA operator image, plus cryptography, pyOpenSSL, pyasn1 (CVE-2026-30922), PyJWT and Dynaconf SSTI (CVE-2026-33154) in eda-controller-rhel9.",
+ "questions": [
+  "Which CVEs were fixed in Event-Driven Ansible in May 2026?",
+  "Is the EDA controller affected by CVE-2026-33154?",
+  "Was the wheel CVE-2026-24049 fixed in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

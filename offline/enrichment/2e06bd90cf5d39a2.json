@@ -1,0 +1,17 @@
+{
+ "chunk_id": "2e06bd90cf5d39a2",
+ "chunk_hash": "2e06bd90cf5d39a2",
+ "summary": "Ansible Lightspeed intelligent assistant is GA in AAP 2.6 on OpenShift: an embedded English chat using LLMs to answer AAP questions; it needs AAP 2.6 on OpenShift and an LLM hosted on RHEL AI or OpenShift AI.",
+ "questions": [
+  "What do I need to run the Ansible Lightspeed intelligent assistant?",
+  "Is the Lightspeed intelligent assistant available on RPM installs?",
+  "Which LLM services work with Ansible Lightspeed intelligent assistant?"
+ ],
+ "answer_card": {
+  "title": "Lightspeed intelligent assistant requirements",
+  "answer_md": "- Ansible Automation Platform **2.6 on OpenShift Container Platform**\n- An LLM service hosted on **Red Hat Enterprise Linux AI** or **Red Hat OpenShift AI**\n\nIt's a chat interface in AAP that answers questions in English. See *Deploying the Ansible Lightspeed intelligent assistant on OpenShift Container Platform*.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index#new-features"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

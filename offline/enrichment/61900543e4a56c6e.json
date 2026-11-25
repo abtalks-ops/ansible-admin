@@ -1,0 +1,13 @@
+{
+ "chunk_id": "61900543e4a56c6e",
+ "chunk_hash": "61900543e4a56c6e",
+ "summary": "Introduces the GitHub authentication general settings and mappings comparison between automation controller 2.4 and platform gateway 2.6.",
+ "questions": [
+  "How does GitHub authentication migrate to platform gateway?",
+  "Where are GitHub auth settings in AAP 2.6?",
+  "Are GitHub authenticator mappings migrated from 2.4?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

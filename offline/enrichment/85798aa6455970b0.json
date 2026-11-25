@@ -1,0 +1,13 @@
+{
+ "chunk_id": "85798aa6455970b0",
+ "chunk_hash": "85798aa6455970b0",
+ "summary": "A 2.5 Operator growth topology on OpenShift upgrades to the 2.6 growth topology; the topology is unchanged.",
+ "questions": [
+  "Can I upgrade the Operator growth topology from 2.5 to 2.6?",
+  "Does the Operator growth topology change in 2.6?",
+  "Where are Operator growth topology requirements?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

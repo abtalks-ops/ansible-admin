@@ -1,0 +1,13 @@
+{
+ "chunk_id": "91e9ea5d1dcfa73f",
+ "chunk_hash": "91e9ea5d1dcfa73f",
+ "summary": "January 2026 EDA features: an x-ai-description field on the activation PATCH method, and activations in workers offline status are protected by warnings on restart, disable and delete, with a force flag to bypass.",
+ "questions": [
+  "How do I delete an EDA activation in workers offline status?",
+  "What is the force flag for disabling activations?",
+  "Why does EDA warn when I disable an activation?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

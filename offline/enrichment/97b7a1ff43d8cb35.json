@@ -1,0 +1,18 @@
+{
+ "chunk_id": "97b7a1ff43d8cb35",
+ "chunk_hash": "97b7a1ff43d8cb35",
+ "summary": "Maps SOCIAL_AUTH_GITHUB_KEY, _SECRET and _SCOPE to gateway KEY, SECRET and SCOPE; GitHub organization and team maps become organization (Organization Admin) and team (Team Member) authenticator maps with users has_or triggers; Azure AD OAUTH2 key and secret become KEY, SECRET plus GROUPS_CLAIM groups.",
+ "questions": [
+  "How do SOCIAL_AUTH_GITHUB settings map to platform gateway?",
+  "How does SOCIAL_AUTH_GITHUB_TEAM_MAP convert in 2.6?",
+  "How do Azure AD OAuth2 settings migrate to gateway?",
+  "What is GROUPS_CLAIM in the Azure AD authenticator?"
+ ],
+ "answer_card": {
+  "title": "GitHub and Azure AD settings 2.4 → 2.6",
+  "answer_md": "**GitHub**\n- `SOCIAL_AUTH_GITHUB_KEY` / `_SECRET` / `_SCOPE` → `KEY` / `SECRET` / `SCOPE`\n- `ORGANIZATION_MAP` admins → organization map, role *Organization Admin*\n- `TEAM_MAP` → team map, role *Team Member*\n\n**Azure AD**\n- `SOCIAL_AUTH_AZUREAD_OAUTH2_KEY` / `_SECRET` → `KEY` / `SECRET`, plus `GROUPS_CLAIM: groups`",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-github-auth"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}
