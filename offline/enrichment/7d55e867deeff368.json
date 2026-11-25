@@ -1,0 +1,12 @@
+{
+ "chunk_id": "7d55e867deeff368",
+ "chunk_hash": "7d55e867deeff368",
+ "summary": "Three versioned parts: the Helm chart (e.g. 2.1.0), the plug-in setup bundle (e.g. self-service-automation-portal-plugins-2.1.0.tar.gz) and the AAP version it connects to (e.g. 2.6).",
+ "questions": [
+  "What versions make up a portal deployment?",
+  "Which plug-in bundle goes with Helm chart 2.1.0?",
+  "Which AAP version does the portal connect to?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

@@ -1,0 +1,12 @@
+{
+ "chunk_id": "ecd6fac4c7ca6b55",
+ "chunk_hash": "ecd6fac4c7ca6b55",
+ "summary": "In the November 19, 2025 patch Red Hat Ansible Lightspeed added support for the third-party model providers OpenAI (AAP-58291) and Azure (AAP-58290).",
+ "questions": [
+  "Can Ansible Lightspeed use OpenAI models?",
+  "Does Lightspeed support Azure as a model provider?",
+  "When was OpenAI support added to Lightspeed?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

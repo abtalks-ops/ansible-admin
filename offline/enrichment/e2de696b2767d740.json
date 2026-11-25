@@ -1,0 +1,12 @@
+{
+ "chunk_id": "e2de696b2767d740",
+ "chunk_hash": "e2de696b2767d740",
+ "summary": "AAP can automate Security Operations Center (SOC) functions, connecting security teams, tools and processes; use cases include investigation enrichment, threat hunting and incident response.",
+ "questions": [
+  "Can Ansible automate a SOC?",
+  "SOC automation use cases with Ansible",
+  "How does AAP help with incident response?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

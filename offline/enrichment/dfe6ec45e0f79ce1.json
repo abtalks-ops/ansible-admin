@@ -1,0 +1,17 @@
+{
+ "chunk_id": "dfe6ec45e0f79ce1",
+ "chunk_hash": "dfe6ec45e0f79ce1",
+ "summary": "October 16, 2025 automation hub fixes: global galaxy team role migration during post-migrate, a constraint violation in migrations, and aap-gateway-manage migrate_service_data failing with 'Role definition content type must be null to assign globally'.",
+ "questions": [
+  "Role definition content type must be null to assign globally",
+  "aap-gateway-manage migrate_service_data fails for hub",
+  "Galaxy team role migration error during upgrade"
+ ],
+ "answer_card": {
+  "title": "'Role definition content type must be null to assign globally'",
+  "answer_md": "This error from `aap-gateway-manage migrate_service_data` came from automation hub permissions that failed validation during the post-migrate upgrade step. It was fixed in the **October 16, 2025** AAP 2.6 patch (AAP-55639), along with a global galaxy team role migration issue (AAP-55304) and a migration constraint violation (AAP-55309).",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

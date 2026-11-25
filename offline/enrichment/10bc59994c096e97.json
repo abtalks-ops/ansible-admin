@@ -1,0 +1,17 @@
+{
+ "chunk_id": "10bc59994c096e97",
+ "chunk_hash": "10bc59994c096e97",
+ "summary": "Create a key/value secret named exactly secrets-rhaap-portal in the portal project with keys aap-host-url, oauth-client-id, oauth-client-secret and aap-token (a token with read access).",
+ "questions": [
+  "What is the secrets-rhaap-portal secret?",
+  "Which keys go into the portal AAP authentication secret?",
+  "What is aap-token in secrets-rhaap-portal?"
+ ],
+ "answer_card": {
+  "title": "secrets-rhaap-portal",
+  "answer_md": "Key/value secret in the portal project, with this **exact** name and keys:\n\n| Key | Value |\n|---|---|\n| `aap-host-url` | AAP instance URL |\n| `oauth-client-id` | OAuth application client ID |\n| `oauth-client-secret` | OAuth application client secret |\n| `aap-token` | AAP API token (needs `read` access) |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-create-ocp-auth-secrets_aap-self-service-install"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

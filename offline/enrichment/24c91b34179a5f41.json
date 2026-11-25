@@ -1,0 +1,17 @@
+{
+ "chunk_id": "24c91b34179a5f41",
+ "chunk_hash": "24c91b34179a5f41",
+ "summary": "To install only security errata on a schedule, use ansible.builtin.dnf with name '*', security: true and state latest in a regularly scheduled job template.",
+ "questions": [
+  "How do I install only security updates with Ansible?",
+  "dnf security: true example",
+  "Playbook for security errata only"
+ ],
+ "answer_card": {
+  "title": "Install security updates only",
+  "answer_md": "```yaml\n- name: Install all security-related RPM updates\n  hosts: target_hosts\n  become: true\n  tasks:\n    - name: Install latest RPMs with security errata\n      ansible.builtin.dnf:\n        name: '*'\n        security: true\n        state: latest\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/implementing_security_automation/index#ref-install-security-updates"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

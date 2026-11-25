@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ade88a723da0cbeb",
+ "chunk_hash": "ade88a723da0cbeb",
+ "summary": "Add the rule with include_role ansible_security.ids_rule and vars ids_rule (the Snort rule text), ids_rules_file (/etc/snort/rules/local.rules) and ids_rule_state: present, run ansible-navigator run add_snort_rule.yml --mode stdout, and verify by viewing local.rules on the Snort server.",
+ "questions": [
+  "How do I add a Snort rule with Ansible?",
+  "What does ids_rule_state do?",
+  "Where does ids_rule write Snort rules?",
+  "ids_rule example playbook"
+ ],
+ "answer_card": {
+  "title": "Add a Snort rule with ids_rule",
+  "answer_md": "```yaml\n- name: Add Snort rule\n  hosts: snort\n  become: true\n  vars:\n    ids_provider: snort\n  tasks:\n    - name: Add snort password attack rule\n      include_role:\n        name: ansible_security.ids_rule\n      vars:\n        ids_rule: 'alert tcp any any -> any any (msg:\"Attempted /etc/passwd Attack\"; uricontent:\"/etc/passwd\"; classtype:attempted-user; sid:99000004; priority:1; rev:1;)'\n        ids_rules_file: /etc/snort/rules/local.rules\n        ids_rule_state: present\n```\nRun: `ansible-navigator run add_snort_rule.yml --mode stdout`. Verify by viewing `/etc/snort/rules/local.rules` on the Snort server. `ids_rule_state: absent` removes the rule.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/implementing_security_automation/index#proc-creating-ids-rule_aap-security-enabling"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

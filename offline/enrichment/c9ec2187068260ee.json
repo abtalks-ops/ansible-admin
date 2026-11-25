@@ -1,0 +1,12 @@
+{
+ "chunk_id": "c9ec2187068260ee",
+ "chunk_hash": "c9ec2187068260ee",
+ "summary": "November 19, 2025 Receptor feature: fixes edge cases that caused JSON parse failures on lines from the worker stream and bumps Go dependencies (AAP-57253).",
+ "questions": [
+  "What changed in Receptor 1.6.2?",
+  "Receptor worker stream JSON parse failure fix",
+  "Which AAP release ships Receptor 1.6.2?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

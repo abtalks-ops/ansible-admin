@@ -1,0 +1,18 @@
+{
+ "chunk_id": "b71122f863373643",
+ "chunk_hash": "b71122f863373643",
+ "summary": "The CloudTrail rulebook has sources, rules and actions. Rule 1 fires on UpdateTrail with empty kmsKeyId for the named trail and runs aws_restore_cloudtrail_encryption.yml (role cloud.aws_ops.enable_cloudtrail_encryption_with_kms); rule 2 fires on DeleteTrail and runs aws_restore_cloudtrail.yml (awsconfig_multiregion_cloudtrail, then encryption).",
+ "questions": [
+  "How can EDA re-enable CloudTrail encryption automatically?",
+  "What does cloud.aws_ops.enable_cloudtrail_encryption_with_kms do?",
+  "EDA rule to re-create a deleted CloudTrail trail",
+  "What are sources, rules and actions in a rulebook?"
+ ],
+ "answer_card": {
+  "title": "EDA rulebook to keep CloudTrail encrypted",
+  "answer_md": "| Rule | Condition | Action |\n|---|---|---|\n| 1. Re-enable encryption | `UpdateTrail` with `requestParameters.kmsKeyId == \"\"` and name == `vars.cloudtrail_name` | `playbooks/eda/aws_restore_cloudtrail_encryption.yml` (role `cloud.aws_ops.enable_cloudtrail_encryption_with_kms`) |\n| 2. Re-create trail | `eventName == \"DeleteTrail\"` and name == `vars.cloudtrail_name` | `playbooks/eda/aws_restore_cloudtrail.yml` (`cloud.aws_ops.awsconfig_multiregion_cloudtrail`, then the encryption role) |\n| 3. Restore KMS key | `ScheduleKeyDeletion` or `DisableKey` | `playbooks/eda/aws_restore_kms_key.yml` |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/implementing_security_automation/index#ref-use-case-aws-cloud-trail"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

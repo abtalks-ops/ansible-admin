@@ -1,0 +1,18 @@
+{
+ "chunk_id": "30dcec9ff31e8258",
+ "chunk_hash": "30dcec9ff31e8258",
+ "summary": "Then create secret rhdh-postgresql-secrets with POSTGRES_USER, PASSWORD, HOST, PORT and DB, set upstream.postgresql.enabled: false and backstage.appConfig.backend.database (client pg, connection from those env vars, ssl.rejectUnauthorized) with extraEnvVarsSecrets, run helm upgrade, and watch pods with oc get pods -w.",
+ "questions": [
+  "How do I configure the portal Helm chart for an external database?",
+  "How do I disable embedded PostgreSQL in the portal?",
+  "What secret holds the portal database credentials?",
+  "rejectUnauthorized false in portal database config"
+ ],
+ "answer_card": {
+  "title": "Point the portal at an external PostgreSQL",
+  "answer_md": "```bash\noc create secret generic rhdh-postgresql-secrets \\\n  --from-literal=POSTGRES_USER=rhdh_user \\\n  --from-literal=POSTGRES_PASSWORD=<password> \\\n  --from-literal=POSTGRES_HOST=<database-host> \\\n  --from-literal=POSTGRES_PORT=5432 \\\n  --from-literal=POSTGRES_DB=rhdh_production -n <namespace>\n```\n```yaml\nupstream:\n  postgresql:\n    enabled: false\n  backstage:\n    appConfig:\n      backend:\n        database:\n          client: pg\n          connection:\n            host: ${POSTGRES_HOST}\n            port: ${POSTGRES_PORT}\n            user: ${POSTGRES_USER}\n            password: ${POSTGRES_PASSWORD}\n            database: ${POSTGRES_DB}\n            ssl:\n              rejectUnauthorized: false  # true with verified certs\n    extraEnvVarsSecrets:\n      - rhdh-postgresql-secrets\n```\n`helm upgrade <release> <chart> -f values.yaml -n <namespace>`, then `oc get pods -n <namespace> -w`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_self_service_automation_portal/index#self-service-configure-external-database_aap-self-service-config"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

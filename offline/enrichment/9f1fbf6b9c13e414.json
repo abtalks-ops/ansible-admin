@@ -1,0 +1,12 @@
+{
+ "chunk_id": "9f1fbf6b9c13e414",
+ "chunk_hash": "9f1fbf6b9c13e414",
+ "summary": "The portal supports two plug-in delivery methods: OCI container from registry.redhat.io (recommended) or a manually created HTTP plug-in registry.",
+ "questions": [
+  "How are portal plug-ins delivered?",
+  "Should I use OCI or HTTP plug-in registry for the portal?",
+  "What plug-in delivery methods does self-service automation portal support?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

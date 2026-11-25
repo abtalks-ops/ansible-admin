@@ -1,0 +1,18 @@
+{
+ "chunk_id": "cfddc42cb6568661",
+ "chunk_hash": "cfddc42cb6568661",
+ "summary": "Component versions of the AAP 2.6 patch release of November 19, 2025: automation controller 4.7.5, automation hub 4.11.3, Event-Driven Ansible 1.2.2, containerized and RPM installers 2.6-3, Receptor 1.6.2, operator CSVs aap-operator.v2.6.0-0.1763137334 (namespace) and 0.1763137355 (cluster).",
+ "questions": [
+  "What controller version is in the November 19, 2025 AAP 2.6 patch?",
+  "Which installer version is AAP 2.6-3?",
+  "What operator CSV version shipped on November 19, 2025?",
+  "What Receptor version is in AAP 2.6-3?"
+ ],
+ "answer_card": {
+  "title": "AAP 2.6 patch release November 19, 2025: versions",
+  "answer_md": "| Component | Version |\n|---|---|\n| Automation controller | 4.7.5 |\n| Automation hub | 4.11.3 |\n| Event-Driven Ansible | 1.2.2 |\n| Containerized installer (bundle/online) | 2.6-3 |\n| RPM installer (bundle/online) | 2.6-3 |\n| Receptor | 1.6.2 |\n| Operator CSV (namespace) | aap-operator.v2.6.0-0.1763137334 |\n| Operator CSV (cluster) | aap-operator.v2.6.0-0.1763137355 |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

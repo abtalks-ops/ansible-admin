@@ -1,0 +1,12 @@
+{
+ "chunk_id": "d7a78559459039ef",
+ "chunk_hash": "d7a78559459039ef",
+ "summary": "Conditional RBAC can limit a role to job templates with certain tags: AAP labels sync as lowercase tags with special characters replaced by hyphens (Network-Automation becomes network-automation). Templates need synced labels and users need Execute in AAP; create a role such as network-templates for a team like network-team.",
+ "questions": [
+  "How do I restrict portal templates to a team by label?",
+  "How do AAP labels become portal tags?",
+  "Conditional access in self-service automation portal"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

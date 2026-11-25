@@ -1,0 +1,12 @@
+{
+ "chunk_id": "3070da358d09167c",
+ "chunk_hash": "3070da358d09167c",
+ "summary": "Configuring self-service automation portal starts with synchronization from AAP, which imports your organization, users, teams and job templates so they are discoverable in the portal.",
+ "questions": [
+  "What does self-service automation portal import from AAP?",
+  "How do I configure the self-service automation portal?",
+  "Does the portal import job templates from AAP?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}
