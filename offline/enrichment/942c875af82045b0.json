@@ -1,0 +1,13 @@
+{
+ "chunk_id": "942c875af82045b0",
+ "chunk_hash": "942c875af82045b0",
+ "summary": "Enterprise upgrade inventory variables add platform gateway settings: automationgateway_admin_password, automationgateway_main_url set to the load balancer URL, and automationgateway_pg_host, pg_database, pg_username and pg_password, alongside registry credentials and the 2.4 controller variables.",
+ "questions": [
+  "What is automationgateway_main_url?",
+  "Which gateway database variables do I need in the 2.6 inventory?",
+  "Should automationgateway_main_url point to the load balancer?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

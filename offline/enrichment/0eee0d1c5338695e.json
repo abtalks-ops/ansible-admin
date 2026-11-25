@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0eee0d1c5338695e",
+ "chunk_hash": "0eee0d1c5338695e",
+ "summary": "An RPM 2.5 growth topology upgrades to a 2.6 growth topology with no infrastructure change, since the topologies are identical.",
+ "questions": [
+  "Do I need new infrastructure to upgrade AAP 2.5 growth to 2.6?",
+  "Is the growth topology the same in 2.5 and 2.6?",
+  "How do I upgrade an RPM 2.5 growth topology?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

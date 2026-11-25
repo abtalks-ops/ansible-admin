@@ -1,0 +1,18 @@
+{
+ "chunk_id": "c5ea6e9f09c51866",
+ "chunk_hash": "c5ea6e9f09c51866",
+ "summary": "You can set requests and limits for the web, task, EE control plane and Redis containers (web/task/ee/redis_resource_requirements, each defaulting to requests of 100m CPU and 128Mi). Setting both gives a higher Quality of Service class so control pods are less likely to be evicted, and task container limits determine control capacity, with each job costing one unit.",
+ "questions": [
+  "What are the default resource requests for automation controller containers?",
+  "Why set both requests and limits for controller pods?",
+  "How do task container limits affect controller capacity?",
+  "What is ee_resource_requirements?"
+ ],
+ "answer_card": {
+  "title": "Controller container resource settings",
+  "answer_md": "| Field | Container | Default requests |\n|---|---|---|\n| `web_resource_requirements` | Web | CPU 100m, memory 128Mi |\n| `task_resource_requirements` | Task | CPU 100m, memory 128Mi |\n| `ee_resource_requirements` | EE control plane | CPU 100m, memory 128Mi |\n| `redis_resource_requirements` | Redis | CPU 100m, memory 128Mi |\n\nSetting both requests and limits gives the pods a higher Quality of Service class, so they are less likely to be evicted. The task container's limits set control capacity; controlling a job costs 1 unit.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_considerations_for_operator_environments/index#ref-container-resource-requirements_ocp-performance"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

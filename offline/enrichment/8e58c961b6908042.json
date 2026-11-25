@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8e58c961b6908042",
+ "chunk_hash": "8e58c961b6908042",
+ "summary": "Red Hat recommends the OpenShift-based enterprise topology with an external enterprise PostgreSQL for the most flexibility and resilience: independent service scaling, reduced-downtime scaling, placement with labels, taints, tolerations and topology constraints, and automatic recreation of services after node failures.",
+ "questions": [
+  "What is the recommended AAP enterprise topology?",
+  "Why run AAP enterprise topology on OpenShift?",
+  "Does enterprise AAP need an external database?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

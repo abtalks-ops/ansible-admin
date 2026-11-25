@@ -1,0 +1,14 @@
+{
+ "chunk_id": "2191c9a6865cc929",
+ "chunk_hash": "2191c9a6865cc929",
+ "summary": "Upgrading RPM deployments from 2.4 to 2.6 needs extra infrastructure for the new platform gateway, varying by growth or enterprise topology. Enterprise authentication (SAML, LDAP, OIDC) and its mappings move from controller to the gateway automatically for RPM and OpenShift; 2.4 containerized and EDA 2.4 upgrades are unsupported. All controller IAM data moves to the gateway, keeping memberships.",
+ "questions": [
+  "Do I need new servers to upgrade AAP 2.4 to 2.6?",
+  "Do I have to reconfigure LDAP or SAML after upgrading to AAP 2.6?",
+  "What happens to controller users during the 2.6 upgrade?",
+  "Why does AAP 2.6 need more infrastructure than 2.4?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

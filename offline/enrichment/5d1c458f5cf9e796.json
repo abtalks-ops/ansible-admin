@@ -1,0 +1,18 @@
+{
+ "chunk_id": "5d1c458f5cf9e796",
+ "chunk_hash": "5d1c458f5cf9e796",
+ "summary": "The AutomationControllerMeshIngress YAML sets apiVersion, kind, name, namespace (same as the controller) and deployment_name, the controller instance, which is <aap-instance-name>-controller when deployed through an AAP CR (find it with oc get automationcontroller -n <namespace>); apply with oc apply -f oc_meshingress.yml and the operator creates the hop node.",
+ "questions": [
+  "What fields does AutomationControllerMeshIngress need?",
+  "How do I find my automation controller instance name?",
+  "What should deployment_name be for mesh ingress?",
+  "oc apply mesh ingress"
+ ],
+ "answer_card": {
+  "title": "Create a mesh ingress",
+  "answer_md": "```yaml\napiVersion: automationcontroller.ansible.com/v1alpha1\nkind: AutomationControllerMeshIngress\nmetadata:\n  name: <mesh ingress name>\n  namespace: <same namespace as controller>\nspec:\n  deployment_name: <controller instance name>\n```\n\n- With an AAP CR, the controller name is `<aap-instance-name>-controller` unless `spec.controller.name` is set. Check with `oc get automationcontroller -n <namespace>`.\n- Apply: `oc apply -f oc_meshingress.yml`. The operator creates a hop node with that name.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_managed_cloud_or_operator_environments/index#proc-connecting-nodes-through-mesh-ingress"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "d94518618e0b7987",
+ "chunk_hash": "d94518618e0b7987",
+ "summary": "AAP 2.6 unifies RBAC across components, with Configuration-as-Code collections using standard environment and module variable names (see ansible.platform). Upgrades from the latest 2.5 to 2.6 are supported for RPM, containerized and OpenShift; upgrading directly from the latest 2.4 to 2.6 is recommended for RPM and OpenShift, but EDA 2.4 and 2.4 containerized deployments (Tech Preview) cannot be upgraded.",
+ "questions": [
+  "Can I upgrade directly from AAP 2.4 to 2.6?",
+  "Can I upgrade a 2.4 containerized AAP to 2.6?",
+  "Which deployment types support upgrading from 2.5 to 2.6?",
+  "Can Event-Driven Ansible 2.4 be upgraded to 2.6?"
+ ],
+ "answer_card": {
+  "title": "Supported upgrade paths to AAP 2.6",
+  "answer_md": "| From | RPM | Containerized | OpenShift |\n|---|---|---|---|\n| Latest 2.5 | Yes | Yes | Yes |\n| Latest 2.4 | Yes (direct, recommended) | No (2.4 containerized was Tech Preview) | Yes (direct, recommended) |\n\nEvent-Driven Ansible 2.4 (Tech Preview) cannot be upgraded; install 2.6 and re-create EDA configuration.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#con-upgrade-improvements-overview"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

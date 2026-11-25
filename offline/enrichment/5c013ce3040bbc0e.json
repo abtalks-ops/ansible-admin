@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5c013ce3040bbc0e",
+ "chunk_hash": "5c013ce3040bbc0e",
+ "summary": "Automation content navigator can troubleshoot collections, execution environments and playbooks interactively, including comparing results inside and outside an execution environment.",
+ "questions": [
+  "How do I troubleshoot playbooks with ansible-navigator?",
+  "Can I compare a playbook run with and without an execution environment?",
+  "Troubleshooting Ansible content with automation content navigator"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}
