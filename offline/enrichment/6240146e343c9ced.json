@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6240146e343c9ced",
+ "chunk_hash": "6240146e343c9ced",
+ "summary": "CCSP and CCSPv2 default to METRICS_UTILITY_DEDUPLICATOR=ccsp (hostname only, preferring ansible_host over host_name); ccsp-experimental also merges hosts sharing ansible_product_serial and ansible_machine_id.",
+ "questions": [
+  "How do I deduplicate hosts in a CCSPv2 report?",
+  "What does ccsp-experimental deduplication do?",
+  "Does metrics-utility use ansible_host or host_name?"
+ ],
+ "answer_card": {
+  "title": "Deduplication in CCSP reports",
+  "answer_md": "- Default `METRICS_UTILITY_DEDUPLICATOR=ccsp`: hostname only; `ansible_host` (from `main_host.variables`) wins over `host_name`\n- `METRICS_UTILITY_DEDUPLICATOR=ccsp-experimental`: also merges entries whose `ansible_product_serial` **and** `ansible_machine_id` are both present and duplicated",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#ref-deduplication-ccsp-ccspv2"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:07:00+00:00"
+}

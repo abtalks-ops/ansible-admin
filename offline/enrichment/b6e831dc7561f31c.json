@@ -1,0 +1,17 @@
+{
+ "chunk_id": "b6e831dc7561f31c",
+ "chunk_hash": "b6e831dc7561f31c",
+ "summary": "Controller shows only VPC instances with an Elastic IP by default; set `vpc_destination_variable: private_ip_address` in the Amazon EC2 inventory source variables and resync (controller must run inside the VPC).",
+ "questions": [
+  "EC2 private instances not showing in inventory",
+  "How do I use private IPs in the EC2 inventory source?",
+  "vpc_destination_variable private_ip_address"
+ ],
+ "answer_card": {
+  "title": "Show private EC2 VPC instances",
+  "answer_md": "Inventory > Amazon EC2 source > *Source Variables*:\n```yaml\nvpc_destination_variable: private_ip_address\n```\nSave and sync. Controller must run inside the VPC with access to those addresses.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#controller-ec2-vpc-instances"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:19:50+00:00"
+}

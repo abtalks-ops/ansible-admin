@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f21dadde7962404b",
+ "chunk_hash": "f21dadde7962404b",
+ "summary": "The controller REST API is fully discoverable, paginated and searchable, with a browsable API at /api/; everything in the UI can be done in the API.",
+ "questions": [
+  "Can everything in the UI be done via the API?",
+  "Where is the browsable API?",
+  "Automation controller REST API features"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:28:50+00:00"
+}

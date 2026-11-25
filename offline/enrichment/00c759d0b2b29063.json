@@ -1,0 +1,18 @@
+{
+ "chunk_id": "00c759d0b2b29063",
+ "chunk_hash": "00c759d0b2b29063",
+ "summary": "HashiCorp Vault KV lookup metadata: secret backend name, path to secret (required), key name (required) and secret version (V2); Signed SSH needs the unsigned public key, role name and optional valid principals.",
+ "questions": [
+  "What is Path to Secret in HashiCorp Vault lookup?",
+  "How do I specify a KV v2 secret version?",
+  "HashiCorp Signed SSH metadata fields",
+  "Name of Secret Backend Vault lookup"
+ ],
+ "answer_card": {
+  "title": "HashiCorp Vault lookup metadata",
+  "answer_md": "- **Name of Secret Backend**: KV mount (blank = first segment of the path)\n- **Path to Secret** (required): e.g. `/path/username`\n- **Key Name** (required): key inside the secret\n- **Secret Version** (KV v2 only): blank for latest",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#ref-controller-metadata-credential-input"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:08:00+00:00"
+}

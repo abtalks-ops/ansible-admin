@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0b99967e4080da87",
+ "chunk_hash": "0b99967e4080da87",
+ "summary": "Run `awx-manage gather_analytics --ship` to send analytics outside the default 4-hour window, and `awx-manage host_metric --since YYYY-MM-DD --json` to count unique automated hosts in disconnected environments.",
+ "questions": [
+  "How do I gather analytics on demand?",
+  "How do I count unique hosts automated offline?",
+  "awx-manage host_metric example"
+ ],
+ "answer_card": {
+  "title": "Analytics and host metrics on demand",
+  "answer_md": "```bash\nawx-manage gather_analytics --ship                 # send now (default window 4h)\nawx-manage host_metric --since 2025-01-01 --json   # unique hosts, disconnected envs\n```\n`--since` and `--json` are optional.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#ref-controller-analytics-gathering"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:14:50+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5fb6455895cd28c9",
+ "chunk_hash": "5fb6455895cd28c9",
+ "summary": "The CCSPv2 report (METRICS_UTILITY_REPORT_TYPE=CCSPv2) shows directly and indirectly managed node usage, inventory contents and content usage; built for CCSP partners but usable by any customer.",
+ "questions": [
+  "What is the CCSPv2 report?",
+  "How do I set the metrics-utility report type to CCSPv2?",
+  "Can non-CCSP customers use the CCSPv2 report?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:04:10+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "567cbcac1cb0b584",
+ "chunk_hash": "567cbcac1cb0b584",
+ "summary": "Supported field lookups include exact, iexact, contains, icontains, startswith, endswith, regex, iregex, gt, gte, lt, lte, isnull and in.",
+ "questions": [
+  "What field lookups does the AAP API support?",
+  "Regex filter in controller API",
+  "API filter greater than"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:24:20+00:00"
+}

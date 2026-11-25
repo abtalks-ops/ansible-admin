@@ -1,0 +1,13 @@
+{
+ "chunk_id": "78b54256fce97a5e",
+ "chunk_hash": "78b54256fce97a5e",
+ "summary": "The HashiCorp Vault Secret Lookup credential retrieves secrets during playbook runs, supporting Token, AppRole, LDAP, Userpass, Kubernetes and TLS certificate authentication.",
+ "questions": [
+  "Which auth methods does HashiCorp Vault lookup support?",
+  "Can automation controller use Vault AppRole?",
+  "How do I get secrets from Vault during a job?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:09:00+00:00"
+}

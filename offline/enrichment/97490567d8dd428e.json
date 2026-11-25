@@ -1,0 +1,13 @@
+{
+ "chunk_id": "97490567d8dd428e",
+ "chunk_hash": "97490567d8dd428e",
+ "summary": "Enforce separation of duties by using different credentials for different access levels or automation types, such as patching versus application deployment, to limit the impact of a leaked key.",
+ "questions": [
+  "How do I enforce separation of duties in automation controller?",
+  "Should I use different credentials for different automation?",
+  "Limit impact of a compromised SSH key AAP"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:13:20+00:00"
+}

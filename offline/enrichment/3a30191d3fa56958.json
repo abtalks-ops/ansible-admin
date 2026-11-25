@@ -1,0 +1,17 @@
+{
+ "chunk_id": "3a30191d3fa56958",
+ "chunk_hash": "3a30191d3fa56958",
+ "summary": "Verify containerized metrics-utility with `systemctl --user list-timers --no-pager | grep metrics-utility` (gather and build-report timers) and `systemctl --user status metrics-utility-gather.service`.",
+ "questions": [
+  "How do I check the metrics-utility systemd timer?",
+  "metrics-utility-gather.service status",
+  "How do I verify metrics-utility data collection on containerized AAP?"
+ ],
+ "answer_card": {
+  "title": "Verify metrics-utility timers",
+  "answer_md": "```bash\nsystemctl --user list-timers --no-pager | grep metrics-utility\n# expect metrics-utility-gather.timer and metrics-utility-build-report.timer\nsystemctl --user status metrics-utility-gather.service\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#proc-applying-your-metrics-utility-config_subscription-management"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:00+00:00"
+}

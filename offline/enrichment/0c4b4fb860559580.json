@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0c4b4fb860559580",
+ "chunk_hash": "0c4b4fb860559580",
+ "summary": "HashiCorp Vault Signed SSH manages SSH certificates for managed nodes, with server URL, token, CA certificate, AppRole, client certificate/key, role, namespace, auth path and Kubernetes role settings.",
+ "questions": [
+  "How do I use HashiCorp Vault signed SSH certificates?",
+  "What fields does HashiCorp Vault Signed SSH need?",
+  "Vault SSH certificate signing in automation controller"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:09:30+00:00"
+}

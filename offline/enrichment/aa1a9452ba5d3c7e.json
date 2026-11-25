@@ -1,0 +1,13 @@
+{
+ "chunk_id": "aa1a9452ba5d3c7e",
+ "chunk_hash": "aa1a9452ba5d3c7e",
+ "summary": "When controller launches a playbook, the playbook, inventory and credentials are the source of truth, so verification policies must happen before launch; use source control, branching and mandatory code review.",
+ "questions": [
+  "How do I enforce code review for automation in AAP?",
+  "Is the playbook the source of truth in automation controller?",
+  "Where should content verification happen before a job runs?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:12:30+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "cdb1764654e12fc8",
+ "chunk_hash": "cdb1764654e12fc8",
+ "summary": "Fetch a monthly usage report from AAP to build a consumption-based billing report, with separate procedures for RHEL and OpenShift.",
+ "questions": [
+  "How do I get the monthly metrics-utility report?",
+  "How do I fetch a consumption billing report from AAP?",
+  "Where are monthly usage reports in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:20+00:00"
+}

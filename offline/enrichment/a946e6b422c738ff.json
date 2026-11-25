@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a946e6b422c738ff",
+ "chunk_hash": "a946e6b422c738ff",
+ "summary": "The Settings menu configures subscriptions, platform gateway, user preferences, jobs, logging and troubleshooting options.",
+ "questions": [
+  "Where do I configure job settings in AAP?",
+  "What can I set in the Settings menu?",
+  "Where are logging settings in the UI?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:32:00+00:00"
+}
