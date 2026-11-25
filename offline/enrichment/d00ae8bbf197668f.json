@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d00ae8bbf197668f",
+ "chunk_hash": "d00ae8bbf197668f",
+ "summary": "Hub on OpenShift is configured through pulp_settings (lowercase, takes precedence over the UI) or the UI; hub PVCs aren't removed with the instance, so delete them before redeploying with the same name.",
+ "questions": [
+  "How do I configure automation hub settings on OpenShift?",
+  "Do pulp_settings override hub UI settings?",
+  "Should hub settings be uppercase or lowercase in the CR?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

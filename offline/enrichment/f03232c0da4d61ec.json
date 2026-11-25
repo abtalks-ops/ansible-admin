@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f03232c0da4d61ec",
+ "chunk_hash": "f03232c0da4d61ec",
+ "summary": "Covers further configuration of the platform gateway operator on OpenShift: custom resources and deploying with an external database.",
+ "questions": [
+  "How do I configure the platform gateway operator?",
+  "Can the platform gateway on OpenShift use an external database?",
+  "Platform gateway custom resource options"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "5710d67a4345709f",
+ "chunk_hash": "5710d67a4345709f",
+ "summary": "Manual RPM certificate change: back up the cert and key, copy the new ones in, restorecon, chown and chmod 0600, nginx -t, reload nginx, restart automation-gateway-service; paths are /etc/tower/tower.cert (root:awx), /etc/pulp/certs/pulp_webserver.crt (root:pulp), /etc/ansible-automation-platform/eda/server.cert (root:eda) and gateway/gateway.cert (root:gateway).",
+ "questions": [
+  "How do I replace AAP SSL certificates manually?",
+  "Where is the automation hub certificate on RPM installs?",
+  "What owner and permissions do the AAP certificate files need?",
+  "nginx fails after replacing the controller certificate"
+ ],
+ "answer_card": {
+  "title": "Replace certs manually (RPM)",
+  "answer_md": "```bash\ncp <CERT_PATH> <CERT_PATH>-$(date +%F); cp <KEY_PATH> <KEY_PATH>-$(date +%F)\n# copy new cert and key into place\nrestorecon -v <CERT_PATH> <KEY_PATH>\nchown <OWNER>:<GROUP> <CERT_PATH> <KEY_PATH>; chmod 0600 <CERT_PATH> <KEY_PATH>\nnginx -t && systemctl reload nginx.service\nautomation-gateway-service restart\n```\nPaths: controller `/etc/tower/tower.cert` (root:awx), hub `/etc/pulp/certs/pulp_webserver.crt` (root:pulp), EDA `/etc/ansible-automation-platform/eda/server.cert` (root:eda), gateway `/etc/ansible-automation-platform/gateway/gateway.cert` (root:gateway).",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/operating_ansible_automation_platform/index#change-ssl-manual-rpm"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

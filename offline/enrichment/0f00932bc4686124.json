@@ -1,0 +1,18 @@
+{
+ "chunk_id": "0f00932bc4686124",
+ "chunk_hash": "0f00932bc4686124",
+ "summary": "Create a key/value secret (for example chatbot-configuration-secret) in the AAP namespace with chatbot_model, chatbot_url (Azure: .../openai/v1), chatbot_token, optional chatbot_llm_provider_type (rhelai_vllm, rhoai_vllm, openai, azure_openai) and chatbot_model_config_extras.",
+ "questions": [
+  "How do I create the chatbot configuration secret?",
+  "What keys does the Lightspeed chatbot secret need?",
+  "What chatbot_url should I use for Azure OpenAI?",
+  "Values for chatbot_llm_provider_type"
+ ],
+ "answer_card": {
+  "title": "Chatbot configuration secret",
+  "answer_md": "Workloads > Secrets > Create > Key/value secret in the AAP namespace:\n- `chatbot_model`: model name\n- `chatbot_url`: e.g. `https://your_inference_api/v1` (Azure: `.../openai/v1`)\n- `chatbot_token`: API key\n- `chatbot_llm_provider_type` (optional): `rhelai_vllm`, `rhoai_vllm`, `openai`, `azure_openai`\n- `chatbot_model_config_extras` (optional JSON), e.g. `'{\"api_version\": \"...\"}'` for Azure",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-create-chatbot-config-secret"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

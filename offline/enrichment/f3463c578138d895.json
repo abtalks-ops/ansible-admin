@@ -1,0 +1,17 @@
+{
+ "chunk_id": "f3463c578138d895",
+ "chunk_hash": "f3463c578138d895",
+ "summary": "To change the assistant's LLM, create a new chatbot configuration secret with a different name and point the AAP CR at it; don't edit the existing secret, because reconciliation doesn't detect secret changes.",
+ "questions": [
+  "How do I change the LLM model for the Lightspeed intelligent assistant?",
+  "I updated the chatbot secret but the model didn't change",
+  "Can I edit the existing chatbot configuration secret?"
+ ],
+ "answer_card": {
+  "title": "Change the assistant's LLM",
+  "answer_md": "Create a **new** chatbot secret with a different name, then set `spec.lightspeed.chatbot_config_secret_name` to it; the operator redeploys the assistant. Editing the existing secret does nothing, since reconciliation doesn't watch it. To keep the same secret name, disable Lightspeed, delete the Ansible Lightspeed instance and re-enable it.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-change-llm-model"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

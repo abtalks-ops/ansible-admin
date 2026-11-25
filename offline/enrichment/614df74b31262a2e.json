@@ -1,0 +1,18 @@
+{
+ "chunk_id": "614df74b31262a2e",
+ "chunk_hash": "614df74b31262a2e",
+ "summary": "Create an external-postgres-configuration Secret with host, port (default 5432), database, username, password (no quotes or backslashes) and type unmanaged, oc create it, then set spec.database.database_secret on the AnsibleAutomationPlatform CR.",
+ "questions": [
+  "How do I create the external database secret for the platform gateway?",
+  "Secret format for external PostgreSQL on the AAP Operator",
+  "Why should the database password not contain quotes?",
+  "Set database_secret on the AAP CR"
+ ],
+ "answer_card": {
+  "title": "External database for the gateway",
+  "answer_md": "```yaml\napiVersion: v1\nkind: Secret\nmetadata:\n  name: external-postgres-configuration\n  namespace: <target_namespace>\nstringData:\n  host: \"<db_host>\"\n  port: \"5432\"\n  database: \"<db_name>\"\n  username: \"<user>\"\n  password: \"<password>\"   # no ', \" or \\\n  type: \"unmanaged\"\ntype: Opaque\n```\n`oc create -f external-postgres-configuration-secret.yml`, then:\n```yaml\nspec:\n  database:\n    database_secret: <secret-name>\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-operator-external-db-gateway"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

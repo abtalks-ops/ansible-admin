@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ea5b143ca020cdcc",
+ "chunk_hash": "ea5b143ca020cdcc",
+ "summary": "Check Home > Events for your project and resource Events tabs, review the AAP CR's status conditions then nested CRs, and make sure Pod details Conditions show no error messages.",
+ "questions": [
+  "How do I view events for AAP on OpenShift?",
+  "Where are the status conditions of the AAP CR?",
+  "Troubleshoot AAP pods with OpenShift events"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "31e9094a4ebb1bc3",
+ "chunk_hash": "31e9094a4ebb1bc3",
+ "summary": "Before upgrading the operator, check system requirements, create AutomationControllerBackup and AutomationHubBackup objects, read the release notes for the target and intermediate versions, and choose the upgrade type.",
+ "questions": [
+  "What should I do before upgrading the AAP Operator?",
+  "Do I need a backup before upgrading AAP on OpenShift?",
+  "AAP Operator upgrade prerequisites"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

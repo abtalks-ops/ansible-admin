@@ -1,0 +1,13 @@
+{
+ "chunk_id": "62588fdc3dda5a6c",
+ "chunk_hash": "62588fdc3dda5a6c",
+ "summary": "An operator backup of AAP contains the custom spec values of the custom resource, the PostgreSQL database, the secret_key, admin_password and broadcast_websocket secrets and the database configuration, so keep it secure.",
+ "questions": [
+  "What does an AAP operator backup include?",
+  "Does the AAP backup include the secret_key?",
+  "Are AAP backups sensitive?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

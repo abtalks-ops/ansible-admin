@@ -1,0 +1,13 @@
+{
+ "chunk_id": "72b6c5fc9d623820",
+ "chunk_hash": "72b6c5fc9d623820",
+ "summary": "Controller route options under spec.controller: ingress_type Route, route_host, route_tls_termination_mechanism (Edge recommended, or Passthrough), route_tls_secret, projects_persistence; an AutomationControllerMeshIngress must not share the AAP instance's name or the install fails.",
+ "questions": [
+  "How do I set a custom hostname for the controller route?",
+  "Edge or Passthrough TLS termination for automation controller?",
+  "AAP install fails after creating a mesh ingress with the same name"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}
