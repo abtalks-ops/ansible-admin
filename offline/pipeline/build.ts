@@ -4,11 +4,13 @@
 //   npm run build:index -- --reuse      reuse existing checkouts in raw/
 //   npm run build:index -- --enrich-api  also run Opus enrichment through the Batch API (needs ANTHROPIC_API_KEY)
 //   npm run build:index -- --enrich-api --enrich-limit 200   pilot on a sample first, to check cost and quality
+//   npm run build:index -- --only aap --chunks-only   just write chunks/aap-<version>.jsonl (for enrichment batches)
 // Enrichment files in enrichment/<chunk_hash>.json are always applied, however they were written.
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { INDEX_FORMAT, quantize, type Chunk, type Manifest, type ShardFile, type ShardMeta } from "../shared/search.ts";
+import { chunkAsciidocBooks } from "./asciidoc.ts";
 import { chunkBuiltinPlugins, chunkRepo } from "./chunk.ts";
 import { EMBEDDER, OUT_DIR, PRODUCT, ROOT, SHARD_MAX_CHUNKS, SOURCES, VERSION, WORK_DIR } from "./config.ts";
 import { embed, passageText } from "./embed.ts";
@@ -48,11 +50,13 @@ function writeFile(name: string, ext: string, data: Buffer): ShardFile {
   return { path: file, sha256: h, bytes: data.length };
 }
 
+type Group = { name: string; product: string; version: string; chunks: Chunk[] };
+
 /** chunks/<product>-<version>.jsonl: the chunk list other steps (golden set, enrichment) refer to by id. */
-function exportChunks(all: Chunk[]) {
+function exportChunks(all: Chunk[], product = PRODUCT, version = VERSION) {
   const dir = path.join(ROOT, "chunks");
   fs.mkdirSync(dir, { recursive: true });
-  const file = path.join(dir, `${PRODUCT}-${VERSION}.jsonl`);
+  const file = path.join(dir, `${product}-${version}.jsonl`);
   fs.writeFileSync(
     file,
     all.map((c) => JSON.stringify({ chunk_id: c.id, chunk_hash: c.id, source: c.src, url: c.u, headings: c.t.split(" > "), fqcn: c.fq ?? null, licence: c.lic, text: c.x })).join("\n") + "\n",
@@ -65,18 +69,27 @@ async function main() {
   fs.mkdirSync(WORK_DIR, { recursive: true });
 
   console.log("1-4. fetch, normalize, chunk, tag");
-  const groups: Array<{ name: string; chunks: Chunk[] }> = [];
-  for (const s of SOURCES) {
+  const groups: Group[] = [];
+  // --only <text>: just the sources whose name contains it (no plugin docs); --chunks-only: stop after writing chunks/.
+  const only = val("--only")?.toLowerCase();
+  for (const s of SOURCES.filter((x) => !only || x.name.toLowerCase().includes(only))) {
     const { dir, sha: commit } = fetchSource(s, has("--reuse"));
-    const chunks = chunkRepo(s, dir);
+    const chunks = s.kind === "asciidoc" ? chunkAsciidocBooks(s, dir, s.version ?? VERSION) : chunkRepo(s, dir);
     console.log(`  ${s.name} @ ${s.ref} (${commit.slice(0, 10)}): ${chunks.length} chunks`);
-    groups.push({ name: "docs", chunks });
+    groups.push({ name: "docs", product: s.product ?? PRODUCT, version: s.version ?? VERSION, chunks });
   }
-  const plugins = chunkBuiltinPlugins();
-  console.log(`  ansible.builtin plugin docs: ${plugins.length} chunks`);
-  groups.push({ name: "plugins", chunks: plugins });
+  if (!only) {
+    const plugins = chunkBuiltinPlugins();
+    console.log(`  ansible.builtin plugin docs: ${plugins.length} chunks`);
+    groups.push({ name: "plugins", product: PRODUCT, version: VERSION, chunks: plugins });
+  }
   const all = groups.flatMap((g) => g.chunks);
-  exportChunks(all);
+  // One chunk list per product and version; ansible-core keeps its file name, docs then plugins.
+  const lists = new Map<string, Group[]>();
+  for (const g of groups) lists.set(`${g.product}\0${g.version}`, [...(lists.get(`${g.product}\0${g.version}`) ?? []), g]);
+  for (const gs of lists.values()) exportChunks(gs.flatMap((g) => g.chunks), gs[0].product, gs[0].version);
+  if (has("--chunks-only")) return;
+  if (only) throw new Error("--only builds a partial index; use it with --chunks-only");
 
   console.log("5. enrich");
   if (has("--enrich-api")) await enrich(all, { limit: val("--enrich-limit") ? Number(val("--enrich-limit")) : undefined });
@@ -119,7 +132,7 @@ async function main() {
   for (const g of groups) {
     for (let start = 0, part = 1; start < g.chunks.length; start += SHARD_MAX_CHUNKS, part++) {
       const chunks = g.chunks.slice(start, start + SHARD_MAX_CHUNKS);
-      const id = `${PRODUCT}-${VERSION}-${g.name}-${part}`;
+      const id = `${g.product}-${g.version}-${g.name}-${part}`;
       const rows: number[] = [];
       const rowVecs: Float32Array[] = [];
       chunks.forEach((c, ci) => {
@@ -128,10 +141,10 @@ async function main() {
           rowVecs.push(cache.get(key)!);
         }
       });
-      const meta: ShardMeta = { format: INDEX_FORMAT, shard: id, product: PRODUCT, version: VERSION, dims: EMBEDDER.dims, chunks, rows };
+      const meta: ShardMeta = { format: INDEX_FORMAT, shard: id, product: g.product, version: g.version, dims: EMBEDDER.dims, chunks, rows };
       const metaFile = writeFile(id, "json", Buffer.from(JSON.stringify(meta)));
       const vecFile = writeFile(id, "vec", Buffer.from(quantize(rowVecs, EMBEDDER.dims)));
-      manifest.shards.push({ id, product: PRODUCT, version: VERSION, chunks: chunks.length, rows: rows.length, meta: metaFile, vec: vecFile });
+      manifest.shards.push({ id, product: g.product, version: g.version, chunks: chunks.length, rows: rows.length, meta: metaFile, vec: vecFile });
       manifest.stats.rows += rows.length;
       manifest.stats.bytes += metaFile.bytes + vecFile.bytes;
     }
