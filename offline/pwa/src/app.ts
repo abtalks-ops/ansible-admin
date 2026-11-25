@@ -5,6 +5,7 @@ import { buildPrompt, citedNumbers, isDeviceLost, isNotInDocs, PROFILES, stripIn
 import { MAX_CONVS, newConv, parse as parseChats, remove as removeConv, serialize as serializeChats, titleFrom, upsert as upsertConv, type Conv, type Turn } from "../../shared/chats.ts";
 import { addDiagnostic, checkDevice, getDiagnostics, isDownloaded, loadEngine, mock, modelFor, statsText, clearCpuModels, TIERS, DEFAULT_TIER, allowed, isPhone, type Engine, type Tier } from "./llm.ts";
 import { startRain } from "./rain.ts";
+import { defaultChoice, docSets, parseChoice, productsOf, selectShards, type DocSet } from "../../shared/docsets.ts";
 
 const DATA_CACHE = "aa-data-v1";
 const INSTALLED = new URL("installed-manifest.json", location.href).href; // synthetic cache key
@@ -22,6 +23,7 @@ const ui = {
   form: $<HTMLFormElement>("searchForm"), q: $<HTMLInputElement>("q"), status: $("status"), results: $("thread"),
   newBtn: $("newBtn"), historyBtn: $("historyBtn"), drawer: $("drawer"), historyList: $("historyList"), newBtn2: $("newBtn2"), closeDrawer: $("closeDrawer"), backdrop: $("backdrop"), aiChip: $("aiChip"),
   aiInfo: $("aiInfo"), aiDiag: $("aiDiag"), aiBtn: $<HTMLButtonElement>("aiBtn"), aiModel: $<HTMLSelectElement>("aiModel"), aiProgress: $("aiProgress"), aiBar: $("aiBar"),
+  docSets: $("docSets"), docSetsPanel: $("docSetsPanel"),
   menuBtn: $("menuBtn"), updateBtn: $<HTMLButtonElement>("updateBtn"), deleteBtn: $<HTMLButtonElement>("deleteBtn"), rainToggle: $<HTMLInputElement>("rainToggle"),
 };
 
@@ -60,9 +62,44 @@ function filesFor(m: Manifest, a: Assets): Array<{ url: string; bytes: number }>
   ];
 }
 
+// ---------- doc sets (ansible-core always; Red Hat AAP and others optional) ----------
+
+const DOCSETS_KEY = "aa-docsets";
+
+/** Optional products the user picked, or the default for this device when they haven't picked yet. */
+function chosenSets(m: Manifest): string[] {
+  let raw: string | null = null;
+  try {
+    raw = localStorage.getItem(DOCSETS_KEY);
+  } catch {}
+  return parseChoice(raw) ?? defaultChoice(m, isPhone());
+}
+
+function saveChosenSets(products: string[]) {
+  try {
+    localStorage.setItem(DOCSETS_KEY, JSON.stringify(products));
+  } catch {}
+}
+
+const mbText = (b: number) => `${(b / 1e6).toFixed(b < 1e7 ? 1 : 0)} MB`;
+
+/** Checkboxes for each doc set; the required one is shown ticked and locked. */
+function renderDocSets(el: HTMLElement, sets: DocSet[], on: string[]) {
+  el.innerHTML = sets
+    .map(
+      (d) =>
+        `<label class="toggle"><input type="checkbox" value="${esc(d.product)}"${d.required || on.includes(d.product) ? " checked" : ""}${d.required ? " disabled" : ""} /><span>${esc(d.label)} ${esc(d.version)} <span class="dim">· ${d.chunks.toLocaleString()} passages · ${mbText(d.bytes)}${d.required ? " · always included" : ""}</span></span></label>`,
+    )
+    .join("");
+}
+
+const checkedSets = (el: HTMLElement) => [...el.querySelectorAll<HTMLInputElement>("input:checked:not(:disabled)")].map((i) => i.value);
+
 /** Downloads every file the manifest needs that is not cached yet, then swaps the manifest in. */
 async function install(onProgress: (done: number, total: number) => void): Promise<Manifest> {
-  const [manifest, assets] = await Promise.all([fetchJson<Manifest>("index/manifest.json"), fetchJson<Assets>("assets.json")]);
+  const [remote, assets] = await Promise.all([fetchJson<Manifest>("index/manifest.json"), fetchJson<Assets>("assets.json")]);
+  // Only the chosen doc sets are downloaded; the installed manifest lists just those shards.
+  const manifest = selectShards(remote, chosenSets(remote));
   const cache = await caches.open(DATA_CACHE);
   const want = filesFor(manifest, assets);
   const missing: typeof want = [];
@@ -273,7 +310,7 @@ function renderEmpty() {
   const ai = aiOn()
     ? ""
     : `<p class="muted small">Want a written answer too? <button type="button" class="link openAi">Turn on AI answers</button></p>`;
-  ui.results.innerHTML = `<div class="empty"><h2>Ask about Ansible</h2><p class="muted small">Searches the ansible-core docs on this device, even with no network.</p>${ai}<div class="chips">${EXAMPLES.map((e) => `<button type="button">${esc(e)}</button>`).join("")}</div></div>`;
+  ui.results.innerHTML = `<div class="empty"><h2>Ask about Ansible</h2><p class="muted small">Searches the ${esc(installed ? docSets(installed).map((d) => d.label).join(" and ") : "ansible-core")} docs on this device, even with no network.</p>${ai}<div class="chips">${EXAMPLES.map((e) => `<button type="button">${esc(e)}</button>`).join("")}</div></div>`;
 }
 
 const cardHtml = (c: Chunk | undefined) => {
@@ -403,7 +440,7 @@ async function ask(q: string) {
 function renderStats(m: Manifest) {
   const mb = (b: number) => `${(b / 1e6).toFixed(1)} MB`;
   ui.stats.innerHTML = [
-    ["Product", [...new Set(m.shards.map((s) => `${s.product} ${s.version}`))].join(", ")],
+    ["Doc sets", docSets(m).map((d) => `${d.label} ${d.version}`).join(", ")],
     ["Passages", m.stats.chunks.toLocaleString()],
     ["Index size", mb(m.stats.bytes)],
     ["Built", new Date(m.built_at).toLocaleString()],
@@ -672,8 +709,20 @@ async function showSetup() {
   ui.main.hidden = true;
   try {
     const [m, a] = await Promise.all([fetchJson<Manifest>("index/manifest.json"), fetchJson<Assets>("assets.json")]);
-    const total = filesFor(m, a).reduce((s, f) => s + f.bytes, 0);
-    ui.sizeInfo.textContent = `${(total / 1e6).toFixed(0)} MB download: ${m.stats.chunks.toLocaleString()} passages of ${m.shards[0]?.product} ${m.shards[0]?.version} docs, plus the search model. Wi-Fi recommended.`;
+    const sets = docSets(m);
+    const showSize = () => {
+      const pick = selectShards(m, checkedSets(ui.docSets));
+      const total = filesFor(pick, a).reduce((s, f) => s + f.bytes, 0);
+      const names = docSets(pick).map((d) => `${d.label} ${d.version}`).join(" and ");
+      ui.sizeInfo.textContent = `${(total / 1e6).toFixed(0)} MB download: ${pick.stats.chunks.toLocaleString()} passages of ${names} docs, plus the search model. Wi-Fi recommended.`;
+    };
+    renderDocSets(ui.docSets, sets, chosenSets(m));
+    ui.docSets.hidden = sets.length < 2;
+    ui.docSets.onchange = () => {
+      saveChosenSets(checkedSets(ui.docSets));
+      showSize();
+    };
+    showSize();
   } catch {
     ui.sizeInfo.textContent = "You're offline and nothing is downloaded yet. Connect once to download the docs.";
     ui.downloadBtn.disabled = true;
@@ -701,7 +750,30 @@ async function runInstall(btn: HTMLButtonElement) {
   }
 }
 
-ui.downloadBtn.addEventListener("click", () => runInstall(ui.downloadBtn));
+ui.downloadBtn.addEventListener("click", () => {
+  if (!ui.docSets.hidden) saveChosenSets(checkedSets(ui.docSets)); // the choice shown is the one downloaded
+  void runInstall(ui.downloadBtn);
+});
+
+/** Settings: doc set checkboxes from the server's manifest; changing one downloads or drops that set. */
+async function renderDocSetsPanel() {
+  const remote = navigator.onLine ? await fetchJson<Manifest>("index/manifest.json").catch(() => null) : null;
+  if (!remote) {
+    ui.docSetsPanel.innerHTML = `<p class="muted small">Connect to the internet to add or remove doc sets.</p>`;
+    return;
+  }
+  const sets = docSets(remote);
+  ui.docSetsPanel.hidden = sets.length < 2;
+  renderDocSets(ui.docSetsPanel, sets, installed ? productsOf(installed) : chosenSets(remote));
+}
+ui.docSetsPanel.addEventListener("change", async () => {
+  saveChosenSets(checkedSets(ui.docSetsPanel));
+  setPanel(false);
+  ui.main.hidden = true;
+  ui.setup.hidden = false;
+  ui.docSets.hidden = true;
+  await runInstall(ui.downloadBtn);
+});
 ui.newBtn.addEventListener("click", newChat);
 ui.newBtn2.addEventListener("click", newChat);
 ui.historyBtn.addEventListener("click", () => setDrawer(ui.drawer.hidden));
@@ -770,7 +842,10 @@ ui.results.addEventListener("click", (e) => {
     setTimeout(() => (t.textContent = "copy"), 1200);
   }
 });
-ui.menuBtn.addEventListener("click", () => setPanel(ui.panel.hidden));
+ui.menuBtn.addEventListener("click", () => {
+  if (ui.panel.hidden) void renderDocSetsPanel();
+  setPanel(ui.panel.hidden);
+});
 $("closePanel").addEventListener("click", () => setPanel(false));
 ui.updateBtn.addEventListener("click", async () => {
   if (!navigator.onLine) return void (ui.status.textContent = "You're offline; connect to check for updates.");

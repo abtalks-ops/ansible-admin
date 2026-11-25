@@ -158,3 +158,5 @@ th { color: var(--green); font-weight: 400; background: rgba(0, 255, 65, 0.06); 
   .chip { max-width: 50vw; }
 }
 .turn { scroll-margin-top: 60px; }
+.docsets { display: grid; gap: 8px; margin: 14px auto 10px; max-width: 520px; text-align: left; }
+.docsets .dim { opacity: 0.75; }

@@ -26,6 +26,13 @@ export interface RepoSource {
 
 /** Red Hat Ansible Automation Platform docs version (ansible/aap-docs branch). */
 export const AAP_VERSION = process.env.AAP_VERSION ?? "2.6";
+/**
+ * The aap-docs commit the committed chunks and enrichment were made from. Chunk ids hash the
+ * text, so building from a newer commit can orphan enrichment; move the pin on purpose, then run
+ * `npm run check:enrichment`. AAP_REF overrides it (a branch name or commit).
+ */
+const AAP_PIN: Record<string, string> = { "2.6": "0eb284c4d9011314f865be991ae63a6a1b4faeb3" };
+export const AAP_REF = process.env.AAP_REF ?? AAP_PIN[AAP_VERSION] ?? AAP_VERSION;
 
 export const SOURCES: RepoSource[] = [
   {
@@ -41,7 +48,7 @@ export const SOURCES: RepoSource[] = [
     // passages and the enrichment written from them are shared under the same licence, credited to Red Hat.
     name: "Red Hat AAP docs",
     repo: "ansible/aap-docs",
-    ref: AAP_VERSION,
+    ref: AAP_REF,
     dir: "downstream",
     licence: "CC-BY-SA-4.0",
     url: () => `https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/${AAP_VERSION}`,

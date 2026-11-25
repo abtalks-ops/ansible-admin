@@ -44,6 +44,8 @@ jobs:
         run: pip install "ansible-core>=2.22,<2.23"
       - run: npm ci
       - run: npm run typecheck && npm test
+      - name: Enrichment check (every chunk has one valid enrichment file, card links match)
+        run: npm run check:enrichment
       - name: Restore embedding cache (unchanged chunks are not re-embedded)
         uses: actions/cache@v4
         with:
@@ -56,6 +58,8 @@ jobs:
         run: npm run build:index
       - name: Retrieval gate (fails if hybrid recall@5 drops more than 2 points)
         run: npm run eval -- --set eval/smoke.jsonl --gate eval/baseline-unenriched-smoke.json
+      - name: AAP retrieval report (no gate until a baseline is recorded)
+        run: npm run eval -- --set eval/smoke-aap.jsonl --out last-run-aap.json --misses
       - name: Build PWA
         run: npm run build:pwa
       - uses: actions/upload-artifact@v4
