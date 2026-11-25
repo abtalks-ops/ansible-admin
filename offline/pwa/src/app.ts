@@ -612,7 +612,7 @@ async function generateFor(turn: Turn, el: HTMLElement, chunks: Chunk[]) {
         }
         turn.state = "error";
         turn.note = isDeviceLost(msg)
-          ? "The phone's GPU was reset again (likely out of memory). Close other tabs and apps and try again, or turn AI answers off. Details are under AI answers in settings."
+          ? "The phone's GPU was reset again (likely out of memory). Close other tabs and apps and try again, switch to a smaller model in settings (SmolLM2 360M or LFM2.5 350M), or turn AI answers off. Details are under AI answers in settings."
           : `The AI answer failed: ${msg}.`;
         setChip("failed");
         return;
