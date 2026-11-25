@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8c6b4fe1fbd39855",
+ "chunk_hash": "8c6b4fe1fbd39855",
+ "summary": "Proxy for AWS inventory sync: either add http_proxy, https_proxy, proxy_username and proxy_password to /usr/lib/systemd/system/receptor.service.d/override.conf, or set them in AWX_TASK_ENV under Extra Environment Variables.",
+ "questions": [
+  "How do I use a proxy for AWS inventory sync?",
+  "AWS inventory source can't connect through the proxy",
+  "Where is the receptor override.conf for proxy variables?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

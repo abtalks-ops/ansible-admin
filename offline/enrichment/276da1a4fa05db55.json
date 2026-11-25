@@ -1,0 +1,17 @@
+{
+ "chunk_id": "276da1a4fa05db55",
+ "chunk_hash": "276da1a4fa05db55",
+ "summary": "For HTTP 504 or 503 during long API operations such as CasC restores, raise client_request_timeout and add route_annotations haproxy.router.openshift.io/timeout: 180s to the AAP CR (latest 2.6 operator), then check the route's annotations.",
+ "questions": [
+  "How do I fix 504 Gateway Timeout on the AAP route?",
+  "How do I increase the OpenShift route timeout for AAP?",
+  "Configuration as Code restore times out after 30 seconds"
+ ],
+ "answer_card": {
+  "title": "Increase the route timeout",
+  "answer_md": "In the AnsibleAutomationPlatform YAML (latest 2.6 operator), raise `client_request_timeout` and:\n```yaml\nspec:\n  route_annotations: |\n    haproxy.router.openshift.io/timeout: 180s\n```\nCheck Networking > Routes > annotations.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-operator-increase-ocp-route-timeout"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

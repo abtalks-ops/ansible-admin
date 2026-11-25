@@ -1,0 +1,13 @@
+{
+ "chunk_id": "590fdd5004f7491e",
+ "chunk_hash": "590fdd5004f7491e",
+ "summary": "Find the CR's configuration parameters in the console: open the AAP CR under Installed Operators and use the YAML view's Schema panel (reopen the sidebar if hidden).",
+ "questions": [
+  "How do I see all parameters of the AAP custom resource in the console?",
+  "Where is the schema for the AnsibleAutomationPlatform CR?",
+  "Schema panel missing in YAML view"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

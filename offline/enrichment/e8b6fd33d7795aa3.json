@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e8b6fd33d7795aa3",
+ "chunk_hash": "e8b6fd33d7795aa3",
+ "summary": "Requirements: AAP 2.6 installed on OpenShift, AAP administrator privileges and an OpenShift cluster with Operator Lifecycle Management.",
+ "questions": [
+  "What are the requirements for the Lightspeed intelligent assistant?",
+  "Do I need admin rights to deploy the intelligent assistant?",
+  "Does the intelligent assistant need OLM?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

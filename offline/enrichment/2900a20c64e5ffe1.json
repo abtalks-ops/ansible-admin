@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2900a20c64e5ffe1",
+ "chunk_hash": "2900a20c64e5ffe1",
+ "summary": "For SSH project sync through a proxy on RPM AAP, install ansible-builder, build a custom execution environment from ee-supported-rhel8 that adds nc (microdnf install -y nc), register it as localhost/my-env:latest, back up with ./setup.sh -b and re-run the installer.",
+ "questions": [
+  "How do I sync a Git project over SSH through a proxy in automation controller?",
+  "Build an execution environment with nc for SSH ProxyCommand",
+  "Project sync over SSH fails behind a proxy"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

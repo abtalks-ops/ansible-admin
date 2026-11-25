@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5016921eb2f011d4",
+ "chunk_hash": "5016921eb2f011d4",
+ "summary": "In containerized installs settings.py is inside the container and overwritten on upgrades, so use the installer's extra_settings parameter to make customizations persist.",
+ "questions": [
+  "How do I change settings.py in a containerized AAP install?",
+  "Why are my settings.py changes lost after upgrade?",
+  "Should I use extra_settings in containerized AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

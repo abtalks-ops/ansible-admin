@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ac415b6f761d4397",
+ "chunk_hash": "ac415b6f761d4397",
+ "summary": "More AAP custom resource examples are in the appendix on Red Hat Ansible Automation Platform custom resources.",
+ "questions": [
+  "Where can I find AAP custom resource examples?",
+  "Sample AnsibleAutomationPlatform YAML files",
+  "AAP Operator CR appendix"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

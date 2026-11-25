@@ -1,0 +1,17 @@
+{
+ "chunk_id": "fa3e2393749470f1",
+ "chunk_hash": "fa3e2393749470f1",
+ "summary": "On OpenShift, change the controller certificate by creating a TLS secret (oc create secret tls) and setting spec.controller.route_tls_secret on the AnsibleAutomationPlatform custom resource; verify with openssl s_client.",
+ "questions": [
+  "How do I change the automation controller certificate on OpenShift?",
+  "What is route_tls_secret?",
+  "Replace the controller route TLS certificate with the operator"
+ ],
+ "answer_card": {
+  "title": "Controller route certificate on OpenShift",
+  "answer_md": "```bash\noc create secret tls controller-certs-$(date +%F) --cert=/path/to/ssl.crt --key=/path/to/ssl.key -n <namespace>\noc edit ansibleautomationplatform <aap-instance-name> -n <namespace>\n```\n```yaml\nspec:\n  controller:\n    route_tls_secret: controller-certs-2024-03-24\n```\nWait a few minutes, then `true | openssl s_client -showcerts -connect ${CONTROLLER_FQDN}:443`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/operating_ansible_automation_platform/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

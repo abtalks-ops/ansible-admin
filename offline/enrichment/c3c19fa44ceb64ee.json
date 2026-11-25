@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c3c19fa44ceb64ee",
+ "chunk_hash": "c3c19fa44ceb64ee",
+ "summary": "An AnsibleJob CR launches a job on the automation controller named in its connection secret (host URL and token).",
+ "questions": [
+  "How do I launch a controller job from Kubernetes?",
+  "What is an AnsibleJob custom resource?",
+  "Start an AAP job with a CR"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

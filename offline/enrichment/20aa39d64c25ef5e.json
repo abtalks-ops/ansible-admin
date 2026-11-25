@@ -1,0 +1,13 @@
+{
+ "chunk_id": "20aa39d64c25ef5e",
+ "chunk_hash": "20aa39d64c25ef5e",
+ "summary": "If you lose data or an upgrade goes wrong, recover AAP on OpenShift from the backup resources of your deployment instances.",
+ "questions": [
+  "How do I recover AAP after a failed upgrade?",
+  "How do I restore AAP from a backup on OpenShift?",
+  "Can I restore AAP after data loss?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

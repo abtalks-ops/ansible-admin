@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f570b874e97b63bb",
+ "chunk_hash": "f570b874e97b63bb",
+ "summary": "Track a migration with oc logs on the migration pod (-f); the SAML error \"Unable to complete social auth login\" is fixed by adding the REDIRECT_IS_HTTPS extra setting.",
+ "questions": [
+  "Unable to complete social auth login with SAML",
+  "How do I follow the controller migration logs?",
+  "SAML login fails on the platform gateway on OpenShift"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

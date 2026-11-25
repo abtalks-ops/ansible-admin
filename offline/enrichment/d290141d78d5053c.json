@@ -1,0 +1,14 @@
+{
+ "chunk_id": "d290141d78d5053c",
+ "chunk_hash": "d290141d78d5053c",
+ "summary": "Install the AAP Operator from OperatorHub or with oc, then create an AnsibleAutomationPlatform CR (required in 2.6 even with existing controller, hub or EDA, which must be named on the CR in the same namespace); supported CRs enable all three components, controller only, controller plus hub, or controller plus EDA.",
+ "questions": [
+  "Do I need an AnsibleAutomationPlatform CR in AAP 2.6?",
+  "Which component combinations are supported on OpenShift?",
+  "How do I add existing controller to the platform gateway CR?",
+  "Can I deploy only automation controller with the operator?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}

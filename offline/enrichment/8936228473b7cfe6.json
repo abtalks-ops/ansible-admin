@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8936228473b7cfe6",
+ "chunk_hash": "8936228473b7cfe6",
+ "summary": "Verify the external database upgrade by confirming users, collections and job history are on the 2.6 instance in the PostgreSQL 15 databases.",
+ "questions": [
+  "How do I verify the AAP 2.6 upgrade with an external database?",
+  "Is my data in the new PostgreSQL 15 database?",
+  "Check job history after upgrading AAP on OpenShift"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:50+00:00"
+}
