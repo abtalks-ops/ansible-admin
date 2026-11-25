@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6475cc3ce2410f5e",
+ "chunk_hash": "6475cc3ce2410f5e",
+ "summary": "Migration example: lookup('community.hashi_vault.vault_kv1_get', 'hello', url=...) becomes lookup('hashicorp.vault.kv1_secret_get', secret='hello', url=...).",
+ "questions": [
+  "How do I migrate a KV1 lookup to hashicorp.vault?",
+  "What is the lookup syntax for hashicorp.vault.kv1_secret_get?",
+  "How do I pass the secret path to the kv1_secret_get lookup?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

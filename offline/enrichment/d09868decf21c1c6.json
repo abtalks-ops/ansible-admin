@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d09868decf21c1c6",
+ "chunk_hash": "d09868decf21c1c6",
+ "summary": "The select widget shows a dropdown for one value from an enum list, for example environment with enum dev, staging, prod, ui:widget: select and default dev.",
+ "questions": [
+  "How do I add a dropdown to a self-service template?",
+  "How do I set a default for a select widget?",
+  "How do I restrict a field to a list of values in a Backstage template?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:23+00:00"
+}

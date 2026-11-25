@@ -1,0 +1,13 @@
+{
+ "chunk_id": "674ce8e1ef94d11f",
+ "chunk_hash": "674ce8e1ef94d11f",
+ "summary": "RPM enterprise ports: 80/443 from HAProxy to gateway and between gateway, controller, hub, EDA and execution nodes; 5432 to the external database; 6379 Redis; 8443 gateway; 16379 Redis cluster bus; 27199 Receptor from controller to hop and execution nodes and from hop to execution nodes.",
+ "questions": [
+  "What ports does the RPM enterprise topology need?",
+  "Which Receptor connections exist in the RPM enterprise topology?",
+  "What is port 16379 used for in the RPM enterprise topology?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

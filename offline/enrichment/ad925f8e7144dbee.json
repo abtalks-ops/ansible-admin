@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ad925f8e7144dbee",
+ "chunk_hash": "ad925f8e7144dbee",
+ "summary": "Jobs timing out waiting for the privilege escalation prompt need a larger connection timeout (default 10). Set ANSIBLE_TIMEOUT: 60 in Settings > Jobs settings > Extra Environment Variables, or timeout = 60 under [defaults] in /etc/ansible/ansible.cfg (both global), use a project ansible.cfg for one project, or pass --timeout=60 to ansible-playbook.",
+ "questions": [
+  "Why do jobs fail with timeout waiting for privilege escalation prompt?",
+  "How do I increase the Ansible connection timeout in automation controller?",
+  "What is the default connection timeout in Ansible?",
+  "How do I set a timeout for only one project?"
+ ],
+ "answer_card": {
+  "title": "Fix 'timeout waiting for privilege escalation prompt'",
+  "answer_md": "Default connection timeout is 10 seconds. Raise it:\n\n- **Controller-wide:** Settings > Jobs settings > Extra Environment Variables: `{\"ANSIBLE_TIMEOUT\": 60}`\n- **ansible.cfg:** `/etc/ansible/ansible.cfg` → `[defaults]` `timeout = 60`\n- **One project:** put an `ansible.cfg` with `timeout` in the project root\n- **CLI:** `ansible-playbook --timeout=60 playbook.yml`",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/troubleshooting_ansible_automation_platform/index#troubleshoot-job-timeout"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

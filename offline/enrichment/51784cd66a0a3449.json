@@ -1,0 +1,13 @@
+{
+ "chunk_id": "51784cd66a0a3449",
+ "chunk_hash": "51784cd66a0a3449",
+ "summary": "RPM growth tested config: AAP subscription, RHEL 9.4+ (RHEL 9 only), x86_64/AArch64/s390x/ppc64le, ansible-core 2.16+ (system package installs, AAP uses 2.16 internally), Firefox or Chrome, PostgreSQL 15 managed or external 15-17 with ICU, IPv4/IPv6.",
+ "questions": [
+  "Which RHEL versions are supported for RPM-based AAP 2.6?",
+  "Is RHEL 10 supported for RPM installs of AAP?",
+  "Which PostgreSQL versions does RPM AAP support?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

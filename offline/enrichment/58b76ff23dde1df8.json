@@ -1,0 +1,13 @@
+{
+ "chunk_id": "58b76ff23dde1df8",
+ "chunk_hash": "58b76ff23dde1df8",
+ "summary": "For the direct-job example, change the job template and inventory names, optionally set owners to the Red Hat image ID, optionally set wait_for_completion true (with wait_for_completion_timeout_seconds) so Terraform waits for the job's final state, then commit and run terraform plan and apply.",
+ "questions": [
+  "How do I make Terraform wait for the AAP job to finish?",
+  "What does wait_for_completion do in aap_job_launch?",
+  "What must I change in the TF Actions direct job example?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "cbee8e046ed040e5",
+ "chunk_hash": "cbee8e046ed040e5",
+ "summary": "Upgrade prerequisites: valid subscription (carried over), be on the latest 2.4 or 2.5, inspect SAML authenticators since encrypted SAML private keys are unsupported in 2.6. After 2.4 to 2.6 the old controller, hub and EDA APIs still work but are deprecated. If you went 2.4 to 2.5, migrate authentication and users before 2.6 because legacy authenticators were removed.",
+ "questions": [
+  "Which versions can upgrade to AAP 2.6?",
+  "Are encrypted SAML private keys supported in AAP 2.6?",
+  "Do I need to migrate authentication before upgrading from 2.5 to 2.6?",
+  "Are the controller and hub APIs still available after upgrading to 2.6?"
+ ],
+ "answer_card": {
+  "title": "AAP 2.6 upgrade prerequisites",
+  "answer_md": "- Valid subscription (carried over).\n- Be on the **latest 2.4 or 2.5**; only those can upgrade to 2.6.\n- Check SAML authenticators: encrypted SAML private keys are not supported in 2.6.\n- If you upgraded 2.4 → 2.5, migrate authentication methods and users first; legacy authenticators are gone in 2.6.\n- Back up the platform and record inventory and instance group details.\n- Component APIs still work after 2.4 → 2.6 but are deprecated in favor of the gateway API.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_upgrade/index#aap-upgrade-planning_upgrade-and-migration"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

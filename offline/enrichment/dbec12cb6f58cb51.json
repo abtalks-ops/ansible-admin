@@ -1,0 +1,13 @@
+{
+ "chunk_id": "dbec12cb6f58cb51",
+ "chunk_hash": "dbec12cb6f58cb51",
+ "summary": "Operator enterprise topology: OpenShift with 3 control and 2 worker nodes (each worker 16 GB RAM, 4 CPUs, 128 GB disk, 3000 IOPS). Pods: controller web/task, hub web/API/Redis, 2 hub content, 2 hub worker, EDA API and scheduler, 2 each EDA activation worker, default worker and event stream, gateway, 2 mesh ingress; external database, Redis and object storage.",
+ "questions": [
+  "What pods run in the AAP Operator enterprise topology?",
+  "What are the worker node requirements for the Operator enterprise topology?",
+  "Does the Operator enterprise topology use external Redis?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

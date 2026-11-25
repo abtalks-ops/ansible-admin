@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ec3cbe235892b3c7",
+ "chunk_hash": "ec3cbe235892b3c7",
+ "summary": "Tested container configurations: AAP and RHEL subscriptions; RHEL 9.4+ or RHEL 10; x86_64, AArch64, s390x, ppc64le; ansible-core 2.14 (RHEL 9) or 2.16 (RHEL 10) from AppStream installed first (AAP bundles 2.16 for itself); Firefox or Chrome; PostgreSQL 15 managed, or external 15, 16 or 17 with ICU (16/17 need external backup); IPv4/IPv6 single or dual stack.",
+ "questions": [
+  "Which RHEL versions are supported for containerized AAP 2.6?",
+  "Which PostgreSQL versions can containerized AAP use?",
+  "What ansible-core version must be installed before the containerized installer?",
+  "Does containerized AAP support IPv6?"
+ ],
+ "answer_card": {
+  "title": "Containerized AAP 2.6 tested configuration",
+  "answer_md": "- **Subscriptions:** AAP + RHEL (BaseOS, AppStream)\n- **OS:** RHEL 9.4+ or RHEL 10\n- **CPU:** x86_64, AArch64, s390x, ppc64le\n- **ansible-core:** install from AppStream first (2.14 on RHEL 9, 2.16 on RHEL 10); AAP bundles 2.16 for its own use\n- **Database:** managed PostgreSQL 15; external PostgreSQL 15, 16 or 17 with ICU (16/17 need your own backup and restore)\n- **IP:** IPv4, IPv6, single or dual stack",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/tested_deployment_models/index#cont-a-env-a"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8ed836a65821db49",
+ "chunk_hash": "8ed836a65821db49",
+ "summary": "\"denied: requested access to the resource is denied, unauthorized: Insufficient permissions\" when pulling an EE from a protected private automation hub means the EE has no registry credential; edit the EE under Administration > Execution Environments and assign the hub's Registry credential.",
+ "questions": [
+  "Why do jobs fail with insufficient permissions pulling from private automation hub?",
+  "How do I add a registry credential to an execution environment?",
+  "What does 'requested access to the resource is denied' mean in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

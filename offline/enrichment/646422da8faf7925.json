@@ -1,0 +1,14 @@
+{
+ "chunk_id": "646422da8faf7925",
+ "chunk_hash": "646422da8faf7925",
+ "summary": "The rhaap:create-project Backstage action creates an AAP project linked to an SCM repo. Inputs: token (required), deleteIfExist, and values with projectName, organization {id}, scmUrl (required), plus optional projectDescription, credentials, scmBranch and scmUpdateOnLaunch. It outputs project details including project.id.",
+ "questions": [
+  "What inputs does rhaap:create-project take?",
+  "How do I create an AAP project from a Backstage template?",
+  "What does deleteIfExist do in rhaap actions?",
+  "What does rhaap:create-project return?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:23+00:00"
+}

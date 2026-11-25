@@ -1,0 +1,17 @@
+{
+ "chunk_id": "3a16195079fab127",
+ "chunk_hash": "3a16195079fab127",
+ "summary": "With the Terraform provider, build AAP inventories with the cloud provider's inventory plugin (AWS, Azure) or static inventory from the provider, not a Terraform state-backed inventory plugin, which suffers timing errors and race conditions. Provision with Terraform, add a cloud dynamic inventory in AAP, and set the refresh frequency to allow new instances to become reachable.",
+ "questions": [
+  "Should I use the Terraform state inventory plugin with AAP?",
+  "What inventory should I use for hosts provisioned by Terraform?",
+  "How do I avoid race conditions with newly provisioned Terraform hosts in AAP?"
+ ],
+ "answer_card": {
+  "title": "Inventory for Terraform-provisioned hosts",
+  "answer_md": "Don't use a Terraform state-backed inventory plugin; it is error prone (timing errors, race conditions).\n\n1. Provision infrastructure with the Terraform provider.\n2. In AAP, configure a dynamic inventory with the cloud provider's plugin (e.g. AWS, Azure), or create static inventory resources with the provider.\n3. Set the inventory refresh frequency to allow time for new instances to become reachable.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#inventory-best-practices"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

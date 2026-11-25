@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4f0d293af3a51941",
+ "chunk_hash": "4f0d293af3a51941",
+ "summary": "Use automation content navigator to troubleshoot playbooks interactively.",
+ "questions": [
+  "How can I debug a playbook interactively in AAP?",
+  "What tool helps troubleshoot Ansible playbooks?",
+  "How do I troubleshoot a failing playbook with ansible-navigator?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

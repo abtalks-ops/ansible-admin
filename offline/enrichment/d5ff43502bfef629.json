@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d5ff43502bfef629",
+ "chunk_hash": "d5ff43502bfef629",
+ "summary": "Operator enterprise ports: 80/443 to external object storage and from execution/hop nodes to OpenShift ingress; 5432 to the external database; 6379 to external Redis; 27199 Receptor from the cluster to execution and hop nodes.",
+ "questions": [
+  "What ports does the Operator enterprise topology need?",
+  "Which ports must be open from OpenShift to external Redis and PostgreSQL?",
+  "Which port do execution nodes use to reach OpenShift ingress?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

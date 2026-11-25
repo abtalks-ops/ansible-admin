@@ -1,0 +1,17 @@
+{
+ "chunk_id": "360fd67b7f9c9983",
+ "chunk_hash": "360fd67b7f9c9983",
+ "summary": "To apply a saved plan, call hashicorp.terraform.run with the run_id from the earlier run task, state: applied, the token and polling options.",
+ "questions": [
+  "How do I apply a saved Terraform plan from Ansible?",
+  "Where do I get the run_id to apply a plan?",
+  "What state applies a Terraform run with hashicorp.terraform.run?"
+ ],
+ "answer_card": {
+  "title": "Apply a saved plan with hashicorp.terraform",
+  "answer_md": "Create the plan with `save_plan: true`, then apply using the `run_id` from that task's output:\n```yaml\n- name: Apply the saved plan run\n  hashicorp.terraform.run:\n    run_id: run-1234\n    state: \"applied\"\n    tf_token: \"{{ tfc_token }}\"\n    poll: true\n    poll_interval: 10\n    poll_timeout: 30\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#terraform-migration-examples"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

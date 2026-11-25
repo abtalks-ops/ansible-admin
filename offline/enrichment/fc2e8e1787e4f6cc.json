@@ -1,0 +1,13 @@
+{
+ "chunk_id": "fc2e8e1787e4f6cc",
+ "chunk_hash": "fc2e8e1787e4f6cc",
+ "summary": "Without internet access, use the Setup Bundle installer, which contains all dependencies except RHEL repositories; download it from the Product software tab and extract with tar xvzf ansible-automation-platform-setup-bundle-<version>.tar.gz.",
+ "questions": [
+  "How do I upgrade AAP without internet access?",
+  "What does the AAP setup bundle include?",
+  "Do I still need RHEL repos with the bundle installer?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

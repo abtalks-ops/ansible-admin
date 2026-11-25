@@ -1,0 +1,17 @@
+{
+ "chunk_id": "126230e93b857b05",
+ "chunk_hash": "126230e93b857b05",
+ "summary": "Operator enterprise tested on ROSA HCP 4.15.16 with 2 t3.xlarge workers in different AZs, ansible-core 2.16+, AWS RDS PostgreSQL 15 (db.t4g.small, multi-AZ, encrypted gp2, ICU). External database minimum: 4 vCPUs, 16 GB RAM, max_connections 1024, 200 GB on 3000 IOPS storage; monitor usage and schedule cleanup jobs.",
+ "questions": [
+  "What are the minimum external database requirements for the AAP enterprise topology?",
+  "What max_connections does AAP enterprise need on PostgreSQL?",
+  "Which AWS RDS settings were tested for AAP on ROSA?"
+ ],
+ "answer_card": {
+  "title": "External database minimum for Operator enterprise",
+  "answer_md": "- 4 vCPUs\n- 16 GB RAM\n- `max_connections` at least 1024 (more when scaling replicas)\n- 200 GB storage on a volume with at least 3000 IOPS\n- ICU support\n\nStart at 200 GB, monitor usage, and configure cleanup jobs to stop unbounded growth.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/tested_deployment_models/index#ocp-b-env-a"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

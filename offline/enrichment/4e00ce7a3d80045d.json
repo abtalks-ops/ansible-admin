@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4e00ce7a3d80045d",
+ "chunk_hash": "4e00ce7a3d80045d",
+ "summary": "RPM growth ports: 80/443 between EDA, controller, hub and gateway and from execution node to gateway; 5432 from each component to the database; 6379 Redis from EDA and gateway; 8443 gateway internal; 27199 Receptor controller to execution node.",
+ "questions": [
+  "What ports does the RPM growth topology use?",
+  "Does the execution node need to reach the platform gateway?",
+  "Which port does Receptor use in the RPM growth topology?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

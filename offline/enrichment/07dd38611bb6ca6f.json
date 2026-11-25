@@ -1,0 +1,17 @@
+{
+ "chunk_id": "07dd38611bb6ca6f",
+ "chunk_hash": "07dd38611bb6ca6f",
+ "summary": "hashicorp.terraform.configuration_version manages configuration versions. Required: workspace_id or workspace plus organization, and configuration_files_path (a directory auto-packed into .tar.gz, or a .tar.gz archive) for state: present. Example sets auto_queue_runs false, tf_validate_certs, poll_interval and poll_timeout.",
+ "questions": [
+  "How do I upload Terraform configuration with hashicorp.terraform?",
+  "What file types does configuration_files_path accept?",
+  "What parameters does hashicorp.terraform.configuration_version require?"
+ ],
+ "answer_card": {
+  "title": "hashicorp.terraform.configuration_version",
+  "answer_md": "```yaml\n- name: Create configuration version\n  hashicorp.terraform.configuration_version:\n    workspace_id: ws-1234\n    configuration_files_path: \"/usr/home/tf\"\n    auto_queue_runs: false\n    tf_validate_certs: true\n    poll_interval: 3\n    poll_timeout: 15\n    state: present\n```\nRequired: `workspace_id` (or `workspace` + `organization`) and `configuration_files_path`, a directory (packed to .tar.gz automatically) or a .tar.gz archive.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#configuring-config-version-module"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

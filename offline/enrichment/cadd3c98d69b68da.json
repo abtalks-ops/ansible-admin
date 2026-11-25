@@ -1,0 +1,17 @@
+{
+ "chunk_id": "cadd3c98d69b68da",
+ "chunk_hash": "cadd3c98d69b68da",
+ "summary": "Operator growth tested config: OpenShift 4.14 with 1 control and 1 worker node, ansible-core 2.16+, PostgreSQL 15 managed or external 15-17 with ICU. The operator-deployed database allows 100 max_connections and 100 GB; don't use it with more than 1 replica of any component, over 100 concurrent jobs, over 100 total connections, or over 100 GB of 30-day storage.",
+ "questions": [
+  "When should I not use the operator-deployed PostgreSQL database?",
+  "What are the limits of the AAP operator-deployed database?",
+  "Which OpenShift version was tested for the AAP growth topology?"
+ ],
+ "answer_card": {
+  "title": "Operator-deployed database limits",
+  "answer_md": "The operator-deployed PostgreSQL has `max_connections` 100 and a 100 GB maximum size.\n\nUse an external database instead if any apply:\n- More than 1 replica of gateway, controller, hub or EDA\n- Controller capacity above 100 concurrent jobs\n- Total database connections above 100\n- Estimated 30-day database storage above 100 GB",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/tested_deployment_models/index#ocp-a-env-a"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}
