@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9860e57cdef8f9b6",
+ "chunk_hash": "9860e57cdef8f9b6",
+ "summary": "Jobs are controller's primary workload and run on the execution plane; types are standard jobs, workflow, sliced and bulk jobs, and system jobs.",
+ "questions": [
+  "What job types does automation controller run?",
+  "Where do jobs run in AAP?",
+  "What is the difference between standard, sliced and bulk jobs?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

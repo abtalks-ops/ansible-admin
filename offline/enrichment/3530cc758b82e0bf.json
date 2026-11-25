@@ -1,0 +1,18 @@
+{
+ "chunk_id": "3530cc758b82e0bf",
+ "chunk_hash": "3530cc758b82e0bf",
+ "summary": "To avoid SAML migration failure, replace the encrypted private key with an unencrypted one in 2.4 before upgrading, or if it already failed, have a local admin re-create the SAML authenticator in 2.6. RPM installs need RHEL 9; containerized supports RHEL 9.4+ and RHEL 10 for enterprise. An upgrade changes versions, a migration moves data between installation types. You can go from 2.4 directly to 2.6; managed cloud on Azure and AWS is upgraded for you.",
+ "questions": [
+  "How do I fix SAML encrypted private key migration failure?",
+  "Which RHEL versions does AAP 2.6 support?",
+  "What is the difference between an upgrade and a migration in AAP?",
+  "Will managed AAP on AWS or Azure be upgraded to 2.6?"
+ ],
+ "answer_card": {
+  "title": "SAML authenticator with an encrypted private key",
+  "answer_md": "AAP 2.6 does not accept an encrypted private key in a SAML authenticator, so the 2.4 to 2.6 migration skips it.\n\n- **Before upgrading:** replace the encrypted private key with an unencrypted one in the SAML settings on 2.4.\n- **If the upgrade already ran:** a local administrator must re-create the SAML authenticator in 2.6 to restore SSO.\n\nCheck `setup_log` for migration warnings about other missing authenticators.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-faqs"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

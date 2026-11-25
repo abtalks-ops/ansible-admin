@@ -1,0 +1,13 @@
+{
+ "chunk_id": "310a3011dcf6796c",
+ "chunk_hash": "310a3011dcf6796c",
+ "summary": "The client response travels back through the Nginx proxy, Envoy and the load balancer or Route to the client.",
+ "questions": [
+  "How does an AAP API response reach the client?",
+  "What path does an AAP API response take?",
+  "Which layers return an AAP API response?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

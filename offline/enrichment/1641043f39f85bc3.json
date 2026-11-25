@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1641043f39f85bc3",
+ "chunk_hash": "1641043f39f85bc3",
+ "summary": "In operator-based AAP there are no hybrid or control nodes; the control plane consists of container groups running on the Kubernetes cluster where AAP is deployed, running the web server, task dispatcher, project updates and management jobs.",
+ "questions": [
+  "Are there hybrid nodes in operator-based AAP?",
+  "What is the control plane in an OpenShift AAP deployment?",
+  "Where do project updates run on operator-based AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

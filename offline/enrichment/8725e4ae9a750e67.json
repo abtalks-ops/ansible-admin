@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8725e4ae9a750e67",
+ "chunk_hash": "8725e4ae9a750e67",
+ "summary": "The automation controller API service handles HTTP requests for user roles, project and inventory creation or updates, job launches and job result checks.",
+ "questions": [
+  "What does the automation controller API service handle?",
+  "Which requests go to the controller API?",
+  "Is job launching handled by the controller API service?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

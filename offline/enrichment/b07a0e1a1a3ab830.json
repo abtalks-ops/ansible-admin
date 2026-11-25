@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b07a0e1a1a3ab830",
+ "chunk_hash": "b07a0e1a1a3ab830",
+ "summary": "For pods you can specify how much CPU and memory each container needs: the scheduler uses requests to choose a node, and the kubelet enforces limits and reserves at least the requested amount for the container.",
+ "questions": [
+  "What is the difference between resource requests and limits?",
+  "How does Kubernetes use container resource requests?",
+  "Who enforces container resource limits?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

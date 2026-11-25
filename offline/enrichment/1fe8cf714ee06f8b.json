@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1fe8cf714ee06f8b",
+ "chunk_hash": "1fe8cf714ee06f8b",
+ "summary": "To push a signed execution environment from a local system, podman pull the image, podman tag it as <server-address>/<name>:<tag>, then podman push with --sign-by <gpg key> (and --tls-verify=false in the example). An unsigned image can only be pushed with whatever signature is already embedded, or pushed without signing.",
+ "questions": [
+  "How do I sign and push an execution environment to automation hub with podman?",
+  "podman push --sign-by automation hub",
+  "How do I tag an execution environment before pushing it to automation hub?",
+  "Can I push an unsigned execution environment to private automation hub?"
+ ],
+ "answer_card": {
+  "title": "Push a signed execution environment with Podman",
+  "answer_md": "1. Pull the image: `podman pull <container-name>`\n2. Tag it: `podman tag <container-name> <server-address>/<container-name>:<tag name>`\n3. Sign and push: `podman push <server-address>/<container-name>:<tag name> --tls-verify=false --sign-by <gpg key reference>`\n\nWithout signing: `podman push <server-address>/<container-name>:<tag name> --tls-verify=false`",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_automation_content/index#pushing-container-images-from-your-local"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

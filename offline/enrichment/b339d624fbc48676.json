@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b339d624fbc48676",
+ "chunk_hash": "b339d624fbc48676",
+ "summary": "ansible-navigator playbook-artifact-enable (--pae) turns artifact creation on or off, and playbook-artifact-save-as (--pas) sets the artifact name, by default {playbook_dir}/{playbook_name}-artifact-{ts_utc}.json.",
+ "questions": [
+  "How do I change the name of ansible-navigator playbook artifacts?",
+  "What is the default ansible-navigator artifact file name?",
+  "ansible-navigator --playbook-artifact-save-as"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

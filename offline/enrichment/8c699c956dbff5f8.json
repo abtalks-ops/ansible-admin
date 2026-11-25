@@ -1,0 +1,17 @@
+{
+ "chunk_id": "8c699c956dbff5f8",
+ "chunk_hash": "8c699c956dbff5f8",
+ "summary": "To run the default execution environment on remote execution nodes (not needed on Azure), create a pull secret with oc create secret generic ee-pull-secret using username, password and url registry.redhat.io, then set ee_pull_credentials_secret: ee-pull-secret in the automation controller spec.",
+ "questions": [
+  "How do remote execution nodes pull the default execution environment on OpenShift?",
+  "What is ee_pull_credentials_secret?",
+  "How do I create ee-pull-secret for automation controller?"
+ ],
+ "answer_card": {
+  "title": "Pull secret for remote execution nodes",
+  "answer_md": "```\noc create secret generic ee-pull-secret \\\n  --from-literal=username=<username> \\\n  --from-literal=password=<password> \\\n  --from-literal=url=registry.redhat.io\n```\n\nThen `oc edit automationcontrollers <controller>` and set:\n\n```yaml\nspec:\n  ee_pull_credentials_secret: ee-pull-secret\n```\n\nNot needed for AAP on Microsoft Azure.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_managed_cloud_or_operator_environments/index#proc-pulling-the-secret"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

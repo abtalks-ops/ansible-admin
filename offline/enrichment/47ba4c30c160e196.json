@@ -1,0 +1,18 @@
+{
+ "chunk_id": "47ba4c30c160e196",
+ "chunk_hash": "47ba4c30c160e196",
+ "summary": "Create a pull secret with oc create secret generic from a .dockercfg (type kubernetes.io/dockercfg) or .docker/config.json (kubernetes.io/dockerconfigjson), or with oc create secret docker-registry and server, username, password and email; then link it to the pod's service account with oc secrets link default <secret> --for=pull.",
+ "questions": [
+  "How do I create an image pull secret on OpenShift?",
+  "oc create secret docker-registry example",
+  "How do I link a pull secret to the default service account?",
+  "How do I create a pull secret from config.json?"
+ ],
+ "answer_card": {
+  "title": "Create and link an image pull secret",
+  "answer_md": "From an existing Docker config:\n```\noc create secret generic <pull_secret_name> \\\n  --from-file=.dockerconfigjson=<path/to/.docker/config.json> \\\n  --type=kubernetes.io/dockerconfigjson\n```\nWithout one:\n```\noc create secret docker-registry <pull_secret_name> \\\n  --docker-server=<registry_server> --docker-username=<user_name> \\\n  --docker-password=<password> --docker-email=<email>\n```\nThen link it to the service account the pod uses (default `default`):\n```\noc secrets link default <pull_secret_name> --for=pull\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_considerations_for_operator_environments/index#proc-enable-pods-ref-images_ocp-performance"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

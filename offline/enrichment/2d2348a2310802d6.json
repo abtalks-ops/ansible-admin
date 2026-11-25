@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2d2348a2310802d6",
+ "chunk_hash": "2d2348a2310802d6",
+ "summary": "To pull execution environment images from a password- or token-protected registry, create a Container Registry credential under Automation Execution > Infrastructure > Credentials with the registry's Authentication URL, username and password or token, optionally with Verify SSL. Since AAP 2.0 you no longer deploy your own registry; you only add credentials for the remote registries you use.",
+ "questions": [
+  "How do I create a container registry credential in AAP?",
+  "How do I pull execution environments from a password-protected registry?",
+  "Which credential type is used for a remote container registry?",
+  "Do I still need to deploy a registry for execution environment images?"
+ ],
+ "answer_card": {
+  "title": "Create a Container Registry credential",
+  "answer_md": "1. Go to **Automation Execution > Infrastructure > Credentials** and click **Create credential**.\n2. Enter a *Name*, *Description* and *Organization*.\n3. Set *Credential Type* to **Container Registry**.\n4. Enter the *Authentication URL* (the remote registry address).\n5. Enter the *Username* and *Password or Token*.\n6. Optional: select *Verify SSL*.\n7. Click **Create credential**.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_automation_content/index#proc-create-credential"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

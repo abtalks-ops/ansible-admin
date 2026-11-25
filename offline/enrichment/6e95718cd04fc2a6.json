@@ -1,0 +1,14 @@
+{
+ "chunk_id": "6e95718cd04fc2a6",
+ "chunk_hash": "6e95718cd04fc2a6",
+ "summary": "During the 2.4 to 2.6 upgrade users, teams, organizations, memberships and common roles move from controller to the platform gateway, and controller admins become gateway admins; more objects mean a longer upgrade, about two hours for 4,000 users, 400 teams and 40 organizations. Some APIs are deprecated in 2.6 and RBAC is unified across components.",
+ "questions": [
+  "How long does the AAP 2.4 to 2.6 upgrade take?",
+  "Do controller admins stay admins after upgrading to 2.6?",
+  "Are teams and organizations migrated in the 2.6 upgrade?",
+  "Are any APIs deprecated in AAP 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

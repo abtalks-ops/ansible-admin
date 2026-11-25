@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e0c145cdaddc4a9c",
+ "chunk_hash": "e0c145cdaddc4a9c",
+ "summary": "A container may use more than its request if the node has spare resources but never more than its limit; for example a 256 MiB request on an idle 8 GiB node can use more, while a 4 GiB limit is enforced and exceeding memory triggers an OOM kill. Limits are applied reactively or by enforcement depending on the runtime.",
+ "questions": [
+  "Can a container use more memory than its request?",
+  "What happens when a container exceeds its memory limit?",
+  "Why was my AAP job pod OOM killed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

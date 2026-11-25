@@ -1,0 +1,18 @@
+{
+ "chunk_id": "8c402762251e4cec",
+ "chunk_hash": "8c402762251e4cec",
+ "summary": "Gateway proxy error codes that signal a need to scale: 502 UAEX (authentication service overloaded or timing out), 503 UH (Envoy marked service pods unhealthy) and 503 UF (connection to an upstream pod failed); they appear in the gateway proxy logs, usually after rising latency.",
+ "questions": [
+  "What does 502 UAEX mean in AAP?",
+  "What is a 503 UH error from the platform gateway?",
+  "What does 503 UF mean in Envoy logs?",
+  "Why does the AAP gateway return 503?"
+ ],
+ "answer_card": {
+  "title": "Platform gateway proxy error codes",
+  "answer_md": "| Code | Meaning |\n|---|---|\n| `502 UAEX` | Upstream authentication failure: the auth service is overloaded, timing out or returning bad responses |\n| `503 UH` | Upstream unhealthy: Envoy marked service pods unhealthy and stopped sending them traffic |\n| `503 UF` | Upstream connection failure: Envoy could not connect to the pod |\n\nFind them in the gateway proxy container (OpenShift) or proxy logs (VM and containerized). They usually follow rising latency and mean the service needs scaling.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_tuning_for_ansible_automation_platform/index#key-per-indicators-scaling-API-services_aap-api-performance"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

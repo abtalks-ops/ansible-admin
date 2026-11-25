@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6c7d30afdb1678b1",
+ "chunk_hash": "6c7d30afdb1678b1",
+ "summary": "To verify that an execution environment pulled from the remote registry is properly signed, configure a policy file with the right public key; the client needs sudo privileges to verify signatures.",
+ "questions": [
+  "How do I configure podman to verify execution environment signatures?",
+  "What do I need on the client to verify container signatures?",
+  "Why does verifying signatures need sudo?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

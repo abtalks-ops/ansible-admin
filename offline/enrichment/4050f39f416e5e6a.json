@@ -1,0 +1,18 @@
+{
+ "chunk_id": "4050f39f416e5e6a",
+ "chunk_hash": "4050f39f416e5e6a",
+ "summary": "Automation mesh is a TLS-encrypted, FIPS-compliant receptor overlay network of control, hop and execution nodes that crosses difficult network topologies and brings execution closer to targets, with capacity that scales independently, separation of control and execution planes, and latency-resilient rerouting.",
+ "questions": [
+  "What is automation mesh?",
+  "Is automation mesh traffic encrypted?",
+  "Why use automation mesh?",
+  "Is automation mesh FIPS compliant?"
+ ],
+ "answer_card": {
+  "title": "Automation mesh in brief",
+  "answer_md": "- Overlay network of **control, hop and execution** nodes connected peer to peer through receptor\n- Traverses difficult network topologies and brings execution closer to target hosts\n- Traffic is **TLS encrypted**; communication is FIPS compliant\n- Scale execution capacity independently of the control plane\n- Add or remove nodes with minimal downtime; reroutes around outages",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_managed_cloud_or_operator_environments/index#con-automation-mesh"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

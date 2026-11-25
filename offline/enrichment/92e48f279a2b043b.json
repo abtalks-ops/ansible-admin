@@ -1,0 +1,13 @@
+{
+ "chunk_id": "92e48f279a2b043b",
+ "chunk_hash": "92e48f279a2b043b",
+ "summary": "After a container group is created, its Details tab stays open so you can review and edit it, the same view as the Edit icon on the instance group, and you can also edit instances and review associated jobs.",
+ "questions": [
+  "How do I edit a container group after creating it?",
+  "Where do I see jobs for a container group?",
+  "What happens after I create a container group?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

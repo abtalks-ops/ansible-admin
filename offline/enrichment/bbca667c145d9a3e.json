@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bbca667c145d9a3e",
+ "chunk_hash": "bbca667c145d9a3e",
+ "summary": "Signature verification is configured in /etc/containers/policy.json: the default type reject is overridden per registry, insecureAcceptAnything skips verification (quay.io, docker.io), and a signedBy entry with keyType GPGKeys and keyPath set to your downloaded key enforces signatures for your automation hub server. GPG keys are the only supported keyType.",
+ "questions": [
+  "How do I edit /etc/containers/policy.json to require signed images?",
+  "What does insecureAcceptAnything mean in policy.json?",
+  "Which keyType is supported for container signature verification?",
+  "Example signedBy policy for private automation hub"
+ ],
+ "answer_card": {
+  "title": "Require signed images from automation hub in policy.json",
+  "answer_md": "Edit `/etc/containers/policy.json` with sudo and add a `signedBy` entry for your hub:\n\n```json\n{\n  \"default\": [{\"type\": \"reject\"}],\n  \"transports\": {\n    \"docker\": {\n      \"quay.io\": [{\"type\": \"insecureAcceptAnything\"}],\n      \"docker.io\": [{\"type\": \"insecureAcceptAnything\"}],\n      \"<server-address>\": [{\n        \"type\": \"signedBy\",\n        \"keyType\": \"GPGKeys\",\n        \"keyPath\": \"/tmp/containersig.txt\"\n      }]\n    }\n  }\n}\n```\n\n- `insecureAcceptAnything` skips verification for that registry.\n- Set `keyPath` to your downloaded key file. Only GPG keys are supported.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_automation_content/index#configuring-the-client-to-verify-signatures"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

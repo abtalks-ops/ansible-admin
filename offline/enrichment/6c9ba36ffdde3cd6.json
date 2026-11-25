@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6c9ba36ffdde3cd6",
+ "chunk_hash": "6c9ba36ffdde3cd6",
+ "summary": "If the 2.4 inventory uses automationhub_main_url for a load balancer, remove it from the 2.6 inventory, because the load balancer now sits in front of platform gateway and is set with automationgateway_main_url.",
+ "questions": [
+  "Should I keep automationhub_main_url when upgrading to 2.6?",
+  "Where is the load balancer URL set in AAP 2.6?",
+  "automationhub_main_url vs automationgateway_main_url"
+ ],
+ "answer_card": {
+  "title": "Remove automationhub_main_url when upgrading",
+  "answer_md": "If your 2.4 inventory sets `automationhub_main_url` for a load balancer, **remove it** from the 2.6 inventory. In 2.6 the load balancer goes in front of platform gateway and is set with `automationgateway_main_url`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-multi-controller-hub-enterprise"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}

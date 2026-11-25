@@ -1,0 +1,13 @@
+{
+ "chunk_id": "596463c4a0591d05",
+ "chunk_hash": "596463c4a0591d05",
+ "summary": "The ansible-navigator inventory subcommand settings are help-inventory (--hi), inventory (-i, a file path or comma-separated host list) and inventory-column (--ic, a host attribute to show in the inventory view).",
+ "questions": [
+  "How do I pass an inventory to ansible-navigator inventory?",
+  "How do I show extra host attributes in ansible-navigator inventory view?",
+  "ansible-navigator --inventory-column"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:02+00:00"
+}
