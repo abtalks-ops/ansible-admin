@@ -1,0 +1,13 @@
+{
+ "chunk_id": "75694d28e58ae71f",
+ "chunk_hash": "75694d28e58ae71f",
+ "summary": "Metadata for input sources: AWS Secrets Manager needs region and secret name; Centrify needs account name and optional system name; CyberArk CCP needs an object query and query format.",
+ "questions": [
+  "What metadata does the AWS Secrets Manager lookup need?",
+  "Centrify Vault lookup account name",
+  "CyberArk CCP object query metadata"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:07:50+00:00"
+}

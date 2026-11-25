@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7376f2e3c741f6f2",
+ "chunk_hash": "7376f2e3c741f6f2",
+ "summary": "The Automation Execution UI header gives access to your profile, About, documentation and logout; the navigation panel covers Jobs, Templates, Schedules, Projects, Infrastructure and Administration.",
+ "questions": [
+  "What is in the automation execution navigation panel?",
+  "Where do I find job templates in the UI?",
+  "AAP user interface overview"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:31:30+00:00"
+}

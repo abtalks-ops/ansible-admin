@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f3fb19bab6fe9b77",
+ "chunk_hash": "f3fb19bab6fe9b77",
+ "summary": "Cloud inventory sources return all instances and auto-group them (AWS by region, tags, security groups); target generated groups like tag_Name_webserver or use the job template Limit field.",
+ "questions": [
+  "How do I filter dynamic inventory instances?",
+  "Target AWS instances by tag in a playbook",
+  "Limit job template to one group"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:22:10+00:00"
+}

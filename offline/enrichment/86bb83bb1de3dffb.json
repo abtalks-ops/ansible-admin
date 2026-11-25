@@ -1,0 +1,13 @@
+{
+ "chunk_id": "86bb83bb1de3dffb",
+ "chunk_hash": "86bb83bb1de3dffb",
+ "summary": "The AAP API supports session, basic, OAuth 2 token and single sign-on authentication.",
+ "questions": [
+  "What authentication methods does the AAP API support?",
+  "Can I use OAuth tokens with the AAP API?",
+  "API authentication options"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:26:20+00:00"
+}

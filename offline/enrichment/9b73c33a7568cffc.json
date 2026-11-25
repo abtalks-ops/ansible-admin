@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9b73c33a7568cffc",
+ "chunk_hash": "9b73c33a7568cffc",
+ "summary": "Disable basic authentication in Settings > Platform gateway > Edit platform gateway settings by turning off Gateway basic auth enabled and saving.",
+ "questions": [
+  "How do I disable basic auth in AAP?",
+  "Gateway basic auth enabled setting",
+  "Turn off username password API access"
+ ],
+ "answer_card": {
+  "title": "Disable basic authentication",
+  "answer_md": "Settings > **Platform gateway** > *Edit platform gateway settings* > turn off **Gateway basic auth enabled** > *Save platform gateway settings*.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_execution_api_overview/index#proc-controller-api-disable-basic-auth"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:27:00+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "37171c1f3293f01f",
+ "chunk_hash": "37171c1f3293f01f",
+ "summary": "Resources are accessed by primary key or by human-readable named URLs, such as /api/controller/v2/hosts/host_name++inv_name++org_name/.",
+ "questions": [
+  "How do I access a host by name in the API?",
+  "What is a named URL in AAP API?",
+  "Named URL host example"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:24:50+00:00"
+}

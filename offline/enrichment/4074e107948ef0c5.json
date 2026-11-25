@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4074e107948ef0c5",
+ "chunk_hash": "4074e107948ef0c5",
+ "summary": "New installs apply metrics-utility automatically; existing deployments must re-run the installer, which deploys the metrics-utility container and creates the systemd user services and timers.",
+ "questions": [
+  "Do I need to rerun the installer after enabling metrics-utility?",
+  "How is metrics-utility scheduled on containerized AAP?",
+  "metrics-utility systemd timers containerized"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:01:50+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "445c7fe5c70d3e80",
+ "chunk_hash": "445c7fe5c70d3e80",
+ "summary": "UI search syntax is field:value; a term without a colon is sent as ?search=; job template search only supports alphanumeric characters.",
+ "questions": [
+  "What is the search syntax in automation controller?",
+  "Why can't I search job templates with special characters?",
+  "Search without a field in the UI"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:32:20+00:00"
+}

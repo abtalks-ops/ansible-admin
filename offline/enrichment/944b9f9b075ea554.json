@@ -1,0 +1,13 @@
+{
+ "chunk_id": "944b9f9b075ea554",
+ "chunk_hash": "944b9f9b075ea554",
+ "summary": "metrics-utility deduplicates host records by hostname into unique managed nodes when building reports; other strategies are chosen with METRICS_UTILITY_DEDUPLICATOR.",
+ "questions": [
+  "How does metrics-utility deduplicate hosts?",
+  "What is METRICS_UTILITY_DEDUPLICATOR?",
+  "Why are managed nodes counted twice in my report?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:06:40+00:00"
+}

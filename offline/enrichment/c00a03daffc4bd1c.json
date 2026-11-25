@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c00a03daffc4bd1c",
+ "chunk_hash": "c00a03daffc4bd1c",
+ "summary": "manifest.json lists every file in the analytics collection (config.json, counts.json, events_table.csv, unified_jobs_table.csv and more) with its schema version.",
+ "questions": [
+  "What is manifest.json in analytics data?",
+  "Which files are in an Automation Analytics bundle?",
+  "Analytics schema versions manifest"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:00+00:00"
+}

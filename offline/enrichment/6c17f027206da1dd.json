@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6c17f027206da1dd",
+ "chunk_hash": "6c17f027206da1dd",
+ "summary": "RBAC lets you grant teams or users specific tasks, keep projects private, allow check or live runs, and let users use credentials without seeing them; controller audits who did what.",
+ "questions": [
+  "Can users use credentials without seeing them?",
+  "What does RBAC control in automation controller?",
+  "Does controller audit job launches?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:28:30+00:00"
+}

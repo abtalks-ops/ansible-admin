@@ -1,0 +1,13 @@
+{
+ "chunk_id": "693f0f61de98c2fa",
+ "chunk_hash": "693f0f61de98c2fa",
+ "summary": "The fetch playbook tars the report and data directories in the temp pod with kubernetes.core.k8s_exec, copies the tarballs locally with kubernetes.core.k8s_cp (state: from_pod), then cleans up.",
+ "questions": [
+  "How do I copy files from a pod with kubernetes.core.k8s_cp?",
+  "k8s_exec tar example for metrics report",
+  "How does the metrics report fetch playbook work?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:00+00:00"
+}

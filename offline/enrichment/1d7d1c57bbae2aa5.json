@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1d7d1c57bbae2aa5",
+ "chunk_hash": "1d7d1c57bbae2aa5",
+ "summary": "Browse the REST API at https://<gateway>/api/controller/v2; v2 is the supported version, GET /api/ shows current_version, and the browsable UI documents endpoints and supports GET, PUT and POST.",
+ "questions": [
+  "How do I browse the automation controller API?",
+  "What is the controller API URL through gateway?",
+  "Which API version is supported in AAP 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:23:20+00:00"
+}

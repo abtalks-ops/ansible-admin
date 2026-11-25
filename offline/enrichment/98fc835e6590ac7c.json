@@ -1,0 +1,13 @@
+{
+ "chunk_id": "98fc835e6590ac7c",
+ "chunk_hash": "98fc835e6590ac7c",
+ "summary": "inventory_counts.json lists each inventory with host count, kind (e.g. smart), name, sources and per-source host counts.",
+ "questions": [
+  "What is in inventory_counts.json?",
+  "Does analytics show inventory sources?",
+  "inventory_counts.json example"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:17:10+00:00"
+}

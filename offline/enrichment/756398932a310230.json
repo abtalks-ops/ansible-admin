@@ -1,0 +1,13 @@
+{
+ "chunk_id": "756398932a310230",
+ "chunk_hash": "756398932a310230",
+ "summary": "Test a HashiCorp Vault lookup by creating another credential that uses it; links point to Vault docs for LDAP, AppRole, userpass, Kubernetes and TLS auth methods.",
+ "questions": [
+  "How do I test a HashiCorp Vault lookup credential?",
+  "Where are Vault auth method docs?",
+  "Vault lookup test fails"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:09:20+00:00"
+}
