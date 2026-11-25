@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5eaac8a5290dc29f",
+ "chunk_hash": "5eaac8a5290dc29f",
+ "summary": "For clustered installs, deprovision omitted instances or instance groups before an upgrade (removing them from the inventory is not enough), and replace `localhost` with real hostnames in a consistent format for every node.",
+ "questions": [
+  "How do I remove nodes from a cluster during upgrade?",
+  "Why does the installer reject localhost in a cluster?",
+  "Can I mix short names and FQDNs in the inventory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

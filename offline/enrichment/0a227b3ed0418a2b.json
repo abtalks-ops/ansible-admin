@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0a227b3ed0418a2b",
+ "chunk_hash": "0a227b3ed0418a2b",
+ "summary": "Port table entries for mesh: receptor 27199 for execution, hop and hybrid nodes (`receptor_listener_port`, `receptor_peers`), SSH 22 from the installer, and PostgreSQL 5432 from controller only when the internal database is shared with another component (`automationcontroller_pg_port`).",
+ "questions": [
+  "Which port do hop nodes use?",
+  "Do I need to open 5432 on the database?",
+  "Receptor port for hybrid nodes"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

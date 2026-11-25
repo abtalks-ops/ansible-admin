@@ -1,0 +1,17 @@
+{
+ "chunk_id": "19923fdda37e6206",
+ "chunk_hash": "19923fdda37e6206",
+ "summary": "Load `clusters.yaml` with `podman cp clusters.yaml automation-dashboard-web:/tmp` and `podman exec -it automation-dashboard-web /venv/bin/python manage.py setclusters /tmp/clusters.yaml`; tokens rotate internally, so get current ones with `manage.py getclusters --decrypt` before re-running setclusters.",
+ "questions": [
+  "How do I load clusters.yaml into automation dashboard?",
+  "setclusters fails with expired tokens",
+  "How do I get the current tokens from automation dashboard?"
+ ],
+ "answer_card": {
+  "title": "Load cluster config into automation dashboard",
+  "answer_md": "```bash\npodman cp clusters.yaml automation-dashboard-web:/tmp\npodman exec -it automation-dashboard-web /venv/bin/python manage.py setclusters /tmp/clusters.yaml\n```\nThe dashboard rotates tokens internally but does not update your local file. Before re-running `setclusters`, export the current ones:\n```bash\npodman exec -it automation-dashboard-web /venv/bin/python manage.py getclusters --decrypt > clusters_current.yaml\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_dashboard/index#proc-integrating-automation-dashboard"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

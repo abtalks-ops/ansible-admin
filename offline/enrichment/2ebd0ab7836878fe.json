@@ -1,0 +1,17 @@
+{
+ "chunk_id": "2ebd0ab7836878fe",
+ "chunk_hash": "2ebd0ab7836878fe",
+ "summary": "The RPM installer is installed with `sudo dnf install --enablerepo=ansible-automation-platform-2.6-for-rhel-9-x86_64-rpms ansible-automation-platform-installer` and places files in `/opt/ansible-automation-platform/installer`; it is deprecated and removed in 2.7.",
+ "questions": [
+  "How do I install the AAP installer RPM?",
+  "Where does the RPM installer put its files?",
+  "Which repo provides ansible-automation-platform-installer?"
+ ],
+ "answer_card": {
+  "title": "Install the AAP 2.6 RPM installer",
+  "answer_md": "```bash\nsudo dnf install --enablerepo=ansible-automation-platform-2.6-for-rhel-9-x86_64-rpms \\\n  ansible-automation-platform-installer\n```\nThe repo is disabled by default, hence `--enablerepo`. Files go to `/opt/ansible-automation-platform/installer`. The RPM installer is deprecated and will be removed in 2.7.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_installation/index#proc-installing-with-internet_planning"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

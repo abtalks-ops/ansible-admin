@@ -1,0 +1,13 @@
+{
+ "chunk_id": "570b7c828d49ca8a",
+ "chunk_hash": "570b7c828d49ca8a",
+ "summary": "Create an Ansible Playbook project in RHDH via the Ansible icon > Overview > Create > Create Ansible Git Project > Create Ansible Playbook project, then fill in the form; you need RBAC access to view templates.",
+ "questions": [
+  "How do I create an Ansible playbook project in Developer Hub?",
+  "I can't see the Ansible templates in RHDH",
+  "Create Ansible Git Project steps"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

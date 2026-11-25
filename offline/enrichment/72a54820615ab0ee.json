@@ -1,0 +1,13 @@
+{
+ "chunk_id": "72a54820615ab0ee",
+ "chunk_hash": "72a54820615ab0ee",
+ "summary": "Automation controller is the enterprise framework for defining, operating, scaling and delegating Ansible automation.",
+ "questions": [
+  "What is automation controller?",
+  "What is the difference between controller and AAP?",
+  "What does automation controller do?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

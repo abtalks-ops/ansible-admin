@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4e0911a05b31f1e6",
+ "chunk_hash": "4e0911a05b31f1e6",
+ "summary": "Top templates in the Automation Calculator lists the 25 most-run templates in descending run count, with a field to enter the manual time each automates (default 60 minutes) for a more accurate total savings.",
+ "questions": [
+  "What does Top templates show in the automation calculator?",
+  "What is the default manual time per template?",
+  "How many templates are listed in Top templates?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

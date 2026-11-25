@@ -1,0 +1,17 @@
+{
+ "chunk_id": "02ca281181553540",
+ "chunk_hash": "02ca281181553540",
+ "summary": "Connect RHDH to automation controller by creating a read-and-write Personal Access Token and setting `ansible.rhaap.baseUrl`, `token` and `checkSSL` in `app-config-rhdh.yaml`; the plug-ins keep working regardless of subscription status, and the token should be injected as an environment variable.",
+ "questions": [
+  "How do I connect the Ansible plug-ins to automation controller?",
+  "What token scope does RHDH need for AAP?",
+  "What does checkSSL do in the rhaap config?"
+ ],
+ "answer_card": {
+  "title": "Point RHDH at automation controller",
+  "answer_md": "1. In automation controller create a Personal Access Token with **read and write** scope.\n2. Add to `app-config-rhdh.yaml`:\n```yaml\nansible:\n  rhaap:\n    baseUrl: 'https://<controller-url>'\n    token: '<AAP Personal Access Token>'\n    checkSSL: true   # verify the controller certificate\n```\nTreat the token as a secret: inject it as an environment variable rather than writing it in config files.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_ansible_plug_ins_for_red_hat_developer_hub/index#rhdh-configure-aap-details_aap-plugin-rhdh-installing"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

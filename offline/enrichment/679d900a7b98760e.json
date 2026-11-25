@@ -1,0 +1,14 @@
+{
+ "chunk_id": "679d900a7b98760e",
+ "chunk_hash": "679d900a7b98760e",
+ "summary": "Platform gateway and Event-Driven Ansible use centralized Redis (gateway: settings, sessions, JSON Web Tokens; EDA: event queues, partitioned from each other), while controller and hub have their own Redis instances; it supports TLS and authentication.",
+ "questions": [
+  "Which AAP components share centralized Redis?",
+  "What data does the gateway cache in Redis?",
+  "Does automation controller use the centralized Redis?",
+  "Can EDA read gateway data in Redis?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

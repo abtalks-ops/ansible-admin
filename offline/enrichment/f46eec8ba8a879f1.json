@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f46eec8ba8a879f1",
+ "chunk_hash": "f46eec8ba8a879f1",
+ "summary": "Use Discover existing collections > Go to Automation Hub (private hub if configured, otherwise the console automation hub) and search `rhel firewall` to find the certified `rhel_system_roles` collection.",
+ "questions": [
+  "Which collection configures the RHEL firewall?",
+  "How do I find RHEL system roles in automation hub?",
+  "Search automation hub for firewall content"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

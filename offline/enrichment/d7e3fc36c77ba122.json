@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d7e3fc36c77ba122",
+ "chunk_hash": "d7e3fc36c77ba122",
+ "summary": "Procedure to configure compression in an AnsibleAutomationPlatformBackup CR (global `use_db_compression: true`, per-component override), apply it with `oc apply`, watch it with `oc get ansibleautomationplatformbackup -w` and check for a Successful condition.",
+ "questions": [
+  "How do I configure backup compression for the AAP operator?",
+  "How do I check an AnsibleAutomationPlatformBackup completed?",
+  "Disable compression for controller backup only"
+ ],
+ "answer_card": {
+  "title": "Configure compressed operator backups",
+  "answer_md": "```yaml\napiVersion: aap.ansible.com/v1alpha1\nkind: AnsibleAutomationPlatformBackup\nmetadata:\n  name: aap-backup\n  namespace: aap\nspec:\n  deployment_name: aap\n  use_db_compression: true        # global default\n  controller:\n    use_db_compression: false     # per-component override\n```\n```bash\noc apply -f backup.yml\noc get ansibleautomationplatformbackup -n aap -w\noc get ansibleautomationplatformbackup aap-backup -n aap -o jsonpath='{.status.conditions}'  # expect Successful\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-configure-backup-compression"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2a69b0766384b224",
+ "chunk_hash": "2a69b0766384b224",
+ "summary": "Ansible Automation Platform 2.6 uses Redis for centralized caching and queueing, storing event queues, session data and tokens in memory.",
+ "questions": [
+  "What does AAP use Redis for?",
+  "Is Redis required in AAP 2.6?",
+  "What is the caching and queueing system in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d149b102b714e8c6",
+ "chunk_hash": "d149b102b714e8c6",
+ "summary": "With the RHDH Operator, add the Ansible dev tools sidecar by editing the Backstage CR (`rhdh.redhat.com/v1alpha4`) and adding a container under `spec.deployment.patch.spec.template.spec.containers` running `adt server` from the ansible-dev-tools-rhel9 image on port 8000; extra env vars go in `spec.application.extraEnvs`.",
+ "questions": [
+  "How do I add the Ansible dev tools sidecar with the RHDH Operator?",
+  "Backstage CR containers patch for adt server",
+  "How do I add environment variables to the RHDH Operator deployment?"
+ ],
+ "answer_card": {
+  "title": "Dev tools sidecar in the Backstage CR",
+  "answer_md": "```yaml\napiVersion: rhdh.redhat.com/v1alpha4\nkind: Backstage\nmetadata:\n  name: developer-hub\nspec:\n  deployment:\n    patch:\n      spec:\n        template:\n          spec:\n            containers:\n              - command: [adt, server]\n                image: registry.redhat.io/ansible-automation-platform-26/ansible-dev-tools-rhel9:latest\n                imagePullPolicy: always\n                ports:\n                  - containerPort: 8000\n                    protocol: TCP\n                terminationMessagePolicy: file\n```\nEdit it in Topology > developer-hub > Edit backstage > YAML.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_ansible_plug_ins_for_red_hat_developer_hub/index#rhdh-operator-add-sidecar-container_aap-plugin-rhdh-installing"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f38a544a620bf628",
+ "chunk_hash": "f38a544a620bf628",
+ "summary": "Red Hat recommends setting up RHDH authentication and authorization first, though not required; the ansible-rhdh-templates repository uses the `publish:github` action, so the GitHub dynamic plugins must be installed to use it.",
+ "questions": [
+  "Do I need to configure RHDH authentication before installing the Ansible plug-ins?",
+  "Why do the Ansible software templates need GitHub plugins?",
+  "Where are the Ansible RHDH software templates?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

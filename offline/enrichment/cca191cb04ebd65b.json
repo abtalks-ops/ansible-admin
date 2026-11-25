@@ -1,0 +1,13 @@
+{
+ "chunk_id": "cca191cb04ebd65b",
+ "chunk_hash": "cca191cb04ebd65b",
+ "summary": "Port table for automation hub: SSH 22 from the installer (`ansible_port`), and 80/443 from the installer (bundle EE push), controller (collections), EDA (decision environments), execution nodes (EE images) and the gateway load balancer (`automationgateway_main_url`).",
+ "questions": [
+  "Which ports must be open on automation hub?",
+  "What port do execution nodes use to pull images from hub?",
+  "Does EDA need access to automation hub?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a078b968d568341c",
+ "chunk_hash": "a078b968d568341c",
+ "summary": "Basic fresh-install AnsibleAutomationPlatform CR deploying controller, EDA and hub with file storage, with commented options for `redis_mode: cluster`, `bundle_cacert_secret`, platform `extra_settings` and Lightspeed.",
+ "questions": [
+  "Minimal AnsibleAutomationPlatform CR for a fresh install",
+  "How do I enable Redis cluster mode in the operator CR?",
+  "Example aap-fresh-install.yml"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

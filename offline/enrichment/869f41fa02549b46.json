@@ -1,0 +1,13 @@
+{
+ "chunk_id": "869f41fa02549b46",
+ "chunk_hash": "869f41fa02549b46",
+ "summary": "Automation savings compare the time and cost of doing a task manually with automating it, across all organizations, clusters, hosts and templates; the initial total uses default values until you enter your own costs.",
+ "questions": [
+  "How are automation savings calculated?",
+  "Why does the savings figure use default values?",
+  "Automation savings overview"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

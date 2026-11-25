@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c457ba7d7ff7468f",
+ "chunk_hash": "c457ba7d7ff7468f",
+ "summary": "Run a playbook in the workspace by right-clicking it and choosing Run ansible playbook via ansible playbook; execution environments and ansible-navigator cannot be used in Ansible development workspaces.",
+ "questions": [
+  "How do I run a playbook in an Ansible development workspace?",
+  "Can I use ansible-navigator in Dev Spaces workspaces?",
+  "Execution environments in development workspaces"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

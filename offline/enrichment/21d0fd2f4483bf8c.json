@@ -1,0 +1,13 @@
+{
+ "chunk_id": "21d0fd2f4483bf8c",
+ "chunk_hash": "21d0fd2f4483bf8c",
+ "summary": "AnsibleAutomationPlatform CR (aap-fresh-only-controller.yml) that deploys only automation controller, with `eda.disabled: true` and `hub.disabled: true`.",
+ "questions": [
+  "CR to deploy only automation controller with the operator",
+  "How do I disable EDA and hub in AnsibleAutomationPlatform?",
+  "Controller-only AAP on OpenShift"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}
