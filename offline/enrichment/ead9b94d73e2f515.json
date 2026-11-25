@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ead9b94d73e2f515",
+ "chunk_hash": "ead9b94d73e2f515",
+ "summary": "Notification messages are single-line strings; webhook and PagerDuty bodies are dictionaries defaulting to {{ job_metadata }}, and the email body defaults to '{{ job_friendly_name }} #{{ job.id }} had status {{ job.status }}, view details at {{ url }} {{ job_metadata }}'.",
+ "questions": [
+  "Can notification messages have multiple lines?",
+  "What is the default email notification body?",
+  "What is the default webhook notification body?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

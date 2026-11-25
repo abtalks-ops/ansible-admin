@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c10c72e5c3cb325b",
+ "chunk_hash": "c10c72e5c3cb325b",
+ "summary": "On Windows, install WSL2 (wsl --install --no-distribution), force cgroup v2 in wsl.conf, install Podman Desktop, check podman info, and add a docker.bat wrapper calling podman to your PATH for Dev Containers.",
+ "questions": [
+  "How do I install Ansible development tools on Windows?",
+  "How do I use Podman instead of Docker with VS Code Dev Containers on Windows?",
+  "Enable cgroup v2 in WSL2 for Podman"
+ ],
+ "answer_card": {
+  "title": "ansible-dev-tools on Windows",
+  "answer_md": "```\nwsl --install --no-distribution\n```\n\n`%USERPROFILE%/wsl.conf`:\n\n```\n[wsl2]\nkernelCommandLine = cgroup_no_v1=\"all\"\n```\n\nInstall Podman Desktop, check `podman info | findstr cgroup`, then create `%USERPROFILE%\\bin\\docker.bat`:\n\n```\n@echo off\npodman %*\n```\n\nand add `%USERPROFILE%\\bin` to your user PATH.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/developing_automation_content/index#devtools-install-podman-desktop-wsl_develop-automation-content"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

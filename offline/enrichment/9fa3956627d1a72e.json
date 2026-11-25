@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9fa3956627d1a72e",
+ "chunk_hash": "9fa3956627d1a72e",
+ "summary": "Example playbook reading controller credentials: ansible_user and ansible_password for machine, and env lookups for CONTROLLER_*, ANSIBLE_NET_*, AWS_*, VMWARE_*, GCE_* and AZURE_* variables.",
+ "questions": [
+  "How do I use automation controller credentials in a playbook?",
+  "Example playbook that reads cloud credentials from environment variables",
+  "Which variables hold credential values in a job?"
+ ],
+ "answer_card": {
+  "title": "Credential values in a playbook",
+  "answer_md": "```\nvars:\n  machine:\n    username: '{{ ansible_user }}'\n    password: '{{ ansible_password }}'\n  controller:\n    host: '{{ lookup(\"env\", \"CONTROLLER_HOST\") }}'\n  network:\n    username: '{{ lookup(\"env\", \"ANSIBLE_NET_USERNAME\") }}'\n  aws:\n    access_key: '{{ lookup(\"env\", \"AWS_ACCESS_KEY_ID\") }}'\n  vmware:\n    host: '{{ lookup(\"env\", \"VMWARE_HOST\") }}'\n  azure:\n    client_id: '{{ lookup(\"env\", \"AZURE_CLIENT_ID\") }}'\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#ref-controller-use-credentials-in-playbooks"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

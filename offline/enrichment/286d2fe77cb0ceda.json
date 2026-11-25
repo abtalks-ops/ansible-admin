@@ -1,0 +1,13 @@
+{
+ "chunk_id": "286d2fe77cb0ceda",
+ "chunk_hash": "286d2fe77cb0ceda",
+ "summary": "The Bitbucket Data Center HTTP access token credential uses an HTTP access token instead of a password for Git over HTTPS.",
+ "questions": [
+  "How do I use a Bitbucket access token in automation controller?",
+  "Bitbucket Data Center credential for project sync",
+  "Git over HTTPS with Bitbucket token in AAP"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

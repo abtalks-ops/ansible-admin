@@ -1,0 +1,17 @@
+{
+ "chunk_id": "033aa7e53636441f",
+ "chunk_hash": "033aa7e53636441f",
+ "summary": "Read AWS credential values in a playbook with lookup('env', 'AWS_ACCESS_KEY_ID'), AWS_SECRET_ACCESS_KEY and AWS_SECURITY_TOKEN.",
+ "questions": [
+  "How do I access AWS credentials in a playbook?",
+  "Use AWS_ACCESS_KEY_ID in an Ansible job",
+  "Get the AWS security token in a controller job"
+ ],
+ "answer_card": {
+  "title": "AWS credential values in a playbook",
+  "answer_md": "```\nvars:\n  aws:\n    access_key: '{{ lookup(\"env\", \"AWS_ACCESS_KEY_ID\") }}'\n    secret_key: '{{ lookup(\"env\", \"AWS_SECRET_ACCESS_KEY\") }}'\n    security_token: '{{ lookup(\"env\", \"AWS_SECURITY_TOKEN\") }}'\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#ref-controller-access-ec2-credentials-in-playbook"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

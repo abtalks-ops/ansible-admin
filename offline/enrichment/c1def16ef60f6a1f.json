@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c1def16ef60f6a1f",
+ "chunk_hash": "c1def16ef60f6a1f",
+ "summary": "Red Hat Lightspeed (Insights) scans registered hosts and offers remediation playbooks grouped in maintenance plans; controller runs them through a Lightspeed project and inventory using a dedicated credential.",
+ "questions": [
+  "How does automation controller integrate with Red Hat Insights?",
+  "What do I need to run a Lightspeed maintenance plan?",
+  "What is a Red Hat Lightspeed remediation playbook?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

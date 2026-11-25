@@ -1,0 +1,13 @@
+{
+ "chunk_id": "29c7a66eced3ee35",
+ "chunk_hash": "29c7a66eced3ee35",
+ "summary": "Email notifications support SMTP with SSL/TLS and need host, recipient list, sender email, port and a connection timeout of up to 120 seconds.",
+ "questions": [
+  "How do I configure email notifications in controller?",
+  "What is the maximum email notification timeout?",
+  "Does the email notifier support TLS?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

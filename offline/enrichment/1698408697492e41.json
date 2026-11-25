@@ -1,0 +1,14 @@
+{
+ "chunk_id": "1698408697492e41",
+ "chunk_hash": "1698408697492e41",
+ "summary": "From the Instances page you can add, remove or health-check nodes; removing a running instance waits for its jobs to finish, deleting the VM first shows an error, and the install bundle is only reinstalled when topology changes.",
+ "questions": [
+  "How do I remove an execution node from the mesh?",
+  "Can I remove an instance with jobs running?",
+  "Do I need to reinstall the install bundle after adding a node?",
+  "Why is the remove button disabled on Instances?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

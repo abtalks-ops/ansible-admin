@@ -1,0 +1,13 @@
+{
+ "chunk_id": "844bcd451854b9a1",
+ "chunk_hash": "844bcd451854b9a1",
+ "summary": "Thycotic DevOps Secrets Vault can be used as a credential type in controller as part of secret management.",
+ "questions": [
+  "Does automation controller support Thycotic DevOps Secrets Vault?",
+  "What is the Thycotic DSV credential type?",
+  "Retrieve secrets from Thycotic in AAP"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

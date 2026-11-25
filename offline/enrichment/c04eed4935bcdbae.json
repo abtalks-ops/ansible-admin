@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c04eed4935bcdbae",
+ "chunk_hash": "c04eed4935bcdbae",
+ "summary": "Other become methods for machine credentials: pfexec, dzdo (Centrify), pmrun, runas, enable for network devices, doas, ksu (Kerberos), machinectl and sesu (CA PAM).",
+ "questions": [
+  "What is the dzdo become method?",
+  "Which become method do I use for network device enable mode?",
+  "Does automation controller support doas or ksu?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5f6c84658a76c9fb",
+ "chunk_hash": "5f6c84658a76c9fb",
+ "summary": "API v2 lets a job template have many credentials (multicloud); filter credentials with ?credential_type__namespace=aws, and v2 credential kinds map Machine to SSH, Vault, Network, SCM, Cloud, Insights and Galaxy.",
+ "questions": [
+  "How do I filter credentials by type in the API?",
+  "What changed with credentials between api/v1 and api/v2?",
+  "Can a job template have multiple credentials in API v2?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

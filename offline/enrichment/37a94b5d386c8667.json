@@ -1,0 +1,17 @@
+{
+ "chunk_id": "37a94b5d386c8667",
+ "chunk_hash": "37a94b5d386c8667",
+ "summary": "To use the default execution environment on remote execution nodes, create a pull secret (username, password, url registry.redhat.io) in the controller namespace, set spec.ee_pull_credentials_secret and restart the operator pod.",
+ "questions": [
+  "How do I set ee_pull_credentials_secret?",
+  "Remote execution nodes cannot pull the execution environment image",
+  "Create a pull secret for execution environments on OpenShift"
+ ],
+ "answer_card": {
+  "title": "Pull secret for remote execution nodes",
+  "answer_md": "```\noc create secret generic ee-pull-secret \\\n  --from-literal=username=<username> \\\n  --from-literal=password=<password> \\\n  --from-literal=url=registry.redhat.io\noc edit automationcontrollers <instance name>\n```\n\nAdd to the spec:\n\n```\nspec:\n  ee_pull_credentials_secret: ee-pull-secret\n```\n\nThen restart the automation controller Operator pod.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#proc-controller-pulling-secret"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

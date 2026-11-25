@@ -1,0 +1,13 @@
+{
+ "chunk_id": "10d8910897b2ebaa",
+ "chunk_hash": "10d8910897b2ebaa",
+ "summary": "A Container Registry credential authenticates controller to a registry to pull images; it needs a name and has a pre-filled Authentication URL you can change.",
+ "questions": [
+  "How do I authenticate to a private container registry in controller?",
+  "What is the Container Registry credential type?",
+  "Change the authentication URL for a registry credential"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

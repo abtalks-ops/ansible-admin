@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4c13ac1267b278a8",
+ "chunk_hash": "4c13ac1267b278a8",
+ "summary": "OpenStack credentials (username, password or API key, auth URL host, project/tenant, optional project domain, domain name and region, required by some providers such as OVH) sync OpenStack inventory.",
+ "questions": [
+  "What fields does an OpenStack credential need?",
+  "Do I need a region for the OpenStack credential?",
+  "How do I sync OpenStack inventory in controller?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

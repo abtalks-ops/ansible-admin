@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b7ea90a33b8b538a",
+ "chunk_hash": "b7ea90a33b8b538a",
+ "summary": "Execution environments are container images containing Ansible, ansible-runner, collections and Python or system packages; you build them with ansible-builder and ansible-runner uses them.",
+ "questions": [
+  "What is inside an execution environment?",
+  "What tool builds execution environments?",
+  "How does ansible-runner use execution environments?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}

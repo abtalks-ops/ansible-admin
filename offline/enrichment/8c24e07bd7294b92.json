@@ -1,0 +1,14 @@
+{
+ "chunk_id": "8c24e07bd7294b92",
+ "chunk_hash": "8c24e07bd7294b92",
+ "summary": "Container capacity limits come from Kubernetes LimitRange objects or limits in the custom pod spec; container groups do not use the node capacity algorithm, so set forks on the job template.",
+ "questions": [
+  "How do I set resource limits for container group pods?",
+  "Do container groups use the controller capacity algorithm?",
+  "Use LimitRange with AAP container groups",
+  "Where do I set forks for container group jobs?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:02:19+00:00"
+}
