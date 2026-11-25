@@ -1,0 +1,13 @@
+{
+ "chunk_id": "217cc651c1fecdc8",
+ "chunk_hash": "217cc651c1fecdc8",
+ "summary": "After upgrading to 2.6, OAuth and SSO authenticators are disabled and their callback_url moves from controller to platform gateway and is generated per authenticator; copy it from the authenticator details into your IdP (GitHub, Entra ID, Keycloak, OIDC, Google) and re-enable the authenticator.",
+ "questions": [
+  "SSO login fails after upgrading to AAP 2.6",
+  "Where do I find the callback URL for my authenticator?",
+  "Why is my authentication method disabled after upgrade?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:19:16+00:00"
+}

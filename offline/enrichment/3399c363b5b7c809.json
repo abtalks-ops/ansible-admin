@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3399c363b5b7c809",
+ "chunk_hash": "3399c363b5b7c809",
+ "summary": "Microsoft Entra ID setup: configure the authenticator, register AAP as an application in Entra ID for a client ID and secret, and add the Azure AD OAuth2 Callback URL from AAP as a redirect URL; claims are translated by the social_core azuread backend.",
+ "questions": [
+  "How do I set up Microsoft Entra ID login for AAP?",
+  "Where do I get the redirect URL for Entra ID?",
+  "Azure AD authentication in AAP 2.6"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:19:59+00:00"
+}

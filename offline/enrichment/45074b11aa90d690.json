@@ -1,0 +1,13 @@
+{
+ "chunk_id": "45074b11aa90d690",
+ "chunk_hash": "45074b11aa90d690",
+ "summary": "Team maps add users as Team Member or Team Admin and create the team and organization if allowed; with Attribute triggers use the or operation, because and requires every value in a list to match.",
+ "questions": [
+  "How do I map users to a team?",
+  "Why doesn't my team attribute map match?",
+  "Should I use and or or for team attribute maps?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:03+00:00"
+}

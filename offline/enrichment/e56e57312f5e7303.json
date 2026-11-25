@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e56e57312f5e7303",
+ "chunk_hash": "e56e57312f5e7303",
+ "summary": "Tag and push the MCP execution environment image to a registry AAP can reach, such as the private automation hub registry, with podman tag and podman push.",
+ "questions": [
+  "How do I push my MCP execution environment image?",
+  "Where should I push an MCP-enabled execution environment?",
+  "podman tag and push execution environment"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:45+00:00"
+}

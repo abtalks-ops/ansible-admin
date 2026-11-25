@@ -1,0 +1,13 @@
+{
+ "chunk_id": "53af3907a562d9c0",
+ "chunk_hash": "53af3907a562d9c0",
+ "summary": "A GitHub enterprise team authenticator takes the OAuth2 Key and Secret, Base URL, Enterprise API URL and the team ID field, plus Create objects, Enabled and Remove users.",
+ "questions": [
+  "Which fields does the GitHub enterprise team authenticator need?",
+  "Configure GitHub enterprise team authenticator in AAP",
+  "GitHub OAuth2 team ID field for enterprise"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:20:40+00:00"
+}

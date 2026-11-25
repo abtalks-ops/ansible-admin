@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ee45062fa0d484be",
+ "chunk_hash": "ee45062fa0d484be",
+ "summary": "Before adding an MCP server to an execution environment, audit its code, pin versions (for example cfn_mcp_version: \"0.7.2\"), use read-only flags such as --readonly, and grant only the permissions it needs.",
+ "questions": [
+  "Is it safe to install community MCP servers in an execution environment?",
+  "How do I run an MCP server in read-only mode?",
+  "Should I pin MCP server versions?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:12+00:00"
+}

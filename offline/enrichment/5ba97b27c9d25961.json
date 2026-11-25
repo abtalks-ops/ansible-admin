@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5ba97b27c9d25961",
+ "chunk_hash": "5ba97b27c9d25961",
+ "summary": "A GitHub enterprise authenticator takes the OAuth2 Key and Secret, Base URL (for example https://github.example.com) and Github OAuth2 Enterprise API URL (for example https://github.example.com/api/v3).",
+ "questions": [
+  "What is the GitHub Enterprise API URL for AAP?",
+  "Which fields does the GitHub enterprise authenticator need?",
+  "GitHub Enterprise Base URL in AAP"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:20:40+00:00"
+}

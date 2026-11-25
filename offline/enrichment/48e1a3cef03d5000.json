@@ -1,0 +1,13 @@
+{
+ "chunk_id": "48e1a3cef03d5000",
+ "chunk_hash": "48e1a3cef03d5000",
+ "summary": "Create an Allow map from the authenticator's Mapping tab with a name, a trigger and optionally Revoke to deny users who don't match, then order maps with Manage mappings.",
+ "questions": [
+  "How do I restrict who can log in with an authenticator?",
+  "How do I create an Allow map?",
+  "Deny login to users not in an LDAP group"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:03+00:00"
+}

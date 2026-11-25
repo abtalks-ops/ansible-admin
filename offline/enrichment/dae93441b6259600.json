@@ -1,0 +1,13 @@
+{
+ "chunk_id": "dae93441b6259600",
+ "chunk_hash": "dae93441b6259600",
+ "summary": "A minimal version 3 execution-environment.yml with galaxy: requirements.yml (for example awx.awx) builds with ansible-builder build, which also keeps the build context in context/ for rebuilding with podman or docker build.",
+ "questions": [
+  "Simple execution-environment.yml example",
+  "Where does ansible-builder put the build context?",
+  "Can I rebuild an execution environment with docker build?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:12+00:00"
+}

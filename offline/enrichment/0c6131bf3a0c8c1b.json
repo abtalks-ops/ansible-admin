@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0c6131bf3a0c8c1b",
+ "chunk_hash": "0c6131bf3a0c8c1b",
+ "summary": "Superuser maps grant the superuser (System Administrator) role to users matching the trigger; Revoke removes it from users who don't match.",
+ "questions": [
+  "How do I grant superuser via an authenticator map?",
+  "How do I remove superuser from users not in a group?",
+  "Superuser mapping in AAP"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:26+00:00"
+}
