@@ -1,0 +1,13 @@
+{
+ "chunk_id": "deedbe324a59c7bb",
+ "chunk_hash": "deedbe324a59c7bb",
+ "summary": "Known issues: authentication role mappings list all roles but only Org Admin, Org Member, Team Admin, Team Member and Platform Auditor are supported; upgrading an existing Lightspeed deployment from 2.5 to 2.6 fails until the October 22, 2025 patch (AAP-54064).",
+ "questions": [
+  "Which roles are supported in authenticator role mappings?",
+  "Why did Lightspeed fail after upgrading to AAP 2.6?",
+  "Can I upgrade Lightspeed from 2.5 to 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

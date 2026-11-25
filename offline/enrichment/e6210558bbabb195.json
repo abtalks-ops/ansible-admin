@@ -1,0 +1,18 @@
+{
+ "chunk_id": "e6210558bbabb195",
+ "chunk_hash": "e6210558bbabb195",
+ "summary": "Lists pods for an Operator upgrade from a 2.4 redundant controller-only deployment with two mesh ingress pods and external database to the 2.6 enterprise topology, which also needs external Redis and object storage for hub.",
+ "questions": [
+  "What pods does the 2.6 Operator enterprise topology need?",
+  "Does the AAP 2.6 enterprise topology need external Redis?",
+  "How many EDA worker pods are in the Operator enterprise topology?",
+  "Upgrade multi node controller on OpenShift from 2.4 to 2.6 requirements"
+ ],
+ "answer_card": {
+  "title": "2.6 Operator enterprise topology pods",
+  "answer_md": "- Controller: 1 web, 1 task pod; 2 automation mesh ingress pods\n- Automation hub: 1 web, 1 API, 2 content, 2 worker, 1 Redis pod\n- Event-Driven Ansible: 1 API, 2 activation worker, 2 default worker, 2 event stream, 1 scheduler pod\n- 1 platform gateway pod\n- Externally managed database, Redis, and object storage (for hub)",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#operator-upgrade-multi-controller-enterprise"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

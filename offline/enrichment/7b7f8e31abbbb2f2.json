@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7b7f8e31abbbb2f2",
+ "chunk_hash": "7b7f8e31abbbb2f2",
+ "summary": "Workaround for the Lightspeed chatbot 403: add CSRF_TRUSTED_ORIGINS set to the platform gateway FQDN under spec.lightspeed.extra_settings in the AnsibleAutomationPlatform resource and wait for redeployment.",
+ "questions": [
+  "How do I fix the Lightspeed chatbot 403 error?",
+  "How do I set CSRF_TRUSTED_ORIGINS for Lightspeed?",
+  "Where do I put extra_settings for Lightspeed in the AAP operator?"
+ ],
+ "answer_card": {
+  "title": "Fix Lightspeed chatbot 403 (CSRF)",
+  "answer_md": "Edit the `AnsibleAutomationPlatform` resource and wait for redeploy:\n\n```yaml\nkind: AnsibleAutomationPlatform\nspec:\n  lightspeed:\n    extra_settings:\n      - setting: CSRF_TRUSTED_ORIGINS\n        value: 'https://<platform gateway FQDN>'\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

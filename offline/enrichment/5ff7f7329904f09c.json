@@ -1,0 +1,17 @@
+{
+ "chunk_id": "5ff7f7329904f09c",
+ "chunk_hash": "5ff7f7329904f09c",
+ "summary": "Shows how 2.4 controller OIDC settings SOCIAL_AUTH_OIDC_KEY, _SECRET, _OIDC_ENDPOINT and _VERIFY_SSL map to gateway authenticator configuration keys KEY, SECRET, OIDC_ENDPOINT and VERIFY_SSL.",
+ "questions": [
+  "How do SOCIAL_AUTH_OIDC settings map to platform gateway?",
+  "What does an OIDC authenticator configuration look like in gateway?",
+  "Where does SOCIAL_AUTH_OIDC_OIDC_ENDPOINT go in 2.6?"
+ ],
+ "answer_card": {
+  "title": "OIDC settings 2.4 → 2.6",
+  "answer_md": "| Controller 2.4 | Gateway 2.6 `configuration` |\n|---|---|\n| `SOCIAL_AUTH_OIDC_KEY` | `KEY` |\n| `SOCIAL_AUTH_OIDC_SECRET` | `SECRET` |\n| `SOCIAL_AUTH_OIDC_OIDC_ENDPOINT` | `OIDC_ENDPOINT` |\n| `SOCIAL_AUTH_OIDC_VERIFY_SSL` | `VERIFY_SSL` |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-oidc-auth"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

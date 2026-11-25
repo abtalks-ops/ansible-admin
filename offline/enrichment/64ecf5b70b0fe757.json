@@ -1,0 +1,13 @@
+{
+ "chunk_id": "64ecf5b70b0fe757",
+ "chunk_hash": "64ecf5b70b0fe757",
+ "summary": "The May 4, 2026 patch includes controller 4.7.10, hub 4.11.7, EDA 1.2.7, containerized installer 2.6-7, Receptor 1.6.4, RPM installer 2.6-6.1 bundle and 2.6-6 online, and operator bundles aap-operator.v2.6.0-0.1777410689/0680.",
+ "questions": [
+  "What versions are in the May 2026 AAP patch release?",
+  "Which controller version is in the May 4, 2026 AAP release?",
+  "What is the operator CSV version for the May 2026 patch?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

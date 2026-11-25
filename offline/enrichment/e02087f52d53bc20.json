@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e02087f52d53bc20",
+ "chunk_hash": "e02087f52d53bc20",
+ "summary": "December 2025 operator enhancements: EDA event-stream mTLS config in the installer, and a restore CR spec_overrides field for controller, hub, eda and database settings (AAP-60024).",
+ "questions": [
+  "How do I override settings when restoring with the AAP operator?",
+  "What is spec_overrides in the restore CR?",
+  "Does EDA event stream support mTLS?"
+ ],
+ "answer_card": {
+  "title": "Restore CR spec_overrides",
+  "answer_md": "The AAP operator restore CR accepts `spec_overrides` to change settings while restoring:\n- `spec_overrides.controller`\n- `spec_overrides.hub`\n- `spec_overrides.eda`\n- `spec_overrides.database`\n\n(Added December 10, 2025, AAP-60024.)",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

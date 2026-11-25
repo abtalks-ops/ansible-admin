@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0fdd721bec225676",
+ "chunk_hash": "0fdd721bec225676",
+ "summary": "Lists pods for an Operator upgrade from a 2.4 non-redundant controller plus automation hub deployment to the 2.6 growth topology, which adds hub Redis, Event-Driven Ansible, platform gateway and Redis pods.",
+ "questions": [
+  "What pods are added when upgrading 2.4 controller and hub on OpenShift to 2.6?",
+  "What does a 2.4 non-redundant controller and hub Operator deployment look like?",
+  "Which 2.6 topology fits a single controller and hub deployment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

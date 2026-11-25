@@ -1,0 +1,13 @@
+{
+ "chunk_id": "764e680d87489889",
+ "chunk_hash": "764e680d87489889",
+ "summary": "December 2025 controller features: Receptor collection 2.0.8, compatible with RHEL 10, and x-ai-description added to the controller schema for AI-friendly endpoint descriptions.",
+ "questions": [
+  "Which receptor collection version supports RHEL 10?",
+  "What is x-ai-description in the controller API schema?",
+  "Is receptor compatible with RHEL 10?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

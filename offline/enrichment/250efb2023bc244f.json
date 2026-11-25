@@ -1,0 +1,13 @@
+{
+ "chunk_id": "250efb2023bc244f",
+ "chunk_hash": "250efb2023bc244f",
+ "summary": "Hub fixes: OpenAPI spec now includes service_index endpoints (AAP-72227), and artifact download view counting no longer errors (AAP-71346).",
+ "questions": [
+  "Why is service_index missing from the automation hub OpenAPI spec?",
+  "Automation hub artifact download counting error fix",
+  "Was AAP-71346 fixed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

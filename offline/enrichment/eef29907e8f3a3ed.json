@@ -1,0 +1,17 @@
+{
+ "chunk_id": "eef29907e8f3a3ed",
+ "chunk_hash": "eef29907e8f3a3ed",
+ "summary": "Container-based AAP upgrades need specific infrastructure changes, and upgrading containerized AAP 2.4 directly to 2.6 is not supported.",
+ "questions": [
+  "Can I upgrade containerized AAP 2.4 to 2.6?",
+  "What infrastructure changes do containerized AAP upgrades need?",
+  "Where are the containerized AAP upgrade steps?"
+ ],
+ "answer_card": {
+  "title": "Containerized AAP upgrade paths",
+  "answer_md": "- Containerized **2.4 → 2.6 is not supported**.\n- Containerized 2.5 growth or enterprise topology → same 2.6 topology is supported (topologies are unchanged).\n- Step-by-step instructions: *Upgrading containerized Ansible Automation Platform*.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-infrastructure-changes"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

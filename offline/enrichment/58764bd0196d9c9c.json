@@ -1,0 +1,18 @@
+{
+ "chunk_id": "58764bd0196d9c9c",
+ "chunk_hash": "58764bd0196d9c9c",
+ "summary": "Deprecations: yes/no for follow_redirects in uri and url lookup, several yum_repository parameters (keepcache, async, gpgcakey and more), cisco.asa and ibm.qradar leaving ee-supported, ansible.controller/hub/eda collections to be replaced by ansible.platform after 2.6, the Lightspeed code bot (retired Dec 31, 2025) and the ServiceNow notification service.",
+ "questions": [
+  "Is ansible.controller collection deprecated?",
+  "Which yum_repository parameters are deprecated?",
+  "Is cisco.asa removed from ee-supported?",
+  "Can I still use yes for follow_redirects in the uri module?"
+ ],
+ "answer_card": {
+  "title": "Notable deprecations in AAP 2.6",
+  "answer_md": "- `uri` module / `url` lookup: `yes`/`no` for `follow_redirects`\n- `yum_repository`: `keepcache`, `async`, `deltarpm_metadata_percentage`, `gpgcakey`, `http_caching`, `keepalive`, `metadata_expire_filter`, `mirrorlist_expire`, `protect`, `ssl_check_cert_permissions`, `ui_repoid_vars`\n- `cisco.asa`, `ibm.qradar` removed from ee-supported\n- `ansible.controller`, `ansible.hub`, `ansible.eda` → replaced by `ansible.platform` after 2.6\n- Lightspeed code bot retired December 31, 2025",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

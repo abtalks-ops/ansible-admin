@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7d1feaa834303a99",
+ "chunk_hash": "7d1feaa834303a99",
+ "summary": "The 2.6 async 20260422 release delivered installation and UX enhancements plus many CVE remediations and bug fixes.",
+ "questions": [
+  "What is in the AAP 2.6 20260422 async release?",
+  "Does the May 2026 AAP patch include security fixes?",
+  "Overview of the May 4 2026 AAP patch"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

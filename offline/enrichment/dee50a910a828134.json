@@ -1,0 +1,13 @@
+{
+ "chunk_id": "dee50a910a828134",
+ "chunk_hash": "dee50a910a828134",
+ "summary": "February 2026 hub features: a static OpenAPI spec for galaxy focused on callable endpoints and improved hub OpenAPI documentation.",
+ "questions": [
+  "Is there an OpenAPI spec for automation hub?",
+  "Where is the galaxy OpenAPI specification?",
+  "Automation hub API documentation improvements"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

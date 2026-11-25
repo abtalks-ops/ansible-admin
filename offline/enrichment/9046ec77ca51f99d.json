@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9046ec77ca51f99d",
+ "chunk_hash": "9046ec77ca51f99d",
+ "summary": "March 2026 controller fixes: inconsistent facts with fact storage when inventories share host names or jobs run concurrently (AAP-67371), saving constructed inventories with verbosity above 2 (AAP-66864), and job events missing an event type (AAP-64630).",
+ "questions": [
+  "Can't save constructed inventory with verbosity greater than 2",
+  "Host facts inconsistent with fact storage enabled",
+  "Job events children summary exception"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

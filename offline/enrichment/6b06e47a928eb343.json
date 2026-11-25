@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6b06e47a928eb343",
+ "chunk_hash": "6b06e47a928eb343",
+ "summary": "May 2026 fixes: LiteLLM RCE via proxy config endpoint (CVE-2026-35029) and OIDC userinfo cache auth bypass (CVE-2026-35030) in lightspeed-chatbot, and path-to-regexp DoS (CVE-2026-4926) in the Tech Preview mcp-server image.",
+ "questions": [
+  "Is the Lightspeed chatbot affected by LiteLLM CVE-2026-35029?",
+  "Was CVE-2026-4926 fixed in the AAP MCP server?",
+  "Which LiteLLM CVEs affect AAP 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

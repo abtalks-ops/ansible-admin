@@ -1,0 +1,18 @@
+{
+ "chunk_id": "5891a9834b5a34fb",
+ "chunk_hash": "5891a9834b5a34fb",
+ "summary": "Automation dashboard is GA: a containerized-only, on-prem utility on a dedicated RHEL 9 x86 or ARM host that connects to AAP 2.4, 2.5 and 2.6 with a read-only OAuth2 token, syncs usage data, and produces PDF reports and CSV exports to track ROI.",
+ "questions": [
+  "How is automation dashboard installed?",
+  "Which AAP versions can automation dashboard connect to?",
+  "Can automation dashboard export data to CSV?",
+  "What host does automation dashboard need?"
+ ],
+ "answer_card": {
+  "title": "Automation dashboard facts",
+  "answer_md": "- Install: **containerized installer only**, on a dedicated **RHEL 9** host (x86 or ARM)\n- Connects to AAP **2.4, 2.5, 2.6** with a read-only **OAuth2 token**\n- Automatically syncs usage data\n- Exports PDF reports and raw CSV for BI tools",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index#new-features"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}

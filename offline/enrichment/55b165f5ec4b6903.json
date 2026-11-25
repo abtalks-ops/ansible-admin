@@ -1,0 +1,13 @@
+{
+ "chunk_id": "55b165f5ec4b6903",
+ "chunk_hash": "55b165f5ec4b6903",
+ "summary": "March 2026 Lightspeed fixes: OAuth2 failing on containerized installs with Lightspeed on port 443, the platform configuration MCP server's duplicate settings_list tool renamed to controller-settings_list and gateway-settings_list, and wrong /check commit version.",
+ "questions": [
+  "Lightspeed OAuth2 fails on port 443",
+  "MCP server settings_list duplicate tool error",
+  "What is controller-settings_list?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:15:33+00:00"
+}
