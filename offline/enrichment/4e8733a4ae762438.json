@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4e8733a4ae762438",
+ "chunk_hash": "4e8733a4ae762438",
+ "summary": "Every Edge Manager resource supports field selection on metadata.name, metadata.owner and metadata.creationTimestamp; labels should be queried with label selectors instead.",
+ "questions": [
+  "Which metadata fields can I use in a field selector?",
+  "Can I filter by creation timestamp in flightctl?",
+  "Should I use field selectors to query labels?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

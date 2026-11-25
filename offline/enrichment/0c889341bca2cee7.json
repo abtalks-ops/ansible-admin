@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0c889341bca2cee7",
+ "chunk_hash": "0c889341bca2cee7",
+ "summary": "Number fields support equality, comparison, in/notin and existence operators; boolean fields support =, ==, !=, in/notin (true/false only) and existence; array fields support contains and notcontains.",
+ "questions": [
+  "Which operators work on boolean fields?",
+  "How do I filter numeric fields in Edge Manager?",
+  "What operators can I use on array fields?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

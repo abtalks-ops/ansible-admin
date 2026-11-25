@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f3b310d8e4cc66c3",
+ "chunk_hash": "f3b310d8e4cc66c3",
+ "summary": "When creating a custom repository you can make it private or hide it from search results.",
+ "questions": [
+  "Can I create a private repository in automation hub?",
+  "How do I hide a repository from search?",
+  "What options does a custom repository have?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

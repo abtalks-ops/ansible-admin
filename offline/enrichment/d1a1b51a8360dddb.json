@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d1a1b51a8360dddb",
+ "chunk_hash": "d1a1b51a8360dddb",
+ "summary": "Private repositories are hidden from all users by default and public ones are view-only; grant access via the repository's Team Access tab > Assign teams and choose roles.",
+ "questions": [
+  "How do I give a team access to a private repository?",
+  "Why can't users see my private repository?",
+  "Can users modify public repositories?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

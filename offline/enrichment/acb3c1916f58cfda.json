@@ -1,0 +1,14 @@
+{
+ "chunk_id": "acb3c1916f58cfda",
+ "chunk_hash": "acb3c1916f58cfda",
+ "summary": "A play has a name, hosts, optional become (privilege escalation via sudo, su, pfexec, doas, pbrun, dzdo or ksu) and tasks; the example uses ansible.controller.project and ansible.controller.job_template to create a project and job template.",
+ "questions": [
+  "What are the parts of an Ansible play?",
+  "How do I enable privilege escalation in a play?",
+  "How do I create a controller project and job template from a playbook?",
+  "Which become plugins are available?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

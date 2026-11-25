@@ -1,0 +1,14 @@
+{
+ "chunk_id": "0a5881c2c0bf01fb",
+ "chunk_hash": "0a5881c2c0bf01fb",
+ "summary": "Upload a tar.gz collection named <namespace>-<collection>-<version>.tar.gz via Namespaces > Collections > Upload collection to a staging repo or a repository without pipeline; keep collections under 200 MB (use an execution environment for larger sets) and check Imports for results.",
+ "questions": [
+  "What is the maximum collection size for automation hub?",
+  "How should I name a collection tarball for upload?",
+  "Collection upload fails with a very large file",
+  "How do I check whether a collection import succeeded?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

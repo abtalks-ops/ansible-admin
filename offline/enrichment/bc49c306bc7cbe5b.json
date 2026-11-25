@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bc49c306bc7cbe5b",
+ "chunk_hash": "bc49c306bc7cbe5b",
+ "summary": "Add an AAP subscription by uploading a subscription manifest or, on the Service Account tab, entering a service account client ID and client secret (the account must be in the Subscription viewer group); then select the subscription, accept the EULA and continue.",
+ "questions": [
+  "How do I add my subscription to Ansible Automation Platform?",
+  "Can I activate AAP with a service account instead of a manifest?",
+  "What permissions does the service account need to see subscriptions?",
+  "Where do I upload the subscription manifest?"
+ ],
+ "answer_card": {
+  "title": "Add an AAP subscription",
+  "answer_md": "Two options on first login:\n- **Manifest**: drag the manifest file into *Red Hat subscription manifest*.\n- **Service Account** tab: enter the service account *Client ID* and *Client secret*. The account must be in the **Subscription viewer** user group.\n\nThen select the subscription, click **Next**, accept the EULA and finish.\n\nIf no subscription appears with a service account, its permissions are usually wrong (see KB 7112649).",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_ansible_automation_platform/index#adding-a-subscription"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

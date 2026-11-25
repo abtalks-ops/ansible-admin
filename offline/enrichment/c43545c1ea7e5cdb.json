@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c43545c1ea7e5cdb",
+ "chunk_hash": "c43545c1ea7e5cdb",
+ "summary": "Pull an EE from registry.redhat.io with `podman login registry.redhat.io` and `podman pull registry.redhat.io/<ee_name>:<tag>`, then confirm with `podman images`.",
+ "questions": [
+  "How do I pull an execution environment from registry.redhat.io?",
+  "How do I log in to registry.redhat.io with podman?",
+  "How do I verify a pulled image?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

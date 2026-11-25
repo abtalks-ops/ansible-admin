@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f953de752f19eb8f",
+ "chunk_hash": "f953de752f19eb8f",
+ "summary": "Ansible roles bundle reusable playbooks, config files, templates, tasks and handlers, can be configured through variables, and are usually distributed in collections.",
+ "questions": [
+  "What is an Ansible role?",
+  "How do I make a role configurable?",
+  "Where are Ansible roles usually packaged?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

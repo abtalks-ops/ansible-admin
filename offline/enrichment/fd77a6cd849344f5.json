@@ -1,0 +1,13 @@
+{
+ "chunk_id": "fd77a6cd849344f5",
+ "chunk_hash": "fd77a6cd849344f5",
+ "summary": "Fleet rollouts with flightctl control which devices take part and how much disruption is acceptable, through device selection (targeting, batch sequencing, success criteria) and a disruption budget.",
+ "questions": [
+  "How do I control a rollout across an Edge Manager fleet?",
+  "What is rollout device selection?",
+  "How does Edge Manager limit disruption during rollouts?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

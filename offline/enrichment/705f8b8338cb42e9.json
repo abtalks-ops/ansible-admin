@@ -1,0 +1,13 @@
+{
+ "chunk_id": "705f8b8338cb42e9",
+ "chunk_hash": "705f8b8338cb42e9",
+ "summary": "Private automation hub acts as an internal container registry for execution environments: images are sourced from external registries like registry.redhat.io or Quay.io and curated images are pushed to private automation hub, from which AAP pulls them to run jobs.",
+ "questions": [
+  "Can private automation hub be a container registry?",
+  "What is the difference between external registries and the private hub registry?",
+  "Where does AAP pull execution environments from?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

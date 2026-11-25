@@ -1,0 +1,17 @@
+{
+ "chunk_id": "2c07378487a2f0cf",
+ "chunk_hash": "2c07378487a2f0cf",
+ "summary": "successThreshold sets the percentage of successfully updated devices required to continue a rollout (it may pause otherwise); the example fleet rolloutPolicy uses deviceSelection strategy BatchSequence with madrid, percentage and paris batches and successThreshold 95%.",
+ "questions": [
+  "How do I set a success threshold for a fleet rollout?",
+  "What happens when a rollout batch falls below the threshold?",
+  "Example BatchSequence rolloutPolicy YAML"
+ ],
+ "answer_card": {
+  "title": "BatchSequence rollout policy",
+  "answer_md": "```yaml\nspec:\n  rolloutPolicy:\n    deviceSelection:\n      strategy: 'BatchSequence'\n      sequence:\n        - selector: {matchLabels: {site: madrid}}\n          limit: 1        # absolute\n        - selector: {matchLabels: {site: madrid}}\n          limit: 80%      # of matching devices\n        - limit: 50%      # of whole fleet\n        - selector: {matchLabels: {site: paris}}\n        - limit: 100%\n    successThreshold: 95%\n```\nBatches run in order; the next starts only if successes/devices ≥ threshold. A final implicit batch takes any devices left.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_device_fleets_with_the_red_hat_edge_manager/index#edge-manager-success-threshold"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}
