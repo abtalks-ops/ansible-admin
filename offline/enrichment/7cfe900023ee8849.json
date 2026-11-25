@@ -11,7 +11,7 @@
  "answer_card": {
   "title": "Size container group resource requests",
   "answer_md": "- All jobs in a container group use the same pod spec and requests.\n- One fork needs about **100 MB** of memory (`system_task_forks_mem`): 5 forks means requesting 500 MB.\n- For job templates with high forks, create a **separate container group** with larger requests (50 forks needs about 5 GB) and assign it to that template.\n- If no single pod can hold the job, use **job slicing** so each slice fits in a pod.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_considerations_for_operator_environments/index#ref-resource-types_ocp-performance"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_considerations_for_operator_environments/index#ref-resource-types_performance-considerations"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T18:18:02+00:00"

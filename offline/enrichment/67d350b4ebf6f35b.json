@@ -10,7 +10,7 @@
  "answer_card": {
   "title": "Controller Ingress",
   "answer_md": "```yaml\nspec:\n  controller:\n    ingress_type: Ingress\n    ingress_annotations: |\n      nginx.ingress.kubernetes.io/proxy-body-size: \"0\"\n      nginx.ingress.kubernetes.io/proxy-connect-timeout: \"600\"\n    ingress_tls_secret: controller-ingress-tls-secret\n```",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-controller-ingress-options_deploying-chatbot-operator"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#proc-controller-ingress-options_installing-controller-operator"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T16:21:50+00:00"

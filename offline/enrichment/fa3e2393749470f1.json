@@ -10,7 +10,7 @@
  "answer_card": {
   "title": "Controller route certificate on OpenShift",
   "answer_md": "```bash\noc create secret tls controller-certs-$(date +%F) --cert=/path/to/ssl.crt --key=/path/to/ssl.key -n <namespace>\noc edit ansibleautomationplatform <aap-instance-name> -n <namespace>\n```\n```yaml\nspec:\n  controller:\n    route_tls_secret: controller-certs-2024-03-24\n```\nWait a few minutes, then `true | openssl s_client -showcerts -connect ${CONTROLLER_FQDN}:443`.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/operating_ansible_automation_platform/index"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/operating_ansible_automation_platform/index#change-ssl-controller-ocp_renewing-changing-ssl-certs-keys"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T16:21:50+00:00"

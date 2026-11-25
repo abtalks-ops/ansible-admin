@@ -11,7 +11,7 @@
  "answer_card": {
   "title": "Configure known proxies",
   "answer_md": "**Settings > Automation Execution > System**, Proxy IP Allowed List:\n```json\n[\n  \"example1.proxy.com:8080\",\n  \"example2.proxy.com:8080\"\n]\n```\nOnly add `HTTP_X_FORWARDED_FOR` to Remote Host Headers if TLS is terminated at the proxy, the proxy sanitizes `X-Forwarded-For`, and `PROXY_IP_ALLOWED_LIST` (`/etc/tower/conf.d/remote_host_headers.py`) lists only trusted proxies.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/operating_ansible_automation_platform/index#proc-configuring-known-proxies_{context}"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/operating_ansible_automation_platform/index#proc-configuring-known-proxies_configuring-proxy-support"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T16:24:33+00:00"

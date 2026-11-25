@@ -121,6 +121,12 @@ export function expand(file: string, attrs: Attrs, offset = 0, depth = 0, out: s
       continue;
     }
     if (attrEntry(line, attrs)) continue;
+    // Section ids such as [id="name_{context}"] take the attribute values in force here:
+    // assemblies set and unset :context: around their includes, so substituting later is too late.
+    if (/^\[(?:id=|#)/.test(line)) {
+      out.push(subst(line, attrs));
+      continue;
+    }
     const h = /^(=+)\s+(.+)$/.exec(line);
     if (h) {
       out.push(`${"=".repeat(Math.max(1, h[1].length + offset))} ${h[2]}`);

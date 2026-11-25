@@ -10,7 +10,7 @@
  "answer_card": {
   "title": "Prepare the portal chart for air-gapped use",
   "answer_md": "```bash\nhelm repo add openshift-helm-charts https://charts.openshift.io/\nhelm repo update\nhelm pull openshift-helm-charts/redhat-rhaap-portal --version x.y.z\ntar -xvf redhat-rhaap-portal-x.y.z.tgz\n# edit redhat-rhaap-portal/values.yaml: point every image: at your disconnected registry\nhelm package redhat-rhaap-portal-x.y.z\n```",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-install-disconnected-download-helm_aap-self-service-install"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-install-disconnected-download-helm_self-service-disconnected-install-prepare"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T18:25:54+00:00"

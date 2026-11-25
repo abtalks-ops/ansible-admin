@@ -11,7 +11,7 @@
  "answer_card": {
   "title": "Scaffold a playbook project in VS Code",
   "answer_md": "1. Click the Ansible icon in the activity bar, then *Get started* under *Ansible content creator*.\n2. Under *Create*, click *Ansible playbook project*.\n3. Fill in:\n   - **Destination directory**: full local path, or a container-relative path like `workspaces/<name>` when using containerized dev tools (run `pwd` to check).\n   - **SCM organization / SCM project**: names for the directory holding your roles.\n4. An existing directory is only allowed with **Force**, and its contents are overwritten.\n\nSuccess shows `ansible project created at <path>` in the *Logs* pane.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/developing_automation_content/index#scaffolding-playbook-project_develop-automation-content"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/developing_automation_content/index#scaffolding-playbook-project_creating-playbook-project"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T17:16:16+00:00"

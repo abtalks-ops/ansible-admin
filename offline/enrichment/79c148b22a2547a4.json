@@ -10,7 +10,7 @@
  "answer_card": {
   "title": "Example controller resource sizing (4 CPU, 16 GB nodes)",
   "answer_md": "```yaml\nspec:\n  web_resource_requirements:\n    requests: {cpu: 250m, memory: 1Gi}\n    limits: {cpu: 1000m, memory: 4Gi}\n  task_resource_requirements:\n    requests: {cpu: 250m, memory: 1Gi}\n    limits: {cpu: 2000m, memory: 4Gi}\n  redis_resource_requirements:\n    requests: {cpu: 250m, memory: 1Gi}\n    limits: {cpu: 1000m, memory: 4Gi}\n```\n\n- Limits should sum to the node's actual resources.\n- If only limits are set, requests default to the limits; set requests lower (about 25% of the node).\n- Use `topology_spread_constraints` to spread control pods across nodes.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_considerations_for_operator_environments/index#ref-container-resource-requirements_ocp-performance"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_considerations_for_operator_environments/index#ref-container-resource-requirements_performance-considerations"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T18:18:02+00:00"

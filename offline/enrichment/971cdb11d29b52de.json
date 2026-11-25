@@ -10,7 +10,7 @@
  "answer_card": {
   "title": "Hub on Amazon S3",
   "answer_md": "```yaml\napiVersion: v1\nkind: Secret\nmetadata:\n  name: test-s3\nstringData:\n  s3-access-key-id: $S3_ACCESS_KEY_ID\n  s3-secret-access-key: $S3_SECRET_ACCESS_KEY\n  s3-bucket-name: $S3_BUCKET_NAME\n  s3-region: $S3_REGION\n```\n```yaml\nspec:\n  hub:\n    storage_type: S3\n    object_storage_s3_secret: test-s3\n```\nExisting hub: set `hub.name` and run `oc -n $HUB_NAMESPACE delete pod -l app.kubernetes.io/name=<hub-name>-api`.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#provision-ocp-storage-amazon-s3_deploying-chatbot-operator"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#provision-ocp-storage-amazon-s3_installing-hub-operator"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T16:21:50+00:00"

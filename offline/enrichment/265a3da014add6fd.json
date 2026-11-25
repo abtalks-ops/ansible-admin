@@ -11,7 +11,7 @@
  "answer_card": {
   "title": "Trust AAP's custom CA in the portal",
   "answer_md": "```bash\nopenssl s_client -showcerts -connect <aap-hostname>:443 </dev/null 2>/dev/null \\\n  | openssl x509 -outform PEM > aap-ca-cert.pem\noc create configmap custom-ca-bundle --from-file=ca-bundle.crt=aap-ca-cert.pem -n <namespace>\n```\n```yaml\nupstream:\n  backstage:\n    extraVolumes:\n      - name: custom-ca\n        configMap:\n          name: custom-ca-bundle\n    extraVolumeMounts:\n      - name: custom-ca\n        mountPath: /etc/pki/ca-trust/source/anchors/\n        readOnly: true\n```\nThen `helm upgrade`, and sign in. Keep `checkSSL: true`.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-configure-custom-ssl_aap-self-service-install"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-configure-custom-ssl_self-service-accessing-deployment"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T18:25:54+00:00"

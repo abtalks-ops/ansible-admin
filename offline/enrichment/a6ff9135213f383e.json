@@ -11,7 +11,7 @@
  "answer_card": {
   "title": "Custom signed certificates for automation mesh",
   "answer_md": "```bash\nsystemctl stop receptor\nreceptor --cert-init commonname=\"common ca\" bits=4096 outcert=/etc/receptor/tls/ca/mesh-CA.crt outkey=/etc/receptor/tls/ca/mesh-CA.key\nreceptor --cert-makereq commonname=<FQDN> bits=4096 nodeid=<FQDN> outreq=/etc/receptor/tls/<FQDN>.csr outkey=/etc/receptor/tls/<FQDN>.key ipaddress=<IP>\nreceptor --cert-signreq verify=yes cacert=/etc/receptor/tls/ca/mesh-CA.crt cakey=/etc/receptor/tls/ca/mesh-CA.key req=/etc/receptor/tls/<FQDN>.csr outcert=/etc/receptor/tls/<FQDN>.crt notafter=\"2034-07-29T20:48:02Z\"\n# copy to each node, then\nchown -R receptor: /etc/receptor; chmod 0640 /etc/receptor/tls/<FQDN>.crt\nsystemctl start receptor\n```\nCheck **Instance Groups > default > Instances** are Ready; run a health check on any Unavailable node.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_vm_environments/index#importing-mesh-ca_{context}"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_vm_environments/index#importing-mesh-ca_setting-up"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T16:17:07+00:00"

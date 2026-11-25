@@ -10,7 +10,7 @@
  "answer_card": {
   "title": "Disable portal telemetry",
   "answer_md": "Helm release > **Upgrade** > YAML view, add:\n```yaml\nredhat-developer-hub:\n  global:\n    dynamic:\n      plugins:\n        - disabled: true\n          package: >-\n            ./dynamic-plugins/dist/backstage-community-plugin-analytics-provider-segment\n```\nClick **Upgrade** (the pod restarts). Remove the lines to re-enable.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-telemetry-disable_aap-self-service-install"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-telemetry-disable_self-service-telemetry"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T18:25:54+00:00"

@@ -10,7 +10,7 @@
  "answer_card": {
   "title": "Container group pod spec with a nodeSelector",
   "answer_md": "```yaml\napiVersion: v1\nkind: Pod\nmetadata:\n  namespace: ansible-automation-platform\nspec:\n  serviceAccountName: default\n  automountServiceAccountToken: false\n  nodeSelector:\n    aap_node_type: execution\n  containers:\n    - image: registry.redhat.io/ansible-automation-platform-22/ee-supported-rhel8@sha256:...\n      name: worker\n      args: [ansible-runner, worker, '--private-data-dir=/runner']\n      resources:\n        requests:\n          cpu: 250m\n          memory: 100Mi\n```\n\nLabel the nodes first, for example `kubectl label nodes <node> aap_node_type=execution`.",
-  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_considerations_for_operator_environments/index#proc-specify-nodes-job-execution_ocp-performance"
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/performance_considerations_for_operator_environments/index#proc-specify-nodes-job-execution_performance-considerations"
  },
  "model": "claude-opus-5-5 (subscription)",
  "created_at": "2026-11-25T18:18:02+00:00"
