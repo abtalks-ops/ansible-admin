@@ -1,0 +1,17 @@
+{
+ "chunk_id": "db0d29bdd2388100",
+ "chunk_hash": "db0d29bdd2388100",
+ "summary": "Ansible 10 community.aws modules migrated to amazon.aws: iam_group, iam_managed_policy, iam_mfa_device_info, iam_password_policy, iam_role, iam_role_info, s3_bucket_info and sts_assume_role; playbooks using the old FQCN should switch to amazon.aws.",
+ "questions": [
+  "Where did iam_role move in Ansible 10?",
+  "Is sts_assume_role in amazon.aws now?",
+  "Which IAM modules moved from community.aws to amazon.aws?"
+ ],
+ "answer_card": {
+  "title": "IAM and STS modules moved to amazon.aws (Ansible 10)",
+  "answer_md": "Update these FQCNs from `community.aws.*` to `amazon.aws.*`: `iam_group`, `iam_managed_policy`, `iam_mfa_device_info`, `iam_password_policy`, `iam_role`, `iam_role_info`, `s3_bucket_info` and `sts_assume_role`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_10.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:56+00:00"
+}

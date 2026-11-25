@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7a33902676f4e63d",
+ "chunk_hash": "7a33902676f4e63d",
+ "summary": "Ansible 14 hitachivantara.vspone_block breaking changes: renamed parameters in hv_gad (mirror_unit_number), hv_hg, hv_hg_facts, hv_iscsi_target and hv_iscsi_target_facts (nickname, port_ids, port_id, should_delete_all_volumes), hv_hur (mirror_unit_number, primary_journal_id, secondary_journal_id), hv_ldev (parity_group_id), hv_resource_group(_facts) and hv_sds_block_compute_port.",
+ "questions": [
+  "Which vspone_block parameters were renamed in Ansible 14?",
+  "What was should_delete_all_ldevs renamed to?",
+  "What replaces parity_group in hv_ldev?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:39:17+00:00"
+}

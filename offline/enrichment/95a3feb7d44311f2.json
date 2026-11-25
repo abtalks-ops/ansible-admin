@@ -1,0 +1,17 @@
+{
+ "chunk_id": "95a3feb7d44311f2",
+ "chunk_hash": "95a3feb7d44311f2",
+ "summary": "Ansible 15 community.general removals: ansible-core 2.18 is no longer supported (needs 2.19.0+), the jboss module is removed (use the middleware_automation.wildfly.wildfly_app_deploy role), and keycloak_authentication, keycloak_authentication_required_actions, keycloak_authentication_v2 and keycloak_authz_authorization_scope are now redirects that need middleware_automation.keycloak installed.",
+ "questions": [
+  "Which ansible-core does community.general need in Ansible 15?",
+  "What replaces the jboss module?",
+  "Why does keycloak_authentication fail after upgrading to Ansible 15?"
+ ],
+ "answer_card": {
+  "title": "Keycloak modules are redirects in Ansible 15",
+  "answer_md": "In community.general (Ansible 15) the `keycloak_*` modules are redirects to `middleware_automation.keycloak`. Install that collection, or the redirects won't work:\n\n```bash\nansible-galaxy collection install middleware_automation.keycloak\n```\n\nThen use the new FQCNs, for example `middleware_automation.keycloak.keycloak_client`.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:00+00:00"
+}

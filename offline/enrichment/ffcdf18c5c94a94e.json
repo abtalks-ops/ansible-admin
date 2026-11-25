@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ffcdf18c5c94a94e",
+ "chunk_hash": "ffcdf18c5c94a94e",
+ "summary": "rsyslog queue settings for controller log aggregation: the maximum messages in the action queue (writes to disk at 75%, drops NOTICE, INFO and DEBUG at 90%), maximum disk persistence in GB (default 1) under LOG_AGGREGATOR_MAX_DISK_USAGE_PATH (default /var/lib/awx), the 4XX error log format, and logging system tracking facts individually.",
+ "questions": [
+  "Why are controller INFO logs being dropped?",
+  "Where does controller store logs when the aggregator is down?",
+  "How much disk does rsyslog use for queued controller logs?",
+  "What is LOG_AGGREGATOR_MAX_DISK_USAGE_PATH?"
+ ],
+ "answer_card": {
+  "title": "Controller rsyslog queue limits",
+  "answer_md": "- **Maximum number of messages in the action queue**: at 75% the queue starts writing to disk; at 90% `NOTICE`, `INFO` and `DEBUG` messages are discarded.\n- **Maximum disk persistence (GB)**: how much to spool to disk while the aggregator is slow or down (default 1), like `queue.maxdiskspace`.\n- **File system location**: where the spool lives, `LOG_AGGREGATOR_MAX_DISK_USAGE_PATH` (default `/var/lib/awx`).",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-controller-set-up-logging"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:42:46+00:00"
+}

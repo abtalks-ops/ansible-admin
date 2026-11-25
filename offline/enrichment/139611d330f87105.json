@@ -1,0 +1,17 @@
+{
+ "chunk_id": "139611d330f87105",
+ "chunk_hash": "139611d330f87105",
+ "summary": "AAP 2.6 RPM upgrade prerequisites: a valid subscription, check SAML authenticators for encrypted private keys (not supported in 2.6), upgrade only from the latest 2.4 or 2.5, component APIs remain available for now but are deprecated, and 2.5 users must migrate authentication and users before going to 2.6.",
+ "questions": [
+  "Can I upgrade directly from AAP 2.3 to 2.6?",
+  "What do I need to do before upgrading to AAP 2.6?",
+  "Do I need to migrate SSO users before upgrading from 2.5 to 2.6?"
+ ],
+ "answer_card": {
+  "title": "Before upgrading to AAP 2.6",
+  "answer_md": "- Upgrade from the latest 2.4 or 2.5 only.\n- Have a valid subscription (it's carried over).\n- Replace encrypted private keys in SAML authenticators; 2.6 doesn't support them.\n- If you're on 2.5 after upgrading from 2.4, migrate authentication methods and users first, because legacy authenticators were removed.\n- Back up the environment and capture inventory and instance group details.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_upgrade/index#aap-upgrade-planning_aap-upgrading-platform"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:47:07+00:00"
+}

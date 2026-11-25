@@ -1,0 +1,12 @@
+{
+ "chunk_id": "ab1fc86f6ad9575f",
+ "chunk_hash": "ab1fc86f6ad9575f",
+ "summary": "Ansible 15 vmware.vmware_rest removals: the appliance_access_consolecli, dcui, shell and ssh modules and their _info variants, and appliance_networking_dns_domains and dns_hostname with _info variants.",
+ "questions": [
+  "Was appliance_access_ssh removed from vmware_rest?",
+  "Which vmware_rest appliance modules were removed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:50+00:00"
+}

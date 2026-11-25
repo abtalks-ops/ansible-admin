@@ -1,0 +1,12 @@
+{
+ "chunk_id": "23af29582344c0dc",
+ "chunk_hash": "23af29582344c0dc",
+ "summary": "Ansible 14 community.aws deprecated aliases: ec2_asg_instance_refresh(_info) and ec2_asg (amazon.aws autoscaling_*), and ec2_asg_lifecycle_hook, ec2_asg_scheduled_action, ec2_lc_find and ec2_lc_info (community.aws autoscaling_*).",
+ "questions": [
+  "What replaces ec2_asg_lifecycle_hook?",
+  "Is ec2_asg deprecated in Ansible 14?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:00+00:00"
+}

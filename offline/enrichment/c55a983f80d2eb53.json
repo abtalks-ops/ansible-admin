@@ -1,0 +1,12 @@
+{
+ "chunk_id": "c55a983f80d2eb53",
+ "chunk_hash": "c55a983f80d2eb53",
+ "summary": "More vmware.vmware_rest removals: appliance_system_time_timezone(_info), appliance_timesync(_info), content_library_item_info, content_locallibrary, content_subscribedlibrary, and the cluster_moid, datacenter_moid, datastore_moid, folder_moid, host_moid and network_moid lookups.",
+ "questions": [
+  "Were the vmware_rest moid lookups removed?",
+  "Is content_locallibrary removed in Ansible 15?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:50+00:00"
+}

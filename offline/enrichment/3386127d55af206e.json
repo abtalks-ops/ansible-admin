@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3386127d55af206e",
+ "chunk_hash": "3386127d55af206e",
+ "summary": "Ansible 13 community.general deprecations: catapult, cpanm mode=compatibility (use new), dimensiondata doc fragments, module utils, dimensiondata_network and dimensiondata_vlan, github_repo force_defaults=true, and the hiera lookup plugin, all removed in community.general 13.0.0.",
+ "questions": [
+  "Is the hiera lookup deprecated?",
+  "Are the dimensiondata modules deprecated?",
+  "When will the hiera lookup be removed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:39:17+00:00"
+}

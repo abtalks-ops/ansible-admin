@@ -1,0 +1,12 @@
+{
+ "chunk_id": "5cefeabc2cc5229c",
+ "chunk_hash": "5cefeabc2cc5229c",
+ "summary": "Ansible 14 vspone_block output renames: hv_snapshot_facts pvol/svol fields and processing status, hv_snapshot_group_facts mirror_unit_number, hv_truecopy(_facts) status and serial fields, and hv_vsp_one_volume_facts begin_volume_id.",
+ "questions": [
+  "Which hv_snapshot_facts outputs changed?",
+  "What replaces start_volume_id in hv_vsp_one_volume_facts?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:00+00:00"
+}

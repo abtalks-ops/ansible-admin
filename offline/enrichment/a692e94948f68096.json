@@ -1,0 +1,14 @@
+{
+ "chunk_id": "a692e94948f68096",
+ "chunk_hash": "a692e94948f68096",
+ "summary": "Example lookup plugin (file): the DOCUMENTATION block defines _terms and an option1 option settable directly or through the file_lookup ini section, and LookupModule.run calls self.set_options(var_options=variables, direct=kwargs) and returns a list, looping over terms with display.debug.",
+ "questions": [
+  "How do I write a custom lookup plugin?",
+  "How do lookup plugins read their options?",
+  "Why must a lookup plugin return a list?",
+  "How do I declare ini options for a lookup plugin?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

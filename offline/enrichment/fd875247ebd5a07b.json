@@ -1,0 +1,18 @@
+{
+ "chunk_id": "fd875247ebd5a07b",
+ "chunk_hash": "fd875247ebd5a07b",
+ "summary": "Ansible 15 community.vmware module removals with replacements in vmware.vmware: vcenter_folder (folder), vmware_cluster_ha (cluster_ha), vmware_cluster_info (cluster_info), content deploy modules (deploy_content_library_ovf/template), vmware_content_library_manager, vmware_guest_powerstate (vm_powerstate), vmware_host (esxi_host, esxi_connection), vmware_maintenancemode and the vmware_host_inventory and vmware_vm_inventory plugins (esxi_hosts, vms).",
+ "questions": [
+  "What replaces vmware_guest_powerstate?",
+  "What replaces the vmware_vm_inventory plugin?",
+  "Where did vmware_cluster_ha go?",
+  "What replaces vmware_maintenancemode?"
+ ],
+ "answer_card": {
+  "title": "community.vmware modules removed in Ansible 15",
+  "answer_md": "| Removed | Use (vmware.vmware) |\n|---|---|\n| `vcenter_folder` | `folder` |\n| `vmware_cluster_ha` | `cluster_ha` |\n| `vmware_cluster_info` | `cluster_info` |\n| `vmware_content_deploy_ovf_template` | `deploy_content_library_ovf` |\n| `vmware_content_deploy_template` | `deploy_content_library_template` |\n| `vmware_content_library_manager` | `local_content_library`, `subscribed_content_library` |\n| `vmware_guest_powerstate` | `vm_powerstate` |\n| `vmware_host` | `esxi_host`, `esxi_connection` |\n| `vmware_maintenancemode` | `esxi_maintenance_mode` |\n| `vmware_host_inventory` | `esxi_hosts` (inventory) |\n| `vmware_vm_inventory` | `vms` (inventory) |",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_15.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:50+00:00"
+}

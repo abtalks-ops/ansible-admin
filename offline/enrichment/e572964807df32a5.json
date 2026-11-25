@@ -1,0 +1,12 @@
+{
+ "chunk_id": "e572964807df32a5",
+ "chunk_hash": "e572964807df32a5",
+ "summary": "Custom notification attributes, part 3: summary_fields.inventory counts (several deprecated), inventory kind, and summary_fields.project (id, name, status, scm_type) and job_template.",
+ "questions": [
+  "Which inventory fields are available in notifications?",
+  "How do I show the project name in a controller notification?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:45:29+00:00"
+}

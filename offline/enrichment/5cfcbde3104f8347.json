@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5cfcbde3104f8347",
+ "chunk_hash": "5cfcbde3104f8347",
+ "summary": "grafana.grafana changes in Ansible 12: a custom directory for .alloy config files, delete protection, foldersFromFilesStructure, a tempo role, version latest support, no logging of grafana.ini contents, Alloy readiness check without a proxy, and fixes for check mode, Mimir URL verification and loki_operational_config.",
+ "questions": [
+  "Does grafana.grafana have a tempo role?",
+  "How do I set a custom directory for Alloy config files?",
+  "Does the grafana role log grafana.ini contents?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:37:47+00:00"
+}

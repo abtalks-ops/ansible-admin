@@ -118,7 +118,7 @@ With AI on, every question gets an answer written on the device. The chip in the
 
 ## Known limits and next steps
 
-- Long code blocks are still cut at exactly 1,800 characters, sometimes mid-line (58 AAP and 131 ansible-core passages). Cutting at a line break changes those chunk ids, so it is a separate change with re-enrichment of about 290 passages.
+- A code block too long for one chunk is split at a blank line or line break and its fence is closed and reopened with the same language. A single line longer than a chunk (rare, for example long command output) is split at a space.
 - The AAP smoke set has no gate yet: record a baseline from the first CI run, then gate on it like the ansible-core set.
 - The smoke-set gate in CI uses 40 questions. Switch it to the golden set once that can live in the repo.
 - Some sections produce several adjacent chunks, so the same heading can appear more than once in the results. Grouping results by section is a small UI follow-up.

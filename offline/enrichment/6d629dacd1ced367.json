@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6d629dacd1ced367",
+ "chunk_hash": "6d629dacd1ced367",
+ "summary": "Ansible 12 amazon.aws breaking changes: ansible-core<2.17 support dropped, and the EC2_ACCESS_KEY, EC2_REGION, EC2_SECRET_KEY, EC2_SECURITY_TOKEN/AWS_SECURITY_TOKEN and EC2_URL/S3_URL environment variables are removed in favour of AWS_ACCESS_KEY_ID, AWS_REGION, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN and AWS_URL.",
+ "questions": [
+  "Why is EC2_REGION no longer working?",
+  "What environment variable replaces EC2_ACCESS_KEY?",
+  "Which ansible-core does amazon.aws need in Ansible 12?"
+ ],
+ "answer_card": {
+  "title": "amazon.aws: renamed environment variables",
+  "answer_md": "Removed in Ansible 12 (amazon.aws), with replacements:\n\n| Removed | Use instead |\n|---|---|\n| `EC2_ACCESS_KEY` | `AWS_ACCESS_KEY_ID` or `access_key` |\n| `EC2_SECRET_KEY` | `AWS_SECRET_ACCESS_KEY` or `secret_key` |\n| `EC2_REGION` | `AWS_REGION` or `region` |\n| `EC2_SECURITY_TOKEN`, `AWS_SECURITY_TOKEN` | `AWS_SESSION_TOKEN` or `session_token` |\n| `EC2_URL`, `S3_URL` | `AWS_URL` or `endpoint_url` |",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:37:47+00:00"
+}

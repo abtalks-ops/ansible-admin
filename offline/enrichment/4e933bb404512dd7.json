@@ -1,0 +1,12 @@
+{
+ "chunk_id": "4e933bb404512dd7",
+ "chunk_hash": "4e933bb404512dd7",
+ "summary": "Ansible 14 vspone_block output renames: hv_hur and hv_hur_facts status, journal and serial fields, hv_ldev_facts parity_group_id, hv_resource_group_facts begin_ldev_id, end_ldev_id, parity_group_ids and port_ids, and hv_shadow_image_pair_facts primary_volume_* and secondary_volume_* fields.",
+ "questions": [
+  "Which hv_hur_facts outputs were renamed?",
+  "What was svol_status renamed to?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:00+00:00"
+}

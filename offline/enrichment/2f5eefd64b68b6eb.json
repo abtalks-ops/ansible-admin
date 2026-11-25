@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2f5eefd64b68b6eb",
+ "chunk_hash": "2f5eefd64b68b6eb",
+ "summary": "Ansible 11.12 community.hrobot deprecations for storagebox modules: leaving the community.hrobot.robot action group (use community.hrobot.api), hetzner_token required from 3.0.0, hetzner_user and hetzner_pass deprecated, and renamed storagebox_info and storagebox_snapshot_info return values.",
+ "questions": [
+  "What replaces hetzner_user and hetzner_pass in storagebox modules?",
+  "Which module defaults group should storagebox modules use?",
+  "Are storagebox_info return values renamed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:56+00:00"
+}

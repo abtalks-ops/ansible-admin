@@ -1,0 +1,12 @@
+{
+ "chunk_id": "d8a615fa2e18fd3f",
+ "chunk_hash": "d8a615fa2e18fd3f",
+ "summary": "More vspone_block output renames: hv_snapshot_facts pvol/svol fields (including processing status), hv_snapshot_group_facts mirror_unit_number, hv_truecopy and hv_truecopy_facts status and serial fields, and hv_vsp_one_volume_facts begin_volume_id.",
+ "questions": [
+  "Which hv_truecopy outputs were renamed?",
+  "What was start_volume_id renamed to?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:38:39+00:00"
+}

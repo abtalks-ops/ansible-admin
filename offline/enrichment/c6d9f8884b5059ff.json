@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c6d9f8884b5059ff",
+ "chunk_hash": "c6d9f8884b5059ff",
+ "summary": "Backstage template using all self-service actions, part 1: parameters for project name, repository URL, a hidden organization, and AAPResourcePicker fields for inventory and credentials, then a rhaap:create-project step with deleteIfExist.",
+ "questions": [
+  "How do I create an AAP project from a Backstage template?",
+  "How do I hide a field in a self-service template?",
+  "What actions does the self-service portal provide?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

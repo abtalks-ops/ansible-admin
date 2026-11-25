@@ -1,0 +1,12 @@
+{
+ "chunk_id": "26de1222e84e1558",
+ "chunk_hash": "26de1222e84e1558",
+ "summary": "cloudfront_distribution return values deprecated after 2026-12-15: items under cache_behaviors (allowed_methods, cookies whitelisted_names, headers, query_string_cache_keys, lambda_function_associations) and cache_behaviors itself; use elements instead.",
+ "questions": [
+  "What replaces items in cloudfront_distribution cache_behaviors?",
+  "When will cloudfront_distribution items be removed?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:39:17+00:00"
+}

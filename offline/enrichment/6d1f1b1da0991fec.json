@@ -1,0 +1,18 @@
+{
+ "chunk_id": "6d1f1b1da0991fec",
+ "chunk_hash": "6d1f1b1da0991fec",
+ "summary": "ansible-core 2.19 templating changes: set_fact no longer turns 'yes'/'no'/'true'/'false' strings into booleans (use the bool filter), template lookup convert_data has no effect (use from_json), _-prefixed attributes are blocked, templates always render natively and None stays None, embedded inline templates warn or fail, allow_unsafe_lookups is gone, range() must go through a filter, and bad #jinja2: overrides are errors.",
+ "questions": [
+  "Why is my set_fact 'yes' string no longer a boolean?",
+  "Why does my template return None instead of an empty string?",
+  "Is allow_unsafe_lookups still supported?",
+  "Why do nested {{ }} templates fail in ansible-core 2.19?"
+ ],
+ "answer_card": {
+  "title": "set_fact no longer converts yes/no strings",
+  "answer_md": "Templates always render in Jinja2 native mode now, so `set_fact` keeps strings such as `\"yes\"`, `\"no\"`, `\"true\"` and `\"false\"` as strings. Use native YAML booleans where you define the variable, or convert explicitly:\n\n```yaml\n- set_fact:\n    enabled: \"{{ some_string | bool }}\"\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:37:47+00:00"
+}

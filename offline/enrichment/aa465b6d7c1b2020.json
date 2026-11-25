@@ -1,0 +1,18 @@
+{
+ "chunk_id": "aa465b6d7c1b2020",
+ "chunk_hash": "aa465b6d7c1b2020",
+ "summary": "LDAP authenticator settings in AAP: Additional Authenticator Fields override the UI fields, LDAP Connection Options such as OPT_REFERRALS: 0 and OPT_NETWORK_TIMEOUT: 30 (referrals are off by default for Active Directory), LDAP Group Type Parameters like name_attr cn and member_attr member, and LDAP Group Search as base DN, SCOPE_SUBTREE and filter.",
+ "questions": [
+  "How do I disable LDAP referrals in AAP?",
+  "What are LDAP Group Type Parameters in AAP?",
+  "How do I set the LDAP group search in AAP 2.6?",
+  "Why do LDAP queries hang with Active Directory?"
+ ],
+ "answer_card": {
+  "title": "LDAP connection and group search",
+  "answer_md": "```yaml\n# LDAP Connection Options\nOPT_REFERRALS: 0\nOPT_NETWORK_TIMEOUT: 30\n```\n\n```json\n// LDAP Group Type Parameters\n{\"name_attr\": \"cn\", \"member_attr\": \"member\"}\n```\n\n```json\n// LDAP Group Search\n[\"dc=example,dc=com\", \"SCOPE_SUBTREE\", \"(objectClass=group)\"]\n```\n\nReferrals are off by default so queries against Active Directory don't hang.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/access_management_and_authentication/index#controller-set-up-LDAP"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:43:48+00:00"
+}

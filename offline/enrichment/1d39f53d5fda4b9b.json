@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1d39f53d5fda4b9b",
+ "chunk_hash": "1d39f53d5fda4b9b",
+ "summary": "More ansible-core 2.19 deprecations: the bool filter coercing unrecognized values (consider truthy and falsy tests), ansible.plugins.cache.base, the v2_on_any and v1 callback methods, conditionals with {{ }} delimiters, and config options with no effect: ACTION_WARNINGS, DEFAULT_ALLOW_UNSAFE_LOOKUPS, DEFAULT_JINJA2_NATIVE and DEFAULT_NULL_REPRESENTATION.",
+ "questions": [
+  "Why do I get a warning for {{ }} in when conditions?",
+  "Does DEFAULT_JINJA2_NATIVE still do anything?",
+  "Is the bool filter deprecated for None?",
+  "What replaces v2_on_any in callback plugins?"
+ ],
+ "answer_card": {
+  "title": "Don't use {{ }} in conditionals",
+  "answer_md": "Write conditionals as bare expressions:\n\n```yaml\nwhen: my_var == 'x'        # good\nwhen: \"{{ my_var == 'x' }}\" # deprecated\n```\n\nDelimiters are only allowed when the whole value is one template that resolves to a trusted string expression.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:38:39+00:00"
+}

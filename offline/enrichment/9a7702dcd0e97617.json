@@ -1,0 +1,12 @@
+{
+ "chunk_id": "9a7702dcd0e97617",
+ "chunk_hash": "9a7702dcd0e97617",
+ "summary": "Ansible 14 community.aws deprecated aliases: aws_acm_info, aws_acm, aws_api_gateway_domain, aws_api_gateway, aws_application_scaling_policy and aws_batch_* (use acm_certificate(_info), api_gateway(_domain), application_autoscaling_policy and batch_* names).",
+ "questions": [
+  "Is aws_acm deprecated in Ansible 14?",
+  "What is the new name of aws_batch_compute_environment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:00+00:00"
+}

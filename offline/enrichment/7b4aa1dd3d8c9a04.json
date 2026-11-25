@@ -1,0 +1,12 @@
+{
+ "chunk_id": "7b4aa1dd3d8c9a04",
+ "chunk_hash": "7b4aa1dd3d8c9a04",
+ "summary": "More vmware.vmware_rest removals: vcenter_vm_hardware_ethernet, vcenter_vm_hardware_memory(_info), vcenter_vm_libraryitem_info, vcenter_vm_power, vcenter_vmtemplate_libraryitems_info and the vm_moid lookup.",
+ "questions": [
+  "Was vcenter_vm_power removed?",
+  "Is the vm_moid lookup gone?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:50+00:00"
+}

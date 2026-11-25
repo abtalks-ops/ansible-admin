@@ -1,0 +1,14 @@
+{
+ "chunk_id": "73eb5368452930cc",
+ "chunk_hash": "73eb5368452930cc",
+ "summary": "More type test examples: casting with int, float and string filters and when the results match, and the boolean test, which is true only for native booleans yes, true, True, TRUE, no, No, NO, false, False and FALSE (yes is the only case-sensitive one).",
+ "questions": [
+  "Which values are native booleans in Ansible?",
+  "How do I test if a variable is a boolean?",
+  "Is YES a boolean in Ansible?",
+  "Why does int then string not match for floats?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:56+00:00"
+}

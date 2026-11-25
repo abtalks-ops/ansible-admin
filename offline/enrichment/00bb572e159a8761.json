@@ -1,0 +1,17 @@
+{
+ "chunk_id": "00bb572e159a8761",
+ "chunk_hash": "00bb572e159a8761",
+ "summary": "Attribute trigger comparisons: contains (substring), matches (case-insensitive Python re.match), ends with, equals (whole value) and in (comma-separated list without spaces), with examples, and Value as the value to compare.",
+ "questions": [
+  "How does matches work in an AAP attribute trigger?",
+  "How do I match one of several values in an authenticator map?",
+  "Is the matches comparison case sensitive?"
+ ],
+ "answer_card": {
+  "title": "Attribute trigger comparisons",
+  "answer_md": "For a source value of `John`:\n\n- **contains** `Jo`: true; `Joy`: false.\n- **matches** `Jo`: Python `re.match`, case-insensitive, so true for John or Joanne.\n- **ends with** `on`: true.\n- **equals** `John`: true only for exactly John.\n- **in** `John,Donna`: true if the value is any of the comma-separated values (no spaces).",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/access_management_and_authentication/index#gw-authenticator-map-triggers"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:43:48+00:00"
+}

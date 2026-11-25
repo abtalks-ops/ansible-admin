@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b83fa8971b39b461",
+ "chunk_hash": "b83fa8971b39b461",
+ "summary": "More Ansible 12 community.general deprecations: cpanm mode=compatibility (use mode=new), facter (use facter_facts), github_repo force_defaults=true, locale_gen ubuntu mode, manifold lookup, opkg force=\"\", pacemaker_cluster state becoming required, pipx make_process_list, and profitbricks modules.",
+ "questions": [
+  "What mode should cpanm use now?",
+  "Will pacemaker_cluster require state?",
+  "Is github_repo force_defaults deprecated?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:38:39+00:00"
+}

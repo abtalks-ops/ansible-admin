@@ -1,0 +1,13 @@
+{
+ "chunk_id": "cb27093d8557fa1c",
+ "chunk_hash": "cb27093d8557fa1c",
+ "summary": "More privilege escalation methods for machine credentials: pbrun, pfexec, dzdo (Centrify), pmrun, runas, enable for network devices, doas, ksu (Kerberos), machinectl and sesu (CA Privileged Access Manager).",
+ "questions": [
+  "What privilege escalation methods does controller support?",
+  "How do I use enable mode on network devices in controller?",
+  "Does controller support doas or ksu?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:45:29+00:00"
+}

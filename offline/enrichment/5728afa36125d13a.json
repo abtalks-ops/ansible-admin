@@ -1,0 +1,12 @@
+{
+ "chunk_id": "5728afa36125d13a",
+ "chunk_hash": "5728afa36125d13a",
+ "summary": "Rest of the systemctl status --user output for automation dashboard: the web container runs supervisord, nginx and uwsgi workers, and the postgres container runs its background processes with an aapdashboard connection.",
+ "questions": [
+  "What processes run in the automation dashboard web container?",
+  "Does automation dashboard run its own PostgreSQL?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:42:46+00:00"
+}

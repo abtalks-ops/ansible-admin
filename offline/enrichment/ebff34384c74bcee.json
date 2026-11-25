@@ -1,0 +1,12 @@
+{
+ "chunk_id": "ebff34384c74bcee",
+ "chunk_hash": "ebff34384c74bcee",
+ "summary": "Ansible 12.2 community.hrobot deprecations: plans[].month in storagebox_snapshot_plan(_info) only returns null, storagebox_subaccount password_mode=set-to-random works only with the legacy API, and storagebox_subaccount(_info) return values are renamed for the new API.",
+ "questions": [
+  "Is password_mode=set-to-random supported by the new Hetzner API?",
+  "Which storagebox_subaccount_info return values are deprecated?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:37:47+00:00"
+}

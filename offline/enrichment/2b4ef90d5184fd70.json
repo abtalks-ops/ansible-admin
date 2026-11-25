@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2b4ef90d5184fd70",
+ "chunk_hash": "2b4ef90d5184fd70",
+ "summary": "ansible-core support matrix for 2.22 back to 2.15: GA, critical and security dates, end of life, and supported control node Python and target Python/PowerShell; 2.22 (GA Nov 2026, EOL May 2028) needs Python 3.13-3.15 on the controller and supports Python 3.9-3.15 and PowerShell 5.1-7 on targets.",
+ "questions": [
+  "Which Python versions does ansible-core 2.22 support?",
+  "When is ansible-core 2.19 end of life?",
+  "Does ansible-core 2.21 support PowerShell 7?",
+  "What is the last ansible-core that supports Python 2.7 targets?"
+ ],
+ "answer_card": {
+  "title": "ansible-core Python support",
+  "answer_md": "| ansible-core | EOL | Control node Python | Target Python / PowerShell |\n|---|---|---|---|\n| 2.22 | May 2028 | 3.13 - 3.15 | 3.9 - 3.15, PowerShell 5.1 - 7 |\n| 2.21 | Nov 2027 | 3.12 - 3.14 | 3.9 - 3.14, PowerShell 5.1 - 7 |\n| 2.20 | May 2027 | 3.12 - 3.14 | 3.9 - 3.14, PowerShell 5.1 |\n| 2.19 | Nov 2026 | 3.11 - 3.13 | 3.8 - 3.13, PowerShell 5.1 |\n| 2.18 | May 2026 | 3.11 - 3.13 | 3.8 - 3.13, PowerShell 5.1 |\n| 2.16 | July 2025 (EOL) | 3.10 - 3.12 | 2.7, 3.6 - 3.12 |\n\n2.16 is the last release that supports Python 2.7 on targets.",
+  "source_url": "https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:41:44+00:00"
+}

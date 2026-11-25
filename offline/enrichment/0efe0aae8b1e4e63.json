@@ -1,0 +1,14 @@
+{
+ "chunk_id": "0efe0aae8b1e4e63",
+ "chunk_hash": "0efe0aae8b1e4e63",
+ "summary": "Controller logging settings for an external aggregator: Logging Aggregator host (an HTTPS URL may include the port; TCP/UDP need the port field), port, type, username, password/token, loggers to send, cluster-wide unique identifier, protocol, TCP connection timeout and level threshold.",
+ "questions": [
+  "How do I send automation controller logs to Splunk?",
+  "Do I need a port for a TCP logging aggregator?",
+  "Which loggers can controller send to a log aggregator?",
+  "How do I configure centralized logging in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:42:46+00:00"
+}

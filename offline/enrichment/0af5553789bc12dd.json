@@ -1,0 +1,14 @@
+{
+ "chunk_id": "0af5553789bc12dd",
+ "chunk_hash": "0af5553789bc12dd",
+ "summary": "validate-modules codes invalid-extension, invalid-module-schema, invalid-removal-version, invalid-requires-extension, missing-doc-fragment, missing-existing-doc-fragment, missing-documentation, missing-examples, missing-gplv3-license and missing-module-utils-basic-import.",
+ "questions": [
+  "What does missing-gplv3-license mean?",
+  "What is the invalid-removal-version sanity error?",
+  "What does missing-doc-fragment mean?",
+  "Why does validate-modules say missing-examples?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

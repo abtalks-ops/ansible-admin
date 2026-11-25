@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9fb986998270a777",
+ "chunk_hash": "9fb986998270a777",
+ "summary": "Variables for upgrading a 2.4 multi-node controller to a 2.6 enterprise topology: registry credentials, platform gateway admin password, automationgateway_main_url set to the load balancer URL and gateway database settings, the existing controller admin and database settings, and new hub and Event-Driven Ansible admin and database variables.",
+ "questions": [
+  "What variables does a 2.6 enterprise upgrade inventory need?",
+  "What should automationgateway_main_url be set to?",
+  "Which database variables does the platform gateway need?"
+ ],
+ "answer_card": {
+  "title": "Gateway variables for a 2.6 enterprise upgrade",
+  "answer_md": "```ini\n[all:vars]\nautomationgateway_admin_password=<set your own>\nautomationgateway_main_url=<load balancer URL>\nautomationgateway_pg_host=<set your own>\nautomationgateway_pg_database=<set your own>\nautomationgateway_pg_username=<set your own>\nautomationgateway_pg_password=<set your own>\n```\n\nKeep `registry_username`, `registry_password`, `admin_password` and the `pg_*` controller settings from the 2.4 inventory, and add the `automationhub_*` and `automationedacontroller_*` admin and database variables for the new components.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-multi-controller-enterprise"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

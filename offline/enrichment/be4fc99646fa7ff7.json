@@ -1,0 +1,12 @@
+{
+ "chunk_id": "be4fc99646fa7ff7",
+ "chunk_hash": "be4fc99646fa7ff7",
+ "summary": "cloudfront_distribution items return values deprecated in custom_error_responses and default_cache_behavior (allowed_methods, cached_methods, cookies whitelisted_names, headers, query_string_cache_keys); use elements instead.",
+ "questions": [
+  "Is items in default_cache_behavior deprecated?",
+  "What should I read instead of items in cloudfront_distribution?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:39:17+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e02bcfa85c6a3de7",
+ "chunk_hash": "e02bcfa85c6a3de7",
+ "summary": "Controller's built-in amazon.aws.aws_ec2 inventory template, compose section: ansible_host from public_ip_address and the legacy ec2_* host variables such as ec2_id, ec2_instance_type, ec2_region, ec2_security_group_ids and ec2_launch_time.",
+ "questions": [
+  "What host variables does the controller EC2 inventory source set?",
+  "How does controller set ansible_host for EC2 hosts?",
+  "What is the default aws_ec2 compose in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:45:29+00:00"
+}

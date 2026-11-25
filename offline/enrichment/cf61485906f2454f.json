@@ -1,0 +1,12 @@
+{
+ "chunk_id": "cf61485906f2454f",
+ "chunk_hash": "cf61485906f2454f",
+ "summary": "RPM enterprise topology variables: admin password and database host, name, user and password for the platform gateway (automationgateway_pg_*), controller (pg_*), hub (automationhub_pg_*) and Event-Driven Ansible (automationedacontroller_pg_*).",
+ "questions": [
+  "What database variables does an RPM enterprise install need?",
+  "How do I set the gateway database in the RPM installer?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:47:07+00:00"
+}

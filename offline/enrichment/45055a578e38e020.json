@@ -1,0 +1,12 @@
+{
+ "chunk_id": "45055a578e38e020",
+ "chunk_hash": "45055a578e38e020",
+ "summary": "Auto-generated template field mapping, continued: the OAuth2 token is auto-populated and hidden, Prompt on launch inventory is picked by name and resolved to an ID at launch, survey questions copy variable, title, type and default, and survey answers are passed as extra_vars.",
+ "questions": [
+  "How does the self-service portal resolve inventory names?",
+  "Are survey answers passed as extra_vars from the self-service portal?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

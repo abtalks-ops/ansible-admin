@@ -1,0 +1,12 @@
+{
+ "chunk_id": "d863fea24ec8f1f5",
+ "chunk_hash": "d863fea24ec8f1f5",
+ "summary": "Mirroring the Ansible Dev Tools sidecar image for the self-service portal: ansible-automation-platform-25/ansible-dev-tools-rhel9:latest for AAP 2.5 or ansible-automation-platform-26/ansible-dev-tools-rhel9:latest for AAP 2.6, pulled, tagged and pushed to the disconnected registry.",
+ "questions": [
+  "Which ansible-dev-tools image does the self-service portal use?",
+  "How do I mirror the dev tools sidecar for AAP 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

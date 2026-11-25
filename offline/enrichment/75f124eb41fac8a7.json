@@ -1,0 +1,17 @@
+{
+ "chunk_id": "75f124eb41fac8a7",
+ "chunk_hash": "75f124eb41fac8a7",
+ "summary": "SAML on upgrade: 2.6 authenticators don't support encrypted private keys, so replace encrypted SP keys with unencrypted ones before upgrading from 2.4 or the SAML authenticator isn't migrated and must be recreated by a local admin; shows SOCIAL_AUTH_SAML_ENABLED_IDPS and SP settings mapped to the gateway IDP_URL, IDP_X509_CERT, IDP_ENTITY_ID and SP_* configuration.",
+ "questions": [
+  "Why was my SAML authenticator not migrated to AAP 2.6?",
+  "Does AAP 2.6 support encrypted SAML private keys?",
+  "How do 2.4 SAML settings map to the platform gateway?"
+ ],
+ "answer_card": {
+  "title": "Replace encrypted SAML keys before upgrading",
+  "answer_md": "AAP 2.6 authenticators don't support encrypted private keys. Before upgrading from 2.4, replace any encrypted `SOCIAL_AUTH_SAML_SP_PRIVATE_KEY` with an unencrypted key. Otherwise the SAML authenticator isn't migrated to the platform gateway, and a local administrator has to recreate it before SSO users can log in again.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-oidc-auth"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

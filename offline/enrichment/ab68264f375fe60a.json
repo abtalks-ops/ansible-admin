@@ -1,0 +1,12 @@
+{
+ "chunk_id": "ab68264f375fe60a",
+ "chunk_hash": "ab68264f375fe60a",
+ "summary": "RPM growth topology example inventory: one host each in automationgateway, automationcontroller (peers=execution_nodes), execution_nodes, automationhub, automationedacontroller and database.",
+ "questions": [
+  "What does an RPM growth topology inventory look like?",
+  "Which host groups does an RPM AAP 2.6 install need?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:47:07+00:00"
+}

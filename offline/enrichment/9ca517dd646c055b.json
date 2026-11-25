@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9ca517dd646c055b",
+ "chunk_hash": "9ca517dd646c055b",
+ "summary": "Playbook to fetch the monthly metrics-utility report on OpenShift (needs kubernetes.core): create a temporary busybox pod mounting the automationcontroller-metrics-utility PVC at /mnt/metrics with kubernetes.core.k8s, and wait with k8s_info until its container is ready.",
+ "questions": [
+  "How do I get the metrics-utility report from OpenShift?",
+  "Which PVC holds the metrics-utility reports?",
+  "How do I read files from a PVC with Ansible?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:43:48+00:00"
+}
