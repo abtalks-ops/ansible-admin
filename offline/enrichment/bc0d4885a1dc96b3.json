@@ -1,0 +1,13 @@
+{
+ "chunk_id": "bc0d4885a1dc96b3",
+ "chunk_hash": "bc0d4885a1dc96b3",
+ "summary": "Introduces full examples of the RHDH ConfigMap and Helm chart settings for the Ansible Dev Tools Server, AAP, software templates and other integrations.",
+ "questions": [
+  "Full example configuration for Ansible plug-ins",
+  "Where can I see a complete RHDH config for Ansible?",
+  "Example YAML for Ansible plug-ins settings"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

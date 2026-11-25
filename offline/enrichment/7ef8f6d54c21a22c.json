@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7ef8f6d54c21a22c",
+ "chunk_hash": "7ef8f6d54c21a22c",
+ "summary": "For HTTP registry delivery, download the Ansible plug-ins for Red Hat Developer Hub Setup Bundle (`ansible-rhdh-plugins-x.y.z.tar.gz`), set `$DYNAMIC_PLUGIN_ROOT_DIR` and extract it there with `tar --exclude='*code*'`, giving the backstage-rhaap and scaffolder-backend-module .tgz files with .integrity files.",
+ "questions": [
+  "Where do I download the Ansible plug-ins for RHDH tarball?",
+  "How do I extract the ansible-rhdh-plugins tarball?",
+  "What files are in the Ansible RHDH plug-ins bundle?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

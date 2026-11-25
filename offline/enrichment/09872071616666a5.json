@@ -1,0 +1,13 @@
+{
+ "chunk_id": "09872071616666a5",
+ "chunk_hash": "09872071616666a5",
+ "summary": "The default ports and inventory variables are configurable; 443 is used for HTTPS and port 80 only when HTTPS is disabled with `nginx_disable_https`, `automationhub_disable_https`, `automationedacontroller_disable_https` (RPM) or `controller_nginx_disable_https`, `hub_nginx_disable_https`, `eda_nginx_disable_https` (containerized).",
+ "questions": [
+  "Is port 80 required for AAP?",
+  "Which variables disable HTTPS in the containerized installer?",
+  "When do I need port 80 open?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

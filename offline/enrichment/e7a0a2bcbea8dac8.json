@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e7a0a2bcbea8dac8",
+ "chunk_hash": "e7a0a2bcbea8dac8",
+ "summary": "Variables under `[all:vars]` in the installer inventory apply to all hosts; use `[<group>:vars]`, such as `[automationhub:vars]`, to scope them.",
+ "questions": [
+  "How do I set an installer variable for only one group?",
+  "What does [all:vars] mean in the AAP inventory?",
+  "Host-specific variables in the installer inventory"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

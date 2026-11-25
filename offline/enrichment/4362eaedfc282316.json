@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4362eaedfc282316",
+ "chunk_hash": "4362eaedfc282316",
+ "summary": "Ansible Galaxy is the community hub for finding, reusing and sharing Ansible content such as prepackaged roles.",
+ "questions": [
+  "What is Ansible Galaxy?",
+  "Difference between Galaxy and automation hub",
+  "Where can I find community Ansible roles?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

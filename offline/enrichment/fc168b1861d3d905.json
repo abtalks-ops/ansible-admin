@@ -1,0 +1,18 @@
+{
+ "chunk_id": "fc168b1861d3d905",
+ "chunk_hash": "fc168b1861d3d905",
+ "summary": "Automation dashboard troubleshooting: 401 means wrong or expired tokens (refresh tokens are single-use, so create new ones and re-run setclusters if refresh fails), 404 means wrong AAP URLs; a healthy install runs postgresql, automation-dashboard-task and automation-dashboard-web containers.",
+ "questions": [
+  "Automation dashboard 401 error",
+  "Automation dashboard 404 error",
+  "Which containers should automation dashboard run?",
+  "Can I reuse a refresh token?"
+ ],
+ "answer_card": {
+  "title": "Troubleshoot automation dashboard sync errors",
+  "answer_md": "- **401**: wrong or expired token. A brief 401 before an automatic refresh is normal. If refresh fails, compare `manage.py getclusters --decrypt` with your `clusters.yaml`; refresh tokens work only once, so create new access and refresh tokens and re-run `setclusters`.\n- **404**: the AAP address in `clusters.yaml` is wrong.\n- Healthy install: `podman ps --all --format \"{{.Names}}\"` lists `postgresql`, `automation-dashboard-task`, `automation-dashboard-web`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_dashboard/index#verifying-cluster-access-tokens_{context}"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

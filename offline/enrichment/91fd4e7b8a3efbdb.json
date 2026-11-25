@@ -1,0 +1,13 @@
+{
+ "chunk_id": "91fd4e7b8a3efbdb",
+ "chunk_hash": "91fd4e7b8a3efbdb",
+ "summary": "Click a job in Job Explorer's Id/Name column to open it on the automation controller job details page.",
+ "questions": [
+  "How do I open a job on automation controller from Job Explorer?",
+  "Link from Job Explorer to controller job",
+  "View job output from automation analytics"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

@@ -1,0 +1,17 @@
+{
+ "chunk_id": "4f79ecebd61f907b",
+ "chunk_hash": "4f79ecebd61f907b",
+ "summary": "OCI delivery needs a registry auth secret: create an auth.json with base64 `username:password` for registry.redhat.io (a registry service account token) and create a secret named `<deployment-name>-dynamic-plugins-registry-auth`, such as `developer-hub-dynamic-plugins-registry-auth`, in the RHDH project.",
+ "questions": [
+  "How do I create the dynamic-plugins-registry-auth secret?",
+  "What should the RHDH registry auth secret be named?",
+  "How do I base64 encode registry credentials for auth.json?"
+ ],
+ "answer_card": {
+  "title": "Registry auth secret for OCI plug-in delivery",
+  "answer_md": "```bash\n# auth.json\n# {\"auths\": {\"registry.redhat.io\": {\"auth\": \"<base64 of user:password>\"}}}\nprintf '%s' '<username>:<password>' | base64\n\noc create secret generic <deployment-name>-dynamic-plugins-registry-auth \\\n  --from-file=auth.json=./auth.json   # e.g. developer-hub-dynamic-plugins-registry-auth\noc get secret <deployment-name>-dynamic-plugins-registry-auth\n```\nCreate it in the RHDH project **before** configuring the plug-ins, using a registry service account token (not personal credentials). With Podman logged in you can use `${XDG_RUNTIME_DIR}/containers/auth.json`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_ansible_plug_ins_for_red_hat_developer_hub/index#use-oci-container-delivery-method_aap-plugin-rhdh-installing"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

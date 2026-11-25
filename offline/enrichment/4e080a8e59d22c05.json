@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4e080a8e59d22c05",
+ "chunk_hash": "4e080a8e59d22c05",
+ "summary": "Lists the Ansible Automation Platform components that must be deployed for full functionality: platform gateway, automation controller, automation hub (private and HA), Event-Driven Ansible controller, automation mesh, execution environments, Ansible Galaxy, automation content navigator and PostgreSQL.",
+ "questions": [
+  "What components make up Ansible Automation Platform?",
+  "Which services do I need to deploy for all AAP features?",
+  "List of AAP 2.6 components"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

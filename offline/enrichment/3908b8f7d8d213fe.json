@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3908b8f7d8d213fe",
+ "chunk_hash": "3908b8f7d8d213fe",
+ "summary": "Set `ansible.devSpaces.baseUrl` in `app-config-rhdh.yaml` and restart the RHDH rollout so users can open provisioned Ansible projects in OpenShift Dev Spaces, a separately licensed optional product; otherwise the link goes to the Ansible development tools page.",
+ "questions": [
+  "How do I link the Ansible plug-ins to OpenShift Dev Spaces?",
+  "Is Dev Spaces included in the AAP subscription?",
+  "Go to OpenShift Dev Spaces dashboard link goes to the wrong page"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

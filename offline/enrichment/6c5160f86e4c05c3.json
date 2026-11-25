@@ -1,0 +1,18 @@
+{
+ "chunk_id": "6c5160f86e4c05c3",
+ "chunk_hash": "6c5160f86e4c05c3",
+ "summary": "Example AnsibleAutomationPlatform CR with extra settings: `image_pull_policy: Always`, controller `extra_settings` MAX_PAGE_SIZE, EDA `EDA_MAX_PAGE_SIZE`, hub `pulp_settings` (MAX_PAGE_SIZE, cache_enabled) and an optional `bundle_cacert_secret` for custom CA certs.",
+ "questions": [
+  "How do I set MAX_PAGE_SIZE for controller in the operator CR?",
+  "How do I pass extra_settings to EDA through the AAP CR?",
+  "Where do pulp_settings go for hub in AnsibleAutomationPlatform?",
+  "How do I add a custom CA bundle secret to the gateway CR?"
+ ],
+ "answer_card": {
+  "title": "Pass extra settings to components in the CR",
+  "answer_md": "```yaml\nspec:\n  bundle_cacert_secret: gateway-custom-certs   # optional custom CA bundle\n  controller:\n    extra_settings:\n      - setting: MAX_PAGE_SIZE\n        value: '501'\n  eda:\n    extra_settings:\n      - setting: EDA_MAX_PAGE_SIZE\n        value: '501'\n  hub:\n    pulp_settings:\n      MAX_PAGE_SIZE: 501\n      cache_enabled: false\n```\nController and EDA take a list of `setting`/`value` pairs; hub takes a `pulp_settings` map.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_on_openshift_container_platform/index#operator-crs"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

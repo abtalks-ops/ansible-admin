@@ -1,0 +1,14 @@
+{
+ "chunk_id": "b2b2464c23efee1e",
+ "chunk_hash": "b2b2464c23efee1e",
+ "summary": "Inventory guidelines: omit `[database]` when using an external database (which you must create, maintain and clear on uninstall), don't colocate the database or hub with controller, set `automationhub_pg_host`/`automationhub_pg_port` for `[automationhub]`, and use reachable FQDNs without `_` and never `localhost`.",
+ "questions": [
+  "Can I install automation hub on the same node as controller?",
+  "Why can't my hostname contain an underscore?",
+  "Do I include [database] with an external database?",
+  "Can I use localhost in the AAP inventory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

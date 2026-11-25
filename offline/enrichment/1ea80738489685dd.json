@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1ea80738489685dd",
+ "chunk_hash": "1ea80738489685dd",
+ "summary": "Red Hat tests AAP 2.6 on defined reference topologies: enterprise topologies for production uptime and scale, growth topologies for resource-constrained deployments; untested topologies get commercially reasonable support if they meet minimum requirements.",
+ "questions": [
+  "What are AAP tested deployment models?",
+  "Growth vs enterprise topology",
+  "Is my custom AAP topology supported?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}

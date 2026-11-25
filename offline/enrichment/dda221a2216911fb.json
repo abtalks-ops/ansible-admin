@@ -1,0 +1,13 @@
+{
+ "chunk_id": "dda221a2216911fb",
+ "chunk_hash": "dda221a2216911fb",
+ "summary": "HTTP registry variant of the Helm plug-in config: packages `http://plugin-registry:8080/ansible-plugin-backstage-rhaap-dynamic-x.y.z.tgz` and the scaffolder module, each with an `integrity` SHA512 from the .integrity files; click Upgrade to restart the pods.",
+ "questions": [
+  "Helm config for Ansible plug-ins from an HTTP plugin registry",
+  "Where do I put the integrity SHA512 value?",
+  "plugin-registry:8080 package URL for RHDH"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:06+00:00"
+}
