@@ -1,0 +1,17 @@
+{
+ "chunk_id": "942746f97e38f67f",
+ "chunk_hash": "942746f97e38f67f",
+ "summary": "Write a custom event filter as extensions/eda/plugins/event_filter/my_filter.py in a collection with def main(event: dict, arg1, arg2) returning the event, and use it in a source's filters list as my_namespace.my_collection.my_filter with its arguments.",
+ "questions": [
+  "How do I write a custom event filter for EDA?",
+  "Where do event filter plugins go in a collection?",
+  "How do I pass arguments to an event filter?"
+ ],
+ "answer_card": {
+  "title": "Custom EDA event filter",
+  "answer_md": "```python\n# my_namespace.my_collection/extensions/eda/plugins/event_filter/my_filter.py\ndef main(event: dict, arg1, arg2):\n    # change event here\n    return event\n```\n```yaml\nsources:\n  - name: azure_service_bus\n    ansible.eda.azure_service_bus:\n      conn_str: \"{{ connection_str }}\"\n      queue_name: \"{{ queue_name }}\"\n    filters:\n      - my_namespace.my_collection.my_filter:\n          arg1: hello\n          arg2: world\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-author-event-filters"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

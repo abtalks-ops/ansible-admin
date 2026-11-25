@@ -1,0 +1,18 @@
+{
+ "chunk_id": "02aa74514273bc85",
+ "chunk_hash": "02aa74514273bc85",
+ "summary": "Rulebooks define event sources and conditional rules whose actions are run_playbook (CLI only), run_module, run_job_template, run_workflow_template, set_fact, post_event, retract_fact, print_event, shutdown, debug and none. An activation runs a rulebook in a decision environment; without Redis you cannot create, delete, enable, disable or restart activations.",
+ "questions": [
+  "What actions can an Event-Driven Ansible rulebook run?",
+  "Is run_playbook supported in Event-Driven Ansible controller?",
+  "What is a rulebook activation?",
+  "Why can't I restart a rulebook activation when Redis is down?"
+ ],
+ "answer_card": {
+  "title": "Rulebook actions in EDA controller",
+  "answer_md": "Supported: `run_job_template`, `run_workflow_template`, `run_module`, `set_fact`, `post_event`, `retract_fact`, `print_event`, `shutdown`, `debug`, `none`.\n\n`run_playbook` works **only with the ansible-rulebook CLI**, not in the controller. Use `run_job_template` there.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-rulebook-activations"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

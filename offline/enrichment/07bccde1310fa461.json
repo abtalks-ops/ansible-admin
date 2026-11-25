@@ -1,0 +1,18 @@
+{
+ "chunk_id": "07bccde1310fa461",
+ "chunk_hash": "07bccde1310fa461",
+ "summary": "In an event stream's Headers field, * includes all headers except X-Envoy*, X-Trusted-Proxy, X-Forwarded-For and X-Real-Id, with Authorization redacted; a comma list like Host,Authorization,X-Request-ID includes only those; empty means no headers in Production or Test mode.",
+ "questions": [
+  "How do I include HTTP headers in event stream payloads?",
+  "Why are no headers in my event payload?",
+  "Which headers are excluded when I use * for event stream headers?",
+  "Is the Authorization header redacted in event streams?"
+ ],
+ "answer_card": {
+  "title": "Event stream Headers field",
+  "answer_md": "- `*`: all headers, except those starting with `X-Envoy`, `X-Trusted-Proxy`, `X-Forwarded-For`, `X-Real-Id`; `Authorization` is shown as `Redacted`.\n- `Host,Authorization,X-Request-ID`: only the listed headers.\n- Empty: **no** headers are added, in Production or Test mode.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-configure-http-headers"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

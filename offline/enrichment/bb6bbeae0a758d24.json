@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bb6bbeae0a758d24",
+ "chunk_hash": "bb6bbeae0a758d24",
+ "summary": "On OpenShift, expose a webhook rulebook (e.g. ansible.eda.webhook on 0.0.0.0:5000 calling run_job_template) by creating a Route to the activation service (e.g. activation-job-1-5000, targetPort 5000, edge TLS), then test with curl -X POST to the route host with Content-Type application/json; no port needed.",
+ "questions": [
+  "How do I expose an EDA webhook activation on OpenShift?",
+  "Example OpenShift Route for a rulebook activation webhook",
+  "How do I test an ansible.eda.webhook source with curl?",
+  "Which service name does an activation webhook get?"
+ ],
+ "answer_card": {
+  "title": "Expose a webhook activation on OpenShift",
+  "answer_md": "```yaml\nkind: Route\napiVersion: route.openshift.io/v1\nmetadata:\n  name: my-webhook\n  namespace: <namespace>\nspec:\n  host: <route-host>\n  to:\n    kind: Service\n    name: activation-job-1-5000   # activation service\n    weight: 100\n  port:\n    targetPort: 5000\n  tls:\n    termination: edge\n    insecureEdgeTerminationPolicy: Redirect\n```\nTest (no port needed, the Route sets it):\n```bash\ncurl -H \"Content-Type: application/json\" -X POST <route-host> -d '{}'\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-activate-webhook"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

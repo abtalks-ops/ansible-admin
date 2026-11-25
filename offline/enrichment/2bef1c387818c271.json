@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2bef1c387818c271",
+ "chunk_hash": "2bef1c387818c271",
+ "summary": "Roles group tasks, variables, files and handlers in a defined structure; to use roles in Ansible Automation Platform you must move them into collections, which can hold many roles and share plugins, then push the collection to source control and configure repository credentials.",
+ "questions": [
+  "Do I have to put roles in a collection to use them in AAP?",
+  "Why distribute roles in a collection?",
+  "Can roles in a collection share plugins?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

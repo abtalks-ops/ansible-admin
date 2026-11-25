@@ -1,0 +1,13 @@
+{
+ "chunk_id": "bfa78fc4d61a5180",
+ "chunk_hash": "bfa78fc4d61a5180",
+ "summary": "Under Automation Decisions > Rule Audit, select a rule to see on its Details tab when it was created, when it last fired, and which rulebook activation it belongs to.",
+ "questions": [
+  "How do I see when a rule last fired?",
+  "Which activation triggered this rule?",
+  "View rule audit details"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

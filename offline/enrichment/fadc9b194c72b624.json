@@ -1,0 +1,13 @@
+{
+ "chunk_id": "fadc9b194c72b624",
+ "chunk_hash": "fadc9b194c72b624",
+ "summary": "Create an EDA credential under Automation Decisions > Infrastructure > Credentials > Create credential: enter a name, optional description, organization (or Default) and credential type, fill the Type Details fields for that type, and click Create credential.",
+ "questions": [
+  "How do I create a credential in Event-Driven Ansible?",
+  "Where are credentials in Automation Decisions?",
+  "How do I store a token for a rulebook activation?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

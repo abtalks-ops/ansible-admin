@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bfd0112b808bccc8",
+ "chunk_hash": "bfd0112b808bccc8",
+ "summary": "Create the credential under Automation Decisions > Infrastructure > Credentials with type Red Hat Ansible Automation Platform, the controller URL (https://<gateway_host>/api/controller/ on 2.6, or https://<controller_host> for controller 2.4) and username/password or OAuth token. It breaks after a backup/restore to new hostnames until you update it.",
+ "questions": [
+  "What URL do I use for the Red Hat Ansible Automation Platform credential?",
+  "How do I set up the AAP credential for Event-Driven Ansible?",
+  "Why did my rulebook activations fail after restoring AAP to a new cluster?",
+  "Can I use an OAuth token for the EDA AAP credential?"
+ ],
+ "answer_card": {
+  "title": "Red Hat AAP credential for EDA",
+  "answer_md": "*Automation Decisions > Infrastructure > Credentials > Create credential*, type **Red Hat Ansible Automation Platform**.\n\n- URL on AAP 2.6: `https://<your_gateway_host>/api/controller/`\n- URL for EDA 2.6 with controller 2.4: `https://<your_controller_host>`\n- Then a username and password, or an OAuth token.\n\nAfter a backup/restore to a new cluster or hostnames, edit the URL and credentials or activations will fail.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-set-up-rhaap-credential"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

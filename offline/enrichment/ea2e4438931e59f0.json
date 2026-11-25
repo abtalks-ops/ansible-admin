@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ea2e4438931e59f0",
+ "chunk_hash": "ea2e4438931e59f0",
+ "summary": "Event streams are authenticated entry points for external events. Types: HMAC shared secret (GitHub), Basic (Datadog, Dynatrace), Token in Authorization or custom header like X-Gitlab-Token (GitLab, ServiceNow), OAuth2 client credentials, OAuth2 with JWT, ECDSA signatures (SendGrid, Twilio), and mTLS with Certificate or Subject subtypes (PagerDuty).",
+ "questions": [
+  "What authentication types do EDA event streams support?",
+  "Which event stream type should I use for GitHub webhooks?",
+  "Can an event stream use a custom token header like X-Gitlab-Token?",
+  "Does Event-Driven Ansible support mTLS event streams?"
+ ],
+ "answer_card": {
+  "title": "Event stream types",
+  "answer_md": "| Type | How it authenticates | Example vendors |\n|---|---|---|\n| HMAC | shared secret signature | GitHub |\n| Basic | HTTP basic auth | Datadog, Dynatrace |\n| Token | token in a header (`Authorization` or custom, e.g. `X-Gitlab-Token`) | GitLab, ServiceNow |\n| OAuth2 | client credentials, opaque token | Dynatrace |\n| OAuth2 with JWT | client credentials, JWT | Datadog |\n| ECDSA | public/private key signature | SendGrid, Twilio |\n| mTLS | two-way certs (Certificate or Subject); vendor CA needed at startup | PagerDuty |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#event-streams"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

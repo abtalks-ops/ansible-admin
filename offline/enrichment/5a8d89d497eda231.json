@@ -1,0 +1,18 @@
+{
+ "chunk_id": "5a8d89d497eda231",
+ "chunk_hash": "5a8d89d497eda231",
+ "summary": "Ask 'What Ansible tools are available through the MCP server?' to run list_available_tools, which returns zen_of_ansible, ansible_content_best_practices, list_available_tools, ansible_lint, ansible_navigator, ade_environment_info, ade_setup_environment, adt_check_env, create_ansible_projects and define_and_build_execution_env.",
+ "questions": [
+  "What tools does the Ansible MCP server provide?",
+  "List Ansible MCP server tools",
+  "What is define_and_build_execution_env?",
+  "Which 10 tools does the Ansible MCP server discover?"
+ ],
+ "answer_card": {
+  "title": "Ansible MCP server tools",
+  "answer_md": "Ask Copilot *What Ansible tools are available through the MCP server?* (runs `list_available_tools`). The tools are:\n\n- `zen_of_ansible`\n- `ansible_content_best_practices`\n- `list_available_tools`\n- `ansible_lint`\n- `ansible_navigator`\n- `ade_environment_info`\n- `ade_setup_environment`\n- `adt_check_env`\n- `create_ansible_projects`\n- `define_and_build_execution_env`",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_the_ai_assistant_to_develop_ansible_automation_content/index#list-available-mcp-tools_mcp-vscode-ext-run"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

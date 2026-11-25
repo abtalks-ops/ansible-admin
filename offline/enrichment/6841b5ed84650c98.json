@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6841b5ed84650c98",
+ "chunk_hash": "6841b5ed84650c98",
+ "summary": "The Rulebook Activations list shows status, event fire count and restart count; Running means it is executing rules in the background, and each activation has Details and History tabs.",
+ "questions": [
+  "What does Running status mean for a rulebook activation?",
+  "Where do I see how often an activation fired or restarted?",
+  "How do I view rulebook activation details?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

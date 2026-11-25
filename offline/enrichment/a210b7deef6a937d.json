@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a210b7deef6a937d",
+ "chunk_hash": "a210b7deef6a937d",
+ "summary": "To prepare devices for Edge Manager, build a bootc OS image containing the agent and then a disk image: install the CLI, optionally request an early-binding enrollment cert and set pull secrets, build, sign and publish with Sigstore, and build and optionally publish the disk image.",
+ "questions": [
+  "What are the steps to build a bootc image for Edge Manager?",
+  "How do I prepare a device to be managed by Edge Manager?",
+  "Build and sign an Edge Manager OS image"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}

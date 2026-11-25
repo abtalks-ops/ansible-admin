@@ -1,0 +1,18 @@
+{
+ "chunk_id": "20aa8363260a08e9",
+ "chunk_hash": "20aa8363260a08e9",
+ "summary": "EDA logs carry tracking IDs at the start of each message: rid (X-REQUEST-ID, follows a request from the gateway, in response headers), tid (log tracking ID across the activation lifecycle, shown in the History tab) and aiid (one activation instance run); internally triggered processes get an rid not seen in gateway logs.",
+ "questions": [
+  "What do rid, tid and aiid mean in EDA logs?",
+  "Where do I find the log tracking ID for an activation?",
+  "Why is the rid not in the platform gateway logs?",
+  "What is X-REQUEST-ID in Event-Driven Ansible?"
+ ],
+ "answer_card": {
+  "title": "EDA log tracking IDs",
+  "answer_md": "Log lines start with: `[rid: <UUID>] [tid: <UUID>] [aiid: <ID>] ...`\n\n- **rid** (`X-REQUEST-ID`): one HTTP request from the platform gateway through EDA; in response headers and logs. Internally triggered processes get an rid that isn't in gateway logs.\n- **tid** (log tracking ID): the whole activation lifecycle, across restarts; get it from the activation *History* tab.\n- **aiid** (activation instance ID): one run of the activation and its `ansible-rulebook` output.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-log-filtering"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

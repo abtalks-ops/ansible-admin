@@ -1,0 +1,13 @@
+{
+ "chunk_id": "389035c2eaeed0ea",
+ "chunk_hash": "389035c2eaeed0ea",
+ "summary": "Open a playbook and ask the assistant to analyze it, determine the needed collections and generate an execution environment definition that includes them; check that collections used by tasks, such as community.general or amazon.aws, were added.",
+ "questions": [
+  "Can the AI assistant build an execution environment from my playbook's dependencies?",
+  "Generate an EE definition file from an existing playbook",
+  "Which collections does my playbook need in its EE?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

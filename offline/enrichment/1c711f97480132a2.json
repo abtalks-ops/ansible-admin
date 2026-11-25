@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1c711f97480132a2",
+ "chunk_hash": "1c711f97480132a2",
+ "summary": "With execution-environment.yml open, ask Copilot to check it is valid and follows best practices; the assistant checks it against the execution environment v3 schema and rules, verifying required sections such as version, images and dependencies and flagging missing fields or bad formatting.",
+ "questions": [
+  "How do I validate an execution environment definition file?",
+  "Does the AI assistant check my EE against the v3 schema?",
+  "What sections are required in execution-environment.yml?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

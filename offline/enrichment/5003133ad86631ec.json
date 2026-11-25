@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5003133ad86631ec",
+ "chunk_hash": "5003133ad86631ec",
+ "summary": "On a new target config the agent downloads all images to disk first, updates the OS via bootc, overlays config files, reboots or reloads services, and updates Podman applications, rolling back automatically if the update fails or the device doesn't come back; fleet definitions can live in Git.",
+ "questions": [
+  "How does Edge Manager update a device?",
+  "Does Edge Manager roll back failed updates?",
+  "Can I store fleet definitions in Git?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}

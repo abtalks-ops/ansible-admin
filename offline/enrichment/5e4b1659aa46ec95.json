@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5e4b1659aa46ec95",
+ "chunk_hash": "5e4b1659aa46ec95",
+ "summary": "If activations cannot connect to automation controller, make sure a Red Hat Ansible Automation Platform credential exists with the correct URL in the form https://<your_gateway>/api/controller, then set up the activation again.",
+ "questions": [
+  "Why can't my rulebook activation connect to automation controller?",
+  "What controller URL should the EDA credential use?",
+  "run_job_template fails to connect to controller"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "94cf7d7305aa141f",
+ "chunk_hash": "94cf7d7305aa141f",
+ "summary": "Characterise an EDA workload by the number of simultaneous rulebook activations and the number of events the controller receives.",
+ "questions": [
+  "How do I size Event-Driven Ansible controller?",
+  "What factors define an EDA workload?",
+  "How many activations can run at once?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

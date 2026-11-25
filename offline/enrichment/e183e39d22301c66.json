@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e183e39d22301c66",
+ "chunk_hash": "e183e39d22301c66",
+ "summary": "Links to sample GitHub gists for EDA credential type injectors and a gssapi input credential type.",
+ "questions": [
+  "Is there an example of an EDA credential injector?",
+  "Sample gssapi credential type input configuration",
+  "Where can I find EDA credential type examples?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

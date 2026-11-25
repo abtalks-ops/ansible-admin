@@ -1,0 +1,17 @@
+{
+ "chunk_id": "44f3cd0acb829979",
+ "chunk_hash": "44f3cd0acb829979",
+ "summary": "Ask 'Give me the command to run this playbook in the execution environment <file>' and the assistant generates an ansible-navigator command with --execution-environment-image set to your built tag, e.g. ansible-navigator run playbook.yml --execution-environment-image webserver-ee:1.0 --mode stdout.",
+ "questions": [
+  "How do I run a playbook in a custom EE with ansible-navigator?",
+  "ansible-navigator run --execution-environment-image --mode stdout example",
+  "What command runs my playbook in webserver-ee:1.0?"
+ ],
+ "answer_card": {
+  "title": "Run a playbook in a custom EE",
+  "answer_md": "```bash\nansible-navigator run playbook.yml --execution-environment-image webserver-ee:1.0 --mode stdout\n```\n`--execution-environment-image` points at the image tag you built; `--mode stdout` prints output like `ansible-playbook` instead of the interactive TUI.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_the_ai_assistant_to_develop_ansible_automation_content/index#run-playbook-with-assistant_mcp-vscode-ext-run"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

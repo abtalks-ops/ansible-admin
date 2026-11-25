@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6ca82ad35e1b5cf0",
+ "chunk_hash": "6ca82ad35e1b5cf0",
+ "summary": "EDA projects are git repositories of rulebooks kept under extensions/eda/rulebooks at the project root; because EDA shares Redis with the platform UI, projects cannot be created or synced when Redis is unavailable.",
+ "questions": [
+  "Where do rulebooks need to be in an EDA project repository?",
+  "What path does Event-Driven Ansible look for rulebooks in?",
+  "Why can't I create an EDA project?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

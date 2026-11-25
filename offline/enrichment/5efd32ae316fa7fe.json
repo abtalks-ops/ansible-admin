@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5efd32ae316fa7fe",
+ "chunk_hash": "5efd32ae316fa7fe",
+ "summary": "For private registries, put a pull secret on the device before it is needed: /etc/ostree/auth.json for OS images and /root/.config/containers/auth.json for application images, in the auths.<registry>.auth base64 JSON format.",
+ "questions": [
+  "Where do I put a pull secret for bootc OS images?",
+  "How do edge devices pull from a private registry?",
+  "Pull secret format for Edge Manager devices"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}
