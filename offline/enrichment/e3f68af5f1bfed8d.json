@@ -1,0 +1,12 @@
+{
+ "chunk_id": "e3f68af5f1bfed8d",
+ "chunk_hash": "e3f68af5f1bfed8d",
+ "summary": "You can inspect the portal's deployment logs and ConfigMap in the OpenShift console to confirm it matches your Helm settings.",
+ "questions": [
+  "How do I inspect the portal deployment on OpenShift?",
+  "How do I check the portal ConfigMap?",
+  "Verify portal deployment matches my Helm settings"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

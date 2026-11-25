@@ -1,0 +1,17 @@
+{
+ "chunk_id": "c4d7af10eb873ded",
+ "chunk_hash": "c4d7af10eb873ded",
+ "summary": "Create a GitHub classic PAT for the portal under Settings > Developer settings > Personal access tokens > Generate new token (classic) with scopes repo, read:org and workflow as needed.",
+ "questions": [
+  "Which GitHub token scopes does the portal need?",
+  "How do I create a GitHub PAT for self-service automation portal?",
+  "Does the portal need the workflow scope?"
+ ],
+ "answer_card": {
+  "title": "GitHub PAT for the portal",
+  "answer_md": "GitHub > profile picture > **Settings > Developer settings > Personal access tokens > Generate new token (classic)**. Scopes:\n\n- `repo`\n- `read:org`\n- `workflow` (as needed)\n\nGenerate and save the token.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-create-gh-pat_aap-self-service-install"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

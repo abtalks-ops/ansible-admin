@@ -1,0 +1,12 @@
+{
+ "chunk_id": "f6394092dce672c7",
+ "chunk_hash": "f6394092dce672c7",
+ "summary": "Create a GitLab PAT for the portal from your avatar > Edit profile > Access tokens > Add new token, with a name, expiry and scopes read_repository and api.",
+ "questions": [
+  "Which GitLab token scopes does the portal need?",
+  "How do I create a GitLab PAT for self-service automation portal?",
+  "Does the GitLab PAT need the api scope for the portal?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

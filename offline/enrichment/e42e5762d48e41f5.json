@@ -1,0 +1,12 @@
+{
+ "chunk_id": "e42e5762d48e41f5",
+ "chunk_hash": "e42e5762d48e41f5",
+ "summary": "After install and sync, only AAP administrators can see auto-generated templates; configure initial RBAC so non-admin users can view and run synced job templates.",
+ "questions": [
+  "Why can't non-admin users see templates in the portal?",
+  "Portal templates only visible to admins",
+  "Do I need to set up RBAC after installing the portal?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}

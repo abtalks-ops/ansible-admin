@@ -1,0 +1,12 @@
+{
+ "chunk_id": "ea5617454709c034",
+ "chunk_hash": "ea5617454709c034",
+ "summary": "In Developer > Topology, open the <installation-name>-backstage deployment, Resources > View logs, then the Logs tab and pick the install-dynamic-plugins init container; success shows 'Successfully installed dynamic plugin ...' for each plug-in. The Environment tab lists container environment variables.",
+ "questions": [
+  "How do I view install-dynamic-plugins logs in the console?",
+  "What does a successful portal plug-in install log look like?",
+  "How do I check environment variables on the portal pod?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

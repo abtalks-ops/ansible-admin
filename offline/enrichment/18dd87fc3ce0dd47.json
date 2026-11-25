@@ -1,0 +1,12 @@
+{
+ "chunk_id": "18dd87fc3ce0dd47",
+ "chunk_hash": "18dd87fc3ce0dd47",
+ "summary": "The acl_manager role (github.com/ansible-security/acl_manager) manages ACLs on many firewall devices, such as blocking or unblocking an IP or URL; a typical incident response runs a playbook with it to block an attacker's IP after an intrusion alert.",
+ "questions": [
+  "What is the acl_manager role?",
+  "How do I block an attacker IP automatically after an alert?",
+  "Which role manages firewall ACLs in Ansible security automation?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

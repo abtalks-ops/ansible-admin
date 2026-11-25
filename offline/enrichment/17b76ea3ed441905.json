@@ -1,0 +1,18 @@
+{
+ "chunk_id": "17b76ea3ed441905",
+ "chunk_hash": "17b76ea3ed441905",
+ "summary": "November 19, 2025 controller fixes: migrating team mappers without a users field, the 0200_template_name_constraint migration error 'column main_unifiedjobtemplate.org_unique does not exist' with duplicate template or project names in an org, worker stream 'Expecting value: line 1 column 1' JSON errors (receptorctl pin), ansible-runner 2.4.2 for aborted log streaming, and automation-controller-fapolicyd moved from python3.9 to python3.11.",
+ "questions": [
+  "column main_unifiedjobtemplate.org_unique does not exist",
+  "Expecting value: line 1 column 1 (char 0) Line with invalid JSON data",
+  "Jobs fail on fapolicyd systems without python3.9",
+  "Migration 0200_template_name_constraint fails with duplicate job template names"
+ ],
+ "answer_card": {
+  "title": "Controller upgrade and worker-stream errors fixed Nov 19, 2025",
+  "answer_md": "- `django.db.utils.ProgrammingError: column main_unifiedjobtemplate.org_unique does not exist` in migration `0200_template_name_constraint.py` when an org has job templates or projects with duplicate names (AAP-56222)\n- `Expecting value: line 1 column 1 (char 0) Line with invalid JSON data: b` from the worker stream: fixed by a new pinned `receptorctl` (AAP-58412, AAP-58415)\n- No meaningful error when log streaming aborted: `ansible-runner` 2.4.2 (AAP-58390)\n- Jobs failing on `fapolicyd` systems without python3.9: `automation-controller-fapolicyd` now uses python3.11 (AAP-55790)\n\nApply the November 19, 2025 patch or later.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/release_notes/index"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

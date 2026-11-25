@@ -1,0 +1,12 @@
+{
+ "chunk_id": "4bff1b1209d3567f",
+ "chunk_hash": "4bff1b1209d3567f",
+ "summary": "November 19, 2025 Lightspeed enhancements: Lightspeed Core Stack and the intelligent assistant upgraded to lightspeed-core 0.3.0, ALIA support for lightspeed-stack 0.3.0 and llama-stack 0.2.22, and ALIA support for Azure and OpenAI providers.",
+ "questions": [
+  "What llama-stack version does Ansible Lightspeed intelligent assistant use?",
+  "Which lightspeed-stack version ships with AAP 2.6-3?",
+  "What does ALIA stand for in the AAP release notes?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

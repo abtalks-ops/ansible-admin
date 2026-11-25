@@ -1,0 +1,13 @@
+{
+ "chunk_id": "60574e1a5fa2f59c",
+ "chunk_hash": "60574e1a5fa2f59c",
+ "summary": "Verify the secret with oc get secret, created in the release's project before install or upgrade (or create it in the console as a key/value secret with key auth.json). Set redhat-developer-hub.global.pluginMode to oci or tarball; change it later with a Helm upgrade in the console or helm upgrade on the CLI.",
+ "questions": [
+  "What is pluginMode in the portal Helm chart?",
+  "How do I switch the portal from tarball to oci plug-in mode?",
+  "Can I create the registry auth secret in the OpenShift console?",
+  "When must the dynamic-plugins-registry-auth secret exist?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

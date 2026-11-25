@@ -1,0 +1,17 @@
+{
+ "chunk_id": "78def8599db4c526",
+ "chunk_hash": "78def8599db4c526",
+ "summary": "Job template sync settings: sync.jobTemplates.enabled (default true), optional surveyEnabled and labels (default []) filters, and schedule.frequency and schedule.timeout, which are required when template sync is enabled.",
+ "questions": [
+  "How do I disable job template sync in the portal?",
+  "What job template sync options does the portal support?",
+  "Is schedule required for jobTemplates sync?"
+ ],
+ "answer_card": {
+  "title": "Job template sync settings",
+  "answer_md": "| Option | Type | Requirement | Default |\n|---|---|---|---|\n| `sync.jobTemplates.enabled` | boolean | required | `true` |\n| `sync.jobTemplates.surveyEnabled` | boolean | optional | - |\n| `sync.jobTemplates.labels` | array | optional | `[]` |\n| `sync.jobTemplates.schedule.frequency` | object | required if enabled | e.g. `{ minutes: 60 }` |\n| `sync.jobTemplates.schedule.timeout` | object | required if enabled | e.g. `{ minutes: 15 }` |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_self_service_automation_portal/index#ref-devspaces-aap-sync-config-ref_aap-self-service-config"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

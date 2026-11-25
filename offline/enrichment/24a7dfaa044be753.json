@@ -1,0 +1,17 @@
+{
+ "chunk_id": "24a7dfaa044be753",
+ "chunk_hash": "24a7dfaa044be753",
+ "summary": "The chart and plug-in bundle must share major.minor, and the bundle patch must be equal to or higher than the chart patch (bundle 2.1.1 works with chart 2.1.0, 2.0.0 does not); the portal must also be compatible with your AAP version per the AAP life cycle page.",
+ "questions": [
+  "Is plug-in bundle 2.1.1 compatible with Helm chart 2.1.0?",
+  "Portal version alignment rules",
+  "Can the plug-in bundle be older than the Helm chart?"
+ ],
+ "answer_card": {
+  "title": "Portal version alignment",
+  "answer_md": "- Helm chart and plug-in bundle: same **major.minor**.\n- Bundle **patch ≥ chart patch**.\n  - bundle 2.1.1 + chart 2.1.0: OK\n  - bundle 2.0.0 + chart 2.1.0: not compatible\n- Portal version must be compatible with your AAP version (see the AAP Life Cycle page).",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-version-compatibility_aap-self-service-install"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:25:54+00:00"
+}

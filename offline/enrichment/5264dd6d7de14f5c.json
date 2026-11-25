@@ -1,0 +1,12 @@
+{
+ "chunk_id": "5264dd6d7de14f5c",
+ "chunk_hash": "5264dd6d7de14f5c",
+ "summary": "Automation can monitor and correlate threat data across many endpoints to produce actionable insights, enabling threat hunting for teams that lack resources.",
+ "questions": [
+  "How does Ansible help with threat hunting?",
+  "Automating threat hunting across endpoints",
+  "Can automation correlate threat data from many endpoints?"
+ ],
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:00+00:00"
+}
