@@ -566,7 +566,7 @@ async function generateFor(turn: Turn, el: HTMLElement, chunks: Chunk[]) {
   try {
     // Attempt 2 exists for GPU resets: the engine is rebuilt and the prompt is shortened.
     for (let attempt = 0; attempt < 2; attempt++) {
-      const budget = attempt > 0 || isFlaky() ? PROFILES.lite : PROFILES.normal;
+      const budget = attempt > 0 || isFlaky() || tier.backend === "cpu" ? PROFILES.lite : PROFILES.normal;
       const prompt = buildPrompt(turn.q, chunks, budget);
       used = prompt.used;
       try {
@@ -590,7 +590,7 @@ async function generateFor(turn: Turn, el: HTMLElement, chunks: Chunk[]) {
           },
           budget.maxTokens,
         );
-        turn.stats = statsText(r) + (budget === PROFILES.lite ? " · short mode" : "");
+        turn.stats = statsText(r) + (tier.backend === "cpu" ? " · CPU" : " · GPU") + (budget === PROFILES.lite && tier.backend !== "cpu" ? " · short mode" : "");
         if (isNotInDocs(r.text)) {
           turn.state = "notindocs";
           turn.answer = undefined;
@@ -612,7 +612,7 @@ async function generateFor(turn: Turn, el: HTMLElement, chunks: Chunk[]) {
         }
         turn.state = "error";
         turn.note = isDeviceLost(msg)
-          ? "The phone's GPU was reset again (likely out of memory). Close other tabs and apps and try again, switch to a smaller model in settings (SmolLM2 360M or LFM2.5 350M), or turn AI answers off. Details are under AI answers in settings."
+          ? "The phone's GPU was reset again (likely out of memory). Close other tabs and apps and try again, switch to a CPU model in settings (they don't use the GPU), or turn AI answers off. Details are under AI answers in settings."
           : `The AI answer failed: ${msg}.`;
         setChip("failed");
         return;
@@ -762,7 +762,7 @@ ui.updateBtn.addEventListener("click", async () => {
 ui.deleteBtn.addEventListener("click", async () => {
   if (!confirm("Delete the downloaded docs, AI model and chat history from this device?")) return;
   await caches.delete(DATA_CACHE);
-  for (const k of await caches.keys()) if (k.startsWith("webllm/")) await caches.delete(k); // downloaded AI model
+  for (const k of await caches.keys()) if (k.startsWith("webllm/") || k === "transformers-cache") await caches.delete(k); // downloaded AI models
   setAi(false);
   engine = null;
   try {
