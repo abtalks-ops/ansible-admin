@@ -1,0 +1,17 @@
+{
+ "chunk_id": "16584c65933baada",
+ "chunk_hash": "16584c65933baada",
+ "summary": "The 2.6 upgrade converts controller users to platform users; controller admins become platform admins, others keep mapped permissions after a password reset. Hub and EDA component-level accounts need an admin password reset. SSO and LDAP migrate automatically except accounts using a trust store certificate.",
+ "questions": [
+  "What happens to controller users when upgrading to AAP 2.6?",
+  "Do hub and EDA users need a password reset after upgrading?",
+  "Do LDAP and SSO users need migration for AAP 2.6?"
+ ],
+ "answer_card": {
+  "title": "User migration in the AAP 2.6 upgrade",
+  "answer_md": "- Controller accounts become platform accounts; controller admins become platform admins. Log in with your controller credentials.\n- Component-level accounts (private automation hub, EDA) need a password reset by an admin before login.\n- Authenticators migrate automatically; SSO and LDAP need no steps, except configs that use a certificate from the trust store.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_upgrade/index#verify-user-migration_upgrade-and-migration"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

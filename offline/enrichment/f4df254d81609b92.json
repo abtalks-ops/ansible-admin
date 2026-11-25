@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f4df254d81609b92",
+ "chunk_hash": "f4df254d81609b92",
+ "summary": "For mixed environments with controller and hub 2.4 plus EDA 2.6 and unified UI, first upgrade the 2.4 services (inventory listing only controller and hub VMs) to the initial 2.6 version, then run a 2.6 upgrade across all services.",
+ "questions": [
+  "How do I upgrade a mixed 2.4 controller and 2.6 EDA environment?",
+  "What order do I upgrade 2.4 controller and hub with EDA 2.6?",
+  "Do all services need the same version before the final 2.6 upgrade?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

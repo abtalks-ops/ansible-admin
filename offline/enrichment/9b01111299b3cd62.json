@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9b01111299b3cd62",
+ "chunk_hash": "9b01111299b3cd62",
+ "summary": "Create an event stream under Automation Decisions > Event Streams > Create event stream: name, organization, type Basic Event Stream (username/password), a credential, optional headers to forward (empty = all), and Forward events to rulebook activation (disable for testing). Then create a rulebook activation that uses the stream and enable it.",
+ "questions": [
+  "How do I create an event stream for Terraform in AAP?",
+  "Which event stream type works with the Terraform provider?",
+  "How do I test an event stream without triggering automation?",
+  "Where can I see how many events an event stream received?"
+ ],
+ "answer_card": {
+  "title": "Create an event stream for TF Actions",
+  "answer_md": "1. Go to **Automation Decisions > Event Streams** and click **Create event stream**.\n2. Set **Name**, **Organization**, **Event stream type** = **Basic Event Stream** (username/password) and a pre-created **Credential**.\n3. Optionally list **Headers** to forward (empty forwards all).\n4. Keep **Forward events to rulebook activation** on (turn off to test without triggering automation).\n5. Create it, then add the stream to a rulebook activation, enable **Rulebook activation enabled?**, and activate.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#terraform-provider-configuring-event-stream"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c5e04598b9c2b1fd",
+ "chunk_hash": "c5e04598b9c2b1fd",
+ "summary": "The container enterprise topology provides redundancy and more compute for large automation volumes, documented with infrastructure, requirements, ports and an example inventory.",
+ "questions": [
+  "What is the container enterprise topology?",
+  "Which containerized AAP topology provides redundancy?",
+  "Which containerized topology handles large automation volumes?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

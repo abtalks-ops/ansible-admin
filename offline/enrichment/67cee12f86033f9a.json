@@ -1,0 +1,17 @@
+{
+ "chunk_id": "67cee12f86033f9a",
+ "chunk_hash": "67cee12f86033f9a",
+ "summary": "Before running playbooks against TFE or HCP Terraform: match the EE's Terraform version, run terraform init, delete any local state file, get a token with the right permissions, remove backend config from playbooks, and set the workspace in TF config or an environment variable. Then create a credential, build an EE and launch a job template.",
+ "questions": [
+  "What should I do before running cloud.terraform playbooks against HCP Terraform?",
+  "Should I delete the local Terraform state file after migrating?",
+  "How do I set the Terraform workspace without editing the playbook?"
+ ],
+ "answer_card": {
+  "title": "Prepare playbooks after migrating to TFE or HCP Terraform",
+  "answer_md": "1. Match the Terraform version in the EE to TFE/HCP Terraform.\n2. Run `terraform init` against TFE/HCP Terraform.\n3. Delete any local state file in the EE.\n4. Get a token with permissions for what the playbook does.\n5. Remove backend config and files from the playbook.\n6. Set the workspace in TF config defaults or an environment variable.\n7. In AAP: create a credential, build an EE, create and launch a job template.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#terraform-migrating-from-community"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

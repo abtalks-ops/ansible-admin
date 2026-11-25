@@ -1,0 +1,13 @@
+{
+ "chunk_id": "df3c259059ef4529",
+ "chunk_hash": "df3c259059ef4529",
+ "summary": "AAP administrators can create self-service automation portal RBAC roles limiting custom templates to selected teams. Custom templates link to AAP job templates in steps.actions, so the team also needs permission to run those job templates in AAP. Prerequisites: a user added to a team.",
+ "questions": [
+  "How do I restrict a custom self-service template to one team?",
+  "Does a team need AAP job template permissions to run custom self-service templates?",
+  "Where is the link between a custom template and a job template defined?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:23+00:00"
+}

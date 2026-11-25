@@ -1,0 +1,13 @@
+{
+ "chunk_id": "69f67d0551f49fe1",
+ "chunk_hash": "69f67d0551f49fe1",
+ "summary": "Migration example 1 (plan only): cloud.terraform.terraform with check_mode becomes hashicorp.terraform.configuration_version (auto_queue_runs false) plus hashicorp.terraform.run with plan_only: true and variables as key/value pairs.",
+ "questions": [
+  "How do I do a plan-only run with hashicorp.terraform?",
+  "How do I convert a cloud.terraform check_mode plan to hashicorp.terraform?",
+  "How are variables passed to hashicorp.terraform.run?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

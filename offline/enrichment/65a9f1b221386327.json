@@ -1,0 +1,13 @@
+{
+ "chunk_id": "65a9f1b221386327",
+ "chunk_hash": "65a9f1b221386327",
+ "summary": "Operator enterprise also uses AWS ElastiCache Redis 6.2 (cache.t3.micro, cluster mode, transit encryption, 2 node groups with 1 replica, automatic failover) and S3 accessed over HTTPS via an AWS role given to the hub service account through Pod Identity; IPv4/IPv6 supported.",
+ "questions": [
+  "What Redis configuration was tested for the AAP enterprise topology on AWS?",
+  "How does automation hub access S3 on ROSA?",
+  "Does the AAP enterprise topology on AWS support IPv6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

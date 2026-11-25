@@ -1,0 +1,13 @@
+{
+ "chunk_id": "94a00d35db21245d",
+ "chunk_hash": "94a00d35db21245d",
+ "summary": "AAP and IBM HashiCorp Vault integration provides fully automated lifecycle management for Vault.",
+ "questions": [
+  "Does Ansible Automation Platform integrate with HashiCorp Vault?",
+  "What does the AAP Vault integration do?",
+  "Can Ansible manage Vault secrets lifecycle?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

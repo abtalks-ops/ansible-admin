@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9fadfc8e3eb521dc",
+ "chunk_hash": "9fadfc8e3eb521dc",
+ "summary": "hashicorp.vault authenticates through environment variables injected by credentials rather than module parameters. Supported: AppRole (VAULT_APPROLE_ROLE_ID and VAULT_APPROLE_SECRET_ID env vars via a custom credential type, or role_id/secret_id task parameters with auth_method: approle) and token (VAULT_TOKEN).",
+ "questions": [
+  "Which authentication methods does hashicorp.vault support?",
+  "Which environment variables does hashicorp.vault read?",
+  "Can I pass role_id and secret_id directly to hashicorp.vault tasks?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}

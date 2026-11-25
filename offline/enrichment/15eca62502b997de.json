@@ -1,0 +1,17 @@
+{
+ "chunk_id": "15eca62502b997de",
+ "chunk_hash": "15eca62502b997de",
+ "summary": "aap_host uses a lifecycle action_trigger on after_create to run action aap_eda_eventstream_post, which needs event_stream_config (username, password, url from data aap_eda_eventstream), limit, organization_name and template_type (job or workflow_job), plus job_template_name.",
+ "questions": [
+  "What parameters does aap_eda_eventstream_post require?",
+  "How do I get the event stream URL in Terraform?",
+  "What template types can aap_eda_eventstream_post target?"
+ ],
+ "answer_card": {
+  "title": "aap_eda_eventstream_post action",
+  "answer_md": "```hcl\nresource \"aap_host\" \"host\" {\n  inventory_id = data.aap_inventory.inventory.id\n  name         = aws_instance.instance.public_ip\n  lifecycle {\n    action_trigger {\n      events  = [after_create]\n      actions = [action.aap_eda_eventstream_post.event_post]\n    }\n  }\n}\ndata \"aap_eda_eventstream\" \"es\" { name = \"TF Actions Event Stream\" }\naction \"aap_eda_eventstream_post\" \"event_post\" {\n  config {\n    limit             = \"all\"\n    template_type     = \"job\"   # or workflow_job\n    job_template_name = \"Demo Job Template\"\n    organization_name = \"Default\"\n    event_stream_config = {\n      username = var.event_stream_username\n      password = var.event_stream_password\n      url      = data.aap_eda_eventstream.es.url\n    }\n  }\n}\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_hashicorp_and_ansible_automation_platform/index#terraform-provider-configuring-tf-actions"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:27:25+00:00"
+}
