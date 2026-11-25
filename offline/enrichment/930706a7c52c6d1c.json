@@ -1,0 +1,19 @@
+{
+ "chunk_id": "930706a7c52c6d1c",
+ "chunk_hash": "930706a7c52c6d1c",
+ "summary": "Extra variables come from surveys, the template and the API and can override inventory and project variables; prompted extra_vars are marked !unsafe (Jinja not expanded) unless set in the template, and launch API extra_vars only apply with an enabled survey or ask_variables_on_launch true. ALLOW_JINJA_IN_EXTRA_VARS controls Jinja.",
+ "questions": [
+  "Why are my extra_vars ignored when launching through the API?",
+  "Why doesn't Jinja expand in prompted extra vars?",
+  "What does !unsafe mean for extra_vars in AAP?",
+  "How do I stop a survey overriding an inventory variable?",
+  "What is ALLOW_JINJA_IN_EXTRA_VARS?"
+ ],
+ "answer_card": {
+  "title": "Why launch-time extra_vars are ignored",
+  "answer_md": "Extra variables sent to the job launch API are only used if **either**:\n\n- they match variables in an **enabled survey**, or\n- the template has `ask_variables_on_launch: true` (*Prompt on launch* for Variables).\n\nPrompted extra vars are marked `!unsafe`, so Jinja in them is treated as a plain string; only variables saved in the template's own *Extra Variables* are trusted. See `ALLOW_JINJA_IN_EXTRA_VARS` to change this.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-extra-variables"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

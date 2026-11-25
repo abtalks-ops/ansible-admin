@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2bf518273cc428bb",
+ "chunk_hash": "2bf518273cc428bb",
+ "summary": "Project inventory source fields: credential, Project and Inventory file (a file, directory or script), with Source variables for script environment; custom scripts from SCM need chmod +x or the sync fails with [Error 13] Permission denied.",
+ "questions": [
+  "Why does my inventory script fail with Error 13 Permission denied?",
+  "Can a project inventory source point to a directory?",
+  "How do I pass environment variables to an inventory script?",
+  "How do I select the inventory file from my project?"
+ ],
+ "answer_card": {
+  "title": "Inventory script Permission denied",
+  "answer_md": "If a custom inventory script from source control fails with `[Error 13] Permission denied`, set the execute bit on the script in the upstream repository (`chmod +x script` and commit), then sync the project and inventory source again.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#proc-controller-sourced-from-project"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

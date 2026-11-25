@@ -1,0 +1,17 @@
+{
+ "chunk_id": "a40445c6d2972830",
+ "chunk_hash": "a40445c6d2972830",
+ "summary": "Constructed inventory examples: groups is_shutdown and product_dev with limit is_shutdown:&product_dev, or one group shutdown_in_product_dev; use | default(\"running\") for undefined variables with strict: true.",
+ "questions": [
+  "How do I write a constructed inventory group with a Jinja condition?",
+  "How do I intersect two groups in a constructed inventory limit?",
+  "Why use default() in constructed inventory groups?"
+ ],
+ "answer_card": {
+  "title": "Constructed inventory: intersect two groups",
+  "answer_md": "`source_vars`:\n```yaml\nplugin: constructed\nstrict: true\ngroups:\n  is_shutdown: state | default(\"running\") == \"shutdown\"\n  product_dev: account_alias == \"product_dev\"\n```\n`limit`: `is_shutdown:&product_dev`\n\nThe `default()` avoids errors on hosts where the variable is undefined when `strict: true`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#ref-controller-group-name-vars-filtering"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

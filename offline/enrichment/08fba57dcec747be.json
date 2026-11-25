@@ -1,0 +1,18 @@
+{
+ "chunk_id": "08fba57dcec747be",
+ "chunk_hash": "08fba57dcec747be",
+ "summary": "To sign, create MANIFEST.in in the project root (distlib syntax, e.g. include inventory and recursive-include playbooks *.yml), then run ansible-sign project gpg-sign . which writes a SHA256 checksum manifest at .ansible-sign/sha256sum.txt and signs it.",
+ "questions": [
+  "How do I sign a project with ansible-sign?",
+  "What should MANIFEST.in contain?",
+  "Where does ansible-sign store the checksum manifest?",
+  "What syntax does MANIFEST.in use?"
+ ],
+ "answer_card": {
+  "title": "Sign a project with ansible-sign",
+  "answer_md": "1. In the project root, create `MANIFEST.in` listing files to protect, for example:\n```\ninclude inventory\nrecursive-include playbooks *.yml\n```\n2. Run `ansible-sign project gpg-sign .`\n3. Commit `MANIFEST.in` and the `.ansible-sign/` directory (`sha256sum.txt` and `sha256sum.txt.sig`).\n\nUse `--fingerprint` to choose a key, `--gnupg-home` for another GPG home, and `-p` to prompt for the passphrase over SSH.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#con-controller-signing-your-project"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

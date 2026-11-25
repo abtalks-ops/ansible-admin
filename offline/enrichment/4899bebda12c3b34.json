@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4899bebda12c3b34",
+ "chunk_hash": "4899bebda12c3b34",
+ "summary": "Roles are cached, so select Update revision on launch to re-download upstream roles before each job; expose extra directories with Paths to expose to isolated Jobs or AWX_ISOLATION_SHOW_PATHS, then restart with automation-controller-service restart after editing the settings file.",
+ "questions": [
+  "How do I make jobs always use the latest version of a role?",
+  "Do I need to restart controller after changing AWX_ISOLATION_SHOW_PATHS?",
+  "Why are roles cached in automation controller?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

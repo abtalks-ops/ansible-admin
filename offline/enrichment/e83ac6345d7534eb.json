@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e83ac6345d7534eb",
+ "chunk_hash": "e83ac6345d7534eb",
+ "summary": "Automation Execution > Schedules lists schedules, sortable and searchable by name, date or month, with On/Off toggles and edit; resources have their own Schedules tab, and columns show name, related resource, type and next run.",
+ "questions": [
+  "Where can I see all schedules in AAP?",
+  "How do I disable a schedule?",
+  "How do I find when a schedule runs next?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

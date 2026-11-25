@@ -1,0 +1,13 @@
+{
+ "chunk_id": "a241542769e05fcc",
+ "chunk_hash": "a241542769e05fcc",
+ "summary": "Job templates and workflow job templates are created under Automation Execution > Templates; a job template is a reusable definition and set of parameters for running an Ansible job.",
+ "questions": [
+  "What is a job template in automation controller?",
+  "Where do I create job templates in AAP 2.6?",
+  "Why use job templates?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

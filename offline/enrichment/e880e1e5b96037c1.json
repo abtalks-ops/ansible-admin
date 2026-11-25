@@ -1,0 +1,14 @@
+{
+ "chunk_id": "e880e1e5b96037c1",
+ "chunk_hash": "e880e1e5b96037c1",
+ "summary": "Workflow RBAC: creating requires org or system admin, editing and deleting needs the admin role, adding a job template needs execute on it, a workflow can be run without access to its job templates, sysadmins can grant admin_role on a blank workflow, and relaunch or copy needs access to all resources.",
+ "questions": [
+  "What role do I need to create a workflow job template?",
+  "Can I run a workflow without permission on its job templates?",
+  "Why can't I add a job template to my workflow?",
+  "Why can't I relaunch a workflow?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c92bc57462aa3c7e",
+ "chunk_hash": "c92bc57462aa3c7e",
+ "summary": "Procedure to set capacity adjustment: Automation Execution > Infrastructure > Instance Groups, select the group, then on the Instances tab move the Capacity adjustment slider left for fewer forks or right for more.",
+ "questions": [
+  "Where is the capacity adjustment slider in AAP?",
+  "How do I give an instance more forks in the UI?",
+  "How do I change instance capacity adjustment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

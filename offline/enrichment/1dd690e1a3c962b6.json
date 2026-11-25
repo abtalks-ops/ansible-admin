@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1dd690e1a3c962b6",
+ "chunk_hash": "1dd690e1a3c962b6",
+ "summary": "Approval nodes pause a workflow until approved, with an optional timeout after which it is denied; approvers are users who can execute the workflow, org admins or above, or users with the Approve permission; denied or timed out approvals follow the on fail or always path, approved follows on success.",
+ "questions": [
+  "How do approval nodes work in workflows?",
+  "Who can approve a workflow approval node?",
+  "What happens when a workflow approval times out?",
+  "Can I set a timeout for an approval node?"
+ ],
+ "answer_card": {
+  "title": "Workflow approval nodes",
+  "answer_md": "- An **Approval** node pauses the workflow until someone approves or denies it. Timeout defaults to none; if set, the request is denied when it expires.\n- **Approvers**: users who can execute the workflow job template, organization admins (or higher) for its organization, or users given the *Approve* permission on that workflow.\n- **Approved** follows the *on success* path; **denied** or **timed out** is marked failed/timed out and follows *on fail* or *always*.\n- POSTing to an already resolved approval returns an error and does nothing.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-approval-nodes"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

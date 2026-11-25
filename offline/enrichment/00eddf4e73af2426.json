@@ -1,0 +1,14 @@
+{
+ "chunk_id": "00eddf4e73af2426",
+ "chunk_hash": "00eddf4e73af2426",
+ "summary": "Groups (only for standard inventories, not smart) organize hosts and can nest; create one on the inventory's Groups tab with Create group, Name and optional Variables. Inventory sources are not tied to groups and spawn top-level groups.",
+ "questions": [
+  "How do I add a group to an inventory?",
+  "Can I add groups to a smart inventory?",
+  "How do I set group variables in controller?",
+  "Are inventory source groups nested under a group?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

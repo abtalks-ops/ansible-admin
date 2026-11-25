@@ -1,0 +1,13 @@
+{
+ "chunk_id": "98b60c844162c528",
+ "chunk_hash": "98b60c844162c528",
+ "summary": "Sliced jobs create a workflow of jobs, each with a shortened inventory, following normal forks, capacity and instance group rules; slices should usually not exceed hybrid or execution nodes, as thousands of slices degrade the scheduler.",
+ "questions": [
+  "How many job slices should I use?",
+  "Do sliced jobs follow instance group rules?",
+  "Can too many job slices cause problems?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

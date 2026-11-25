@@ -1,0 +1,19 @@
+{
+ "chunk_id": "b79bacb63daeb120",
+ "chunk_hash": "b79bacb63daeb120",
+ "summary": "Building a workflow: open the visualizer, Add step, choose a node type; nodes without a default inventory use the workflow's, templates with password credentials cannot be added unless prompted; edge types are Always (fixed for root), Run on success and Run on fail, and Convergence is Any (default) or All.",
+ "questions": [
+  "How do I add a node in the workflow visualizer?",
+  "What is the difference between Any and All convergence?",
+  "Why can't I add my job template to a workflow?",
+  "What edge types exist in controller workflows?",
+  "Which inventory does a workflow node use if the job template has none?"
+ ],
+ "answer_card": {
+  "title": "Workflow edge types and convergence",
+  "answer_md": "**Edge type** (how a node is triggered from its parent):\n- *Always run*: regardless of success or failure (root nodes are always *Always*)\n- *Run on success*\n- *Run on fail*\n\n**Convergence** (node with several parents):\n- *Any* (default): runs once all parents finish and at least one meets its run condition\n- *All*: runs only if every parent meets its expected outcome; shown as *ALL* in the graph",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-build-workflow"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

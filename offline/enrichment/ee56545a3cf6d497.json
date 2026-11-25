@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ee56545a3cf6d497",
+ "chunk_hash": "ee56545a3cf6d497",
+ "summary": "Surveys on Run or Check job templates prompt users at launch and set extra variables with input validation, for example a push-to-stage button asking which tag to release; created from the Survey tab.",
+ "questions": [
+  "What is a survey in a job template?",
+  "How are surveys different from prompting for extra variables?",
+  "Which job types support surveys?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e895f09b9307f762",
+ "chunk_hash": "e895f09b9307f762",
+ "summary": "Provisioning callbacks accept extra_vars in the JSON POST body (Content-Type application/json) alongside host_config_key, e.g. curl -d '{\"host_config_key\": \"redhat\", \"extra_vars\": \"{\\\"foo\\\": \\\"bar\\\"}\"}'.",
+ "questions": [
+  "How do I pass extra_vars to a provisioning callback?",
+  "What content type does the callback need for extra vars?",
+  "curl example for callback with extra variables"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

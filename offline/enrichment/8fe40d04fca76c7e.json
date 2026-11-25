@@ -1,0 +1,18 @@
+{
+ "chunk_id": "8fe40d04fca76c7e",
+ "chunk_hash": "8fe40d04fca76c7e",
+ "summary": "Create an instance group under Automation Execution > Infrastructure > Instance Groups > Create group > Create instance group: unique name (not 'controller'), Policy instance minimum and percentage (default 0), and Max concurrent jobs and Max forks limits (0 means no limit).",
+ "questions": [
+  "How do I create an instance group?",
+  "What does Policy instance percentage do?",
+  "Can I name an instance group controller?",
+  "How do I limit concurrent jobs on an instance group?"
+ ],
+ "answer_card": {
+  "title": "Create an instance group",
+  "answer_md": "**Automation Execution > Infrastructure > Instance Groups > Create group > Create instance group**:\n\n- **Name**: unique, and not `controller`\n- **Policy instance minimum** / **Policy instance percentage**: instances auto-assigned as they come online (default 0)\n- **Max concurrent jobs** and **Max forks**: capacity limits; `0` means no limit\n\nThen use the **Instances** tab > **Associate instance** to add instances.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-create-instance-group"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

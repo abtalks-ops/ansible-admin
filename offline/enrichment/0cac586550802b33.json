@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0cac586550802b33",
+ "chunk_hash": "0cac586550802b33",
+ "summary": "Cloud credentials authenticate to OpenStack, AWS, Google, Azure and VMware, for cloud inventory syncs and job templates where they are injected into the playbook's runtime environment.",
+ "questions": [
+  "Which cloud credentials does automation controller support?",
+  "Can I use a cloud credential in a job template?",
+  "How do playbooks get cloud credentials in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

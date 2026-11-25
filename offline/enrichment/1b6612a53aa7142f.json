@@ -1,0 +1,14 @@
+{
+ "chunk_id": "1b6612a53aa7142f",
+ "chunk_hash": "1b6612a53aa7142f",
+ "summary": "Workflow considerations: root nodes are ALWAYS, nodes can have several parents with success, failure or always links, a workflow job is successful unless canceled or errored, deleted nodes reconnect upstream, convergence runs parallel jobs before a joining node, and launching from the API with get lists warnings.",
+ "questions": [
+  "Why is my workflow job successful even though a job failed?",
+  "Can a workflow node have multiple parents?",
+  "How do convergent workflows work?",
+  "What happens to links when I delete a workflow node?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

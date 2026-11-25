@@ -1,0 +1,13 @@
+{
+ "chunk_id": "30b181eb1db70f4d",
+ "chunk_hash": "30b181eb1db70f4d",
+ "summary": "Percentage and minimum policies both set minimums and the one giving more instances wins (50% and minimum 2 on 6 nodes gives 3, on 2 nodes gives 2); policies allow overlap, which you avoid by making group percentages add up to 100.",
+ "questions": [
+  "What happens if both policy_instance_percentage and policy_instance_minimum are set?",
+  "How do I stop instances being in more than one instance group?",
+  "How do I split instances evenly across instance groups?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

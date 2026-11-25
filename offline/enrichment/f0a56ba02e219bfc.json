@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f0a56ba02e219bfc",
+ "chunk_hash": "f0a56ba02e219bfc",
+ "summary": "Inventory Variables apply to all hosts (JSON or YAML); for constructed inventories Source vars define groups under the groups key as Jinja2 expressions evaluated per host, and the group name can be used in Limit.",
+ "questions": [
+  "How do I set variables for all hosts in an inventory?",
+  "How do source vars create groups in a constructed inventory?",
+  "Can I use Jinja2 in constructed inventory source vars?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}
