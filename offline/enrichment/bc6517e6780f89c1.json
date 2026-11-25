@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bc6517e6780f89c1",
+ "chunk_hash": "bc6517e6780f89c1",
+ "summary": "`automation-controller-service` (in /usr/bin) starts, stops and restarts all controller services on a node, including the message queue and the integrated database. In clustered installs it does not restart PostgreSQL; use `systemctl restart automation-controller` on each node. Do not use it in containers; restart the pod instead.",
+ "questions": [
+  "How do I restart automation controller?",
+  "What does automation-controller-service restart do?",
+  "How do I restart controller in a cluster?",
+  "Can I use automation-controller-service in a container?"
+ ],
+ "answer_card": {
+  "title": "Restart automation controller",
+  "answer_md": "```bash\nautomation-controller-service restart        # single node, includes integrated DB\nsystemctl restart automation-controller      # clustered: run on each node\n```\nExternal databases are managed separately. In containerized or OpenShift deployments, restart the pod instead.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#controller-start-stop-controller"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

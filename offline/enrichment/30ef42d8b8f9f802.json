@@ -1,0 +1,14 @@
+{
+ "chunk_id": "30ef42d8b8f9f802",
+ "chunk_hash": "30ef42d8b8f9f802",
+ "summary": "metrics-utility is a CLI installed with automation controller that gathers configuration data (versions, subscription, base URL) and reporting data (job, host, inventory, organization, project, result, date) to build consumption-based billing reports in a configured location; clean old reports regularly.",
+ "questions": [
+  "What is metrics-utility in AAP?",
+  "How do I generate a consumption-based billing report?",
+  "What data does metrics-utility collect?",
+  "Why should I clear old metrics-utility reports?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

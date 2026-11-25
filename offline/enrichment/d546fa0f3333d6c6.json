@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d546fa0f3333d6c6",
+ "chunk_hash": "d546fa0f3333d6c6",
+ "summary": "Platform gateway handles authentication and authorization, provides the single ingress and serves the UI. Settings > Platform gateway > Edit platform gateway settings configures gateway, security, session, platform security, custom login and other options, including Platform gateway proxy url and proxy url ignore cert.",
+ "questions": [
+  "What does platform gateway do in AAP 2.6?",
+  "Where do I set the platform gateway proxy URL?",
+  "How do I ignore the certificate for the gateway proxy?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

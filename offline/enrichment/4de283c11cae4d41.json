@@ -1,0 +1,14 @@
+{
+ "chunk_id": "4de283c11cae4d41",
+ "chunk_hash": "4de283c11cae4d41",
+ "summary": "Timeouts (503/504), slow login or high API latency point to the external auth provider when only on login, otherwise to web server tuning. Slow job output comes from the callback receiver writing events to the database; check control node CPU and memory, scale control nodes or reduce jobs per node. First runs with unpulled EEs show output only at the end.",
+ "questions": [
+  "Why do I get 504 errors in the AAP UI?",
+  "Why does job output take so long to load?",
+  "Slow login with LDAP in AAP",
+  "Job output only appears after the job finishes"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d9813858e5440d31",
+ "chunk_hash": "d9813858e5440d31",
+ "summary": "Manage organization access by selecting the organization and using its Users, Administrators and Teams tabs.",
+ "questions": [
+  "How do I manage who has access to an organization?",
+  "Where do I add administrators to an organization?",
+  "Which tabs control organization access?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9651fcbc48c3c9f3",
+ "chunk_hash": "9651fcbc48c3c9f3",
+ "summary": "Log queue settings: LOG_AGGREGATOR_ACTION_MAX_DISK_USAGE_GB (default 1 GB, queue.maxDiskSpace), LOG_AGGREGATOR_ACTION_QUEUE_SIZE (spills to disk at 75%, discards NOTICE, INFO and DEBUG at 90%) and LOG_AGGREGATOR_MAX_DISK_USAGE_PATH (default /var/lib/awx), so logs are kept while for example Splunk is offline.",
+ "questions": [
+  "What happens to logs when Splunk is down?",
+  "How do I increase the log queue disk size?",
+  "Where does controller store queued logs during an outage?",
+  "Why are INFO logs being dropped?"
+ ],
+ "answer_card": {
+  "title": "Buffer logs while the aggregator is down",
+  "answer_md": "| Setting | Default | Meaning |\n|---|---|---|\n| `LOG_AGGREGATOR_ACTION_MAX_DISK_USAGE_GB` | 1 | disk used to queue logs |\n| `LOG_AGGREGATOR_ACTION_QUEUE_SIZE` | n/a | messages in memory; disk at 75%, drops NOTICE/INFO/DEBUG at 90% |\n| `LOG_AGGREGATOR_MAX_DISK_USAGE_PATH` | `/var/lib/awx` | spool directory |\n\nSet them through `/api/v2/settings/logging/`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#assembly-controller-logging-aggregation"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

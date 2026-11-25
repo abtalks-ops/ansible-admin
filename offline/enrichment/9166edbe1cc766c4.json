@@ -1,0 +1,14 @@
+{
+ "chunk_id": "9166edbe1cc766c4",
+ "chunk_hash": "9166edbe1cc766c4",
+ "summary": "Controller processes inventory files with ansible-inventory and accepts any valid syntax; inventory scripts need not be Python but must be executable (chmod +x) and checked into Git. The passage shows a valid JSON inventory with _meta hostvars and groups.",
+ "questions": [
+  "Do inventory scripts have to be Python in controller?",
+  "What JSON format does a controller inventory script need?",
+  "Inventory script not running from SCM source",
+  "Why does my inventory script fail with permission denied?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

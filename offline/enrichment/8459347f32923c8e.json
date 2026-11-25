@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8459347f32923c8e",
+ "chunk_hash": "8459347f32923c8e",
+ "summary": "Remove users from a team on its Users tab with Remove user or Remove selected users; team administrators are removed from the Administrators tab. Removing a user removes all of that team's role assignments from them.",
+ "questions": [
+  "How do I remove a user from a team?",
+  "What happens to roles when a user leaves a team?",
+  "How do I remove a team administrator?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "3c9b7815a75f7caf",
+ "chunk_hash": "3c9b7815a75f7caf",
+ "summary": "Access tokens expire after 1 year by default. For Authorization code integrations, allowlist cross-site origins in the platform settings file with CORS_ORIGIN_ALLOW_ALL and CORS_ALLOWED_ORIGIN_REGEXES.",
+ "questions": [
+  "What is the default expiration of an AAP access token?",
+  "How do I allow CORS origins for an OAuth application?",
+  "What is CORS_ALLOWED_ORIGIN_REGEXES used for?",
+  "CORS error when external app requests a token from AAP"
+ ],
+ "answer_card": {
+  "title": "Allowlist origins for OAuth integrations",
+  "answer_md": "Add to the local Ansible Automation Platform settings file:\n```python\nCORS_ORIGIN_ALLOW_ALL = True\nCORS_ALLOWED_ORIGIN_REGEXES = [\n    r\"http://www.example.com*\",\n]\n```\nList each application that needs tokens. Access tokens expire after **1 year** by default.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/access_management_and_authentication/index#gw-request-token-after-expiration"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

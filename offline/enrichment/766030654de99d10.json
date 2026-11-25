@@ -1,0 +1,17 @@
+{
+ "chunk_id": "766030654de99d10",
+ "chunk_hash": "766030654de99d10",
+ "summary": "Attach a policy to a job template by editing or creating it under Automation Execution > Templates and entering the package/rule query path in Policy enforcement.",
+ "questions": [
+  "How do I associate a policy with a job template?",
+  "Where is the Policy enforcement field on a job template?",
+  "Add OPA policy to a single job template"
+ ],
+ "answer_card": {
+  "title": "Attach an OPA policy",
+  "answer_md": "Enter the policy query path as `package/rule` (for example `aap_policy_examples/allowed`) in the **Policy enforcement** field of:\n- an organization: **Access Management > Organizations**\n- an inventory: **Automation Execution > Infrastructure > Inventories**\n- a job template: **Automation Execution > Templates**\n\nThen save. Resources without a policy are not evaluated.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#pac-add-policy-to-template_subscription-management"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

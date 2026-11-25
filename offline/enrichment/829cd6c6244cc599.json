@@ -1,0 +1,13 @@
+{
+ "chunk_id": "829cd6c6244cc599",
+ "chunk_hash": "829cd6c6244cc599",
+ "summary": "Set up logging under Settings > Automation Execution > Logging > Edit: Logging Aggregator host or IP, port and type. For HTTPS the host can be a URL with port; TCP and UDP need the port in its own field, and only the hostname of a URL is used.",
+ "questions": [
+  "How do I set up log aggregation in AAP 2.6?",
+  "Do I need a port for the logging aggregator?",
+  "TCP logging aggregator ignores port in URL"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "chunk_id": "33b1ae24ee6f286a",
+ "chunk_hash": "33b1ae24ee6f286a",
+ "summary": "Settings > Automation Execution > System sets the base URL, Proxy IP allowed list (empty means REMOTE_HOST_HEADERS are trusted unconditionally), analytics and subscription client IDs and secrets, global default execution environment, custom virtualenv paths, analytics gather interval and Remote Host Headers such as HTTP_X_FORWARDED_FOR.",
+ "questions": [
+  "How do I set the base URL for controller notifications?",
+  "How do I trust X-Forwarded-For behind a load balancer?",
+  "Where is the global default execution environment set?",
+  "What is the Proxy IP allowed list?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "chunk_id": "d6fc25a3d026b866",
+ "chunk_hash": "d6fc25a3d026b866",
+ "summary": "SCM inventory sources use source_project, source_path (blank = project root) and source_vars. Project updates trigger inventory updates, a project update runs right after source creation, neither is blocked by running jobs, and ~10 GB projects can fill /tmp.",
+ "questions": [
+  "What is source_path for an SCM inventory source?",
+  "Does a project update trigger an inventory update?",
+  "Large project fills /tmp during inventory update",
+  "How do I pass environment variables to an SCM inventory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

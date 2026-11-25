@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3fca3eae103d4f92",
+ "chunk_hash": "3fca3eae103d4f92",
+ "summary": "Controller collects host metrics to count node usage for subscription compliance; hosts no longer in use can be soft-deleted so they stop counting.",
+ "questions": [
+  "How does AAP count managed nodes?",
+  "How do I stop counting decommissioned hosts?",
+  "What are host metrics in controller?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

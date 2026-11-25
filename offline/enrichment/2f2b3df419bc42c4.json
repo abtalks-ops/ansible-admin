@@ -1,0 +1,14 @@
+{
+ "chunk_id": "2f2b3df419bc42c4",
+ "chunk_hash": "2f2b3df419bc42c4",
+ "summary": "Jobs run slower than locally because controller dispatches to a node, starts a container and saves output. Update on launch, large projects, internal cluster routing, an Always container pull policy and disks below the required IOPS also delay job start.",
+ "questions": [
+  "Why are jobs slower on controller than on my laptop?",
+  "Does container pull policy affect job start time?",
+  "How do project size and update on launch slow down jobs?",
+  "What disk IOPS does controller need?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

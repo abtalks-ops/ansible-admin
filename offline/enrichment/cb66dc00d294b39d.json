@@ -1,0 +1,14 @@
+{
+ "chunk_id": "cb66dc00d294b39d",
+ "chunk_hash": "cb66dc00d294b39d",
+ "summary": "PostgreSQL VACUUM removes dead tuples and ANALYZE gathers planner statistics in pg_statistic; keep autovacuum on, but schedule manual vacuums in maintenance windows if the database never idles. Tune memory GUCs in postgresql.conf, starting with shared_buffers (default 128 MB, set to 15 to 25% of RAM).",
+ "questions": [
+  "How should I tune PostgreSQL for automation controller?",
+  "What should shared_buffers be set to for controller?",
+  "Why is autovacuum not freeing space on the controller database?",
+  "Where is postgresql.conf for controller tuning?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

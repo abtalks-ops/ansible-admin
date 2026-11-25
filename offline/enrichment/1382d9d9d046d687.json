@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1382d9d9d046d687",
+ "chunk_hash": "1382d9d9d046d687",
+ "summary": "The Settings menu configures the platform through Subscriptions, Platform gateway, User Preferences and Troubleshooting; other entries are specific to automation execution.",
+ "questions": [
+  "What can I configure in the AAP Settings menu?",
+  "Where are platform gateway settings?",
+  "Where are troubleshooting settings?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

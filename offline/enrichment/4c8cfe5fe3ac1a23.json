@@ -1,0 +1,14 @@
+{
+ "chunk_id": "4c8cfe5fe3ac1a23",
+ "chunk_hash": "4c8cfe5fe3ac1a23",
+ "summary": "Settings > User Preferences sets refresh interval, color theme (dark, light, system), table layout (comfortable or compact), form columns, date format (relative or date and time) and preferred data format; preferences are stored locally in your browser.",
+ "questions": [
+  "How do I enable dark mode in AAP?",
+  "Where are user preferences stored?",
+  "How do I change the page refresh interval?",
+  "Why don't my preferences follow me to another computer?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

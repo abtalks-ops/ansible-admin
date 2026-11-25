@@ -1,0 +1,13 @@
+{
+ "chunk_id": "dfd2646e17fccf1f",
+ "chunk_hash": "dfd2646e17fccf1f",
+ "summary": "An example policy input from a Demo Job Template launch shows created_by admin as superuser, an ssh machine credential, the default ee-supported execution environment, extra_vars, the default instance group, Demo Inventory and job_type run.",
+ "questions": [
+  "What does OPA input look like for a job template launch?",
+  "Example policy input data for AAP",
+  "How do I test an OPA policy with sample AAP input?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}
