@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import path from "node:path";
 
 export const ROOT = path.resolve(import.meta.dirname, "..");
@@ -13,7 +14,10 @@ export const VERSION = process.env.CORE_VERSION ?? "2.22";
 export interface RepoSource {
   name: string;
   repo: string;
+  /** What is fetched: the locked commit, or an override. */
   ref: string;
+  /** The upstream branch the nightly update follows. */
+  branch: string;
   dir: string;
   licence: string; // still to be verified before launch, see the design doc
   url: (relPath: string) => string;
@@ -26,19 +30,38 @@ export interface RepoSource {
 
 /** Red Hat Ansible Automation Platform docs version (ansible/aap-docs branch). */
 export const AAP_VERSION = process.env.AAP_VERSION ?? "2.6";
+
 /**
- * The aap-docs commit the committed chunks and enrichment were made from. Chunk ids hash the
- * text, so building from a newer commit can orphan enrichment; move the pin on purpose, then run
- * `npm run check:enrichment`. AAP_REF overrides it (a branch name or commit).
+ * sources.lock.json pins the exact upstream commits (and the ansible-core release used for the
+ * plugin docs) that the committed chunks/ were built from. Chunk ids hash the text, so building
+ * from a newer commit can orphan enrichment. `npm run update` (the nightly docs-update workflow)
+ * is what moves the pins, together with the new chunk lists. CORE_REF / AAP_REF override them
+ * (a branch name or commit).
  */
-const AAP_PIN: Record<string, string> = { "2.6": "0eb284c4d9011314f865be991ae63a6a1b4faeb3" };
-export const AAP_REF = process.env.AAP_REF ?? AAP_PIN[AAP_VERSION] ?? AAP_VERSION;
+export const LOCK_FILE = path.join(ROOT, "sources.lock.json");
+export interface SourcesLock {
+  note?: string;
+  sources: Record<string, { branch: string; commit: string }>;
+  ansible_core: string;
+}
+export const readLock = (): SourcesLock =>
+  fs.existsSync(LOCK_FILE) ? JSON.parse(fs.readFileSync(LOCK_FILE, "utf8")) : { sources: {}, ansible_core: "" };
+/** The locked commit for repo, or the branch itself when the lock was made for another branch. */
+const pinned = (repo: string, branch: string) => {
+  const l = readLock().sources[repo];
+  return l && l.branch === branch ? l.commit : branch;
+};
+export const CORE_BRANCH = `stable-${VERSION}`;
+export const CORE_REF = process.env.CORE_REF ?? pinned("ansible/ansible-documentation", CORE_BRANCH);
+export const AAP_BRANCH = AAP_VERSION;
+export const AAP_REF = process.env.AAP_REF ?? pinned("ansible/aap-docs", AAP_BRANCH);
 
 export const SOURCES: RepoSource[] = [
   {
     name: "ansible-core docs",
     repo: "ansible/ansible-documentation",
-    ref: `stable-${VERSION}`,
+    ref: CORE_REF,
+    branch: CORE_BRANCH,
     dir: "docs/docsite/rst",
     licence: "GPL-3.0-or-later",
     url: (rel) => `https://docs.ansible.com/ansible/latest/${rel.replace(/\.rst$/, ".html")}`,
@@ -49,6 +72,7 @@ export const SOURCES: RepoSource[] = [
     name: "Red Hat AAP docs",
     repo: "ansible/aap-docs",
     ref: AAP_REF,
+    branch: AAP_BRANCH,
     dir: "downstream",
     licence: "CC-BY-SA-4.0",
     url: () => `https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/${AAP_VERSION}`,

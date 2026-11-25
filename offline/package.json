@@ -6,6 +6,7 @@
     "build:index": "tsx pipeline/build.ts",
     "eval": "tsx pipeline/eval.ts",
     "check:enrichment": "tsx pipeline/check-enrichment.ts",
+    "update": "tsx pipeline/update.ts",
     "build:pwa": "node pwa/build.mjs",
     "serve": "node pwa/serve.mjs",
     "typecheck": "tsc --noEmit",

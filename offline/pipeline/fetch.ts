@@ -21,3 +21,18 @@ export function fetchSource(s: RepoSource, reuse = false): { dir: string; sha: s
   }
   return { dir: path.join(dest, s.dir), sha: git(dest, "rev-parse", "HEAD") };
 }
+
+/** Latest commit of a branch, without cloning. */
+export function remoteHead(repo: string, branch: string): string {
+  const out = execFileSync("git", ["ls-remote", `https://github.com/${repo}.git`, `refs/heads/${branch}`], { encoding: "utf8" }).trim();
+  if (!out) throw new Error(`branch ${branch} not found in ${repo}`);
+  return out.split(/\s+/)[0];
+}
+
+/** The installed ansible-core release ("2.22.0"), whose ansible-doc output feeds the plugin chunks. */
+export function ansibleCoreVersion(): string {
+  const out = execFileSync("ansible-doc", ["--version"], { encoding: "utf8" });
+  const m = /\[core ([^\]]+)\]/.exec(out);
+  if (!m) throw new Error(`could not read the ansible-core version from: ${out.split("\n")[0]}`);
+  return m[1];
+}

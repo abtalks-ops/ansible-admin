@@ -91,7 +91,11 @@ export function applyCachedEnrichment(chunks: Chunk[]): number {
   return n;
 }
 
-export async function enrich(chunks: Chunk[], opts: { limit?: number } = {}): Promise<void> {
+/**
+ * opts.writeFiles: also write each result as enrichment/<chunk_hash>.json (the committed form),
+ * so a CI run's results survive the run. Without it, results only go to work/enrich-cache.jsonl.
+ */
+export async function enrich(chunks: Chunk[], opts: { limit?: number; writeFiles?: boolean } = {}): Promise<void> {
   if (!process.env.ANTHROPIC_API_KEY && !process.env.ANTHROPIC_AUTH_TOKEN) {
     console.log("  skipped: no ANTHROPIC_API_KEY set (the index is built without summaries and questions)");
     return;
@@ -147,6 +151,11 @@ export async function enrich(chunks: Chunk[], opts: { limit?: number } = {}): Pr
       continue;
     }
     out.write(JSON.stringify({ id: r.custom_id, ...parsed.data }) + "\n");
+    if (opts.writeFiles) {
+      const file = { chunk_id: r.custom_id, chunk_hash: r.custom_id, answer_card: null, ...parsed.data, model: `${ENRICH_MODEL} (batch api)`, created_at: new Date().toISOString() };
+      fs.mkdirSync(ENRICH_DIR, { recursive: true });
+      fs.writeFileSync(path.join(ENRICH_DIR, `${r.custom_id}.json`), JSON.stringify(file, null, 1) + "\n");
+    }
     ok++;
   }
   out.end();

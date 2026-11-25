@@ -62,6 +62,7 @@ if (problems.length) {
   for (const p of problems.slice(0, 50)) console.error(`  ${p}`);
   if (problems.length > 50) console.error(`  ... and ${problems.length - 50} more`);
   console.error(`FAILED: ${problems.length} problems`);
+  if (fs.existsSync(path.join(ROOT, "pending-enrichment.jsonl"))) console.error("The chunks still to enrich are listed in pending-enrichment.jsonl (see README, Nightly docs update).");
   process.exit(1);
 }
 console.log("enrichment check passed");

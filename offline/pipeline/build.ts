@@ -12,10 +12,10 @@ import path from "node:path";
 import { INDEX_FORMAT, quantize, type Chunk, type Manifest, type ShardFile, type ShardMeta } from "../shared/search.ts";
 import { chunkAsciidocBooks } from "./asciidoc.ts";
 import { chunkBuiltinPlugins, chunkRepo } from "./chunk.ts";
-import { EMBEDDER, OUT_DIR, PRODUCT, ROOT, SHARD_MAX_CHUNKS, SOURCES, VERSION, WORK_DIR } from "./config.ts";
+import { EMBEDDER, OUT_DIR, PRODUCT, readLock, ROOT, SHARD_MAX_CHUNKS, SOURCES, VERSION, WORK_DIR } from "./config.ts";
 import { embed, passageText } from "./embed.ts";
 import { applyCachedEnrichment, enrich } from "./enrich.ts";
-import { fetchSource } from "./fetch.ts";
+import { ansibleCoreVersion, fetchSource } from "./fetch.ts";
 
 const args = process.argv.slice(2);
 const has = (f: string) => args.includes(f);
@@ -80,7 +80,10 @@ async function main() {
   }
   if (!only) {
     const plugins = chunkBuiltinPlugins();
-    console.log(`  ansible.builtin plugin docs: ${plugins.length} chunks`);
+    const core = ansibleCoreVersion();
+    const locked = readLock().ansible_core;
+    console.log(`  ansible.builtin plugin docs (ansible-core ${core}): ${plugins.length} chunks`);
+    if (locked && core !== locked) console.warn(`  warning: sources.lock.json pins ansible-core ${locked}; plugin chunk ids may not match chunks/`);
     groups.push({ name: "plugins", product: PRODUCT, version: VERSION, chunks: plugins });
   }
   const all = groups.flatMap((g) => g.chunks);

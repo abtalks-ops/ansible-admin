@@ -1,0 +1,8 @@
+{
+  "note": "Exact upstream inputs the committed chunks/ were built from. Written by `npm run update`; edit by hand only to move a pin on purpose.",
+  "sources": {
+    "ansible/ansible-documentation": { "branch": "stable-2.22", "commit": "9384d06a664165a463ec4cf92d5e12502772fdf1" },
+    "ansible/aap-docs": { "branch": "2.6", "commit": "0eb284c4d9011314f865be991ae63a6a1b4faeb3" }
+  },
+  "ansible_core": "2.22.0"
+}
