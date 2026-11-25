@@ -1,0 +1,17 @@
+{
+ "chunk_id": "d5f6d62b8f5c0078",
+ "chunk_hash": "d5f6d62b8f5c0078",
+ "summary": "The OPA policy must return allowed (boolean) and violations (list of strings with reasons), for example allowed false with \"No job execution is allowed\".",
+ "questions": [
+  "What output must an AAP OPA policy return?",
+  "How do I show the reason a job was blocked by policy?",
+  "Policy output format for AAP"
+ ],
+ "answer_card": {
+  "title": "OPA policy output for AAP",
+  "answer_md": "Return an object with `allowed` and `violations`:\n```rego\npackage aap_policy_examples\nimport rego.v1\n\nallowed := {\n    \"allowed\": false,\n    \"violations\": [\"No job execution is allowed\"]\n}\n```\nUse `aap_policy_examples/allowed` as the enforcement query path.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#pac-inputs-outputs_subscription-management"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

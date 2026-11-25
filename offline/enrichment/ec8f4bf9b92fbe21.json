@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ec8f4bf9b92fbe21",
+ "chunk_hash": "ec8f4bf9b92fbe21",
+ "summary": "Give a team access to a resource from the resource's Team Access tab (for example Automation Execution > Templates) with Assign Teams, choosing roles; remove with Remove team. Remote Registries in Automation Content cannot get direct team access.",
+ "questions": [
+  "How do I give a team access to a job template?",
+  "Can I assign team access to remote registries?",
+  "Where is the Team Access tab?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

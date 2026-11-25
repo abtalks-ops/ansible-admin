@@ -1,0 +1,13 @@
+{
+ "chunk_id": "51d1b5c385bf335f",
+ "chunk_hash": "51d1b5c385bf335f",
+ "summary": "Default roles cannot be changed, but custom roles can be edited from Access Management > Roles with Edit role; the Role Creation column shows which is which.",
+ "questions": [
+  "Can I edit a default role?",
+  "How do I edit a custom role?",
+  "How do I tell default roles from custom roles?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

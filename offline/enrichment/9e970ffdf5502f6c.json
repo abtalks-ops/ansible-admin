@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9e970ffdf5502f6c",
+ "chunk_hash": "9e970ffdf5502f6c",
+ "summary": "For your own Elastic stack, add a json filter with source => \"message\" to logstash.conf; Elastic 5.0.0 introduced incompatible changes, so configurations differ by version.",
+ "questions": [
+  "How do I configure Logstash for controller logs?",
+  "Controller logs appear as one string in Elasticsearch",
+  "What logstash filter does AAP need?"
+ ],
+ "answer_card": {
+  "title": "Parse controller logs in Logstash",
+  "answer_md": "Add to `logstash.conf`:\n```text\nfilter {\n  json {\n    source => \"message\"\n  }\n}\n```\nConfiguration may differ across Elastic versions (5.0.0 broke compatibility).",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#ref-controller-logging-elastic-stack"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

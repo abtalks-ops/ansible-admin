@@ -1,0 +1,14 @@
+{
+ "chunk_id": "5770f09e8312330b",
+ "chunk_hash": "5770f09e8312330b",
+ "summary": "A 4 CPU, 16 GB control node handles about 10 API requests per second, 137 jobs and 1,100 to 1,630 events per second depending on load; over-provisioning control capacity reduces output delays. The example deploys one execution, one control and one database node and lowers control capacity to 16 to reserve room for event processing.",
+ "questions": [
+  "How many events per second can a control node process?",
+  "Why is there a delay before job output appears?",
+  "What deployment fits 300 hosts and 10 concurrent jobs?",
+  "How do I reserve control node capacity for event processing?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

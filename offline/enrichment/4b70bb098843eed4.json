@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4b70bb098843eed4",
+ "chunk_hash": "4b70bb098843eed4",
+ "summary": "Remove expired user sessions by launching the Cleanup Expired Sessions management job; schedules and notifications are set the same way as for activity stream cleanup.",
+ "questions": [
+  "How do I remove expired sessions in automation controller?",
+  "Can I schedule Cleanup Expired Sessions?",
+  "Cleanup Expired Sessions management job"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

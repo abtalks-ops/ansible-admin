@@ -1,0 +1,18 @@
+{
+ "chunk_id": "4a52c2ccb0525993",
+ "chunk_hash": "4a52c2ccb0525993",
+ "summary": "Splunk integration uses the HTTP Event Collector: set LOG_AGGREGATOR_HOST to the full HEC URL with port (default 8088), e.g. https://<splunk>:8088/services/collector/event, LOG_AGGREGATOR_TYPE splunk, the HEC token as password, and the loggers to send, via /api/v2/settings/logging.",
+ "questions": [
+  "How do I send controller logs to Splunk?",
+  "Why are Splunk logs not received from controller?",
+  "What URL do I use for Splunk HEC in controller?",
+  "What port does Splunk HTTP Event Collector use?"
+ ],
+ "answer_card": {
+  "title": "Send controller logs to Splunk",
+  "answer_md": "PATCH `https://<controller>/api/v2/settings/logging`:\n```json\n{\n  \"LOG_AGGREGATOR_HOST\": \"https://<splunk>:8088/services/collector/event\",\n  \"LOG_AGGREGATOR_PORT\": null,\n  \"LOG_AGGREGATOR_TYPE\": \"splunk\",\n  \"LOG_AGGREGATOR_PASSWORD\": \"<HEC token>\",\n  \"LOG_AGGREGATOR_LOGGERS\": [\"awx\", \"activity_stream\", \"job_events\", \"system_tracking\"],\n  \"LOG_AGGREGATOR_ENABLED\": true\n}\n```\nInclude the port in the host URL, or Splunk will not process the events.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#ref-controller-logging-splunk"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

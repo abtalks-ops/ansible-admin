@@ -1,0 +1,14 @@
+{
+ "chunk_id": "7061c5085fb633b9",
+ "chunk_hash": "7061c5085fb633b9",
+ "summary": "Control and hybrid nodes serve the UI and API through uwsgi (WSGI), Daphne (ASGI) and NGINX on 443. Scale with multiple control nodes behind a load balancer and max 100 connections per node; clients should use dynamic inventory, webhooks instead of polling, bulk APIs and token authentication.",
+ "questions": [
+  "How do I scale the controller web service?",
+  "Why is the controller API slow under heavy automation?",
+  "Should API clients use token or basic auth?",
+  "What web servers does automation controller use?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

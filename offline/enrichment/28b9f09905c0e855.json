@@ -1,0 +1,18 @@
+{
+ "chunk_id": "28b9f09905c0e855",
+ "chunk_hash": "28b9f09905c0e855",
+ "summary": "A subscription is Compliant when unique managed hosts (minus deletions) do not exceed the manifest limit, otherwise Out of compliance. The page shows hosts automated, imported (not counted), remaining, deleted and active hosts previously deleted; refresh after deleting hosts.",
+ "questions": [
+  "How is AAP subscription compliance calculated?",
+  "Why is my subscription out of compliance?",
+  "Do imported hosts count against my subscription?",
+  "Deleted hosts not reflected in subscription count"
+ ],
+ "answer_card": {
+  "title": "How compliance is calculated",
+  "answer_md": "```text\nmanaged >  manifest_limit  -> out of compliance\nmanaged <= manifest_limit  -> compliant\n```\n`managed` = unique automated hosts minus deleted ones. *Hosts imported* does not consume capacity. A deleted host that is automated again counts again. Refresh subscription details after deleting hosts.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#controller-keep-subscription-in-compliance_subscription-management"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

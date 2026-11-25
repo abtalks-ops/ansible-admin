@@ -1,0 +1,14 @@
+{
+ "chunk_id": "9b4ac46a1c3e62fc",
+ "chunk_hash": "9b4ac46a1c3e62fc",
+ "summary": "Platform gateway is the single entry point routing API traffic to controller, EDA and hub; its OpenAPI specification defines the unified endpoints, such as /api/gateway/v1/status/ and /api/gateway/v1/activitystream/, for building integrations that survive retirement of direct component APIs.",
+ "questions": [
+  "What is the platform gateway OpenAPI specification?",
+  "What is the gateway status endpoint?",
+  "Should integrations use the gateway API or component APIs?",
+  "Where is the activity stream API in 2.6?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

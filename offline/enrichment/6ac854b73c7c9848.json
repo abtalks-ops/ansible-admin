@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6ac854b73c7c9848",
+ "chunk_hash": "6ac854b73c7c9848",
+ "summary": "File-based capacity settings, identical on all control nodes: AWX_CONTROL_NODE_TASK_IMPACT sets the cost of controlling a job, and SYSTEM_TASK_FORKS_CPU and SYSTEM_TASK_FORKS_MEM set the estimated cost of a fork (default 0.25 CPU and 100 MB).",
+ "questions": [
+  "How do I limit how many jobs a control node runs?",
+  "What is AWX_CONTROL_NODE_TASK_IMPACT?",
+  "How much CPU and memory does one fork use by default?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

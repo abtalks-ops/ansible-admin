@@ -1,0 +1,17 @@
+{
+ "chunk_id": "328335194c57adf1",
+ "chunk_hash": "328335194c57adf1",
+ "summary": "Let external users create OAuth2 tokens by enabling Allow external users to create OAuth2 tokens under Settings > Platform gateway > Edit platform gateway settings, then add compensating security controls.",
+ "questions": [
+  "How do I allow LDAP or SSO users to create tokens?",
+  "Where is Allow external users to create OAuth2 tokens?",
+  "How do I fix 403 access_denied creating a token as an SSO user?"
+ ],
+ "answer_card": {
+  "title": "Allow external users to create tokens",
+  "answer_md": "1. **Settings > Platform gateway > Edit platform gateway settings**.\n2. Set **Allow external users to create OAuth2 tokens** to *Enabled* and save.\n3. Add compensating controls: shorter token lifetime (e.g. 8 hours), restrictive RBAC, token revocation in offboarding, and Activity Stream review. Tokens stay valid after the IdP account is disabled.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/access_management_and_authentication/index#gw-enable-oauth2-external-users"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}

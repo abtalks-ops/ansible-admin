@@ -1,0 +1,13 @@
+{
+ "chunk_id": "001e90fe6c65956a",
+ "chunk_hash": "001e90fe6c65956a",
+ "summary": "Rename the old rabbitmq_host inventory variable to routable_hostname before upgrading from an earlier controller version.",
+ "questions": [
+  "What replaced rabbitmq_host?",
+  "Upgrade fails with rabbitmq_host in inventory",
+  "Should I keep rabbitmq_host in my inventory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:05:18+00:00"
+}
