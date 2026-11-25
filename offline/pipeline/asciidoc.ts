@@ -115,7 +115,7 @@ export function expand(file: string, attrs: Attrs, offset = 0, depth = 0, out: s
       out.push(line);
       continue;
     }
-    if (/^(----|\.\.\.\.)\s*$/.test(line)) {
+    if (/^(-{4,}|\.{4,})\s*$/.test(line)) {
       fence = line.trim();
       out.push(line);
       continue;
@@ -186,7 +186,7 @@ export function toSections(lines: string[], attrs: Attrs): Section[] {
       continue;
     }
     const line = raw.trimEnd();
-    if (/^(----|\.\.\.\.)$/.test(line)) {
+    if (/^(-{4,}|\.{4,})$/.test(line)) {
       fence = line;
       buf.push("```" + pendingLang);
       pendingLang = "";
