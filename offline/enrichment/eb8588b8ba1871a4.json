@@ -1,0 +1,17 @@
+{
+ "chunk_id": "eb8588b8ba1871a4",
+ "chunk_hash": "eb8588b8ba1871a4",
+ "summary": "Provide your own automation mesh CA by setting mesh_ca_keyfile and mesh_ca_certfile in [all:vars]; the installer copies it to /etc/receptor/tls/ca/ on each node, and generates a CA if you give none.",
+ "questions": [
+  "How do I use my own CA for automation mesh?",
+  "What are mesh_ca_keyfile and mesh_ca_certfile?",
+  "Where does receptor store the mesh CA?"
+ ],
+ "answer_card": {
+  "title": "Import a CA for automation mesh",
+  "answer_md": "```ini\n[all:vars]\nmesh_ca_keyfile=/tmp/<mesh_CA>.key\nmesh_ca_certfile=/tmp/<mesh_CA>.crt\n```\nRun the installer; it copies the CA to `/etc/receptor/tls/ca/` on each control and execution node. Without these, the installer generates a CA.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/automation_mesh_for_vm_environments/index#importing-mesh-ca_{context}"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:16:33+00:00"
+}

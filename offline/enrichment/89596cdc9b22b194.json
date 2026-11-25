@@ -1,0 +1,18 @@
+{
+ "chunk_id": "89596cdc9b22b194",
+ "chunk_hash": "89596cdc9b22b194",
+ "summary": "Project updates use the control plane execution environment; jobs use the first set of: template, project default, job organization default, inventory organization default, DEFAULT_EXECUTION_ENVIRONMENT, GLOBAL_JOB_EXECUTION_ENVIRONMENTS, any global one.",
+ "questions": [
+  "Which execution environment does my job use?",
+  "What is the execution environment precedence order?",
+  "Which execution environment do project updates use?",
+  "Where is DEFAULT_EXECUTION_ENVIRONMENT set?"
+ ],
+ "answer_card": {
+  "title": "Execution environment precedence for jobs",
+  "answer_md": "Jobs use the first one found:\n1. `execution_environment` on the job template or inventory source\n2. Project `default_environment`\n3. Job organization `default_environment`\n4. Inventory organization `default_environment`\n5. `DEFAULT_EXECUTION_ENVIRONMENT` (`api/v2/settings/system/`)\n6. Any image in `GLOBAL_JOB_EXECUTION_ENVIRONMENTS`\n7. Any other global execution environment\n\nFor 6 and 7 the most recently created wins. Project updates always use the control plane execution environment.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/creating_and_using_execution_environments/index#con-ee-precedence"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:19:15+00:00"
+}

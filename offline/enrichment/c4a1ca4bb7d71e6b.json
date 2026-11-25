@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c4a1ca4bb7d71e6b",
+ "chunk_hash": "c4a1ca4bb7d71e6b",
+ "summary": "Registry fields: name, type (stdio or http), lang (pypi, npm, go) and description are required, args and package optional; the version variable is <role_name>_version, and Go servers also need _build_repo, _build_repo_branch and _build_path.",
+ "questions": [
+  "Which fields are required in an MCP registry entry?",
+  "How do I configure a Go MCP server built from source?",
+  "What is the package field in an MCP registry entry?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:45+00:00"
+}

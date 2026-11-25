@@ -1,0 +1,17 @@
+{
+ "chunk_id": "065101e6d1e8ad63",
+ "chunk_hash": "065101e6d1e8ad63",
+ "summary": "Uninstall automation dashboard and its PostgreSQL container with the ansible.containerized_installer.dashboard_uninstall playbook; this permanently deletes all metrics, saved reports and the database.",
+ "questions": [
+  "How do I uninstall automation dashboard?",
+  "Does uninstalling automation dashboard delete my reports?",
+  "dashboard_uninstall playbook"
+ ],
+ "answer_card": {
+  "title": "Uninstall automation dashboard",
+  "answer_md": "```bash\nansible-playbook -i inventory ansible.containerized_installer.dashboard_uninstall\n```\n**Warning:** this permanently deletes all collected metrics, saved reports and the PostgreSQL database.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_dashboard/index#proc-uninstalling-automation-dashboard"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:16:33+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "1188155600eb2087",
+ "chunk_hash": "1188155600eb2087",
+ "summary": "Ansible Builder uses a definition file listing ansible-core, Python, collections, third-party Python requirements and system packages to include in the execution environment.",
+ "questions": [
+  "Why use Ansible Builder?",
+  "What can I include in an execution environment definition?",
+  "How do I add system packages to an execution environment?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:17:39+00:00"
+}

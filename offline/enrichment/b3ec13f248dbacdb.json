@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b3ec13f248dbacdb",
+ "chunk_hash": "b3ec13f248dbacdb",
+ "summary": "Set type: http and a path URL in the MCP registry to register a remote server without installing it; to support both modes, include vars/remote.yml when <role>_mode is remote and pass -e cfn_mcp_mode=remote at build time.",
+ "questions": [
+  "How do I configure a remote MCP server in an execution environment?",
+  "Can an MCP role support both local and remote modes?",
+  "What happens when MCP registry type is http?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:18:45+00:00"
+}

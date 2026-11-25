@@ -1,0 +1,13 @@
+{
+ "chunk_id": "0ee25b1060f063d4",
+ "chunk_hash": "0ee25b1060f063d4",
+ "summary": "Map examples: add users to the Networking organization when the Organization attribute matches Networking, add users to the Apple team when in either of two LDAP groups, and a never-superuser rule that doesn't revoke without Revoke set.",
+ "questions": [
+  "Example map to add users to an organization by attribute",
+  "How do I add LDAP group members to a team?",
+  "How do I prevent users becoming superuser?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:21:03+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "33fd23e46bb6760f",
+ "chunk_hash": "33fd23e46bb6760f",
+ "summary": "A non-default base image such as ee-minimal-rhel9 must be imported into the disconnected network and pushed to the private automation hub registry before running ansible-builder.",
+ "questions": [
+  "How do I use ee-minimal-rhel9 in a disconnected environment?",
+  "Base image missing in private automation hub",
+  "Offline ansible-builder base image"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:17:39+00:00"
+}
