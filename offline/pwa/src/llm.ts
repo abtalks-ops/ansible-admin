@@ -1,15 +1,17 @@
 // On-device answer model. Optional: search works without it.
-// Two backends: WebLLM on the GPU (WebGPU), and transformers.js on the CPU (WebAssembly, the same runtime that
-// already runs the search embedder) for phones whose GPU can't run a model. WebLLM is bundled separately
-// (vendor/web-llm.js) and only loaded when a GPU model is used.
+// Two backends, each in its own Web Worker so the page never freezes while a model works:
+// - CPU: llama.cpp on WebAssembly (wllama, vendor/wllama.js) with GGUF models. The phone default, no GPU needed.
+// - GPU: WebLLM on WebGPU (vendor/web-llm.js + vendor/webllm-worker.js), for computers.
+// Both bundles load only when AI answers are turned on.
 import type { MLCEngineInterface } from "@mlc-ai/web-llm";
 
 export interface Tier {
-  id: "cpu-smollm135" | "cpu-smollm" | "cpu-qwen" | "smollm" | "lfm" | "llama" | "qwen" | "gemma";
+  id: "cpu-smollm" | "smollm" | "lfm" | "llama" | "qwen" | "gemma";
   backend: "cpu" | "gpu";
   label: string;
-  modelId: string; // GPU: an id from WebLLM's prebuilt list. CPU: a Hugging Face repo with ONNX weights
-  dtype?: "q4" | "q8"; // CPU only: which ONNX weights to load
+  modelId: string; // GPU: an id from WebLLM's prebuilt list. CPU: a Hugging Face repo with GGUF files
+  revision?: string; // CPU only: pinned commit of that repo
+  file?: string; // CPU only: the GGUF file
   downloadMB: number; // approximate, shown before the download
   note: string;
   f32Id?: string; // build for GPUs without 16-bit shader support
@@ -21,9 +23,8 @@ export interface Tier {
  * The two tiny ones are for phones whose GPU resets with the 1B models.
  */
 export const TIERS: Tier[] = [
-  { id: "cpu-smollm", backend: "cpu", label: "SmolLM2 360M · CPU (no GPU)", modelId: "HuggingFaceTB/SmolLM2-360M-Instruct", dtype: "q4", downloadMB: 300, note: "works without a GPU, slower, simpler answers" },
-  { id: "cpu-smollm135", backend: "cpu", label: "SmolLM2 135M · CPU (no GPU)", modelId: "HuggingFaceTB/SmolLM2-135M-Instruct", dtype: "q4", downloadMB: 120, note: "smallest, for phones with little memory, basic answers" },
-  { id: "cpu-qwen", backend: "cpu", label: "Qwen 2.5 0.5B · CPU (no GPU)", modelId: "onnx-community/Qwen2.5-0.5B-Instruct", dtype: "q4", downloadMB: 500, note: "better answers than SmolLM2, slower" },
+  // The same file and revision the offline-motivator app runs on phones.
+  { id: "cpu-smollm", backend: "cpu", label: "SmolLM2 360M · CPU (no GPU)", modelId: "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF", revision: "593b5a2e04c8f3e4ee880263f93e0bd2901ad47f", file: "smollm2-360m-instruct-q8_0.gguf", downloadMB: 390, note: "recommended for phones: no GPU needed, simpler answers" },
   { id: "smollm", backend: "gpu", label: "SmolLM2 360M · GPU", modelId: "SmolLM2-360M-Instruct-q4f16_1-MLC", f32Id: "SmolLM2-360M-Instruct-q4f32_1-MLC", downloadMB: 250, note: "tiny, about 0.4 GB of GPU memory, simpler answers" },
   { id: "lfm", backend: "gpu", label: "LFM2.5 350M · GPU (Liquid AI)", modelId: "LFM2.5-350M-q4f16_1-MLC", f32Id: "LFM2.5-350M-q4f32_1-MLC", downloadMB: 300, note: "tiny and built for phones, about 0.5 GB of GPU memory" },
   { id: "gemma", backend: "gpu", desktopOnly: true, label: "Gemma 3 1B · GPU (Google)", modelId: "gemma3-1b-it-q4f16_1-MLC", downloadMB: 700, note: "about 0.7 GB of GPU memory" },
@@ -74,7 +75,7 @@ export const addDiagnostic = (line: string) => (diagnostics += (diagnostics ? "\
 export async function checkDevice(tier: Tier = DEFAULT_TIER): Promise<DeviceCheck> {
   if (mock()) return { ok: true };
   if (tier.backend === "cpu") {
-    diagnostics = [`browser: ${navigator.userAgent}`, "backend: CPU (WebAssembly, 1 thread)", `device memory: ${(navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? "?"} GB`, `model: ${tier.modelId} (${tier.dtype})`].join("\n");
+    diagnostics = [`browser: ${navigator.userAgent}`, "backend: CPU (llama.cpp WebAssembly in a worker, no GPU)", `JSPI: ${"Suspending" in WebAssembly ? "yes" : "no (compat build)"}  device memory: ${(navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? "?"} GB`, `model: ${tier.modelId}/${tier.file}`].join("\n");
     return { ok: true };
   }
   const gpu = (navigator as Navigator & { gpu?: { requestAdapter(): Promise<GpuAdapterLike | null> } }).gpu;
@@ -109,7 +110,7 @@ export const mock = () => PARAMS.get("llm")?.startsWith("mock") ?? false;
 let mockFailsLeft = PARAMS.get("llm") === "mock-gpufail" ? 1 : 0;
 
 /** ?model=<WebLLM model id> lets us try other models on a device without a new build. */
-export const modelFor = (tier: Tier) => tier.backend === "cpu" ? tier.modelId : PARAMS.get("model") ?? (!hasF16 && tier.f32Id ? tier.f32Id : tier.modelId);
+export const modelFor = (tier: Tier) => tier.backend === "cpu" ? tier.file! : PARAMS.get("model") ?? (!hasF16 && tier.f32Id ? tier.f32Id : tier.modelId);
 
 function mockEngine(): Engine {
   let stop = false;
@@ -151,7 +152,10 @@ export async function loadEngine(tier: Tier, onProgress: (fraction: number, text
   }
   if (tier.backend === "cpu") return loadCpuEngine(tier, onProgress);
   const webllm = (await import(/* @vite-ignore */ abs("vendor/web-llm.js"))) as typeof import("@mlc-ai/web-llm");
-  const engine = await webllm.CreateMLCEngine(
+  // The model runs in a worker so streaming tokens never block taps and scrolling.
+  const worker = new Worker(abs("vendor/webllm-worker.js"), { type: "module" });
+  const engine = await webllm.CreateWebWorkerMLCEngine(
+    worker,
     modelFor(tier),
     { initProgressCallback: (p) => onProgress(p.progress, p.text) },
     // A small window keeps GPU memory low; the prompt is built to fit (see shared/answer.ts).
@@ -159,7 +163,10 @@ export async function loadEngine(tier: Tier, onProgress: (fraction: number, text
   );
   return {
     interruptGenerate: () => engine.interruptGenerate(),
-    unload: () => engine.unload(),
+    unload: async () => {
+      await engine.unload().catch(() => {});
+      worker.terminate(); // a worker whose GPU device was lost can't be reused
+    },
     async generate(messages, onToken, maxTokens = 350) {
       const t0 = performance.now();
       let first = 0;
@@ -179,62 +186,69 @@ export async function loadEngine(tier: Tier, onProgress: (fraction: number, text
   };
 }
 
-/** CPU engine: transformers.js text generation on WebAssembly. Files come from the Hugging Face hub once and are kept in Cache Storage. */
+/** Where a CPU model's GGUF file lives, pinned to a revision so the bytes never change under us. */
+export const ggufUrl = (t: Tier) => `https://huggingface.co/${t.modelId}/resolve/${t.revision}/${t.file}`;
+
+/**
+ * CPU engine: llama.cpp compiled to WebAssembly (wllama), the setup that runs SmolLM2 360M on phones in the
+ * offline-motivator app. It runs in its own Web Worker, so the page stays responsive while it thinks, and
+ * n_gpu_layers 0 keeps it off the GPU completely (wllama 4 would otherwise use WebGPU when it can).
+ * The model file is kept in the browser's private file system (OPFS) for offline use.
+ */
 async function loadCpuEngine(tier: Tier, onProgress: (fraction: number, text: string) => void): Promise<Engine> {
-  const tf = (await import(/* @vite-ignore */ abs("vendor/transformers.min.js"))) as typeof import("@huggingface/transformers");
-  const { env } = tf;
-  env.allowRemoteModels = true;
-  env.allowLocalModels = false; // the embedder was loaded from local files already; this model comes from the hub
-  env.useBrowserCache = true; // keeps the model in Cache Storage ("transformers-cache") for offline use
-  const wasm = env.backends.onnx.wasm!;
-  wasm.wasmPaths = { mjs: abs("ort/ort-wasm-simd-threaded.mjs"), wasm: abs("ort/ort-wasm-simd-threaded.wasm") };
-  wasm.numThreads = 1;
-  const loaded = new Map<string, [number, number]>();
-  const gen = (await tf.pipeline("text-generation", tier.modelId, {
-    dtype: tier.dtype ?? "q4",
-    device: "wasm",
-    progress_callback: (p: { status?: string; file?: string; loaded?: number; total?: number }) => {
-      if (p.status !== "progress" || !p.file || !p.total) return;
-      loaded.set(p.file, [p.loaded ?? 0, p.total]);
-      let done = 0;
-      let total = 0;
-      for (const [d, t] of loaded.values()) {
-        done += d;
-        total += t;
-      }
-      onProgress(total ? done / total : 0, `Downloading ${tier.label.split(" · ")[0]} (${(done / 1e6).toFixed(0)} of ${(total / 1e6).toFixed(0)} MB)`);
-    },
-  })) as unknown as {
-    tokenizer: unknown;
-    (messages: unknown, opts: Record<string, unknown>): Promise<unknown>;
-    dispose(): Promise<void>;
-  };
+  const { Wllama } = (await import(/* @vite-ignore */ abs("vendor/wllama.js"))) as typeof import("@wllama/wllama");
+  const w = new Wllama({ default: abs("vendor/wllama.wasm") }, { suppressNativeLog: true, allowOffline: true });
+  // Browsers without JSPI or relaxed SIMD need the compat build; it is self-hosted so nothing comes from a CDN.
+  w.setCompat({ wasm: abs("vendor/wllama-compat.wasm") });
+  const name = tier.label.split(" · ")[0];
+  try {
+    await w.loadModelFromUrl(ggufUrl(tier), {
+      n_ctx: 2048,
+      n_gpu_layers: 0,
+      progressCallback: ({ loaded, total }: { loaded: number; total: number }) =>
+        onProgress(total ? loaded / total : 0, `Downloading ${name} (${Math.round(loaded / 1e6)} of ${Math.round(total / 1e6)} MB)`),
+    });
+  } catch (e) {
+    await w.exit().catch(() => {});
+    throw e;
+  }
   onProgress(1, "Model ready");
-  let stopper: InstanceType<typeof tf.InterruptableStoppingCriteria> | null = null;
+  addDiagnostic(`wllama: loaded ${tier.file}, ${crossOriginIsolated ? "multi-thread" : "1 thread"}`);
+  let ctrl: AbortController | null = null;
   return {
-    interruptGenerate: () => stopper?.interrupt(),
-    unload: () => gen.dispose(),
+    interruptGenerate: () => ctrl?.abort(),
+    unload: () => w.exit(),
     async generate(messages, onToken, maxTokens = 250) {
       const t0 = performance.now();
       let first = 0;
       let tokens = 0;
       let text = "";
-      stopper = new tf.InterruptableStoppingCriteria();
-      const streamer = new tf.TextStreamer(gen.tokenizer as ConstructorParameters<typeof tf.TextStreamer>[0], {
-        skip_prompt: true,
-        skip_special_tokens: true,
-        callback_function: (piece: string) => {
-          if (!piece) return;
+      ctrl = new AbortController();
+      const signal = ctrl.signal;
+      try {
+        const stream = await w.createChatCompletion({ messages, stream: true, max_tokens: maxTokens, temperature: 0.1, abortSignal: signal });
+        for await (const chunk of stream) {
+          const piece = chunk.choices[0]?.delta?.content ?? "";
+          if (!piece) continue;
           if (!first) first = performance.now() - t0;
           tokens++;
           text += piece;
           onToken(text);
-        },
-      });
-      await gen(messages, { max_new_tokens: maxTokens, do_sample: false, repetition_penalty: 1.1, streamer, stopping_criteria: stopper });
+        }
+      } catch (e) {
+        if (!signal.aborted) throw e; // a stop keeps the partial answer, like the GPU engine
+      }
       return { text, tokens, firstMs: first, totalMs: performance.now() - t0 };
     },
   };
+}
+
+/** Removes downloaded CPU models (wllama keeps them in OPFS, not Cache Storage). */
+export async function clearCpuModels(): Promise<void> {
+  try {
+    const { CacheManager } = (await import(/* @vite-ignore */ abs("vendor/wllama.js"))) as typeof import("@wllama/wllama");
+    await new CacheManager().clear();
+  } catch {}
 }
 
 /** True when the model files are already in this browser's cache, so enabling it needs no download. */
@@ -242,8 +256,9 @@ export async function isDownloaded(tier: Tier): Promise<boolean> {
   if (mock()) return false;
   try {
     if (tier.backend === "cpu") {
-      const cache = await caches.open("transformers-cache");
-      return (await cache.keys()).some((r) => r.url.includes(tier.modelId) && r.url.endsWith(".onnx"));
+      const { CacheManager } = (await import(/* @vite-ignore */ abs("vendor/wllama.js"))) as typeof import("@wllama/wllama");
+      const cm = new CacheManager();
+      return (await cm.getSize(await cm.getNameFromURL(ggufUrl(tier)))) > 0;
     }
     const webllm = (await import(/* @vite-ignore */ abs("vendor/web-llm.js"))) as typeof import("@mlc-ai/web-llm");
     return await webllm.hasModelInCache(modelFor(tier));

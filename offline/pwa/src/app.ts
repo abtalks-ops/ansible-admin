@@ -3,7 +3,7 @@
 import { SearchIndex, tokenize, unpack, type Chunk, type LoadedShard, type Manifest, type ShardMeta } from "../../shared/search.ts";
 import { buildPrompt, citedNumbers, isDeviceLost, isNotInDocs, PROFILES, stripInvalidCitations, type Used } from "../../shared/answer.ts";
 import { MAX_CONVS, newConv, parse as parseChats, remove as removeConv, serialize as serializeChats, titleFrom, upsert as upsertConv, type Conv, type Turn } from "../../shared/chats.ts";
-import { addDiagnostic, checkDevice, getDiagnostics, isDownloaded, loadEngine, mock, modelFor, statsText, TIERS, DEFAULT_TIER, allowed, type Engine, type Tier } from "./llm.ts";
+import { addDiagnostic, checkDevice, getDiagnostics, isDownloaded, loadEngine, mock, modelFor, statsText, clearCpuModels, TIERS, DEFAULT_TIER, allowed, isPhone, type Engine, type Tier } from "./llm.ts";
 import { startRain } from "./rain.ts";
 
 const DATA_CACHE = "aa-data-v1";
@@ -93,7 +93,7 @@ async function install(onProgress: (done: number, total: number) => void): Promi
   // Atomic swap: the new manifest is written only after all of its files are cached.
   await cache.put(INSTALLED, new Response(JSON.stringify(manifest), { headers: { "Content-Type": "application/json" } }));
   // Drop files no longer referenced (old shards).
-  const keep = new Set([INSTALLED, abs("vendor/web-llm.js"), ...want.map((f) => f.url)]);
+  const keep = new Set([INSTALLED, ...want.map((f) => f.url)]);
   for (const req of await cache.keys()) if (!keep.has(req.url)) await cache.delete(req);
   return manifest;
 }
@@ -213,14 +213,21 @@ function md(text: string, terms: string[] = []): string {
   return out.join("");
 }
 
+/** A one-paragraph preview: the build-time summary, or the start of the passage as plain text. */
+function preview(c: Chunk): string {
+  if (c.sum) return c.sum;
+  const plain = c.x.replace(/```[\s\S]*?```/g, " ").replace(/[`*#|]/g, "").replace(/\s+/g, " ").trim();
+  return plain.length > 220 ? plain.slice(0, 220).replace(/\s\S*$/, "") + "…" : plain;
+}
+
+/** Results are compact: title, link and a preview. The full passage is only rendered when it is opened. */
 function resultHtml(c: Chunk, terms: string[], i: number): string {
   const crumb = c.t.split(" > ").slice(-3).join(" › ");
-  return `<article class="result">
+  return `<article class="result" data-id="${esc(c.id)}" data-terms="${esc(terms.join(" "))}">
     <div class="crumb">${i + 1}. ${esc(crumb)}</div>
-    <div class="meta"><a href="${esc(c.u)}" target="_blank" rel="noopener">${esc(c.u.replace(/^https:\/\/docs\.ansible\.com\/ansible\/latest\//, "docs/"))}</a><span>${esc(c.src)} · ${esc(c.lic)}</span></div>
-    ${c.sum ? `<p class="sum">${highlight(esc(c.sum), terms)}</p>` : ""}
-    <div class="body clamped">${md(c.x, terms)}</div>
-    <button class="more" type="button">show more</button>
+    <p class="sum">${highlight(esc(preview(c)), terms)}</p>
+    <div class="body" hidden></div>
+    <div class="meta"><button class="more" type="button" aria-expanded="false">Read passage</button><a href="${esc(c.u)}" target="_blank" rel="noopener">Open docs page ↗</a></div>
   </article>`;
 }
 
@@ -234,7 +241,8 @@ function resultsHtml(chunks: Chunk[], terms: string[]): string {
 }
 
 function renderStatus(extra = "") {
-  const sem = { idle: "", loading: "semantic search loading…", ready: "semantic + keyword search", failed: "keyword search only (semantic model failed to load)" }[embedderState];
+  // Only say something about the search model while it matters.
+  const sem = { idle: "", loading: "smart search starting…", ready: "", failed: "keyword search only" }[embedderState];
   ui.status.textContent = [extra, sem].filter(Boolean).join(" · ");
 }
 
@@ -262,7 +270,10 @@ function saveChats() {
 }
 
 function renderEmpty() {
-  ui.results.innerHTML = `<div class="empty-hint muted small">Ask about ansible-core. Everything runs on this device. Try:</div><div class="chips">${EXAMPLES.map((e) => `<button type="button">${esc(e)}</button>`).join("")}</div>`;
+  const ai = aiOn()
+    ? ""
+    : `<p class="muted small">Want a written answer too? <button type="button" class="link openAi">Turn on AI answers</button></p>`;
+  ui.results.innerHTML = `<div class="empty"><h2>Ask about Ansible</h2><p class="muted small">Searches the ansible-core docs on this device, even with no network.</p>${ai}<div class="chips">${EXAMPLES.map((e) => `<button type="button">${esc(e)}</button>`).join("")}</div></div>`;
 }
 
 const cardHtml = (c: Chunk | undefined) => {
@@ -327,16 +338,24 @@ function renderHistory() {
 }
 
 const setDrawer = (open: boolean) => {
+  if (open) ui.panel.hidden = true;
   ui.drawer.hidden = !open;
   ui.backdrop.hidden = !open;
   if (open) renderHistory();
+};
+/** Settings open as a sheet over the chat instead of pushing it down. */
+const setPanel = (open: boolean) => {
+  if (open) ui.drawer.hidden = true;
+  ui.panel.hidden = !open;
+  ui.backdrop.hidden = !open;
+  ui.menuBtn.setAttribute("aria-expanded", String(open));
 };
 
 function newChat() {
   if (generating) engine?.interruptGenerate();
   cur = null;
   setDrawer(false);
-  ui.panel.hidden = true;
+  setPanel(false);
   renderThread();
   renderStatus();
   ui.q.value = "";
@@ -413,29 +432,21 @@ const setAi = (on: boolean) => {
 try {
   tier = TIERS.find((t) => t.id === localStorage.getItem("aa-ai-model") && allowed(t)) ?? DEFAULT_TIER;
 } catch {}
-ui.aiModel.innerHTML = TIERS.map((t) => `<option value="${t.id}"${allowed(t) ? "" : " disabled"}>${esc(t.label)} · about ${t.downloadMB} MB · ${allowed(t) ? esc(t.note) : "computers only, too heavy for phones"}</option>`).join("");
+const opt = (t: Tier) => `<option value="${t.id}"${allowed(t) ? "" : " disabled"}>${esc(t.label.replace(/ · (CPU \(no GPU\)|GPU)/, ""))} · ${t.downloadMB} MB${allowed(t) ? "" : " · computers only"}</option>`;
+ui.aiModel.innerHTML = `<optgroup label="No GPU needed (best for phones)">${TIERS.filter((t) => t.backend === "cpu").map(opt).join("")}</optgroup><optgroup label="Uses the GPU">${TIERS.filter((t) => t.backend === "gpu").map(opt).join("")}</optgroup>`;
 ui.aiModel.value = tier.id;
 
 function renderAiPanel(msg = "") {
   const on = aiOn();
   ui.aiModel.value = tier.id;
+  $("aiNote").textContent = `${tier.backend === "cpu" ? "Runs on the processor" : "Runs on the graphics chip"}: ${tier.note}.`;
+  ui.aiBtn.className = on ? "ghost" : "primary";
   ui.aiBtn.textContent = on ? "Turn off AI answers" : `Turn on AI answers (about ${tier.downloadMB} MB)`;
   ui.aiInfo.textContent =
     msg ||
     (on
       ? `On. ${tier.label}, runs on this device after a one-time download. Answers are written from the search results and can be wrong: check the sources.`
-      : "A small language model on this device can write a short answer from the top search results. Needs a recent browser with WebGPU. Search works without it.");
-}
-
-/** Keeps the WebLLM library in the data cache so it also loads with no network. */
-async function cacheWebLlm() {
-  const url = abs("vendor/web-llm.js");
-  const cache = await caches.open(DATA_CACHE);
-  if (!(await cache.match(url))) {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Couldn't download the AI runtime (${res.status})`);
-    await cache.put(url, res);
-  }
+      : "A small language model on this device can write a short answer from the top search results. Search works without it.");
 }
 
 async function ensureEngine(onProgress: (f: number, t: string) => void): Promise<Engine> {
@@ -444,9 +455,6 @@ async function ensureEngine(onProgress: (f: number, t: string) => void): Promise
     await engine.unload().catch(() => {});
     engine = null;
   }
-  await cacheWebLlm().catch((e) => {
-    if (!mock()) throw e;
-  });
   await navigator.storage?.persist?.();
   engine = await loadEngine(tier, onProgress);
   engineModel = modelFor(tier);
@@ -580,16 +588,22 @@ async function generateFor(turn: Turn, el: HTMLElement, chunks: Chunk[]) {
         }
         setChip("busy");
         aiEl.innerHTML = answerHtml(turn, used, true);
+        // Repaint at most once per frame, however fast the tokens come.
+        let frame = 0;
         const r = await engine!.generate(
           prompt.messages,
           (t) => {
             turn.answer = stripInvalidCitations(t, used);
             // Hold back a reply that is still spelling out NOT_IN_DOCS.
             if ("NOT_IN_DOCS".startsWith(t.trim().toUpperCase().replace(/[^A-Z_]/g, "")) && t.trim()) return;
-            aiEl.innerHTML = answerHtml(turn, used, true);
+            if (!frame) frame = requestAnimationFrame(() => {
+              frame = 0;
+              if (generating) aiEl.innerHTML = answerHtml(turn, used, true);
+            });
           },
           budget.maxTokens,
         );
+        cancelAnimationFrame(frame);
         turn.stats = statsText(r) + (tier.backend === "cpu" ? " · CPU" : " · GPU") + (budget === PROFILES.lite && tier.backend !== "cpu" ? " · short mode" : "");
         if (isNotInDocs(r.text)) {
           turn.state = "notindocs";
@@ -647,8 +661,9 @@ async function showMain(m: Manifest) {
   cur = null;
   renderThread();
   renderStatus(crashed ? "AI answers were turned off after the browser stopped unexpectedly" : `${m.stats.chunks.toLocaleString()} passages ready offline`);
-  if (crashed) ui.panel.hidden = false;
-  embedderReady = loadEmbedder(m).then(() => renderStats(m));
+  if (crashed) setPanel(true);
+  // After the first paint, so the page is usable while the search model compiles.
+  embedderReady = new Promise<void>((r) => setTimeout(r, 300)).then(() => loadEmbedder(m)).then(() => renderStats(m));
   if (q) await ask(q);
 }
 
@@ -691,12 +706,16 @@ ui.newBtn.addEventListener("click", newChat);
 ui.newBtn2.addEventListener("click", newChat);
 ui.historyBtn.addEventListener("click", () => setDrawer(ui.drawer.hidden));
 ui.closeDrawer.addEventListener("click", () => setDrawer(false));
-ui.backdrop.addEventListener("click", () => setDrawer(false));
-ui.aiChip.addEventListener("click", () => {
-  ui.panel.hidden = false;
-  ui.menuBtn.setAttribute("aria-expanded", "true");
-  ui.panel.scrollIntoView({ block: "start" });
+ui.backdrop.addEventListener("click", () => {
+  setDrawer(false);
+  setPanel(false);
 });
+addEventListener("keydown", (e: KeyboardEvent) => {
+  if (e.key !== "Escape") return;
+  setDrawer(false);
+  setPanel(false);
+});
+ui.aiChip.addEventListener("click", () => setPanel(true));
 ui.historyList.addEventListener("click", (e) => {
   const t = (e.target as HTMLElement).closest("button");
   const id = t?.dataset.id;
@@ -733,22 +752,26 @@ ui.form.addEventListener("submit", (e) => {
 ui.results.addEventListener("click", (e) => {
   const t = e.target as HTMLElement;
   if (t.classList.contains("stopBtn")) engine?.interruptGenerate();
+  else if (t.classList.contains("openAi")) setPanel(true);
   else if (t.matches(".chips button")) {
     void ask(t.textContent ?? "");
   } else if (t.matches(".more")) {
-    const body = t.previousElementSibling as HTMLElement;
-    body.classList.toggle("clamped");
-    t.textContent = body.classList.contains("clamped") ? "show more" : "show less";
+    const art = t.closest(".result") as HTMLElement;
+    const body = art.querySelector(".body") as HTMLElement;
+    const c = chunkById.get(art.dataset.id ?? "");
+    if (c && !body.innerHTML) body.innerHTML = md(c.x, (art.dataset.terms ?? "").split(" ").filter(Boolean)) + `<p class="muted small">${esc(c.src)} · ${esc(c.lic)}</p>`;
+    body.hidden = !body.hidden;
+    art.querySelector(".sum")!.toggleAttribute("hidden", !body.hidden);
+    t.textContent = body.hidden ? "Read passage" : "Hide passage";
+    t.setAttribute("aria-expanded", String(!body.hidden));
   } else if (t.matches("pre .copy")) {
     void navigator.clipboard?.writeText(t.nextElementSibling?.textContent ?? "");
     t.textContent = "copied";
     setTimeout(() => (t.textContent = "copy"), 1200);
   }
 });
-ui.menuBtn.addEventListener("click", () => {
-  ui.panel.hidden = !ui.panel.hidden;
-  ui.menuBtn.setAttribute("aria-expanded", String(!ui.panel.hidden));
-});
+ui.menuBtn.addEventListener("click", () => setPanel(ui.panel.hidden));
+$("closePanel").addEventListener("click", () => setPanel(false));
 ui.updateBtn.addEventListener("click", async () => {
   if (!navigator.onLine) return void (ui.status.textContent = "You're offline; connect to check for updates.");
   const remote = await fetchJson<Manifest>("index/manifest.json").catch(() => null);
@@ -761,8 +784,11 @@ ui.updateBtn.addEventListener("click", async () => {
 });
 ui.deleteBtn.addEventListener("click", async () => {
   if (!confirm("Delete the downloaded docs, AI model and chat history from this device?")) return;
+  await engine?.unload().catch(() => {}); // the model's worker holds its file open
+  engine = null;
   await caches.delete(DATA_CACHE);
-  for (const k of await caches.keys()) if (k.startsWith("webllm/") || k === "transformers-cache") await caches.delete(k); // downloaded AI models
+  for (const k of await caches.keys()) if (k.startsWith("webllm/") || k === "transformers-cache") await caches.delete(k); // downloaded GPU models
+  await clearCpuModels(); // CPU models live in the private file system
   setAi(false);
   engine = null;
   try {
@@ -772,7 +798,7 @@ ui.deleteBtn.addEventListener("click", async () => {
   cur = null;
   index = null;
   installed = null;
-  ui.panel.hidden = true;
+  setPanel(false);
   await showSetup();
 });
 
@@ -789,10 +815,12 @@ ui.rainToggle.addEventListener("change", () => setRain(ui.rainToggle.checked));
 (async () => {
   let rainPref = true;
   try {
-    rainPref = localStorage.getItem("aa-rain") !== "0";
+    const saved = localStorage.getItem("aa-rain");
+    // The animation costs battery and smoothness on phones: off there unless turned on in settings.
+    rainPref = saved ? saved === "1" : !isPhone() && !matchMedia("(prefers-reduced-motion: reduce)").matches;
   } catch {}
   ui.rainToggle.checked = rainPref;
-  setRain(rainPref);
+  if (rainPref) stopRain = startRain($("rain") as unknown as HTMLCanvasElement);
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch((e) => console.warn("SW registration failed", e));
   const m = await getInstalled().catch(() => null);
   if (m) await showMain(m).catch(async (e) => {

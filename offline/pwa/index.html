@@ -27,21 +27,24 @@
       <ul id="historyList"></ul>
     </aside>
 
-    <section id="panel" class="panel" hidden>
-      <h2>Index on this device</h2>
+    <section id="panel" class="panel sheet" hidden aria-label="Settings">
+      <div class="sheet-head"><strong>Settings</strong><button id="closePanel" class="ghost" aria-label="Close settings">✕</button></div>
+      <h2>AI answers <span class="muted small">optional</span></h2>
+      <p class="muted small" id="aiInfo"></p>
+      <label class="muted small" for="aiModel">Model</label>
+      <select id="aiModel" class="select"></select>
+      <p class="muted small" id="aiNote"></p>
+      <div class="row"><button id="aiBtn" class="primary">Turn on AI answers</button></div>
+      <div id="aiProgress" class="progress" hidden><div id="aiBar"></div></div>
+      <details class="diag"><summary class="muted small">AI diagnostics</summary><pre id="aiDiag" class="small"></pre></details>
+      <h2>Docs on this device</h2>
       <dl id="stats"></dl>
       <div class="row">
         <button id="updateBtn" class="ghost">Check for updates</button>
         <button id="deleteBtn" class="ghost danger">Delete downloaded data</button>
       </div>
-      <h2>AI answers (optional)</h2>
-      <p class="muted small" id="aiInfo"></p>
-      <label class="muted small" for="aiModel">Model</label>
-      <select id="aiModel" class="select"></select>
-      <div class="row"><button id="aiBtn" class="ghost">Turn on AI answers</button></div>
-      <div id="aiProgress" class="progress" hidden><div id="aiBar"></div></div>
-      <details class="diag"><summary class="muted small">AI diagnostics</summary><pre id="aiDiag" class="small"></pre></details>
-      <label class="toggle"><input type="checkbox" id="rainToggle" checked /> digital rain</label>
+      <h2>Display</h2>
+      <label class="toggle"><input type="checkbox" id="rainToggle" /> Digital rain background (uses more battery)</label>
       <p class="muted small">Sources are shown under every result. ansible-core documentation is GPL-3.0, © Ansible project contributors.</p>
     </section>
 
@@ -59,7 +62,7 @@
       <div class="composer">
         <div id="status" class="muted small"></div>
         <form id="searchForm" class="search" role="search">
-          <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Ask about ansible-core… e.g. run a handler immediately" aria-label="Ask the docs" />
+          <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Ask about Ansible…" aria-label="Ask the docs" />
           <button type="submit" class="primary" aria-label="Send">↵</button>
         </form>
       </div>
