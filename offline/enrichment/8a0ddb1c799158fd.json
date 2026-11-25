@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8a0ddb1c799158fd",
+ "chunk_hash": "8a0ddb1c799158fd",
+ "summary": "Ask the assistant 'Analyze this playbook and explain why it might be failing' or 'Run debugging analysis on this file'; it runs static analysis for common errors, logic gaps and configuration mismatches and explains them in plain language.",
+ "questions": [
+  "How do I debug a failing playbook with the AI assistant?",
+  "Can the AI assistant explain why my playbook fails?",
+  "Run debugging analysis on a playbook in VS Code"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

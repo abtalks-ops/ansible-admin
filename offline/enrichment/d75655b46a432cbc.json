@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d75655b46a432cbc",
+ "chunk_hash": "d75655b46a432cbc",
+ "summary": "Optionally add podman-compose support (EPEL, podman-compose, enable podman.service) and ADD config.yaml /etc/flightctl/ for early binding, then set OCI_REGISTRY, OCI_IMAGE_REPO and OCI_IMAGE_TAG and run sudo podman build -t ${OCI_IMAGE_REPO}:${OCI_IMAGE_TAG} .",
+ "questions": [
+  "How do I add podman-compose support to an Edge Manager image?",
+  "How do I include the early-binding config in the image?",
+  "How do I build the bootc image with podman?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}

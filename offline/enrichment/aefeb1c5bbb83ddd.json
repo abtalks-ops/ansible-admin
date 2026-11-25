@@ -1,0 +1,13 @@
+{
+ "chunk_id": "aefeb1c5bbb83ddd",
+ "chunk_hash": "aefeb1c5bbb83ddd",
+ "summary": "A scaffolded collection logs 'collection company_namespace.myapp_network created at <path>' and contains .devcontainer, .github, .vscode, pre-commit and isort configs, changelogs, docs, extensions, galaxy.yml, meta, plugins, roles, tests, pyproject.toml, requirements files and tox-ansible.ini.",
+ "questions": [
+  "What files are in a scaffolded Ansible collection?",
+  "Does ansible-creator create galaxy.yml for a collection?",
+  "What does the collection scaffold log on success?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

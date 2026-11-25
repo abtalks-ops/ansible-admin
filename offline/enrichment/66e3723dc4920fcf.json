@@ -1,0 +1,13 @@
+{
+ "chunk_id": "66e3723dc4920fcf",
+ "chunk_hash": "66e3723dc4920fcf",
+ "summary": "After analysis the assistant flags anti-patterns, failure causes and best-practice gaps; ask 'How do I fix this error?' or 'Refactor this task to follow best practices' for corrected code, apply it, then ask 'Does this look correct now?' to re-run ansible_lint.",
+ "questions": [
+  "How do I get the AI assistant to fix my playbook?",
+  "Refactor an Ansible task to follow best practices with Copilot",
+  "How do I confirm the fixes resolved the issues?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

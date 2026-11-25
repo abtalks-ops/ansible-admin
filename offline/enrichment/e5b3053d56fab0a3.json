@@ -1,0 +1,14 @@
+{
+ "chunk_id": "e5b3053d56fab0a3",
+ "chunk_hash": "e5b3053d56fab0a3",
+ "summary": "The EDA Api V1 Root lists endpoints under /api/eda/v1/ including config, status, openapi.json/yaml, docs, redoc, auth session login/logout, token refresh, users/me, projects, rulebooks, activations, activation-instances, audit-rules, credential-types, eda-credentials, decision-environments, organizations, teams and event-streams.",
+ "questions": [
+  "What endpoints does the EDA API v1 have?",
+  "Where is the EDA OpenAPI spec?",
+  "What is the API path for event streams in EDA?",
+  "EDA API endpoint for activations"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

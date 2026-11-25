@@ -1,0 +1,13 @@
+{
+ "chunk_id": "99bd9fe5555a07ab",
+ "chunk_hash": "99bd9fe5555a07ab",
+ "summary": "Disable the Ansible MCP server with 'Disable Ansible development tools MCP Server' in the command palette, or by clearing the MCP Server checkbox under Extensions > Ansible > MCP Server in settings.",
+ "questions": [
+  "How do I turn off the Ansible MCP server?",
+  "Disable Ansible development tools MCP Server",
+  "How do I stop the AI assistant from using the MCP server?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

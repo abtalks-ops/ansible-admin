@@ -1,0 +1,17 @@
+{
+ "chunk_id": "db102c272e897548",
+ "chunk_hash": "db102c272e897548",
+ "summary": "To run a playbook in AAP, log in to automation controller, create a Source Control credential if needed, create a project for the git repository, create a job template that uses a playbook from the project, and launch the job template.",
+ "questions": [
+  "How do I run my playbook in Ansible Automation Platform?",
+  "What are the steps from a git repo to a running job in automation controller?",
+  "Do I need a project and a job template to run a playbook in AAP?"
+ ],
+ "answer_card": {
+  "title": "Run a playbook from git in AAP",
+  "answer_md": "1. Log in to automation controller.\n2. If the repository is private, create a **Source Control** credential.\n3. Create a **project** that points at the git repository.\n4. Create a **job template** for each playbook in that project.\n5. **Launch** the job template.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/developing_automation_content/index#create-aap-job_develop-automation-content"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

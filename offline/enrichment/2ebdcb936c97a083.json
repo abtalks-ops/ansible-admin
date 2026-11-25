@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2ebdcb936c97a083",
+ "chunk_hash": "2ebdcb936c97a083",
+ "summary": "Create a decision environment under Automation Decisions > Decision Environments: name, organization, full image path with registry and tag, optional credential, and Pull policy: Always (check registry every run), Only if not present (use local cache, good for stable production), or Never (local image only; activation fails if missing).",
+ "questions": [
+  "How do I create a decision environment in Event-Driven Ansible?",
+  "What are the decision environment pull options?",
+  "Why did my activation fail with 'Never pull container before running'?",
+  "Which pull policy should I use in production?"
+ ],
+ "answer_card": {
+  "title": "Decision environment pull policies",
+  "answer_md": "- **Always pull container before running**: checks the registry before every use; best for security patches and staging.\n- **Only pull the image if not present**: uses the local cache when the image exists; good for stable production and faster starts.\n- **Never pull container before running**: uses only a locally present image; the activation **fails** if it isn't there, so pull it manually first.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-set-up-new-decision-environment"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

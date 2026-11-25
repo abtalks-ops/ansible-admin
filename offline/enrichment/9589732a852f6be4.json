@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9589732a852f6be4",
+ "chunk_hash": "9589732a852f6be4",
+ "summary": "If an event stream doesn't pass events to an activation: take it out of Test mode, check the sender, gateway network and proxy, the event stream worker, and the credential and auth header (basic, HMAC signature; changed secrets may not be updated at the sender), that the rulebook acts on the events, and disable vendor cert validation for self-signed certs.",
+ "questions": [
+  "Why is my event stream not sending events to the activation?",
+  "Event stream receives data but activation does nothing",
+  "Is my event stream in test mode?",
+  "Webhook fails because of a self-signed certificate on the gateway"
+ ],
+ "answer_card": {
+  "title": "Event stream not forwarding events",
+  "answer_md": "- Turn **Forward events to rulebook activation** on (test mode doesn't forward).\n- Check the sending service, the network to the platform gateway, and that the gateway proxy and the event stream worker are running.\n- Check the event stream credential, and that requests match its auth (basic header, HMAC signature header, and so on). Secrets changed in EDA must also be changed at the sender.\n- Make sure the rulebook has a source and actions that consume these events.\n- With self-signed certs, disable certificate validation at the vendor for testing.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-event-streams-not-sending-events"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

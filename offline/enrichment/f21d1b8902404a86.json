@@ -1,0 +1,18 @@
+{
+ "chunk_id": "f21d1b8902404a86",
+ "chunk_hash": "f21d1b8902404a86",
+ "summary": "A decision environment's capabilities come from the event sources and filters in its image; de-minimal ships supported plugins under eda.builtin, replacing ansible.eda names: dashes_to_underscores, event_splitter, generic, insert_hosts_to_meta, insert_meta_info, json_filter, normalize_keys and pg_listener.",
+ "questions": [
+  "What event sources and filters are in the de-minimal image?",
+  "What replaces ansible.eda.generic?",
+  "Is ansible.eda.json_filter deprecated?",
+  "What is eda.builtin.pg_listener?"
+ ],
+ "answer_card": {
+  "title": "de-minimal plugins (part 1)",
+  "answer_md": "| Plugin | Type | Deprecated name |\n|---|---|---|\n| `eda.builtin.dashes_to_underscores` | filter | `ansible.eda.dashes_to_underscores` |\n| `eda.builtin.event_splitter` | filter | |\n| `eda.builtin.generic` | source | `ansible.eda.generic` |\n| `eda.builtin.insert_hosts_to_meta` | filter | `ansible.eda.insert_hosts_to_meta` |\n| `eda.builtin.insert_meta_info` | filter | |\n| `eda.builtin.json_filter` | filter | `ansible.eda.json_filter` |\n| `eda.builtin.normalize_keys` | filter | `ansible.eda.normalize_keys` |\n| `eda.builtin.pg_listener` | source | `ansible.eda.pg_listener` |",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-de-supported-event-sources"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}

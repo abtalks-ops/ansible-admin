@@ -1,0 +1,13 @@
+{
+ "chunk_id": "5d44293d5c833760",
+ "chunk_hash": "5d44293d5c833760",
+ "summary": "Sample audit log lines for rulebook activations from aap_eda.api.views.activation, in the form 'Action: Create|Read|Disable|Enable|Delete|Restart / ResourceType: RulebookActivation / ResourceName / ResourceID / Organization'.",
+ "questions": [
+  "What does an EDA audit log entry for an activation look like?",
+  "Example log for rulebook activation restart",
+  "aap_eda.api.views.activation log format"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

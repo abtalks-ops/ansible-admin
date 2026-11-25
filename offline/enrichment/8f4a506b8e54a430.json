@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8f4a506b8e54a430",
+ "chunk_hash": "8f4a506b8e54a430",
+ "summary": "Document each role in its README.md (description, requirements, dependencies, variables with defaults, examples and which are required, and an example playbook) and the collection README (description, required collections, roles list, usage, troubleshooting, versioning); controller_configuration's ad_hoc_command_cancel role is a model.",
+ "questions": [
+  "What should a role README.md include?",
+  "How do I document a roles collection?",
+  "Is there an example of good role documentation?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

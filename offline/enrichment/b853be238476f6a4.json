@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b853be238476f6a4",
+ "chunk_hash": "b853be238476f6a4",
+ "summary": "Prerequisites for validating content with the AI assistant: VS Code with the Ansible extension active, the Ansible MCP server enabled, and a playbook open in the editor.",
+ "questions": [
+  "What do I need to validate a playbook with the AI assistant?",
+  "Prerequisites for AI validation in VS Code",
+  "Does the playbook need to be open to validate it?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:16:16+00:00"
+}

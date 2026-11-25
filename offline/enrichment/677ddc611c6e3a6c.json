@@ -1,0 +1,13 @@
+{
+ "chunk_id": "677ddc611c6e3a6c",
+ "chunk_hash": "677ddc611c6e3a6c",
+ "summary": "Image-based OSes version the OS, configuration and apps as one unit, reducing drift and failed updates through transactional updates and rollbacks; Edge Manager targets bootc bootable container images, and bootc does not update package-based systems.",
+ "questions": [
+  "Why does Edge Manager use image-based operating systems?",
+  "What is bootc?",
+  "Can Edge Manager update package-based RHEL hosts?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:18:15+00:00"
+}

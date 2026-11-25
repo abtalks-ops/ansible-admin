@@ -1,0 +1,18 @@
+{
+ "chunk_id": "2af49db344897eaf",
+ "chunk_hash": "2af49db344897eaf",
+ "summary": "Create an event stream under Automation Decisions > Event Streams with a name, organization, type, credential, Headers (comma-separated keys to include in payloads) and Forward events to rulebook activation, which you can turn off as a test mode to inspect headers and payloads without triggering rules.",
+ "questions": [
+  "How do I create an event stream in Event-Driven Ansible?",
+  "How do I test an event stream without triggering rules?",
+  "What does Forward events to rulebook activation do?",
+  "What is the Headers field on an event stream?"
+ ],
+ "answer_card": {
+  "title": "Create an event stream",
+  "answer_md": "*Automation Decisions > Event Streams > Create event stream*\n\n- **Event stream type** and **Credential** (the one made for this stream).\n- **Headers**: comma-separated HTTP header names to keep in the event payload (`*` for all). Empty means none.\n- **Forward events to rulebook activation**: turn off to test the connection and inspect headers and payload without firing rules; turn on for production.\n\nAfter saving, copy the generated URL into the sender's webhook settings.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_decisions/index#eda-create-event-stream"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:32+00:00"
+}

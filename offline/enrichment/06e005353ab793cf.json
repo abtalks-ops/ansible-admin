@@ -1,0 +1,13 @@
+{
+ "chunk_id": "06e005353ab793cf",
+ "chunk_hash": "06e005353ab793cf",
+ "summary": "To use Event-Driven Ansible controller in AAP 2.6 you must replace deprecated legacy controller tokens with Red Hat Ansible Automation Platform credentials.",
+ "questions": [
+  "Do I need to replace controller tokens in AAP 2.6?",
+  "Migrate EDA from controller tokens to AAP credentials",
+  "Why are controller tokens deprecated for EDA?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:14:50+00:00"
+}
