@@ -1,0 +1,18 @@
+{
+ "chunk_id": "e9a0c11bf810b56b",
+ "chunk_hash": "e9a0c11bf810b56b",
+ "summary": "AWS EC2 inventory source: choose Amazon EC2, an optional AWS credential (omit to use the instance IAM role) and Source variables for aws_ec2; using only include_filters returns all hosts, so put the first condition in filters.",
+ "questions": [
+  "How do I create an AWS EC2 inventory source?",
+  "Can controller use an IAM role instead of an AWS credential?",
+  "Why does my aws_ec2 inventory return all hosts with include_filters?",
+  "How do I override aws_ec2 plugin options?"
+ ],
+ "answer_card": {
+  "title": "aws_ec2 include_filters returns every host",
+  "answer_md": "If you set only `include_filters`, the aws_ec2 plugin returns all hosts. Put the first condition in `filters`, and the other OR conditions in a list under `include_filters`, in the inventory source's *Source variables*.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#proc-controller-amazon-ec2"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

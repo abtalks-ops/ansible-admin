@@ -1,0 +1,13 @@
+{
+ "chunk_id": "763d337210ae00b3",
+ "chunk_hash": "763d337210ae00b3",
+ "summary": "Source control options for projects are Git and Subversion, Red Hat Lightspeed, or a remote archive.",
+ "questions": [
+  "What source control types can a project use?",
+  "Can a project use a remote archive?",
+  "Can I use Red Hat Lightspeed as a project source?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

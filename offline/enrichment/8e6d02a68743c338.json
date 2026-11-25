@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8e6d02a68743c338",
+ "chunk_hash": "8e6d02a68743c338",
+ "summary": "Jobs can run on cluster members or, as container groups, in an OpenShift namespace with a provisioned service account, chosen per playbook as needed.",
+ "questions": [
+  "What is a container group?",
+  "Can controller run jobs in OpenShift pods?",
+  "Do container groups need a service account?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "chunk_id": "ada1a0dff2a4d5e5",
+ "chunk_hash": "ada1a0dff2a4d5e5",
+ "summary": "The topology Legend colors node status (Error includes Unavailable) and link states Established, Adding and Removing; clicking a node shows hostname, type and status and links to its Details page to remove it, run a health check or stop jobs being assigned.",
+ "questions": [
+  "What do the link states in the topology view mean?",
+  "How do I run a health check on a mesh node?",
+  "How do I stop jobs running on a node?",
+  "What does an Error node status mean in topology view?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

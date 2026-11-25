@@ -1,0 +1,14 @@
+{
+ "chunk_id": "bf8efc3f9708ceb9",
+ "chunk_hash": "bf8efc3f9708ceb9",
+ "summary": "Domains of interest filter the Jobs and Templates views by label: select labels next to Domains, clear with X, add domains with Add Domain, and add a label to a job template's Labels field so it shows up under that domain.",
+ "questions": [
+  "How do I filter jobs and templates by label in AAP?",
+  "What are domains in Automation Execution?",
+  "How do I add a domain filter?",
+  "How do I make a template appear under a domain?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7f06e341271a45bd",
+ "chunk_hash": "7f06e341271a45bd",
+ "summary": "Delete a job template from the kebab menu in the list or the Details page; check it is not used in a workflow job template, as the UI lists affected items before confirming.",
+ "questions": [
+  "How do I delete a job template in AAP?",
+  "Can I delete a job template used in a workflow?",
+  "What happens to workflows when I delete a job template?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

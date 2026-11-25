@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2e5ccb077d59a3b3",
+ "chunk_hash": "2e5ccb077d59a3b3",
+ "summary": "Open the topology viewer at Automation Execution > Infrastructure > Topology View to see how receptor nodes link, with zoom, fit-to-screen, pan and reset controls.",
+ "questions": [
+  "Where is the Topology View in AAP 2.6?",
+  "How do I view receptor node connections?",
+  "How do I fit a large mesh on screen?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

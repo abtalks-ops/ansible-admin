@@ -1,0 +1,18 @@
+{
+ "chunk_id": "35bfae4c73372350",
+ "chunk_hash": "35bfae4c73372350",
+ "summary": "node_type rules: automationcontroller nodes are hybrid (default) or control, execution_nodes are execution (default) or hop; an instance_group_* host not in either group fails 'Validate mesh topology' with 'is not present in either [automationcontroller] or [execution_nodes]', fixed by listing it in execution_nodes too.",
+ "questions": [
+  "The host is not present in either [automationcontroller] or [execution_nodes]",
+  "What node_type values can I use in the installer inventory?",
+  "How do I add a node to a custom instance group in the inventory file?",
+  "Why does Validate mesh topology fail?"
+ ],
+ "answer_card": {
+  "title": "Fix 'not present in either [automationcontroller] or [execution_nodes]'",
+  "answer_md": "Every host in an `[instance_group_*]` group must also be in `[automationcontroller]` or `[execution_nodes]`. Move the host definition into `[execution_nodes]` and list only its name in the custom group:\n\n```\n[execution_nodes]\n110-addr.tatu.home ansible_host=192.168.111.110 receptor_listener_port=8928\n\n[instance_group_test]\n110-addr.tatu.home\n```\n\n`node_type` is `hybrid` (default) or `control` in `automationcontroller`, and `execution` (default) or `hop` in `execution_nodes`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-group-policies-automationcontroller"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

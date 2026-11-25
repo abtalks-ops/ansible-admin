@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9c3e4fe7ed4eb3ad",
+ "chunk_hash": "9c3e4fe7ed4eb3ad",
+ "summary": "On sync, controller checks the manifest signature against the project's public key, recomputes each file checksum, and checks all files are accounted for in MANIFEST.in; unexpected added or removed files fail verification.",
+ "questions": [
+  "How does controller verify a signed project?",
+  "Why did project verification fail after adding a file?",
+  "What does MANIFEST.in do for project signing?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

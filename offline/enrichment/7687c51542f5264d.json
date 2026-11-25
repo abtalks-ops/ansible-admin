@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7687c51542f5264d",
+ "chunk_hash": "7687c51542f5264d",
+ "summary": "Schedule workflows from the Schedules tab; if a nested workflow has a survey or prompts for inventory, a PROMPT button on the schedule form offers an optional inventory step.",
+ "questions": [
+  "How do I schedule a workflow job template?",
+  "Why is there a PROMPT button on my workflow schedule?",
+  "Can I change the inventory for a scheduled workflow?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

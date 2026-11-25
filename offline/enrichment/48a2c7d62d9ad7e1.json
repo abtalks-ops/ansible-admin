@@ -1,0 +1,13 @@
+{
+ "chunk_id": "48a2c7d62d9ad7e1",
+ "chunk_hash": "48a2c7d62d9ad7e1",
+ "summary": "Extra variables on a job template are the -e/--extra-vars of ansible-playbook, given as YAML or JSON with the highest precedence; to set extra_vars on a schedule, enable Prompt on launch for Variables or a survey.",
+ "questions": [
+  "How do I pass extra vars to a job template?",
+  "Why can't I set extra_vars on a schedule?",
+  "What precedence do job template extra variables have?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

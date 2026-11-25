@@ -1,0 +1,14 @@
+{
+ "chunk_id": "eef4d1c7732c8496",
+ "chunk_hash": "eef4d1c7732c8496",
+ "summary": "Creating a job template: Automation Execution > Templates > Create template > Create job template. Prompt on launch asks for a field's value at launch and usually overrides the template; Job type Run executes the playbook while Check does a dry run, and an inventory needs permission granted by an administrator.",
+ "questions": [
+  "How do I create a job template in AAP 2.6?",
+  "What is the difference between Run and Check job types?",
+  "What does Prompt on launch do?",
+  "Why can't I select an inventory in my job template?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

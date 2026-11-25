@@ -1,0 +1,13 @@
+{
+ "chunk_id": "7933be2c4a0e5743",
+ "chunk_hash": "7933be2c4a0e5743",
+ "summary": "Workflow template fields: Source control branch (applied to nodes that prompt for a branch), Labels (only on the workflow, not its job template nodes), Job tags, Skip tags and Extra variables.",
+ "questions": [
+  "How do I set one branch for all nodes in a workflow?",
+  "Are workflow labels applied to its job templates?",
+  "Can I set job tags on a workflow template?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

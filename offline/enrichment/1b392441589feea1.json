@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1b392441589feea1",
+ "chunk_hash": "1b392441589feea1",
+ "summary": "Using automation hub for project collections: get an API token from console.redhat.com/ansible/automation-hub/token (or private hub's Repo Management), create an automation hub credential with the Galaxy Server URL (the repository's Ansible CLI URL for private hub, one credential per repository) and add it to the organization.",
+ "questions": [
+  "How do I make controller download collections from automation hub?",
+  "How do I create an automation hub credential?",
+  "Where do I get an automation hub API token?",
+  "What Galaxy Server URL do I use for private automation hub?"
+ ],
+ "answer_card": {
+  "title": "Pull project collections from automation hub",
+  "answer_md": "1. Get a token: `https://console.redhat.com/ansible/automation-hub/token` > **Load token** (for private automation hub, use the token from its *Repo Management* dashboard).\n2. Create an **Ansible Galaxy/Automation Hub API Token** credential with that token and the Server/SSO URL (for private hub, the repository's *Ansible CLI URL*, e.g. `https://<hub_url>/api/galaxy/content/<repo>/`). Create one credential per repository.\n3. Add the credential to the **organization** that should use that content.\n4. Put the collections in the project's `collections/requirements.yml` and sync the project.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#proc-projects-using-collections-with-hub"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

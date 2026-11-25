@@ -1,0 +1,18 @@
+{
+ "chunk_id": "6faa4af8c421e8c2",
+ "chunk_hash": "6faa4af8c421e8c2",
+ "summary": "Instance groups can be assigned to organizations, inventories and job templates, checked in the order Job Template > Inventory > Organization; custom groups in the installer inventory use the instance_group_ prefix and members must also be in automationcontroller or execution_nodes, with automationcontroller shown as controlplane.",
+ "questions": [
+  "Which instance group does a job use if several are set?",
+  "What is the instance group precedence in AAP?",
+  "How do I define a custom instance group in the installer inventory?",
+  "What is the controlplane instance group?"
+ ],
+ "answer_card": {
+  "title": "Instance group precedence",
+  "answer_md": "Instance groups can be set on job templates, inventories and organizations. When a job runs, controller checks them in this order:\n\n**Job Template > Inventory > Organization**\n\nIf none is set, the job falls back to the `default` instance group. In the installer inventory, custom groups are named `instance_group_<name>` and their hosts must also be in `[automationcontroller]` or `[execution_nodes]`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#con-controller-instance-groups"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}

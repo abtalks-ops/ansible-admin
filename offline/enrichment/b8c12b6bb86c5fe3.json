@@ -1,0 +1,18 @@
+{
+ "chunk_id": "b8c12b6bb86c5fe3",
+ "chunk_hash": "b8c12b6bb86c5fe3",
+ "summary": "Controller computes both CPU-bound and memory-bound fork limits and uses the minimum by default; the instance field capacity_adjustment (0.0 to 1.0) picks between them, for example 0.5 between 16 and 20 forks gives 18.",
+ "questions": [
+  "What is capacity_adjustment in automation controller?",
+  "Does controller use the CPU or memory capacity by default?",
+  "How do I balance CPU and memory capacity for an instance?",
+  "What does capacity_adjustment 1.0 mean?"
+ ],
+ "answer_card": {
+  "title": "Choose between CPU and memory capacity",
+  "answer_md": "Controller calculates a CPU-bound and a memory-bound fork limit and uses the **smaller** one by default. The instance field `capacity_adjustment` (0.0 to 1.0) moves between them:\n\n- `0.0`: smallest value\n- `1.0`: largest value\n- `0.5`: halfway, e.g. `16 + (20 - 16) * 0.5 = 18`\n\nSet it in **Automation Execution > Infrastructure > Instance Groups**, open the instance group, **Instances** tab, **Capacity adjustment** slider.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_execution/index#controller-select-capacity"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T17:03:30+00:00"
+}
