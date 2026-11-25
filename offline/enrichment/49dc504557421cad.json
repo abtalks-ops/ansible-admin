@@ -1,0 +1,18 @@
+{
+ "chunk_id": "49dc504557421cad",
+ "chunk_hash": "49dc504557421cad",
+ "summary": "Behind a load balancer or proxy (ALB, NLB, HAProxy, Squid, Nginx, tinyproxy), controller uses `REMOTE_HOST_HEADERS` (default `[\"REMOTE_ADDR\", \"REMOTE_HOST\"]`) to find the client IP. Set Remote Host Headers in Settings > Automation Execution > System to `[\"HTTP_X_FORWARDED_FOR\", \"REMOTE_ADDR\", \"REMOTE_HOST\"]`; the first IP found wins.",
+ "questions": [
+  "How do I get the real client IP in controller behind a load balancer?",
+  "What is REMOTE_HOST_HEADERS?",
+  "Controller logs show load balancer IP instead of client",
+  "How do I add X-Forwarded-For to automation controller?"
+ ],
+ "answer_card": {
+  "title": "Trust X-Forwarded-For",
+  "answer_md": "**Settings > Automation Execution > System > Edit**, Remote Host Headers:\n```json\n[\n  \"HTTP_X_FORWARDED_FOR\",\n  \"REMOTE_ADDR\",\n  \"REMOTE_HOST\"\n]\n```\nPair it with a Proxy IP Allowed List so the header can't be spoofed.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/operating_ansible_automation_platform/index#proc-enable-proxy-support_{context}"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

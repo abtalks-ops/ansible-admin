@@ -1,0 +1,13 @@
+{
+ "chunk_id": "643abbdf8570dbb7",
+ "chunk_hash": "643abbdf8570dbb7",
+ "summary": "The session timeout change is needed only on the installation host, or on whichever host runs the AAP installation program if there is no dedicated installation host.",
+ "questions": [
+  "Which host needs the session timeout change for AAP?",
+  "Do I change logind timeout on every AAP node?",
+  "Where do I relax the idle session timeout?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

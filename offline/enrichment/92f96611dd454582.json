@@ -1,0 +1,18 @@
+{
+ "chunk_id": "92f96611dd454582",
+ "chunk_hash": "92f96611dd454582",
+ "summary": "Remove orphaned source instances (capacity 0, DISABLED) with `awx-manage deprovision_instance --hostname=<node>`, repair hub content with a POST of `{\"verify_checksums\": true}` to `https://<gateway url>/api/galaxy/pulp/api/v3/repair/`, then fix instance group membership and update decision environments and their credentials to the new registry addresses.",
+ "questions": [
+  "How do I remove old instances after AAP migration?",
+  "awx-manage deprovision_instance example",
+  "How do I repair automation hub content after migration?",
+  "Nodes with capacity 0 after migration"
+ ],
+ "answer_card": {
+  "title": "Clean up instances and repair hub",
+  "answer_md": "```bash\nawx-manage list_instances\nawx-manage deprovision_instance --hostname=node1.example.org\ncurl -d '{\"verify_checksums\": true }' -X POST -k \\\n  https://<gateway url>/api/galaxy/pulp/api/v3/repair/ \\\n  -u <gateway_admin_user>:<gateway_admin_password>\n```\nThen review **Instance Groups** and **Decision Environments** for old addresses.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/ansible_automation_platform_migration/index#containerized-post-import"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

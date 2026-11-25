@@ -1,0 +1,17 @@
+{
+ "chunk_id": "da9d04a23a13a0d0",
+ "chunk_hash": "da9d04a23a13a0d0",
+ "summary": "Check database sizes with `psql -c '\\l+'` and ensure enough space, then on the gateway node test connectivity with `psql ... -c 'SHOW server_version;'`, dump each component with `pg_dump -h <pg_hostname> -U <user> -d <db> --clean --create -Fc -f <component>/<component>.pgc` and append `<component>_pg_database: <name>` to `secrets.yml`.",
+ "questions": [
+  "How do I dump the AAP databases for migration?",
+  "pg_dump options for AAP migration",
+  "How do I check AAP database size?"
+ ],
+ "answer_card": {
+  "title": "Dump each component database",
+  "answer_md": "```bash\npsql -c '\\l+'   # check sizes first\ncd /tmp/backups/artifact\npsql -h <pg_hostname> -U <component_pg_user> -d <database_name> -t -c 'SHOW server_version;'\npg_dump -h <pg_hostname> -U <component_pg_user> -d <component_pg_name> \\\n  --clean --create -Fc -f <component>/<component>.pgc\necho \"<component>_pg_database: <database_name>\" >> secrets.yml\n```\nRepeat for controller, gateway and hub.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/ansible_automation_platform_migration/index#rpm-source-environment-export"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

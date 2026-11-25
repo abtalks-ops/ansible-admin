@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0ea61b41c66d5876",
+ "chunk_hash": "0ea61b41c66d5876",
+ "summary": "For HA hub using network storage on the hub nodes themselves, install firewalld and open the storage service ports before installing: `dnf install firewalld`, `firewall-cmd --permanent --add-service=<service>` (list with `firewall-cmd --get-services`), then `firewall-cmd --reload`.",
+ "questions": [
+  "How do I open firewall ports for NFS on automation hub nodes?",
+  "Do I need firewalld for HA automation hub?",
+  "firewall-cmd add service for shared storage"
+ ],
+ "answer_card": {
+  "title": "Open storage ports for HA hub",
+  "answer_md": "```bash\ndnf install firewalld\nfirewall-cmd --get-services                 # find your storage service, e.g. nfs\nfirewall-cmd --permanent --add-service=<service>\nfirewall-cmd --reload\n```\nDo this on the hub nodes before running the installer.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#ref-ha-hub-reqs"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

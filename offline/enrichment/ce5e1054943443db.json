@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ce5e1054943443db",
+ "chunk_hash": "ce5e1054943443db",
+ "summary": "Block SSH passwords for the service account with `Match User ansible` / `PasswordAuthentication no` in `/etc/sshd/sshd_config.d/60-ansible.conf`, check with `sudo sshd -t` and restart `sshd.service`; add public keys matching the AAP Machine credentials to `/home/ansible/.ssh/authorized_keys`. One account is used, but teams can each use their own keys.",
+ "questions": [
+  "How do I disable password SSH for the ansible user only?",
+  "sshd Match User PasswordAuthentication no example",
+  "Do all managed nodes need the same SSH key?",
+  "Where do I put the AAP public key on managed nodes?"
+ ],
+ "answer_card": {
+  "title": "SSH keys only for the service account",
+  "answer_md": "```\n# /etc/sshd/sshd_config.d/60-ansible.conf\nMatch User ansible\n\tPasswordAuthentication no\n```\n```bash\nsudo sshd -t\nsudo systemctl restart sshd.service\n```\nAppend the Machine credential's public key to `/home/ansible/.ssh/authorized_keys`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-ssh-auth-for-service-account"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

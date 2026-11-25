@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c6408460569b6bdf",
+ "chunk_hash": "c6408460569b6bdf",
+ "summary": "Before migrating a containerized deployment, document topology, the AAP and component versions, database names, users, connections and tuning, all custom configuration, and container resource allocations and volumes.",
+ "questions": [
+  "What should I document before migrating containerized AAP?",
+  "Assess containerized AAP before migration",
+  "Do I need to record container volumes for migration?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

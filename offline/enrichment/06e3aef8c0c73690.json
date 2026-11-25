@@ -1,0 +1,13 @@
+{
+ "chunk_id": "06e3aef8c0c73690",
+ "chunk_hash": "06e3aef8c0c73690",
+ "summary": "To use Vault secrets in a Machine credential, create the Machine credential, click the key icon next to Username, pick the HashiCorp Vault credential, fill in Path to Secret and Key Name, optionally Test, then Finish.",
+ "questions": [
+  "How do I pull a machine credential username from HashiCorp Vault?",
+  "Link a machine credential to HashiCorp Vault in AAP",
+  "Use external secret lookup for machine credential fields"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

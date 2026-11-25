@@ -1,0 +1,17 @@
+{
+ "chunk_id": "66ffb95e4636f148",
+ "chunk_hash": "66ffb95e4636f148",
+ "summary": "Use a RHEL DVD or ISO as a local repo: mount it at `/media/rheldvd` (`mount /dev/sr0` or `mount -o loop <iso>`), create `/etc/yum.repos.d/dvd.repo` with `dvd-BaseOS` and `dvd-AppStream` pointing at `file:///media/rheldvd/BaseOS` and `AppStream`, and `rpm --import /media/rheldvd/RPM-GPG-KEY-redhat-release`, or you get a curl error resolving www.redhat.com.",
+ "questions": [
+  "How do I use a RHEL ISO as a repo for AAP?",
+  "Curl error 6 could not resolve www.redhat.com during dnf",
+  "dvd.repo example for BaseOS and AppStream"
+ ],
+ "answer_card": {
+  "title": "RHEL DVD/ISO as a repo",
+  "answer_md": "```bash\nmkdir /media/rheldvd && mount -o loop <rhel-dvd>.iso /media/rheldvd   # or: mount /dev/sr0\nrpm --import /media/rheldvd/RPM-GPG-KEY-redhat-release\n```\n```ini\n# /etc/yum.repos.d/dvd.repo\n[dvd-BaseOS]\nname=DVD for RHEL - BaseOS\nbaseurl=file:///media/rheldvd/BaseOS\nenabled=1\ngpgcheck=1\ngpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release\n\n[dvd-AppStream]\nname=DVD for RHEL - AppStream\nbaseurl=file:///media/rheldvd/AppStream\nenabled=1\ngpgcheck=1\ngpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#accessing-rpm-repositories-for-locally-mounted-dvd_licensing-gw"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

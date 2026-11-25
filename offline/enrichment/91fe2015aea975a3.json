@@ -1,0 +1,19 @@
+{
+ "chunk_id": "91fe2015aea975a3",
+ "chunk_hash": "91fe2015aea975a3",
+ "summary": "AAP 2.6 RPM base requirements: a valid subscription, RHEL 9.4 or later 9.x, x86_64, AArch64, s390x or ppc64le, ansible-core 2.16+, current Firefox or Chrome, PostgreSQL 15 for managed databases or 15, 16 or 17 external (needs ICU; 16 and 17 need external backup), and IPv4/IPv6 single or dual stack. A resilient deployment needs 10 VMs with 16 GB RAM and 4 vCPU.",
+ "questions": [
+  "Which RHEL versions does AAP 2.6 RPM support?",
+  "Which PostgreSQL versions does AAP 2.6 support?",
+  "Does AAP support IPv6?",
+  "Can I use PostgreSQL 17 with AAP?",
+  "How many VMs does a resilient AAP deployment need?"
+ ],
+ "answer_card": {
+  "title": "AAP 2.6 base requirements (RPM)",
+  "answer_md": "| Item | Requirement |\n|---|---|\n| OS | RHEL 9.4 or later 9.x |\n| CPU | x86_64, AArch64, s390x, ppc64le |\n| ansible-core | 2.16+ |\n| Managed DB | PostgreSQL 15 |\n| External DB | PostgreSQL 15, 16, 17 (ICU; 16/17 need external backup) |\n| IP | IPv4, IPv6, dual-stack |\n\nResilient deployment: 10 VMs, each 16 GB RAM, 4 vCPU.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#ref-platform-system-requirements_licensing-gw"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f4600fc7211822ac",
+ "chunk_hash": "f4600fc7211822ac",
+ "summary": "AAP can be installed without an internet connection or access to online repositories.",
+ "questions": [
+  "Can I install AAP without internet?",
+  "Does AAP support air-gapped installs?",
+  "AAP disconnected installation"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

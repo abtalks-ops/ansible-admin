@@ -1,0 +1,14 @@
+{
+ "chunk_id": "7163be7730ad636c",
+ "chunk_hash": "7163be7730ad636c",
+ "summary": "Controller sends logs as JSON over HTTP; most useful data are job facts, job events, activity stream and log messages. Benefits include deeper insight, finding slow playbooks and compliance auditing, and the logging aggregator supports Splunk, Loggly, Sumologic and the Elastic stack.",
+ "questions": [
+  "Which log aggregators does automation controller support?",
+  "Can AAP send logs to Splunk?",
+  "What data does controller send to the log aggregator?",
+  "Does AAP support ELK logging?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

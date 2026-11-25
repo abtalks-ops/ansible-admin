@@ -1,0 +1,14 @@
+{
+ "chunk_id": "27bd308723207278",
+ "chunk_hash": "27bd308723207278",
+ "summary": "Configuration as code for AAP uses validated collections from Automation Hub: `infra.aap_utilities` (install, backup, restore, certificates), `infra.aap_configuration` (RBAC, projects, job templates, credentials; replaces `infra.controller_configuration`, `infra.ah_configuration` and `infra.eda_configuration` in 2.6) and `infra.ee_utilities` (build EEs, migrate from virtualenvs).",
+ "questions": [
+  "Which collection manages AAP configuration as code?",
+  "Should I still use infra.controller_configuration with AAP 2.6?",
+  "What does infra.aap_utilities do?",
+  "How do I build execution environments as code?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "cfb9cc70851c151f",
+ "chunk_hash": "cfb9cc70851c151f",
+ "summary": "For containerized installs, put `postgresql_admin_password`, `gateway_admin_password`, `gateway_pg_password`, `controller_admin_password`, `controller_pg_password`, `hub_admin_password`, `hub_pg_password`, `eda_admin_password`, `eda_pg_password` (and `registry_password` when connected) in the vault and run `ansible-playbook ansible.containerized_installer.install -e @vault.yml --ask-become-pass`, without repeating those variables in the plaintext inventory.",
+ "questions": [
+  "How do I use a vault file with the containerized installer?",
+  "Which passwords go in the vault for containerized AAP?",
+  "ansible.containerized_installer.install with vault.yml",
+  "Can I keep passwords in both the inventory and the vault?"
+ ],
+ "answer_card": {
+  "title": "Containerized install with a vault file",
+  "answer_md": "`vault.yml` holds:\n```yaml\npostgresql_admin_password: <secure_password>\ngateway_admin_password: <secure_password>\ngateway_pg_password: <secure_password>\ncontroller_admin_password: <secure_password>\ncontroller_pg_password: <secure_password>\nhub_admin_password: <secure_password>\nhub_pg_password: <secure_password>\neda_admin_password: <secure_password>\neda_pg_password: <secure_password>\nregistry_password: <secure_cdn_password>  # connected installs\n```\nRun from the install directory:\n```bash\nansible-playbook ansible.containerized_installer.install -e @vault.yml --ask-become-pass\n```\nThe guide prints this command; an encrypted file also needs the vault password (for example `--ask-vault-pass`). Don't duplicate these variables in the inventory.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-install-containerized-deployment"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

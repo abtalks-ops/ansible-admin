@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9e29b1dbd00b2b10",
+ "chunk_hash": "9e29b1dbd00b2b10",
+ "summary": "AAP creates self-signed certificates by default; with existing PKI, put certs, keys and the CA cert in the installer directory and set variables: `custom_ca_cert`, controller `web_server_ssl_cert`/`_key` (RPM) or `controller_tls_cert`/`_key` (container), hub `automationhub_ssl_cert`/`_key` or `hub_tls_cert`/`_key`, and database `postgres_ssl_cert` or `postgresql_tls_cert`.",
+ "questions": [
+  "How do I install AAP with my own certificates?",
+  "What variable sets a custom CA certificate in AAP?",
+  "RPM vs containerized TLS certificate variable names",
+  "How do I replace self-signed certificates in AAP?"
+ ],
+ "answer_card": {
+  "title": "User-provided certificate variables",
+  "answer_md": "| Component | RPM | Containerized |\n|---|---|---|\n| CA | `custom_ca_cert` | `custom_ca_cert` |\n| Controller | `web_server_ssl_cert` / `web_server_ssl_key` | `controller_tls_cert` / `controller_tls_key` |\n| Hub | `automationhub_ssl_cert` / `automationhub_ssl_key` | `hub_tls_cert` / `hub_tls_key` |\n| Database | `postgres_ssl_cert` | `postgresql_tls_cert` |\n\nCopy the files into the installer directory first.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#ref-install-user-pki_hardening-aap"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

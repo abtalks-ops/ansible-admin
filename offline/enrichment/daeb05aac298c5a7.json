@@ -1,0 +1,18 @@
+{
+ "chunk_id": "daeb05aac298c5a7",
+ "chunk_hash": "daeb05aac298c5a7",
+ "summary": "Post-import reconciliation: in the `automation-gateway` container run `aap-gateway-manage migrate` and in `shell_plus` delete `HTTPPort`, `ServiceNode` and `ServiceCluster` objects; move `extra_settings` to `component_extra_settings`; remove `resource_server` Podman secrets; rerun the installer; run `aap-eda-manage resource_sync` in `automation-eda-api` if EDA is present; and list instances with `awx-manage list_instances`.",
+ "questions": [
+  "How do I reset platform gateway service config after migration?",
+  "What does aap-eda-manage resource_sync do?",
+  "Remove resource server secrets in containerized AAP",
+  "Steps after importing a migration into containerized AAP"
+ ],
+ "answer_card": {
+  "title": "Reconcile containerized target",
+  "answer_md": "```bash\npodman exec -it automation-gateway bash\naap-gateway-manage migrate\naap-gateway-manage shell_plus\n>>> HTTPPort.objects.all().delete(); ServiceNode.objects.all().delete(); ServiceCluster.objects.all().delete()\n\nfor i in `podman secret ls | egrep 'resource_server' | awk '{print $2}'`; do podman secret rm $i; done\n# rerun the installer with the same inventory\npodman exec -it automation-eda-api aap-eda-manage resource_sync   # if EDA\npodman exec -it automation-controller-task awx-manage list_instances\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/ansible_automation_platform_migration/index#containerized-post-import"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

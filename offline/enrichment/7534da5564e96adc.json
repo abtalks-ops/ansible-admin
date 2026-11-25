@@ -1,0 +1,17 @@
+{
+ "chunk_id": "7534da5564e96adc",
+ "chunk_hash": "7534da5564e96adc",
+ "summary": "Signing inventory options: `automationhub_create_default_collection_signing_service = True`, `automationhub_auto_sign_collections = True`, `automationhub_require_content_approval = True`, plus `automationhub_collection_signing_service_key` and `automationhub_collection_signing_service_script` with absolute paths; uploads must then be signed and approved.",
+ "questions": [
+  "Which inventory variables enable collection signing on hub?",
+  "What does automationhub_auto_sign_collections do?",
+  "How do I require approval for collections in private hub?"
+ ],
+ "answer_card": {
+  "title": "Enable collection signing (RPM)",
+  "answer_md": "```ini\n[all:vars]\nautomationhub_create_default_collection_signing_service=True\nautomationhub_auto_sign_collections=True\nautomationhub_require_content_approval=True\nautomationhub_collection_signing_service_key=/abs/path/to/galaxy_signing_service.gpg\nautomationhub_collection_signing_service_script=/abs/path/to/collection_signing.sh\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#proc-configure-content-signing-on-pah"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "48b158eafde8b070",
+ "chunk_hash": "48b158eafde8b070",
+ "summary": "Download the AAP 2.6 Setup Bundle from the Customer Portal (it holds the RPMs and default EE images pushed to private automation hub during install), untar it on the control node with `tar xvf ansible-automation-platform-setup-bundle-2.6-1.tar.gz`, cd into it and edit the inventory.",
+ "questions": [
+  "Where do I download the AAP 2.6 setup bundle?",
+  "How do I extract the AAP setup bundle?",
+  "Does the setup bundle push EE images to private hub?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

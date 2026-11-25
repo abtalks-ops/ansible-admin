@@ -1,0 +1,18 @@
+{
+ "chunk_id": "5b30a8b73fcf353c",
+ "chunk_hash": "5b30a8b73fcf353c",
+ "summary": "Before importing, stop every containerized service except the database with `systemctl --user stop`: `pcp` if configured; controller `automation-controller-task`, `-web`, `-rsyslog` and `receptor`; hub `automation-hub-api`, `-content`, `-web`, `-worker-1/2`; EDA scheduler, daphne, web, api, workers and activation workers; gateway `automation-gateway` and `-proxy`; and `redis-unix redis-tcp` on the gateway or Redis nodes.",
+ "questions": [
+  "How do I stop containerized AAP services?",
+  "Which systemd user services does containerized AAP run?",
+  "How do I stop Redis in containerized AAP?",
+  "Stop AAP services before database restore"
+ ],
+ "answer_card": {
+  "title": "Stop containerized services (not the DB)",
+  "answer_md": "```bash\nsystemctl --user stop pcp   # if configured\nsystemctl --user stop automation-controller-task automation-controller-web automation-controller-rsyslog receptor\nsystemctl --user stop automation-hub-api automation-hub-content automation-hub-web automation-hub-worker-1 automation-hub-worker-2\nsystemctl --user stop automation-eda-scheduler automation-eda-daphne automation-eda-web automation-eda-api \\\n  automation-eda-worker-1 automation-eda-worker-2 automation-eda-activation-worker-1 automation-eda-activation-worker-2\nsystemctl --user stop automation-gateway automation-gateway-proxy\nsystemctl --user stop redis-unix redis-tcp   # gateway node, or every Redis node\n```\nRun each on its component node.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/ansible_automation_platform_migration/index#containerized-target-import"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

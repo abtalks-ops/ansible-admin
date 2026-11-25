@@ -1,0 +1,18 @@
+{
+ "chunk_id": "9433ce1af934b80c",
+ "chunk_hash": "9433ce1af934b80c",
+ "summary": "AAP uses the `ansible.builtin.sudo` become plugin, so the service account must be able to run any command with sudo: create `/etc/sudoers.d/ansible` with `ansible ALL=(ALL) NOPASSWD: ALL`, `chmod 600` it and check with `sudo visudo -cf /etc/sudoers.d/ansible`.",
+ "questions": [
+  "How do I give the ansible service account sudo?",
+  "sudoers entry for AAP service account",
+  "How do I validate a sudoers.d file?",
+  "Which become plugin does AAP use on Linux?"
+ ],
+ "answer_card": {
+  "title": "Sudo for the service account",
+  "answer_md": "```bash\necho 'ansible ALL=(ALL) NOPASSWD: ALL' | sudo tee /etc/sudoers.d/ansible\nsudo chmod 600 /etc/sudoers.d/ansible\nsudo visudo -cf /etc/sudoers.d/ansible\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-configure-sudo-for-service-account"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

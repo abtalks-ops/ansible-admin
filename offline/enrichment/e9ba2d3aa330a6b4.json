@@ -1,0 +1,17 @@
+{
+ "chunk_id": "e9ba2d3aa330a6b4",
+ "chunk_hash": "e9ba2d3aa330a6b4",
+ "summary": "To have the installer sign all service certificates with your own CA, set `aap_ca_cert_file` and `aap_ca_key_file`; if certificates are signed by a custom CA, set `custom_ca_cert`, combining several CA certs into one file.",
+ "questions": [
+  "What are aap_ca_cert_file and aap_ca_key_file?",
+  "How do I make AAP use my own CA?",
+  "How do I add multiple custom CA certificates to AAP?"
+ ],
+ "answer_card": {
+  "title": "Use your own CA (RPM)",
+  "answer_md": "```ini\naap_ca_cert_file=<path_to_ca_tls_certificate>\naap_ca_key_file=<path_to_ca_tls_key>\ncustom_ca_cert=<path_to_custom_ca_certificate>   # one file; concatenate several CAs\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#proc-use-custom-tls-certificates_licensing-gw"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

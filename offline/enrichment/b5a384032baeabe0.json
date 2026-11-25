@@ -1,0 +1,13 @@
+{
+ "chunk_id": "b5a384032baeabe0",
+ "chunk_hash": "b5a384032baeabe0",
+ "summary": "Installation requires root via sudo or privilege escalation (de-escalating to users like awx, postgres, EDA or pulp) and an NTP client configured on all nodes.",
+ "questions": [
+  "Does the AAP installer need root?",
+  "Do I need NTP on all AAP nodes?",
+  "Which users does the AAP installer de-escalate to?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

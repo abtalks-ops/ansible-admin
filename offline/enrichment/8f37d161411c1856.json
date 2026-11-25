@@ -1,0 +1,18 @@
+{
+ "chunk_id": "8f37d161411c1856",
+ "chunk_hash": "8f37d161411c1856",
+ "summary": "RPM install secret locations: controller uses `/etc/tower/SECRET_KEY` (encrypts database secrets; if lost, encrypted fields are unreadable), `/etc/tower/tower.cert` and `tower.key`, `/etc/tower/conf.d/postgres.py` (DB password), `channels.py` (WebSocket broadcast secret) and `gateway.py` (gateway sync key). Platform gateway uses `/etc/ansible-automation-platform/gateway/SECRET_KEY` and `gateway.cert`.",
+ "questions": [
+  "Where is the automation controller SECRET_KEY stored?",
+  "What happens if /etc/tower/SECRET_KEY changes?",
+  "Where is the controller database password stored in an RPM install?",
+  "Where is the platform gateway TLS certificate on RPM installs?"
+ ],
+ "answer_card": {
+  "title": "Automation controller secret files (RPM)",
+  "answer_md": "| File | Holds |\n|---|---|\n| `/etc/tower/SECRET_KEY` | Key that encrypts secrets in the DB. Lose or change it and encrypted fields can't be read |\n| `/etc/tower/tower.cert`, `/etc/tower/tower.key` | Web service TLS cert and key (self-signed by default) |\n| `/etc/tower/conf.d/postgres.py` | DB password (unless DB TLS auth is used) |\n| `/etc/tower/conf.d/channels.py` | WebSocket broadcast secret |\n| `/etc/tower/conf.d/gateway.py` | Key to sync state with platform gateway |\n\nGateway: `/etc/ansible-automation-platform/gateway/SECRET_KEY` and `gateway.cert`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#ref-aap-operational-secrets_hardening-aap"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

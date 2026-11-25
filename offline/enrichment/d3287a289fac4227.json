@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d3287a289fac4227",
+ "chunk_hash": "d3287a289fac4227",
+ "summary": "DNS and NTP configuration must be planned before installing Ansible Automation Platform, because both are needed for a successful deployment and normal operation.",
+ "questions": [
+  "Why do DNS and NTP matter for an AAP install?",
+  "What infrastructure services does AAP need before installation?",
+  "AAP hardening DNS NTP planning"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

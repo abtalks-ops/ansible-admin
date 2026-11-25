@@ -1,0 +1,18 @@
+{
+ "chunk_id": "14f2a6c1609a104f",
+ "chunk_hash": "14f2a6c1609a104f",
+ "summary": "Recommended containerized security variables: `postgresql_disable_tls: false`; `controller_pg_sslmode`, `gateway_pg_sslmode`, `hub_pg_sslmode`, `eda_pg_sslmode` set to `verify-full` for mTLS to the database; and `*_nginx_disable_https` and `*_nginx_disable_hsts` (controller, gateway, hub, eda) left `false`, which is also the default when absent.",
+ "questions": [
+  "Which security variables should I set for containerized AAP?",
+  "How do I enforce mTLS to PostgreSQL in containerized AAP?",
+  "What does gateway_nginx_disable_https do?",
+  "What is postgresql_disable_tls?"
+ ],
+ "answer_card": {
+  "title": "Containerized security inventory variables",
+  "answer_md": "```ini\n[all:vars]\npostgresql_disable_tls=false\ncontroller_pg_sslmode=verify-full\ngateway_pg_sslmode=verify-full\nhub_pg_sslmode=verify-full\neda_pg_sslmode=verify-full\n# keep HTTPS and HSTS on (defaults)\ngateway_nginx_disable_https=false\ngateway_nginx_disable_hsts=false\n```\nThe same `_nginx_disable_*` variables exist for controller, hub and eda. A third-party database must be set up for mTLS separately.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#ref-security-variables-install-inventory_hardening-aap"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

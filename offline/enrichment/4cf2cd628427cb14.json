@@ -1,0 +1,14 @@
+{
+ "chunk_id": "4cf2cd628427cb14",
+ "chunk_hash": "4cf2cd628427cb14",
+ "summary": "Automation hub lets you find and manage certified collections from Red Hat and partners. If private automation hub is installed from an internal address but its certificate covers only the external one, set `automationhub_main_url` (for example `https://pah.example.com`) so the external address is added to `/etc/pulp/settings.py` and the registry works without certificate errors.",
+ "questions": [
+  "What is automationhub_main_url for?",
+  "Private automation hub container registry certificate errors",
+  "How do I set the external URL for private automation hub?",
+  "What content is on Ansible automation hub?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

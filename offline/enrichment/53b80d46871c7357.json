@@ -1,0 +1,13 @@
+{
+ "chunk_id": "53b80d46871c7357",
+ "chunk_hash": "53b80d46871c7357",
+ "summary": "Jobs copy Python code to managed nodes and run it, so a managed node with `fapolicyd` and the default RHEL rules makes jobs fail. Fix it by setting fapolicyd to permissive or by writing custom rules.",
+ "questions": [
+  "Ansible jobs fail on hosts with fapolicyd",
+  "Why does fapolicyd block Ansible modules?",
+  "How do I run Ansible against fapolicyd-enabled RHEL?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "chunk_id": "1dc96f7651bd3542",
+ "chunk_hash": "1dc96f7651bd3542",
+ "summary": "For RPM installs, put `admin_password`, `pg_password`, `automationgateway_admin_password`, `automationgateway_pg_password`, `automationhub_admin_password`, `automationhub_pg_password`, `automationedacontroller_admin_password`, `automationedacontroller_pg_password` (and `registry_password` for connected installs) in the vault, then run `./setup.sh -e @vault.yml --ask-vault-pass`.",
+ "questions": [
+  "How do I pass a vault file to setup.sh?",
+  "Which passwords go in the vault for an RPM AAP install?",
+  "setup.sh ask vault pass example",
+  "Is registry_password needed in the vault file?"
+ ],
+ "answer_card": {
+  "title": "RPM install with a vault file",
+  "answer_md": "`vault.yml` holds:\n```yaml\nadmin_password: <secure_password>\npg_password: <secure_password>\nautomationgateway_admin_password: <secure_password>\nautomationgateway_pg_password: <secure_password>\nautomationhub_admin_password: <secure_password>\nautomationhub_pg_password: <secure_password>\nautomationedacontroller_admin_password: <secure_password>\nautomationedacontroller_pg_password: <secure_password>\nregistry_password: <secure_cdn_password>  # connected installs\n```\nThen:\n```bash\n./setup.sh -e @vault.yml --ask-vault-pass\n```\n(The guide prints the flag with one dash.)",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/hardening_and_compliance/index#proc-install-rpm-deployment"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

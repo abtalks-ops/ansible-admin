@@ -1,0 +1,17 @@
+{
+ "chunk_id": "0ce4dcbb3a64463d",
+ "chunk_hash": "0ce4dcbb3a64463d",
+ "summary": "Wait until only the six Operator pods remain, then `oc scale --replicas=0 deployment aap-gateway-operator-controller-manager automation-controller-operator-controller-manager` and bring up the database with `oc scale --replicas=1 statefulset.apps/aap-postgres-15`.",
+ "questions": [
+  "Which operators do I scale down before restoring AAP on OpenShift?",
+  "How do I start Postgres while AAP is idled?",
+  "oc scale aap-postgres-15"
+ ],
+ "answer_card": {
+  "title": "Scale down operators, start Postgres",
+  "answer_md": "```bash\noc scale --replicas=0 deployment aap-gateway-operator-controller-manager automation-controller-operator-controller-manager\noc scale --replicas=1 statefulset.apps/aap-postgres-15\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/ansible_automation_platform_migration/index#ocp-target-import"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

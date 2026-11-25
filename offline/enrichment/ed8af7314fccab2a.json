@@ -1,0 +1,17 @@
+{
+ "chunk_id": "ed8af7314fccab2a",
+ "chunk_hash": "ed8af7314fccab2a",
+ "summary": "After editing the inventory, run `sudo ./setup.sh`, or as a non-root sudo user `ANSIBLE_BECOME_METHOD='sudo' ANSIBLE_BECOME=True ./setup.sh`. To add mesh nodes later, add them to the inventory and rerun `setup.sh`; containerized installs use the installation playbook instead.",
+ "questions": [
+  "How do I run the AAP RPM installer?",
+  "Run setup.sh as non-root with sudo",
+  "How do I add nodes to automation mesh after install?"
+ ],
+ "answer_card": {
+  "title": "Run the RPM installer",
+  "answer_md": "```bash\nsudo ./setup.sh\n# non-root user with sudo:\nANSIBLE_BECOME_METHOD='sudo' ANSIBLE_BECOME=True ./setup.sh\n```\nAdd nodes later by editing the inventory and rerunning `setup.sh`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/rpm_installation/index#proc-running-setup-script_licensing-gw"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}

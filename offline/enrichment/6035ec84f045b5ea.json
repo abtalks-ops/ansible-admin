@@ -1,0 +1,14 @@
+{
+ "chunk_id": "6035ec84f045b5ea",
+ "chunk_hash": "6035ec84f045b5ea",
+ "summary": "AAP 2.6 external databases need ICU support, and PostgreSQL user passwords are hashed with SCRAM-SHA-256. Check controller database access with `awx-manage check_db`; database size grows with hosts, jobs, facts and tasks (hourly 20-task jobs on 250 hosts write over 800,000 events a week), so clean old jobs and facts with management jobs.",
+ "questions": [
+  "How do I check controller can reach its database?",
+  "What does awx-manage check_db do?",
+  "How fast does the AAP database grow?",
+  "Does AAP need ICU support in PostgreSQL?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T16:24:33+00:00"
+}
