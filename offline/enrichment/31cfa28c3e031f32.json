@@ -1,0 +1,13 @@
+{
+ "chunk_id": "31cfa28c3e031f32",
+ "chunk_hash": "31cfa28c3e031f32",
+ "summary": "Indexing an array field as Array[Index] treats the element as the array's element type (string, timestamp, number or boolean) for operator purposes.",
+ "questions": [
+  "How do I filter on a single array element?",
+  "What type is an indexed array element in a field selector?",
+  "Can I use Array[Index] in flightctl selectors?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

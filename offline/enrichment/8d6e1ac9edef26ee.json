@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8d6e1ac9edef26ee",
+ "chunk_hash": "8d6e1ac9edef26ee",
+ "summary": "After adding an EE to a job template, the template appears on the Templates tab of the execution environment's details.",
+ "questions": [
+  "How do I verify a job template uses my execution environment?",
+  "Where can I see which templates use an EE?",
+  "What does the EE Templates tab show?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "eafa4c68cb7895ed",
+ "chunk_hash": "eafa4c68cb7895ed",
+ "summary": "The gitRef path must point at a writable location you create; the root directory / is not writable on bootc systems.",
+ "questions": [
+  "Why does Git config fail to write to / on a bootc device?",
+  "Is the root filesystem writable on bootc?",
+  "Which path should gitRef target?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

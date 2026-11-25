@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2b292621a10246e0",
+ "chunk_hash": "2b292621a10246e0",
+ "summary": "The community remote points to galaxy.ansible.com/api/ by default; paste a requirements.yml (e.g. community.aws 5.2.0 from https://galaxy.ansible.com) into its YAML requirements field to sync chosen Galaxy collections.",
+ "questions": [
+  "How do I sync collections from Ansible Galaxy to private automation hub?",
+  "What URL does the community remote use?",
+  "How do I choose which Galaxy collections to sync?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

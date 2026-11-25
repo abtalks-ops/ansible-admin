@@ -1,0 +1,18 @@
+{
+ "chunk_id": "dd3b2b7ce29dcd87",
+ "chunk_hash": "dd3b2b7ce29dcd87",
+ "summary": "Job template labels belong to the project's organization and are inherited by jobs at launch; Forks sets parallel processes (0 uses Ansible's default of 5); Limit takes host patterns like a:b, a:b:&c and a:!b.",
+ "questions": [
+  "How many forks does a job template use by default?",
+  "How do I limit a job template to certain hosts?",
+  "What does a:!b mean in the limit field?",
+  "How do job template labels work?"
+ ],
+ "answer_card": {
+  "title": "Job template Limit patterns",
+  "answer_md": "Separate patterns with `:`\n- `a:b` → in group a **or** b\n- `a:b:&c` → in a or b **and** in c\n- `a:!b` → in a, **not** in b\n\nForks `0` = Ansible default (5, unless set in `/etc/ansible/ansible.cfg`). In a workflow, the workflow job template's limit wins.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/getting_started_with_ansible_automation_platform/index#proc-gs-auto-dev-create-template"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

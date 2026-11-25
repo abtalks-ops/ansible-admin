@@ -1,0 +1,13 @@
+{
+ "chunk_id": "01ef2d89c1f78623",
+ "chunk_hash": "01ef2d89c1f78623",
+ "summary": "Show device labels with `flightctl get devices -o wide`, and filter by label with `-l key=value`, for example `flightctl get devices -l site=factory-berlin -o wide`.",
+ "questions": [
+  "How do I show labels when listing devices with flightctl?",
+  "How do I filter flightctl devices by label?",
+  "What does -o wide add to flightctl get devices?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

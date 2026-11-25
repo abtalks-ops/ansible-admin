@@ -1,0 +1,13 @@
+{
+ "chunk_id": "8cb4d31d2b948b99",
+ "chunk_hash": "8cb4d31d2b948b99",
+ "summary": "Playbooks are YAML files of plays that run on targets, used for repeatable configuration and deployments, rolling updates and delegation to monitoring servers or load balancers; Red Hat Ansible Lightspeed can help generate them.",
+ "questions": [
+  "What is an Ansible playbook?",
+  "Can playbooks do rolling updates?",
+  "Can Ansible Lightspeed write playbooks?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

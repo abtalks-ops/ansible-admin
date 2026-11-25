@@ -1,0 +1,17 @@
+{
+ "chunk_id": "9f5531258819d0a9",
+ "chunk_hash": "9f5531258819d0a9",
+ "summary": "disruptionBudget takes groupBy (label keys defining groups), minAvailable and maxUnavailable, enforced continuously per group of devices sharing those label values, e.g. groupBy ['site','function'], minAvailable 1, maxUnavailable 10.",
+ "questions": [
+  "How do I configure minAvailable and maxUnavailable for a fleet?",
+  "What does groupBy do in a disruption budget?",
+  "Example disruptionBudget YAML"
+ ],
+ "answer_card": {
+  "title": "Fleet disruption budget",
+  "answer_md": "```yaml\nspec:\n  rolloutPolicy:\n    disruptionBudget:\n      groupBy: ['site', 'function']\n      minAvailable: 1\n      maxUnavailable: 10\n```\nEach group = devices with the same values for the `groupBy` label keys; the limits apply to every group continuously.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/managing_device_fleets_with_the_red_hat_edge_manager/index#edge-manager-disruption-parameters"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

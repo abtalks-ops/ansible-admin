@@ -1,0 +1,13 @@
+{
+ "chunk_id": "74cca64c7d9422ed",
+ "chunk_hash": "74cca64c7d9422ed",
+ "summary": "Grant access to a remote on its Team Access tab via Add roles, choosing teams and roles.",
+ "questions": [
+  "How do I give a team access to a remote?",
+  "Why can't users use my remote configuration?",
+  "Where is Team Access for remotes?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "cd5f54aa909eb89e",
+ "chunk_hash": "cd5f54aa909eb89e",
+ "summary": "Red Hat Edge Manager devices are provisioned from the OS or disk image you built, either as physical devices or as virtual machines on OpenShift Virtualization.",
+ "questions": [
+  "How do I provision devices for Red Hat Edge Manager?",
+  "Can I provision Edge Manager devices on OpenShift Virtualization?",
+  "What image do I use to provision an edge device?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

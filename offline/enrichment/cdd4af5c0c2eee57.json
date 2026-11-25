@@ -1,0 +1,13 @@
+{
+ "chunk_id": "cdd4af5c0c2eee57",
+ "chunk_hash": "cdd4af5c0c2eee57",
+ "summary": "Reject collections in Collection Approvals with the thumbs down icon; they move to the Rejected repository.",
+ "questions": [
+  "How do I reject a collection in automation hub?",
+  "Where do rejected collections go?",
+  "Who can reject uploaded collections?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

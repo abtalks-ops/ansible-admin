@@ -1,0 +1,14 @@
+{
+ "chunk_id": "49477c54c043c7bd",
+ "chunk_hash": "49477c54c043c7bd",
+ "summary": "Fact storage saves gathered facts for inventory hosts; Prevent instance group fallback restricts execution to listed instance groups; after Create job template you land on Details, where you can Launch (only after saving) or Edit permissions, notifications and surveys.",
+ "questions": [
+  "Why is Launch template disabled?",
+  "How do I store gathered facts from a job?",
+  "How do I add a survey to a job template?",
+  "How do I restrict a job template to its instance groups?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "ecdb398c83628168",
+ "chunk_hash": "ecdb398c83628168",
+ "summary": "AAP can be installed by RPM, on OpenShift Container Platform, in cloud environments, or as a containerized installation.",
+ "questions": [
+  "What installation methods does AAP 2.6 support?",
+  "Can I install AAP on OpenShift?",
+  "Is there a containerized AAP installer?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

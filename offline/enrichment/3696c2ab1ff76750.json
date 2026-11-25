@@ -1,0 +1,13 @@
+{
+ "chunk_id": "3696c2ab1ff76750",
+ "chunk_hash": "3696c2ab1ff76750",
+ "summary": "Playbooks are blueprints that tell AAP which tasks to perform on which devices.",
+ "questions": [
+  "What is a playbook used for in AAP?",
+  "How do I define automation tasks for the platform?",
+  "What do playbooks describe?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

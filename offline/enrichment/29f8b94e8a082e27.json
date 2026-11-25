@@ -1,0 +1,14 @@
+{
+ "chunk_id": "29f8b94e8a082e27",
+ "chunk_hash": "29f8b94e8a082e27",
+ "summary": "More inventory fields: verbosity (Normal to Verbose/Debug) and Limit (host or group pattern) for constructed inventories, Prevent instance group fallback for standard inventories (set via API for smart inventories), and Variables in JSON or YAML (Source variables configure the constructed inventory plugin and create groups).",
+ "questions": [
+  "What does Prevent instance group fallback do on an inventory?",
+  "How do I set prevent_instance_group_fallback for a smart inventory?",
+  "What are source variables in a constructed inventory?",
+  "How do I limit hosts in a constructed inventory?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

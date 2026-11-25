@@ -1,0 +1,14 @@
+{
+ "chunk_id": "e58c2c4593d2d935",
+ "chunk_hash": "e58c2c4593d2d935",
+ "summary": "Host configuration can be baked into the OS image, but when it is missing, device-specific or must change at runtime without a reboot, declare configuration files that the agent applies atomically (all succeed or roll back); OS updates are applied before config sets, and multiple config sets apply in order with the last one winning on conflicts.",
+ "questions": [
+  "When should I use Edge Manager config files instead of a new image?",
+  "Are Edge Manager configuration updates atomic?",
+  "What happens if I update OS and configuration together?",
+  "Which configuration set wins on a conflict?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

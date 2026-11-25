@@ -1,0 +1,14 @@
+{
+ "chunk_id": "f7e947699c77c0f8",
+ "chunk_hash": "f7e947699c77c0f8",
+ "summary": "Using an unsupported field with --field-selector returns an error listing the supported selectors (for Device: metadata.alias, metadata.nameoralias, status.* etc.); examples include `metadata.alias contains cluster`, excluding a device with `metadata.name!=...`, and filtering by owner, labels and creation timestamp.",
+ "questions": [
+  "How do I discover which fields flightctl can filter on?",
+  "unknown or unsupported selector: unable to resolve selector name",
+  "How do I exclude a device by name in flightctl?",
+  "How do I filter devices by alias?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}

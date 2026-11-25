@@ -1,0 +1,13 @@
+{
+ "chunk_id": "295cf99389153921",
+ "chunk_hash": "295cf99389153921",
+ "summary": "An inventory lists hosts managed by AAP; organizations own inventories while launch permissions are set per user or team; find them under Automation Execution > Infrastructure > Inventories with sort and search.",
+ "questions": [
+  "Where are inventories in the AAP UI?",
+  "Who controls permission to run playbooks against an inventory?",
+  "How do I search inventories?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T18:16:50+00:00"
+}
