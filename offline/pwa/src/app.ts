@@ -3,7 +3,7 @@
 import { SearchIndex, tokenize, unpack, type Chunk, type LoadedShard, type Manifest, type ShardMeta } from "../../shared/search.ts";
 import { buildPrompt, citedNumbers, isDeviceLost, isNotInDocs, PROFILES, stripInvalidCitations, type Used } from "../../shared/answer.ts";
 import { MAX_CONVS, newConv, parse as parseChats, remove as removeConv, serialize as serializeChats, titleFrom, upsert as upsertConv, type Conv, type Turn } from "../../shared/chats.ts";
-import { addDiagnostic, checkDevice, getDiagnostics, isDownloaded, loadEngine, mock, modelFor, statsText, TIERS, DEFAULT_TIER, type Engine, type Tier } from "./llm.ts";
+import { addDiagnostic, checkDevice, getDiagnostics, isDownloaded, loadEngine, mock, modelFor, statsText, TIERS, DEFAULT_TIER, allowed, type Engine, type Tier } from "./llm.ts";
 import { startRain } from "./rain.ts";
 
 const DATA_CACHE = "aa-data-v1";
@@ -411,9 +411,9 @@ const setAi = (on: boolean) => {
 };
 
 try {
-  tier = TIERS.find((t) => t.id === localStorage.getItem("aa-ai-model")) ?? DEFAULT_TIER;
+  tier = TIERS.find((t) => t.id === localStorage.getItem("aa-ai-model") && allowed(t)) ?? DEFAULT_TIER;
 } catch {}
-ui.aiModel.innerHTML = TIERS.map((t) => `<option value="${t.id}">${esc(t.label)} · about ${t.downloadMB} MB · ${esc(t.note)}</option>`).join("");
+ui.aiModel.innerHTML = TIERS.map((t) => `<option value="${t.id}"${allowed(t) ? "" : " disabled"}>${esc(t.label)} · about ${t.downloadMB} MB · ${allowed(t) ? esc(t.note) : "computers only, too heavy for phones"}</option>`).join("");
 ui.aiModel.value = tier.id;
 
 function renderAiPanel(msg = "") {
@@ -714,7 +714,7 @@ ui.historyList.addEventListener("click", (e) => {
 });
 ui.aiBtn.addEventListener("click", () => void toggleAi());
 ui.aiModel.addEventListener("change", async () => {
-  tier = TIERS.find((t) => t.id === ui.aiModel.value) ?? DEFAULT_TIER;
+  tier = TIERS.find((t) => t.id === ui.aiModel.value && allowed(t)) ?? DEFAULT_TIER;
   try {
     localStorage.setItem("aa-ai-model", tier.id);
   } catch {}

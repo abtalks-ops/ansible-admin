@@ -9,6 +9,7 @@ export interface Tier {
   downloadMB: number; // approximate, shown before the download
   note: string;
   f32Id?: string; // build for GPUs without 16-bit shader support
+  desktopOnly?: boolean; // too heavy for phone GPUs: disabled in the picker on phones
 }
 
 /**
@@ -18,11 +19,17 @@ export interface Tier {
 export const TIERS: Tier[] = [
   { id: "smollm", label: "SmolLM2 360M (Hugging Face)", modelId: "SmolLM2-360M-Instruct-q4f16_1-MLC", f32Id: "SmolLM2-360M-Instruct-q4f32_1-MLC", downloadMB: 250, note: "tiny, about 0.4 GB of GPU memory, simpler answers" },
   { id: "lfm", label: "LFM2.5 350M (Liquid AI)", modelId: "LFM2.5-350M-q4f16_1-MLC", f32Id: "LFM2.5-350M-q4f32_1-MLC", downloadMB: 300, note: "tiny and built for phones, about 0.5 GB of GPU memory" },
-  { id: "gemma", label: "Gemma 3 1B (Google)", modelId: "gemma3-1b-it-q4f16_1-MLC", downloadMB: 700, note: "about 0.7 GB of GPU memory" },
-  { id: "llama", label: "Llama 3.2 1B (Meta)", modelId: "Llama-3.2-1B-Instruct-q4f16_1-MLC", f32Id: "Llama-3.2-1B-Instruct-q4f32_1-MLC", downloadMB: 700, note: "about 0.9 GB of GPU memory, better answers" },
-  { id: "qwen", label: "Qwen 2.5 1.5B (Alibaba)", modelId: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC", f32Id: "Qwen2.5-1.5B-Instruct-q4f32_1-MLC", downloadMB: 950, note: "about 1.6 GB of GPU memory, best with code and YAML" },
+  { id: "gemma", desktopOnly: true, label: "Gemma 3 1B (Google)", modelId: "gemma3-1b-it-q4f16_1-MLC", downloadMB: 700, note: "about 0.7 GB of GPU memory" },
+  { id: "llama", desktopOnly: true, label: "Llama 3.2 1B (Meta)", modelId: "Llama-3.2-1B-Instruct-q4f16_1-MLC", f32Id: "Llama-3.2-1B-Instruct-q4f32_1-MLC", downloadMB: 700, note: "about 0.9 GB of GPU memory, better answers" },
+  { id: "qwen", desktopOnly: true, label: "Qwen 2.5 1.5B (Alibaba)", modelId: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC", f32Id: "Qwen2.5-1.5B-Instruct-q4f32_1-MLC", downloadMB: 950, note: "about 1.6 GB of GPU memory, best with code and YAML" },
 ];
-export const DEFAULT_TIER = TIERS.find((t) => t.id === "llama")!;
+/** Phones and tablets: their GPUs reset with the 1B models, so only the tiny ones are offered there. */
+export const isPhone = () => {
+  const nav = navigator as Navigator & { userAgentData?: { mobile?: boolean } };
+  return nav.userAgentData?.mobile ?? /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+};
+export const allowed = (t: Tier) => !(t.desktopOnly && isPhone());
+export const DEFAULT_TIER = TIERS.find((t) => t.id === (isPhone() ? "smollm" : "llama"))!;
 
 // Read once: the app rewrites the query string as you search.
 const PARAMS = new URLSearchParams(location.search);
