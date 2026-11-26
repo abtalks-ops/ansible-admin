@@ -1,0 +1,18 @@
+{
+ "chunk_id": "e3806fd8ee98d7d1",
+ "chunk_hash": "e3806fd8ee98d7d1",
+ "summary": "Ansible 12 community.general removals: ansible-core 2.15 support dropped (needs 2.16+, Python 3.10+ on the controller), Proxmox content moved to community.proxmox (install it explicitly), apt_rpm present/installed now mean present_not_latest, clc_* modules removed, django_manage ack_venv_creation_deprecation removed, and git_config can no longer read values with state=present (use git_config_info).",
+ "questions": [
+  "Where did the community.general proxmox modules go?",
+  "How do I read a git config value now that git_config can't?",
+  "Which ansible-core version does community.general need in Ansible 12?",
+  "Does apt_rpm state=present still upgrade packages?"
+ ],
+ "answer_card": {
+  "title": "Proxmox modules moved to community.proxmox",
+  "answer_md": "The Proxmox modules and plugins left community.general; since 11.0.0 the old names are deprecated redirects. Install the new collection explicitly and switch to its FQCNs:\n\n```bash\nansible-galaxy collection install community.proxmox\n```\n\nThen use `community.proxmox.<module>` in roles and playbooks to avoid deprecation messages.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:38:39+00:00"
+}

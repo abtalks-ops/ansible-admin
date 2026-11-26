@@ -1,0 +1,18 @@
+{
+ "chunk_id": "aad61fccdfe20c26",
+ "chunk_hash": "aad61fccdfe20c26",
+ "summary": "The timer callback ends with v2_playbook_on_stats, which prints the play duration with self._display.display and the format_string option; CALLBACK_VERSION and CALLBACK_NAME are required, CALLBACK_TYPE distinguishes stdout callbacks (only one can load), and since ansible-core 2.22 registered secrets are masked in results and Display() output, so callbacks writing elsewhere should call mask_secrets().",
+ "questions": [
+  "Which callback attributes are required in Ansible 2.0 and later?",
+  "Why can only one stdout callback be loaded?",
+  "How do callback plugins mask secrets in ansible-core 2.22?",
+  "What is v2_playbook_on_stats used for?"
+ ],
+ "answer_card": {
+  "title": "Callback plugin essentials",
+  "answer_md": "- `CALLBACK_VERSION` and `CALLBACK_NAME` are required for callbacks to work in Ansible 2.0 and later.\n- `CALLBACK_TYPE` distinguishes `stdout` callbacks from the rest; only one stdout callback can be loaded.\n- Print with `self._display.display(...)` rather than printing yourself.\n- In ansible-core 2.22, task results and `Display()` output already have registered secrets masked. If your callback writes other data (task names, for example) to a file or external service, pass it through `mask_secrets()` first.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

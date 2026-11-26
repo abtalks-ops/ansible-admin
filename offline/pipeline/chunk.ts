@@ -106,6 +106,35 @@ function sections(text: string, md: boolean): Array<{ trail: string[]; body: str
   return out;
 }
 
+/**
+ * Splits text that is too long into a head of at most `max` characters and the rest.
+ * It cuts at a blank line if one falls in the second half of the budget, else at the last
+ * line break, else at a space; it never cuts mid-word unless there is no space at all.
+ * A cut inside a code fence closes the fence in the head and reopens it (same language) in the
+ * rest, so both pieces still read as code.
+ */
+export function splitLong(text: string, max: number): [string, string] {
+  const budget = max - 4; // room for the closing "\n```"
+  const win = text.slice(0, budget + 1);
+  let at = win.lastIndexOf("\n\n");
+  if (at < budget * 0.5) at = win.lastIndexOf("\n");
+  if (at < budget * 0.25) at = win.lastIndexOf(" ");
+  if (at < budget * 0.25) at = budget;
+  let head = text.slice(0, at);
+  let tail = text.slice(at);
+  if (text[at] === "\n") {
+    head = head.trimEnd();
+    tail = tail.replace(/^\n+/, ""); // keeps the indentation of the next line
+  } else if (text[at] === " ") tail = tail.slice(1);
+  let open: string | null = null; // info string of the fence the cut falls in
+  for (const line of head.split("\n")) if (line.startsWith("```")) open = open === null ? line.slice(3).trim() : null;
+  if (open !== null) {
+    head = `${head}\n\`\`\``;
+    tail = `\`\`\`${open}\n${tail}`;
+  }
+  return [head, tail];
+}
+
 /** Packs a section into chunks of at most CHUNK_MAX_CHARS, splitting on paragraphs and never inside a code fence. */
 export function pack(body: string): string[] {
   if (body.length <= CHUNK_MAX_CHARS) return [body];
@@ -128,10 +157,11 @@ export function pack(body: string): string[] {
       acc = "";
     }
     acc = acc ? `${acc}\n\n${p}` : p;
-    // A single huge paragraph or code block is cut hard as a last resort.
+    // A single huge paragraph or code block is split as a last resort, at a line break.
     while (acc.length > CHUNK_MAX_CHARS * 1.5) {
-      out.push(acc.slice(0, CHUNK_MAX_CHARS));
-      acc = acc.slice(CHUNK_MAX_CHARS);
+      const [head, tail] = splitLong(acc, CHUNK_MAX_CHARS);
+      out.push(head);
+      acc = tail;
     }
   }
   if (acc) out.push(acc);
@@ -235,7 +265,10 @@ export function chunkBuiltinPlugins(): Chunk[] {
       if (info.examples) for (const [i, piece] of pack("```yaml\n" + info.examples.trim() + "\n```").entries()) add(`Examples${i ? ` (part ${i + 1})` : ""}`, `Examples for ${fqcn}:\n\n${piece}`);
 
       const rets = Object.entries(info.return ?? {}).map(([k, r]) => `- \`${k}\` (${r.type ?? "any"}, returned ${r.returned ?? "?"}): ${clean(join(r.description))}`);
-      if (rets.length) add("Return values", `Return values of ${fqcn}:\n\n${rets.join("\n")}`.slice(0, CHUNK_MAX_CHARS));
+      if (rets.length) {
+        const text = `Return values of ${fqcn}:\n\n${rets.join("\n")}`;
+        add("Return values", text.length > CHUNK_MAX_CHARS ? splitLong(text, CHUNK_MAX_CHARS)[0] : text);
+      }
     }
   }
   return dedupe(chunks);

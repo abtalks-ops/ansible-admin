@@ -1,0 +1,18 @@
+{
+ "chunk_id": "067134360e525606",
+ "chunk_hash": "067134360e525606",
+ "summary": "Installing automation dashboard, first steps: create an OAuth2 application (automation-dashboard-sso, authorization-code grant, confidential, redirect URI https://AUTOMATION_DASHBOARD_FQDN/auth-callback) at /access/applications on the gateway for AAP 2.5 and 2.6, create a read-scoped token, then copy inventory.example and set hosts and passwords.",
+ "questions": [
+  "How do I set up OAuth for automation dashboard?",
+  "Where do I create an OAuth application in AAP 2.6?",
+  "What redirect URI does automation dashboard need?",
+  "How do I install automation dashboard?"
+ ],
+ "answer_card": {
+  "title": "Prepare AAP for automation dashboard",
+  "answer_md": "1. In AAP 2.5 or 2.6 go to `https://AAP_GATEWAY_FQDN/access/applications` and create an OAuth2 application: name `automation-dashboard-sso`, grant type `authorization-code`, organization `Default`, redirect URI `https://AUTOMATION_DASHBOARD_FQDN/auth-callback`, client type `Confidential`.\n2. Put its `client_id` and `client_secret` in the dashboard inventory.\n3. At `https://AAP_GATEWAY_FQDN/#/users/<id>/tokens` create a token for that application with scope `read`, and keep the access and refresh tokens for `clusters.yaml`.\n4. `cp -i inventory.example inventory`, then set your FQDN and replace every `TODO` password.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/using_automation_dashboard/index#proc-installing-automation-dashboard"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:42:46+00:00"
+}

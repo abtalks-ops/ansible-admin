@@ -1,0 +1,14 @@
+{
+ "chunk_id": "d30f202378ac980a",
+ "chunk_hash": "d30f202378ac980a",
+ "summary": "Network example playbook for switches with gather_facts: no: gathers facts with arista.eos.eos_facts, cisco.ios.ios_facts and vyos.vyos.vyos_facts based on ansible_network_os, shows ansible_net_hostname and ansible_net_version with debug, and writes device info to a file with copy and a Jinja2 template over hostvars.",
+ "questions": [
+  "How do I gather facts from network switches with Ansible?",
+  "How do I pick the facts module by ansible_network_os?",
+  "How do I write network device facts to a file?",
+  "What facts does eos_facts return?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

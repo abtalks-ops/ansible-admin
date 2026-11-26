@@ -1,0 +1,17 @@
+{
+ "chunk_id": "525ee36470218444",
+ "chunk_hash": "525ee36470218444",
+ "summary": "More 2.6 API replacements: object_roles becomes role_user_assignments filtered by content_type__api_slug and object_id (for example awx.credential), access_list becomes /api/gateway/v1/role_user_access/<slug>/<id>/, hub keycloak login moves to /api/gateway/social/complete/<UID>/ and hub tokens to gateway tokens; EDA gets gateway org, team, user and role endpoints.",
+ "questions": [
+  "How do I list who has access to a credential in AAP 2.6?",
+  "What replaces access_list in AAP 2.6?",
+  "How do I get automation hub tokens in AAP 2.6?"
+ ],
+ "answer_card": {
+  "title": "Who has access to a resource",
+  "answer_md": "2.4: `/api/v2/credentials/42/access_list/`\n\n2.6: `/api/gateway/v1/role_user_access/awx.credential/42/`\n\nTo list role assignments on a resource: `/api/gateway/v1/role_user_assignments/?content_type__api_slug=awx.credential&object_id=42`",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-google-auth"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "chunk_id": "a76ceadec2be60d1",
+ "chunk_hash": "a76ceadec2be60d1",
+ "summary": "validate-modules codes doc-required-mismatch, doc-type-does-not-match-spec, documentation-error, documentation-syntax-error, import-before-documentation, import-error, attributes-check-mode, attributes-check-mode-details and the import-placement warning.",
+ "questions": [
+  "What does import-before-documentation mean?",
+  "What is the attributes-check-mode sanity error?",
+  "What does doc-required-mismatch mean?",
+  "How do I fix documentation-syntax-error?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

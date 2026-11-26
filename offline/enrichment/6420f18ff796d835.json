@@ -1,0 +1,17 @@
+{
+ "chunk_id": "6420f18ff796d835",
+ "chunk_hash": "6420f18ff796d835",
+ "summary": "Authenticator options: with Create Objects disabled, users only get access to organizations and teams that already exist; Remove Users removes access not confirmed by this authenticator's maps at login, for example is_superuser is dropped when the maps have no opinion, while with it disabled maps only add or remove what they decide.",
+ "questions": [
+  "What does Remove Users do on an AAP authenticator?",
+  "Why did a user lose superuser after logging in through LDAP?",
+  "What happens if Create Objects is disabled?"
+ ],
+ "answer_card": {
+  "title": "Authenticator: Create Objects and Remove Users",
+  "answer_md": "- **Create Objects** on: organizations and teams named in the authenticator maps are created at login and the user is added. Off: they're not created, but users still get access to ones that already exist.\n- **Remove Users** on: at each login from this source, any access not granted by this authenticator's maps is removed. For example, a user's `is_superuser` flag is dropped if no map says they should keep it. Off: only what the maps decide is added or removed, so `is_superuser` stays.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/access_management_and_authentication/index#gw-select-auth-type"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:43:48+00:00"
+}

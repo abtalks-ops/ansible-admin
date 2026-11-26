@@ -1,0 +1,17 @@
+{
+ "chunk_id": "dd40ae1a30497733",
+ "chunk_hash": "dd40ae1a30497733",
+ "summary": "Self-service portal disconnected values: the catalog provider orgs, the optional built-in PostgreSQL image, values-tarball.yaml for HTTP plug-in registry delivery, imageRegistry as host only (the chart appends ansible-automation-platform/automation-portal; use ociPluginImage for other paths), then helm install redhat-rhaap-portal with -f values-oci.yaml.",
+ "questions": [
+  "Should imageRegistry include a repository path?",
+  "How do I install the self-service portal with tarball plug-ins?",
+  "What helm command installs the self-service automation portal?"
+ ],
+ "answer_card": {
+  "title": "Install the portal chart offline",
+  "answer_md": "Set `imageRegistry` to the registry host only, for example `mirror.example.com`. The chart adds `ansible-automation-platform/automation-portal` itself; if your mirror uses another path, set `ociPluginImage` to the full image path.\n\n```bash\nhelm install redhat-rhaap-portal \\\n  redhat-rhaap-portal-x.y.z.tgz \\\n  --namespace \"${MY_NAMESPACE}\" \\\n  -f /path/to/values-oci.yaml\n```",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/installing_self_service_automation_portal/index#self-service-install-disconnected-installing-chart_self-service-disconnected-install-helm-chart"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

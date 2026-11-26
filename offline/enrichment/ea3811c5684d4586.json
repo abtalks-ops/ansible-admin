@@ -1,0 +1,14 @@
+{
+ "chunk_id": "ea3811c5684d4586",
+ "chunk_hash": "ea3811c5684d4586",
+ "summary": "Example aggregate callback plugin (timer): the DOCUMENTATION block declares callback_type aggregate and a format_string option set through the callback_timer ini section or ANSIBLE_CALLBACK_TIMER_FORMAT, and the CallbackModule class sets CALLBACK_VERSION, CALLBACK_TYPE, CALLBACK_NAME and CALLBACK_NEEDS_ENABLED and records the start time in __init__.",
+ "questions": [
+  "How do I write a callback plugin in Ansible?",
+  "How do I declare options for a callback plugin in DOCUMENTATION?",
+  "What does CALLBACK_NEEDS_ENABLED do?",
+  "Example of a timer callback plugin"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

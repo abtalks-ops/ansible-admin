@@ -1,0 +1,12 @@
+{
+ "chunk_id": "6ac5fcd111cfa043",
+ "chunk_hash": "6ac5fcd111cfa043",
+ "summary": "Finish SAML setup with Create Authentication Method; operator deployments can add an HTTPS redirect for SAML, and the next step is mapping users into organizations and teams by attributes or groups.",
+ "questions": [
+  "How do I set up SSO redirect for SAML on OpenShift?",
+  "What comes after creating a SAML authenticator in AAP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:43:48+00:00"
+}

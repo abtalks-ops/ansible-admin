@@ -1,0 +1,18 @@
+{
+ "chunk_id": "b9408bf38d76cf21",
+ "chunk_hash": "b9408bf38d76cf21",
+ "summary": "More ansible.builtin.apt examples: cache_valid_time: 3600 to skip recent cache updates, dpkg_options force-confold,force-confdef, installing a .deb from a path or URL, state build-dep, autoclean, autoremove with purge, and clean.",
+ "questions": [
+  "How do I install a .deb file with Ansible?",
+  "How do I avoid updating the apt cache every run?",
+  "How do I run apt autoremove with Ansible?",
+  "How do I pass dpkg options like force-confold?"
+ ],
+ "answer_card": {
+  "title": "apt: cache, .deb and cleanup",
+  "answer_md": "```yaml\n- ansible.builtin.apt:\n    update_cache: yes\n    cache_valid_time: 3600      # only if older than an hour\n- ansible.builtin.apt:\n    deb: /tmp/mypackage.deb     # or an https:// URL\n- ansible.builtin.apt:\n    upgrade: dist\n    dpkg_options: 'force-confold,force-confdef'\n- ansible.builtin.apt:\n    autoremove: yes\n    purge: true\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:41:44+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "4db8a6d85bd0908f",
+ "chunk_hash": "4db8a6d85bd0908f",
+ "summary": "More vspone_block renames: mirror_unit_number in hv_sds_block_journal, hv_shadow_image_pair, hv_snapshot and hv_snapshot_group, remote_storage_port_ip_address, copy_pace, port_ids/port_id in hv_storage_port, nickname in hv_vsp_one_server modules, and *_storage_serial_number outputs in hv_gad and hv_gad_facts.",
+ "questions": [
+  "What was mirror_unit_id renamed to in hv_snapshot?",
+  "Which hv_gad outputs were renamed?",
+  "What replaces copy_pace_track_size?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:38:39+00:00"
+}

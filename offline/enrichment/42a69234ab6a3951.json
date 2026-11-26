@@ -1,0 +1,13 @@
+{
+ "chunk_id": "42a69234ab6a3951",
+ "chunk_hash": "42a69234ab6a3951",
+ "summary": "Rest of the sample role argument spec: bool and int suboptions, a dict option myapp_dict_with_suboptions with defaults and required suboptions of type str with choices, bool and path, and a second entry point alternate (tasks/alternate.yml) with its own options and version_added.",
+ "questions": [
+  "How do I define dict suboptions in role argument specs?",
+  "How do I add argument specs for another role entry point?",
+  "What types can role argument specs use?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:56+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e929ed8a8e5eb21b",
+ "chunk_hash": "e929ed8a8e5eb21b",
+ "summary": "Ansible 13.4 community.aws deprecated aws_ aliases: aws_acm_info, aws_acm, aws_api_gateway_domain, aws_api_gateway, aws_application_scaling_policy and aws_batch_* aliases; use community.aws.acm_certificate(_info), api_gateway(_domain), application_autoscaling_policy and batch_* names.",
+ "questions": [
+  "What replaces aws_acm?",
+  "Is the aws_api_gateway alias deprecated?",
+  "What is the new name of aws_batch_job_queue?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:38:39+00:00"
+}

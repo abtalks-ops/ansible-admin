@@ -1,0 +1,18 @@
+{
+ "chunk_id": "cfaf782b14e04e8d",
+ "chunk_hash": "cfaf782b14e04e8d",
+ "summary": "Ansible 12 (ansible-core 2.19) breaking changes: the toml library is dropped for TOML inventory (use tomli or tomli-w), assert quiet must be a real boolean, non-boolean conditional results are an error unless ALLOW_BROKEN_CONDITIONALS is enabled, first_found drops undefined list items with a warning, AnsibleLoader/AnsibleDumper are factory functions, native_jinja is removed, and lookups always get terms positionally.",
+ "questions": [
+  "Why do my conditionals fail with a non-boolean result error?",
+  "What is ALLOW_BROKEN_CONDITIONALS?",
+  "Which library does the TOML inventory need now?",
+  "Why does first_found warn about undefined values?"
+ ],
+ "answer_card": {
+  "title": "Conditionals must return booleans (ansible-core 2.19)",
+  "answer_md": "A `when:` or other conditional whose result is not a boolean is now an error. This usually means a template is used where it is not supported, which made the condition always true. Fix the expression so it returns `true` or `false`. To get a deprecation warning instead of an error for now, enable the `ALLOW_BROKEN_CONDITIONALS` config option.",
+  "source_url": "https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_12.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:37:47+00:00"
+}

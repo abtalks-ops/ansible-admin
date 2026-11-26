@@ -1,0 +1,13 @@
+{
+ "chunk_id": "9c1b219a5360c5fe",
+ "chunk_hash": "9c1b219a5360c5fe",
+ "summary": "RPM installer inventory for single gateway, controller, hub and EDA nodes with an installer-managed external database: groups for each component and database, admin_password, redis_mode=standalone, pg_host, pg_port, pg_database, pg_username, pg_password and pg_sslmode, registry credentials, and automationhub_ and automationedacontroller_ PostgreSQL settings.",
+ "questions": [
+  "What does the RPM AAP inventory look like with an external database?",
+  "How do I set pg_sslmode in the AAP installer?",
+  "Which variables configure the automation hub database in an RPM install?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:42:46+00:00"
+}

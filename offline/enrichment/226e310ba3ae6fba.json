@@ -1,0 +1,14 @@
+{
+ "chunk_id": "226e310ba3ae6fba",
+ "chunk_hash": "226e310ba3ae6fba",
+ "summary": "More ansible.builtin.iptables examples: insert a rule at rule_num 5, set the INPUT policy to DROP, reject_with tcp-reset, tcp_flags, flush filter and nat chains in a loop, log with limit and log_prefix, and destination_ports for several ports or ranges.",
+ "questions": [
+  "How do I insert an iptables rule at a specific position?",
+  "How do I flush iptables chains with Ansible?",
+  "How do I open multiple ports with one iptables task?",
+  "How do I set the default policy to DROP?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:41:44+00:00"
+}

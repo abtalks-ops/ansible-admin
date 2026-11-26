@@ -1,0 +1,13 @@
+{
+ "chunk_id": "6cc512125c3913cd",
+ "chunk_hash": "6cc512125c3913cd",
+ "summary": "First part of example ansible.windows.win_whoami output when using become on Windows: the account, Kerberos authentication package, group memberships such as BUILTIN Administrators, the High Mandatory Level label, logon details and token privileges.",
+ "questions": [
+  "How do I check if become gave admin rights on Windows?",
+  "What does win_whoami return?",
+  "What is the High Mandatory Level label in win_whoami output?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:56+00:00"
+}

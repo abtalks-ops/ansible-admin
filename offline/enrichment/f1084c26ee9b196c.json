@@ -1,0 +1,13 @@
+{
+ "chunk_id": "f1084c26ee9b196c",
+ "chunk_hash": "f1084c26ee9b196c",
+ "summary": "Google OAuth2 on upgrade: SOCIAL_AUTH_GOOGLE_OAUTH2_KEY, SECRET and SCOPE become the authenticator's KEY, SECRET, REDIRECT_STATE and SCOPE configuration, and the organization and team maps become organization and team authenticator maps (Organization Member, Team Member); also introduces the MANAGE_ORGANIZATION_AUTH setting.",
+ "questions": [
+  "How is Google OAuth2 migrated to AAP 2.6?",
+  "How do I map Google users to a team in the platform gateway?",
+  "What is MANAGE_ORGANIZATION_AUTH?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

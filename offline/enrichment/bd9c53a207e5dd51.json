@@ -1,0 +1,14 @@
+{
+ "chunk_id": "bd9c53a207e5dd51",
+ "chunk_hash": "bd9c53a207e5dd51",
+ "summary": "Controller system settings (Settings > Automation Execution > System): base URL, Proxy IP allowed list for trusting REMOTE_HOST_HEADERS behind a proxy, Red Hat client ID and secret for analytics and subscriptions, global default execution environment, custom virtualenv paths, analytics gather interval and Remote Host Headers such as HTTP_X_FORWARDED_FOR.",
+ "questions": [
+  "How do I set the global default execution environment?",
+  "How do I configure controller behind a load balancer?",
+  "Where do I set REMOTE_HOST_HEADERS?",
+  "What is the Proxy IP allowed list?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:43:48+00:00"
+}

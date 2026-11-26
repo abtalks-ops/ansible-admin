@@ -1,0 +1,14 @@
+{
+ "chunk_id": "e0edcf141a68bd39",
+ "chunk_hash": "e0edcf141a68bd39",
+ "summary": "validate-modules codes for documentation mismatches: deprecation-mismatch, doc-choices-do-not-match-spec, doc-choices-incompatible-type, doc-default-does-not-match-spec, doc-default-incompatible-type, doc-elements-invalid, doc-elements-mismatch and doc-missing-type.",
+ "questions": [
+  "What does doc-default-does-not-match-spec mean?",
+  "How do I fix doc-choices-do-not-match-spec in a sanity test?",
+  "What causes the doc-missing-type error?",
+  "What is deprecation-mismatch in validate-modules?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d067abfdd1a159d1",
+ "chunk_hash": "d067abfdd1a159d1",
+ "summary": "More pod spec fields: ImagePullSecrets for registry auth, restartPolicy (default Always), serviceAccount and volumes; change the pod that runs jobs on Kubernetes by editing the container group pod specification YAML in the controller UI.",
+ "questions": [
+  "How do I customize the pod that runs controller jobs?",
+  "How do I pull EE images from an authenticated registry on OpenShift?",
+  "What service account do job pods use?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:45:29+00:00"
+}

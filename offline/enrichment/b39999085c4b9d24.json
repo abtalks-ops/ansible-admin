@@ -1,0 +1,12 @@
+{
+ "chunk_id": "b39999085c4b9d24",
+ "chunk_hash": "b39999085c4b9d24",
+ "summary": "Ansible 14 cloudfront_distribution deprecations: items return values under cache_behaviors (allowed_methods, cookies, headers, query_string_cache_keys, lambda_function_associations) and cache_behaviors itself, replaced by elements after 2026-12-15.",
+ "questions": [
+  "Is cache_behaviors items deprecated in cloudfront_distribution?",
+  "What replaces items in cloudfront_distribution return values?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:00+00:00"
+}

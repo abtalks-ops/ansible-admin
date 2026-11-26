@@ -1,0 +1,18 @@
+{
+ "chunk_id": "ff1c7fba0572c5f1",
+ "chunk_hash": "ff1c7fba0572c5f1",
+ "summary": "The file lookup example finds each term with self.find_file_in_search_path(variables, 'files', term), reads it with self._loader._get_file_contents, raises AnsibleError when the file is missing, reads options with self.get_option, and is called as lookup('namespace.collection_name.file', '/etc/foo.txt', option1='donothing').",
+ "questions": [
+  "How does a lookup plugin find files in the search path?",
+  "How do I raise an error from a lookup plugin?",
+  "How do I call a custom lookup with an option?",
+  "How do I use get_option in a lookup plugin?"
+ ],
+ "answer_card": {
+  "title": "Call a custom lookup plugin",
+  "answer_md": "```yaml\n- hosts: all\n  vars:\n    contents: \"{{ lookup('namespace.collection_name.file', '/etc/foo.txt') }}\"\n    contents_with_option: \"{{ lookup('namespace.collection_name.file', '/etc/foo.txt', option1='donothing') }}\"\n```\n\nInside the plugin, find files with `self.find_file_in_search_path(variables, 'files', term)`, read options with `self.get_option('option1')`, and raise `AnsibleError` for final errors.",
+  "source_url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_plugins.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

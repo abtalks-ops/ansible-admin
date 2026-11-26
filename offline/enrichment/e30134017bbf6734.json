@@ -1,0 +1,18 @@
+{
+ "chunk_id": "e30134017bbf6734",
+ "chunk_hash": "e30134017bbf6734",
+ "summary": "API changes from 2.4 to 2.5 and 2.6: browsable APIs at /api/gateway/v1, /api/controller/v2 and /api/eda/v1; controller endpoints moved from /api/v2/ to /api/controller/v2/, hub from /api/automation-hub to /api/galaxy/v1, and token authentication from /api/v2/o to /api/gateway/v1/tokens/.",
+ "questions": [
+  "What is the controller API path in AAP 2.6?",
+  "Where did /api/v2/ move in AAP 2.5?",
+  "How do I create an API token in AAP 2.6?",
+  "What is the automation hub API path in AAP 2.6?"
+ ],
+ "answer_card": {
+  "title": "API paths in AAP 2.5 and 2.6",
+  "answer_md": "| Component | 2.4 | 2.5 and later |\n|---|---|---|\n| Controller | `/api/v2/` | `/api/controller/v2/` |\n| Automation hub | `/api/automation-hub` | `/api/galaxy/v1` |\n| Platform gateway | n/a | `/api/gateway/v1/` |\n| Event-Driven Ansible | n/a | `/api/eda/v1/` |\n\nTokens moved from `/api/v2/o` to `/api/gateway/v1/tokens/`.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/planning_your_upgrade/index#upgrade-google-auth"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

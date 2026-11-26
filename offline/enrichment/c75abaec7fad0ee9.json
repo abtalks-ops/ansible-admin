@@ -1,0 +1,13 @@
+{
+ "chunk_id": "c75abaec7fad0ee9",
+ "chunk_hash": "c75abaec7fad0ee9",
+ "summary": "Ansible 9 community.general deprecations: cmd_runner_fmt.as_default_type, VarsMixin (use vardict), dropping ansible-core 2.11 and 2.12 in 8.0.0 (no Python 2.6 targets), ansible_galaxy_install ack_ansible29 and ack_min_ansiblecore211, consul ack_params_state_absent, the cpanm compatibility default and ejabberd_user logging.",
+ "questions": [
+  "Does community.general 8 support Python 2.6 targets?",
+  "Is ack_ansible29 deprecated in ansible_galaxy_install?",
+  "Which ansible-core versions does community.general 8 drop?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:41:44+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "chunk_id": "788985c8baf95b69",
+ "chunk_hash": "788985c8baf95b69",
+ "summary": "ansible.builtin.meta actions explained: noop, clear_facts (clears gathered facts and the fact cache), clear_host_errors (makes failed hosts available to later plays), end_play (ends the play for all hosts without failing), reset_connection (drops a persistent SSH connection), end_host, end_batch (ends the current serial batch) and end_role (skips the rest of the role, handlers still run).",
+ "questions": [
+  "How do I stop a play without failing in Ansible?",
+  "How do I end a play for one host only?",
+  "How do I reset the SSH connection in a playbook?",
+  "What does meta end_role do?",
+  "How do I clear facts in a play?"
+ ],
+ "answer_card": {
+  "title": "Ending plays, hosts and roles with meta",
+  "answer_md": "- `meta: end_play`: ends the play for all hosts without failing them.\n- `meta: end_host`: ends the play for the current host only.\n- `meta: end_batch`: ends the current `serial` batch (same as `end_play` without `serial`).\n- `meta: end_role` (2.18+): skips the rest of the current role; notified handlers still run. Not allowed outside a role or in a handler.\n- `meta: reset_connection`: closes a persistent connection, for example after changing group membership.\n- `meta: clear_facts` and `meta: clear_host_errors`: clear gathered facts or failed state.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/meta_module.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:42:46+00:00"
+}

@@ -1,0 +1,13 @@
+{
+ "chunk_id": "2723631ced17a8f9",
+ "chunk_hash": "2723631ced17a8f9",
+ "summary": "Ansible 11 community.aws breaking changes: botocore<1.31.0 and boto3<1.28.0 are unsupported, ec2_launch_template tags now apply to the template itself, and autoscaling_instance_refresh(_info), ec2_launch_template and ec2_placement_group moved to amazon.aws.",
+ "questions": [
+  "Which boto3 version does community.aws need in Ansible 11?",
+  "Where did ec2_launch_template move?",
+  "Do ec2_launch_template tags apply to instances?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:37:47+00:00"
+}

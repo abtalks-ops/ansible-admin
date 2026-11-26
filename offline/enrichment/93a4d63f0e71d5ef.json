@@ -1,0 +1,14 @@
+{
+ "chunk_id": "93a4d63f0e71d5ef",
+ "chunk_hash": "93a4d63f0e71d5ef",
+ "summary": "Optional TLS and gateway settings in the RPM installer inventory: automationhub_disable_https, automationhub_ssl_validate_certs, custom_ca_cert, hub, gateway, web server and EDA certificate and key paths, automationgateway_ PostgreSQL settings, automationgateway_main_url for a load balancer, postgres_use_ssl and automationedacontroller_controller_verify_ssl.",
+ "questions": [
+  "How do I install a custom CA certificate with the AAP installer?",
+  "How do I set the gateway URL behind a load balancer in an RPM install?",
+  "How do I provide my own TLS certificate for automation hub?",
+  "What is automationgateway_main_url?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:42:46+00:00"
+}

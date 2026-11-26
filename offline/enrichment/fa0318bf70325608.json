@@ -1,0 +1,13 @@
+{
+ "chunk_id": "fa0318bf70325608",
+ "chunk_hash": "fa0318bf70325608",
+ "summary": "Ansible 9 deprecations: the community.azure, hpe.nimble, netapp.azure, netapp.elementsw and netapp.um_info collections are unmaintained and will be removed from Ansible 10 unless someone maintains them, and community.sap was renamed to community.sap_libs.",
+ "questions": [
+  "Is community.azure being removed from Ansible?",
+  "What was community.sap renamed to?",
+  "Which collections were removed in Ansible 10 for being unmaintained?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:41:44+00:00"
+}

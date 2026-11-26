@@ -1,0 +1,13 @@
+{
+ "chunk_id": "bcfb33801a4c8792",
+ "chunk_hash": "bcfb33801a4c8792",
+ "summary": "More cloudfront deprecations (items to elements in default_cache_behavior lambda associations, origins, origin_ssl_protocols, geo_restriction and cloudfront_invalidation paths), and the waf_condition, waf_info, waf_rule and waf_web_acl modules are deprecated because WAF Classic is retired; use WAFv2 modules, removal in 12.0.0.",
+ "questions": [
+  "Why are the waf_* modules deprecated in community.aws?",
+  "What should I use instead of WAF Classic modules?",
+  "Is items deprecated in cloudfront_invalidation?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:39:17+00:00"
+}

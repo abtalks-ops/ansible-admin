@@ -1,0 +1,13 @@
+{
+ "chunk_id": "549ef25727af2e2e",
+ "chunk_hash": "549ef25727af2e2e",
+ "summary": "Example output of an ansible.windows.win_dsc task with the Registry resource: invocation.module_args lists the DSC properties (Ensure, Key, ValueName, ValueData, PsDscRunAsCredential), plus module_version, reboot_required and verbose_set messages from the LCM.",
+ "questions": [
+  "What does win_dsc output look like?",
+  "What is verbose_set in win_dsc output?",
+  "Does win_dsc report reboot_required?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

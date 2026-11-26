@@ -1,0 +1,14 @@
+{
+ "chunk_id": "7832a151b2281dd8",
+ "chunk_hash": "7832a151b2281dd8",
+ "summary": "ansible-core 2.19 deprecations: the --inventory-file alias (use -i or --inventory), non-boolean results from test plugins, warnings/deprecations keys in exit_json (use AnsibleModule.warn/deprecate), third-party strategy plugins, ShellModule.checksum, common.collections.count, YAML !!omap, !!pairs and !vault-encrypted tags, ansible.compat.importlib_resources, and the module_utils.compat.datetime shims.",
+ "questions": [
+  "Is --inventory-file deprecated?",
+  "Are third-party strategy plugins deprecated in Ansible?",
+  "How should a module emit warnings instead of the warnings key?",
+  "Is the !vault-encrypted YAML tag deprecated?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:38:39+00:00"
+}

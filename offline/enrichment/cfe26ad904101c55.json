@@ -1,0 +1,18 @@
+{
+ "chunk_id": "cfe26ad904101c55",
+ "chunk_hash": "cfe26ad904101c55",
+ "summary": "More ansible.builtin.pip examples: install from requirements.txt (optionally into a virtualenv), use a custom index or offline --no-index --find-links, a specific pip executable, state forcereinstall, umask 0022, and creating a venv with virtualenv_command '{{ ansible_python_interpreter }} -m venv' then running a module with ansible_python_interpreter set to the venv Python.",
+ "questions": [
+  "How do I install requirements.txt with Ansible?",
+  "How do I install pip packages offline with Ansible?",
+  "How do I run a module inside a virtualenv?",
+  "How do I create a venv with the pip module?"
+ ],
+ "answer_card": {
+  "title": "Run a module inside a virtual environment",
+  "answer_md": "```yaml\n- block:\n    - name: Ensure the venv exists\n      ansible.builtin.pip:\n        name: psutil\n        virtualenv: \"{{ venv_dir }}\"\n        virtualenv_command: \"{{ ansible_python_interpreter }} -m venv\"\n    - name: Use it\n      ansible.builtin.wait_for:\n        port: 22\n      vars:\n        ansible_python_interpreter: \"{{ venv_dir }}/bin/python\"\n  vars:\n    venv_dir: /opt/myvenv\n```\n\nOn Debian-based systems install the matching `python*-venv` package first.",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/pip_module.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:42:46+00:00"
+}

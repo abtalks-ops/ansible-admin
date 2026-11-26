@@ -1,0 +1,14 @@
+{
+ "chunk_id": "f1d74509296b1686",
+ "chunk_hash": "f1d74509296b1686",
+ "summary": "validate-modules codes missing-module-utils-import-csharp-requirements, missing-powershell-interpreter, missing-python-interpreter (#!/usr/bin/python), missing-return, missing-return-legacy, missing-suboption-docs, module-incorrect-version-added, module-invalid-version-added, module-utils-specific-import and multiple-utils-per-requires.",
+ "questions": [
+  "What does missing-python-interpreter mean?",
+  "What causes the missing-return sanity error?",
+  "What is module-utils-specific-import?",
+  "What does missing-suboption-docs mean?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

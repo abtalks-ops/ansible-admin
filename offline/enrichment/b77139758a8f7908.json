@@ -1,0 +1,18 @@
+{
+ "chunk_id": "b77139758a8f7908",
+ "chunk_hash": "b77139758a8f7908",
+ "summary": "Controller job settings: modules allowed for ad hoc jobs, whether extra vars may contain Jinja templates (template or never, a security risk), paths exposed to isolated jobs (HOST-DIR[:CONTAINER-DIR[:OPTIONS]]), extra environment variables, the K8S runner keep-alive interval, environment variables for Galaxy commands (for a proxy) and the standard output display limit.",
+ "questions": [
+  "How do I mount a host path into execution environments in controller?",
+  "How do I stop Jinja in extra vars in automation controller?",
+  "How do I set a proxy for ansible-galaxy in project updates?",
+  "Which modules can ad hoc commands use?"
+ ],
+ "answer_card": {
+  "title": "Expose a host directory to jobs",
+  "answer_md": "In **Settings > Automation Execution > Job**, add the path to **Paths to expose to isolated jobs**, one per line, in the format `HOST-DIR[:CONTAINER-DIR[:OPTIONS]]`, for example `/opt/certs:/opt/certs:O`. If you give a file, its whole directory is mounted. Volumes are mounted from the execution node into the container.",
+  "source_url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html-single/configuring_automation_execution/index#controller-configure-jobs"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:43:48+00:00"
+}

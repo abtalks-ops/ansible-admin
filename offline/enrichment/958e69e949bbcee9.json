@@ -1,0 +1,13 @@
+{
+ "chunk_id": "958e69e949bbcee9",
+ "chunk_hash": "958e69e949bbcee9",
+ "summary": "Ansible 15 community.postgresql 5.0.0 removals: the login, host, unix_socket and port aliases (use login_user, login_host, login_unix_socket, login_port), the db alias in postgresql_copy, ext, idx, membership and owner, postgresql_db state=rename (use postgresql_query) and postgresql_pg_hba keep_comments_at_rules.",
+ "questions": [
+  "Why does postgresql_db fail with the host option?",
+  "What replaces postgresql_db state rename?",
+  "Is keep_comments_at_rules removed from postgresql_pg_hba?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:50+00:00"
+}

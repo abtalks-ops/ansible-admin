@@ -1,0 +1,13 @@
+{
+ "chunk_id": "d3345ca34e9c914c",
+ "chunk_hash": "d3345ca34e9c914c",
+ "summary": "MANAGE_ORGANIZATION_AUTH exists in both the platform gateway and controller in 2.6; the controller value is imported on upgrade, so keep both the same. Also: 2.5 and 2.6 still expose per-service APIs for compatibility, but that access will be removed, so move integrations to gateway endpoints.",
+ "questions": [
+  "Do I need to set MANAGE_ORGANIZATION_AUTH in both controller and gateway?",
+  "Will the direct controller API be removed?",
+  "Should integrations use the platform gateway API?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:46:35+00:00"
+}

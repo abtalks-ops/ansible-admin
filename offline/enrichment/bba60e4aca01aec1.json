@@ -1,0 +1,18 @@
+{
+ "chunk_id": "bba60e4aca01aec1",
+ "chunk_hash": "bba60e4aca01aec1",
+ "summary": "Rest of the network resource module states table: replaced removes the IPv4 address and leaves only the given IPv6 addresses on loopback100, overridden would remove every interface not in the task (including the management interface), and deleted clears the interface configuration.",
+ "questions": [
+  "What does state overridden do in network resource modules?",
+  "Why is overridden dangerous on interfaces?",
+  "What does state deleted do in network resource modules?",
+  "What does state replaced do to existing config?"
+ ],
+ "answer_card": {
+  "title": "Network resource module states",
+  "answer_md": "For an interface task that lists only `loopback100` with two IPv6 addresses:\n\n- **merged**: adds the IPv6 addresses and keeps the existing IPv4 address.\n- **replaced**: makes `loopback100` match the task exactly, so the IPv4 address is removed.\n- **overridden**: makes the whole resource match the task, which would remove all other interfaces, including the management interface. Wrong choice here.\n- **deleted**: removes the configuration of the interface.",
+  "source_url": "https://docs.ansible.com/ansible/latest/network/user_guide/network_resource_modules.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:01+00:00"
+}

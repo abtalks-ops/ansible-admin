@@ -1,0 +1,12 @@
+{
+ "chunk_id": "b20b00c1ab4058e7",
+ "chunk_hash": "b20b00c1ab4058e7",
+ "summary": "More purestorage.fusion deprecations of app_id, key_file and FUSION_APP_ID in fusion_ss, fusion_tenant, fusion_tn, fusion_ts and fusion_volume, removed in 2.0.0.",
+ "questions": [
+  "Does fusion_volume still accept app_id?",
+  "When are app_id and key_file removed from purestorage.fusion?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:41:44+00:00"
+}

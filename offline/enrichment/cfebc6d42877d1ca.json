@@ -1,0 +1,12 @@
+{
+ "chunk_id": "cfebc6d42877d1ca",
+ "chunk_hash": "cfebc6d42877d1ca",
+ "summary": "Example facts continued: ansible_devices entries for xvdd (64 MB) and xvde with partition xvde1 (80 GB), showing partitions, removable, rotational, scheduler_mode, sectors and size per device.",
+ "questions": [
+  "How do I get disk size from Ansible facts?",
+  "What keys does each device in ansible_devices have?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:36:56+00:00"
+}

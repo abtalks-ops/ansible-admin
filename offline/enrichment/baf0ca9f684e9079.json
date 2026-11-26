@@ -1,0 +1,18 @@
+{
+ "chunk_id": "baf0ca9f684e9079",
+ "chunk_hash": "baf0ca9f684e9079",
+ "summary": "ansible.builtin.apt examples: install, remove and pin package versions (name: foo=1.00), install lists with pkg, update_cache, default_release, allow_downgrade, fail_on_autoremove, install_recommends: no, upgrade all with name '*' state latest, and upgrade: dist.",
+ "questions": [
+  "How do I install a specific package version with apt in Ansible?",
+  "How do I run apt-get dist-upgrade with Ansible?",
+  "How do I update all packages with the apt module?",
+  "How do I install without recommends using apt?"
+ ],
+ "answer_card": {
+  "title": "Common apt module tasks",
+  "answer_md": "```yaml\n- ansible.builtin.apt:\n    name: foo=1.00          # specific version\n- ansible.builtin.apt:\n    name: nginx=1.18.0\n    allow_downgrade: yes\n- ansible.builtin.apt:\n    name: \"*\"\n    state: latest           # upgrade all packages\n- ansible.builtin.apt:\n    upgrade: dist           # apt-get dist-upgrade\n- ansible.builtin.apt:\n    name: openjdk-6-jdk\n    install_recommends: no\n```",
+  "source_url": "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html"
+ },
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:41:44+00:00"
+}

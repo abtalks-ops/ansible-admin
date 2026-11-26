@@ -1,0 +1,12 @@
+{
+ "chunk_id": "35bf1e1b7393b0c3",
+ "chunk_hash": "35bf1e1b7393b0c3",
+ "summary": "Ansible 14 deprecations: cloudfront items return values (lambda associations, origins, origin_ssl_protocols, geo_restriction, invalidation paths) give way to elements, and waf_condition, waf_info, waf_rule and waf_web_acl are deprecated because WAF Classic is retired (use WAFv2).",
+ "questions": [
+  "Are the waf_* modules deprecated in Ansible 14?",
+  "What replaces WAF Classic modules?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:40:00+00:00"
+}

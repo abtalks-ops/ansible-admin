@@ -1,0 +1,13 @@
+{
+ "chunk_id": "e88f1d8c16b3b3f7",
+ "chunk_hash": "e88f1d8c16b3b3f7",
+ "summary": "More deprecated community.aws aliases in Ansible 13.4: aws_s3_cors, aws_secret, aws_ses_identity_policy, aws_ses_identity, aws_ses_rule_set, aws_sgw_info, aws_ssm_parameter_store and aws_step_functions_state_machine_execution; use s3_cors, secretsmanager_secret, ses_*, storagegateway_info, ssm_parameter and stepfunctions_state_machine_execution.",
+ "questions": [
+  "What replaces aws_ssm_parameter_store?",
+  "What is the new name of aws_secret?",
+  "Is aws_s3_cors deprecated?"
+ ],
+ "answer_card": null,
+ "model": "claude-opus-5-5 (subscription)",
+ "created_at": "2026-11-25T19:39:17+00:00"
+}
